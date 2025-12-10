@@ -1,6 +1,8 @@
 # Research Outline from deep research
 https://gemini.google.com/share/c529d71fe4f3
 
+https://gemini.google.com/share/a0eafbd3bff4
+
 ## India
 https://ozberg.home.blog/2019/03/13/indian-panchatantra-travelled-the-world-by-persian-and-arabic-narrators/
 
