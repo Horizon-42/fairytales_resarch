@@ -3,17 +3,18 @@ https://gemini.google.com/share/c529d71fe4f3
 
 https://gemini.google.com/share/a0eafbd3bff4
 
-## India
+## Datasets And Related Researchs
+### India
 https://ozberg.home.blog/2019/03/13/indian-panchatantra-travelled-the-world-by-persian-and-arabic-narrators/
 
-## Iron
+### Iron
 https://www.kaggle.com/datasets/alirezakamyab/shahname
 
 https://cudl.lib.cam.ac.uk/collections/shahnama/1
 
 https://nlpdataset.ir/farsi/parallel_corpora.html
 
-## China
+### China
 
 https://github.com/CASIA-LM/ChineseWebText
 
@@ -22,14 +23,14 @@ https://github.com/CASIA-LM/ChineseWebText-2.0
 https://dicalab-scu.github.io/nlp/post/ancient-modern-chinese-dataset/
 
 
-## Japan
+### Japan
 
 https://www.kaggle.com/datasets/ryancahildebrandt/azbcorpus
 
 https://www.kaggle.com/datasets/annazhabina/aozora-bunko
 
 
-## Across Culture
+### Across Culture
 https://kgeographer.org/glos_creation_schema.html
 
 https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11079616
