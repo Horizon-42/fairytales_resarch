@@ -4,6 +4,52 @@ import { PROPP_FUNCTIONS, TARGET_CATEGORIES, OBJECT_TYPES } from "../constants.j
 import { generateUUID } from "../utils/fileHandler.js";
 import { customSelectStyles } from "../utils/helpers.js";
 
+// Map Propp function codes to full display names from CSV
+const PROPP_FUNCTION_DISPLAY_NAMES = {
+  "ABSENTATION": "Absentation",
+  "INTERDICTION": "Interdiction",
+  "VIOLATION": "Violation",
+  "RECONNAISSANCE": "Reconnaissance",
+  "DELIVERY": "Delivery",
+  "TRICKERY": "Trickery",
+  "COMPLICITY": "Complicity",
+  "VILLAINY": "Villainy",
+  "LACK": "Lack",
+  "MEDIATION": "Meditation",
+  "BEGINNING_COUNTERACTION": "Beginning counteraction",
+  "DEPARTURE": "Departure",
+  "FIRST_FUNCTION_DONOR": "First function of the Donor",
+  "HERO_REACTION": "The hero's reaction",
+  "RECEIPT_OF_AGENT": "Provision of a magical agent",
+  "GUIDANCE": "Guidance",
+  "STRUGGLE": "Struggle",
+  "BRANDING": "Branding",
+  "VICTORY": "Victory",
+  "LIQUIDATION": "Liquidation of Lack",
+  "RETURN": "Return",
+  "PURSUIT": "Pursuit",
+  "RESCUE": "Rescue",
+  "UNRECOGNIZED_ARRIVAL": "Unrecognized arrival",
+  "UNFOUNDED_CLAIMS": "Unfounded claims",
+  "DIFFICULT_TASK": "Difficult task",
+  "SOLUTION": "Solution",
+  "RECOGNITION": "Recognised",
+  "EXPOSURE": "Exposure",
+  "TRANSFIGURATION": "Transfiguration",
+  "PUNISHMENT": "Punishment",
+  "WEDDING": "Wedding"
+};
+
+// Format Propp function name for display
+const formatProppFunctionName = (fn) => {
+  if (!fn) return fn;
+  // Use mapping if available, otherwise fallback to title case conversion
+  return PROPP_FUNCTION_DISPLAY_NAMES[fn] || fn
+    .split('_')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
+};
+
 export default function NarrativeSection({
   narrativeStructure,
   setNarrativeStructure,
@@ -235,14 +281,15 @@ export default function NarrativeSection({
               <select
                 value={item.event_type}
                 onChange={(e) => updateItem(idx, "event_type", e.target.value)}
+                style={{ width: "100%", minWidth: "300px" }}
               >
                 <option value="">– Select Event –</option>
                 {PROPP_FUNCTIONS.map((fn) => (
                   <option key={fn} value={fn}>
-                    {fn}
+                    {formatProppFunctionName(fn)}
                   </option>
                 ))}
-                <option value="OTHER">OTHER</option>
+                <option value="OTHER">Other</option>
               </select>
             </div>
             <div>
