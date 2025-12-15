@@ -12,7 +12,8 @@ import {
   SummariesSection,
   ProppSection,
   NarrativeSection,
-  QASection
+  QASection,
+  ContextMenu
 } from "./components";
 
 export default function App() {
@@ -102,6 +103,9 @@ export default function App() {
   const [highlightedChars, setHighlightedChars] = useState({});
   const [highlightedRanges, setHighlightedRanges] = useState({});
   const [lastAutoSave, setLastAutoSave] = useState(null);
+
+  // Context menu state
+  const [contextMenu, setContextMenu] = useState({ visible: false, x: 0, y: 0 });
 
   // ========== JSON Builders ==========
   const jsonV1 = useMemo(
@@ -449,6 +453,142 @@ export default function App() {
     setCurrentSelection({ start, end, text });
   };
 
+  // ========== Context Menu Handlers ==========
+  const handleContextMenu = (e) => {
+    // Check if there's a text selection
+    const selection = window.getSelection();
+    if (!selection || selection.isCollapsed || !selection.toString().trim()) {
+      return; // Don't show menu if no text is selected
+    }
+
+    // Verify selection is within the story content
+    const container = document.getElementById("story-content-pre");
+    if (!container || !container.contains(selection.rangeCount > 0 ? selection.getRangeAt(0).commonAncestorContainer : null)) {
+      return;
+    }
+
+    // Update currentSelection if needed (in case user right-clicked without mouseup)
+    const range = selection.getRangeAt(0);
+    if (container && container.contains(range.commonAncestorContainer)) {
+      const preRange = range.cloneRange();
+      preRange.selectNodeContents(container);
+      preRange.setEnd(range.startContainer, range.startOffset);
+      const start = preRange.toString().length;
+      const end = start + range.toString().length;
+      const text = range.toString();
+      setCurrentSelection({ start, end, text });
+    }
+
+    e.preventDefault();
+    setContextMenu({
+      visible: true,
+      x: e.clientX,
+      y: e.clientY
+    });
+  };
+
+  const closeContextMenu = () => {
+    setContextMenu({ visible: false, x: 0, y: 0 });
+  };
+
+  // Close context menu when clicking outside or pressing Escape
+  useEffect(() => {
+    const handleClickOutside = () => {
+      if (contextMenu.visible) {
+        closeContextMenu();
+      }
+    };
+
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && contextMenu.visible) {
+        closeContextMenu();
+      }
+    };
+
+    if (contextMenu.visible) {
+      document.addEventListener('click', handleClickOutside);
+      document.addEventListener('keydown', handleEscape);
+      return () => {
+        document.removeEventListener('click', handleClickOutside);
+        document.removeEventListener('keydown', handleEscape);
+      };
+    }
+  }, [contextMenu.visible]);
+
+  const handleCreateCharacter = () => {
+    if (!currentSelection) return;
+
+    // Extract a name from the selected text (first word or first few words)
+    const selectedText = currentSelection.text.trim();
+    const nameGuess = selectedText.split(/\s+/)[0].substring(0, 30); // First word, max 30 chars
+
+    // Add new character
+    setMotif(prev => ({
+      ...prev,
+      character_archetypes: [
+        ...prev.character_archetypes,
+        {
+          name: nameGuess,
+          alias: "",
+          archetype: ""
+        }
+      ]
+    }));
+
+    // Navigate to characters tab
+    setActiveTab("characters");
+  };
+
+  const handleCreateNarrative = () => {
+    if (!currentSelection) return;
+
+    // Create new narrative event with the selected text span
+    const newEvent = {
+      id: generateUUID(),
+      event_type: "",
+      description: currentSelection.text.trim().substring(0, 100), // Preview
+      agents: [],
+      targets: [],
+      text_span: {
+        start: currentSelection.start,
+        end: currentSelection.end,
+        text: currentSelection.text
+      },
+      target_type: "",
+      object_type: "",
+      instrument: ""
+    };
+
+    setNarrativeStructure(prev => [...prev, newEvent]);
+
+    // Navigate to narrative tab
+    setActiveTab("narrative");
+  };
+
+  const handleCreatePropp = () => {
+    if (!currentSelection) return;
+
+    // Create new Propp function with the selected text span
+    const newPropp = {
+      id: generateUUID(),
+      fn: "",
+      spanType: "text",
+      span: { start: 0, end: 0 },
+      textSpan: {
+        start: currentSelection.start,
+        end: currentSelection.end,
+        text: currentSelection.text
+      },
+      evidence: currentSelection.text.trim().substring(0, 100), // Preview
+      narrative_event_id: null
+    };
+
+    setProppFns(prev => [...prev, newPropp]);
+
+    // Navigate to propp tab
+    setActiveTab("propp");
+  };
+
   // ========== Propp Functions ==========
   const onAddProppFn = (newEvent) => {
     if (!newEvent.event_type || newEvent.event_type === "OTHER") return;
@@ -678,7 +818,11 @@ export default function App() {
                 <h2 className="story-title-display">
                   {storyFiles[selectedStoryIndex].name}
                 </h2>
-                <div className="story-text-display" onMouseUp={handleStorySelection}>
+                <div
+                  className="story-text-display"
+                  onMouseUp={handleStorySelection}
+                  onContextMenu={handleContextMenu}
+                >
                   <pre id="story-content-pre">
                     {renderStoryText()}
                   </pre>
@@ -815,6 +959,16 @@ export default function App() {
           </div>
         </aside>
       </main>
+
+      <ContextMenu
+        visible={contextMenu.visible}
+        x={contextMenu.x}
+        y={contextMenu.y}
+        onClose={closeContextMenu}
+        onCreateCharacter={handleCreateCharacter}
+        onCreateNarrative={handleCreateNarrative}
+        onCreatePropp={handleCreatePropp}
+      />
     </div>
   );
 }
