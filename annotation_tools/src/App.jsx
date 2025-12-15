@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect, useRef } from "react";
 import {
   ATU_TYPES,
   CHARACTER_ARCHETYPES,
@@ -213,14 +213,83 @@ export default function App() {
 
   const [previewVersion, setPreviewVersion] = useState("v2");
 
-  const handleDownload = (version) => {
+  const handleSave = async (version, silent = false) => {
+    // Determine content and suffix
     const data = version === "v2" ? jsonV2 : jsonV1;
-    const suffix = version === "v2" ? "_v2" : "_v1";
-    // If we have a hint that looks like a path, we might want to respect it in the filename?
-    // Browsers only use the filename part for download.
-    const filename = `${id || "annotation"}${suffix}.json`;
-    downloadJson(filename, data);
+    
+    // We need the original file path to determine where to save.
+    // The currently selected story file object has `webkitRelativePath` or `path` property.
+    // In handleStoryFilesChange we store: { file, name, path: relPath, text }
+    const currentStory = storyFiles[selectedStoryIndex];
+    
+    if (!currentStory) {
+      if (!silent) alert("No story selected to save.");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:3001/api/save", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          originalPath: currentStory.path,
+          content: data,
+          version: version
+        })
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        if (!silent) alert(`Saved successfully to: ${result.path}`);
+        console.log(`Auto-save (${version}) success: ${result.path}`);
+        setLastAutoSave(new Date());
+      } else {
+        if (!silent) alert(`Failed to save: ${result.error}`);
+        console.error(`Auto-save (${version}) failed: ${result.error}`);
+        // Fallback to download if server fails and not silent (or silent? maybe not download on auto-save)
+        if (!silent) downloadJson(`${id}_${version}.json`, data);
+      }
+    } catch (err) {
+      console.error("Save failed, falling back to download", err);
+      // Fallback to download
+      const suffix = version === "v2" ? "_v2" : "_v1";
+      if (!silent) downloadJson(`${id}${suffix}.json`, data);
+    }
   };
+
+  // Auto-save logic
+  const saveRef = useRef(handleSave);
+  
+  // Keep ref current
+  useEffect(() => {
+    saveRef.current = handleSave;
+  });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Only auto-save if a story is selected
+      if (selectedStoryIndex !== -1) {
+        console.log("Triggering auto-save...");
+        // Save both versions silently
+        saveRef.current("v1", true);
+        saveRef.current("v2", true);
+      }
+    }, 5 * 60 * 1000); // 5 minutes
+
+    return () => clearInterval(interval);
+  }, [selectedStoryIndex]); // Reset timer if story changes? Or just keep running?
+  // If we want consistent 5 min intervals regardless of story change, remove dependency.
+  // But if story changes, we probably want to restart timer or just let it tick.
+  // Given we check `selectedStoryIndex` inside, it's safe. 
+  // Dependency on selectedStoryIndex in useEffect ensures we don't save the WRONG story if index changes mid-tick?
+  // No, the ref `saveRef` always has the CURRENT closure which captures the CURRENT selectedStoryIndex (via state in handleSave).
+  // Wait, `handleSave` closes over `selectedStoryIndex`. 
+  // So `saveRef.current` (which is updated every render) will always have the fresh `handleSave` which has the fresh index.
+  // So we don't strictly need `selectedStoryIndex` in dependency array for correctness of DATA, 
+  // but we might want to reset the timer when switching stories so we don't auto-save immediately after opening a new one.
+  // Let's reset on story change.
 
   const loadState = (loaded) => {
     if (loaded.id) setId(loaded.id);
@@ -335,6 +404,27 @@ export default function App() {
     resetState();
 
     // Check for existing JSON
+    // Priority 1: Check server (disk) for latest version
+    try {
+      const response = await fetch("http://localhost:3001/api/load", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ originalPath: story.path })
+      });
+      
+      const result = await response.json();
+      if (result.found && result.content) {
+        console.log(`Loaded ${result.version === 2 ? "V2" : "V1"} from server: ${result.path}`, result.content);
+        const mappedState = result.version === 2 ? mapV2ToState(result.content) : mapV1ToState(result.content);
+        console.log("Mapped State:", mappedState);
+        loadState(mappedState);
+        return; // Stop here if server found it
+      }
+    } catch (err) {
+      console.warn("Server load failed, falling back to browser memory files", err);
+    }
+
+    // Priority 2: Browser memory (from initial folder upload)
     let jsonFile = v2Map[idGuess];
     let version = 2;
     
@@ -350,7 +440,7 @@ export default function App() {
         const mappedState = version === 2 ? mapV2ToState(data) : mapV1ToState(data);
         loadState(mappedState);
       } catch (err) {
-        console.error("Failed to load JSON annotation", err);
+        console.error("Failed to load JSON annotation from memory", err);
       }
     }
   };
@@ -390,6 +480,8 @@ export default function App() {
   };
 
   const [activeTab, setActiveTab] = useState("characters");
+  const [highlightTerms, setHighlightTerms] = useState([]);
+  const [lastAutoSave, setLastAutoSave] = useState(null);
 
   const onAddProppFn = (newEvent) => {
     // Only add if event_type is not empty and not "OTHER"
@@ -436,11 +528,16 @@ export default function App() {
               onChange={(e) => setJsonSaveHint(e.target.value)}
             />
           </div>
-          <div style={{ display: 'flex', gap: '0.5rem' }}>
-            <button className="primary-btn" onClick={() => handleDownload("v1")}>
+          <div style={{ display: 'flex', gap: '0.5rem', alignItems: "center" }}>
+            {lastAutoSave && (
+              <span style={{ fontSize: "0.75rem", color: "#6b7280", marginRight: "0.5rem" }}>
+                Saved: {lastAutoSave.toLocaleTimeString()}
+              </span>
+            )}
+            <button className="primary-btn" onClick={() => handleSave("v1")}>
               Save V1
             </button>
-            <button className="primary-btn" onClick={() => handleDownload("v2")}>
+            <button className="primary-btn" onClick={() => handleSave("v2")}>
               Save V2
             </button>
           </div>
@@ -468,7 +565,29 @@ export default function App() {
                   {storyFiles[selectedStoryIndex].name}
                 </h2>
                 <div className="story-text-display" onMouseUp={handleStorySelection}>
-                  <pre id="story-content-pre">{storyFiles[selectedStoryIndex].text}</pre>
+                  <pre id="story-content-pre">
+                    {(() => {
+                      const text = storyFiles[selectedStoryIndex].text;
+                      if (!highlightTerms.length) return text;
+                      
+                      // Escape regex characters
+                      const escapedTerms = highlightTerms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+                      // Sort by length (descending) to match longest first
+                      escapedTerms.sort((a, b) => b.length - a.length);
+                      
+                      const regex = new RegExp(`(${escapedTerms.join("|")})`, "gi");
+                      const parts = text.split(regex);
+                      
+                      return parts.map((part, i) => {
+                        // Check if this part matches any term (case-insensitive)
+                        const isMatch = highlightTerms.some(term => term.toLowerCase() === part.toLowerCase());
+                        if (isMatch) {
+                          return <mark key={i} className="highlighted-text">{part}</mark>;
+                        }
+                        return part;
+                      });
+                    })()}
+                  </pre>
                 </div>
               </>
             ) : (
@@ -527,7 +646,12 @@ export default function App() {
 
           <div className="inspector-content">
             {activeTab === "characters" && (
-              <CharacterSection motif={motif} setMotif={setMotif} />
+              <CharacterSection 
+                motif={motif} 
+                setMotif={setMotif} 
+                highlightTerms={highlightTerms}
+                setHighlightTerms={setHighlightTerms}
+              />
             )}
 
             {activeTab === "narrative" && (
@@ -914,7 +1038,7 @@ function HighLevelMetaSection({ meta, setMeta, deepMeta, setDeepMeta }) {
   );
 }
 
-function CharacterSection({ motif, setMotif }) {
+function CharacterSection({ motif, setMotif, highlightTerms, setHighlightTerms }) {
   const characters = Array.isArray(motif.character_archetypes)
     ? motif.character_archetypes
     : [];
@@ -952,6 +1076,47 @@ function CharacterSection({ motif, setMotif }) {
     setMotif({ ...motif, character_archetypes: next });
   };
 
+  const toggleHighlight = (char) => {
+    if (!setHighlightTerms) return;
+    
+    // Compute terms for this character
+    const newTerms = [];
+    if (char.name && char.name.trim()) newTerms.push(char.name.trim());
+    if (char.alias && char.alias.trim()) {
+      const aliases = char.alias.split(/;|；/).map(s => s.trim()).filter(s => s);
+      newTerms.push(...aliases);
+    }
+
+    // Check if these terms are currently highlighted
+    // We sort both arrays to compare content
+    const currentSorted = [...(highlightTerms || [])].sort().join("|");
+    const newSorted = [...newTerms].sort().join("|");
+
+    if (currentSorted === newSorted && currentSorted !== "") {
+      // Toggle OFF
+      setHighlightTerms([]);
+    } else {
+      // Toggle ON (or switch to this character)
+      setHighlightTerms(newTerms);
+    }
+  };
+
+  const isHighlighted = (char) => {
+    if (!highlightTerms || highlightTerms.length === 0) return false;
+    
+    const charTerms = [];
+    if (char.name && char.name.trim()) charTerms.push(char.name.trim());
+    if (char.alias && char.alias.trim()) {
+      const aliases = char.alias.split(/;|；/).map(s => s.trim()).filter(s => s);
+      charTerms.push(...aliases);
+    }
+    
+    const currentSorted = [...highlightTerms].sort().join("|");
+    const charSorted = [...charTerms].sort().join("|");
+    
+    return currentSorted === charSorted;
+  };
+
   return (
     <section className="card">
       <h2>Characters</h2>
@@ -969,7 +1134,9 @@ function CharacterSection({ motif, setMotif }) {
         </p>
       )}
 
-      {safeCharacters.map((char, idx) => (
+      {safeCharacters.map((char, idx) => {
+        const active = isHighlighted(char);
+        return (
         <div key={idx} className="propp-row">
           <div className="grid-3">
             <label>
@@ -985,7 +1152,7 @@ function CharacterSection({ motif, setMotif }) {
               <input
                 value={char.alias}
                 onChange={(e) => handleCharacterChange(idx, "alias", e.target.value)}
-                placeholder="e.g. Street Rat"
+                placeholder="e.g. Street Rat; Boy"
               />
             </label>
             <label>
@@ -1005,16 +1172,28 @@ function CharacterSection({ motif, setMotif }) {
               </select>
             </label>
           </div>
-          <button
-            type="button"
-            className="ghost-btn"
-            style={{ color: "#ef4444", borderColor: "#ef4444", marginTop: "0.25rem" }}
-            onClick={() => removeCharacter(idx)}
-          >
-            Remove
-          </button>
+          <div style={{ display: 'flex', gap: '0.5rem', marginTop: "0.25rem" }}>
+            <button
+              type="button"
+              className={`ghost-btn ${active ? "active-highlight" : ""}`}
+              style={active ? { background: "#fde047", borderColor: "#eab308", color: "#854d0e" } : {}}
+              onClick={() => toggleHighlight(char)}
+            >
+              {active ? "Unhighlight" : "Highlight"}
+            </button>
+            <button
+              type="button"
+              className="ghost-btn"
+              style={{ color: "#ef4444", borderColor: "#ef4444" }}
+              onClick={() => removeCharacter(idx)}
+            >
+              Remove
+            </button>
+          </div>
         </div>
-      ))}
+      )})}
+
+
 
       <hr />
 

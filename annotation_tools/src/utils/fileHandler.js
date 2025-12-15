@@ -79,7 +79,12 @@ export function mapV2ToState(data) {
     
     // Cross Validation
     crossValidation: {
-      bias_reflection: analysis.bias_reflection || ""
+      bias_reflection: analysis.bias_reflection || {
+        cultural_reading: "",
+        gender_norms: "",
+        hero_villain_mapping: "",
+        ambiguous_motifs: []
+      }
     },
     
     // QA
