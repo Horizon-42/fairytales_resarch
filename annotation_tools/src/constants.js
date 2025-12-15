@@ -9,14 +9,21 @@ export const ATU_TYPES = [
 
 export const CHARACTER_ARCHETYPES = [
   "Hero",
-  "Heroine",
+  "Shadow",
+  "Sidekick",
   "Villain",
-  "Donor",
-  "Helper",
-  "Princess",
-  "Dispatcher",
-  "False Hero",
-  "Family Member",
+  "Lover",
+  "Mentor",
+  "Mother",
+  "Everyman",
+  "Damsel",
+  "Trickster",
+  "Guardian",
+  "Herald",
+  "Scapegoat",
+  "Outlaw",
+  "Rebel",
+  "Ruler",
   "Other"
 ];
 

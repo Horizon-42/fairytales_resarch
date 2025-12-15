@@ -27,13 +27,16 @@ function downloadJson(filename, data) {
 
 const emptyProppFn = () => ({
   fn: "",
-  span: { start: 0, end: 0 },
+  spanType: "paragraph", // "paragraph" or "text"
+  span: { start: 0, end: 0 }, // For paragraphs
+  textSpan: { start: 0, end: 0, text: "" }, // For raw text index
   evidence: ""
 });
 
 export default function App() {
   const [storyFiles, setStoryFiles] = useState([]);
   const [selectedStoryIndex, setSelectedStoryIndex] = useState(-1);
+  const [currentSelection, setCurrentSelection] = useState(null);
 
   const [jsonSaveHint, setJsonSaveHint] = useState(
     "datasets/iron/persian/persian/json/FA_XXX.json"
@@ -163,6 +166,9 @@ export default function App() {
         return { file, name: file.name, path: relPath, text };
       })
     );
+    // Sort stories alphabetically by name
+    withContent.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
+    
     setStoryFiles(withContent);
     if (withContent.length > 0) {
       const first = withContent[0];
@@ -192,7 +198,53 @@ export default function App() {
     }
   };
 
-  const [activeTab, setActiveTab] = useState("metadata");
+  const handleStorySelection = () => {
+    const selection = window.getSelection();
+    if (!selection.rangeCount || selection.isCollapsed) {
+      setCurrentSelection(null);
+      return;
+    }
+
+    const range = selection.getRangeAt(0);
+    const container = document.getElementById("story-content-pre");
+    
+    if (!container || !container.contains(range.commonAncestorContainer)) {
+      return;
+    }
+
+    // Calculate offset relative to the pre container
+    // This assumes the pre contains a single text node, which is true for our app
+    // If not, we'd need a more complex walker.
+    // For now, let's assume simple structure.
+    
+    // Actually, create a range from start of container to start of selection
+    const preRange = range.cloneRange();
+    preRange.selectNodeContents(container);
+    preRange.setEnd(range.startContainer, range.startOffset);
+    const start = preRange.toString().length;
+    const end = start + range.toString().length;
+    const text = range.toString();
+
+    setCurrentSelection({ start, end, text });
+  };
+
+  const [activeTab, setActiveTab] = useState("characters");
+
+  const onAddProppFn = (newEvent) => {
+    // Only add if event_type is not empty and not "OTHER"
+    if (!newEvent.event_type || newEvent.event_type === "OTHER") return;
+
+    setProppFns((prev) => [
+      ...prev,
+      {
+        fn: newEvent.event_type,
+        spanType: "text",
+        span: { start: 0, end: 0 },
+        textSpan: newEvent.text_span || { start: 0, end: 0, text: "" },
+        evidence: newEvent.description || ""
+      }
+    ]);
+  };
 
   return (
     <div className="app-root">
@@ -247,8 +299,8 @@ export default function App() {
                 <h2 className="story-title-display">
                   {storyFiles[selectedStoryIndex].name}
                 </h2>
-                <div className="story-text-display">
-                  <pre>{storyFiles[selectedStoryIndex].text}</pre>
+                <div className="story-text-display" onMouseUp={handleStorySelection}>
+                  <pre id="story-content-pre">{storyFiles[selectedStoryIndex].text}</pre>
                 </div>
               </>
             ) : (
@@ -262,10 +314,16 @@ export default function App() {
         <aside className="inspector-pane">
           <div className="inspector-tabs">
             <button
-              className={`tab-btn ${activeTab === "metadata" ? "active" : ""}`}
-              onClick={() => setActiveTab("metadata")}
+              className={`tab-btn ${activeTab === "characters" ? "active" : ""}`}
+              onClick={() => setActiveTab("characters")}
             >
-              Metadata
+              Characters
+            </button>
+            <button
+              className={`tab-btn ${activeTab === "narrative" ? "active" : ""}`}
+              onClick={() => setActiveTab("narrative")}
+            >
+              Narrative
             </button>
             <button
               className={`tab-btn ${activeTab === "motifs" ? "active" : ""}`}
@@ -280,10 +338,16 @@ export default function App() {
               Propp
             </button>
             <button
-              className={`tab-btn ${activeTab === "narrative" ? "active" : ""}`}
-              onClick={() => setActiveTab("narrative")}
+              className={`tab-btn ${activeTab === "summaries" ? "active" : ""}`}
+              onClick={() => setActiveTab("summaries")}
             >
-              Narrative
+              Summaries
+            </button>
+            <button
+              className={`tab-btn ${activeTab === "metadata" ? "active" : ""}`}
+              onClick={() => setActiveTab("metadata")}
+            >
+              Metadata
             </button>
             <button
               className={`tab-btn ${activeTab === "qa" ? "active" : ""}`}
@@ -294,6 +358,43 @@ export default function App() {
           </div>
 
           <div className="inspector-content">
+            {activeTab === "characters" && (
+              <CharacterSection motif={motif} setMotif={setMotif} />
+            )}
+
+            {activeTab === "narrative" && (
+              <NarrativeAndBiasSection
+                narrativeStructure={narrativeStructure}
+                setNarrativeStructure={setNarrativeStructure}
+                crossValidation={crossValidation}
+                setCrossValidation={setCrossValidation}
+                motif={motif}
+                currentSelection={currentSelection}
+                onAddProppFn={onAddProppFn}
+              />
+            )}
+
+            {activeTab === "motifs" && (
+              <MotifSection motif={motif} setMotif={setMotif} />
+            )}
+
+            {activeTab === "propp" && (
+              <DeepAnnotationSection
+                proppFns={proppFns}
+                setProppFns={setProppFns}
+                proppNotes={proppNotes}
+                setProppNotes={setProppNotes}
+                currentSelection={currentSelection}
+              />
+            )}
+
+            {activeTab === "summaries" && (
+              <SummariesSection
+                paragraphSummaries={paragraphSummaries}
+                setParagraphSummaries={setParagraphSummaries}
+              />
+            )}
+
             {activeTab === "metadata" && (
               <>
                 <StoryMetadataSection
@@ -315,30 +416,6 @@ export default function App() {
                   setDeepMeta={setDeepMeta}
                 />
               </>
-            )}
-
-            {activeTab === "motifs" && (
-              <MotifSection motif={motif} setMotif={setMotif} />
-            )}
-
-            {activeTab === "propp" && (
-              <DeepAnnotationSection
-                paragraphSummaries={paragraphSummaries}
-                setParagraphSummaries={setParagraphSummaries}
-                proppFns={proppFns}
-                setProppFns={setProppFns}
-                proppNotes={proppNotes}
-                setProppNotes={setProppNotes}
-              />
-            )}
-
-            {activeTab === "narrative" && (
-              <NarrativeAndBiasSection
-                narrativeStructure={narrativeStructure}
-                setNarrativeStructure={setNarrativeStructure}
-                crossValidation={crossValidation}
-                setCrossValidation={setCrossValidation}
-              />
             )}
 
             {activeTab === "qa" && (
@@ -634,14 +711,137 @@ function HighLevelMetaSection({ meta, setMeta, deepMeta, setDeepMeta }) {
   );
 }
 
-function MotifSection({ motif, setMotif }) {
-  const handleArchetypesChange = (e) => {
+function CharacterSection({ motif, setMotif }) {
+  const characters = Array.isArray(motif.character_archetypes)
+    ? motif.character_archetypes
+    : [];
+
+  // Migration helper: if we encounter an old string array, treat as empty or migrate
+  // For safety, let's assume we are starting fresh or user clears old data.
+  // Actually, we can check if the first item is a string.
+  const isLegacyFormat =
+    characters.length > 0 && typeof characters[0] === "string";
+
+  // If legacy, we can't easily edit it with this new UI, so let's reset it or map it.
+  // Mapping approach: { name: "", alias: "", archetype: "TheStringValue" }
+  const safeCharacters = isLegacyFormat
+    ? characters.map((c) => ({ name: "", alias: "", archetype: c }))
+    : characters;
+
+  const handleCharacterChange = (index, field, value) => {
+    const next = [...safeCharacters];
+    next[index] = { ...next[index], [field]: value };
+    setMotif({ ...motif, character_archetypes: next });
+  };
+
+  const addCharacter = () => {
     setMotif({
       ...motif,
-      character_archetypes: multiSelectFromEvent(e)
+      character_archetypes: [
+        ...safeCharacters,
+        { name: "", alias: "", archetype: "" }
+      ]
     });
   };
 
+  const removeCharacter = (index) => {
+    const next = safeCharacters.filter((_, i) => i !== index);
+    setMotif({ ...motif, character_archetypes: next });
+  };
+
+  return (
+    <section className="card">
+      <h2>Characters</h2>
+      <div className="section-header-row">
+        <span>Story Characters</span>
+        <button type="button" className="ghost-btn" onClick={addCharacter}>
+          + Add Character
+        </button>
+      </div>
+
+      {safeCharacters.length === 0 && (
+        <p className="hint">
+          No characters defined. Add characters to link specific names to
+          archetypes.
+        </p>
+      )}
+
+      {safeCharacters.map((char, idx) => (
+        <div key={idx} className="propp-row">
+          <div className="grid-3">
+            <label>
+              Name
+              <input
+                value={char.name}
+                onChange={(e) => handleCharacterChange(idx, "name", e.target.value)}
+                placeholder="e.g. Aladdin"
+              />
+            </label>
+            <label>
+              Alias (Optional)
+              <input
+                value={char.alias}
+                onChange={(e) => handleCharacterChange(idx, "alias", e.target.value)}
+                placeholder="e.g. Street Rat"
+              />
+            </label>
+            <label>
+              Archetype
+              <select
+                value={char.archetype}
+                onChange={(e) =>
+                  handleCharacterChange(idx, "archetype", e.target.value)
+                }
+              >
+                <option value="">– Select –</option>
+                {CHARACTER_ARCHETYPES.map((c) => (
+                  <option key={c} value={c}>
+                    {c}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+          <button
+            type="button"
+            className="ghost-btn"
+            style={{ color: "#ef4444", borderColor: "#ef4444", marginTop: "0.25rem" }}
+            onClick={() => removeCharacter(idx)}
+          >
+            Remove
+          </button>
+        </div>
+      ))}
+
+      <hr />
+
+      <div className="grid-2">
+        <label>
+          Helper type
+          <input
+            value={motif.helper_type}
+            onChange={(e) =>
+              setMotif({ ...motif, helper_type: e.target.value })
+            }
+            placeholder="e.g. CAPTIVE_MAIDEN_AND_ANIMAL"
+          />
+        </label>
+        <label>
+          Obstacle thrower
+          <input
+            value={motif.obstacle_thrower}
+            onChange={(e) =>
+              setMotif({ ...motif, obstacle_thrower: e.target.value })
+            }
+            placeholder="Who throws the obstacles?"
+          />
+        </label>
+      </div>
+    </section>
+  );
+}
+
+function MotifSection({ motif, setMotif }) {
   const handleObstaclePatternChange = (index, value) => {
     const next = [...motif.obstacle_pattern];
     next[index] = value;
@@ -657,53 +857,17 @@ function MotifSection({ motif, setMotif }) {
 
   return (
     <section className="card">
-      <h2>Motif & characters</h2>
-      <div className="grid-3">
-        <label>
-          Motif ATU type
-          <select
-            value={motif.atu_type}
-            onChange={(e) => setMotif({ ...motif, atu_type: e.target.value })}
-          >
-            <option value="">–</option>
-            {ATU_TYPES.map((code) => (
-              <option key={code} value={code}>
-                {code}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label>
-          Helper type
-          <input
-            value={motif.helper_type}
-            onChange={(e) =>
-              setMotif({ ...motif, helper_type: e.target.value })
-            }
-            placeholder="CAPTIVE_MAIDEN_AND_ANIMAL"
-          />
-        </label>
-        <label>
-          Obstacle thrower (text)
-          <input
-            value={motif.obstacle_thrower}
-            onChange={(e) =>
-              setMotif({ ...motif, obstacle_thrower: e.target.value })
-            }
-          />
-        </label>
-      </div>
-
+      <h2>Motifs</h2>
       <label>
-        Character archetypes
+        Motif ATU type
         <select
-          multiple
-          value={motif.character_archetypes}
-          onChange={handleArchetypesChange}
+          value={motif.atu_type}
+          onChange={(e) => setMotif({ ...motif, atu_type: e.target.value })}
         >
-          {CHARACTER_ARCHETYPES.map((c) => (
-            <option key={c} value={c}>
-              {c}
+          <option value="">–</option>
+          {ATU_TYPES.map((code) => (
+            <option key={code} value={code}>
+              {code}
             </option>
           ))}
         </select>
@@ -749,14 +913,7 @@ function MotifSection({ motif, setMotif }) {
   );
 }
 
-function DeepAnnotationSection({
-  paragraphSummaries,
-  setParagraphSummaries,
-  proppFns,
-  setProppFns,
-  proppNotes,
-  setProppNotes
-}) {
+function SummariesSection({ paragraphSummaries, setParagraphSummaries }) {
   const handleParagraphChange = (index, value) => {
     const next = [...paragraphSummaries];
     next[index] = value;
@@ -767,33 +924,11 @@ function DeepAnnotationSection({
     setParagraphSummaries([...paragraphSummaries, ""]);
   };
 
-  const handleProppChange = (idx, field, value) => {
-    const next = proppFns.map((item, i) =>
-      i === idx
-        ? {
-            ...item,
-            [field]:
-              field === "span"
-                ? { ...item.span, ...value }
-                : field === "fn"
-                ? value
-                : value
-          }
-        : item
-    );
-    setProppFns(next);
-  };
-
-  const addPropp = () => {
-    setProppFns([...proppFns, emptyProppFn()]);
-  };
-
   return (
     <section className="card">
-      <h2>Deep annotation (paragraphs & Propp functions)</h2>
-
+      <h2>Paragraph Summaries</h2>
       <div className="section-header-row">
-        <span>Paragraph summaries</span>
+        <span>Summaries</span>
         <button type="button" className="ghost-btn" onClick={addParagraph}>
           + Add paragraph
         </button>
@@ -808,8 +943,53 @@ function DeepAnnotationSection({
           />
         </label>
       ))}
+    </section>
+  );
+}
 
-      <hr />
+function DeepAnnotationSection({
+  proppFns,
+  setProppFns,
+  proppNotes,
+  setProppNotes,
+  currentSelection
+}) {
+  const handleProppChange = (idx, field, value) => {
+    const next = proppFns.map((item, i) =>
+      i === idx
+        ? {
+            ...item,
+            [field]:
+              field === "span" || field === "textSpan"
+                ? { ...item[field], ...value }
+                : value
+          }
+        : item
+    );
+    setProppFns(next);
+  };
+
+  const captureSelection = (idx) => {
+    if (!currentSelection) return;
+    const next = proppFns.map((item, i) =>
+      i === idx
+        ? {
+            ...item,
+            textSpan: currentSelection,
+            evidence: currentSelection.text // Auto-fill evidence too? Optional but helpful
+          }
+        : item
+    );
+    setProppFns(next);
+  };
+
+  const addPropp = () => {
+    setProppFns([...proppFns, emptyProppFn()]);
+  };
+
+  return (
+    <section className="card">
+      <h2>Propp Functions</h2>
 
       <div className="section-header-row">
         <span>Propp functions</span>
@@ -820,14 +1000,12 @@ function DeepAnnotationSection({
 
       {proppFns.map((fnObj, idx) => (
         <div key={idx} className="propp-row">
-          <div className="grid-3">
+          <div className="grid-2" style={{ marginBottom: "0.5rem" }}>
             <label>
               Function
               <select
                 value={fnObj.fn}
-                onChange={(e) =>
-                  handleProppChange(idx, "fn", e.target.value)
-                }
+                onChange={(e) => handleProppChange(idx, "fn", e.target.value)}
               >
                 <option value="">–</option>
                 {PROPP_FUNCTIONS.map((fn) => (
@@ -838,30 +1016,78 @@ function DeepAnnotationSection({
               </select>
             </label>
             <label>
-              Span start (paragraph index)
-              <input
-                type="number"
-                value={fnObj.span.start}
+              Span Type
+              <select
+                value={fnObj.spanType || "paragraph"}
                 onChange={(e) =>
-                  handleProppChange(idx, "span", {
-                    start: Number(e.target.value)
-                  })
+                  handleProppChange(idx, "spanType", e.target.value)
                 }
-              />
-            </label>
-            <label>
-              Span end (paragraph index)
-              <input
-                type="number"
-                value={fnObj.span.end}
-                onChange={(e) =>
-                  handleProppChange(idx, "span", {
-                    end: Number(e.target.value)
-                  })
-                }
-              />
+              >
+                <option value="paragraph">Paragraph Index</option>
+                <option value="text">Text Selection</option>
+              </select>
             </label>
           </div>
+
+          {(fnObj.spanType === "text") ? (
+            <div className="grid-3" style={{ alignItems: "end" }}>
+              <label>
+                Start Index
+                <input
+                  type="number"
+                  value={fnObj.textSpan?.start || 0}
+                  readOnly
+                  style={{ background: "#e5e7eb" }}
+                />
+              </label>
+              <label>
+                End Index
+                <input
+                  type="number"
+                  value={fnObj.textSpan?.end || 0}
+                  readOnly
+                  style={{ background: "#e5e7eb" }}
+                />
+              </label>
+              <button
+                type="button"
+                className="primary-btn"
+                style={{ marginBottom: "0.75rem", fontSize: "0.75rem", padding: "0.5rem" }}
+                onClick={() => captureSelection(idx)}
+                disabled={!currentSelection}
+              >
+                Capture Selection
+              </button>
+            </div>
+          ) : (
+            <div className="grid-2">
+              <label>
+                Start Para
+                <input
+                  type="number"
+                  value={fnObj.span?.start || 0}
+                  onChange={(e) =>
+                    handleProppChange(idx, "span", {
+                      start: Number(e.target.value)
+                    })
+                  }
+                />
+              </label>
+              <label>
+                End Para
+                <input
+                  type="number"
+                  value={fnObj.span?.end || 0}
+                  onChange={(e) =>
+                    handleProppChange(idx, "span", {
+                      end: Number(e.target.value)
+                    })
+                  }
+                />
+              </label>
+            </div>
+          )}
+
           <label>
             Evidence
             <textarea
@@ -891,16 +1117,83 @@ function NarrativeAndBiasSection({
   narrativeStructure,
   setNarrativeStructure,
   crossValidation,
-  setCrossValidation
+  setCrossValidation,
+  motif,
+  currentSelection,
+  onAddProppFn
 }) {
-  const handleNarrativeChange = (idx, value) => {
-    const next = [...narrativeStructure];
-    next[idx] = value;
+  // 1. Prepare Character Options from motif state
+  // We prefer names, fallback to archetypes if name is missing
+  const charactersList = Array.isArray(motif.character_archetypes)
+    ? motif.character_archetypes
+    : [];
+  
+  // Flatten to a list of options: { label: "Aladdin (Hero)", value: "Aladdin" }
+  const characterOptions = charactersList
+    .map((c) => {
+      if (typeof c === "string") return { label: c, value: c }; // Legacy string
+      const name = c.name || "Unnamed";
+      const role = c.archetype || "Unknown";
+      return { label: `${name} (${role})`, value: name };
+    })
+    .filter((o) => o.value && o.value !== "Unnamed");
+
+  // 2. Prepare Narrative Items (Migration from strings if needed)
+  const items = narrativeStructure.map((item) => {
+    if (typeof item === "string") {
+      return {
+        event_type: "OTHER",
+        description: item,
+        agents: [],
+        targets: [],
+        text_span: null
+      };
+    }
+    return item;
+  });
+
+  const updateItem = (index, field, value) => {
+    const next = [...items];
+    next[index] = { ...next[index], [field]: value };
+    setNarrativeStructure(next);
+
+    // Auto-generate Propp if specific fields changed
+    if (onAddProppFn && field === "event_type") {
+      // We pass the updated item, but we need to merge the new value first
+      const updatedItem = { ...next[index], [field]: value };
+      onAddProppFn(updatedItem);
+    }
+  };
+
+  const addItem = () => {
+    setNarrativeStructure([
+      ...items,
+      {
+        event_type: "",
+        description: "",
+        agents: [],
+        targets: [],
+        text_span: null
+      }
+    ]);
+  };
+
+  const removeItem = (index) => {
+    const next = items.filter((_, i) => i !== index);
     setNarrativeStructure(next);
   };
 
-  const addNarrative = () => {
-    setNarrativeStructure([...narrativeStructure, ""]);
+  const captureSelection = (index) => {
+    if (!currentSelection) return;
+    updateItem(index, "text_span", currentSelection);
+    // Optional: auto-fill description if empty?
+    // updateItem(index, "description", currentSelection.text.substring(0, 50) + "...");
+  };
+
+  // Helper for multi-select (Agents/Targets)
+  const handleMultiCharChange = (index, field, e) => {
+    const values = Array.from(e.target.selectedOptions).map((o) => o.value);
+    updateItem(index, field, values);
   };
 
   const handleBiasChange = (field, value) => {
@@ -939,21 +1232,110 @@ function NarrativeAndBiasSection({
 
   return (
     <section className="card">
-      <h2>Narrative structure & bias reflection</h2>
-
+      <h2>Narrative Events</h2>
       <div className="section-header-row">
-        <span>Narrative structure steps</span>
-        <button type="button" className="ghost-btn" onClick={addNarrative}>
-          + Add step
+        <span>Story Sequence</span>
+        <button type="button" className="ghost-btn" onClick={addItem}>
+          + Add Event
         </button>
       </div>
-      {narrativeStructure.map((step, idx) => (
-        <input
-          key={idx}
-          value={step}
-          onChange={(e) => handleNarrativeChange(idx, e.target.value)}
-          placeholder="departure_and_meeting_helper"
-        />
+
+      {items.map((item, idx) => (
+        <div key={idx} className="propp-row">
+          <div className="grid-2">
+            <label>
+              Event Type (Propp)
+              <select
+                value={item.event_type}
+                onChange={(e) => updateItem(idx, "event_type", e.target.value)}
+              >
+                <option value="">– Select Event –</option>
+                {PROPP_FUNCTIONS.map((fn) => (
+                  <option key={fn} value={fn}>
+                    {fn}
+                  </option>
+                ))}
+                <option value="OTHER">OTHER</option>
+              </select>
+            </label>
+            <div style={{ display: "flex", alignItems: "flex-end", gap: "0.5rem" }}>
+              <label style={{ flex: 1 }}>
+                Text Selection
+                <input
+                  value={
+                    item.text_span
+                      ? `${item.text_span.start}-${item.text_span.end}`
+                      : "None"
+                  }
+                  readOnly
+                  placeholder="No selection"
+                  style={{ background: "#f3f4f6", marginBottom: 0 }}
+                />
+              </label>
+              <button
+                type="button"
+                className="primary-btn"
+                style={{ padding: "0.5rem", fontSize: "0.75rem", height: "34px" }}
+                onClick={() => captureSelection(idx)}
+                disabled={!currentSelection}
+              >
+                Capture
+              </button>
+            </div>
+          </div>
+
+          <label>
+            Description / Detail
+            <textarea
+              rows={2}
+              value={item.description}
+              onChange={(e) => updateItem(idx, "description", e.target.value)}
+              placeholder="Describe the specific event..."
+            />
+          </label>
+
+          <div className="grid-2">
+            <label>
+              Agents (Doer)
+              <select
+                multiple
+                value={item.agents || []}
+                onChange={(e) => handleMultiCharChange(idx, "agents", e)}
+                style={{ height: "80px" }}
+              >
+                {characterOptions.map((opt) => (
+                  <option key={opt.value} value={opt.value}>
+                    {opt.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              Targets (Receiver)
+              <select
+                multiple
+                value={item.targets || []}
+                onChange={(e) => handleMultiCharChange(idx, "targets", e)}
+                style={{ height: "80px" }}
+              >
+                {characterOptions.map((opt) => (
+                  <option key={opt.value} value={opt.value}>
+                    {opt.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+          
+          <button
+            type="button"
+            className="ghost-btn"
+            style={{ color: "#ef4444", borderColor: "#ef4444", marginTop: "0.5rem" }}
+            onClick={() => removeItem(idx)}
+          >
+            Remove Event
+          </button>
+        </div>
       ))}
 
       <hr />

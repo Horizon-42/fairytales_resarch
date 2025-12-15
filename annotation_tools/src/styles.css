@@ -225,7 +225,8 @@ body {
 
 .inspector-tabs {
   display: flex;
-  padding: 0 0.5rem;
+  flex-wrap: wrap; /* Allow tabs to wrap to next line */
+  padding: 0.5rem;
   background: #ffffff;
   border-bottom: 1px solid #e2e8f0;
   gap: 0.25rem;
