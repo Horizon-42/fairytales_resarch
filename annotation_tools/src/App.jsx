@@ -6,6 +6,7 @@ import {
   ENDING_TYPES,
   PROPP_FUNCTIONS
 } from "./constants.js";
+import { organizeFiles, mapV1ToState, mapV2ToState } from "./utils/fileHandler.js";
 
 function multiSelectFromEvent(e) {
   return Array.from(e.target.selectedOptions).map((o) => o.value);
@@ -35,6 +36,8 @@ const emptyProppFn = () => ({
 
 export default function App() {
   const [storyFiles, setStoryFiles] = useState([]);
+  const [v1JsonFiles, setV1JsonFiles] = useState({});
+  const [v2JsonFiles, setV2JsonFiles] = useState({});
   const [selectedStoryIndex, setSelectedStoryIndex] = useState(-1);
   const [currentSelection, setCurrentSelection] = useState(null);
 
@@ -213,51 +216,147 @@ export default function App() {
   const handleDownload = (version) => {
     const data = version === "v2" ? jsonV2 : jsonV1;
     const suffix = version === "v2" ? "_v2" : "_v1";
+    // If we have a hint that looks like a path, we might want to respect it in the filename?
+    // Browsers only use the filename part for download.
     const filename = `${id || "annotation"}${suffix}.json`;
     downloadJson(filename, data);
   };
 
+  const loadState = (loaded) => {
+    if (loaded.id) setId(loaded.id);
+    if (loaded.culture) setCulture(loaded.culture);
+    if (loaded.title) setTitle(loaded.title);
+    if (loaded.annotationLevel) setAnnotationLevel(loaded.annotationLevel);
+    
+    setMeta(prev => ({ ...prev, ...loaded.meta }));
+    setMotif(prev => ({ ...prev, ...loaded.motif }));
+    
+    if (loaded.paragraphSummaries) setParagraphSummaries(loaded.paragraphSummaries);
+    if (loaded.proppFns) setProppFns(loaded.proppFns);
+    if (loaded.proppNotes) setProppNotes(loaded.proppNotes);
+    if (loaded.deepMeta) setDeepMeta(prev => ({ ...prev, ...loaded.deepMeta }));
+    
+    if (loaded.narrativeStructure) setNarrativeStructure(loaded.narrativeStructure);
+    
+    if (loaded.crossValidation) setCrossValidation(prev => ({ ...prev, ...loaded.crossValidation }));
+    if (loaded.qa) setQa(prev => ({ ...prev, ...loaded.qa }));
+    
+    // Check deep fields from V1 map if not covered
+    if (loaded.proppFns) setProppFns(loaded.proppFns);
+  };
+
+  const resetState = () => {
+    setTitle("");
+    setMeta({
+      main_motif: "",
+      atu_type: "",
+      ending_type: "HAPPY_REUNION",
+      key_values: [],
+      target_motif: true
+    });
+    setMotif({
+      atu_type: "",
+      character_archetypes: [],
+      obstacle_pattern: [],
+      obstacle_thrower: "",
+      helper_type: "",
+      thinking_process: ""
+    });
+    setParagraphSummaries([""]);
+    setProppFns([emptyProppFn()]);
+    setProppNotes("");
+    setDeepMeta({ ending_type: "HAPPY_REUNION", key_values: [] });
+    setNarrativeStructure([""]);
+    setCrossValidation({
+      shared_story: null,
+      bias_reflection: {
+        cultural_reading: "",
+        gender_norms: "",
+        hero_villain_mapping: "",
+        ambiguous_motifs: []
+      }
+    });
+    setQa({
+      annotator: "",
+      date_annotated: new Date().toISOString().split("T")[0],
+      confidence: 0.8,
+      notes: ""
+    });
+  };
+
   const handleStoryFilesChange = async (event) => {
-    const files = Array.from(event.target.files || []).filter((f) =>
-      f.name.toLowerCase().endsWith(".txt")
-    );
+    const files = event.target.files;
+    if (!files) return;
+
+    // Use utility to organize files
+    const { texts, v1Jsons, v2Jsons } = organizeFiles(files);
+    
+    // Sort texts alphabetically
+    texts.sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true, sensitivity: 'base' }));
+
+    // Read text content for all text files (so we can display them)
+    // For large datasets, we might want to do this lazily, but user asked for "story content".
+    // We'll stick to pre-loading texts for now as per previous logic, but maybe optimize if needed.
     const withContent = await Promise.all(
-      files.map(async (file) => {
-        const text = await file.text();
-        const relPath = file.webkitRelativePath || file.name;
-        return { file, name: file.name, path: relPath, text };
+      texts.map(async (t) => {
+        const text = await t.file.text();
+        return { ...t, name: t.file.name, text };
       })
     );
-    // Sort stories alphabetically by name
-    withContent.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
-    
+
     setStoryFiles(withContent);
+    setV1JsonFiles(v1Jsons);
+    setV2JsonFiles(v2Jsons);
+
     if (withContent.length > 0) {
-      const first = withContent[0];
-      setSelectedStoryIndex(0);
-      // Try to derive ID from filename like FA_006_*.txt
-      const idGuess = first.name.split(/[_.]/)[0] || "FA_XXX";
-      setId(idGuess);
-      setSourceText((prev) => ({
-        ...prev,
-        text: first.text,
-        reference_uri: `file://${relPathToDatasetHint(first.path)}`
-      }));
+      // Select first story
+      // We can't call handleSelectStory directly because state updates (files) are async/batched.
+      // We have to explicitly pass the new data or use an effect.
+      // Let's call a helper with the data.
+      selectStoryWithData(0, withContent, v1Jsons, v2Jsons);
+    }
+  };
+
+  const selectStoryWithData = async (index, texts, v1Map, v2Map) => {
+    setSelectedStoryIndex(index);
+    const story = texts[index];
+    if (!story) return;
+
+    // Default setup from text file
+    const idGuess = story.id; // derived in organizeFiles
+    setId(idGuess);
+    setSourceText((prev) => ({
+      ...prev,
+      text: story.text,
+      reference_uri: `file://${relPathToDatasetHint(story.path)}`
+    }));
+
+    // Reset annotations first
+    resetState();
+
+    // Check for existing JSON
+    let jsonFile = v2Map[idGuess];
+    let version = 2;
+    
+    if (!jsonFile) {
+      jsonFile = v1Map[idGuess];
+      version = 1;
+    }
+
+    if (jsonFile) {
+      try {
+        const content = await jsonFile.text();
+        const data = JSON.parse(content);
+        const mappedState = version === 2 ? mapV2ToState(data) : mapV1ToState(data);
+        loadState(mappedState);
+      } catch (err) {
+        console.error("Failed to load JSON annotation", err);
+      }
     }
   };
 
   const handleSelectStory = (index) => {
-    setSelectedStoryIndex(index);
-    const story = storyFiles[index];
-    if (story) {
-      const idGuess = story.name.split(/[_.]/)[0] || id;
-      setId(idGuess);
-      setSourceText((prev) => ({
-        ...prev,
-        text: story.text,
-        reference_uri: `file://${relPathToDatasetHint(story.path)}`
-      }));
-    }
+    selectStoryWithData(index, storyFiles, v1JsonFiles, v2JsonFiles);
   };
 
   const handleStorySelection = () => {
