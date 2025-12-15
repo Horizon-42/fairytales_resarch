@@ -108,7 +108,7 @@ export default function App() {
     reference_uri: ""
   });
 
-  const jsonPreview = useMemo(
+  const jsonV1 = useMemo(
     () => ({
       id,
       culture,
@@ -126,7 +126,9 @@ export default function App() {
         },
         meta: deepMeta
       },
-      narrative_structure: narrativeStructure.filter((n) => n.trim()),
+      narrative_structure: narrativeStructure.filter(
+        (n) => (typeof n === "string" ? n.trim() : n.event_type)
+      ),
       cross_validation: crossValidation,
       qa,
       source_text_persian: persianSource
@@ -150,9 +152,69 @@ export default function App() {
     ]
   );
 
-  const handleDownload = () => {
-    const filename = `${id || "annotation"}.json`;
-    downloadJson(filename, jsonPreview);
+  const jsonV2 = useMemo(() => {
+    // Extract characters safely
+    const characters = Array.isArray(motif.character_archetypes)
+      ? motif.character_archetypes.map((c) =>
+          typeof c === "string" ? { name: "", alias: "", archetype: c } : c
+        )
+      : [];
+
+    return {
+      version: "2.0",
+      metadata: {
+        id,
+        title,
+        culture,
+        annotator: qa.annotator,
+        date_annotated: qa.date_annotated,
+        confidence: qa.confidence,
+        annotation_level: annotationLevel
+      },
+      source_info: {
+        language: sourceText.language,
+        type: sourceText.type,
+        reference_uri: sourceText.reference_uri,
+        text_content: sourceText.text // Optional: include full text?
+      },
+      characters: characters,
+      narrative_events: narrativeStructure.map((n) =>
+        typeof n === "string"
+          ? { event_type: "OTHER", description: n }
+          : n
+      ),
+      themes_and_motifs: {
+        atu_type: meta.atu_type,
+        atu_description: meta.main_motif,
+        ending_type: meta.ending_type,
+        key_values: meta.key_values,
+        obstacle_pattern: motif.obstacle_pattern,
+        obstacle_thrower: motif.obstacle_thrower,
+        helper_type: motif.helper_type,
+        thinking_process: motif.thinking_process
+      },
+      analysis: {
+        propp_functions: proppFns.filter((f) => f.fn || f.evidence),
+        propp_notes: proppNotes,
+        paragraph_summaries: paragraphSummaries.filter((p) => p.trim()),
+        bias_reflection: crossValidation.bias_reflection,
+        qa_notes: qa.notes
+      }
+    };
+  }, [
+    jsonV1 // Depend on V1 inputs implicitly or just list them all. 
+           // For simplicity, reusing same deps as V1 would be better, 
+           // but I'll trust React re-renders or list deps if needed.
+           // Actually, let's just list the same deps to be safe.
+  , id, culture, title, sourceText, annotationLevel, meta, motif, paragraphSummaries, proppFns, proppNotes, deepMeta, narrativeStructure, crossValidation, qa, persianSource]);
+
+  const [previewVersion, setPreviewVersion] = useState("v2");
+
+  const handleDownload = (version) => {
+    const data = version === "v2" ? jsonV2 : jsonV1;
+    const suffix = version === "v2" ? "_v2" : "_v1";
+    const filename = `${id || "annotation"}${suffix}.json`;
+    downloadJson(filename, data);
   };
 
   const handleStoryFilesChange = async (event) => {
@@ -275,9 +337,14 @@ export default function App() {
               onChange={(e) => setJsonSaveHint(e.target.value)}
             />
           </div>
-          <button className="primary-btn" onClick={handleDownload}>
-            Download JSON
-          </button>
+          <div style={{ display: 'flex', gap: '0.5rem' }}>
+            <button className="primary-btn" onClick={() => handleDownload("v1")}>
+              Save V1
+            </button>
+            <button className="primary-btn" onClick={() => handleDownload("v2")}>
+              Save V2
+            </button>
+          </div>
         </div>
       </header>
 
@@ -289,6 +356,8 @@ export default function App() {
             selectedStory={storyFiles[selectedStoryIndex]}
             onFilesChange={handleStoryFilesChange}
             onSelectStory={handleSelectStory}
+            culture={culture}
+            onCultureChange={setCulture}
           />
         </aside>
 
@@ -326,12 +395,6 @@ export default function App() {
               Narrative
             </button>
             <button
-              className={`tab-btn ${activeTab === "motifs" ? "active" : ""}`}
-              onClick={() => setActiveTab("motifs")}
-            >
-              Motifs
-            </button>
-            <button
               className={`tab-btn ${activeTab === "propp" ? "active" : ""}`}
               onClick={() => setActiveTab("propp")}
             >
@@ -342,6 +405,12 @@ export default function App() {
               onClick={() => setActiveTab("summaries")}
             >
               Summaries
+            </button>
+            <button
+              className={`tab-btn ${activeTab === "motifs" ? "active" : ""}`}
+              onClick={() => setActiveTab("motifs")}
+            >
+              Motifs
             </button>
             <button
               className={`tab-btn ${activeTab === "metadata" ? "active" : ""}`}
@@ -374,10 +443,6 @@ export default function App() {
               />
             )}
 
-            {activeTab === "motifs" && (
-              <MotifSection motif={motif} setMotif={setMotif} />
-            )}
-
             {activeTab === "propp" && (
               <DeepAnnotationSection
                 proppFns={proppFns}
@@ -393,6 +458,10 @@ export default function App() {
                 paragraphSummaries={paragraphSummaries}
                 setParagraphSummaries={setParagraphSummaries}
               />
+            )}
+
+            {activeTab === "motifs" && (
+              <MotifSection motif={motif} setMotif={setMotif} />
             )}
 
             {activeTab === "metadata" && (
@@ -429,9 +498,25 @@ export default function App() {
 
             {showPreview && (
               <section className="card preview-card">
-                <h2>JSON Preview</h2>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <h2>JSON Preview</h2>
+                  <div className="inspector-tabs" style={{ border: "none", padding: 0 }}>
+                    <button 
+                      className={`tab-btn ${previewVersion === "v1" ? "active" : ""}`}
+                      onClick={() => setPreviewVersion("v1")}
+                    >
+                      V1
+                    </button>
+                    <button 
+                      className={`tab-btn ${previewVersion === "v2" ? "active" : ""}`}
+                      onClick={() => setPreviewVersion("v2")}
+                    >
+                      V2
+                    </button>
+                  </div>
+                </div>
                 <pre className="json-preview">
-                  {JSON.stringify(jsonPreview, null, 2)}
+                  {JSON.stringify(previewVersion === "v2" ? jsonV2 : jsonV1, null, 2)}
                 </pre>
               </section>
             )}
@@ -452,7 +537,9 @@ function StoryBrowserSection({
   selectedIndex,
   selectedStory,
   onFilesChange,
-  onSelectStory
+  onSelectStory,
+  culture,
+  onCultureChange
 }) {
   return (
     <div className="story-browser">
@@ -469,6 +556,23 @@ function StoryBrowserSection({
             onChange={onFilesChange}
           />
         </label>
+      </div>
+
+      <div style={{ padding: "0 0.5rem 0.5rem 0.5rem", borderBottom: "1px solid #e5e7eb" }}>
+        <label style={{ fontSize: "0.8rem", display: "block", marginBottom: "0.25rem" }}>
+          Default Culture
+        </label>
+        <select
+          value={culture}
+          onChange={(e) => onCultureChange(e.target.value)}
+          style={{ width: "100%", padding: "0.25rem" }}
+        >
+          {["Chinese", "Persian", "Indian", "Japanese"].map((c) => (
+            <option key={c} value={c}>
+              {c}
+            </option>
+          ))}
+        </select>
       </div>
 
       <div className="story-list">
