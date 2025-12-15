@@ -19,27 +19,26 @@ def clean_file(filepath):
         print(f"Skipping empty file: {filepath}")
         return
 
-    title = non_empty_lines[0]
-    body = non_empty_lines[1:]
+    # Remove the first line (Title) as requested
+    if len(non_empty_lines) > 0:
+        body = non_empty_lines[1:]
+    else:
+        body = []
 
-    new_content = title + "\n\n" + "\n".join(body) + "\n"
+    new_content = "\n".join(body) + "\n"
 
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(new_content)
     
-    print(f"Processed: {filepath}")
+    print(f"Processed (title removed): {filepath}")
 
 def main():
     base_dir = "datasets"
     for root, dirs, files in os.walk(base_dir):
         for file in files:
             if file.endswith(".txt"):
-                # Avoid processing files in json directories if any txt files ended up there by mistake
-                # But request said "go through texts".
-                # I'll stick to files ending in .txt
                 filepath = os.path.join(root, file)
                 clean_file(filepath)
 
 if __name__ == "__main__":
     main()
-

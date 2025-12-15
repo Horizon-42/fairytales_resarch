@@ -1,5 +1,3 @@
-Title: 夸父逐日
-
 Rank: 10
 EnglishTitle: Kuafu Chases the Sun
 Category: Myth
