@@ -68,7 +68,11 @@
       "thinking_process": ""
     },
     "deep": {
-      "paragraph_summaries": [],
+      "paragraph_summaries": {
+        "per_paragraph": {},
+        "combined": [],
+        "whole": ""
+      },
       "propp_functions": [
         {
           "id": "80ef1091-c37c-44b4-bc04-92228236d42d",

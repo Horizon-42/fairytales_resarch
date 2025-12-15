@@ -1,0 +1,176 @@
+import React from "react";
+import { CHARACTER_ARCHETYPES } from "../constants.js";
+import { HIGHLIGHT_COLORS } from "../utils/helpers.js";
+
+export default function CharacterSection({ motif, setMotif, highlightedChars, setHighlightedChars }) {
+  const characters = Array.isArray(motif.character_archetypes)
+    ? motif.character_archetypes
+    : [];
+
+  const isLegacyFormat =
+    characters.length > 0 && typeof characters[0] === "string";
+
+  const safeCharacters = isLegacyFormat
+    ? characters.map((c) => ({ name: "", alias: "", archetype: c }))
+    : characters;
+
+  const handleCharacterChange = (index, field, value) => {
+    const next = [...safeCharacters];
+    next[index] = { ...next[index], [field]: value };
+    setMotif({ ...motif, character_archetypes: next });
+  };
+
+  const addCharacter = () => {
+    setMotif({
+      ...motif,
+      character_archetypes: [
+        ...safeCharacters,
+        { name: "", alias: "", archetype: "" }
+      ]
+    });
+  };
+
+  const removeCharacter = (index) => {
+    const next = safeCharacters.filter((_, i) => i !== index);
+    setMotif({ ...motif, character_archetypes: next });
+  };
+
+  const toggleHighlight = (char) => {
+    if (!setHighlightedChars) return;
+    const name = (char.name || "").trim();
+    if (!name) return;
+
+    setHighlightedChars(prev => {
+      const next = { ...prev };
+      if (next[name]) {
+        delete next[name];
+      } else {
+        const usedColors = Object.values(next);
+        let color = HIGHLIGHT_COLORS.find(c => !usedColors.includes(c));
+        if (!color) {
+          color = HIGHLIGHT_COLORS[Object.keys(next).length % HIGHLIGHT_COLORS.length];
+        }
+        next[name] = color;
+      }
+      return next;
+    });
+  };
+
+  const isHighlighted = (char) => {
+    const name = (char.name || "").trim();
+    return highlightedChars && !!highlightedChars[name];
+  };
+
+  const getHighlightColor = (char) => {
+    const name = (char.name || "").trim();
+    return highlightedChars ? highlightedChars[name] : null;
+  };
+
+  return (
+    <section className="card">
+      <h2>Characters</h2>
+      <div className="section-header-row">
+        <span>Story Characters</span>
+      </div>
+
+      {safeCharacters.length === 0 && (
+        <p className="hint">
+          No characters defined. Add characters to link specific names to
+          archetypes.
+        </p>
+      )}
+
+      {safeCharacters.map((char, idx) => {
+        const active = isHighlighted(char);
+        const color = getHighlightColor(char);
+        
+        return (
+          <div key={idx} className="propp-row">
+            <div className="grid-3">
+              <label>
+                Name
+                <input
+                  value={char.name}
+                  onChange={(e) => handleCharacterChange(idx, "name", e.target.value)}
+                  placeholder="e.g. Aladdin"
+                />
+              </label>
+              <label>
+                Alias (Optional)
+                <input
+                  value={char.alias}
+                  onChange={(e) => handleCharacterChange(idx, "alias", e.target.value)}
+                  placeholder="e.g. Street Rat; Boy"
+                />
+              </label>
+              <label>
+                Archetype
+                <select
+                  value={char.archetype}
+                  onChange={(e) =>
+                    handleCharacterChange(idx, "archetype", e.target.value)
+                  }
+                >
+                  <option value="">– Select –</option>
+                  {CHARACTER_ARCHETYPES.map((c) => (
+                    <option key={c} value={c}>
+                      {c}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+            <div style={{ display: 'flex', gap: '0.5rem', marginTop: "0.25rem" }}>
+              <button
+                type="button"
+                className={`ghost-btn ${active ? "active-highlight" : ""}`}
+                style={active ? { background: color, borderColor: "#ccc", color: "#000", fontWeight: "bold" } : {}}
+                onClick={() => toggleHighlight(char)}
+              >
+                {active ? "Unhighlight" : "Highlight"}
+              </button>
+              <button
+                type="button"
+                className="ghost-btn"
+                style={{ color: "#ef4444", borderColor: "#ef4444" }}
+                onClick={() => removeCharacter(idx)}
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+        );
+      })}
+
+      <button type="button" className="ghost-btn" onClick={addCharacter} style={{ marginTop: "1rem" }}>
+        + Add Character
+      </button>
+
+      <hr />
+
+      <div className="grid-2">
+        <label>
+          Helper type
+          <input
+            value={motif.helper_type}
+            onChange={(e) =>
+              setMotif({ ...motif, helper_type: e.target.value })
+            }
+            placeholder="e.g. CAPTIVE_MAIDEN_AND_ANIMAL"
+          />
+        </label>
+        <label>
+          Obstacle thrower
+          <input
+            value={motif.obstacle_thrower}
+            onChange={(e) =>
+              setMotif({ ...motif, obstacle_thrower: e.target.value })
+            }
+            placeholder="Who throws the obstacles?"
+          />
+        </label>
+      </div>
+    </section>
+  );
+}
+
