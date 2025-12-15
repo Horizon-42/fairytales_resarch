@@ -28,7 +28,15 @@ export default function NarrativeSection({
     })
     .filter((o) => o.value && o.value !== "Unnamed");
 
-  const items = narrativeStructure.map((item) => {
+  // Calculate max time_order to auto-assign for new items
+  const maxTimeOrder = Math.max(
+    0,
+    ...narrativeStructure
+      .filter(n => typeof n === "object" && n.time_order != null)
+      .map(n => n.time_order || 0)
+  );
+
+  const items = narrativeStructure.map((item, index) => {
     if (typeof item === "string") {
       return {
         id: generateUUID(),
@@ -39,27 +47,75 @@ export default function NarrativeSection({
         text_span: null,
         target_type: "character",
         object_type: "",
-        instrument: ""
+        instrument: "",
+        time_order: maxTimeOrder + 1 + index
       };
     }
     if (!item.id) {
-      return { ...item, id: generateUUID() };
+      return { ...item, id: generateUUID(), time_order: item.time_order ?? (maxTimeOrder + 1 + index) };
     }
-    return item;
+    return { ...item, time_order: item.time_order ?? (maxTimeOrder + 1 + index) };
+  }).sort((a, b) => {
+    // Sort by time_order, with items without time_order at the end
+    const orderA = a.time_order ?? Infinity;
+    const orderB = b.time_order ?? Infinity;
+    return orderA - orderB;
   });
 
   const updateItem = (index, field, value) => {
-    const next = [...items];
-    next[index] = { ...next[index], [field]: value };
+    // Find the item by ID since items are sorted
+    const itemToUpdate = items[index];
+    if (!itemToUpdate || !itemToUpdate.id) {
+      // Fallback to index if no ID
+      const next = [...items];
+      next[index] = { ...next[index], [field]: value };
+      setNarrativeStructure(next);
+      return;
+    }
+
+    // Find the original index in narrativeStructure by ID
+    const originalIndex = narrativeStructure.findIndex(n => 
+      typeof n === "object" && n.id === itemToUpdate.id
+    );
+
+    if (originalIndex === -1) {
+      // If not found, update the sorted items array
+      const next = [...items];
+      next[index] = { ...next[index], [field]: value };
+      setNarrativeStructure(next);
+      return;
+    }
+
+    // Update the original structure
+    const next = [...narrativeStructure];
+    if (typeof next[originalIndex] === "object") {
+      next[originalIndex] = { ...next[originalIndex], [field]: value };
+    } else {
+      // Convert string to object if needed
+      next[originalIndex] = {
+        id: generateUUID(),
+        event_type: "OTHER",
+        description: next[originalIndex],
+        agents: [],
+        targets: [],
+        text_span: null,
+        target_type: "character",
+        object_type: "",
+        instrument: "",
+        time_order: maxTimeOrder + 1,
+        [field]: value
+      };
+    }
     setNarrativeStructure(next);
 
     if (onAddProppFn && field === "event_type") {
-      const updatedItem = { ...next[index], [field]: value };
+      const updatedItem = typeof next[originalIndex] === "object" ? next[originalIndex] : items[index];
       onAddProppFn(updatedItem);
     }
   };
 
   const addItem = () => {
+    const nextOrder = maxTimeOrder + 1;
     setNarrativeStructure([
       ...items,
       {
@@ -71,13 +127,29 @@ export default function NarrativeSection({
         text_span: null,
         target_type: "character",
         object_type: "",
-        instrument: ""
+        instrument: "",
+        time_order: nextOrder
       }
     ]);
   };
 
   const removeItem = (index) => {
-    const next = items.filter((_, i) => i !== index);
+    // Find the item by ID since items are sorted
+    const itemToRemove = items[index];
+    if (!itemToRemove || !itemToRemove.id) {
+      // Fallback to index if no ID
+      const next = items.filter((_, i) => i !== index);
+      setNarrativeStructure(next);
+      return;
+    }
+
+    // Find and remove from original structure by ID
+    const next = narrativeStructure.filter(n => {
+      if (typeof n === "object" && n.id === itemToRemove.id) {
+        return false;
+      }
+      return true;
+    });
     setNarrativeStructure(next);
   };
 
@@ -307,14 +379,35 @@ export default function NarrativeSection({
             </label>
           </div>
           
-          <button
-            type="button"
-            className="ghost-btn"
-            style={{ color: "#ef4444", borderColor: "#ef4444", marginTop: "0.5rem" }}
-            onClick={() => removeItem(idx)}
-          >
-            Remove Event
-          </button>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginTop: "0.5rem" }}>
+            <div style={{ display: "flex", alignItems: "baseline", gap: "0.25rem" }}>
+              <span style={{ fontSize: "0.85rem", color: "#6b7280" }}>Time Order:</span>
+              <input
+                type="number"
+                min="1"
+                value={item.time_order ?? ""}
+                onChange={(e) => updateItem(idx, "time_order", parseInt(e.target.value) || null)}
+                style={{ 
+                  width: "60px", 
+                  padding: "0.4rem 0.5rem", 
+                  fontSize: "0.8rem", 
+                  border: "1px solid #cbd5e1",
+                  borderRadius: "6px",
+                  boxSizing: "border-box",
+                  lineHeight: "1.2"
+                }}
+                placeholder="#"
+              />
+            </div>
+            <button
+              type="button"
+              className="ghost-btn"
+              style={{ color: "#ef4444", borderColor: "#ef4444" }}
+              onClick={() => removeItem(idx)}
+            >
+              Remove Event
+            </button>
+          </div>
         </div>
       ))}
 

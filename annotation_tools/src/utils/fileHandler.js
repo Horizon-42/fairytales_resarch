@@ -78,7 +78,7 @@ export function mapV2ToState(data) {
     },
     
     // Narrative Structure
-    narrativeStructure: (data.narrative_events || []).map(evt => {
+    narrativeStructure: (data.narrative_events || []).map((evt, index) => {
       // V2 events are objects. V1 mixed strings and objects. App supports object.
       if (typeof evt === "string") {
         return {
@@ -90,7 +90,8 @@ export function mapV2ToState(data) {
           text_span: null,
           target_type: "character",
           object_type: "",
-          instrument: ""
+          instrument: "",
+          time_order: index + 1
         };
       }
       return {
@@ -99,7 +100,8 @@ export function mapV2ToState(data) {
         id: evt.id || generateUUID(),
         target_type: evt.target_type || "character",
         object_type: evt.object_type || "",
-        instrument: evt.instrument || ""
+        instrument: evt.instrument || "",
+        time_order: evt.time_order ?? (index + 1)
       };
     }),
     
@@ -174,7 +176,7 @@ export function mapV1ToState(data) {
     
     motif: data.annotation?.motif || {},
     
-    narrativeStructure: (data.narrative_structure || []).map(evt => {
+    narrativeStructure: (data.narrative_structure || []).map((evt, index) => {
       if (typeof evt === "string") {
         return {
           id: generateUUID(),
@@ -185,7 +187,8 @@ export function mapV1ToState(data) {
           text_span: null,
           target_type: "character",
           object_type: "",
-          instrument: ""
+          instrument: "",
+          time_order: index + 1
         };
       }
       return {
@@ -193,7 +196,8 @@ export function mapV1ToState(data) {
         id: evt.id || generateUUID(),
         target_type: evt.target_type || "character",
         object_type: evt.object_type || "",
-        instrument: evt.instrument || ""
+        instrument: evt.instrument || "",
+        time_order: evt.time_order ?? (index + 1)
       };
     }),
     

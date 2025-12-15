@@ -541,6 +541,14 @@ export default function App() {
   const handleCreateNarrative = () => {
     if (!currentSelection) return;
 
+    // Calculate next time_order
+    const maxTimeOrder = Math.max(
+      0,
+      ...narrativeStructure
+        .filter(n => typeof n === "object" && n.time_order != null)
+        .map(n => n.time_order || 0)
+    );
+
     // Create new narrative event with the selected text span
     const newEvent = {
       id: generateUUID(),
@@ -555,7 +563,8 @@ export default function App() {
       },
       target_type: "character",
       object_type: "",
-      instrument: ""
+      instrument: "",
+      time_order: maxTimeOrder + 1
     };
 
     setNarrativeStructure(prev => [...prev, newEvent]);
