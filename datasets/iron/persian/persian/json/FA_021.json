@@ -1,0 +1,73 @@
+{
+  "id": "FA_021",
+  "culture": "Persian",
+  "title": "The Shepherd and the Witch",
+  "source_text": {
+    "text": "A poor shepherd shelters at a witch’s house and sees her daughter enslaved. The daughter urges him to flee with her before her mother eats him. She hands him a needle, a lump of salt, and a waterskin.\nThey slip away at dawn. The witch wakes and pursues. The shepherd throws the needle, which becomes a thorn forest; the salt, which rises into a craggy mountain; the water, which swells into a deep river the witch cannot cross.\nThe witch howls and turns back. The shepherd brings the daughter home; she is freed from witchcraft, and they marry with the village’s blessing.",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "file://datasets/persian/texts/FA_021_en.txt"
+  },
+  "source_text_persian": {
+    "text": "چوپان در خانهٔ جادوگر گیر می‌افتد و دختر اسیر او را نجات می‌دهد. دختر به او سوزن، نمک و مشک آب می‌دهد تا در فرار بیندازد. سوزن خارستان، نمک کوه و آب رود می‌شود و جادوگر جا می‌ماند. آن دو به روستا برمی‌گردند و عروسی می‌کنند.",
+    "language": "fa",
+    "type": "excerpt",
+    "reference_uri": "local file or oral source (unknown)"
+  },
+  "annotation_level": "Motif",
+  "metadata": {
+    "main_motif": "ATU_313",
+    "atu_type": "313",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "COURAGE",
+      "CUNNING",
+      "LOYALTY"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "Straightforward Iranian magic-flight: helper daughter gives three transforming objects; hero casts them in sequence to block the pursuer.",
+  "annotation": {
+    "motif": {
+      "atu_type": "313",
+      "character_archetypes": [
+        "Hero",
+        "Helper",
+        "Villain"
+      ],
+      "obstacle_pattern": [
+        "NEEDLE_TO_THORN_FOREST",
+        "SALT_TO_MOUNTAIN",
+        "WATER_TO_RIVER"
+      ],
+      "obstacle_thrower": "Shepherd throws all three; the helper daughter plans the escape.",
+      "helper_type": "DONOR_HELPER_DAUGHTER",
+      "ending_type": "HAPPY_REUNION",
+      "thinking_process": "Classic three-object chase with a witch pursuer; fits ATU 313 structure cleanly."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "COURAGE",
+        "CUNNING",
+        "LOYALTY"
+      ]
+    }
+  },
+  "narrative_structure": [
+    "captivity_and_plan",
+    "dawn_flight",
+    "three_obstacles_cast",
+    "safe_return_and_marriage"
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {}
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.58,
+    "notes": "Added as ATU 313 variant with classic three-object flight."
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "id": "FA_010",
+  "culture": "Persian",
+  "title": "Shahmaran",
+  "source_text": {
+    "text": "﻿Jamasp, a poor youth, falls through a well into an underground garden. There he meets Shahmaran, a radiant serpent-maiden queen, who shelters him and teaches healing and wisdom if he keeps her realm secret.\n\nAfter years below, Jamasp longs for daylight. Shahmaran lets him return above, extracting a promise of silence. He prospers thanks to the remedies she taught.\n\nWhen the king falls mortally ill, the vizier claims only serpent flesh will cure him. Soldiers search cisterns; Jamasp finally reveals Shahmaran’s pool. She accepts her fate and instructs Jamasp to bathe first in her blood, then let the vizier bathe.\n\nShahmaran is killed. Jamasp bathes, gains her knowledge, and cures the king. The vizier dies in the second bath. Jamasp becomes royal healer, carrying the weight of betraying his serpent bride-teacher.",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "file://datasets/persian/texts/FA_010_en.txt"
+  },
+  "annotation_level": "Deep",
+  "metadata": {
+    "main_motif": "ATU_402",
+    "atu_type": "402",
+    "ending_type": "SACRIFICIAL",
+    "key_values": [
+      "LOYALTY",
+      "WISDOM",
+      "TRUST"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "Human man forms a hidden bond with the serpent-maiden queen; secrecy is broken leading to her sacrificial death—core 402 animal/supernatural bride pattern.",
+  "annotation": {
+    "motif": {
+      "atu_type": "402",
+      "character_archetypes": [
+        "Hero",
+        "Bride",
+        "Villain",
+        "Helper"
+      ],
+      "thinking_process": "Human man forms a hidden bond with the serpent-maiden queen; secrecy is broken leading to her sacrificial death—core 402 animal/supernatural bride pattern."
+    },
+    "deep": {
+      "paragraph_summaries": [
+        "Jamasp (a poor youth) falls through a well into an underground garden and meets Shahmaran, the serpent-maiden queen. She shelters him and teaches him wisdom on the condition of secrecy.",
+        "He lives with her for years, then returns above, promising never to reveal her. He prospers through the knowledge she granted.",
+        "The king falls ill; the vizier says only serpent flesh will cure him. Pressed, Jamasp reveals Shahmaran’s location. She accepts her fate and instructs Jamasp to bathe first in her blood, then let the vizier bathe.",
+        "Shahmaran is killed. Jamasp bathes, gains her wisdom and cures the king; the vizier dies. Shahmaran’s sacrifice makes the hidden union bittersweet."
+      ],
+      "propp_functions": [
+        {
+          "fn": "INTERDICTION",
+          "span": {
+            "start": 0,
+            "end": 1
+          },
+          "evidence": "Shahmaran demands secrecy about her realm and bond."
+        },
+        {
+          "fn": "VIOLATION",
+          "span": {
+            "start": 2,
+            "end": 2
+          },
+          "evidence": "Jamasp reveals her location under pressure."
+        },
+        {
+          "fn": "SUPPLY_OR_MAGIC_AGENT",
+          "span": {
+            "start": 3,
+            "end": 3
+          },
+          "evidence": "Her blood grants wisdom/health as final gift."
+        },
+        {
+          "fn": "PUNISHMENT/LOSS",
+          "span": {
+            "start": 3,
+            "end": 3
+          },
+          "evidence": "Shahmaran dies because the secret is broken."
+        },
+        {
+          "fn": "REWARD",
+          "span": {
+            "start": 3,
+            "end": 3
+          },
+          "evidence": "Jamasp gains healing power and becomes vizier in some variants."
+        }
+      ],
+      "propp_notes": "Animal bride secrecy and sacrificial ending map to ATU 402; paragraph indices align with summaries."
+    },
+    "meta": {
+      "ending_type": "SACRIFICIAL",
+      "key_values": [
+        "LOYALTY",
+        "WISDOM",
+        "TRUST"
+      ]
+    }
+  },
+  "narrative_structure": [
+    "secret_bond_with_serpent_maiden",
+    "return_with_vow_of_secrecy",
+    "crisis_and_betrayal_under_pressure",
+    "sacrifice_and_transfer_of_wisdom"
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "Frames betrayal as tragic necessity; serpent bride embodies hidden wisdom.",
+      "gender_norms": "Bride is powerful yet vulnerable to human disclosure; male hero gains status via her gift.",
+      "hero_villain_mapping": "Vizier/kingly demand acts as coercive force; Shahmaran both helper and victim.",
+      "ambiguous_motifs": [
+        "Is Jamasp a spouse or beloved disciple?",
+        "Healing bath vs literal marriage as bonding token"
+      ]
+    }
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.65,
+    "notes": "Expanded sacrificial arc; added explicit 402 justification."
+  },
+  "source_text_persian": {
+    "text": "جَمَسپ به دنیای زیرزمینی می‌افتد و با شاه‌ماران، زن-مار دانا، پیمان رازداری می‌بندد. او بازمی‌گردد اما در بحران پادشاه راز را فاش می‌کند. شاه‌ماران کشته می‌شود و خونش درمان و دانایی می‌دهد؛ پایانِ فداکارانه‌ی عروس-مار.",
+    "language": "fa",
+    "type": "excerpt",
+    "reference_uri": "local file or oral source (unknown)"
+  }
+}

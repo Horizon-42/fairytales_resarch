@@ -1,0 +1,67 @@
+{
+  "id": "FA_027",
+  "culture": "Persian",
+  "title": "Pari of the Cypress Tree",
+  "source_text": {
+    "text": "A youth shelters under a cypress and meets a pari maiden who steps from the trunk at moonrise. They fall in love; she agrees to marry if he keeps her origin secret.\nThey wed and live happily. A rival mocks her tree-born origin; the youth blurts the secret in anger.\nBound by the broken taboo, the pari fades back into the tree. She leaves a token and a path of petals leading to the peri realm.\nThe youth follows the path, appeases the pari’s kin with tasks, and brings her home; secrecy is replaced by trust.",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "file://datasets/persian/texts/FA_027_en.txt"
+  },
+  "source_text_persian": {
+    "text": "جوانی پریِ درخت سرو را می‌بیند؛ او از تنه بیرون می‌آید و با شرط رازداری همسر می‌شود. رقیب، راز تولد او را به تمسخر می‌کشد و جوان از خشم راز را فاش می‌کند. پری به درخت بازمی‌گردد و نشانی می‌گذارد؛ جوان به دیار پریان می‌رود و با انجام کارها او را بازمی‌گرداند.",
+    "language": "fa",
+    "type": "excerpt",
+    "reference_uri": "local file or oral source (unknown)"
+  },
+  "annotation_level": "Meta",
+  "metadata": {
+    "main_motif": "ATU_402",
+    "atu_type": "402",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "TRUST",
+      "LOYALTY",
+      "COURAGE"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "Tree-origin supernatural bride with secrecy taboo; broken taboo causes separation and quest to reunite—maps to ATU 402.",
+  "annotation": {
+    "motif": {
+      "atu_type": "402",
+      "character_archetypes": [
+        "Hero",
+        "Bride",
+        "Villain"
+      ],
+      "secrecy_trigger": "Hero reveals the pari’s tree origin after being mocked.",
+      "ending_type": "HAPPY_REUNION",
+      "thinking_process": "Secrecy taboo and reunion quest place it within the animal/fairy bride cycle."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "TRUST",
+        "LOYALTY",
+        "COURAGE"
+      ]
+    }
+  },
+  "narrative_structure": [
+    "meeting_and_secret_marriage",
+    "life_under_taboo",
+    "taboo_broken_and_departure",
+    "quest_and_reunion"
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {}
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.55,
+    "notes": "Added as tree-pari bride variant in ATU 402."
+  }
+}

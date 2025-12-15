@@ -1,0 +1,68 @@
+{
+  "id": "FA_026",
+  "culture": "Persian",
+  "title": "Swan Maiden of Mazandaran",
+  "source_text": {
+    "text": "A hunter in Mazandaran sees swan maidens bathing in a lake. He hides one feather cloak, stranding a maiden who begs for its return. He promises protection and marriage; she agrees, warning him never to show the cloak.\nThey wed and have a child. Jealous kin search the house and uncover the hidden cloak.\nThe swan maiden takes it back and must return to the sky. Before leaving, she leaves signs for the hunter to follow.\nHe journeys to the sky realm, completes tasks set by her father, and wins permission. They reunite and return together.",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "file://datasets/persian/texts/FA_026_en.txt"
+  },
+  "source_text_persian": {
+    "text": "شکاری در مازندران بال قوها را پنهان می‌کند و با دختر قویی ازدواج می‌کند. خویشان بال را می‌یابند و او ناچار به آسمان برمی‌گردد، اما نشانی برای شوهر می‌گذارد. مرد آزمون‌های پدر او را می‌گذراند و دوباره با عروس قو برمی‌گردد.",
+    "language": "fa",
+    "type": "excerpt",
+    "reference_uri": "local file or oral source (unknown)"
+  },
+  "annotation_level": "Meta",
+  "metadata": {
+    "main_motif": "ATU_402",
+    "atu_type": "402",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "LOYALTY",
+      "PATIENCE",
+      "COURAGE"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "Classic swan-maiden cloak seizure, loss, and reunion via tasks; fits ATU 402.",
+  "annotation": {
+    "motif": {
+      "atu_type": "402",
+      "character_archetypes": [
+        "Hero",
+        "Bride",
+        "Villain",
+        "Helper"
+      ],
+      "separation_trigger": "Cloak is found and the swan maiden must return to her realm.",
+      "ending_type": "HAPPY_REUNION",
+      "thinking_process": "Cloak seizure + quest to regain the bride aligns with ATU 402 swan maiden pattern."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "LOYALTY",
+        "PATIENCE",
+        "COURAGE"
+      ]
+    }
+  },
+  "narrative_structure": [
+    "cloak_seizure_and_marriage",
+    "domestic_life",
+    "cloak_found_and_departure",
+    "tasks_and_reunion"
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {}
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.58,
+    "notes": "Added as ATU 402 swan-maiden variant (Mazandaran)."
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "id": "FA_011",
+  "culture": "Persian",
+  "title": "Yusef and the Pari",
+  "source_text": {
+    "text": "﻿Hunter Yusef sees pari maidens bathing at a mountain spring. He hides one feather cloak, stranding a pari who begs for its return. He promises protection and marriage; she agrees, asking him never to speak of her origin.\n\nThey live together and have a child. In some versions jealous relatives or a nosy guest discover the hidden cloak, breaking the taboo.\n\nThe pari takes back her feathers and must return to the sky or mountain palace. Before leaving, she leaves signs on the trail and says Yusef may follow if his love is true.\n\nWith help from an old hermit and the trail-marks, Yusef finds the pari realm and completes set tasks. The pari’s kin relent, and the couple reunites, keeping both worlds in balance.",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "file://datasets/persian/texts/FA_011_en.txt"
+  },
+  "annotation_level": "Deep",
+  "metadata": {
+    "main_motif": "ATU_402",
+    "atu_type": "402",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "LOYALTY",
+      "PATIENCE",
+      "COURAGE"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "Swan/pari maiden’s cloak is seized; marriage follows, loss of cloak triggers separation and quest to reunite—core 402 pattern.",
+  "annotation": {
+    "motif": {
+      "atu_type": "402",
+      "character_archetypes": [
+        "Hero",
+        "Bride",
+        "Villain",
+        "Helper"
+      ],
+      "thinking_process": "Swan/pari maiden’s cloak is seized; marriage follows, loss of cloak triggers separation and quest to reunite—core 402 pattern."
+    },
+    "deep": {
+      "paragraph_summaries": [
+        "Hunter Yusef finds pari maidens bathing; he hides one feather cloak, stranding a pari who pleads for its return. He marries her, promising not to speak of her origin.",
+        "They live happily; she bears a child. In some tellings, jealous kin reveal the cloak or mock her, weakening the taboo.",
+        "The pari finds or is given her cloak back and must return to the sky/mountain realm. She leaves a path of signs for Yusef if he wishes to follow.",
+        "Guided by the signs and aided by an old hermit, Yusef reaches the pari court, completes tasks, and is reunited with his supernatural bride."
+      ],
+      "propp_functions": [
+        {
+          "fn": "INTERDICTION",
+          "span": {
+            "start": 0,
+            "end": 1
+          },
+          "evidence": "Pari bride asks Yusef not to mention or reveal her origin."
+        },
+        {
+          "fn": "VIOLATION",
+          "span": {
+            "start": 2,
+            "end": 2
+          },
+          "evidence": "Secrecy breaks when the cloak is found/returned."
+        },
+        {
+          "fn": "DEPARTURE",
+          "span": {
+            "start": 2,
+            "end": 2
+          },
+          "evidence": "Pari leaves for her realm."
+        },
+        {
+          "fn": "DIFFICULT_TASK",
+          "span": {
+            "start": 3,
+            "end": 3
+          },
+          "evidence": "Yusef completes set tasks in the pari realm to win her back."
+        },
+        {
+          "fn": "WEDDING/REUNION",
+          "span": {
+            "start": 3,
+            "end": 3
+          },
+          "evidence": "Couple is reunited after tasks are fulfilled."
+        }
+      ],
+      "propp_notes": "Classic swan/pari bride cycle; paragraph indices align with summaries."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "LOYALTY",
+        "PATIENCE",
+        "COURAGE"
+      ]
+    }
+  },
+  "narrative_structure": [
+    "cloak_seizure_and_marriage",
+    "domestic_life_under_taboo",
+    "cloak_found_and_departure",
+    "tasks_in_pari_realm_and_reunion"
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "Balances consent concerns—cloak seizure is coercive but later quest affirms loyalty.",
+      "gender_norms": "Pari holds power to leave; male hero must labor to re-earn bond.",
+      "hero_villain_mapping": "Jealous kin as disruptors; tasks frame the pari’s kin as testers rather than villains.",
+      "ambiguous_motifs": [
+        "Agency of the pari in choosing reunion",
+        "Cloak theft vs mutual bond"
+      ]
+    }
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.65,
+    "notes": "Expanded swan/pari maiden arc; explicit 402 mapping noted."
+  },
+  "source_text_persian": {
+    "text": "یوسف بال پریان را پنهان می‌کند و با پری ازدواج می‌کند. با یافتن بال، پری ناچار بازمی‌گردد اما نشانه می‌گذارد. یوسف به دیار پریان می‌رسد، آزمون‌ها را می‌گذراند و دوباره او را به خانه می‌آورد. وفاداری، جدایی و وصال دوباره است.",
+    "language": "fa",
+    "type": "excerpt",
+    "reference_uri": "local file or oral source (unknown)"
+  }
+}

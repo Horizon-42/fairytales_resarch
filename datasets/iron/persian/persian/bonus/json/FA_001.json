@@ -1,0 +1,126 @@
+{
+  "id": "FA_001",
+  "culture": "Persian",
+  "title": "",
+  "source_text": {
+    "text": "﻿Rostam leaves Zabul seeking glory and spends a night with Tahmineh, who later bears Sohrab and raises him with tales of his unknown father. As a young champion, Sohrab yearns to find Rostam and unite Iran and Turan.\nWar breaks out between Persia and Turan. Sohrab leads Turanian forces partly to draw Rostam into single combat. Rostam answers Iran’s call, unaware his opponent is his son.\nThey wrestle and clash for honor. Rostam is wary of the youth’s strength; Sohrab is confident and merciful. In the first bout Rostam narrowly escapes; in the second he strikes Sohrab with a spear that proves fatal.\nAs Sohrab lies dying, he reveals a token from Tahmineh, proving the kinship. Rostam is shattered, begs for royal pardon and healing, but fate closes in. Father and son reconcile only at the edge of death, making pride, secrecy, and war the architects of tragedy.",
+    "language": "en",
+    "type": "summary"
+  },
+  "annotation_level": "Deep",
+  "metadata": {
+    "main_motif": "Other",
+    "atu_type": "Other",
+    "ending_type": "TRAGIC",
+    "key_values": [
+      "HONOR",
+      "FATE",
+      "DUTY"
+    ],
+    "target_motif": false
+  },
+  "thinking_process": "Epic tragedy framed by concealed kinship and honor codes; spans map to each paragraph of the summary for clear Propp alignment.",
+  "annotation": {
+    "motif": {
+      "atu_type": "Other",
+      "character_archetypes": [
+        "Hero",
+        "Villain"
+      ]
+    },
+    "deep": {
+      "paragraph_summaries": [
+        "Rostam leaves Zabul seeking glory, spends a night with Tahmineh, and unknowingly sires Sohrab, who grows up hearing of his father and dreams of uniting Iran and Turan.",
+        "War breaks out; Sohrab leads Turan partly to draw out Rostam. Rostam answers Iran’s call, unaware his foe is his son.",
+        "They duel. Rostam fights cautiously; Sohrab shows mercy. In the second bout Rostam fatally spears Sohrab.",
+        "Dying, Sohrab reveals a token proving kinship. Rostam begs for pardon and healing, but fate holds; father and son reconcile only at death."
+      ],
+      "propp_functions": [
+        {
+          "fn": "ABSENTATION",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "evidence": "Rostam leaves home/kin seeking glory; absence sets the stage."
+        },
+        {
+          "fn": "INTERDICTION",
+          "span": {
+            "start": 1,
+            "end": 1
+          },
+          "evidence": "Tahmineh keeps Sohrab’s parentage hidden—a tacit taboo on revealing identity."
+        },
+        {
+          "fn": "VIOLATION",
+          "span": {
+            "start": 2,
+            "end": 2
+          },
+          "evidence": "Sohrab’s quest to find his father breaks the concealment’s intent."
+        },
+        {
+          "fn": "STRUGGLE",
+          "span": {
+            "start": 3,
+            "end": 3
+          },
+          "evidence": "Rostam and Sohrab duel unknowingly."
+        },
+        {
+          "fn": "BRANDING",
+          "span": {
+            "start": 3,
+            "end": 3
+          },
+          "evidence": "Sohrab is wounded by Rostam’s spear."
+        },
+        {
+          "fn": "RECOGNITION",
+          "span": {
+            "start": 3,
+            "end": 3
+          },
+          "evidence": "The token reveals their kinship after the wound."
+        },
+        {
+          "fn": "PUNISHMENT",
+          "span": {
+            "start": 3,
+            "end": 3
+          },
+          "evidence": "Moral punishment: the death of the son; father’s grief."
+        }
+      ],
+      "propp_notes": "Spans are paragraph indices over the summary; refine with full text."
+    },
+    "meta": {
+      "ending_type": "TRAGIC",
+      "key_values": [
+        "HONOR",
+        "FATE",
+        "DUTY"
+      ]
+    }
+  },
+  "narrative_structure": [],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "Epic tragedy read as fate-bound; honor codes override familial recognition.",
+      "gender_norms": "Tahmineh’s secrecy shapes the plot; male honor culture drives conflict.",
+      "hero_villain_mapping": "No villain in classic sense; tragic opponents are kin.",
+      "ambiguous_motifs": [
+        "Interdiction via secrecy vs taboo",
+        "Recognition too late to avert fate"
+      ]
+    }
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.62,
+    "notes": "Summary expanded to paragraph-level; schema fields normalized."
+  }
+}

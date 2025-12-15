@@ -1,0 +1,72 @@
+{
+  "id": "FA_015",
+  "culture": "Persian",
+  "title": "The Ebony Horse",
+  "source_text": {
+    "text": "﻿An inventor brings an ebony horse that flies like a hawk. A prince learns its hidden knobs and tests it in the sky.\n\nThe prince rides far and meets a princess—often described with peri-like radiance. They pledge to marry, but a jealous sorcerer steals the horse and abducts her.\n\nThe prince recovers the horse, tracks the sorcerer, and tricks him. Using flight and wit, he frees the princess and spirits her away.\n\nThey return by air, expose the sorcerer, and wed. The ebony horse remains their bridge between realms.",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "file://datasets/persian/texts/FA_015_en.txt"
+  },
+  "annotation_level": "Motif",
+  "metadata": {
+    "main_motif": "ATU_402",
+    "atu_type": "402",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "COURAGE",
+      "WISDOM"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "Prince wins and protects a supernatural/enchanted bride (often peri-coded) using the ebony horse; rescue and reunion fit 402 animal/supernatural bride arc.",
+  "annotation": {
+    "motif": {
+      "atu_type": "402",
+      "character_archetypes": [
+        "Hero",
+        "Bride",
+        "Villain",
+        "Helper"
+      ],
+      "thinking_process": "Prince wins and protects a supernatural/enchanted bride (often peri-coded) using the ebony horse; rescue and reunion fit 402 animal/supernatural bride arc."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "COURAGE",
+        "WISDOM"
+      ]
+    }
+  },
+  "narrative_structure": [
+    "gain_flying_horse",
+    "pledge_to_peri_princess",
+    "abduction_and_aerial_pursuit",
+    "rescue_and_marriage"
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "Emphasizes marvel-tech aiding union with a fairy-coded bride.",
+      "gender_norms": "Princess/pari has agency but needs rescue from rival sorcerer; prince must learn skill and respect her safety.",
+      "hero_villain_mapping": "Sorcerer as abductor; prince as rescuer.",
+      "ambiguous_motifs": [
+        "Device-driven flight vs classic obstacle-casting",
+        "Degree of the bride’s supernatural identity across variants"
+      ]
+    }
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.62,
+    "notes": "Expanded flight/rescue arc; clarified peri-bride rationale for 402."
+  },
+  "source_text_persian": {
+    "text": "شاهزاده سوار اسب آبنوس می‌شود و به پری‌وشی دل می‌بازد. ساحر اسب و عروس را می‌دزدد. شاهزاده با همان اسب پرنده ساحر را می‌یابد، فریب می‌دهد و عروس را می‌رهاند. بازگشت هوایی و پیوند زناشویی پایان می‌دهد.",
+    "language": "fa",
+    "type": "excerpt",
+    "reference_uri": "local file or oral source (unknown)"
+  }
+}

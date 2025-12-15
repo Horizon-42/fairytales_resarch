@@ -1,0 +1,131 @@
+{
+  "id": "FA_008",
+  "culture": "Persian",
+  "title": "The Pepper Seller Bride (Gilaki)",
+  "source_text": {
+    "text": "﻿A pepper seller is promised against her will to a harsh lord (in some tellings, a div). An old woman pities the bride-to-be and slips her three objects: a pouch of pepper, a comb, and a mirror, telling her to use them only if she must escape.\n\nOn the wedding night, the bride and a loyal servant lead the pepper seller’s donkey away quietly, carrying the three objects.\n\nThe lord/div wakes and gallops after them. The bride throws the pepper; a stinging sandstorm blinds him. She throws the comb; it sprouts into a thorn forest he must hack through. She throws the mirror; it shatters into a river of glassy shards that cut his feet, forcing him to stop.\n\nReaching a caravanserai, she reunites with her pepper-seller sweetheart. The community sides with the lovers, and they marry freely, having outwitted coercion.",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "file://datasets/persian/texts/FA_008_en.txt"
+  },
+  "annotation_level": "Deep",
+  "metadata": {
+    "main_motif": "ATU_313",
+    "atu_type": "313",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "CUNNING",
+      "LOYALTY",
+      "RESOURCEFULNESS"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "Forced-bride flees with helper using pepper, comb, and mirror to cast chase-blocking obstacles—canonical 313 elements in a Gilaki setting.",
+  "annotation": {
+    "motif": {
+      "atu_type": "313",
+      "character_archetypes": [
+        "Hero",
+        "Helper",
+        "Villain"
+      ],
+      "obstacle_pattern": [
+        "PEPPER_SANDSTORM",
+        "COMB_TO_FOREST",
+        "MIRROR_TO_RIVER_OF_GLASS"
+      ],
+      "obstacle_thrower": "Bride throws all three; servant/helper supports escape.",
+      "helper_type": "OLD_WOMAN_DONOR",
+      "thinking_process": "Forced-bride flees with helper using pepper, comb, and mirror to cast chase-blocking obstacles—canonical 313 elements in a Gilaki setting."
+    },
+    "deep": {
+      "paragraph_summaries": [
+        "A pepper seller is promised as bride to a brutal lord (or div). An old woman pities her and gifts a pouch of pepper, a comb, and a mirror to use if she must flee.",
+        "On the wedding night the bride slips out with a servant ally, taking the three objects and the pepper seller’s donkey.",
+        "The lord/div wakes and chases. She throws the pepper, raising a blinding sandstorm; the comb, sprouting a thorn forest; the mirror, which shatters into a river of glassy shards that halts pursuit.",
+        "Safe at a caravanserai, she reunites with her pepper-seller sweetheart and marries him openly with community blessing."
+      ],
+      "propp_functions": [
+        {
+          "fn": "INTERDICTION",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "evidence": "Old woman warns the bride to keep the objects hidden until escape is needed."
+        },
+        {
+          "fn": "RECEIPT_OF_MAGIC_AGENT",
+          "span": {
+            "start": 0,
+            "end": 1
+          },
+          "evidence": "Pepper, comb, and mirror are given as magical agents."
+        },
+        {
+          "fn": "PURSUIT",
+          "span": {
+            "start": 2,
+            "end": 2
+          },
+          "evidence": "Lord/div follows the fleeing bride."
+        },
+        {
+          "fn": "RESCUE",
+          "span": {
+            "start": 2,
+            "end": 2
+          },
+          "evidence": "Thrown objects transform into obstacles that stop the pursuer."
+        },
+        {
+          "fn": "WEDDING",
+          "span": {
+            "start": 3,
+            "end": 3
+          },
+          "evidence": "Bride weds her chosen partner after the escape."
+        }
+      ],
+      "propp_notes": "Obstacle casting and chase happen in paragraph 2; spans index paragraph_summaries."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "CUNNING",
+        "LOYALTY",
+        "RESOURCEFULNESS"
+      ]
+    }
+  },
+  "narrative_structure": [
+    "coerced_betrothal",
+    "escape_with_helper",
+    "pursuit_with_pepper_comb_mirror",
+    "reunion_and_free_marriage"
+  ],
+  "cross_validation": {
+    "shared_story": "FA_008",
+    "bias_reflection": {
+      "cultural_reading": "Shows communal aid to an unwilling bride; flight framed as reclaiming choice.",
+      "gender_norms": "Female protagonist drives plan; helper is another woman, highlighting female solidarity.",
+      "hero_villain_mapping": "Pursuer as coercive male power; heroine and helper as agents of resistance.",
+      "ambiguous_motifs": [
+        "Servant helper vs donor old woman roles",
+        "Mirror obstacle variations across tellings"
+      ]
+    }
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.64,
+    "notes": "Expanded summary; clarified donor role and obstacles for ATU 313."
+  },
+  "source_text_persian": {
+    "text": "عروس فروشنده‌ی فلفل را به زور به خان می‌دهند. پیرزنی به او فلفل، شانه و آینه می‌دهد برای فرار. خان می‌رسد و دختر هر سه را می‌اندازد: فلفل طوفان شن، شانه جنگل خار و آینه رود تیزپهن می‌شود. او به کاروانسرا می‌رسد و با دلدارش آزادانه ازدواج می‌کند.",
+    "language": "fa",
+    "type": "excerpt",
+    "reference_uri": "local file or oral source (unknown)"
+  }
+}

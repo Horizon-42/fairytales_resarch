@@ -1,0 +1,68 @@
+{
+  "id": "FA_029",
+  "culture": "Persian",
+  "title": "The Glass Mountain Pari",
+  "source_text": {
+    "text": "A prince climbs a glass mountain to win a pari bride. She agrees to marry if he swears not to take another wife.\nThey return to court. A rival vizier pressures the prince to break the vow; he nearly agrees.\nHurt, the pari leaves signs to her glass mountain home and departs.\nThe prince repents, climbs again, and faces tests set by her kin. Proving loyalty, he brings her back; the vizier is disgraced.",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "file://datasets/persian/texts/FA_029_en.txt"
+  },
+  "source_text_persian": {
+    "text": "شاهزاده از کوه شیشه‌ای بالا می‌رود و پری را با سوگند به تک‌همسری می‌گیرد. وزیر حسود او را به شکستن سوگند می‌کشاند و پری قهر می‌کند و نشانی برای بازگشت می‌گذارد. شاهزاده دوباره بالا می‌رود، آزمون‌ها را می‌گذراند و پری را بازمی‌گرداند؛ وزیر رسوا می‌شود.",
+    "language": "fa",
+    "type": "excerpt",
+    "reference_uri": "local file or oral source (unknown)"
+  },
+  "annotation_level": "Meta",
+  "metadata": {
+    "main_motif": "ATU_402",
+    "atu_type": "402",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "LOYALTY",
+      "PERSEVERANCE",
+      "TRUST"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "Pari bride bound by a no-second-wife vow; broken intent prompts departure; loyalty quest restores union—ATU 402 pattern.",
+  "annotation": {
+    "motif": {
+      "atu_type": "402",
+      "character_archetypes": [
+        "Hero",
+        "Bride",
+        "Villain",
+        "Helper"
+      ],
+      "secrecy_trigger": "Prince contemplates a second wife under pressure, breaking the vow.",
+      "ending_type": "HAPPY_REUNION",
+      "thinking_process": "Vow-breaking as trigger parallels animal/fairy bride taboo; reunion after tests fits 402."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "LOYALTY",
+        "PERSEVERANCE",
+        "TRUST"
+      ]
+    }
+  },
+  "narrative_structure": [
+    "ascent_and_wedding",
+    "court_pressure_and_vow_tension",
+    "pari_departure",
+    "loyalty_tests_and_reunion"
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {}
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.54,
+    "notes": "Added as glass-mountain pari bride variant within ATU 402."
+  }
+}

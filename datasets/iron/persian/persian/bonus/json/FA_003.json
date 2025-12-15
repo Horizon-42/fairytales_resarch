@@ -1,0 +1,57 @@
+{
+  "id": "FA_003",
+  "culture": "Persian",
+  "title": "",
+  "source_text": {
+    "text": "﻿King Sam abandons his pale-haired infant Zal on Mount Alborz, fearing he is a bad omen. The Simurgh, a wise giant bird, carries the child to her nest and raises him with care. She gives him a feather to burn whenever he needs her aid.\nYears later Sam dreams of his lost son and repents. He climbs the mountain and kneels before the Simurgh, who returns Zal on the promise he will be loved, not feared. Father and son reconcile, and Zal grows into a skilled archer and sage.\nWhen Zal marries Rudabeh, Sam fears scandal, but the Simurgh’s feather reassures him and eases Rudabeh’s difficult childbirth by teaching a surgical cut. Zal’s life shows human and mythic realms cooperating through compassion and wisdom.",
+    "language": "en",
+    "type": "summary"
+  },
+  "annotation_level": "Motif",
+  "metadata": {
+    "main_motif": "Other",
+    "atu_type": "Other",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "COMPASSION",
+      "WISDOM"
+    ],
+    "target_motif": false
+  },
+  "thinking_process": "",
+  "annotation": {
+    "motif": {
+      "atu_type": "Other",
+      "character_archetypes": [
+        "Hero",
+        "Villain"
+      ]
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "COMPASSION",
+        "WISDOM"
+      ]
+    }
+  },
+  "narrative_structure": [],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "Maternal Simurgh embodies protective wisdom bridging human–mythic realms.",
+      "gender_norms": "Bird coded as maternal protector; male hero receives nurture rather than conquest.",
+      "hero_villain_mapping": "Villain is fear and prejudice, not a person; redemption through remorse.",
+      "ambiguous_motifs": [
+        "Foundling motif overlaps legend/ATU mapping",
+        "Donor vs foster-mother roles blend"
+      ]
+    }
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.58,
+    "notes": "Added provenance and QA metadata; schema normalized."
+  }
+}

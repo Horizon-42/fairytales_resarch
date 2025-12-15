@@ -1,0 +1,1 @@
+https://www.scribophile.com/academy/what-are-character-archetypes

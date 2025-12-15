@@ -1,0 +1,57 @@
+{
+  "id": "FA_018",
+  "culture": "Persian",
+  "title": "",
+  "source_text": {
+    "text": "﻿Each spring Amu Nowruz (Uncle New Year) arrives at dawn to visit Nane Sarma (Grandma Frost). She tidies her house, cooks sweets, and waits but dozes off just before he comes. He leaves gifts and departs, promising to return next year.\nIn some tellings she wakes too early and leaves to fetch water, missing him by minutes. The lovers never meet, bound by the cycle of seasons. Their near-misses explain why winter yields to spring but never overlaps.\nThe tale mixes tenderness and regret: constancy is rewarded with renewal, yet timing keeps them apart. Children learn to watch the calendar and cherish fleeting meetings.",
+    "language": "en",
+    "type": "summary"
+  },
+  "annotation_level": "Motif",
+  "metadata": {
+    "main_motif": "Other",
+    "atu_type": "Other",
+    "ending_type": "SEPARATION",
+    "key_values": [
+      "PATIENCE",
+      "LOYALTY"
+    ],
+    "target_motif": false
+  },
+  "thinking_process": "Seasonal lovers explain the cycle: timing as obstacle, gifts as tokens; no villain, only recurrence.",
+  "annotation": {
+    "motif": {
+      "atu_type": "Other",
+      "character_archetypes": [
+        "Hero",
+        "Villain"
+      ]
+    },
+    "meta": {
+      "ending_type": "SEPARATION",
+      "key_values": [
+        "PATIENCE",
+        "LOYALTY"
+      ]
+    }
+  },
+  "narrative_structure": [],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "Flight becomes cyclical near-meeting; separation explains seasons.",
+      "gender_norms": "Amu Nowruz male, Nane Sarma female; their timing/agency read through seasonal roles.",
+      "hero_villain_mapping": "No villain; time/season is the obstacle.",
+      "ambiguous_motifs": [
+        "Helper absent; environment as obstacle",
+        "Is reunion quested or fated?"
+      ]
+    }
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.55,
+    "notes": "Provenance added; QA metadata filled."
+  }
+}

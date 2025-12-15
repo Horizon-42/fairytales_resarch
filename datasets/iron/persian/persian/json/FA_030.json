@@ -1,0 +1,68 @@
+{
+  "id": "FA_030",
+  "culture": "Persian",
+  "title": "The Moonlight Pari",
+  "source_text": {
+    "text": "A woodcutter sees a pari descending on moonbeams to bathe. He hides her moon-cloak; she cannot return and agrees to marry if he keeps it safe.\nThey live happily and have a child. A guest discovers the cloak and reveals it.\nThe pari takes it, compelled to return to the sky. She leaves a silver thread leading to a mountain pass.\nThe woodcutter follows, weaves a bridge from the thread, and proves his devotion. The pari is allowed to return with him; the cloak remains but the bond holds.",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "file://datasets/persian/texts/FA_030_en.txt"
+  },
+  "source_text_persian": {
+    "text": "هیزم‌شکنی رداى ماهِ پری را پنهان می‌کند و با او ازدواج می‌کند. مهمان ردا را می‌یابد و پری ناچار به آسمان بازمی‌گردد، اما نخ نقره‌ای برای راه می‌گذارد. شوهر راه را دنبال می‌کند، پل می‌بافد و وفاداری‌اش را ثابت می‌کند؛ پری برمی‌گردد و پیوند می‌ماند.",
+    "language": "fa",
+    "type": "excerpt",
+    "reference_uri": "local file or oral source (unknown)"
+  },
+  "annotation_level": "Meta",
+  "metadata": {
+    "main_motif": "ATU_402",
+    "atu_type": "402",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "LOYALTY",
+      "TRUST",
+      "PATIENCE"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "Pari cloak seizure, forced separation when cloak is found, reunion through loyalty quest—fits 402 swan/pari maiden cycle.",
+  "annotation": {
+    "motif": {
+      "atu_type": "402",
+      "character_archetypes": [
+        "Hero",
+        "Bride",
+        "Helper",
+        "Villain"
+      ],
+      "secrecy_trigger": "Guest finds and reveals the moon-cloak.",
+      "ending_type": "HAPPY_REUNION",
+      "thinking_process": "Cloak-loss and loyalty trial mirror swan-maiden structure."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "LOYALTY",
+        "TRUST",
+        "PATIENCE"
+      ]
+    }
+  },
+  "narrative_structure": [
+    "cloak_seizure_and_marriage",
+    "domestic_happiness",
+    "cloak_found_departure",
+    "quest_and_reunion"
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {}
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.54,
+    "notes": "Added as moon-cloak pari maiden variant (ATU 402)."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "FA_005",
+  "culture": "Persian",
+  "title": "",
+  "source_text": {
+    "text": "﻿Jealous Shaghad plots Rostam’s death by having a king dig concealed pits lined with spears along Rostam’s hunting path. Rostam and his horse Rakhsh fall in, pierced and bleeding.\nDying, Rostam asks Shaghad for his bow, pretending to write his will. With his last strength he shoots an arrow that pins Shaghad to a tree, killing the traitor. Rostam then pulls himself from the pit and dies beside Rakhsh.\nThe fall of the great hero through family treachery warns that fate and betrayal can overcome even the strongest champions.",
+    "language": "en",
+    "type": "summary"
+  },
+  "annotation_level": "Motif",
+  "metadata": {
+    "main_motif": "Other",
+    "atu_type": "Other",
+    "ending_type": "TRAGIC",
+    "key_values": [
+      "HONOR",
+      "FATE"
+    ],
+    "target_motif": false
+  },
+  "thinking_process": "",
+  "annotation": {
+    "motif": {
+      "atu_type": "Other",
+      "character_archetypes": [
+        "Hero",
+        "Villain"
+      ]
+    },
+    "meta": {
+      "ending_type": "TRAGIC",
+      "key_values": [
+        "HONOR",
+        "FATE"
+      ]
+    }
+  },
+  "narrative_structure": [],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "Heroic strength undone by betrayal highlights fragility of honor systems.",
+      "gender_norms": "Male-coded feud; no helper figure intervenes.",
+      "hero_villain_mapping": "Shaghad as treacherous kin; Rostam as doomed hero.",
+      "ambiguous_motifs": [
+        "Trap as obstacle vs execution device",
+        "Fate vs agency in last arrow shot"
+      ]
+    }
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.58,
+    "notes": "Added provenance and QA metadata."
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "id": "FA_009",
+  "culture": "Persian",
+  "title": "Taleb and Zohreh",
+  "source_text": {
+    "text": "﻿Taleb, a poor minstrel, loves Zohreh, but her family promises her to a wealthy suitor. An old woman who supports the lovers hands Taleb a needle, a lump of salt, and a pouch of flour, urging them to flee if danger comes.\n\nTaleb and Zohreh elope at night on horseback, carrying the three objects.\n\nHer brothers ride after them with drawn swords. Taleb throws the needle; it becomes a thorn forest that slows them. He throws the salt; it turns into a sea they must detour around. He throws the flour; a heavy fog blinds the riders until they give up.\n\nThe couple reaches allied kin over the mountain pass. With their blessing, Taleb’s songs announce the marriage, and Zohreh’s former suitor is left behind.",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "file://datasets/persian/texts/FA_009_en.txt"
+  },
+  "annotation_level": "Deep",
+  "metadata": {
+    "main_motif": "ATU_313",
+    "atu_type": "313",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "LOYALTY",
+      "COURAGE",
+      "CUNNING"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "Lovers flee an imposed match; donor gives three transforming objects used to block armed pursuit—clear 313 chase structure.",
+  "annotation": {
+    "motif": {
+      "atu_type": "313",
+      "character_archetypes": [
+        "Hero",
+        "Helper",
+        "Villain"
+      ],
+      "obstacle_pattern": [
+        "NEEDLE_TO_FOREST",
+        "SALT_TO_SEA",
+        "FLOUR_TO_FOG"
+      ],
+      "obstacle_thrower": "Taleb throws each object while fleeing with Zohreh.",
+      "helper_type": "OLD_WOMAN_DONOR_AND_LOVERS",
+      "thinking_process": "Lovers flee an imposed match; donor gives three transforming objects used to block armed pursuit—clear 313 chase structure."
+    },
+    "deep": {
+      "paragraph_summaries": [
+        "Taleb, a poor minstrel, loves Zohreh, but her family vows her to a wealthier suitor. An old woman who favors the lovers gives Taleb a needle, a lump of salt, and a pouch of flour for the escape.",
+        "Taleb and Zohreh slip away at night on horseback, carrying the three objects.",
+        "Her brothers ride after them. Taleb throws the needle, which becomes a thorn forest; the salt, which becomes a sea; the flour, which rises as a blinding fog that turns the riders back.",
+        "The couple reaches friendly kin across the pass, marry with their consent, and Taleb’s music seals the union."
+      ],
+      "propp_functions": [
+        {
+          "fn": "INTERDICTION",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "evidence": "Old woman warns the lovers to flee quickly and use the objects only when pressed."
+        },
+        {
+          "fn": "RECEIPT_OF_MAGIC_AGENT",
+          "span": {
+            "start": 0,
+            "end": 1
+          },
+          "evidence": "Needle, salt, and flour are given as magical agents."
+        },
+        {
+          "fn": "PURSUIT",
+          "span": {
+            "start": 2,
+            "end": 2
+          },
+          "evidence": "Zohreh’s brothers pursue the fleeing couple."
+        },
+        {
+          "fn": "RESCUE",
+          "span": {
+            "start": 2,
+            "end": 2
+          },
+          "evidence": "Thrown objects create obstacles that stop the pursuers."
+        },
+        {
+          "fn": "WEDDING",
+          "span": {
+            "start": 3,
+            "end": 3
+          },
+          "evidence": "They marry after reaching allied kin."
+        }
+      ],
+      "propp_notes": "Chase and obstacle casting occur in paragraph 2; paragraph indices match paragraph_summaries."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "LOYALTY",
+        "COURAGE",
+        "CUNNING"
+      ]
+    }
+  },
+  "narrative_structure": [
+    "forbidden_love_and_donor_aid",
+    "night_elopement_with_objects",
+    "pursuit_with_needle_salt_flour_obstacles",
+    "marriage_under_allied_protection"
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "Ballad frames flight as lovers asserting choice against clan authority; music as agency.",
+      "gender_norms": "Agency is shared—Zohreh consents and rides; Taleb casts obstacles.",
+      "hero_villain_mapping": "Pursuers are kin enforcing control; heroes are lovers backed by alternative kin network.",
+      "ambiguous_motifs": [
+        "Old woman donor vs helper role",
+        "Fog obstacle replaces classic fire/water in some variants"
+      ]
+    }
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.64,
+    "notes": "Expanded ballad summary; reaffirmed ATU 313 obstacle chase."
+  },
+  "source_text_persian": {
+    "text": "طالب نوازنده و زهره عاشق‌اند و خانواده‌ها مخالف. پیرزنی به طالب سوزن، نمک و آرد می‌دهد. در فرار، سوزن جنگل خار، نمک دریا و آرد مه کورکننده می‌شود و برادران عقب می‌مانند. آن دو نزد خویشان مهربان می‌روند و ازدواج می‌کنند.",
+    "language": "fa",
+    "type": "excerpt",
+    "reference_uri": "local file or oral source (unknown)"
+  }
+}

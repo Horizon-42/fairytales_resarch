@@ -1,0 +1,80 @@
+{
+  "id": "FA_007",
+  "culture": "Persian",
+  "title": "The Brave Girl and the Div",
+  "source_text": {
+    "text": "﻿A div demands a village daughter as tribute. A brave girl volunteers to spare her sisters. She rides a donkey to the div’s lair and meets an old woman who quietly hands her a bar of soap, a comb, and a needle, telling her to save them for escape.\n\nThe girl serves the div supper and sings him to sleep. She pockets the gifts and the div’s key-ring and slips away with her donkey before dawn.\n\nThe div wakes and charges after her. She throws the soap, and the path becomes a slippery hill of foam; the div slides. She throws the comb, which grows into a thorn forest; he claws through. She throws the needle, and a wall of briars rises; the div’s hide is torn and he gives up.\n\nThe girl reaches home with the key-ring of treasure. Her family and neighbors celebrate her wit and courage; she keeps the donkey as her loyal helper.",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "file://datasets/persian/texts/FA_007_en.txt"
+  },
+  "annotation_level": "Motif",
+  "metadata": {
+    "main_motif": "ATU_313",
+    "atu_type": "313",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "COURAGE",
+      "CUNNING",
+      "LOYALTY"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "Heroine rescues herself and her kin by fleeing a div and casting obstacle-objects; maps cleanly to ATU 313.",
+  "annotation": {
+    "motif": {
+      "atu_type": "313",
+      "character_archetypes": [
+        "Hero",
+        "Helper",
+        "Villain"
+      ],
+      "obstacle_pattern": [
+        "SOAP_TO_SLIPPERY_HILL",
+        "COMB_TO_THORN_FOREST",
+        "NEEDLE_TO_BRUSHWOOD"
+      ],
+      "obstacle_thrower": "Heroine casts each object herself from donkey-back.",
+      "helper_type": "SELF_RELIANT_HEROINE_WITH_DONKEY",
+      "thinking_process": "Heroine rescues herself and her kin by fleeing a div and casting obstacle-objects; maps cleanly to ATU 313."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "COURAGE",
+        "CUNNING",
+        "LOYALTY"
+      ]
+    }
+  },
+  "narrative_structure": [
+    "volunteers_to_face_div",
+    "serves_and_slips_away_with_objects",
+    "pursuit_with_soap_comb_needle_obstacles",
+    "homecoming_with_treasure"
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "Centers a female rescuer; Iranian Luri variants highlight grit and self-rescue without princely aid.",
+      "gender_norms": "Heroine performs both helper and hero roles; donkey functions as neutral helper.",
+      "hero_villain_mapping": "Div embodies brute force; heroine represents communal protection.",
+      "ambiguous_motifs": [
+        "Old woman as donor vs helper",
+        "Treasure key-ring as reward vs evidence of victory"
+      ]
+    }
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.64,
+    "notes": "Expanded summary; kept obstacle pattern explicit for ATU 313."
+  },
+  "source_text_persian": {
+    "text": "دختری دلیر به جای خواهرانش به دیو داده می‌شود. پیرزنی به او صابون، شانه و سوزن می‌دهد تا در فرار بیندازد. دیو بیدار می‌شود و دختر از روی الاغ می‌گریزد؛ صابون سرسره، شانه خارستان و سوزن بوته‌ی تیغ می‌شود و دیو می‌ماند. دختر با کلیدها و الاغ به خانه برمی‌گردد و مردم شجاعتش را می‌ستایند.",
+    "language": "fa",
+    "type": "excerpt",
+    "reference_uri": "local file or oral source (unknown)"
+  }
+}

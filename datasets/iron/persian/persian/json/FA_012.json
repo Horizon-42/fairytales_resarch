@@ -1,0 +1,74 @@
+{
+  "id": "FA_012",
+  "culture": "Persian",
+  "title": "Amir Arsalan and the Peri Bride",
+  "source_text": {
+    "text": "﻿Amir Arsalan aids a mysterious maiden who later reveals she is a peri princess in disguise. They pledge to wed, binding human and fairy courts. Arsalan is bold, but the peri guides him with hidden signs.\n\nA rival sorcerer-king covets the peri and seizes her, spiriting her away to the fairy realm. The peri’s mother gives Arsalan a magic ring and a flying steed so he can pursue.\n\nArsalan rides the skies, passing enchanted gates and towers. He fights guards of steel and solves riddling tasks; in some tellings the sorcerer hurls spells after him.\n\nThe peri leaves signals—dropped scarf, marked door—that let Arsalan navigate the palace. He tricks the sorcerer, frees the peri, and escapes on the flying steed.\n\nThey return, expose the sorcerer, and marry. Their union ties human valor to peri aid, and the flying horse remains a bridge between realms.",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "file://datasets/persian/texts/FA_012_en.txt"
+  },
+  "annotation_level": "Motif",
+  "metadata": {
+    "main_motif": "ATU_402",
+    "atu_type": "402",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "LOYALTY",
+      "COURAGE",
+      "PERSEVERANCE"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "Hero wins and then must regain a peri bride from a rival sorcerer; supernatural spouse motif aligns to ATU 402.",
+  "annotation": {
+    "motif": {
+      "atu_type": "402",
+      "character_archetypes": [
+        "Hero",
+        "Bride",
+        "Villain",
+        "Helper"
+      ],
+      "thinking_process": "Hero wins and then must regain a peri bride from a rival sorcerer; supernatural spouse motif aligns to ATU 402."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "LOYALTY",
+        "COURAGE",
+        "PERSEVERANCE"
+      ]
+    }
+  },
+  "narrative_structure": [
+    "meeting_and_pledge",
+    "abduction_and_donor_aid",
+    "assault_on_enchanted_palace",
+    "rescue_and_marriage"
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "Qajar romance infuses epic heroism with fairy-spouse motif; peri agency remains notable.",
+      "gender_norms": "Peri chooses Arsalan but needs rescue due to sorcerer coercion; reciprocity via magic aid from female kin.",
+      "hero_villain_mapping": "Sorcerer-king as abductor; Arsalan as loyal rescuer.",
+      "ambiguous_motifs": [
+        "Degree of peri agency in orchestrating rescue",
+        "Presence/absence of magic-flight obstacles in specific retellings"
+      ]
+    }
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.63,
+    "notes": "Expanded peri-bride rescue and added explicit 402 justification."
+  },
+  "source_text_persian": {
+    "text": "امیر ارسلان دل در گرو پری شاهزاده می‌گذارد. ساحر رقیب او را می‌رباید؛ مادر پری حلقه و اسب پرنده می‌دهد. ارسلان دروازه‌های جادویی را می‌شکند و پری را می‌رهاند. عروسی میان دربار انسان و پری برقرار می‌شود.",
+    "language": "fa",
+    "type": "excerpt",
+    "reference_uri": "local file or oral source (unknown)"
+  }
+}

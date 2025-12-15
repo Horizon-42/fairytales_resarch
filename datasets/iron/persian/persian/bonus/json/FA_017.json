@@ -1,0 +1,100 @@
+{
+  "id": "FA_017",
+  "culture": "Persian",
+  "title": "",
+  "source_text": {
+    "text": "﻿A poor fisherman hauls up a sealed brass bottle from the sea. When he opens it, a giant jinni bursts out and swears to kill him, claiming centuries of imprisonment have twisted his mercy into rage.\nThe fisherman keeps his wits. He doubts the jinni could fit in the bottle and challenges him to prove it. The jinni shrinks back inside, boasting of his power.\nSwiftly the fisherman stops the bottle with lead and prepares to throw it back into the sea. The terrified jinni bargains, promising wealth and safety. Only after extracting the promise does the fisherman release him.\nThe jinni leads the fisherman to a pond where a cursed palace hides treasure and transformation tales. Wit and caution save the weak from the strong.",
+    "language": "en",
+    "type": "summary"
+  },
+  "annotation_level": "Deep",
+  "metadata": {
+    "main_motif": "Other",
+    "atu_type": "Other",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "CUNNING",
+      "JUSTICE"
+    ],
+    "target_motif": false
+  },
+  "thinking_process": "",
+  "annotation": {
+    "motif": {
+      "atu_type": "Other",
+      "character_archetypes": [
+        "Hero",
+        "Villain"
+      ]
+    },
+    "deep": {
+      "paragraph_summaries": [
+        "A poor fisherman hauls up a sealed brass bottle; a furious jinni emerges and vows to kill him after centuries of imprisonment.",
+        "The fisherman feigns doubt that the jinni fit in the bottle; the jinni shrinks to prove it and is trapped again.",
+        "With leverage, the fisherman negotiates safety before releasing the jinni.",
+        "The jinni leads him to a pond with a cursed palace and treasure; wit saves the weak from the strong."
+      ],
+      "propp_functions": [
+        {
+          "fn": "TRICKERY",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "evidence": "Fisherman feigns doubt the jinni was ever in the bottle; challenges proof."
+        },
+        {
+          "fn": "CAPTURE",
+          "span": {
+            "start": 1,
+            "end": 1
+          },
+          "evidence": "Jinni shrinks back into the bottle to prove it; fisherman seals it."
+        },
+        {
+          "fn": "VICTORY",
+          "span": {
+            "start": 2,
+            "end": 2
+          },
+          "evidence": "Fisherman wins safety and leverage through wit."
+        },
+        {
+          "fn": "RESOLUTION",
+          "span": {
+            "start": 3,
+            "end": 3
+          },
+          "evidence": "Release negotiated only after promise; justice framed by cunning."
+        }
+      ],
+      "propp_notes": "Spans are paragraph indices over the summary; refine with full text."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "CUNNING",
+        "JUSTICE"
+      ]
+    }
+  },
+  "narrative_structure": [],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "Escape via wit; valorizes cunning over force, aligning with trickster-fisher figures.",
+      "gender_norms": "Actors here are male-coded; note if helper roles shift in other cultures.",
+      "hero_villain_mapping": "Pursuer/oppressor is the powerful jinni; weak fisher as just hero.",
+      "ambiguous_motifs": [
+        "Donor absent; helper role implicit in hero’s intellect",
+        "Is the bottle a magical obstacle or prison?"
+      ]
+    }
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.55,
+    "notes": "Provenance added; QA metadata filled."
+  }
+}

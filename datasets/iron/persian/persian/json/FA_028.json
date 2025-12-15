@@ -1,0 +1,67 @@
+{
+  "id": "FA_028",
+  "culture": "Persian",
+  "title": "The Serpent Wife of Luristan",
+  "source_text": {
+    "text": "A traveler saves a talking serpent from villagers. She sheds her skin at night, revealing a maiden, and asks him to keep her secret. They marry quietly.\nJealous kin discover the serpent skin and try to burn it. The maiden is forced to return to the spring where she first appeared.\nThe traveler follows signs she leaves, bathes in the spring, and proves his loyalty. The serpent wife returns in human form, her curse broken; they reunite.",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "file://datasets/persian/texts/FA_028_en.txt"
+  },
+  "source_text_persian": {
+    "text": "مردی مار سخنگو را نجات می‌دهد؛ شب‌ها پوست می‌اندازد و زن می‌شود و از او می‌خواهد راز را نگه دارد. خویشان پوست را می‌سوزانند و او ناچار به چشمه بازمی‌گردد. شوهر با نشانه‌ها به چشمه می‌رود، وفاداری نشان می‌دهد و زن مار در قالب انسانی بازمی‌گردد.",
+    "language": "fa",
+    "type": "excerpt",
+    "reference_uri": "local file or oral source (unknown)"
+  },
+  "annotation_level": "Meta",
+  "metadata": {
+    "main_motif": "ATU_402",
+    "atu_type": "402",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "LOYALTY",
+      "COMPASSION",
+      "TRUST"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "Serpent-maiden bride with hidden skin; betrayal triggers separation; loyalty quest restores her—fits ATU 402.",
+  "annotation": {
+    "motif": {
+      "atu_type": "402",
+      "character_archetypes": [
+        "Hero",
+        "Bride",
+        "Villain"
+      ],
+      "secrecy_trigger": "Kin burn or expose the serpent skin, forcing departure.",
+      "ending_type": "HAPPY_REUNION",
+      "thinking_process": "Skin taboo plus reunion quest aligns with animal bride cycle."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "LOYALTY",
+        "COMPASSION",
+        "TRUST"
+      ]
+    }
+  },
+  "narrative_structure": [
+    "rescue_and_secret_marriage",
+    "skin_discovery_and_departure",
+    "quest_to_spring",
+    "reunion_and_curse_break"
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {}
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.55,
+    "notes": "Added as serpent-wife ATU 402 variant (Luristan)."
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "FA_019",
+  "culture": "Persian",
+  "title": "The Cobbler and the Div",
+  "source_text": {
+    "text": "﻿A poor cobbler is grabbed by a div and forced to stitch sacks in its cave. The div’s daughter—or an old woman captive there—pities him and whispers that the monster plans to eat him.\n\nShe hands him a needle, a bar of soap, and a lump of salt. “If it follows you, throw these,” she says. They slip away while the div sleeps.\n\nThe div wakes and charges after them. The cobbler throws the needle; it becomes a wall of thorns. He throws the soap; the hillside turns slick with suds. He throws the salt; a lake swells between them. The div, scratched, sliding, and blocked, gives up the chase.\n\nThe cobbler brings the helper back to town. People reward him for beating the monster, and in some tellings he marries the brave helper.",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "file://datasets/persian/texts/FA_019_en.txt"
+  },
+  "annotation_level": "Motif",
+  "metadata": {
+    "main_motif": "ATU_313",
+    "atu_type": "313",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "CUNNING",
+      "COURAGE"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "Variant where the cobbler escapes a pursuing div by throwing three transforming objects—aligns cleanly with 313 chase.",
+  "annotation": {
+    "motif": {
+      "atu_type": "313",
+      "character_archetypes": [
+        "Hero",
+        "Helper",
+        "Villain"
+      ],
+      "obstacle_pattern": [
+        "NEEDLE_TO_THORN_WALL",
+        "SOAP_TO_SLIPPERY_SLOPE",
+        "SALT_TO_LAKE"
+      ],
+      "obstacle_thrower": "Cobbler throws each object given by the helper (div’s daughter/old woman).",
+      "helper_type": "DONOR_MAIDEN_OR_OLD_WOMAN",
+      "thinking_process": "Variant where the cobbler escapes a pursuing div by throwing three transforming objects—aligns cleanly with 313 chase."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "CUNNING",
+        "COURAGE"
+      ]
+    }
+  },
+  "narrative_structure": [
+    "captured_by_div",
+    "helper_gifts_three_objects",
+    "pursuit_with_thorns_suds_lake",
+    "return_and_reward"
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "Underdog trades craft for survival; flight highlights wit over strength in Iranian trickster tradition.",
+      "gender_norms": "Helper may be female; cobbler throws obstacles, showing shared agency when helper is donor not caster.",
+      "hero_villain_mapping": "Div as oppressive captor; artisan as clever survivor.",
+      "ambiguous_motifs": [
+        "Helper vs donor when the div’s daughter aids escape",
+        "Reward ranges from wealth to marriage across variants"
+      ]
+    }
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.64,
+    "notes": "Expanded chase summary; reaffirmed ATU 313 mapping."
+  },
+  "source_text_persian": {
+    "text": "کفاشی را دیو می‌دزدد؛ دختر دیو به او سوزن، صابون و نمک می‌دهد. در فرار، سوزن دیوار خار، صابون سراشیبی لیز و نمک دریاچه می‌شود و دیو می‌ماند. کفاش با یاری‌دهنده به شهر برمی‌گردد و پاداش می‌گیرد.",
+    "language": "fa",
+    "type": "excerpt",
+    "reference_uri": "local file or oral source (unknown)"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "id": "FA_002",
+  "culture": "Persian",
+  "title": "",
+  "source_text": {
+    "text": "﻿The tyrant Zahhak grows serpents from his shoulders and feeds them the brains of youths to keep them quiet. Kaveh the blacksmith refuses to surrender his last son, denouncing the court’s injustice. He rips off his leather apron, raises it on a spear as a banner, and rallies the people.\nProphecies say a child named Feraydun will end Zahhak’s reign. Kaveh joins the child’s hidden supporters and helps arm the rebels. The movement spreads through towns hungry for justice.\nZahhak marches to crush the uprising, but the rebels seize strongholds and free captives. Feraydun strikes Zahhak down and binds him in Mount Damavand rather than killing him outright.\nWith the tyrant chained, Kaveh’s apron becomes a royal standard. Justice and popular solidarity replace terror; the story frames rebellion as righteous duty.",
+    "language": "en",
+    "type": "summary"
+  },
+  "annotation_level": "Deep",
+  "metadata": {
+    "main_motif": "Other",
+    "atu_type": "Other",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "HONOR",
+      "COURAGE",
+      "JUSTICE"
+    ],
+    "target_motif": false
+  },
+  "thinking_process": "",
+  "annotation": {
+    "motif": {
+      "atu_type": "Other",
+      "character_archetypes": [
+        "Hero",
+        "Villain"
+      ]
+    },
+    "deep": {
+      "paragraph_summaries": [
+        "Zahhak’s shoulders sprout serpents that demand human brains; he rules by terror, sacrificing youths.",
+        "Blacksmith Kaveh refuses to give his last son, denounces Zahhak, and raises his leather apron as a rebellion banner.",
+        "Kaveh joins Feraydun; the uprising spreads, seizing strongholds and freeing captives.",
+        "Feraydun strikes Zahhak down and binds him in Mount Damavand; the people are freed and the banner becomes a standard of justice."
+      ],
+      "propp_functions": [
+        {
+          "fn": "INTERDICTION",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "evidence": "Zahhak’s demand for youths’ brains as tribute; implicit taboo against refusal."
+        },
+        {
+          "fn": "VIOLATION",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "evidence": "Kaveh refuses tribute, breaking the tyrant’s command."
+        },
+        {
+          "fn": "CALL_TO_ACTION",
+          "span": {
+            "start": 1,
+            "end": 1
+          },
+          "evidence": "Kaveh raises the leather apron as a revolt banner."
+        },
+        {
+          "fn": "STRUGGLE",
+          "span": {
+            "start": 2,
+            "end": 2
+          },
+          "evidence": "Rebellion against Zahhak with Feraydun."
+        },
+        {
+          "fn": "PUNISHMENT",
+          "span": {
+            "start": 3,
+            "end": 3
+          },
+          "evidence": "Zahhak is overthrown and bound."
+        },
+        {
+          "fn": "REWARD",
+          "span": {
+            "start": 3,
+            "end": 3
+          },
+          "evidence": "People freed from sacrifice; justice restored."
+        }
+      ],
+      "propp_notes": "Spans are paragraph indices over the summary; refine with full text."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "HONOR",
+        "COURAGE",
+        "JUSTICE"
+      ]
+    }
+  },
+  "narrative_structure": [],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "Revolt framed as moral duty; banner of Kaveh becomes national symbol.",
+      "gender_norms": "Male-coded heroes; collective agency highlights craftsmen and youth victims.",
+      "hero_villain_mapping": "Zahhak as tyrant; Kaveh/Feraydun as liberators.",
+      "ambiguous_motifs": [
+        "Mercy vs execution of tyrant",
+        "Mythic snakes read as evil or illness metaphor"
+      ]
+    }
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.6,
+    "notes": "Added provenance and QA metadata; schema normalized."
+  }
+}

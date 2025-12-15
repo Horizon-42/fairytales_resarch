@@ -1,0 +1,73 @@
+{
+  "id": "FA_022",
+  "culture": "Persian",
+  "title": "Talkhab and Shirin (Gilaki Flight)",
+  "source_text": {
+    "text": "Talkhab loves Shirin, but she is promised to a brutal lord. An old woman gives Shirin a pouch of pepper, a spindle, and a flask of water to use if she must flee.\nOn the wedding night, Shirin and Talkhab escape with a loyal servant. The lord wakes and pursues on horseback.\nShirin throws the pepper— it whips into a blinding sandstorm. She throws the spindle— it becomes a steep mountain ridge. She throws the water— it spreads into a wide river. The pursuer, cut off and stinging, turns back.\nSafe in a neighboring village, Shirin and Talkhab marry freely; the community sides with them against coercion.",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "file://datasets/persian/texts/FA_022_en.txt"
+  },
+  "source_text_persian": {
+    "text": "تلخاب و شیرین از دست خان می‌گریزند؛ پیرزن به شیرین فلفل، دوک و آب می‌دهد. فلفل طوفان شن، دوک کوه و آب رود می‌شود و خان جا می‌ماند. آن دو به روستای امن می‌رسند و آزادانه ازدواج می‌کنند.",
+    "language": "fa",
+    "type": "excerpt",
+    "reference_uri": "local file or oral source (unknown)"
+  },
+  "annotation_level": "Motif",
+  "metadata": {
+    "main_motif": "ATU_313",
+    "atu_type": "313",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "CUNNING",
+      "LOYALTY",
+      "CHOICE"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "Gilaki forced-marriage escape with three-object obstacle casting; clean 313 chase structure.",
+  "annotation": {
+    "motif": {
+      "atu_type": "313",
+      "character_archetypes": [
+        "Hero",
+        "Helper",
+        "Villain"
+      ],
+      "obstacle_pattern": [
+        "PEPPER_SANDSTORM",
+        "SPINDLE_TO_MOUNTAIN",
+        "WATER_TO_RIVER"
+      ],
+      "obstacle_thrower": "Shirin throws all three; Talkhab rides and guards.",
+      "helper_type": "OLD_WOMAN_DONOR",
+      "ending_type": "HAPPY_REUNION",
+      "thinking_process": "Obstacle order and thrower specified; aligns with ATU 313 motif expectations."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "CUNNING",
+        "LOYALTY",
+        "CHOICE"
+      ]
+    }
+  },
+  "narrative_structure": [
+    "coerced_betrothal",
+    "escape_with_objects",
+    "three_obstacles_cast",
+    "free_marriage"
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {}
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.57,
+    "notes": "Added as ATU 313 Gilaki variant with pepper/spindle/water obstacles."
+  }
+}

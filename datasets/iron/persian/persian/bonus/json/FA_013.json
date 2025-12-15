@@ -1,0 +1,57 @@
+{
+  "id": "FA_013",
+  "culture": "Persian",
+  "title": "",
+  "source_text": {
+    "text": "﻿In Ubayd Zakani’s satire, a cat dons the pose of a fasting ascetic. He preaches to mice about renouncing food and seeking virtue, convincing them to trust him.\nThe mice gather for his sermons; he singles out the devout and swallows them when they draw near. When fewer mice remain, he changes tactics, posing as a doctor to lure the sick.\nOne suspicious mouse stays back and warns the others. The cat’s hypocrisy is exposed when he cannot explain his bloody whiskers. The tale mocks false piety and gullibility, urging listeners to test sanctity before trusting power.",
+    "language": "en",
+    "type": "summary"
+  },
+  "annotation_level": "Motif",
+  "metadata": {
+    "main_motif": "Other",
+    "atu_type": "Other",
+    "ending_type": "OPEN",
+    "key_values": [
+      "CUNNING",
+      "JUSTICE"
+    ],
+    "target_motif": false
+  },
+  "thinking_process": "",
+  "annotation": {
+    "motif": {
+      "atu_type": "Other",
+      "character_archetypes": [
+        "Hero",
+        "Villain"
+      ]
+    },
+    "meta": {
+      "ending_type": "OPEN",
+      "key_values": [
+        "CUNNING",
+        "JUSTICE"
+      ]
+    }
+  },
+  "narrative_structure": [],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "Escape is trust-based—victims fail to flee due to deceit; moral on hypocrisy.",
+      "gender_norms": "Animal satire; gender largely neutral; note if piety is gendered in readings.",
+      "hero_villain_mapping": "Villain is false-pious cat; mice as duped victims.",
+      "ambiguous_motifs": [
+        "Is there a helper figure? often absent",
+        "Obstacle is ideological (false piety) not physical"
+      ]
+    }
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.55,
+    "notes": "Added provenance and QA metadata."
+  }
+}

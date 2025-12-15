@@ -1,0 +1,73 @@
+{
+  "id": "FA_025",
+  "culture": "Persian",
+  "title": "Hassan the Rope-Seller",
+  "source_text": {
+    "text": "Hassan, a rope-seller, is hired by an ogre and discovers a captive peri maiden. She urges him to flee with her and gives him ashes, a thorn twig, and a jug of water.\nThey run; the ogre follows.\nHassan throws the ashes, which whirl into a dust storm. He throws the thorn twig; it grows into a barrier of briars. He throws the water; it becomes a river. The ogre cannot cross and quits the chase.\nHassan and the peri return to town. The peri remains in human form and marries him; the ogre’s threat ends.",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "file://datasets/persian/texts/FA_025_en.txt"
+  },
+  "source_text_persian": {
+    "text": "حسن ریسمان‌فروش با پری اسیر دیو می‌گریزد. خاکستر طوفان، خار بوته و آب رود می‌شود و دیو جا می‌ماند. پری در شهر می‌ماند و با حسن عروسی می‌کند و خطر دیو تمام می‌شود.",
+    "language": "fa",
+    "type": "excerpt",
+    "reference_uri": "local file or oral source (unknown)"
+  },
+  "annotation_level": "Motif",
+  "metadata": {
+    "main_motif": "ATU_313",
+    "atu_type": "313",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "CUNNING",
+      "LOYALTY",
+      "COURAGE"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "Magic-flight with three obstacles cast by the hero; helper is a peri maiden captive to an ogre.",
+  "annotation": {
+    "motif": {
+      "atu_type": "313",
+      "character_archetypes": [
+        "Hero",
+        "Helper",
+        "Villain"
+      ],
+      "obstacle_pattern": [
+        "ASHES_TO_DUST_STORM",
+        "THORN_TWIG_TO_BRIARS",
+        "WATER_TO_RIVER"
+      ],
+      "obstacle_thrower": "Hassan throws each object; peri maiden plans escape.",
+      "helper_type": "PERI_HELPER",
+      "ending_type": "HAPPY_REUNION",
+      "thinking_process": "Sequence matches 313: dust, briars, river, with hero as caster."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "CUNNING",
+        "LOYALTY",
+        "COURAGE"
+      ]
+    }
+  },
+  "narrative_structure": [
+    "bond_with_peri",
+    "flight_from_ogre",
+    "three_obstacles_cast",
+    "return_and_marriage"
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {}
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.55,
+    "notes": "Added as ATU 313 with peri helper and three obstacles."
+  }
+}

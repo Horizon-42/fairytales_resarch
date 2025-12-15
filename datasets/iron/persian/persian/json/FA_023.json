@@ -1,0 +1,73 @@
+{
+  "id": "FA_023",
+  "culture": "Persian",
+  "title": "Judar and the Ifrit’s Daughter",
+  "source_text": {
+    "text": "Judar, a fisherman, frees an ifrit’s daughter who is forced to guard treasure. She offers to flee with him and hands him henna, millet, and a flask of oil to cast if her father pursues.\nThey escape the cave with riches. The ifrit pursues in a storm of fire.\nJudar throws the henna; a choking fog rolls in. He throws the millet; it becomes a swarm of birds that peck and blind the ifrit. He throws the oil; it erupts into a wall of flame. Beaten, the ifrit withdraws.\nJudar and the ifrit’s daughter settle in the city and wed; she is freed from her father’s service.",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "file://datasets/persian/texts/FA_023_en.txt"
+  },
+  "source_text_persian": {
+    "text": "جُدار دختر افریتی را آزاد می‌کند و با او می‌گریزد. حنا مه می‌شود، ارزن به گلهٔ پرندگان کورکننده، و روغن به دیوار آتش بدل می‌شود و افریت عقب می‌ماند. آن دو با گنج به شهر می‌روند و عروسی می‌کنند.",
+    "language": "fa",
+    "type": "excerpt",
+    "reference_uri": "local file or oral source (unknown)"
+  },
+  "annotation_level": "Motif",
+  "metadata": {
+    "main_motif": "ATU_313",
+    "atu_type": "313",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "CUNNING",
+      "LOYALTY",
+      "JUSTICE"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "Nights-derived magic-flight: helper gives three objects; hero throws them to halt a supernatural pursuer.",
+  "annotation": {
+    "motif": {
+      "atu_type": "313",
+      "character_archetypes": [
+        "Hero",
+        "Helper",
+        "Villain"
+      ],
+      "obstacle_pattern": [
+        "HENNA_TO_FOG",
+        "MILLET_TO_BIRDS",
+        "OIL_TO_FIRE_WALL"
+      ],
+      "obstacle_thrower": "Judar throws each object while the ifrit’s daughter rides with him.",
+      "helper_type": "IFRIT_DAUGHTER_DONOR",
+      "ending_type": "HAPPY_REUNION",
+      "thinking_process": "Three obstacles escalate: obscuring fog, blinding birds, then a fire wall, fitting ATU 313 chase logic."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "CUNNING",
+        "LOYALTY",
+        "JUSTICE"
+      ]
+    }
+  },
+  "narrative_structure": [
+    "release_of_helper",
+    "flight_with_treasure",
+    "three_obstacles_cast",
+    "safe_settlement_and_marriage"
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {}
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.55,
+    "notes": "Added as a 1001 Nights magic-flight variant (ATU 313)."
+  }
+}

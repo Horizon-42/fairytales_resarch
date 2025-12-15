@@ -1,0 +1,139 @@
+{
+  "id": "FA_006",
+  "culture": "Persian",
+  "title": "Hassan Kachal (Bald Hassan)",
+  "source_text": {
+    "text": "Bald, unlucky Hassan is mocked for laziness. He leaves home, helps an old woman on the road, and learns of an ogre’s house holding treasure and a captive maiden.\n\nHassan sneaks in. The maiden begs for rescue and hands him a comb, a bag of salt, and a waterskin, warning him not to look back if they flee. They slip out while the ogre sleeps, but Hassan glances back and the ogre stirs.\n\nThe ogre wakes and charges after them. Hassan throws the comb, which becomes a dense forest; the ogre hacks through. He throws the salt, which rises into a jagged salt-crag mountain; the ogre claws it down. He finally throws the water, which swells into a river the ogre cannot cross.\n\nWith the path blocked, Hassan and the maiden reach town. The ogre abandons the chase, and Hassan marries the clever maiden, prized now for courage and wit.",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "file://datasets/persian/texts/FA_006_en.txt"
+  },
+  "annotation_level": "Deep",
+  "metadata": {
+    "main_motif": "ATU_313",
+    "atu_type": "313",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "CUNNING",
+      "LUCK",
+      "LOYALTY"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "Classic Iranian magic-flight variant: Hassan flees an ogre with a helper maiden; three transforming objects are thrown to halt pursuit.",
+  "annotation": {
+    "motif": {
+      "atu_type": "313",
+      "character_archetypes": [
+        "Hero",
+        "Helper",
+        "Villain"
+      ],
+      "obstacle_pattern": [
+        "COMB_TO_FOREST",
+        "SALT_TO_MOUNTAIN",
+        "WATER_TO_RIVER"
+      ],
+      "obstacle_thrower": "Hassan throws the objects given by the maiden; she plans, he casts.",
+      "helper_type": "CAPTIVE_MAIDEN_AND_ANIMAL",
+      "thinking_process": "Classic Iranian magic-flight variant: Hassan flees an ogre with a helper maiden; three transforming objects are thrown to halt pursuit."
+    },
+    "deep": {
+      "paragraph_summaries": [
+        "Bald, idle Hassan leaves home, helps an old woman, and hears of an ogre’s house with treasure and a captive maiden.",
+        "He enters, frees the maiden, and she hands him three objects (comb, salt, water) for escape while warning him not to look back; they slip out, but his glance stirs the ogre.",
+        "The ogre wakes and pursues; Hassan and the maiden throw the comb, salt, and water, which become a forest, a salt-crag mountain, and a river that stalls the chase.",
+        "They reach safety, the ogre gives up, and Hassan marries the clever maiden with the townsfolk’s blessing."
+      ],
+      "propp_functions": [
+        {
+          "fn": "ABSENTATION",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "evidence": "Hassan leaves home seeking fortune."
+        },
+        {
+          "fn": "INTERDICTION",
+          "span": {
+            "start": 1,
+            "end": 1
+          },
+          "evidence": "Maiden urges speed and warns against looking back."
+        },
+        {
+          "fn": "VIOLATION",
+          "span": {
+            "start": 2,
+            "end": 2
+          },
+          "evidence": "Hassan glances back, triggering the ogre’s pursuit."
+        },
+        {
+          "fn": "PURSUIT",
+          "span": {
+            "start": 2,
+            "end": 2
+          },
+          "evidence": "Ogre chases the fleeing pair."
+        },
+        {
+          "fn": "RESCUE",
+          "span": {
+            "start": 2,
+            "end": 2
+          },
+          "evidence": "Thrown objects become obstacles that stop the ogre."
+        },
+        {
+          "fn": "WEDDING",
+          "span": {
+            "start": 3,
+            "end": 3
+          },
+          "evidence": "Hassan weds the maiden after the escape succeeds."
+        }
+      ],
+      "propp_notes": "Spans index paragraph_summaries; obstacle throws map to PURSUIT/RESCUE in paragraph 2."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "CUNNING",
+        "LUCK",
+        "LOYALTY"
+      ]
+    }
+  },
+  "narrative_structure": [
+    "departure_and_meeting_helper",
+    "rescue_and_plan_with_three_objects",
+    "pursuit_with_forest_mountain_river_obstacles",
+    "safe_return_and_marriage"
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "Trickster-upward-mobility reading where wit beats monsters; Iranian variants often emphasize the helper maiden’s foresight.",
+      "gender_norms": "Helper maiden provides strategy; hero executes throws, showing partnered agency.",
+      "hero_villain_mapping": "Ogre pursuer embodies oppressive force; humble Hassan as underdog hero.",
+      "ambiguous_motifs": [
+        "Helper vs donor roles of the maiden",
+        "Agency split: maiden gives objects, Hassan throws them"
+      ]
+    }
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.64,
+    "notes": "Expanded summary, added provenance, clarified ATU 313 obstacle pattern."
+  },
+  "source_text_persian": {
+    "text": "حسن کچل برای بخت‌آزمایی راه می‌افتد و در خانه‌ی دیو، دختر اسیر را نجات می‌دهد. دختر به او شانه، نمک و آب می‌دهد تا در فرار بیندازد. دیو دنبالشان می‌آید و حسن هر چیز را می‌اندازد؛ جنگل، کوه نمک و رود به راه می‌افتد و دیو جا می‌ماند. حسن و دختر سالم به شهر می‌رسند و عروسی می‌کنند.",
+    "language": "fa",
+    "type": "excerpt",
+    "reference_uri": "local file or oral source (unknown)"
+  }
+}

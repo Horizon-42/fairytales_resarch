@@ -1,0 +1,71 @@
+{
+  "id": "FA_024",
+  "culture": "Persian",
+  "title": "The Potter’s Daughter and the Div",
+  "source_text": {
+    "text": "A potter’s daughter is carried off by a div to grind his flour. An old woman captive there pities her and gives her a comb, a sack of flour, and a needle for escape.\nThe daughter slips away at night. The div wakes and charges after her.\nShe throws the comb— it grows into a thorn forest. She throws the flour— it billows into a blinding fog. She throws the needle— it becomes a wall of brambles. Tangled and lost, the div gives up.\nThe daughter returns home and is welcomed. She marries a kind neighbor; the old woman is later freed.",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "file://datasets/persian/texts/FA_024_en.txt"
+  },
+  "source_text_persian": {
+    "text": "دختر کوزه‌گر را دیو می‌برد؛ پیرزن به او شانه، آرد و سوزن می‌دهد. شانه جنگل خار، آرد مه و سوزن بوتهٔ تیغ می‌شود و دیو راه را گم می‌کند. دختر به خانه برمی‌گردد و با همسایه مهربان ازدواج می‌کند.",
+    "language": "fa",
+    "type": "excerpt",
+    "reference_uri": "local file or oral source (unknown)"
+  },
+  "annotation_level": "Motif",
+  "metadata": {
+    "main_motif": "ATU_313",
+    "atu_type": "313",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "CUNNING",
+      "PERSEVERANCE"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "Three-object escape from a div with classic obstacle sequence; heroine casts all obstacles.",
+  "annotation": {
+    "motif": {
+      "atu_type": "313",
+      "character_archetypes": [
+        "Hero",
+        "Helper",
+        "Villain"
+      ],
+      "obstacle_pattern": [
+        "COMB_TO_THORN_FOREST",
+        "FLOUR_TO_FOG",
+        "NEEDLE_TO_BRAMBLES"
+      ],
+      "obstacle_thrower": "Heroine throws each object herself.",
+      "helper_type": "OLD_WOMAN_DONOR",
+      "ending_type": "HAPPY_REUNION",
+      "thinking_process": "Maps directly to ATU 313 chase with escalating obstacles."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "CUNNING",
+        "PERSEVERANCE"
+      ]
+    }
+  },
+  "narrative_structure": [
+    "abduction_and_donor_gift",
+    "night_escape",
+    "three_obstacles_cast",
+    "homecoming_and_marriage"
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {}
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.56,
+    "notes": "Added as ATU 313 potter’s daughter flight variant."
+  }
+}

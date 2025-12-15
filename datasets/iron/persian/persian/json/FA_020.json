@@ -1,0 +1,72 @@
+{
+  "id": "FA_020",
+  "culture": "Persian",
+  "title": "The Tree Girl",
+  "source_text": {
+    "text": "﻿A childless couple prays for a child. A hollow tree opens and a baby girl is found within. They raise the tree-born maiden with care.\n\nAs she grows, a prince discovers her singing by the tree. He marries her despite whispers about her uncanny origin.\n\nA jealous co-wife or rival harms or replaces the tree bride. The true bride survives as a dove, a branch, or a disguised servant, watching her place taken.\n\nWith help from tokens of the tree or a faithful ally, she is recognized. The rival is punished, and the prince restores the tree-born bride to honor.",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "file://datasets/persian/texts/FA_020_en.txt"
+  },
+  "annotation_level": "Motif",
+  "metadata": {
+    "main_motif": "ATU_402",
+    "atu_type": "402",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [
+      "COMPASSION",
+      "COURAGE"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "Maiden of supernatural origin (tree/fairy) becomes bride; rival harm and restoration fit 402 animal/supernatural bride structure.",
+  "annotation": {
+    "motif": {
+      "atu_type": "402",
+      "character_archetypes": [
+        "Hero",
+        "Bride",
+        "Villain",
+        "Helper"
+      ],
+      "thinking_process": "Maiden of supernatural origin (tree/fairy) becomes bride; rival harm and restoration fit 402 animal/supernatural bride structure."
+    },
+    "meta": {
+      "ending_type": "HAPPY_REUNION",
+      "key_values": [
+        "COMPASSION",
+        "COURAGE"
+      ]
+    }
+  },
+  "narrative_structure": [
+    "tree_birth_and_upbringing",
+    "marriage_to_prince",
+    "rival_harms_or_replaces_bride",
+    "recognition_and_restoration"
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "Nature-spirit bride highlights harmony with landscape; betrayal frames social jealousy.",
+      "gender_norms": "Bride is supernatural yet vulnerable to human envy; prince’s duty is recognition and protection.",
+      "hero_villain_mapping": "Rival co-wife or jealous figure as villain; tree maiden as helper/bride.",
+      "ambiguous_motifs": [
+        "Tree origin vs swan/serpent motifs",
+        "Role of adoptive parents after marriage"
+      ]
+    }
+  },
+  "qa": {
+    "annotator": "Sahar",
+    "date_annotated": "2025-12-12",
+    "confidence": 0.63,
+    "notes": "Expanded supernatural bride arc; added ATU 402 rationale."
+  },
+  "source_text_persian": {
+    "text": "دختر از دل درخت بیرون می‌آید و شاهزاده او را به زنی می‌گیرد. رقیب یا هووی حسود او را می‌آزارد و جایگزین می‌کند؛ عروسِ درختی به صورت کبوتر یا شاخه برمی‌گردد و خود را می‌شناساند. شاهزاده او را بازمی‌گرداند و رقیب کیفر می‌بیند.",
+    "language": "fa",
+    "type": "excerpt",
+    "reference_uri": "local file or oral source (unknown)"
+  }
+}
