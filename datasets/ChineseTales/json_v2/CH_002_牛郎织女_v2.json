@@ -3,7 +3,7 @@
   "metadata": {
     "id": "CH_002_牛郎织女",
     "title": "",
-    "culture": "Persian",
+    "culture": "Chinese",
     "annotator": "",
     "date_annotated": "2025-12-15",
     "confidence": 0.8,
@@ -60,16 +60,58 @@
   "narrative_events": [
     {
       "event_type": "OTHER",
-      "description": "",
+      "description": "织;neat",
       "agents": [
         "织女"
       ],
       "targets": [
-        "织女"
+        "天衣"
       ],
+      "target_type": "object",
+      "object_type": "normal_object",
+      "instrument": "",
+      "text_span": {
+        "start": 0,
+        "end": 214,
+        "text": "相传织女是天帝的孙女，或说是王母娘娘的外孙女，这都用不着去管它了 ，总之，是有这么一个仙女，住在银河的东边，用了一种神奇的丝，在织布机上织出了层层叠叠的美丽云彩，随着时间和季节的不同而变幻它们的颜色，叫做\" 天衣\"，意思就是给天做的衣裳。天也和人一样,是要穿衣裳的，虽然碧蓝如洗的赤裸青天自有它的美丽。做这种工作，除了织女而外，还有别的六位年轻的仙女，都是织女的姐妹，也都是天上的织造能手；织女在他们当中，是最勤勉、努力的一个。"
+      },
+      "id": "05828210-380c-4e6f-936c-d5164c1524f6"
+    },
+    {
+      "event_type": "VILLAINY",
+      "description": "虐待;abuse",
+      "agents": [
+        "哥嫂"
+      ],
+      "targets": [
+        "牛郎"
+      ],
+      "text_span": {
+        "start": 215,
+        "end": 297,
+        "text": "隔着那条清浅的闪光的银河，就是人间。在那里住着一个牧牛郎，叫做牛郎，他的父母早死去了，常受哥嫂的虐待。終于，他被哥嫂不公平地分家出去，给了他一头老牛，叫他自立门户。"
+      },
       "target_type": "character",
       "object_type": "",
-      "instrument": ""
+      "instrument": "",
+      "id": "38bb88d7-ed7a-402f-a2b1-6baa1c0f5840"
+    },
+    {
+      "event_type": "LACK",
+      "description": "寂寞;get lonely",
+      "agents": [
+        "牛郎"
+      ],
+      "targets": [],
+      "text_span": {
+        "start": 298,
+        "end": 401,
+        "text": "靠了老牛的帮助和他自己的努力劳动，他在荒野地上披荆斩棘，耕田种地，盖造屋子，一 两年后，居然菅建了一个小小的家，勉强可以维持生活。可是，除了那头不会说话的老牛以外，冷清的家里只有他一个人，日子过得相当寂寞。"
+      },
+      "target_type": "",
+      "object_type": "",
+      "instrument": "",
+      "id": "262880a0-126d-4734-9786-dcb806220381"
     }
   ],
   "themes_and_motifs": {
@@ -83,7 +125,40 @@
     "thinking_process": ""
   },
   "analysis": {
-    "propp_functions": [],
+    "propp_functions": [
+      {
+        "id": "80ef1091-c37c-44b4-bc04-92228236d42d",
+        "fn": "VILLAINY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 215,
+          "end": 297,
+          "text": "隔着那条清浅的闪光的银河，就是人间。在那里住着一个牧牛郎，叫做牛郎，他的父母早死去了，常受哥嫂的虐待。終于，他被哥嫂不公平地分家出去，给了他一头老牛，叫他自立门户。"
+        },
+        "evidence": "虐待;abuse",
+        "narrative_event_id": "38bb88d7-ed7a-402f-a2b1-6baa1c0f5840"
+      },
+      {
+        "id": "c0023c54-be78-489f-867d-e8a636705bd9",
+        "fn": "LACK",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 298,
+          "end": 401,
+          "text": "靠了老牛的帮助和他自己的努力劳动，他在荒野地上披荆斩棘，耕田种地，盖造屋子，一 两年后，居然菅建了一个小小的家，勉强可以维持生活。可是，除了那头不会说话的老牛以外，冷清的家里只有他一个人，日子过得相当寂寞。"
+        },
+        "evidence": "寂寞;get lonely",
+        "narrative_event_id": "262880a0-126d-4734-9786-dcb806220381"
+      }
+    ],
     "propp_notes": "",
     "paragraph_summaries": [],
     "bias_reflection": {

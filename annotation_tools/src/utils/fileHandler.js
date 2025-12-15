@@ -36,6 +36,17 @@ export function organizeFiles(fileList) {
   return { texts, v1Jsons, v2Jsons };
 }
 
+// Helper to generate UUID
+export function generateUUID() {
+  if (typeof crypto !== 'undefined' && crypto.randomUUID) {
+    return crypto.randomUUID();
+  }
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
+
 // Helper to map V2 JSON to App State
 export function mapV2ToState(data) {
   // Ensure defaults
@@ -69,21 +80,67 @@ export function mapV2ToState(data) {
     // Narrative Structure
     narrativeStructure: (data.narrative_events || []).map(evt => {
       // V2 events are objects. V1 mixed strings and objects. App supports object.
-      if (typeof evt === "object" && evt !== null) {
+      if (typeof evt === "string") {
         return {
-          ...evt,
-          target_type: evt.target_type || "",
-          object_type: evt.object_type || "",
-          instrument: evt.instrument || ""
+          id: generateUUID(),
+          event_type: "OTHER",
+          description: evt,
+          agents: [],
+          targets: [],
+          text_span: null,
+          target_type: "",
+          object_type: "",
+          instrument: ""
         };
       }
-      return evt;
+      return {
+        ...evt,
+        // Ensure new fields exist
+        id: evt.id || generateUUID(),
+        target_type: evt.target_type || "",
+        object_type: evt.object_type || "",
+        instrument: evt.instrument || ""
+      };
     }),
     
     // Analysis / Deep Annotation
-    proppFns: analysis.propp_functions || [],
+    proppFns: (analysis.propp_functions || []).map(pf => ({
+      ...pf,
+      id: pf.id || generateUUID(),
+      // Ensure narrative_event_id exists if we want to link (might be null for legacy)
+      narrative_event_id: pf.narrative_event_id || null
+    })),
     proppNotes: analysis.propp_notes || "",
-    paragraphSummaries: analysis.paragraph_summaries || [],
+    // Migrating paragraphSummaries to new structure
+    paragraphSummaries: (() => {
+      const raw = analysis.paragraph_summaries;
+      // Check if already new structure
+      if (raw && typeof raw === "object" && !Array.isArray(raw)) {
+        return {
+          perParagraph: raw.per_paragraph || {},
+          combined: raw.combined || [],
+          whole: raw.whole || ""
+        };
+      }
+      // Legacy array format - migrate
+      if (Array.isArray(raw)) {
+        const perParagraph = {};
+        const combined = [];
+        raw.forEach((item, i) => {
+          if (typeof item === "string" && item.trim()) {
+            perParagraph[i] = item;
+          } else if (item && typeof item === "object") {
+            if (item.start_para === item.end_para) {
+              perParagraph[item.start_para] = item.text || "";
+            } else {
+              combined.push({ start_para: item.start_para, end_para: item.end_para, text: item.text || "" });
+            }
+          }
+        });
+        return { perParagraph, combined, whole: "" };
+      }
+      return { perParagraph: {}, combined: [], whole: "" };
+    })(),
     
     // Cross Validation
     crossValidation: {
@@ -117,11 +174,65 @@ export function mapV1ToState(data) {
     
     motif: data.annotation?.motif || {},
     
-    narrativeStructure: data.narrative_structure || [],
+    narrativeStructure: (data.narrative_structure || []).map(evt => {
+      if (typeof evt === "string") {
+        return {
+          id: generateUUID(),
+          event_type: "OTHER",
+          description: evt,
+          agents: [],
+          targets: [],
+          text_span: null,
+          target_type: "",
+          object_type: "",
+          instrument: ""
+        };
+      }
+      return {
+        ...evt,
+        id: evt.id || generateUUID(),
+        target_type: evt.target_type || "",
+        object_type: evt.object_type || "",
+        instrument: evt.instrument || ""
+      };
+    }),
     
-    proppFns: data.annotation?.deep?.propp_functions || [],
+    proppFns: (data.annotation?.deep?.propp_functions || []).map(pf => ({
+      ...pf,
+      id: pf.id || generateUUID(),
+      narrative_event_id: pf.narrative_event_id || null
+    })),
     proppNotes: data.annotation?.deep?.propp_notes || "",
-    paragraphSummaries: data.annotation?.deep?.paragraph_summaries || [],
+    // Migrating paragraphSummaries to new structure
+    paragraphSummaries: (() => {
+      const raw = data.annotation?.deep?.paragraph_summaries;
+      // Check if already new structure
+      if (raw && typeof raw === "object" && !Array.isArray(raw)) {
+        return {
+          perParagraph: raw.per_paragraph || {},
+          combined: raw.combined || [],
+          whole: raw.whole || ""
+        };
+      }
+      // Legacy array format - migrate
+      if (Array.isArray(raw)) {
+        const perParagraph = {};
+        const combined = [];
+        raw.forEach((item, i) => {
+          if (typeof item === "string" && item.trim()) {
+            perParagraph[i] = item;
+          } else if (item && typeof item === "object") {
+            if (item.start_para === item.end_para) {
+              perParagraph[item.start_para] = item.text || "";
+            } else {
+              combined.push({ start_para: item.start_para, end_para: item.end_para, text: item.text || "" });
+            }
+          }
+        });
+        return { perParagraph, combined, whole: "" };
+      }
+      return { perParagraph: {}, combined: [], whole: "" };
+    })(),
     
     crossValidation: data.cross_validation || {},
     

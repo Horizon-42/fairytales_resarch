@@ -9,7 +9,7 @@ import {
   TARGET_CATEGORIES,
   OBJECT_TYPES
 } from "./constants.js";
-import { organizeFiles, mapV1ToState, mapV2ToState } from "./utils/fileHandler.js";
+import { organizeFiles, mapV1ToState, mapV2ToState, generateUUID } from "./utils/fileHandler.js";
 
 function multiSelectFromEvent(e) {
   return Array.from(e.target.selectedOptions).map((o) => o.value);
@@ -44,11 +44,13 @@ const HIGHLIGHT_COLORS = [
 ];
 
 const emptyProppFn = () => ({
+  id: generateUUID(),
   fn: "",
   spanType: "paragraph", // "paragraph" or "text"
   span: { start: 0, end: 0 }, // For paragraphs
   textSpan: { start: 0, end: 0, text: "" }, // For raw text index
-  evidence: ""
+  evidence: "",
+  narrative_event_id: null
 });
 
 const customStyles = {
@@ -106,7 +108,11 @@ export default function App() {
     thinking_process: ""
   });
 
-  const [paragraphSummaries, setParagraphSummaries] = useState([""]);
+  const [paragraphSummaries, setParagraphSummaries] = useState({
+    perParagraph: {},   // { [paraIndex]: summaryText }
+    combined: [],       // [{ start_para, end_para, text }]
+    whole: ""           // whole story summary
+  });
   const [proppFns, setProppFns] = useState([emptyProppFn()]);
   const [proppNotes, setProppNotes] = useState("");
 
@@ -153,7 +159,11 @@ export default function App() {
       annotation: {
         motif,
         deep: {
-          paragraph_summaries: paragraphSummaries.filter((p) => p.trim()),
+          paragraph_summaries: {
+            per_paragraph: paragraphSummaries.perParagraph || {},
+            combined: (paragraphSummaries.combined || []).filter(c => c.text && c.text.trim()),
+            whole: paragraphSummaries.whole || ""
+          },
           propp_functions: proppFns.filter((f) => f.fn || f.evidence),
           propp_notes: proppNotes
         },
@@ -229,7 +239,11 @@ export default function App() {
       analysis: {
         propp_functions: proppFns.filter((f) => f.fn || f.evidence),
         propp_notes: proppNotes,
-        paragraph_summaries: paragraphSummaries.filter((p) => p.trim()),
+        paragraph_summaries: {
+          per_paragraph: paragraphSummaries.perParagraph || {},
+          combined: (paragraphSummaries.combined || []).filter(c => c.text && c.text.trim()),
+          whole: paragraphSummaries.whole || ""
+        },
         bias_reflection: crossValidation.bias_reflection,
         qa_notes: qa.notes
       }
@@ -330,7 +344,37 @@ export default function App() {
     setMeta(prev => ({ ...prev, ...loaded.meta }));
     setMotif(prev => ({ ...prev, ...loaded.motif }));
     
-    if (loaded.paragraphSummaries) setParagraphSummaries(loaded.paragraphSummaries);
+    if (loaded.paragraphSummaries) {
+      // Handle different formats
+      if (Array.isArray(loaded.paragraphSummaries)) {
+        // Legacy: convert array to new structure
+        const perParagraph = {};
+        loaded.paragraphSummaries.forEach((item, i) => {
+          if (typeof item === "string" && item.trim()) {
+            perParagraph[i] = item;
+          } else if (item && item.text && item.text.trim()) {
+            // Was combined format before, keep as combined? Or map to per-paragraph?
+            // If start_para === end_para, it's per-paragraph
+            if (item.start_para === item.end_para) {
+              perParagraph[item.start_para] = item.text;
+            }
+          }
+        });
+        // Extract combined items (multi-paragraph ranges)
+        const combined = loaded.paragraphSummaries
+          .filter(item => item && typeof item === "object" && item.start_para !== item.end_para)
+          .map(item => ({ start_para: item.start_para, end_para: item.end_para, text: item.text }));
+
+        setParagraphSummaries({ perParagraph, combined, whole: "" });
+      } else if (typeof loaded.paragraphSummaries === "object") {
+        // New structure
+        setParagraphSummaries({
+          perParagraph: loaded.paragraphSummaries.perParagraph || {},
+          combined: loaded.paragraphSummaries.combined || [],
+          whole: loaded.paragraphSummaries.whole || ""
+        });
+      }
+    }
     if (loaded.proppFns) setProppFns(loaded.proppFns);
     if (loaded.proppNotes) setProppNotes(loaded.proppNotes);
     if (loaded.deepMeta) setDeepMeta(prev => ({ ...prev, ...loaded.deepMeta }));
@@ -361,7 +405,11 @@ export default function App() {
       helper_type: "",
       thinking_process: ""
     });
-    setParagraphSummaries([""]);
+    setParagraphSummaries({
+      perParagraph: {},
+      combined: [],
+      whole: ""
+    });
     setProppFns([emptyProppFn()]);
     setProppNotes("");
     setDeepMeta({ ending_type: "HAPPY_REUNION", key_values: [] });
@@ -398,7 +446,9 @@ export default function App() {
     // We'll stick to pre-loading texts for now as per previous logic, but maybe optimize if needed.
     const withContent = await Promise.all(
       texts.map(async (t) => {
-        const text = await t.file.text();
+        const textRaw = await t.file.text();
+        // Normalize line endings to ensure index consistency
+        const text = textRaw.replace(/\r\n/g, '\n');
         return { ...t, name: t.file.name, text };
       })
     );
@@ -432,6 +482,8 @@ export default function App() {
 
     // Reset annotations first
     resetState();
+    setHighlightedRanges({});
+    setHighlightedChars({});
 
     // Check for existing JSON
     // Priority 1: Check server (disk) for latest version
@@ -512,22 +564,123 @@ export default function App() {
   const [activeTab, setActiveTab] = useState("characters");
   // Map of character name -> color string
   const [highlightedChars, setHighlightedChars] = useState({});
+  const [highlightedRanges, setHighlightedRanges] = useState({}); // { [uuid]: { start, end, color } }
   const [lastAutoSave, setLastAutoSave] = useState(null);
+
+  // Scroll to summary focus
+  useEffect(() => {
+    const focusHighlight = highlightedRanges["summary-focus"];
+    if (focusHighlight) {
+      // Allow DOM to update
+      setTimeout(() => {
+        const el = document.getElementById("summary-focus-mark");
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      }, 100);
+    }
+  }, [highlightedRanges]);
 
   const onAddProppFn = (newEvent) => {
     // Only add if event_type is not empty and not "OTHER"
     if (!newEvent.event_type || newEvent.event_type === "OTHER") return;
 
-    setProppFns((prev) => [
-      ...prev,
-      {
-        fn: newEvent.event_type,
-        spanType: "text",
-        span: { start: 0, end: 0 },
-        textSpan: newEvent.text_span || { start: 0, end: 0, text: "" },
-        evidence: newEvent.description || ""
+    setProppFns((prev) => {
+      // Check if we already have a Propp function linked to this narrative ID
+      const existingIndex = prev.findIndex(p => p.narrative_event_id === newEvent.id);
+
+      if (existingIndex >= 0) {
+        // Update existing
+        const next = [...prev];
+        next[existingIndex] = {
+          ...next[existingIndex],
+          fn: newEvent.event_type,
+          // Optional: update evidence/textSpan too if user changed it in Narrative tab?
+          // If we want tight coupling, yes.
+          textSpan: newEvent.text_span || next[existingIndex].textSpan,
+          evidence: newEvent.description || next[existingIndex].evidence
+        };
+        return next;
+      } else {
+        // Create new
+        return [
+          ...prev,
+          {
+            id: generateUUID(),
+            fn: newEvent.event_type,
+            spanType: "text",
+            span: { start: 0, end: 0 },
+            textSpan: newEvent.text_span || { start: 0, end: 0, text: "" },
+            evidence: newEvent.description || "",
+            narrative_event_id: newEvent.id
+          }
+        ];
       }
-    ]);
+    });
+  };
+
+  const handleSyncPropp = () => {
+    // 1. Identify all valid narrative events
+    const validNarratives = narrativeStructure.filter(n =>
+      n.id && n.event_type && n.event_type !== "OTHER"
+    );
+
+    setProppFns(prev => {
+      const next = [...prev];
+
+      validNarratives.forEach(narrative => {
+        // Check if propp fn exists for this narrative ID
+        const existingIdx = next.findIndex(p => p.narrative_event_id === narrative.id);
+
+        if (existingIdx === -1) {
+          // Create new
+          next.push({
+            id: generateUUID(),
+            fn: narrative.event_type,
+            spanType: "text",
+            span: { start: 0, end: 0 },
+            textSpan: narrative.text_span || { start: 0, end: 0, text: "" },
+            evidence: narrative.description || "",
+            narrative_event_id: narrative.id
+          });
+        } else {
+          // Update existing (sync) - Optional: only if empty? 
+          // User said "regenerate to create all propps from narrative".
+          // Assuming we should sync types.
+          const existing = next[existingIdx];
+          next[existingIdx] = {
+            ...existing,
+            fn: narrative.event_type,
+            // Sync text span/evidence if they are empty in Propp? Or always override?
+            // Safer to only fill if empty or if we want tight sync.
+            // Let's assume sync means "make it match narrative".
+            textSpan: narrative.text_span || existing.textSpan,
+            evidence: narrative.description || existing.evidence
+          };
+        }
+      });
+
+      return next;
+    });
+  };
+
+  const handleDeleteOrphanPropps = () => {
+    setProppFns(prev => {
+      // Keep propps that:
+      // 1. Have no narrative_event_id (manual ones, though user said "without a narrative", maybe manual ones should be kept or deleted?
+      //    "delete button for all propps without a narrative" likely means "orphaned ones" OR "all manual ones".
+      //    Let's assume "orphaned" = has narrative_event_id but that ID is not in narrativeStructure.
+      //    AND "without narrative" = narrative_event_id is null.
+      //    If the goal is "better tracking", we probably only want linked ones.
+      //    Let's delete IF (narrative_event_id IS NULL) OR (narrative_event_id NOT IN narrativeStructure).
+
+      const validNarrativeIds = new Set(narrativeStructure.map(n => n.id).filter(Boolean));
+
+      return prev.filter(p => {
+        if (!p.narrative_event_id) return false; // Delete manual/unlinked
+        return validNarrativeIds.has(p.narrative_event_id); // Keep only if linked exists
+      });
+    });
   };
 
   return (
@@ -627,38 +780,89 @@ export default function App() {
                         });
                       });
 
-                      if (!allTerms.length) return text;
-                      
                       // Sort by length descending to match longest terms first
                       allTerms.sort((a, b) => b.length - a.length);
                       
-                      // Escape regex
-                      const escapedTerms = allTerms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
-                      const regex = new RegExp(`(${escapedTerms.join("|")})`, "gi");
+                      const allHighlights = [];
+
+                      // 1. Term matches
+                      if (allTerms.length > 0) {
+                        const escapedTerms = allTerms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+                        const regex = new RegExp(`(${escapedTerms.join("|")})`, "gi");
+                        let match;
+                        while ((match = regex.exec(text)) !== null) {
+                          const term = match[0];
+                          const start = match.index;
+                          const end = start + term.length;
+                          const color = termMap[term.toLowerCase()];
+                          if (color) { // Ensure color exists
+                            allHighlights.push({ start, end, color, priority: 1 });
+                          }
+                        }
+                      }
                       
-                      const parts = text.split(regex);
+                      // 2. Explicit ranges
+                      // Important: Ensure highlightedRanges is actually populated
+                      if (highlightedRanges) {
+                        Object.entries(highlightedRanges).forEach(([key, r]) => {
+                          if (r && typeof r.start === 'number' && typeof r.end === 'number') {
+                            allHighlights.push({ ...r, id: key, priority: 2 });
+                          }
+                        });
+                      }
                       
-                      return parts.map((part, i) => {
-                        const lower = part.toLowerCase();
-                        // Check exact match (case-insensitive) in our map
-                        // Since split captures the delimiter, 'part' IS one of the terms if it matched.
-                        // However, we need to find WHICH color.
-                        // We look up in termMap.
-                        const color = termMap[lower];
-                        
-                        if (color) {
-                          return (
+                      if (!allHighlights.length) return text;
+
+                      // Sort by start position
+                      allHighlights.sort((a, b) => a.start - b.start);
+
+                      // Simple slicing: just use boundaries. 
+                      // For overlapping, we'll just let the "last added" highlight take precedence for that segment?
+                      // Or we can try to merge.
+                      // Let's do a simple approach: split text by ALL boundary points.
+
+                      const boundaries = new Set([0, text.length]);
+                      allHighlights.forEach(h => {
+                        boundaries.add(h.start);
+                        boundaries.add(h.end);
+                      });
+                      const sortedBoundaries = Array.from(boundaries).sort((a, b) => a - b);
+
+                      const segments = [];
+                      for (let i = 0; i < sortedBoundaries.length - 1; i++) {
+                        const p1 = sortedBoundaries[i];
+                        const p2 = sortedBoundaries[i + 1];
+                        if (p1 >= p2) continue;
+
+                        const segmentText = text.slice(p1, p2);
+
+                        // Find active highlight for this segment
+                        // We take the highlight that covers this segment with highest priority (or just any)
+                        // A highlight covers [p1, p2] if highlight.start <= p1 && highlight.end >= p2
+
+                        const active = allHighlights
+                          .filter(h => h.start <= p1 && h.end >= p2)
+                          .sort((a, b) => b.priority - a.priority); // Higher priority first
+
+                        const topHighlight = active[0];
+
+                        if (topHighlight) {
+                          segments.push(
                             <mark 
-                              key={i} 
-                              className="highlighted-text" 
-                              style={{ backgroundColor: color, color: "#000", borderRadius: "2px", padding: "0 2px" }}
+                              key={i}
+                              id={topHighlight.id === "summary-focus" ? "summary-focus-mark" : undefined}
+                              className="highlighted-text"
+                              style={{ backgroundColor: topHighlight.color, color: "#000", borderRadius: "2px", padding: "0 2px" }}
                             >
-                              {part}
+                              {segmentText}
                             </mark>
                           );
+                        } else {
+                          segments.push(segmentText);
                         }
-                        return part;
-                      });
+                      }
+
+                      return segments;
                     })()}
                   </pre>
                 </div>
@@ -736,6 +940,8 @@ export default function App() {
                 motif={motif}
                 currentSelection={currentSelection}
                 onAddProppFn={onAddProppFn}
+                highlightedRanges={highlightedRanges}
+                setHighlightedRanges={setHighlightedRanges}
               />
             )}
 
@@ -746,6 +952,10 @@ export default function App() {
                 proppNotes={proppNotes}
                 setProppNotes={setProppNotes}
                 currentSelection={currentSelection}
+                onSync={handleSyncPropp}
+                highlightedRanges={highlightedRanges}
+                setHighlightedRanges={setHighlightedRanges}
+                narrativeStructure={narrativeStructure}
               />
             )}
 
@@ -753,6 +963,8 @@ export default function App() {
               <SummariesSection
                 paragraphSummaries={paragraphSummaries}
                 setParagraphSummaries={setParagraphSummaries}
+                sourceText={sourceText.text}
+                setHighlightedRanges={setHighlightedRanges}
               />
             )}
 
@@ -1189,9 +1401,6 @@ function CharacterSection({ motif, setMotif, highlightedChars, setHighlightedCha
       <h2>Characters</h2>
       <div className="section-header-row">
         <span>Story Characters</span>
-        <button type="button" className="ghost-btn" onClick={addCharacter}>
-          + Add Character
-        </button>
       </div>
 
       {safeCharacters.length === 0 && (
@@ -1262,7 +1471,9 @@ function CharacterSection({ motif, setMotif, highlightedChars, setHighlightedCha
         </div>
       )})}
 
-
+      <button type="button" className="ghost-btn" onClick={addCharacter} style={{ marginTop: "1rem" }}>
+        + Add Character
+      </button>
 
       <hr />
 
@@ -1364,36 +1575,259 @@ function MotifSection({ motif, setMotif }) {
   );
 }
 
-function SummariesSection({ paragraphSummaries, setParagraphSummaries }) {
-  const handleParagraphChange = (index, value) => {
-    const next = [...paragraphSummaries];
-    next[index] = value;
-    setParagraphSummaries(next);
+function SummariesSection({ paragraphSummaries, setParagraphSummaries, sourceText, setHighlightedRanges }) {
+  // Compute text paragraphs with character indices
+  const textParagraphs = useMemo(() => {
+    if (!sourceText) return [];
+    const lines = sourceText.split('\n');
+    const paras = [];
+    let currentIndex = 0;
+
+    lines.forEach((line) => {
+      const len = line.length;
+      if (line.trim()) {
+        paras.push({
+          text: line,
+          start: currentIndex,
+          end: currentIndex + len
+        });
+      }
+      currentIndex += len + 1; // +1 for newline
+    });
+    return paras;
+  }, [sourceText]);
+
+  const { perParagraph = {}, combined = [], whole = "" } = paragraphSummaries;
+
+  const updatePerParagraph = (index, value) => {
+    setParagraphSummaries(prev => ({
+      ...prev,
+      perParagraph: { ...prev.perParagraph, [index]: value }
+    }));
   };
 
-  const addParagraph = () => {
-    setParagraphSummaries([...paragraphSummaries, ""]);
+  const updateCombined = (idx, field, value) => {
+    setParagraphSummaries(prev => {
+      const next = [...prev.combined];
+      next[idx] = { ...next[idx], [field]: value };
+      return { ...prev, combined: next };
+    });
+  };
+
+  const addCombined = () => {
+    setParagraphSummaries(prev => ({
+      ...prev,
+      combined: [...prev.combined, { start_para: 0, end_para: 0, text: "" }]
+    }));
+  };
+
+  const removeCombined = (idx) => {
+    setParagraphSummaries(prev => ({
+      ...prev,
+      combined: prev.combined.filter((_, i) => i !== idx)
+    }));
+  };
+
+  const updateWhole = (value) => {
+    setParagraphSummaries(prev => ({ ...prev, whole: value }));
+  };
+
+  const focusParagraph = (para) => {
+    if (setHighlightedRanges && para) {
+      setHighlightedRanges(prev => ({
+        ...prev,
+        "summary-focus": {
+          start: para.start,
+          end: para.end,
+          color: "#86efac"
+        }
+      }));
+    }
+  };
+
+  const focusCombined = (item) => {
+    let startChar = Infinity;
+    let endChar = -Infinity;
+    const pStart = Math.min(item.start_para, item.end_para);
+    const pEnd = Math.max(item.start_para, item.end_para);
+
+    for (let i = pStart; i <= pEnd; i++) {
+      const p = textParagraphs[i];
+      if (p) {
+        startChar = Math.min(startChar, p.start);
+        endChar = Math.max(endChar, p.end);
+      }
+    }
+
+    if (startChar !== Infinity && setHighlightedRanges) {
+      setHighlightedRanges(prev => ({
+        ...prev,
+        "summary-focus": {
+          start: startChar,
+          end: endChar,
+          color: "#86efac"
+        }
+      }));
+    }
   };
 
   return (
     <section className="card">
-      <h2>Paragraph Summaries</h2>
-      <div className="section-header-row">
-        <span>Summaries</span>
-        <button type="button" className="ghost-btn" onClick={addParagraph}>
-          + Add paragraph
+      <h2>Summaries</h2>
+
+      {/* Section 1: Per-Paragraph Summaries */}
+      <div style={{ marginBottom: "1.5rem" }}>
+        <div className="section-header-row">
+          <span style={{ fontWeight: "bold" }}>Per-Paragraph Summaries</span>
+          <span style={{ fontSize: "0.75rem", color: "#6b7280" }}>({textParagraphs.length} paragraphs)</span>
+        </div>
+
+        {textParagraphs.length === 0 && (
+          <p className="hint">No text loaded.</p>
+        )}
+
+        {textParagraphs.map((para, idx) => {
+          const preview = para.text.length > 50 ? para.text.substring(0, 50) + "..." : para.text;
+          const summaryText = perParagraph[idx] || "";
+
+          return (
+            <div key={idx} style={{ marginBottom: "0.75rem", border: "1px solid #e5e7eb", padding: "0.5rem", borderRadius: "4px" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.25rem" }}>
+                <span style={{ fontWeight: "bold", fontSize: "0.8rem" }}>
+                  Paragraph {idx + 1}
+                  <span style={{ fontWeight: "normal", color: "#6b7280", marginLeft: "0.5rem" }}>
+                    ({para.start}-{para.end})
+                  </span>
+                </span>
+                <button
+                  type="button"
+                  className="ghost-btn"
+                  style={{ padding: "2px 6px", fontSize: "0.7rem" }}
+                  onClick={() => focusParagraph(para)}
+                >
+                  Highlight
+                </button>
+              </div>
+              <div style={{ fontSize: "0.7rem", color: "#666", marginBottom: "0.25rem", fontStyle: "italic", background: "#f9fafb", padding: "0.25rem", borderRadius: "2px" }}>
+                "{preview}"
+              </div>
+              <textarea
+                rows={2}
+                value={summaryText}
+                onChange={(e) => updatePerParagraph(idx, e.target.value)}
+                placeholder={`Summary for paragraph ${idx + 1}...`}
+                style={{ width: "100%", fontSize: "0.85rem" }}
+                onFocus={() => focusParagraph(para)}
+              />
+            </div>
+          );
+        })}
+      </div>
+
+      <hr />
+
+      {/* Section 2: Combined Paragraph Summaries */}
+      <div style={{ marginBottom: "1.5rem" }}>
+        <div className="section-header-row">
+          <span style={{ fontWeight: "bold" }}>Combined Paragraph Summaries</span>
+        </div>
+
+        {combined.length === 0 && (
+          <p className="hint">No combined summaries. Use the button below to add one.</p>
+        )}
+
+        {combined.map((item, idx) => {
+          const pStart = Math.min(item.start_para, item.end_para);
+          const pEnd = Math.max(item.start_para, item.end_para);
+          const relevantParas = textParagraphs.slice(pStart, pEnd + 1);
+          const fullText = relevantParas.map(p => p.text).join(" ");
+          const preview = fullText.length > 60 ? fullText.substring(0, 60) + "..." : fullText;
+
+          // Calculate char range for display
+          let charStart = relevantParas[0]?.start ?? 0;
+          let charEnd = relevantParas[relevantParas.length - 1]?.end ?? 0;
+
+          return (
+            <div key={idx} style={{ marginBottom: "0.75rem", border: "1px solid #d1d5db", padding: "0.5rem", borderRadius: "4px", background: "#fefce8" }}>
+              <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "0.5rem" }}>
+                <span style={{ fontWeight: "bold", fontSize: "0.8rem" }}>Range:</span>
+                <label style={{ fontSize: "0.8rem" }}>
+                  Start:
+                  <input
+                    type="number"
+                    min="0"
+                    max={textParagraphs.length - 1}
+                    value={item.start_para}
+                    onChange={(e) => updateCombined(idx, "start_para", parseInt(e.target.value) || 0)}
+                    style={{ width: "50px", marginLeft: "0.25rem" }}
+                  />
+                </label>
+                <label style={{ fontSize: "0.8rem" }}>
+                  End:
+                  <input
+                    type="number"
+                    min="0"
+                    max={textParagraphs.length - 1}
+                    value={item.end_para}
+                    onChange={(e) => updateCombined(idx, "end_para", parseInt(e.target.value) || 0)}
+                    style={{ width: "50px", marginLeft: "0.25rem" }}
+                  />
+                </label>
+                <span style={{ fontSize: "0.75rem", color: "#6b7280" }}>
+                  (chars: {charStart}-{charEnd})
+                </span>
+                <button
+                  type="button"
+                  className="ghost-btn"
+                  style={{ padding: "2px 6px", fontSize: "0.7rem", marginLeft: "auto" }}
+                  onClick={() => focusCombined(item)}
+                >
+                  Highlight
+                </button>
+                <button
+                  type="button"
+                  className="ghost-btn"
+                  style={{ color: "#ef4444", borderColor: "#ef4444", padding: "2px 6px", fontSize: "0.7rem" }}
+                  onClick={() => removeCombined(idx)}
+                >
+                  X
+                </button>
+              </div>
+              <div style={{ fontSize: "0.7rem", color: "#666", marginBottom: "0.25rem", fontStyle: "italic", background: "#fff", padding: "0.25rem", borderRadius: "2px" }}>
+                Preview: "{preview || "Invalid Range"}"
+              </div>
+              <textarea
+                rows={2}
+                value={item.text}
+                onChange={(e) => updateCombined(idx, "text", e.target.value)}
+                placeholder="Combined summary..."
+                style={{ width: "100%", fontSize: "0.85rem" }}
+                onFocus={() => focusCombined(item)}
+              />
+            </div>
+          );
+        })}
+
+        <button type="button" className="ghost-btn" onClick={addCombined}>
+          + Add Combined Summary
         </button>
       </div>
-      {paragraphSummaries.map((p, idx) => (
-        <label key={idx}>
-          Paragraph {idx}
-          <textarea
-            rows={2}
-            value={p}
-            onChange={(e) => handleParagraphChange(idx, e.target.value)}
-          />
-        </label>
-      ))}
+
+      <hr />
+
+      {/* Section 3: Whole Story Summary */}
+      <div>
+        <div className="section-header-row">
+          <span style={{ fontWeight: "bold" }}>Whole Story Summary</span>
+        </div>
+        <textarea
+          rows={4}
+          value={whole}
+          onChange={(e) => updateWhole(e.target.value)}
+          placeholder="Write a summary of the entire story..."
+          style={{ width: "100%", fontSize: "0.9rem" }}
+        />
+      </div>
     </section>
   );
 }
@@ -1403,15 +1837,23 @@ function DeepAnnotationSection({
   setProppFns,
   proppNotes,
   setProppNotes,
-  currentSelection
+  currentSelection,
+  onSync,
+  highlightedRanges,
+  setHighlightedRanges,
+  narrativeStructure
 }) {
+  const validNarrativeIds = useMemo(() => {
+    return new Set((narrativeStructure || []).map(n => n.id).filter(Boolean));
+  }, [narrativeStructure]);
+
   const handleProppChange = (idx, field, value) => {
     const next = proppFns.map((item, i) =>
       i === idx
         ? {
             ...item,
             [field]:
-              field === "span" || field === "textSpan"
+              field === "textSpan"
                 ? { ...item[field], ...value }
                 : value
           }
@@ -1438,22 +1880,61 @@ function DeepAnnotationSection({
     setProppFns([...proppFns, emptyProppFn()]);
   };
 
+  const removePropp = (index) => {
+    const next = proppFns.filter((_, i) => i !== index);
+    setProppFns(next);
+  };
+
+  const toggleHighlight = (idx, span) => {
+    if (!setHighlightedRanges || !span) return;
+    const key = `propp-${idx}`;
+
+    setHighlightedRanges(prev => {
+      const next = { ...prev };
+      if (next[key]) {
+        delete next[key];
+      } else {
+        next[key] = {
+          start: span.start,
+          end: span.end,
+          color: "#c084fc" // Purple for propp
+        };
+      }
+      return next;
+    });
+  };
+
+  const isHighlighted = (idx) => {
+    return highlightedRanges && !!highlightedRanges[`propp-${idx}`];
+  };
+
   return (
     <section className="card">
       <h2>Propp Functions</h2>
 
       <div className="section-header-row">
         <span>Propp functions</span>
-        <button type="button" className="ghost-btn" onClick={addPropp}>
-          + Add function
-        </button>
+        <div style={{ display: "flex", gap: "0.5rem" }}>
+          <button type="button" className="ghost-btn" onClick={onSync} title="Create missing Propp functions from Narrative events">
+            Sync from Narrative
+          </button>
+        </div>
       </div>
 
-      {proppFns.map((fnObj, idx) => (
-        <div key={idx} className="propp-row">
-          <div className="grid-2" style={{ marginBottom: "0.5rem" }}>
-            <label>
-              Function
+      {proppFns.map((fnObj, idx) => {
+        const isLinked = fnObj.narrative_event_id && validNarrativeIds.has(fnObj.narrative_event_id);
+        const isOrphan = fnObj.narrative_event_id && !validNarrativeIds.has(fnObj.narrative_event_id);
+
+        return (
+          <div key={idx} className="propp-row" style={isOrphan ? { borderLeft: "4px solid #ef4444", paddingLeft: "8px" } : {}}>
+            {isOrphan && (
+              <div style={{ color: "#ef4444", fontSize: "0.8rem", marginBottom: "0.5rem", fontWeight: "bold" }}>
+                ⚠️ Unlinked from Narrative
+              </div>
+            )}
+            <div className="grid-2">
+              <div>
+                <label>Function</label>
               <select
                 value={fnObj.fn}
                 onChange={(e) => handleProppChange(idx, "fn", e.target.value)}
@@ -1464,80 +1945,53 @@ function DeepAnnotationSection({
                     {fn}
                   </option>
                 ))}
-              </select>
-            </label>
-            <label>
-              Span Type
-              <select
-                value={fnObj.spanType || "paragraph"}
-                onChange={(e) =>
-                  handleProppChange(idx, "spanType", e.target.value)
-                }
-              >
-                <option value="paragraph">Paragraph Index</option>
-                <option value="text">Text Selection</option>
-              </select>
-            </label>
-          </div>
-
-          {(fnObj.spanType === "text") ? (
-            <div className="grid-3" style={{ alignItems: "end" }}>
-              <label>
-                Start Index
+                </select>
+              </div>
+              <div>
+                <label>Text Selection</label>
+                <div style={{ display: "flex", gap: "0.5rem" }}>
                 <input
                   type="number"
                   value={fnObj.textSpan?.start || 0}
                   readOnly
-                  style={{ background: "#e5e7eb" }}
+                    style={{ background: "#e5e7eb", width: "60px" }}
                 />
-              </label>
-              <label>
-                End Index
+                  <span style={{ alignSelf: "center" }}>-</span>
                 <input
                   type="number"
                   value={fnObj.textSpan?.end || 0}
                   readOnly
-                  style={{ background: "#e5e7eb" }}
-                />
-              </label>
-              <button
-                type="button"
-                className="primary-btn"
-                style={{ marginBottom: "0.75rem", fontSize: "0.75rem", padding: "0.5rem" }}
-                onClick={() => captureSelection(idx)}
-                disabled={!currentSelection}
-              >
-                Capture Selection
-              </button>
+                    style={{ background: "#e5e7eb", width: "60px" }}
+                  />
+                  <button
+                    type="button"
+                    className="primary-btn"
+                    style={{ padding: "0.5rem", fontSize: "0.75rem", height: "34px", whiteSpace: "nowrap" }}
+                    onClick={() => captureSelection(idx)}
+                    disabled={!currentSelection}
+                  >
+                    Capture
+                  </button>
+                  <button
+                    type="button"
+                    className={`ghost-btn ${isHighlighted(idx) ? "active-highlight" : ""}`}
+                    style={{
+                      padding: "0.5rem",
+                      fontSize: "0.75rem",
+                      height: "34px",
+                      background: isHighlighted(idx) ? "#c084fc" : undefined,
+                      color: isHighlighted(idx) ? "#fff" : undefined,
+                      fontWeight: isHighlighted(idx) ? "bold" : undefined,
+                      whiteSpace: "nowrap"
+                    }}
+                    onClick={() => toggleHighlight(idx, fnObj.textSpan)}
+                    disabled={!fnObj.textSpan}
+                  >
+                    {isHighlighted(idx) ? "Hide" : "Highlight"}
+                  </button>
+                </div>
+              </div>
             </div>
-          ) : (
-            <div className="grid-2">
-              <label>
-                Start Para
-                <input
-                  type="number"
-                  value={fnObj.span?.start || 0}
-                  onChange={(e) =>
-                    handleProppChange(idx, "span", {
-                      start: Number(e.target.value)
-                    })
-                  }
-                />
-              </label>
-              <label>
-                End Para
-                <input
-                  type="number"
-                  value={fnObj.span?.end || 0}
-                  onChange={(e) =>
-                    handleProppChange(idx, "span", {
-                      end: Number(e.target.value)
-                    })
-                  }
-                />
-              </label>
-            </div>
-          )}
 
           <label>
             Evidence
@@ -1549,8 +2003,26 @@ function DeepAnnotationSection({
               }
             />
           </label>
-        </div>
-      ))}
+
+            <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '0.5rem' }}>
+              {!isLinked && (
+                <button
+                  type="button"
+                  className="ghost-btn"
+                  style={{ color: "#ef4444", borderColor: "#ef4444" }}
+                  onClick={() => removePropp(idx)}
+                >
+                  {isOrphan ? "Delete Unlinked Propp" : "Remove Function"}
+                </button>
+              )}
+            </div>
+          </div>
+        )
+      })}
+
+      <button type="button" className="ghost-btn" onClick={addPropp} style={{ marginTop: "1rem" }}>
+        + Add function
+      </button>
 
       <label>
         Propp notes
@@ -1571,7 +2043,9 @@ function NarrativeAndBiasSection({
   setCrossValidation,
   motif,
   currentSelection,
-  onAddProppFn
+  onAddProppFn,
+  highlightedRanges,
+  setHighlightedRanges
 }) {
   // 1. Prepare Character Options from motif state
   // We prefer names, fallback to archetypes if name is missing
@@ -1593,6 +2067,7 @@ function NarrativeAndBiasSection({
   const items = narrativeStructure.map((item) => {
     if (typeof item === "string") {
       return       {
+        id: generateUUID(),
         event_type: "OTHER",
         description: item,
         agents: [],
@@ -1602,6 +2077,18 @@ function NarrativeAndBiasSection({
         object_type: "",
         instrument: ""
       };
+    }
+    // Ensure ID exists for existing object items (migration for V2 files without IDs)
+    if (!item.id) {
+      // Note: In a pure render function, generating random IDs is bad (unstable keys).
+      // But since we use index as key in map below, it might be okay for display, 
+      // BUT edits will fail if we don't persist this ID back to state.
+      // Ideally `mapV2ToState` handles this. 
+      // We'll trust `item.id` exists or fallback to a stable-ish ID if possible, or just random.
+      // Actually, we should just return it as is, and rely on `mapV2ToState` to have populated it.
+      // If it's missing, let's just generate one, but this might cause re-render loop if we triggered an update.
+      // Let's assume mapV2ToState did its job.
+      return { ...item, id: generateUUID() };
     }
     return item;
   });
@@ -1623,6 +2110,7 @@ function NarrativeAndBiasSection({
     setNarrativeStructure([
       ...items,
       {
+        id: generateUUID(),
         event_type: "",
         description: "",
         agents: [],
@@ -1645,6 +2133,29 @@ function NarrativeAndBiasSection({
     updateItem(index, "text_span", currentSelection);
     // Optional: auto-fill description if empty?
     // updateItem(index, "description", currentSelection.text.substring(0, 50) + "...");
+  };
+
+  const toggleHighlight = (idx, span) => {
+    if (!setHighlightedRanges || !span) return;
+    const key = `narrative-${idx}`;
+
+    setHighlightedRanges(prev => {
+      const next = { ...prev };
+      if (next[key]) {
+        delete next[key];
+      } else {
+        next[key] = {
+          start: span.start,
+          end: span.end,
+          color: "#fca5a5" // Light red/orange for narrative events
+        };
+      }
+      return next;
+    });
+  };
+
+  const isHighlighted = (idx) => {
+    return highlightedRanges && !!highlightedRanges[`narrative-${idx}`];
   };
 
   // Helper for multi-select (Agents/Targets)
@@ -1693,16 +2204,13 @@ function NarrativeAndBiasSection({
       <h2>Narrative Events</h2>
       <div className="section-header-row">
         <span>Story Sequence</span>
-        <button type="button" className="ghost-btn" onClick={addItem}>
-          + Add Event
-        </button>
       </div>
 
       {items.map((item, idx) => (
         <div key={idx} className="propp-row">
           <div className="grid-2">
-            <label>
-              Event Type (Propp)
+            <div>
+              <label>Event Type (Propp)</label>
               <select
                 value={item.event_type}
                 onChange={(e) => updateItem(idx, "event_type", e.target.value)}
@@ -1715,10 +2223,10 @@ function NarrativeAndBiasSection({
                 ))}
                 <option value="OTHER">OTHER</option>
               </select>
-            </label>
-            <div style={{ display: "flex", alignItems: "flex-end", gap: "0.5rem" }}>
-              <label style={{ flex: 1 }}>
-                Text Selection
+            </div>
+            <div>
+              <label>Text Selection</label>
+              <div style={{ display: "flex", gap: "0.5rem" }}>
                 <input
                   value={
                     item.text_span
@@ -1727,18 +2235,35 @@ function NarrativeAndBiasSection({
                   }
                   readOnly
                   placeholder="No selection"
-                  style={{ background: "#f3f4f6", marginBottom: 0 }}
+                  style={{ background: "#f3f4f6", marginBottom: 0, flex: 1 }}
                 />
-              </label>
-              <button
-                type="button"
-                className="primary-btn"
-                style={{ padding: "0.5rem", fontSize: "0.75rem", height: "34px" }}
-                onClick={() => captureSelection(idx)}
-                disabled={!currentSelection}
-              >
-                Capture
-              </button>
+                <button
+                  type="button"
+                  className="primary-btn"
+                  style={{ padding: "0.5rem", fontSize: "0.75rem", height: "34px", whiteSpace: "nowrap" }}
+                  onClick={() => captureSelection(idx)}
+                  disabled={!currentSelection}
+                >
+                  Capture
+                </button>
+                <button
+                  type="button"
+                  className={`ghost-btn ${isHighlighted(idx) ? "active-highlight" : ""}`}
+                  style={{
+                    padding: "0.5rem",
+                    fontSize: "0.75rem",
+                    height: "34px",
+                    background: isHighlighted(idx) ? "#fca5a5" : undefined,
+                    color: isHighlighted(idx) ? "#000" : undefined,
+                    fontWeight: isHighlighted(idx) ? "bold" : undefined,
+                    whiteSpace: "nowrap"
+                  }}
+                  onClick={() => toggleHighlight(idx, item.text_span)}
+                  disabled={!item.text_span}
+                >
+                  {isHighlighted(idx) ? "Hide" : "Highlight"}
+                </button>
+              </div>
             </div>
           </div>
 
@@ -1758,7 +2283,10 @@ function NarrativeAndBiasSection({
               <CreatableSelect
                 isMulti
                 options={characterOptions}
-                value={characterOptions.filter(opt => (item.agents || []).includes(opt.value))}
+                value={(item.agents || []).map(agentName => {
+                  const found = characterOptions.find(opt => opt.value === agentName);
+                  return found || { label: agentName, value: agentName };
+                })}
                 onChange={(newValue) => handleMultiCharChange(idx, "agents", newValue)}
                 placeholder="Select or create agents..."
                 styles={customStyles}
@@ -1777,7 +2305,10 @@ function NarrativeAndBiasSection({
                 <CreatableSelect
                   isMulti
                   options={characterOptions}
-                  value={characterOptions.filter(opt => (item.targets || []).includes(opt.value))}
+                    value={(item.targets || []).map(targetName => {
+                      const found = characterOptions.find(opt => opt.value === targetName);
+                      return found || { label: targetName, value: targetName };
+                    })}
                   onChange={(newValue) => handleMultiCharChange(idx, "targets", newValue)}
                   placeholder="Select or create targets..."
                   styles={customStyles}
@@ -1837,6 +2368,10 @@ function NarrativeAndBiasSection({
           </button>
         </div>
       ))}
+
+      <button type="button" className="ghost-btn" onClick={addItem} style={{ marginTop: "1rem" }}>
+        + Add Event
+      </button>
 
       <hr />
 
