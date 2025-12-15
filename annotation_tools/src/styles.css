@@ -1,0 +1,458 @@
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #1e293b;
+  background: #f8fafc;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* App Structure */
+.app-root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.app-header {
+  height: 60px;
+  padding: 0 1.5rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-icon {
+  font-size: 1.5rem;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.app-header p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Main Layout: Sidebar - Stage - Inspector */
+.layout {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* 1. Sidebar (Story List) */
+.sidebar {
+  width: 260px;
+  background: #f8fafc;
+  border-right: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.story-browser {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.story-browser-header {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f1f5f9;
+}
+
+.story-browser-header h2 {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+}
+
+.file-input-btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 0.4rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: #475569;
+  transition: all 0.15s;
+}
+
+.file-input-btn:hover {
+  border-color: #94a3b8;
+  color: #1e293b;
+}
+
+.file-input-btn input {
+  display: none;
+}
+
+.story-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+
+.story-item {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 2px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #475569;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.story-item:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.story-item.active {
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.empty-list-state {
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  text-align: center;
+  font-style: italic;
+}
+
+/* 2. Story Stage (Reading Pane) */
+.story-stage {
+  flex: 1;
+  background: #ffffff; /* White background for document */
+  display: flex;
+  justify-content: center; /* Center the document */
+  overflow-y: auto;
+  position: relative;
+}
+
+.story-stage-content {
+  width: 100%;
+  max-width: 800px; /* Readable line length limit */
+  padding: 3rem 4rem;
+  min-height: 100%;
+  background: #ffffff;
+}
+
+.story-title-display {
+  margin: 0 0 2rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+.story-text-display {
+  font-family: 'Merriweather', Georgia, Cambria, "Times New Roman", Times, serif; /* Serif for reading */
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #334155;
+}
+
+.story-text-display pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: inherit; /* Inherit serif */
+  margin: 0;
+}
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+/* 3. Inspector Pane (Annotation) */
+.inspector-pane {
+  width: 400px;
+  background: #f8fafc;
+  border-left: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.inspector-tabs {
+  display: flex;
+  padding: 0 0.5rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  gap: 0.25rem;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  padding: 0.75rem 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.tab-btn:hover {
+  color: #334155;
+}
+
+.tab-btn.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+.inspector-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Cards & Forms in Inspector */
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.card h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: #0f172a;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 0.5rem;
+}
+
+.card h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+  color: #334155;
+}
+
+label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #1e293b;
+  background: #ffffff;
+  transition: border 0.15s, box-shadow 0.15s;
+  margin-bottom: 0.75rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.checkbox-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-inline input {
+  width: auto;
+  margin: 0;
+}
+
+hr {
+  border: 0;
+  border-top: 1px dashed #e2e8f0;
+  margin: 1rem 0;
+}
+
+/* Buttons */
+.primary-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(37, 99, 235, 0.2);
+  transition: background 0.15s;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+}
+
+.ghost-btn {
+  background: transparent;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.ghost-btn:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+  border-color: #94a3b8;
+}
+
+/* Save Hint */
+.save-hint {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.save-hint-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  display: none; /* Hide label on small screens */
+}
+
+@media (min-width: 1200px) {
+  .save-hint-label {
+    display: block;
+  }
+}
+
+.save-hint-input {
+  width: 200px;
+  margin-bottom: 0;
+  font-family: monospace;
+  background: #f8fafc;
+}
+
+/* Propp Row */
+.propp-row {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.section-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+/* Preview Card */
+.preview-card {
+  border-color: #cbd5e1;
+  background: #f1f5f9;
+}
+
+.json-preview {
+  margin: 0;
+  font-family: monospace;
+  font-size: 0.75rem;
+  white-space: pre-wrap;
+  color: #334155;
+  max-height: 300px;
+  overflow: auto;
+}
+
+/* Custom Scrollbar for Webkit */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
