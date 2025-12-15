@@ -26,6 +26,20 @@ function downloadJson(filename, data) {
   URL.revokeObjectURL(url);
 }
 
+// distinct pastel-like colors for highlighting
+const HIGHLIGHT_COLORS = [
+  "#fef08a", // yellow
+  "#bbf7d0", // green
+  "#bfdbfe", // blue
+  "#fbcfe8", // pink
+  "#ddd6fe", // indigo
+  "#fed7aa", // orange
+  "#99f6e4", // teal
+  "#e9d5ff", // violet
+  "#fecaca", // red-ish
+  "#a5f3fc"  // cyan
+];
+
 const emptyProppFn = () => ({
   fn: "",
   spanType: "paragraph", // "paragraph" or "text"
@@ -480,7 +494,8 @@ export default function App() {
   };
 
   const [activeTab, setActiveTab] = useState("characters");
-  const [highlightTerms, setHighlightTerms] = useState([]);
+  // Map of character name -> color string
+  const [highlightedChars, setHighlightedChars] = useState({});
   const [lastAutoSave, setLastAutoSave] = useState(null);
 
   const onAddProppFn = (newEvent) => {
@@ -568,21 +583,63 @@ export default function App() {
                   <pre id="story-content-pre">
                     {(() => {
                       const text = storyFiles[selectedStoryIndex].text;
-                      if (!highlightTerms.length) return text;
                       
-                      // Escape regex characters
-                      const escapedTerms = highlightTerms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
-                      // Sort by length (descending) to match longest first
-                      escapedTerms.sort((a, b) => b.length - a.length);
+                      // Build a map of term -> color
+                      // We need to handle overlap? For now, first match wins or longest wins.
+                      const termMap = {};
+                      const allTerms = [];
                       
+                      // Collect all terms from highlighted characters
+                      const motifChars = motif.character_archetypes || [];
+                      
+                      Object.entries(highlightedChars).forEach(([charName, color]) => {
+                        // Find the character data to get aliases
+                        const charData = motifChars.find(c => (c.name || "").trim() === charName);
+                        if (!charData) return; // Should not happen if sync is good
+                        
+                        const names = [charData.name];
+                        if (charData.alias) {
+                          names.push(...charData.alias.split(/;|；/).map(s => s.trim()));
+                        }
+                        
+                        names.filter(n => n).forEach(term => {
+                          const lower = term.toLowerCase();
+                          // If term already exists, we might overwrite. Longest usually preferred in regex.
+                          // Store color for this term
+                          termMap[lower] = color;
+                          allTerms.push(term);
+                        });
+                      });
+
+                      if (!allTerms.length) return text;
+                      
+                      // Sort by length descending to match longest terms first
+                      allTerms.sort((a, b) => b.length - a.length);
+                      
+                      // Escape regex
+                      const escapedTerms = allTerms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
                       const regex = new RegExp(`(${escapedTerms.join("|")})`, "gi");
+                      
                       const parts = text.split(regex);
                       
                       return parts.map((part, i) => {
-                        // Check if this part matches any term (case-insensitive)
-                        const isMatch = highlightTerms.some(term => term.toLowerCase() === part.toLowerCase());
-                        if (isMatch) {
-                          return <mark key={i} className="highlighted-text">{part}</mark>;
+                        const lower = part.toLowerCase();
+                        // Check exact match (case-insensitive) in our map
+                        // Since split captures the delimiter, 'part' IS one of the terms if it matched.
+                        // However, we need to find WHICH color.
+                        // We look up in termMap.
+                        const color = termMap[lower];
+                        
+                        if (color) {
+                          return (
+                            <mark 
+                              key={i} 
+                              className="highlighted-text" 
+                              style={{ backgroundColor: color, color: "#000", borderRadius: "2px", padding: "0 2px" }}
+                            >
+                              {part}
+                            </mark>
+                          );
                         }
                         return part;
                       });
@@ -649,8 +706,8 @@ export default function App() {
               <CharacterSection 
                 motif={motif} 
                 setMotif={setMotif} 
-                highlightTerms={highlightTerms}
-                setHighlightTerms={setHighlightTerms}
+                highlightedChars={highlightedChars}
+                setHighlightedChars={setHighlightedChars}
               />
             )}
 
@@ -1038,7 +1095,7 @@ function HighLevelMetaSection({ meta, setMeta, deepMeta, setDeepMeta }) {
   );
 }
 
-function CharacterSection({ motif, setMotif, highlightTerms, setHighlightTerms }) {
+function CharacterSection({ motif, setMotif, highlightedChars, setHighlightedChars }) {
   const characters = Array.isArray(motif.character_archetypes)
     ? motif.character_archetypes
     : [];
@@ -1077,44 +1134,38 @@ function CharacterSection({ motif, setMotif, highlightTerms, setHighlightTerms }
   };
 
   const toggleHighlight = (char) => {
-    if (!setHighlightTerms) return;
-    
-    // Compute terms for this character
-    const newTerms = [];
-    if (char.name && char.name.trim()) newTerms.push(char.name.trim());
-    if (char.alias && char.alias.trim()) {
-      const aliases = char.alias.split(/;|；/).map(s => s.trim()).filter(s => s);
-      newTerms.push(...aliases);
-    }
+    if (!setHighlightedChars) return;
+    const name = (char.name || "").trim();
+    if (!name) return;
 
-    // Check if these terms are currently highlighted
-    // We sort both arrays to compare content
-    const currentSorted = [...(highlightTerms || [])].sort().join("|");
-    const newSorted = [...newTerms].sort().join("|");
-
-    if (currentSorted === newSorted && currentSorted !== "") {
-      // Toggle OFF
-      setHighlightTerms([]);
-    } else {
-      // Toggle ON (or switch to this character)
-      setHighlightTerms(newTerms);
-    }
+    setHighlightedChars(prev => {
+      const next = { ...prev };
+      if (next[name]) {
+        // Toggle Off
+        delete next[name];
+      } else {
+        // Toggle On - pick a color not recently used or just cycle
+        const usedColors = Object.values(next);
+        // Find first color in HIGHLIGHT_COLORS not in usedColors
+        let color = HIGHLIGHT_COLORS.find(c => !usedColors.includes(c));
+        if (!color) {
+          // Recycle colors if all used
+          color = HIGHLIGHT_COLORS[Object.keys(next).length % HIGHLIGHT_COLORS.length];
+        }
+        next[name] = color;
+      }
+      return next;
+    });
   };
 
   const isHighlighted = (char) => {
-    if (!highlightTerms || highlightTerms.length === 0) return false;
-    
-    const charTerms = [];
-    if (char.name && char.name.trim()) charTerms.push(char.name.trim());
-    if (char.alias && char.alias.trim()) {
-      const aliases = char.alias.split(/;|；/).map(s => s.trim()).filter(s => s);
-      charTerms.push(...aliases);
-    }
-    
-    const currentSorted = [...highlightTerms].sort().join("|");
-    const charSorted = [...charTerms].sort().join("|");
-    
-    return currentSorted === charSorted;
+    const name = (char.name || "").trim();
+    return highlightedChars && !!highlightedChars[name];
+  };
+
+  const getHighlightColor = (char) => {
+    const name = (char.name || "").trim();
+    return highlightedChars ? highlightedChars[name] : null;
   };
 
   return (
@@ -1136,6 +1187,8 @@ function CharacterSection({ motif, setMotif, highlightTerms, setHighlightTerms }
 
       {safeCharacters.map((char, idx) => {
         const active = isHighlighted(char);
+        const color = getHighlightColor(char);
+        
         return (
         <div key={idx} className="propp-row">
           <div className="grid-3">
@@ -1176,7 +1229,7 @@ function CharacterSection({ motif, setMotif, highlightTerms, setHighlightTerms }
             <button
               type="button"
               className={`ghost-btn ${active ? "active-highlight" : ""}`}
-              style={active ? { background: "#fde047", borderColor: "#eab308", color: "#854d0e" } : {}}
+              style={active ? { background: color, borderColor: "#ccc", color: "#000", fontWeight: "bold" } : {}}
               onClick={() => toggleHighlight(char)}
             >
               {active ? "Unhighlight" : "Highlight"}
