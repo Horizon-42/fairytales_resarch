@@ -37,7 +37,7 @@ export default function NarrativeSection({
         agents: [],
         targets: [],
         text_span: null,
-        target_type: "",
+        target_type: "character",
         object_type: "",
         instrument: ""
       };
@@ -69,7 +69,7 @@ export default function NarrativeSection({
         agents: [],
         targets: [],
         text_span: null,
-        target_type: "",
+        target_type: "character",
         object_type: "",
         instrument: ""
       }

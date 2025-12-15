@@ -112,6 +112,44 @@
       "object_type": "",
       "instrument": "",
       "id": "262880a0-126d-4734-9786-dcb806220381"
+    },
+    {
+      "id": "317d5e4b-255a-4acb-a23d-206a5e4afeb2",
+      "event_type": "OTHER",
+      "description": "帮助;Help",
+      "agents": [
+        "老牛"
+      ],
+      "targets": [
+        "牛郎"
+      ],
+      "text_span": {
+        "start": 298,
+        "end": 363,
+        "text": "靠了老牛的帮助和他自己的努力劳动，他在荒野地上披荆斩棘，耕田种地，盖造屋子，一 两年后，居然菅建了一个小小的家，勉强可以维持生活。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": ""
+    },
+    {
+      "id": "51923dc8-acf0-477d-b540-36baccc032fd",
+      "event_type": "GUIDANCE",
+      "description": "去河边, 去夺取织女的衣服",
+      "agents": [
+        "牛郎"
+      ],
+      "targets": [
+        "牛郎"
+      ],
+      "text_span": {
+        "start": 402,
+        "end": 514,
+        "text": "有一天，老牛忽然口吐人言，告诉他，织女和别的仙女将要到银河去洗澡,叫他趁她们洗澡的时候，夺取织女的衣裳，她就可以成为他的妻子了。惊异的牛郎终于听从了老牛的话，到时候悄悄便到银河岸边的芦牽丛里躲着，等候织女和她的女伴们的来临。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": ""
     }
   ],
   "themes_and_motifs": {
@@ -157,6 +195,22 @@
         },
         "evidence": "寂寞;get lonely",
         "narrative_event_id": "262880a0-126d-4734-9786-dcb806220381"
+      },
+      {
+        "id": "2e394120-cdfd-4ba5-96ba-dcebbffd58f1",
+        "fn": "GUIDANCE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 402,
+          "end": 514,
+          "text": "有一天，老牛忽然口吐人言，告诉他，织女和别的仙女将要到银河去洗澡,叫他趁她们洗澡的时候，夺取织女的衣裳，她就可以成为他的妻子了。惊异的牛郎终于听从了老牛的话，到时候悄悄便到银河岸边的芦牽丛里躲着，等候织女和她的女伴们的来临。"
+        },
+        "evidence": "有一天，老牛忽然口吐人言，告诉他，织女和别的仙女将要到银河去洗澡,叫他趁她们洗澡的时候，夺取织女的衣裳，她就可以成为他的妻子了。惊异的牛郎终于听从了老牛的话，到时候悄悄便到银河岸边的芦牽丛里躲着，等候",
+        "narrative_event_id": "51923dc8-acf0-477d-b540-36baccc032fd"
       }
     ],
     "propp_notes": "",

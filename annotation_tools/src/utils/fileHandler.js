@@ -88,7 +88,7 @@ export function mapV2ToState(data) {
           agents: [],
           targets: [],
           text_span: null,
-          target_type: "",
+          target_type: "character",
           object_type: "",
           instrument: ""
         };
@@ -97,7 +97,7 @@ export function mapV2ToState(data) {
         ...evt,
         // Ensure new fields exist
         id: evt.id || generateUUID(),
-        target_type: evt.target_type || "",
+        target_type: evt.target_type || "character",
         object_type: evt.object_type || "",
         instrument: evt.instrument || ""
       };
@@ -183,7 +183,7 @@ export function mapV1ToState(data) {
           agents: [],
           targets: [],
           text_span: null,
-          target_type: "",
+          target_type: "character",
           object_type: "",
           instrument: ""
         };
@@ -191,7 +191,7 @@ export function mapV1ToState(data) {
       return {
         ...evt,
         id: evt.id || generateUUID(),
-        target_type: evt.target_type || "",
+        target_type: evt.target_type || "character",
         object_type: evt.object_type || "",
         instrument: evt.instrument || ""
       };

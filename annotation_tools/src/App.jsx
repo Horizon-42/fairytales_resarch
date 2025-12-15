@@ -554,7 +554,7 @@ export default function App() {
         end: currentSelection.end,
         text: currentSelection.text
       },
-      target_type: "",
+      target_type: "character",
       object_type: "",
       instrument: ""
     };
