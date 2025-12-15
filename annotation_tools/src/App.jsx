@@ -217,12 +217,11 @@ export default function App() {
 
       const result = await response.json();
       if (response.ok) {
-        if (!silent) alert(`Saved successfully to: ${result.path}`);
-        console.log(`Auto-save (${version}) success: ${result.path}`);
+        console.log(`Save (${version}) success: ${result.path}`);
         setLastAutoSave(new Date());
       } else {
         if (!silent) alert(`Failed to save: ${result.error}`);
-        console.error(`Auto-save (${version}) failed: ${result.error}`);
+        console.error(`Save (${version}) failed: ${result.error}`);
         if (!silent) downloadJson(`${id}_${version}.json`, data);
       }
     } catch (err) {
