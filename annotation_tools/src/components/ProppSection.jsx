@@ -107,6 +107,8 @@ export default function ProppSection({
 
     setHighlightedRanges(prev => {
       const next = { ...prev };
+      const isAdding = !next[key];
+      
       if (next[key]) {
         delete next[key];
       } else {
@@ -116,6 +118,18 @@ export default function ProppSection({
           color: "#c084fc"
         };
       }
+      
+      // Scroll to highlight when adding (not removing)
+      if (isAdding) {
+        setTimeout(() => {
+          const markId = `${key}-mark`;
+          const el = document.getElementById(markId);
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+        }, 100);
+      }
+      
       return next;
     });
   };
@@ -154,7 +168,6 @@ export default function ProppSection({
                 <select
                   value={fnObj.fn}
                   onChange={(e) => handleProppChange(idx, "fn", e.target.value)}
-                  style={{ width: "100%", minWidth: "300px" }}
                 >
                   <option value="">–</option>
                   {PROPP_FUNCTIONS.map((fn) => (

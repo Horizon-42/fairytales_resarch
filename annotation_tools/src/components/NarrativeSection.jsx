@@ -210,15 +210,29 @@ export default function NarrativeSection({
 
     setHighlightedRanges(prev => {
       const next = { ...prev };
+      const isAdding = !next[key];
+      
       if (next[key]) {
         delete next[key];
       } else {
         next[key] = {
           start: span.start,
           end: span.end,
-          color: "#fca5a5"
+          color: "#60a5fa" // Blue for narrative events
         };
       }
+      
+      // Scroll to highlight when adding (not removing)
+      if (isAdding) {
+        setTimeout(() => {
+          const markId = `${key}-mark`;
+          const el = document.getElementById(markId);
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+        }, 100);
+      }
+      
       return next;
     });
   };
@@ -281,7 +295,6 @@ export default function NarrativeSection({
               <select
                 value={item.event_type}
                 onChange={(e) => updateItem(idx, "event_type", e.target.value)}
-                style={{ width: "100%", minWidth: "300px" }}
               >
                 <option value="">– Select Event –</option>
                 {PROPP_FUNCTIONS.map((fn) => (
@@ -321,8 +334,8 @@ export default function NarrativeSection({
                     padding: "0.5rem",
                     fontSize: "0.75rem",
                     height: "34px",
-                    background: isHighlighted(idx) ? "#fca5a5" : undefined,
-                    color: isHighlighted(idx) ? "#000" : undefined,
+                    background: isHighlighted(idx) ? "#60a5fa" : undefined,
+                    color: isHighlighted(idx) ? "#fff" : undefined,
                     fontWeight: isHighlighted(idx) ? "bold" : undefined,
                     whiteSpace: "nowrap"
                   }}

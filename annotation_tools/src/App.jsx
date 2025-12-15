@@ -250,6 +250,9 @@ export default function App() {
     return () => clearInterval(interval);
   }, [selectedStoryIndex]);
 
+  // Track all highlighted narratives' time orders and positions
+  const [highlightedNarrativePositions, setHighlightedNarrativePositions] = useState([]); // Array of { key, top, order }
+
   // Scroll to summary focus
   useEffect(() => {
     const focusHighlight = highlightedRanges["summary-focus"];
@@ -262,6 +265,110 @@ export default function App() {
       }, 100);
     }
   }, [highlightedRanges]);
+
+  useEffect(() => {
+    // Find all highlighted narratives
+    const narrativeKeys = Object.keys(highlightedRanges).filter(key =>
+      key.startsWith("narrative-") && highlightedRanges[key]
+    );
+
+    if (narrativeKeys.length === 0) {
+      setHighlightedNarrativePositions([]);
+      return;
+    }
+
+    setTimeout(() => {
+      const positions = [];
+
+      narrativeKeys.forEach(narrativeKey => {
+        const highlightedRange = highlightedRanges[narrativeKey];
+
+        // Find the narrative in narrativeStructure by matching text span
+        const narrative = narrativeStructure.find(n =>
+          typeof n === "object" &&
+          n.text_span &&
+          n.text_span.start === highlightedRange.start &&
+          n.text_span.end === highlightedRange.end
+        );
+
+        if (narrative && narrative.time_order != null) {
+          const markId = `${narrativeKey}-mark`;
+          const markEl = document.getElementById(markId);
+          if (markEl) {
+            const textDisplay = markEl.closest(".story-text-display");
+            if (textDisplay) {
+              const markRect = markEl.getBoundingClientRect();
+              const textDisplayRect = textDisplay.getBoundingClientRect();
+
+              // Position relative to textDisplay
+              const relativeTop = markRect.top - textDisplayRect.top + textDisplay.scrollTop;
+
+              positions.push({
+                key: narrativeKey,
+                top: relativeTop,
+                order: narrative.time_order
+              });
+            }
+          }
+        }
+      });
+
+      setHighlightedNarrativePositions(positions);
+    }, 150);
+  }, [highlightedRanges, narrativeStructure]);
+
+  // Update position on scroll
+  useEffect(() => {
+    const textDisplay = document.querySelector(".story-text-display");
+    if (!textDisplay) return;
+
+    const handleScroll = () => {
+      // Find all highlighted narratives
+      const narrativeKeys = Object.keys(highlightedRanges).filter(key =>
+        key.startsWith("narrative-") && highlightedRanges[key]
+      );
+
+      if (narrativeKeys.length === 0) {
+        setHighlightedNarrativePositions([]);
+        return;
+      }
+
+      const positions = [];
+
+      narrativeKeys.forEach(narrativeKey => {
+        const highlightedRange = highlightedRanges[narrativeKey];
+
+        const narrative = narrativeStructure.find(n =>
+          typeof n === "object" &&
+          n.text_span &&
+          n.text_span.start === highlightedRange.start &&
+          n.text_span.end === highlightedRange.end
+        );
+
+        if (narrative && narrative.time_order != null) {
+          const markId = `${narrativeKey}-mark`;
+          const markEl = document.getElementById(markId);
+          if (markEl && textDisplay) {
+            const markRect = markEl.getBoundingClientRect();
+            const textDisplayRect = textDisplay.getBoundingClientRect();
+
+            const relativeTop = markRect.top - textDisplayRect.top + textDisplay.scrollTop;
+
+            positions.push({
+              key: narrativeKey,
+              top: relativeTop,
+              order: narrative.time_order
+            });
+          }
+        }
+      });
+
+      setHighlightedNarrativePositions(positions);
+    };
+
+    textDisplay.addEventListener("scroll", handleScroll);
+    return () => textDisplay.removeEventListener("scroll", handleScroll);
+  }, [highlightedRanges, narrativeStructure]);
 
   const loadState = (loaded) => {
     if (loaded.id) setId(loaded.id);
@@ -743,10 +850,18 @@ export default function App() {
       const topHighlight = active[0];
 
       if (topHighlight) {
+        // Set id for scrolling: summary-focus, narrative, or propp highlights
+        let markId = undefined;
+        if (topHighlight.id === "summary-focus") {
+          markId = "summary-focus-mark";
+        } else if (topHighlight.id && (topHighlight.id.startsWith("narrative-") || topHighlight.id.startsWith("propp-"))) {
+          markId = `${topHighlight.id}-mark`;
+        }
+
         segments.push(
           <mark
             key={i}
-            id={topHighlight.id === "summary-focus" ? "summary-focus-mark" : undefined}
+            id={markId}
             className="highlighted-text"
             style={{ backgroundColor: topHighlight.color, color: "#000", borderRadius: "2px", padding: "0 2px" }}
           >
@@ -830,7 +945,30 @@ export default function App() {
                   className="story-text-display"
                   onMouseUp={handleStorySelection}
                   onContextMenu={handleContextMenu}
+                  style={{ position: "relative" }}
                 >
+                  {highlightedNarrativePositions.map((pos) => (
+                    <div
+                      key={pos.key}
+                      style={{
+                        position: "absolute",
+                        left: "-70px",
+                        top: `${pos.top}px`,
+                        backgroundColor: "#60a5fa",
+                        color: "#fff",
+                        padding: "4px 8px",
+                        borderRadius: "4px",
+                        fontSize: "0.75rem",
+                        fontWeight: "bold",
+                        zIndex: 10,
+                        boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
+                        whiteSpace: "nowrap",
+                        transition: "top 0.2s ease"
+                      }}
+                    >
+                      #{pos.order}
+                    </div>
+                  ))}
                   <pre id="story-content-pre">
                     {renderStoryText()}
                   </pre>

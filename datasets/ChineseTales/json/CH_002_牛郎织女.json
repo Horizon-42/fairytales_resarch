@@ -201,7 +201,8 @@
         "end": 214,
         "text": "相传织女是天帝的孙女，或说是王母娘娘的外孙女，这都用不着去管它了 ，总之，是有这么一个仙女，住在银河的东边，用了一种神奇的丝，在织布机上织出了层层叠叠的美丽云彩，随着时间和季节的不同而变幻它们的颜色，叫做\" 天衣\"，意思就是给天做的衣裳。天也和人一样,是要穿衣裳的，虽然碧蓝如洗的赤裸青天自有它的美丽。做这种工作，除了织女而外，还有别的六位年轻的仙女，都是织女的姐妹，也都是天上的织造能手；织女在他们当中，是最勤勉、努力的一个。"
       },
-      "id": "05828210-380c-4e6f-936c-d5164c1524f6"
+      "id": "05828210-380c-4e6f-936c-d5164c1524f6",
+      "time_order": 1
     },
     {
       "event_type": "VILLAINY",
@@ -220,7 +221,8 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "id": "38bb88d7-ed7a-402f-a2b1-6baa1c0f5840"
+      "id": "38bb88d7-ed7a-402f-a2b1-6baa1c0f5840",
+      "time_order": 2
     },
     {
       "event_type": "LACK",
@@ -234,10 +236,11 @@
         "end": 401,
         "text": "可是，除了那头不会说话的老牛以外，冷清的家里只有他一个人，日子过得相当寂寞。"
       },
-      "target_type": "",
+      "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "id": "262880a0-126d-4734-9786-dcb806220381"
+      "id": "262880a0-126d-4734-9786-dcb806220381",
+      "time_order": 3
     },
     {
       "id": "317d5e4b-255a-4acb-a23d-206a5e4afeb2",
@@ -256,7 +259,8 @@
       },
       "target_type": "character",
       "object_type": "",
-      "instrument": ""
+      "instrument": "",
+      "time_order": 4
     },
     {
       "id": "51923dc8-acf0-477d-b540-36baccc032fd",
@@ -275,7 +279,8 @@
       },
       "target_type": "character",
       "object_type": "",
-      "instrument": ""
+      "instrument": "",
+      "time_order": 5
     },
     {
       "id": "fbbacb08-5f24-480e-8fdb-3a9fed2da817",
@@ -294,7 +299,8 @@
       },
       "target_type": "character",
       "object_type": "",
-      "instrument": ""
+      "instrument": "",
+      "time_order": 6
     },
     {
       "id": "2865c3b3-8f6e-4247-afb4-ed81b0d3cd98",
@@ -314,7 +320,8 @@
       },
       "target_type": "character",
       "object_type": "",
-      "instrument": ""
+      "instrument": "",
+      "time_order": 7
     },
     {
       "id": "6317923a-117f-4f21-a69d-5dd96f69b92a",
@@ -324,7 +331,9 @@
         "织女",
         "牛郎"
       ],
-      "targets": [],
+      "targets": [
+        "一儿一女"
+      ],
       "text_span": {
         "start": 754,
         "end": 818,
@@ -332,7 +341,8 @@
       },
       "target_type": "character",
       "object_type": "",
-      "instrument": ""
+      "instrument": "",
+      "time_order": 8
     }
   ],
   "cross_validation": {
