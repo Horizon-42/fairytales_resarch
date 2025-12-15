@@ -85,4 +85,13 @@ export const PROPP_FUNCTIONS = [
   "WEDDING"
 ];
 
+export const TARGET_CATEGORIES = [
+  "character",
+  "object"
+];
 
+export const OBJECT_TYPES = [
+  "normal_object",
+  "magical_agent",
+  "prize"
+];

@@ -1,10 +1,13 @@
 import React, { useMemo, useState, useEffect, useRef } from "react";
+import CreatableSelect from 'react-select/creatable';
 import {
   ATU_TYPES,
   CHARACTER_ARCHETYPES,
   VALUE_TYPES,
   ENDING_TYPES,
-  PROPP_FUNCTIONS
+  PROPP_FUNCTIONS,
+  TARGET_CATEGORIES,
+  OBJECT_TYPES
 } from "./constants.js";
 import { organizeFiles, mapV1ToState, mapV2ToState } from "./utils/fileHandler.js";
 
@@ -47,6 +50,19 @@ const emptyProppFn = () => ({
   textSpan: { start: 0, end: 0, text: "" }, // For raw text index
   evidence: ""
 });
+
+const customStyles = {
+  container: (base) => ({ ...base, marginTop: '4px' }),
+  multiValueLabel: (base) => ({
+    ...base,
+    fontSize: '100%',
+    padding: '2px 4px'
+  }),
+  multiValue: (base) => ({
+    ...base,
+    padding: '2px'
+  })
+};
 
 export default function App() {
   const [storyFiles, setStoryFiles] = useState([]);
@@ -1576,12 +1592,15 @@ function NarrativeAndBiasSection({
   // 2. Prepare Narrative Items (Migration from strings if needed)
   const items = narrativeStructure.map((item) => {
     if (typeof item === "string") {
-      return {
+      return       {
         event_type: "OTHER",
         description: item,
         agents: [],
         targets: [],
-        text_span: null
+        text_span: null,
+        target_type: "",
+        object_type: "",
+        instrument: ""
       };
     }
     return item;
@@ -1608,7 +1627,10 @@ function NarrativeAndBiasSection({
         description: "",
         agents: [],
         targets: [],
-        text_span: null
+        text_span: null,
+        target_type: "",
+        object_type: "",
+        instrument: ""
       }
     ]);
   };
@@ -1626,8 +1648,9 @@ function NarrativeAndBiasSection({
   };
 
   // Helper for multi-select (Agents/Targets)
-  const handleMultiCharChange = (index, field, e) => {
-    const values = Array.from(e.target.selectedOptions).map((o) => o.value);
+  const handleMultiCharChange = (index, field, newValue) => {
+    // newValue is an array of objects { label, value } from react-select
+    const values = newValue ? newValue.map(o => o.value) : [];
     updateItem(index, field, values);
   };
 
@@ -1732,33 +1755,75 @@ function NarrativeAndBiasSection({
           <div className="grid-2">
             <label>
               Agents (Doer)
+              <CreatableSelect
+                isMulti
+                options={characterOptions}
+                value={characterOptions.filter(opt => (item.agents || []).includes(opt.value))}
+                onChange={(newValue) => handleMultiCharChange(idx, "agents", newValue)}
+                placeholder="Select or create agents..."
+                styles={customStyles}
+              />
+            </label>
+            <label>
+              Targets (Receiver)
+              {item.target_type === "object" ? (
+                <input
+                  value={item.targets && item.targets.length > 0 ? item.targets[0] : ""}
+                  onChange={(e) => updateItem(idx, "targets", [e.target.value])}
+                  placeholder="Enter object target name..."
+                  style={{ marginTop: '4px', width: '100%', padding: '8px', border: '1px solid #ccc', borderRadius: '4px' }}
+                />
+              ) : (
+                <CreatableSelect
+                  isMulti
+                  options={characterOptions}
+                  value={characterOptions.filter(opt => (item.targets || []).includes(opt.value))}
+                  onChange={(newValue) => handleMultiCharChange(idx, "targets", newValue)}
+                  placeholder="Select or create targets..."
+                  styles={customStyles}
+                />
+              )}
+            </label>
+          </div>
+
+          <div className="grid-3">
+            <label>
+              Target Type
               <select
-                multiple
-                value={item.agents || []}
-                onChange={(e) => handleMultiCharChange(idx, "agents", e)}
-                style={{ height: "80px" }}
+                value={item.target_type || ""}
+                onChange={(e) => updateItem(idx, "target_type", e.target.value)}
               >
-                {characterOptions.map((opt) => (
-                  <option key={opt.value} value={opt.value}>
-                    {opt.label}
+                <option value="">– Select –</option>
+                {TARGET_CATEGORIES.map((t) => (
+                  <option key={t} value={t}>
+                    {t}
                   </option>
                 ))}
               </select>
             </label>
+            {item.target_type === "object" && (
+              <label>
+                Object Type
+                <select
+                  value={item.object_type || ""}
+                  onChange={(e) => updateItem(idx, "object_type", e.target.value)}
+                >
+                  <option value="">– Select –</option>
+                  {OBJECT_TYPES.map((t) => (
+                    <option key={t} value={t}>
+                      {t}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            )}
             <label>
-              Targets (Receiver)
-              <select
-                multiple
-                value={item.targets || []}
-                onChange={(e) => handleMultiCharChange(idx, "targets", e)}
-                style={{ height: "80px" }}
-              >
-                {characterOptions.map((opt) => (
-                  <option key={opt.value} value={opt.value}>
-                    {opt.label}
-                  </option>
-                ))}
-              </select>
+              Instrument
+              <input
+                value={item.instrument || ""}
+                onChange={(e) => updateItem(idx, "instrument", e.target.value)}
+                placeholder="Instrument used..."
+              />
             </label>
           </div>
           

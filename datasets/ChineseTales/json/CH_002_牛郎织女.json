@@ -80,7 +80,13 @@
   "narrative_structure": [
     {
       "event_type": "OTHER",
-      "description": ""
+      "description": "",
+      "agents": [
+        "织女"
+      ],
+      "targets": [
+        "织女"
+      ]
     }
   ],
   "cross_validation": {

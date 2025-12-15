@@ -69,6 +69,14 @@ export function mapV2ToState(data) {
     // Narrative Structure
     narrativeStructure: (data.narrative_events || []).map(evt => {
       // V2 events are objects. V1 mixed strings and objects. App supports object.
+      if (typeof evt === "object" && evt !== null) {
+        return {
+          ...evt,
+          target_type: evt.target_type || "",
+          object_type: evt.object_type || "",
+          instrument: evt.instrument || ""
+        };
+      }
       return evt;
     }),
     

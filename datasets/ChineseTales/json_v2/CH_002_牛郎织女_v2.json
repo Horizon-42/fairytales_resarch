@@ -60,7 +60,16 @@
   "narrative_events": [
     {
       "event_type": "OTHER",
-      "description": ""
+      "description": "",
+      "agents": [
+        "织女"
+      ],
+      "targets": [
+        "织女"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": ""
     }
   ],
   "themes_and_motifs": {
