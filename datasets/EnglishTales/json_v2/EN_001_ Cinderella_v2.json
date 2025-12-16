@@ -34,17 +34,8 @@
   ],
   "narrative_events": [
     {
-      "event_type": "OTHER",
-      "description": "",
-      "id": "584fc171-a341-4f19-96a6-77f411a7d8e5",
-      "target_type": "character",
-      "object_type": "",
-      "instrument": "",
-      "time_order": 1
-    },
-    {
       "id": "c494a99e-0d12-4c1c-8d9b-ed3dd7efe76b",
-      "event_type": "",
+      "event_type": "ABSENTATION",
       "description": "step mother abuse the daughter",
       "agents": [
         "Step Mother"
@@ -64,7 +55,7 @@
     },
     {
       "id": "81efe5c1-2082-4fcf-ba73-0b36e239909f",
-      "event_type": "",
+      "event_type": "RECONNAISSANCE",
       "description": "The girl went out to her mother's grave every day and wept, and she remained pious and good. When wi",
       "agents": [],
       "targets": [],
@@ -93,7 +84,40 @@
     "thinking_process": ""
   },
   "analysis": {
-    "propp_functions": [],
+    "propp_functions": [
+      {
+        "id": "4bc9799c-b8d7-4091-bb71-120525abc147",
+        "fn": "ABSENTATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 0,
+          "end": 314,
+          "text": "A rich man's wife became sick, and when she felt that her end was drawing near, she called her only daughter to her bedside and said, \"Dear child, remain pious and good, and then our dear God will always protect you, and I will look down on you from heaven and be near you.\" With this she closed her eyes and died."
+        },
+        "evidence": "step mother abuse the daughter",
+        "narrative_event_id": "c494a99e-0d12-4c1c-8d9b-ed3dd7efe76b"
+      },
+      {
+        "id": "d9143019-0529-495b-9ad8-edff15ed67be",
+        "fn": "RECONNAISSANCE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 316,
+          "end": 1107,
+          "text": "The girl went out to her mother's grave every day and wept, and she remained pious and good. When winter came the snow spread a white cloth over the grave, and when the spring sun had removed it again, the man took himself another wife.\n\nThis wife brought two daughters into the house with her. They were beautiful, with fair faces, but evil and dark hearts. Times soon grew very bad for the poor stepchild.\n\n\"Why should that stupid goose sit in the parlor with us?\" they said. \"If she wants to eat bread, then she will have to earn it. Out with this kitchen maid!\"\n\nThey took her beautiful clothes away from her, dressed her in an old gray smock, and gave her wooden shoes. \"Just look at the proud princess! How decked out she is!\" they shouted and laughed as they led her into the kitchen."
+        },
+        "evidence": "The girl went out to her mother's grave every day and wept, and she remained pious and good. When wi",
+        "narrative_event_id": "81efe5c1-2082-4fcf-ba73-0b36e239909f"
+      }
+    ],
     "propp_notes": "",
     "paragraph_summaries": {
       "per_paragraph": {},

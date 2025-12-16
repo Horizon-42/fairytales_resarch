@@ -6,16 +6,11 @@
 ## Researchs
 Resources.md
 
-## Data tools
+## Annotation tools
+### Setup
+Run scripts/setup_npm.sh to setup npm env.
+### Install 
+cd in to annotation_tools, run annotation_tools/install_deps.sh to download necessary node_modules
+### Run
+npm run start
 
-Download (at least) 30 Chinese tale texts into `datasets/ChineseTales/texts` in the CSV order:
-
-```bash
-python3 scripts/download_chinese_tales.py --target 30
-```
-
-If you want to re-download and overwrite existing files:
-
-```bash
-python3 scripts/download_chinese_tales.py --target 30 --force
-```
