@@ -34,7 +34,7 @@ export default function StoryBrowser({
           onChange={(e) => onCultureChange(e.target.value)}
           style={{ width: "100%", padding: "0.25rem" }}
         >
-          {["Chinese", "Persian", "Indian", "Japanese"].map((c) => (
+          {["Chinese", "Persian", "Indian", "Japanese", "English"].map((c) => (
             <option key={c} value={c}>
               {c}
             </option>
