@@ -360,6 +360,10 @@
     "atu_description": "",
     "ending_type": "HAPPY_REUNION",
     "key_values": [],
+    "motif_type": [
+      "B: B100 - B199 - Magic Animals",
+      "T: T10 - T99 - Love"
+    ],
     "obstacle_pattern": [],
     "obstacle_thrower": [
       "天帝",

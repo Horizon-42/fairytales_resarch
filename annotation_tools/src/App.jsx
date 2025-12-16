@@ -53,7 +53,7 @@ export default function App() {
 
   const [motif, setMotif] = useState({
     atu_type: "",
-    motif_type: "",
+    motif_type: [],
     character_archetypes: [],
     obstacle_pattern: [],
     obstacle_thrower: [],
@@ -177,6 +177,7 @@ export default function App() {
         atu_description: meta.main_motif,
         ending_type: meta.ending_type,
         key_values: meta.key_values,
+        motif_type: Array.isArray(motif.motif_type) ? motif.motif_type : [],
         obstacle_pattern: motif.obstacle_pattern,
         obstacle_thrower: motif.obstacle_thrower,
         helper_type: motif.helper_type,
@@ -473,7 +474,18 @@ export default function App() {
     if (loaded.annotationLevel) setAnnotationLevel(loaded.annotationLevel);
     
     setMeta(prev => ({ ...prev, ...loaded.meta }));
-    setMotif(prev => ({ ...prev, ...loaded.motif }));
+    setMotif(prev => {
+      const loadedMotif = { ...loaded.motif };
+      // Migrate motif_type from string to array if needed
+      if (loadedMotif.motif_type !== undefined) {
+        if (typeof loadedMotif.motif_type === "string") {
+          loadedMotif.motif_type = loadedMotif.motif_type ? [loadedMotif.motif_type] : [];
+        } else if (!Array.isArray(loadedMotif.motif_type)) {
+          loadedMotif.motif_type = [];
+        }
+      }
+      return { ...prev, ...loadedMotif };
+    });
     
     if (loaded.paragraphSummaries) {
       if (Array.isArray(loaded.paragraphSummaries)) {
@@ -518,7 +530,7 @@ export default function App() {
     });
     setMotif({
       atu_type: "",
-      motif_type: "",
+      motif_type: [],
       character_archetypes: [],
       obstacle_pattern: [],
       obstacle_thrower: [],

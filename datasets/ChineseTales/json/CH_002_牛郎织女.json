@@ -20,6 +20,9 @@
   "annotation": {
     "motif": {
       "atu_type": "",
+      "motif_type": [
+        "B: B100 - B199 - Magic Animals"
+      ],
       "character_archetypes": [
         {
           "name": "织女",

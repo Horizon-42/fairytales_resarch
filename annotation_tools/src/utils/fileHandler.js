@@ -87,6 +87,12 @@ export function mapV2ToState(data) {
     // Characters -> mapped to motif.character_archetypes
     motif: {
       character_archetypes: data.characters || [],
+      motif_type: (() => {
+        const mt = themes.motif_type;
+        if (Array.isArray(mt)) return mt;
+        if (typeof mt === "string" && mt.trim()) return [mt];
+        return [];
+      })(),
       obstacle_pattern: themes.obstacle_pattern || "",
       obstacle_thrower: normalizeObstacleThrower(themes.obstacle_thrower),
       helper_type: normalizeHelperType(themes.helper_type),
@@ -192,6 +198,12 @@ export function mapV1ToState(data) {
     
     motif: {
       ...(data.annotation?.motif || {}),
+      motif_type: (() => {
+        const mt = data.annotation?.motif?.motif_type;
+        if (Array.isArray(mt)) return mt;
+        if (typeof mt === "string" && mt.trim()) return [mt];
+        return [];
+      })(),
       obstacle_thrower: normalizeObstacleThrower(data.annotation?.motif?.obstacle_thrower),
       helper_type: normalizeHelperType(data.annotation?.motif?.helper_type)
     },
