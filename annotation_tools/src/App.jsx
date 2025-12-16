@@ -55,7 +55,7 @@ export default function App() {
     atu_type: "",
     character_archetypes: [],
     obstacle_pattern: [],
-    obstacle_thrower: "",
+    obstacle_thrower: [],
     helper_type: "",
     thinking_process: ""
   });
@@ -218,7 +218,6 @@ export default function App() {
 
       const result = await response.json();
       if (response.ok) {
-        console.log(`Save (${version}) success: ${result.path}`);
         setLastAutoSave(new Date());
       } else {
         if (!silent) alert(`Failed to save: ${result.error}`);
@@ -242,7 +241,6 @@ export default function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       if (selectedStoryIndex !== -1) {
-        console.log("Triggering auto-save...");
         saveRef.current("v1", true);
         saveRef.current("v2", true);
       }
@@ -253,23 +251,14 @@ export default function App() {
 
   // Auto-save function (extracted for reuse)
   const performAutoSave = React.useCallback(() => {
-    console.log("🔔 Auto-save function called");
-    console.log("selectedStoryIndex:", selectedStoryIndex);
-    console.log("storyFiles length:", storyFiles.length);
-    
     if (selectedStoryIndex === -1) {
-      console.warn("⚠️ No story selected, skipping auto-save");
       return;
     }
     
     const currentStory = storyFiles[selectedStoryIndex];
     if (!currentStory) {
-      console.warn("⚠️ Current story not found, skipping auto-save");
       return;
     }
-
-    console.log("💾 Attempting to save...");
-    console.log("Current story:", currentStory.name);
 
     const saveData = (version) => {
       const data = version === "v2" ? jsonV2 : jsonV1;
@@ -279,27 +268,22 @@ export default function App() {
         version: version
       });
 
-      console.log(`📤 Attempting to save ${version}...`);
-
       // Use sendBeacon as primary method (designed for page unload)
       // Modern browsers block synchronous XHR during page dismissal
       if (navigator.sendBeacon) {
         try {
           // Send as plain text to avoid CORS preflight (simple request)
           // Server will parse it as JSON
-          console.log(`📦 Sending JSON string for ${version}, size: ${payload.length} bytes`);
           const sent = navigator.sendBeacon("http://localhost:3001/api/save", payload);
           if (sent) {
-            console.log(`✅ Auto-saved ${version} via sendBeacon`);
             setLastAutoSave(new Date());
           } else {
-            console.warn(`❌ sendBeacon returned false for ${version} - request was rejected`);
+            console.warn(`Auto-save ${version} failed: sendBeacon returned false`);
           }
         } catch (beaconErr) {
-          console.error(`❌ sendBeacon error for ${version}:`, beaconErr);
+          console.error(`Auto-save ${version} error:`, beaconErr);
         }
       } else {
-        console.warn("⚠️ navigator.sendBeacon not available, using fetch keepalive");
         // Fallback: Try fetch with keepalive (if sendBeacon not available)
         try {
           fetch("http://localhost:3001/api/save", {
@@ -308,13 +292,12 @@ export default function App() {
             body: payload,
             keepalive: true // Allows request to continue after page unloads
           }).then(() => {
-            console.log(`✅ Auto-save ${version} sent via fetch keepalive`);
             setLastAutoSave(new Date());
           }).catch(err => {
-            console.error(`❌ Fetch keepalive error for ${version}:`, err);
+            console.error(`Auto-save ${version} error:`, err);
           });
         } catch (fetchErr) {
-          console.error(`❌ Fetch error for ${version}:`, fetchErr);
+          console.error(`Auto-save ${version} error:`, fetchErr);
         }
       }
     };
@@ -327,26 +310,20 @@ export default function App() {
   // Save before page unload/refresh
   useEffect(() => {
     const handleBeforeUnload = (e) => {
-      console.log("🔔 beforeunload event triggered");
       performAutoSave();
     };
 
     // Also listen to pagehide event as a backup (more reliable in some browsers)
     const handlePageHide = (e) => {
-      console.log("🔔 pagehide event triggered, persisted:", e.persisted);
       // Only save if page is being unloaded (not just hidden)
       if (e.persisted === false) {
-        console.log("💾 Page hide triggered (not persisted), attempting to save...");
         performAutoSave();
-      } else {
-        console.log("ℹ️ Page hide but persisted (e.g., back/forward cache), skipping save");
       }
     };
 
     // Also use visibilitychange as additional backup
     const handleVisibilityChange = () => {
       if (document.visibilityState === 'hidden') {
-        console.log("👁️ Page visibility changed to hidden, attempting to save...");
         // Only save if we're actually leaving (not just tab switching)
         // Use a small delay to check if page is really unloading
         setTimeout(() => {
@@ -357,13 +334,11 @@ export default function App() {
       }
     };
 
-    console.log("📌 Registering beforeunload, pagehide, and visibilitychange event listeners");
     window.addEventListener("beforeunload", handleBeforeUnload);
     window.addEventListener("pagehide", handlePageHide);
     document.addEventListener("visibilitychange", handleVisibilityChange);
 
     return () => {
-      console.log("🗑️ Removing beforeunload, pagehide, and visibilitychange event listeners");
       window.removeEventListener("beforeunload", handleBeforeUnload);
       window.removeEventListener("pagehide", handlePageHide);
       document.removeEventListener("visibilitychange", handleVisibilityChange);
@@ -544,7 +519,7 @@ export default function App() {
       atu_type: "",
       character_archetypes: [],
       obstacle_pattern: [],
-      obstacle_thrower: "",
+      obstacle_thrower: [],
       helper_type: "",
       thinking_process: ""
     });
@@ -621,9 +596,7 @@ export default function App() {
       
       const result = await response.json();
       if (result.found && result.content) {
-        console.log(`Loaded ${result.version === 2 ? "V2" : "V1"} from server: ${result.path}`, result.content);
         const mappedState = result.version === 2 ? mapV2ToState(result.content) : mapV1ToState(result.content);
-        console.log("Mapped State:", mappedState);
         loadState(mappedState);
         return;
       }
@@ -1046,14 +1019,6 @@ export default function App() {
             </button>
             <button className="primary-btn" onClick={() => handleSave("v2")}>
               Save V2
-            </button>
-            <button 
-              className="ghost-btn" 
-              onClick={performAutoSave}
-              title="Test auto-save function"
-              style={{ fontSize: "0.85rem" }}
-            >
-              Test Auto-Save
             </button>
           </div>
         </div>

@@ -108,16 +108,6 @@ app.post('/api/save', (req, res) => {
     if (origin && origin.match(/^http:\/\/localhost:\d+$/)) {
       res.header('Access-Control-Allow-Origin', origin);
     }
-    // Don't set Access-Control-Allow-Credentials - we don't use credentials
-    
-    // Debug: log what we received
-    console.log('Received save request - Content-Type:', req.headers['content-type']);
-    console.log('Body type:', typeof req.body);
-    console.log('Body keys:', req.body ? Object.keys(req.body) : 'null');
-    if (req.body && req.body.data) {
-      console.log('FormData data type:', typeof req.body.data);
-      console.log('FormData data length:', req.body.data ? req.body.data.length : 0);
-    }
     
     // Handle different request formats:
     // 1. JSON object (from XHR/fetch) - Content-Type: application/json
@@ -128,23 +118,19 @@ app.post('/api/save', (req, res) => {
     if (typeof body === 'string') {
       try {
         body = JSON.parse(body);
-        console.log('Parsed text/plain body as JSON');
       } catch (err) {
-        console.error('Failed to parse text body as JSON:', err);
-        console.error('Data content (first 200 chars):', body.substring(0, 200));
+        console.error('Failed to parse request body as JSON:', err);
         return res.status(400).json({ error: 'Invalid JSON in request body: ' + err.message });
       }
     }
 
     if (!body || typeof body !== 'object') {
-      console.error('Invalid body after parsing:', body);
       return res.status(400).json({ error: 'Invalid request body format' });
     }
 
     const { originalPath, content, version } = body;
     
     if (!originalPath || !content) {
-      console.error('Missing required fields:', { originalPath: !!originalPath, content: !!content });
       return res.status(400).json({ error: 'Missing originalPath or content' });
     }
 
@@ -173,11 +159,9 @@ app.post('/api/save', (req, res) => {
     return res.status(500).json({ error: 'Failed to create directory' });
   }
 
-  const suffix = version === 'v2' ? '_v2' : '';
-  const targetFileName = `${fileName}${suffix}.json`;
-  const targetPath = path.join(targetDir, targetFileName);
-
-  console.log(`Saving to: ${targetPath}`);
+    const suffix = version === 'v2' ? '_v2' : '';
+    const targetFileName = `${fileName}${suffix}.json`;
+    const targetPath = path.join(targetDir, targetFileName);
 
     try {
       fs.writeFileSync(targetPath, JSON.stringify(content, null, 2));
@@ -187,8 +171,7 @@ app.post('/api/save', (req, res) => {
       res.status(500).json({ error: 'Failed to write file: ' + err.message });
     }
   } catch (err) {
-    console.error('Unexpected error in /api/save:', err);
-    console.error('Error stack:', err.stack);
+    console.error('Error in /api/save:', err);
     res.status(500).json({ error: 'Internal server error: ' + err.message });
   }
 });

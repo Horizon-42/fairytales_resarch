@@ -1,6 +1,7 @@
 import React from "react";
+import CreatableSelect from 'react-select/creatable';
 import { CHARACTER_ARCHETYPES } from "../constants.js";
-import { HIGHLIGHT_COLORS } from "../utils/helpers.js";
+import { HIGHLIGHT_COLORS, customSelectStyles } from "../utils/helpers.js";
 
 export default function CharacterSection({ 
   motif, 
@@ -20,6 +21,14 @@ export default function CharacterSection({
   const safeCharacters = isLegacyFormat
     ? characters.map((c) => ({ name: "", alias: "", archetype: c }))
     : characters;
+
+  // Create character options for obstacle thrower selector
+  const characterOptions = safeCharacters
+    .filter(char => char.name && char.name.trim())
+    .map(char => ({
+      label: char.name,
+      value: char.name
+    }));
 
   // Refs for character input fields
   const characterInputRefs = React.useRef({});
@@ -88,6 +97,36 @@ export default function CharacterSection({
   const getHighlightColor = (char) => {
     const name = (char.name || "").trim();
     return highlightedChars ? highlightedChars[name] : null;
+  };
+
+  // Handle obstacle thrower change (convert between string and array for backward compatibility)
+  const handleObstacleThrowerChange = (selectedOptions) => {
+    const values = selectedOptions ? selectedOptions.map(opt => opt.value) : [];
+    setMotif({ ...motif, obstacle_thrower: values });
+  };
+
+  // Get current obstacle thrower value (handle both string and array formats)
+  const getObstacleThrowerValue = () => {
+    const obstacleThrower = motif.obstacle_thrower;
+    if (!obstacleThrower) return [];
+    
+    // If it's already an array, use it
+    if (Array.isArray(obstacleThrower)) {
+      return obstacleThrower.map(name => ({
+        label: name,
+        value: name
+      }));
+    }
+    
+    // If it's a string (legacy format), convert to array
+    if (typeof obstacleThrower === 'string' && obstacleThrower.trim()) {
+      return [{
+        label: obstacleThrower,
+        value: obstacleThrower
+      }];
+    }
+    
+    return [];
   };
 
   return (
@@ -190,12 +229,13 @@ export default function CharacterSection({
         </label>
         <label>
           Obstacle thrower
-          <input
-            value={motif.obstacle_thrower}
-            onChange={(e) =>
-              setMotif({ ...motif, obstacle_thrower: e.target.value })
-            }
-            placeholder="Who throws the obstacles?"
+          <CreatableSelect
+            isMulti
+            options={characterOptions}
+            value={getObstacleThrowerValue()}
+            onChange={handleObstacleThrowerChange}
+            placeholder="Select or create obstacle throwers..."
+            styles={customSelectStyles}
           />
         </label>
       </div>

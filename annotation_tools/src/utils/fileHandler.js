@@ -47,6 +47,14 @@ export function generateUUID() {
   });
 }
 
+// Helper to normalize obstacle_thrower (convert string to array for backward compatibility)
+function normalizeObstacleThrower(value) {
+  if (!value) return [];
+  if (Array.isArray(value)) return value;
+  if (typeof value === 'string' && value.trim()) return [value.trim()];
+  return [];
+}
+
 // Helper to map V2 JSON to App State
 export function mapV2ToState(data) {
   // Ensure defaults
@@ -72,7 +80,7 @@ export function mapV2ToState(data) {
     motif: {
       character_archetypes: data.characters || [],
       obstacle_pattern: themes.obstacle_pattern || "",
-      obstacle_thrower: themes.obstacle_thrower || "",
+      obstacle_thrower: normalizeObstacleThrower(themes.obstacle_thrower),
       helper_type: themes.helper_type || "",
       thinking_process: themes.thinking_process || ""
     },
@@ -174,7 +182,10 @@ export function mapV1ToState(data) {
     
     meta: data.metadata || {},
     
-    motif: data.annotation?.motif || {},
+    motif: {
+      ...(data.annotation?.motif || {}),
+      obstacle_thrower: normalizeObstacleThrower(data.annotation?.motif?.obstacle_thrower)
+    },
     
     narrativeStructure: (data.narrative_structure || []).map((evt, index) => {
       if (typeof evt === "string") {
