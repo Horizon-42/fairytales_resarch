@@ -945,14 +945,14 @@ export default function App() {
                   className="story-text-display"
                   onMouseUp={handleStorySelection}
                   onContextMenu={handleContextMenu}
-                  style={{ position: "relative" }}
+                  style={{ position: "relative", paddingLeft: "80px" }}
                 >
                   {highlightedNarrativePositions.map((pos) => (
                     <div
                       key={pos.key}
                       style={{
                         position: "absolute",
-                        left: "-70px",
+                        left: "0px",
                         top: `${pos.top}px`,
                         backgroundColor: "#60a5fa",
                         color: "#fff",
@@ -963,7 +963,9 @@ export default function App() {
                         zIndex: 10,
                         boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
                         whiteSpace: "nowrap",
-                        transition: "top 0.2s ease"
+                        transition: "top 0.2s ease",
+                        maxWidth: "60px",
+                        textAlign: "center"
                       }}
                     >
                       #{pos.order}
