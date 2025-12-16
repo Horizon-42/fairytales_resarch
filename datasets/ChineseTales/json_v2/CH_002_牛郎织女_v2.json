@@ -60,6 +60,11 @@
       "name": "一儿一女",
       "alias": "孩子; 一对儿女;儿女们",
       "archetype": ""
+    },
+    {
+      "name": "王母娘娘",
+      "alias": "",
+      "archetype": ""
     }
   ],
   "narrative_events": [
@@ -119,7 +124,7 @@
       "object_type": "",
       "instrument": "",
       "id": "262880a0-126d-4734-9786-dcb806220381",
-      "time_order": 3
+      "time_order": 4
     },
     {
       "id": "317d5e4b-255a-4acb-a23d-206a5e4afeb2",
@@ -139,7 +144,7 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 4
+      "time_order": 3
     },
     {
       "id": "51923dc8-acf0-477d-b540-36baccc032fd",
@@ -179,7 +184,7 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 6
+      "time_order": 5
     },
     {
       "id": "2865c3b3-8f6e-4247-afb4-ed81b0d3cd98",
@@ -221,7 +226,7 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 8
+      "time_order": 6
     },
     {
       "id": "57c3dded-bfbd-4335-aa4a-413524a8c7d5",
@@ -240,6 +245,22 @@
       "object_type": "normal_object",
       "instrument": "",
       "time_order": 9
+    },
+    {
+      "id": "098695bb-91a7-4a58-b32d-46325ac17351",
+      "event_type": "",
+      "description": "牛郎见爱妻去了，悲痛万分，立刻用箩筐挑了儿女们，连夜跟踪追去。他原打算渡过那清浅的银河, 一直就到天庭，哪知道到了银河的地方，却早已消逝了银河的踪影,抬头一看, 原来银河已经被王母娘娘用法力搬到了天上",
+      "agents": [],
+      "targets": [],
+      "text_span": {
+        "start": 908,
+        "end": 1055,
+        "text": "牛郎见爱妻去了，悲痛万分，立刻用箩筐挑了儿女们，连夜跟踪追去。他原打算渡过那清浅的银河, 一直就到天庭，哪知道到了银河的地方，却早已消逝了银河的踪影,抬头一看, 原来银河已经被王母娘娘用法力搬到了天上。在苍蓝色的夜空中，银河，还是那么一秘清浅的闪光的水流，可是已经仙凡异路，再也不能够接近它了。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 10
     }
   ],
   "themes_and_motifs": {

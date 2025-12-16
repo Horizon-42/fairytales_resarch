@@ -103,6 +103,7 @@ export default function App() {
   const [highlightedChars, setHighlightedChars] = useState({});
   const [highlightedRanges, setHighlightedRanges] = useState({});
   const [lastAutoSave, setLastAutoSave] = useState(null);
+  const [newlyCreatedCharacterIndex, setNewlyCreatedCharacterIndex] = useState(null);
 
   // Context menu state
   const [contextMenu, setContextMenu] = useState({ visible: false, x: 0, y: 0 });
@@ -249,6 +250,125 @@ export default function App() {
 
     return () => clearInterval(interval);
   }, [selectedStoryIndex]);
+
+  // Auto-save function (extracted for reuse)
+  const performAutoSave = React.useCallback(() => {
+    console.log("🔔 Auto-save function called");
+    console.log("selectedStoryIndex:", selectedStoryIndex);
+    console.log("storyFiles length:", storyFiles.length);
+    
+    if (selectedStoryIndex === -1) {
+      console.warn("⚠️ No story selected, skipping auto-save");
+      return;
+    }
+    
+    const currentStory = storyFiles[selectedStoryIndex];
+    if (!currentStory) {
+      console.warn("⚠️ Current story not found, skipping auto-save");
+      return;
+    }
+
+    console.log("💾 Attempting to save...");
+    console.log("Current story:", currentStory.name);
+
+    const saveData = (version) => {
+      const data = version === "v2" ? jsonV2 : jsonV1;
+      const payload = JSON.stringify({
+        originalPath: currentStory.path,
+        content: data,
+        version: version
+      });
+
+      console.log(`📤 Attempting to save ${version}...`);
+
+      // Use sendBeacon as primary method (designed for page unload)
+      // Modern browsers block synchronous XHR during page dismissal
+      if (navigator.sendBeacon) {
+        try {
+          // Send as plain text to avoid CORS preflight (simple request)
+          // Server will parse it as JSON
+          console.log(`📦 Sending JSON string for ${version}, size: ${payload.length} bytes`);
+          const sent = navigator.sendBeacon("http://localhost:3001/api/save", payload);
+          if (sent) {
+            console.log(`✅ Auto-saved ${version} via sendBeacon`);
+            setLastAutoSave(new Date());
+          } else {
+            console.warn(`❌ sendBeacon returned false for ${version} - request was rejected`);
+          }
+        } catch (beaconErr) {
+          console.error(`❌ sendBeacon error for ${version}:`, beaconErr);
+        }
+      } else {
+        console.warn("⚠️ navigator.sendBeacon not available, using fetch keepalive");
+        // Fallback: Try fetch with keepalive (if sendBeacon not available)
+        try {
+          fetch("http://localhost:3001/api/save", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: payload,
+            keepalive: true // Allows request to continue after page unloads
+          }).then(() => {
+            console.log(`✅ Auto-save ${version} sent via fetch keepalive`);
+            setLastAutoSave(new Date());
+          }).catch(err => {
+            console.error(`❌ Fetch keepalive error for ${version}:`, err);
+          });
+        } catch (fetchErr) {
+          console.error(`❌ Fetch error for ${version}:`, fetchErr);
+        }
+      }
+    };
+
+    // Save both versions
+    saveData("v1");
+    saveData("v2");
+  }, [selectedStoryIndex, storyFiles, jsonV1, jsonV2]);
+
+  // Save before page unload/refresh
+  useEffect(() => {
+    const handleBeforeUnload = (e) => {
+      console.log("🔔 beforeunload event triggered");
+      performAutoSave();
+    };
+
+    // Also listen to pagehide event as a backup (more reliable in some browsers)
+    const handlePageHide = (e) => {
+      console.log("🔔 pagehide event triggered, persisted:", e.persisted);
+      // Only save if page is being unloaded (not just hidden)
+      if (e.persisted === false) {
+        console.log("💾 Page hide triggered (not persisted), attempting to save...");
+        performAutoSave();
+      } else {
+        console.log("ℹ️ Page hide but persisted (e.g., back/forward cache), skipping save");
+      }
+    };
+
+    // Also use visibilitychange as additional backup
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'hidden') {
+        console.log("👁️ Page visibility changed to hidden, attempting to save...");
+        // Only save if we're actually leaving (not just tab switching)
+        // Use a small delay to check if page is really unloading
+        setTimeout(() => {
+          if (document.visibilityState === 'hidden') {
+            performAutoSave();
+          }
+        }, 100);
+      }
+    };
+
+    console.log("📌 Registering beforeunload, pagehide, and visibilitychange event listeners");
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    window.addEventListener("pagehide", handlePageHide);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      console.log("🗑️ Removing beforeunload, pagehide, and visibilitychange event listeners");
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+      window.removeEventListener("pagehide", handlePageHide);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, [performAutoSave]);
 
   // Track all highlighted narratives' time orders and positions
   const [highlightedNarrativePositions, setHighlightedNarrativePositions] = useState([]); // Array of { key, top, order }
@@ -628,6 +748,12 @@ export default function App() {
     const selectedText = currentSelection.text.trim();
     const nameGuess = selectedText.split(/\s+/)[0].substring(0, 30); // First word, max 30 chars
 
+    // Calculate the index of the new character (will be the last one)
+    const currentCharacters = Array.isArray(motif.character_archetypes) 
+      ? motif.character_archetypes 
+      : [];
+    const newIndex = currentCharacters.length;
+
     // Add new character
     setMotif(prev => ({
       ...prev,
@@ -640,6 +766,9 @@ export default function App() {
         }
       ]
     }));
+
+    // Set the newly created character index for auto-focus
+    setNewlyCreatedCharacterIndex(newIndex);
 
     // Navigate to characters tab
     setActiveTab("characters");
@@ -918,6 +1047,14 @@ export default function App() {
             <button className="primary-btn" onClick={() => handleSave("v2")}>
               Save V2
             </button>
+            <button 
+              className="ghost-btn" 
+              onClick={performAutoSave}
+              title="Test auto-save function"
+              style={{ fontSize: "0.85rem" }}
+            >
+              Test Auto-Save
+            </button>
           </div>
         </div>
       </header>
@@ -1004,6 +1141,8 @@ export default function App() {
                 setMotif={setMotif} 
                 highlightedChars={highlightedChars}
                 setHighlightedChars={setHighlightedChars}
+                newlyCreatedCharacterIndex={newlyCreatedCharacterIndex}
+                setNewlyCreatedCharacterIndex={setNewlyCreatedCharacterIndex}
               />
             )}
 

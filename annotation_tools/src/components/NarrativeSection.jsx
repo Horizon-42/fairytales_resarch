@@ -61,6 +61,8 @@ export default function NarrativeSection({
   highlightedRanges,
   setHighlightedRanges
 }) {
+  const [sortByTimeOrder, setSortByTimeOrder] = React.useState(false);
+
   const charactersList = Array.isArray(motif.character_archetypes)
     ? motif.character_archetypes
     : [];
@@ -82,7 +84,7 @@ export default function NarrativeSection({
       .map(n => n.time_order || 0)
   );
 
-  const items = narrativeStructure.map((item, index) => {
+  let items = narrativeStructure.map((item, index) => {
     if (typeof item === "string") {
       return {
         id: generateUUID(),
@@ -101,12 +103,36 @@ export default function NarrativeSection({
       return { ...item, id: generateUUID(), time_order: item.time_order ?? (maxTimeOrder + 1 + index) };
     }
     return { ...item, time_order: item.time_order ?? (maxTimeOrder + 1 + index) };
-  }).sort((a, b) => {
-    // Sort by time_order, with items without time_order at the end
-    const orderA = a.time_order ?? Infinity;
-    const orderB = b.time_order ?? Infinity;
-    return orderA - orderB;
   });
+
+  // Sort items
+  if (sortByTimeOrder) {
+    // Sort by time_order, with items without time_order at the end
+    items = items.sort((a, b) => {
+      const orderA = a.time_order ?? Infinity;
+      const orderB = b.time_order ?? Infinity;
+      return orderA - orderB;
+    });
+  } else {
+    // Default: sort by text_span start position, with items without text_span at the end
+    items = items.sort((a, b) => {
+      const startA = a.text_span?.start ?? Infinity;
+      const startB = b.text_span?.start ?? Infinity;
+      return startA - startB;
+    });
+  }
+
+  // Check if all items with text_span are highlighted
+  const allHighlighted = React.useMemo(() => {
+    if (!highlightedRanges) return false;
+    const itemsWithSpan = items.filter(item => item.text_span);
+    if (itemsWithSpan.length === 0) return false;
+
+    return itemsWithSpan.every((item, idx) => {
+      const key = `narrative-${idx}`;
+      return highlightedRanges[key];
+    });
+  }, [highlightedRanges, items]);
 
   const updateItem = (index, field, value) => {
     // Find the item by ID since items are sorted
@@ -241,6 +267,38 @@ export default function NarrativeSection({
     return highlightedRanges && !!highlightedRanges[`narrative-${idx}`];
   };
 
+  const toggleHighlightAll = () => {
+    if (!setHighlightedRanges) return;
+
+    if (allHighlighted) {
+      // Clear all highlights
+      setHighlightedRanges(prev => {
+        const next = { ...prev };
+        items.forEach((item, idx) => {
+          const key = `narrative-${idx}`;
+          delete next[key];
+        });
+        return next;
+      });
+    } else {
+      // Highlight all items with text_span
+      setHighlightedRanges(prev => {
+        const next = { ...prev };
+        items.forEach((item, idx) => {
+          if (item.text_span) {
+            const key = `narrative-${idx}`;
+            next[key] = {
+              start: item.text_span.start,
+              end: item.text_span.end,
+              color: "#60a5fa" // Blue for narrative events
+            };
+          }
+        });
+        return next;
+      });
+    }
+  };
+
   const handleMultiCharChange = (index, field, newValue) => {
     const values = newValue ? newValue.map(o => o.value) : [];
     updateItem(index, field, values);
@@ -285,10 +343,38 @@ export default function NarrativeSection({
       <h2>Narrative Events</h2>
       <div className="section-header-row">
         <span>Story Sequence</span>
+        <div style={{ display: "flex", gap: "0.5rem" }}>
+          <button
+            type="button"
+            className="ghost-btn"
+            onClick={toggleHighlightAll}
+            style={{
+              fontSize: "0.85rem",
+              padding: "0.4rem 0.8rem",
+              backgroundColor: allHighlighted ? "#60a5fa" : undefined,
+              color: allHighlighted ? "#fff" : undefined
+            }}
+          >
+            {allHighlighted ? "✓ Hide All" : "Highlight All"}
+          </button>
+          <button
+            type="button"
+            className="ghost-btn"
+            onClick={() => setSortByTimeOrder(!sortByTimeOrder)}
+            style={{
+              fontSize: "0.85rem",
+              padding: "0.4rem 0.8rem",
+              backgroundColor: sortByTimeOrder ? "#60a5fa" : undefined,
+              color: sortByTimeOrder ? "#fff" : undefined
+            }}
+          >
+            {sortByTimeOrder ? "✓ By Time Order" : "By Text Position"}
+          </button>
+        </div>
       </div>
 
       {items.map((item, idx) => (
-        <div key={idx} className="propp-row">
+        <div key={item.id || idx} className="propp-row">
           <div className="grid-2">
             <div>
               <label>Event Type (Propp)</label>

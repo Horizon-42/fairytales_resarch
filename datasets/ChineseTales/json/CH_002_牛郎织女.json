@@ -65,6 +65,11 @@
           "name": "一儿一女",
           "alias": "孩子; 一对儿女;儿女们",
           "archetype": ""
+        },
+        {
+          "name": "王母娘娘",
+          "alias": "",
+          "archetype": ""
         }
       ],
       "obstacle_pattern": [],
@@ -256,7 +261,7 @@
       "object_type": "",
       "instrument": "",
       "id": "262880a0-126d-4734-9786-dcb806220381",
-      "time_order": 3
+      "time_order": 4
     },
     {
       "id": "317d5e4b-255a-4acb-a23d-206a5e4afeb2",
@@ -276,7 +281,7 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 4
+      "time_order": 3
     },
     {
       "id": "51923dc8-acf0-477d-b540-36baccc032fd",
@@ -316,7 +321,7 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 6
+      "time_order": 5
     },
     {
       "id": "2865c3b3-8f6e-4247-afb4-ed81b0d3cd98",
@@ -358,7 +363,7 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 8
+      "time_order": 6
     },
     {
       "id": "57c3dded-bfbd-4335-aa4a-413524a8c7d5",

@@ -13,8 +13,30 @@ const app = express();
 const PORT = 3001;
 
 // Middleware
-app.use(cors());
+// Configure CORS to allow requests from the dev server
+app.use(cors({
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps, curl, or sendBeacon)
+    if (!origin) return callback(null, true);
+    // Allow localhost with any port
+    if (origin.match(/^http:\/\/localhost:\d+$/)) {
+      return callback(null, true);
+    }
+    // Allow specific origins
+    const allowedOrigins = ['http://localhost:5177', 'http://localhost:5173', 'http://localhost:3000'];
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      return callback(null, true);
+    }
+    callback(null, true); // Allow all for development
+  },
+  credentials: false, // sendBeacon doesn't send credentials by default
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type']
+}));
+// Handle JSON requests (from XHR, fetch)
 app.use(bodyParser.json({ limit: '50mb' }));
+// Handle plain text (from sendBeacon - sends JSON as text/plain to avoid preflight)
+app.use(bodyParser.text({ type: 'text/plain', limit: '50mb' }));
 
 // We assume this server is running in `annotation_tools/`
 const PROJECT_ROOT = path.resolve(__dirname, '..');
@@ -64,14 +86,69 @@ const resolveFilePath = (originalPath) => {
   return fullPath;
 };
 
-app.post('/api/save', (req, res) => {
-  const { originalPath, content, version } = req.body;
-
-  if (!originalPath || !content) {
-    return res.status(400).json({ error: 'Missing originalPath or content' });
+// Handle CORS preflight requests
+app.options('/api/save', (req, res) => {
+  const origin = req.headers.origin;
+  // Allow localhost with any port
+  if (origin && origin.match(/^http:\/\/localhost:\d+$/)) {
+    res.header('Access-Control-Allow-Origin', origin);
+  } else {
+    res.header('Access-Control-Allow-Origin', origin || '*');
   }
+  res.header('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  // Don't set Access-Control-Allow-Credentials - we don't use credentials
+  res.sendStatus(200);
+});
 
-  const fullOriginalPath = resolveFilePath(originalPath);
+app.post('/api/save', (req, res) => {
+  try {
+    // Set CORS headers explicitly
+    const origin = req.headers.origin;
+    if (origin && origin.match(/^http:\/\/localhost:\d+$/)) {
+      res.header('Access-Control-Allow-Origin', origin);
+    }
+    // Don't set Access-Control-Allow-Credentials - we don't use credentials
+    
+    // Debug: log what we received
+    console.log('Received save request - Content-Type:', req.headers['content-type']);
+    console.log('Body type:', typeof req.body);
+    console.log('Body keys:', req.body ? Object.keys(req.body) : 'null');
+    if (req.body && req.body.data) {
+      console.log('FormData data type:', typeof req.body.data);
+      console.log('FormData data length:', req.body.data ? req.body.data.length : 0);
+    }
+    
+    // Handle different request formats:
+    // 1. JSON object (from XHR/fetch) - Content-Type: application/json
+    // 2. Plain text JSON string (from sendBeacon) - Content-Type: text/plain
+    let body = req.body;
+    
+    // If body is a string (from sendBeacon sending text/plain), parse it as JSON
+    if (typeof body === 'string') {
+      try {
+        body = JSON.parse(body);
+        console.log('Parsed text/plain body as JSON');
+      } catch (err) {
+        console.error('Failed to parse text body as JSON:', err);
+        console.error('Data content (first 200 chars):', body.substring(0, 200));
+        return res.status(400).json({ error: 'Invalid JSON in request body: ' + err.message });
+      }
+    }
+
+    if (!body || typeof body !== 'object') {
+      console.error('Invalid body after parsing:', body);
+      return res.status(400).json({ error: 'Invalid request body format' });
+    }
+
+    const { originalPath, content, version } = body;
+    
+    if (!originalPath || !content) {
+      console.error('Missing required fields:', { originalPath: !!originalPath, content: !!content });
+      return res.status(400).json({ error: 'Missing originalPath or content' });
+    }
+
+    const fullOriginalPath = resolveFilePath(originalPath);
   const fileDir = path.dirname(fullOriginalPath);
   const fileName = path.basename(fullOriginalPath, path.extname(fullOriginalPath));
 
@@ -102,12 +179,17 @@ app.post('/api/save', (req, res) => {
 
   console.log(`Saving to: ${targetPath}`);
 
-  try {
-    fs.writeFileSync(targetPath, JSON.stringify(content, null, 2));
-    res.json({ success: true, path: targetPath });
+    try {
+      fs.writeFileSync(targetPath, JSON.stringify(content, null, 2));
+      res.json({ success: true, path: targetPath });
+    } catch (err) {
+      console.error(`Error writing file ${targetPath}:`, err);
+      res.status(500).json({ error: 'Failed to write file: ' + err.message });
+    }
   } catch (err) {
-    console.error(`Error writing file ${targetPath}:`, err);
-    res.status(500).json({ error: 'Failed to write file' });
+    console.error('Unexpected error in /api/save:', err);
+    console.error('Error stack:', err.stack);
+    res.status(500).json({ error: 'Internal server error: ' + err.message });
   }
 });
 

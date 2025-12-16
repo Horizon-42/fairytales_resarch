@@ -2,7 +2,14 @@ import React from "react";
 import { CHARACTER_ARCHETYPES } from "../constants.js";
 import { HIGHLIGHT_COLORS } from "../utils/helpers.js";
 
-export default function CharacterSection({ motif, setMotif, highlightedChars, setHighlightedChars }) {
+export default function CharacterSection({ 
+  motif, 
+  setMotif, 
+  highlightedChars, 
+  setHighlightedChars,
+  newlyCreatedCharacterIndex,
+  setNewlyCreatedCharacterIndex
+}) {
   const characters = Array.isArray(motif.character_archetypes)
     ? motif.character_archetypes
     : [];
@@ -13,6 +20,23 @@ export default function CharacterSection({ motif, setMotif, highlightedChars, se
   const safeCharacters = isLegacyFormat
     ? characters.map((c) => ({ name: "", alias: "", archetype: c }))
     : characters;
+
+  // Refs for character input fields
+  const characterInputRefs = React.useRef({});
+
+  // Auto-focus to newly created character
+  React.useEffect(() => {
+    if (newlyCreatedCharacterIndex != null && characterInputRefs.current[newlyCreatedCharacterIndex]) {
+      const input = characterInputRefs.current[newlyCreatedCharacterIndex];
+      setTimeout(() => {
+        input.focus();
+        input.select(); // Select the text so user can easily replace it
+        if (setNewlyCreatedCharacterIndex) {
+          setNewlyCreatedCharacterIndex(null); // Clear the flag
+        }
+      }, 100);
+    }
+  }, [newlyCreatedCharacterIndex, setNewlyCreatedCharacterIndex]);
 
   const handleCharacterChange = (index, field, value) => {
     const next = [...safeCharacters];
@@ -90,6 +114,11 @@ export default function CharacterSection({ motif, setMotif, highlightedChars, se
               <label>
                 Name
                 <input
+                  ref={(el) => {
+                    if (el) {
+                      characterInputRefs.current[idx] = el;
+                    }
+                  }}
                   value={char.name}
                   onChange={(e) => handleCharacterChange(idx, "name", e.target.value)}
                   placeholder="e.g. Aladdin"
