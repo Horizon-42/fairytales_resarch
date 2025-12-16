@@ -365,7 +365,9 @@
       "天帝",
       "王母娘娘"
     ],
-    "helper_type": "",
+    "helper_type": [
+      "ANIMAL"
+    ],
     "thinking_process": ""
   },
   "analysis": {

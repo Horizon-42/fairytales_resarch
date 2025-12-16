@@ -95,3 +95,25 @@ export const OBJECT_TYPES = [
   "magical_agent",
   "prize"
 ];
+
+// Helper Types based on HelperType.md
+export const HELPER_TYPES = [
+  "ANIMAL",
+  "SUPERNATURAL",
+  "COMPANION",
+  "DEAD",
+  "MAIDEN",
+  "HUMAN",
+  "OBJECT"
+];
+
+// Helper type display names mapping
+export const HELPER_TYPE_DISPLAY_NAMES = {
+  "ANIMAL": "Animal - The Helpful Animal",
+  "SUPERNATURAL": "Supernatural - Supernatural Being",
+  "COMPANION": "Companion - Extraordinary Companion",
+  "DEAD": "Dead - The Grateful Dead",
+  "MAIDEN": "Maiden - The Helper Maiden",
+  "HUMAN": "Human - The Human Helper",
+  "OBJECT": "Object - Magic Object (Active)"
+};

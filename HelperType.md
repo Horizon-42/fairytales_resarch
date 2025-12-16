@@ -1,7 +1,8 @@
-推荐 Tag (Code),英文名称,权威出处 (Thompson Motif Range),典型角色示例
-1. ANIMAL,The Helpful Animal,B300 - B599,报恩的老鼠、智慧狐狸、载人飞鹰、说话的马
-2. SUPERNATURAL,Supernatural Being,"N810, F200-F399, G200",仙女教母(Fairy)、精灵(Genie)、神(God)、被驯服的恶魔/巨人
-3. COMPANION,Extraordinary Companion,F600 - F699,千里眼、顺风耳、神行太保、大力士 (通常成组出现)
-4. DEAD,The Grateful Dead,E341 (ATU 505),鬼魂、幽灵、复活的死者 (因主角安葬尸体而报恩)
-5. HUMAN,The Human Helper,N820 - N850,森林里的老奶奶(Old Woman)、被绑架的公主、乞丐、智慧老人
-6. OBJECT,Magic Object (Active),"D800+, D1000+",会说话的镜子、自动打人的棍子、魔毯 (需具有自主性)
+Recommended Tag (Code),Category Name,Authoritative Source (Thompson Motif Range),Typical Roles & Functions
+1. ANIMAL,The Helpful Animal,B300 - B599,"Animals. Grateful mice, eagles carrying the hero, talking horses. They assist using biological traits or innate wisdom."
+2. SUPERNATURAL,Supernatural Being,"N810, F200-F399","Magical Entities. Fairy Godmothers, Genies, Gods. Beings originating from other worlds with inherent magical powers."
+3. COMPANION,Extraordinary Companion,F600 - F699,"Skillful Companions. The Strong Man, The Swift Runner, Sharp-Eye. Usually appear as a group (ATU 513)."
+4. DEAD,The Grateful Dead,E341 (ATU 505),Spirits/Ghosts. A spirit that returns to help the hero as a reward for paying for the corpse's proper burial.
+5. MAIDEN,The Helper Maiden,"N831, G530.2, T170","Captive / Ogre’s Daughter. Ariadne, Medea. Acts as both the Rescue Target and the Strategic Helper (often betraying the villain)."
+6. HUMAN,The Human Helper,N820 - N850,"Ordinary Humans. The old woman in the woods, beggars. They typically provide information or guidance rather than magic."
+7. OBJECT,Magic Object (Active),"D800+, D1600+","Autonomous Objects. Talking mirrors, self-acting clubs. Must possess agency or consciousness (anthropomorphized)."

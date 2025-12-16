@@ -1,6 +1,6 @@
 import React from "react";
 import CreatableSelect from 'react-select/creatable';
-import { CHARACTER_ARCHETYPES } from "../constants.js";
+import { CHARACTER_ARCHETYPES, HELPER_TYPES, HELPER_TYPE_DISPLAY_NAMES } from "../constants.js";
 import { HIGHLIGHT_COLORS, customSelectStyles } from "../utils/helpers.js";
 
 export default function CharacterSection({ 
@@ -129,6 +129,50 @@ export default function CharacterSection({
     return [];
   };
 
+  // Handle helper type change (convert between string and array for backward compatibility)
+  const handleHelperTypeChange = (selectedOptions) => {
+    const values = selectedOptions ? selectedOptions.map(opt => opt.value) : [];
+    setMotif({ ...motif, helper_type: values });
+  };
+
+  // Get current helper type value (handle both string and array formats)
+  const getHelperTypeValue = () => {
+    const helperType = motif.helper_type;
+    if (!helperType) return [];
+    
+    // If it's already an array, use it
+    if (Array.isArray(helperType)) {
+      return helperType.map(type => ({
+        label: HELPER_TYPE_DISPLAY_NAMES[type] || type,
+        value: type
+      }));
+    }
+    
+    // If it's a string (legacy format), convert to array
+    if (typeof helperType === 'string' && helperType.trim()) {
+      // Check if it's a valid helper type code
+      if (HELPER_TYPES.includes(helperType)) {
+        return [{
+          label: HELPER_TYPE_DISPLAY_NAMES[helperType] || helperType,
+          value: helperType
+        }];
+      }
+      // If it's not a valid code, treat it as a custom value
+      return [{
+        label: helperType,
+        value: helperType
+      }];
+    }
+    
+    return [];
+  };
+
+  // Create helper type options
+  const helperTypeOptions = HELPER_TYPES.map(type => ({
+    label: HELPER_TYPE_DISPLAY_NAMES[type] || type,
+    value: type
+  }));
+
   return (
     <section className="card">
       <h2>Characters</h2>
@@ -219,12 +263,13 @@ export default function CharacterSection({
       <div className="grid-2">
         <label>
           Helper type
-          <input
-            value={motif.helper_type}
-            onChange={(e) =>
-              setMotif({ ...motif, helper_type: e.target.value })
-            }
-            placeholder="e.g. CAPTIVE_MAIDEN_AND_ANIMAL"
+          <CreatableSelect
+            isMulti
+            options={helperTypeOptions}
+            value={getHelperTypeValue()}
+            onChange={handleHelperTypeChange}
+            placeholder="Select or create helper types..."
+            styles={customSelectStyles}
           />
         </label>
         <label>

@@ -56,7 +56,7 @@ export default function App() {
     character_archetypes: [],
     obstacle_pattern: [],
     obstacle_thrower: [],
-    helper_type: "",
+    helper_type: [],
     thinking_process: ""
   });
 
@@ -520,7 +520,7 @@ export default function App() {
       character_archetypes: [],
       obstacle_pattern: [],
       obstacle_thrower: [],
-      helper_type: "",
+      helper_type: [],
       thinking_process: ""
     });
     setParagraphSummaries({ perParagraph: {}, combined: [], whole: "" });

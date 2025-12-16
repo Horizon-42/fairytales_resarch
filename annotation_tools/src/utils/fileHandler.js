@@ -55,6 +55,14 @@ function normalizeObstacleThrower(value) {
   return [];
 }
 
+// Helper to normalize helper_type (convert string to array for backward compatibility)
+function normalizeHelperType(value) {
+  if (!value) return [];
+  if (Array.isArray(value)) return value;
+  if (typeof value === 'string' && value.trim()) return [value.trim()];
+  return [];
+}
+
 // Helper to map V2 JSON to App State
 export function mapV2ToState(data) {
   // Ensure defaults
@@ -81,7 +89,7 @@ export function mapV2ToState(data) {
       character_archetypes: data.characters || [],
       obstacle_pattern: themes.obstacle_pattern || "",
       obstacle_thrower: normalizeObstacleThrower(themes.obstacle_thrower),
-      helper_type: themes.helper_type || "",
+      helper_type: normalizeHelperType(themes.helper_type),
       thinking_process: themes.thinking_process || ""
     },
     
@@ -184,7 +192,8 @@ export function mapV1ToState(data) {
     
     motif: {
       ...(data.annotation?.motif || {}),
-      obstacle_thrower: normalizeObstacleThrower(data.annotation?.motif?.obstacle_thrower)
+      obstacle_thrower: normalizeObstacleThrower(data.annotation?.motif?.obstacle_thrower),
+      helper_type: normalizeHelperType(data.annotation?.motif?.helper_type)
     },
     
     narrativeStructure: (data.narrative_structure || []).map((evt, index) => {
