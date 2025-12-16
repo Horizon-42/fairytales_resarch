@@ -53,6 +53,7 @@ export default function App() {
 
   const [motif, setMotif] = useState({
     atu_type: "",
+    motif_type: "",
     character_archetypes: [],
     obstacle_pattern: [],
     obstacle_thrower: [],
@@ -517,6 +518,7 @@ export default function App() {
     });
     setMotif({
       atu_type: "",
+      motif_type: "",
       character_archetypes: [],
       obstacle_pattern: [],
       obstacle_thrower: [],
