@@ -1,6 +1,7 @@
 export { default as StoryBrowser } from './StoryBrowser.jsx';
 export { default as StoryMetadata } from './StoryMetadata.jsx';
 export { default as HighLevelMeta } from './HighLevelMeta.jsx';
+export { default as EndingAndValuesSection } from './EndingAndValuesSection.jsx';
 export { default as CharacterSection } from './CharacterSection.jsx';
 export { default as MotifSection } from './MotifSection.jsx';
 export { default as SummariesSection } from './SummariesSection.jsx';

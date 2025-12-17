@@ -423,18 +423,6 @@ export default function MotifSection({ motif, setMotif }) {
     const updatedTypes = currentTypes.filter((_, i) => i !== index);
     setMotif({ ...motif, motif_type: updatedTypes });
   };
-  const handleObstaclePatternChange = (index, value) => {
-    const next = [...motif.obstacle_pattern];
-    next[index] = value;
-    setMotif({ ...motif, obstacle_pattern: next });
-  };
-
-  const addObstacleRow = () => {
-    setMotif({
-      ...motif,
-      obstacle_pattern: [...motif.obstacle_pattern, ""]
-    });
-  };
 
   return (
     <section className="card">
@@ -675,32 +663,6 @@ export default function MotifSection({ motif, setMotif }) {
           </div>
         </div>
       )}
-
-      <div>
-        <div className="section-header-row">
-          <span>Obstacle pattern</span>
-          <button
-            type="button"
-            className="ghost-btn"
-            onClick={addObstacleRow}
-          >
-            + Add obstacle
-          </button>
-        </div>
-        {motif.obstacle_pattern.length === 0 && (
-          <p className="hint">
-            Use the button above to add motifs like COMB_TO_FOREST, etc.
-          </p>
-        )}
-        {motif.obstacle_pattern.map((val, idx) => (
-          <input
-            key={idx}
-            value={val}
-            onChange={(e) => handleObstaclePatternChange(idx, e.target.value)}
-            placeholder="COMB_TO_FOREST"
-          />
-        ))}
-      </div>
 
       <label>
         Thinking process (short note)

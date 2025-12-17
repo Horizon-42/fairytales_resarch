@@ -7,6 +7,7 @@ import {
   StoryBrowser,
   StoryMetadata,
   HighLevelMeta,
+  EndingAndValuesSection,
   CharacterSection,
   MotifSection,
   SummariesSection,
@@ -1115,13 +1116,13 @@ export default function App() {
 
         <aside className="inspector-pane">
           <div className="inspector-tabs">
-            {["characters", "narrative", "propp", "summaries", "motifs", "metadata", "qa"].map(tab => (
+            {["characters", "narrative", "propp", "summaries", "motifs", "ending-values", "metadata", "qa"].map(tab => (
               <button
                 key={tab}
                 className={`tab-btn ${activeTab === tab ? "active" : ""}`}
                 onClick={() => setActiveTab(tab)}
               >
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                {tab.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")}
               </button>
             ))}
           </div>
@@ -1176,7 +1177,17 @@ export default function App() {
             )}
 
             {activeTab === "motifs" && (
-              <MotifSection motif={motif} setMotif={setMotif} />
+              <MotifSection
+                motif={motif}
+                setMotif={setMotif}
+              />
+            )}
+
+            {activeTab === "ending-values" && (
+              <EndingAndValuesSection
+                meta={meta}
+                setMeta={setMeta}
+              />
             )}
 
             {activeTab === "metadata" && (
