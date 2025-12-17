@@ -358,8 +358,10 @@
   "themes_and_motifs": {
     "atu_type": "",
     "atu_description": "",
-    "ending_type": "HAPPY_REUNION",
-    "key_values": [],
+    "ending_type": "BITTERSWEET",
+    "key_values": [
+      "OTHER (爱;家庭)"
+    ],
     "motif_type": [
       "Motif A200-A280: Mythological Motifs > GODS > Gods of the upper world.",
       "Motif B190: Magic animals: miscellaneous motifs. (Animal Motifs > Magic animals > Magic animals)",
