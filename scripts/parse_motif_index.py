@@ -169,31 +169,151 @@ def parse_motif_file(file_path: Path) -> List[MotifEntry]:
     return entries
 
 
-def generate_csv(entries: List[MotifEntry], output_path: Path):
-    """Generate CSV file with motif entries and hierarchy information."""
+def load_category_names(csv_path: Path) -> Dict[str, str]:
+    """Load category names from Motifs.csv mapping letter codes to category names."""
+    category_map = {}
+    if not csv_path.exists():
+        return category_map
+
+    with open(csv_path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            code = row.get('Category Code', '').strip()
+            category = row.get('General Category', '').strip()
+            if code and category:
+                category_map[code] = category
+
+    return category_map
+
+
+def build_hierarchy_path(entry: MotifEntry, entries_by_code: Dict[str, MotifEntry]) -> List[MotifEntry]:
+    """
+    Build the full hierarchy path for an entry.
+    Returns a list of MotifEntry objects from root to this entry.
+    """
+    path = []
+    current_entry = entry
+
+    # Build path from root to current entry by traversing up
+    codes_in_path = []
+    while current_entry:
+        codes_in_path.insert(0, current_entry.code)
+        if current_entry.parent_code and current_entry.parent_code in entries_by_code:
+            current_entry = entries_by_code[current_entry.parent_code]
+        else:
+            break
+
+    # Build path list
+    for code in codes_in_path:
+        e = entries_by_code.get(code)
+        if e:
+            path.append(e)
+
+    return path
+
+
+def generate_csv(entries: List[MotifEntry], output_path: Path, project_root: Path):
+    """Generate CSV file with motif entries in ATU_types_complete.csv format."""
+
+    # Load category names from Motifs.csv
+    motifs_csv = project_root / "Motifs.csv"
+    category_names = load_category_names(motifs_csv)
+
+    # Build entries lookup
+    entries_by_code = {entry.code: entry for entry in entries}
+
+    # Build CSV rows - only include leaf nodes or all entries?
+    # Following ATU format, we include all entries (not just leaves)
+    rows = []
+
+    for entry in entries:
+        # Build hierarchy path from root to current entry (excluding current entry itself)
+        # We want the path of parent entries only
+        parent_path = []
+        current = entry
+        while current and current.parent_code:
+            parent = entries_by_code.get(current.parent_code)
+            if parent:
+                parent_path.insert(0, parent)
+                current = parent
+            else:
+                break
+
+        # Extract letter code (e.g., "A" from "A102")
+        letter_match = re.match(r'^([A-Z])', entry.code)
+        letter_code = letter_match.group(1) if letter_match else ""
+        level_1_category = category_names.get(letter_code, "")
+
+        # Initialize all level categories
+        level_2_category = ""
+        level_3_category = ""
+        level_4_category = ""
+        level_5_category = ""
+
+        # Assign descriptions from parent path
+        # parent_path contains all parent entries from root to immediate parent
+        # We need to map parent entries to their corresponding level categories
+        # level_2_category = level 1 parent (root entry)
+        # level_3_category = level 2 parent (if entry is level 3 or deeper)
+        # level_4_category = level 3 parent (if entry is level 4 or deeper)
+        # level_5_category = level 4 parent (if entry is level 5)
+
+        # Find parent entries at each level
+        for parent_entry in parent_path:
+            if parent_entry.level == 1:
+                level_2_category = parent_entry.description
+            elif parent_entry.level == 2:
+                level_3_category = parent_entry.description
+            elif parent_entry.level == 3:
+                level_4_category = parent_entry.description
+            elif parent_entry.level == 4:
+                level_5_category = parent_entry.description
+
+        # For level 1 entries, they are their own level_2_category
+        if entry.level == 1:
+            level_2_category = entry.description
+
+        # Get description for title (current entry's description)
+        title = entry.description
+        # Truncate if too long (like ATU does)
+        if len(title) > 200:
+            title = title[:197] + "..."
+
+        # Get first level motif_code (root entry code)
+        first_level_code = ""
+        if parent_path:
+            # The first entry in parent_path is the root (level 1)
+            first_level_code = parent_path[0].code
+        elif entry.level == 1:
+            # If entry itself is level 1, use its code
+            first_level_code = entry.code
+
+        rows.append({
+            'motif_code': entry.code,
+            'title': title,
+            'level_1_category': level_1_category,
+            'level_2_category': level_2_category,
+            'level_3_category': level_3_category,
+            'level_4_category': level_4_category,
+            'level_5_category': level_5_category,
+            'first_level_code': first_level_code
+        })
+
+    # Write CSV
     with open(output_path, 'w', encoding='utf-8', newline='') as f:
-        writer = csv.writer(f)
-        
-        # Write header
-        writer.writerow([
-            'Code',
-            'Level',
-            'Parent Code',
-            'Description',
-            'Source',
-            'Line Number'
-        ])
-        
-        # Write entries
-        for entry in entries:
-            writer.writerow([
-                entry.code,
-                entry.level,
-                entry.parent_code,
-                entry.description,
-                entry.source,
-                entry.line_num
-            ])
+        fieldnames = [
+            'motif_code',
+            'title',
+            'level_1_category',
+            'level_2_category',
+            'level_3_category',
+            'level_4_category',
+            'level_5_category',
+            'first_level_code'
+        ]
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
     
     print(f"Generated CSV file: {output_path}")
     print(f"  Total entries: {len(entries)}")
@@ -300,7 +420,7 @@ def main():
     csv_output = project_root / "Motifs_complete.csv"
     md_output = project_root / "Motifs_complete.md"
     
-    generate_csv(entries, csv_output)
+    generate_csv(entries, csv_output, project_root)
     generate_markdown(entries, md_output)
     
     # Print statistics
