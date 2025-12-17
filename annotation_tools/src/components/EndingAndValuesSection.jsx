@@ -1,63 +1,41 @@
 import React from "react";
+import CreatableSelect from 'react-select/creatable';
 import { ENDING_TYPES, VALUE_TYPES } from "../constants.js";
+import { customSelectStyles } from "../utils/helpers.js";
 
 export default function EndingAndValuesSection({ meta, setMeta }) {
-  // Key values selector state
-  const [selectedKeyValue, setSelectedKeyValue] = React.useState("");
-  const [otherValueText, setOtherValueText] = React.useState("");
-
   // Ensure key_values is an array
   const keyValues = Array.isArray(meta.key_values)
     ? meta.key_values
     : (meta.key_values ? [meta.key_values] : []);
 
-  // Check if "OTHER" (with or without custom text) is already selected
-  const hasOther = keyValues.some(v => v.startsWith("OTHER"));
+  // Create options for key values selector
+  const keyValueOptions = VALUE_TYPES.map(v => ({
+    label: v,
+    value: v
+  }));
 
-  const handleAddKeyValue = () => {
-    if (!selectedKeyValue) return;
-
-    // If OTHER is selected, require custom text
-    if (selectedKeyValue === "OTHER") {
-      if (!otherValueText.trim()) {
-        return; // Don't add if no custom text provided
+  // Get current key values as selector format
+  const getKeyValuesForSelector = () => {
+    return keyValues.map(value => {
+      // Check if it's already in the format we need
+      const found = keyValueOptions.find(opt => opt.value === value);
+      if (found) {
+        return found;
       }
-      const otherValue = `OTHER (${otherValueText.trim()})`;
-      if (keyValues.includes(otherValue)) {
-        setSelectedKeyValue("");
-        setOtherValueText("");
-        return;
-      }
-      const updated = [...keyValues, otherValue];
-      setMeta({ ...meta, key_values: updated });
-      setSelectedKeyValue("");
-      setOtherValueText("");
-      return;
-    }
-
-    // For non-OTHER values
-    if (keyValues.includes(selectedKeyValue)) {
-      setSelectedKeyValue("");
-      return;
-    }
-
-    const updated = [...keyValues, selectedKeyValue];
-    setMeta({ ...meta, key_values: updated });
-    setSelectedKeyValue("");
+      // For custom values (like "OTHER (custom text)"), create a new option
+      return {
+        label: value,
+        value: value
+      };
+    });
   };
 
-  const handleRemoveKeyValue = (index) => {
-    const updated = keyValues.filter((_, i) => i !== index);
-    setMeta({ ...meta, key_values: updated });
+  // Handle key values change from selector
+  const handleKeyValuesChange = (selectedOptions) => {
+    const values = selectedOptions ? selectedOptions.map(opt => opt.value) : [];
+    setMeta({ ...meta, key_values: values });
   };
-
-  // Filter out OTHER from dropdown if it's already selected
-  const availableValues = VALUE_TYPES.filter(v => {
-    if (v === "OTHER" && hasOther) {
-      return false;
-    }
-    return !keyValues.includes(v);
-  });
 
   return (
     <section className="card">
@@ -82,91 +60,22 @@ export default function EndingAndValuesSection({ meta, setMeta }) {
       </div>
 
       <div style={{ marginTop: "0.75rem" }}>
-        <div className="section-header-row">
-          <span>Key Values (multi-select)</span>
-        </div>
-        <div style={{ marginTop: "0.25rem" }}>
-          <label>
-            <select
-              value={selectedKeyValue}
-              onChange={(e) => {
-                setSelectedKeyValue(e.target.value);
-                if (e.target.value !== "OTHER") {
-                  setOtherValueText("");
-                }
-              }}
-            >
-              <option value="">– Select Key Value –</option>
-              {availableValues.map((v) => (
-                <option key={v} value={v}>
-                  {v}
-                </option>
-              ))}
-            </select>
-          </label>
-
-          {selectedKeyValue === "OTHER" && (
-            <div style={{ marginTop: "0.5rem" }}>
-              <label>
-                Custom value (required)
-                <input
-                  type="text"
-                  value={otherValueText}
-                  onChange={(e) => setOtherValueText(e.target.value)}
-                  placeholder="Enter custom key value"
-                  style={{ width: "100%", marginTop: "0.25rem" }}
-                />
-              </label>
-            </div>
-          )}
-
-          {selectedKeyValue && (
-            <button
-              type="button"
-              className="ghost-btn"
-              onClick={handleAddKeyValue}
-              disabled={selectedKeyValue === "OTHER" && !otherValueText.trim()}
-              style={{ marginTop: "0.5rem" }}
-            >
-              + Add Selected Key Value
-            </button>
-          )}
-        </div>
+        <label>
+          Key Values (multi-select)
+          <CreatableSelect
+            isMulti
+            options={keyValueOptions}
+            value={getKeyValuesForSelector()}
+            onChange={handleKeyValuesChange}
+            placeholder="Select or create key values..."
+            styles={customSelectStyles}
+            formatCreateLabel={(inputValue) => `Create "OTHER (${inputValue})"`}
+          />
+        </label>
+        <p className="hint" style={{ marginTop: "0.25rem", fontSize: "0.875rem", color: "#64748b" }}>
+          You can select multiple values. Type to create custom values like "OTHER (your text)".
+        </p>
       </div>
-
-      {keyValues.length > 0 && (
-        <div style={{ marginTop: "0.75rem" }}>
-          <div className="section-header-row">
-            <span>Selected Key Values ({keyValues.length})</span>
-          </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-            {keyValues.map((value, index) => (
-              <div
-                key={index}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  padding: "0.5rem",
-                  background: "#f3f4f6",
-                  borderRadius: "4px",
-                  gap: "0.5rem"
-                }}
-              >
-                <span style={{ flex: 1 }}>{value}</span>
-                <button
-                  type="button"
-                  className="ghost-btn"
-                  onClick={() => handleRemoveKeyValue(index)}
-                  style={{ padding: "0.25rem 0.5rem", fontSize: "0.875rem" }}
-                >
-                  Remove
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
     </section>
   );
 }

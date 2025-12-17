@@ -314,30 +314,6 @@ export default function NarrativeSection({
     });
   };
 
-  const handleAmbiguousMotifsChange = (idx, value) => {
-    const current = crossValidation.bias_reflection.ambiguous_motifs || [];
-    const next = [...current];
-    next[idx] = value;
-    setCrossValidation({
-      ...crossValidation,
-      bias_reflection: {
-        ...crossValidation.bias_reflection,
-        ambiguous_motifs: next
-      }
-    });
-  };
-
-  const addAmbiguousMotif = () => {
-    const current = crossValidation.bias_reflection.ambiguous_motifs || [];
-    setCrossValidation({
-      ...crossValidation,
-      bias_reflection: {
-        ...crossValidation.bias_reflection,
-        ambiguous_motifs: [...current, ""]
-      }
-    });
-  };
-
   return (
     <section className="card">
       <h2>Narrative Events</h2>
@@ -580,36 +556,6 @@ export default function NarrativeSection({
           onChange={(e) => handleBiasChange("gender_norms", e.target.value)}
         />
       </label>
-      <label>
-        Hero/villain mapping
-        <textarea
-          rows={2}
-          value={crossValidation.bias_reflection.hero_villain_mapping}
-          onChange={(e) =>
-            handleBiasChange("hero_villain_mapping", e.target.value)
-          }
-        />
-      </label>
-
-      <div className="section-header-row">
-        <span>Ambiguous motifs</span>
-        <button
-          type="button"
-          className="ghost-btn"
-          onClick={addAmbiguousMotif}
-        >
-          + Add motif
-        </button>
-      </div>
-      {(crossValidation.bias_reflection.ambiguous_motifs || []).map(
-        (m, idx) => (
-          <input
-            key={idx}
-            value={m}
-            onChange={(e) => handleAmbiguousMotifsChange(idx, e.target.value)}
-          />
-        )
-      )}
     </section>
   );
 }

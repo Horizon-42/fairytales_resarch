@@ -178,6 +178,8 @@ export default function App() {
         key_values: meta.key_values,
         motif_type: Array.isArray(motif.motif_type) ? motif.motif_type : [],
         atu_categories: Array.isArray(motif.atu_categories) ? motif.atu_categories : [],
+        obstacle_thrower: Array.isArray(motif.obstacle_thrower) ? motif.obstacle_thrower : [],
+        helper_type: Array.isArray(motif.helper_type) ? motif.helper_type : [],
         thinking_process: motif.thinking_process
       },
       analysis: {
@@ -236,6 +238,29 @@ export default function App() {
   useEffect(() => {
     saveRef.current = handleSave;
   });
+
+  // Keyboard shortcut: Cmd+S / Ctrl+S to save JSON
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      // Check for Cmd+S (Mac) or Ctrl+S (Windows/Linux)
+      if ((e.metaKey || e.ctrlKey) && e.key === 's') {
+        e.preventDefault(); // Prevent default browser save behavior
+
+        // Save both v1 and v2
+        if (selectedStoryIndex >= 0 && storyFiles[selectedStoryIndex]) {
+          saveRef.current("v1", true); // Silent save for v1
+          saveRef.current("v2", true); // Silent save for v2
+        } else {
+          alert("No story selected to save.");
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedStoryIndex, storyFiles]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -478,6 +503,9 @@ export default function App() {
     if (loaded.culture) setCulture(loaded.culture);
 
     setMeta(prev => ({ ...prev, ...loaded.meta }));
+    if (loaded.sourceText) {
+      setSourceText(loaded.sourceText);
+    }
     setMotif(prev => {
       const loadedMotif = { ...loaded.motif };
       // Migrate motif_type from string to array if needed

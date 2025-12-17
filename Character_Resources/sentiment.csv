@@ -1,0 +1,7 @@
+标签 (Tag),中文名称,情感极性,典型心理与行为
+romantic,爱慕/迷恋,High Positive,求爱、性吸引、深情凝视、脸红。
+positive,友好/喜爱,Positive,信任、感激、尊敬、帮助、赞同。
+neutral,中立/冷漠,Neutral,商业交易、无情绪的问答、路过。
+negative,厌恶/反感,Negative,嘲讽、拒绝、不耐烦、轻视、争吵。
+fearful,恐惧/服从,Negative (Passive),发抖、求饶、被迫下跪、逃跑。
+hostile,敌对/杀意,High Negative,攻击、诅咒、愤怒、试图伤害/杀死。

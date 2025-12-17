@@ -554,11 +554,17 @@ export default function MotifSection({ motif, setMotif }) {
             Level 1
             <select value={selectedMotifLevel1} onChange={handleMotifLevel1Change}>
               <option value="">– Select Level 1 –</option>
-              {motifLevel1Items.map((item) => (
-                <option key={item.key} value={item.key}>
-                  {item.name}
-                </option>
-              ))}
+              {motifLevel1Items.map((item, index) => {
+                // Thompson Motif Index standard letters: A-Z but skip I and Y
+                // A, B, C, D, E, F, G, H, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Z
+                const standardLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Z'];
+                const letter = standardLetters[index] || String.fromCharCode(65 + index);
+                return (
+                  <option key={item.key} value={item.key}>
+                    {letter}. {item.name}
+                  </option>
+                );
+              })}
             </select>
           </label>
           <label>

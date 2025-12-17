@@ -188,6 +188,19 @@ export function mapV2ToState(data) {
       date_annotated: meta.date_annotated || new Date().toISOString().split("T")[0],
       confidence: meta.confidence || "High",
       notes: analysis.qa_notes || ""
+    },
+
+    // Source Text
+    sourceText: data.source_info ? {
+      text: data.source_info.text_content || "",
+      language: data.source_info.language || "",
+      type: data.source_info.type || "",
+      reference_uri: data.source_info.reference_uri || ""
+    } : {
+      text: "",
+      language: "",
+      type: "",
+      reference_uri: ""
     }
   };
 }
@@ -284,7 +297,14 @@ export function mapV1ToState(data) {
     
     crossValidation: data.cross_validation || {},
     
-    qa: data.qa || {}
+    qa: data.qa || {},
+
+    sourceText: data.source_text || {
+      text: "",
+      language: "",
+      type: "",
+      reference_uri: ""
+    }
   };
 }
 
