@@ -96,7 +96,7 @@ export const ATU_CATEGORY_ROWS = [
 export const CHARACTER_ARCHETYPES = [
   "Hero",
   "Shadow",
-  "Sidekick",
+  "Sidekick/Helper",
   "Villain",
   "Lover",
   "Mentor",
