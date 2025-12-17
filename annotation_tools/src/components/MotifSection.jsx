@@ -1,22 +1,18 @@
 import React from "react";
-import { MOTIF_CATEGORIES } from "../constants.js";
 import { ATU_HIERARCHY } from "../atu_hierarchy.js";
-import { MOTIF_HIERARCHY } from "../motif_hierarchy.js";
+import { MOTIF_HIERARCHY_LEVEL1_3 } from "../motif_hierarchy_level1_3.js";
 
 export default function MotifSection({ motif, setMotif }) {
-  const [selectedCategoryCode, setSelectedCategoryCode] = React.useState("");
-  const [selectedSubcategory, setSelectedSubcategory] = React.useState("");
   const [selectedATULevel1, setSelectedATULevel1] = React.useState("");
   const [selectedATULevel2, setSelectedATULevel2] = React.useState("");
   const [selectedATULevel3, setSelectedATULevel3] = React.useState("");
   const [selectedATULevel4, setSelectedATULevel4] = React.useState("");
 
-  // Motif hierarchy states (supports up to 5 levels)
+  // Motif hierarchy states (4 levels based on Motifs_level1_3.csv)
   const [selectedMotifLevel1, setSelectedMotifLevel1] = React.useState("");
   const [selectedMotifLevel2, setSelectedMotifLevel2] = React.useState("");
   const [selectedMotifLevel3, setSelectedMotifLevel3] = React.useState("");
   const [selectedMotifLevel4, setSelectedMotifLevel4] = React.useState("");
-  const [selectedMotifLevel5, setSelectedMotifLevel5] = React.useState("");
 
   // Ensure motif_type is an array (handle migration from string)
   const motifTypes = Array.isArray(motif.motif_type) 
@@ -27,10 +23,6 @@ export default function MotifSection({ motif, setMotif }) {
   const atuSelections = Array.isArray(motif.atu_categories)
     ? motif.atu_categories
     : (motif.atu_categories ? [motif.atu_categories] : []);
-
-  // Get selected category's subcategories
-  const selectedCategory = MOTIF_CATEGORIES.find(cat => cat.code === selectedCategoryCode);
-  const subcategories = selectedCategory ? selectedCategory.subcategories : [];
 
   // ATU hierarchy from CSV-based structure
   const level1Items = React.useMemo(() => ATU_HIERARCHY, []);
@@ -65,16 +57,6 @@ export default function MotifSection({ motif, setMotif }) {
     return selectedLevel3Item.children || [];
   }, [selectedLevel3Item]);
 
-  const handleCategoryChange = (e) => {
-    const code = e.target.value;
-    setSelectedCategoryCode(code);
-    setSelectedSubcategory(""); // Reset subcategory when category changes
-  };
-
-  const handleSubcategoryChange = (e) => {
-    const subcategoryValue = e.target.value;
-    setSelectedSubcategory(subcategoryValue);
-  };
 
   const handleATULevel1Change = (e) => {
     const value = e.target.value;
@@ -237,8 +219,8 @@ export default function MotifSection({ motif, setMotif }) {
     setMotif({ ...motif, atu_categories: next });
   };
 
-  // Motif hierarchy from CSV-based structure
-  const motifLevel1Items = React.useMemo(() => MOTIF_HIERARCHY, []);
+  // Motif hierarchy from Motifs_level1_3.csv (4 levels)
+  const motifLevel1Items = React.useMemo(() => MOTIF_HIERARCHY_LEVEL1_3, []);
 
   const selectedMotifLevel1Item = React.useMemo(
     () => motifLevel1Items.find(item => item.key === selectedMotifLevel1) || null,
@@ -270,16 +252,6 @@ export default function MotifSection({ motif, setMotif }) {
     return selectedMotifLevel3Item.children || [];
   }, [selectedMotifLevel3Item]);
 
-  const selectedMotifLevel4Item = React.useMemo(
-    () => motifLevel4Items.find(item => item.key === selectedMotifLevel4) || null,
-    [motifLevel4Items, selectedMotifLevel4]
-  );
-
-  const motifLevel5Items = React.useMemo(() => {
-    if (!selectedMotifLevel4Item) return [];
-    return selectedMotifLevel4Item.children || [];
-  }, [selectedMotifLevel4Item]);
-
   // Motif level change handlers
   const handleMotifLevel1Change = (e) => {
     const value = e.target.value;
@@ -287,7 +259,6 @@ export default function MotifSection({ motif, setMotif }) {
     setSelectedMotifLevel2("");
     setSelectedMotifLevel3("");
     setSelectedMotifLevel4("");
-    setSelectedMotifLevel5("");
   };
 
   const handleMotifLevel2Change = (e) => {
@@ -295,25 +266,17 @@ export default function MotifSection({ motif, setMotif }) {
     setSelectedMotifLevel2(value);
     setSelectedMotifLevel3("");
     setSelectedMotifLevel4("");
-    setSelectedMotifLevel5("");
   };
 
   const handleMotifLevel3Change = (e) => {
     const value = e.target.value;
     setSelectedMotifLevel3(value);
     setSelectedMotifLevel4("");
-    setSelectedMotifLevel5("");
   };
 
   const handleMotifLevel4Change = (e) => {
     const value = e.target.value;
     setSelectedMotifLevel4(value);
-    setSelectedMotifLevel5("");
-  };
-
-  const handleMotifLevel5Change = (e) => {
-    const value = e.target.value;
-    setSelectedMotifLevel5(value);
   };
 
   // Auto-select if only one option available for Motif
@@ -335,144 +298,121 @@ export default function MotifSection({ motif, setMotif }) {
     }
   }, [selectedMotifLevel3, motifLevel4Items, selectedMotifLevel4]);
 
-  React.useEffect(() => {
-    if (selectedMotifLevel4 && motifLevel5Items.length === 1 && !selectedMotifLevel5) {
-      setSelectedMotifLevel5(motifLevel5Items[0].key);
+  // Helper function to get all level 4 items from the selected level
+  const getAllLevel4MotifItems = () => {
+    if (selectedMotifLevel4) {
+      // Level 4 is selected, return that single item
+      const item = motifLevel4Items.find(item => item.key === selectedMotifLevel4);
+      return item ? [item] : [];
     }
-  }, [selectedMotifLevel4, motifLevel5Items, selectedMotifLevel5]);
-
-  // Helper function to get all leaf items (items with no children) from the selected level
-  const getAllLeafMotifItems = () => {
-    const selected = selectedMotifLevel5Item || selectedMotifLevel4Item ||
-      selectedMotifLevel3Item || selectedMotifLevel2Item || selectedMotifLevel1Item;
-    if (!selected) return [];
-
-    function getLeaves(item) {
-      if (item.children && item.children.length > 0) {
-        const leaves = [];
-        item.children.forEach(child => {
-          leaves.push(...getLeaves(child));
-        });
-        return leaves;
-      }
-      return [item];
+    if (selectedMotifLevel3Item && selectedMotifLevel3Item.children) {
+      return selectedMotifLevel3Item.children.filter(item => item.level === 4);
     }
-
-    return getLeaves(selected);
+    if (selectedMotifLevel2Item && selectedMotifLevel2Item.children) {
+      // Get all level 4 items from all level 3 children
+      const allLevel4Items = [];
+      selectedMotifLevel2Item.children.forEach(level3 => {
+        if (level3.children) {
+          level3.children.forEach(item => {
+            if (item.level === 4) {
+              allLevel4Items.push(item);
+            }
+          });
+        }
+      });
+      return allLevel4Items;
+    }
+    return [];
   };
 
   // Helper function to calculate motif code range
   const calculateMotifCodeRange = () => {
-    const allLeafItems = getAllLeafMotifItems();
-    if (allLeafItems.length === 0) return null;
-
-    const codes = allLeafItems.map(item => item.code).filter(c => c);
+    const allLevel4Items = getAllLevel4MotifItems();
+    if (allLevel4Items.length === 0) return null;
+    const codes = allLevel4Items.map(item => item.code).filter(c => c);
     if (codes.length === 0) return null;
-
-    if (codes.length === 1) return codes[0];
-
-    // Sort codes and return range
-    codes.sort((a, b) => a.localeCompare(b));
-    return `${codes[0]}-${codes[codes.length - 1]}`;
+    const min = codes[0];
+    const max = codes[codes.length - 1];
+    return min === max ? min : `${min}-${max}`;
   };
 
-  // Helper function to build motif path label (description for level 1, code for others)
+  // Helper function to build motif path label, skipping "general" at level 3 (aligned with ATU format)
   const buildMotifPathLabel = () => {
     const parts = [];
-    if (selectedMotifLevel1Item) parts.push(selectedMotifLevel1Item.description);
-    if (selectedMotifLevel2Item) parts.push(`${selectedMotifLevel2Item.code}: ${selectedMotifLevel2Item.description}`);
-    if (selectedMotifLevel3Item) parts.push(`${selectedMotifLevel3Item.code}: ${selectedMotifLevel3Item.description}`);
-    if (selectedMotifLevel4Item) parts.push(`${selectedMotifLevel4Item.code}: ${selectedMotifLevel4Item.description}`);
-    if (selectedMotifLevel5Item) parts.push(`${selectedMotifLevel5Item.code}: ${selectedMotifLevel5Item.description}`);
+    if (selectedMotifLevel1Item) parts.push(selectedMotifLevel1Item.name);
+    if (selectedMotifLevel2Item) parts.push(selectedMotifLevel2Item.name);
+    // Skip level 3 if it's "general" (name is null)
+    if (selectedMotifLevel3Item && selectedMotifLevel3Item.name && selectedMotifLevel3Item.name !== "general") {
+      parts.push(selectedMotifLevel3Item.name);
+    }
     return parts.join(" > ");
   };
 
   const handleAddMotifFromHierarchy = () => {
-    // If the deepest level is selected, use that
-    const selected = selectedMotifLevel5Item || selectedMotifLevel4Item ||
-      selectedMotifLevel3Item || selectedMotifLevel2Item || selectedMotifLevel1Item;
-    if (!selected) return;
+    // If level 4 (specific motif) is selected, use that (aligned with ATU format)
+    if (selectedMotifLevel4) {
+      const motifItem = motifLevel4Items.find(item => item.key === selectedMotifLevel4);
+      if (!motifItem) return;
 
-    // Check if we have a specific item selected (level 5) or need to calculate range
-    let label;
-    if (selectedMotifLevel5Item) {
-      // Specific item selected at level 5
       const pathLabel = buildMotifPathLabel();
-      label = `${selectedMotifLevel5Item.code}: ${selectedMotifLevel5Item.description} (${pathLabel})`;
-    } else {
-      // Calculate range for the selected level if not the deepest
-      const range = calculateMotifCodeRange();
-      const pathLabel = buildMotifPathLabel();
-      if (range && range !== selected.code) {
-        // Show range if there are multiple items
-        label = `Motif ${range}: ${pathLabel}`;
-      } else {
-        // Single item - show code if it's level 2 or deeper, otherwise just description
-        if (selected.code && selected !== selectedMotifLevel1Item) {
-          label = `${selected.code}: ${selected.description} (${pathLabel})`;
-        } else {
-          label = `${selected.description}`;
-        }
+      const label = `Motif ${motifItem.code}: ${motifItem.title} (${pathLabel})`;
+
+      const currentTypes = Array.isArray(motif.motif_type)
+        ? motif.motif_type
+        : (motif.motif_type ? [motif.motif_type] : []);
+
+      if (currentTypes.includes(label)) {
+        setSelectedMotifLevel1("");
+        setSelectedMotifLevel2("");
+        setSelectedMotifLevel3("");
+        setSelectedMotifLevel4("");
+        return;
       }
-    }
 
-    // Ensure motif_type is an array
-    const currentTypes = Array.isArray(motif.motif_type)
-      ? motif.motif_type
-      : (motif.motif_type ? [motif.motif_type] : []);
+      const updatedTypes = [...currentTypes, label];
+      setMotif({ ...motif, motif_type: updatedTypes });
 
-    // Check if already exists
-    if (currentTypes.includes(label)) {
-      // Already added, reset selection
       setSelectedMotifLevel1("");
       setSelectedMotifLevel2("");
       setSelectedMotifLevel3("");
       setSelectedMotifLevel4("");
-      setSelectedMotifLevel5("");
       return;
     }
 
-    // Add to array
+    // Otherwise, add the most specific selected category level
+    const chosen = selectedMotifLevel3Item || selectedMotifLevel2Item || selectedMotifLevel1Item;
+    if (!chosen) return;
+
+    const pathLabel = buildMotifPathLabel();
+
+    // If level 4 is not selected, add motif code range (aligned with ATU format)
+    let label;
+    const range = calculateMotifCodeRange();
+    if (range) {
+      label = `Motif ${range}: ${pathLabel}`;
+    } else {
+      label = `Motif Category: ${pathLabel}`;
+    }
+
+    const currentTypes = Array.isArray(motif.motif_type)
+      ? motif.motif_type
+      : (motif.motif_type ? [motif.motif_type] : []);
+
+    if (currentTypes.includes(label)) {
+      setSelectedMotifLevel1("");
+      setSelectedMotifLevel2("");
+      setSelectedMotifLevel3("");
+      setSelectedMotifLevel4("");
+      return;
+    }
+
     const updatedTypes = [...currentTypes, label];
     setMotif({ ...motif, motif_type: updatedTypes });
 
-    // Reset selection after adding
     setSelectedMotifLevel1("");
     setSelectedMotifLevel2("");
     setSelectedMotifLevel3("");
     setSelectedMotifLevel4("");
-    setSelectedMotifLevel5("");
-  };
-
-  const handleAddMotif = () => {
-    if (!selectedCategoryCode || !selectedSubcategory) return;
-    
-    const subcategory = subcategories.find(sub => sub.range === selectedSubcategory);
-    if (!subcategory) return;
-
-    // Format: "A: A0 - A99 - Creator"
-    const formatted = `${selectedCategoryCode}: ${subcategory.range} - ${subcategory.description}`;
-    
-    // Ensure motif_type is an array
-    const currentTypes = Array.isArray(motif.motif_type) 
-      ? motif.motif_type 
-      : (motif.motif_type ? [motif.motif_type] : []);
-    
-    // Check if already exists
-    if (currentTypes.includes(formatted)) {
-      // Already added, just reset selection
-      setSelectedCategoryCode("");
-      setSelectedSubcategory("");
-      return;
-    }
-
-    // Add to array
-    const updatedTypes = [...currentTypes, formatted];
-    setMotif({ ...motif, motif_type: updatedTypes });
-    
-    // Reset selection after adding
-    setSelectedCategoryCode("");
-    setSelectedSubcategory("");
   };
 
   const handleRemoveMotif = (index) => {
@@ -628,7 +568,7 @@ export default function MotifSection({ motif, setMotif }) {
               <option value="">– Select Level 1 –</option>
               {motifLevel1Items.map((item) => (
                 <option key={item.key} value={item.key}>
-                  {item.description}
+                  {item.name}
                 </option>
               ))}
             </select>
@@ -643,7 +583,7 @@ export default function MotifSection({ motif, setMotif }) {
               <option value="">– Select Level 2 –</option>
               {motifLevel2Items.map((item) => (
                 <option key={item.key} value={item.key}>
-                  {item.code}: {item.description}
+                  {item.range}: {item.name}
                 </option>
               ))}
             </select>
@@ -652,18 +592,21 @@ export default function MotifSection({ motif, setMotif }) {
         {selectedMotifLevel2 && motifLevel3Items.length > 0 && (
           <div style={{ marginTop: "0.25rem" }}>
             <label>
-              Level 3
+              Level 3 (optional)
               <select
                 value={selectedMotifLevel3}
                 onChange={handleMotifLevel3Change}
                 disabled={!selectedMotifLevel2}
               >
                 <option value="">– Select Level 3 (optional) –</option>
-                {motifLevel3Items.map((item) => (
-                  <option key={item.key} value={item.key}>
-                    {item.code}: {item.description}
-                  </option>
-                ))}
+                {motifLevel3Items.map((item) => {
+                  const displayName = item.name || "general";
+                  return (
+                    <option key={item.key} value={item.key}>
+                      {displayName}
+                    </option>
+                  );
+                })}
               </select>
             </label>
           </div>
@@ -671,7 +614,7 @@ export default function MotifSection({ motif, setMotif }) {
         {selectedMotifLevel3 && motifLevel4Items.length > 0 && (
           <div style={{ marginTop: "0.25rem" }}>
             <label>
-              Level 4
+              Level 4 (optional)
               <select
                 value={selectedMotifLevel4}
                 onChange={handleMotifLevel4Change}
@@ -680,33 +623,14 @@ export default function MotifSection({ motif, setMotif }) {
                 <option value="">– Select Level 4 (optional) –</option>
                 {motifLevel4Items.map((item) => (
                   <option key={item.key} value={item.key}>
-                    {item.code}: {item.description}
+                    {item.code}: {item.title}
                   </option>
                 ))}
               </select>
             </label>
           </div>
         )}
-        {selectedMotifLevel4 && motifLevel5Items.length > 0 && (
-          <div style={{ marginTop: "0.25rem" }}>
-            <label>
-              Level 5
-              <select
-                value={selectedMotifLevel5}
-                onChange={handleMotifLevel5Change}
-                disabled={!selectedMotifLevel4}
-              >
-                <option value="">– Select Level 5 (optional) –</option>
-                {motifLevel5Items.map((item) => (
-                  <option key={item.key} value={item.key}>
-                    {item.code}: {item.description}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </div>
-        )}
-        {(selectedMotifLevel1 || selectedMotifLevel2 || selectedMotifLevel3 || selectedMotifLevel4 || selectedMotifLevel5) && (
+        {(selectedMotifLevel1 || selectedMotifLevel2 || selectedMotifLevel3 || selectedMotifLevel4) && (
           <button
             type="button"
             className="ghost-btn"
@@ -717,49 +641,6 @@ export default function MotifSection({ motif, setMotif }) {
           </button>
         )}
       </div>
-
-      <div className="grid-2" style={{ marginTop: "1rem" }}>
-        <label>
-          Motif Category (Legacy)
-          <select
-            value={selectedCategoryCode}
-            onChange={handleCategoryChange}
-          >
-            <option value="">– Select Category –</option>
-            {MOTIF_CATEGORIES.map((cat) => (
-              <option key={cat.code} value={cat.code}>
-                {cat.code} - {cat.category}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label>
-          Motif Sub-category (Legacy)
-          <select
-            value={selectedSubcategory}
-            onChange={handleSubcategoryChange}
-            disabled={!selectedCategoryCode}
-          >
-            <option value="">– Select Sub-category –</option>
-            {subcategories.map((sub) => (
-              <option key={sub.range} value={sub.range}>
-                {sub.range} - {sub.description}
-              </option>
-            ))}
-          </select>
-        </label>
-      </div>
-
-      {selectedCategoryCode && selectedSubcategory && (
-        <button
-          type="button"
-          className="ghost-btn"
-          onClick={handleAddMotif}
-          style={{ marginTop: "0.5rem" }}
-        >
-          + Add Selected Motif (Legacy)
-        </button>
-      )}
 
       {motifTypes.length > 0 && (
         <div style={{ marginTop: "1rem" }}>
