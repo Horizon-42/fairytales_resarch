@@ -364,7 +364,15 @@
       "B: B100 - B199 - Magic Animals",
       "T: T10 - T99 - Love"
     ],
-    "obstacle_pattern": [],
+    "atu_categories": [
+      "ATU 200-219: ANIMAL TALES > Domestic Animals",
+      "ATU 500-559: TALES OF MAGIC > Supernatural Helpers",
+      "ATU 300-399: TALES OF MAGIC > Supernatural Adversaries",
+      "ATU 400-424: TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Wife"
+    ],
+    "obstacle_pattern": [
+      ""
+    ],
     "obstacle_thrower": [
       "天帝",
       "王母娘娘"
