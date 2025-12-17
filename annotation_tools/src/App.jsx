@@ -577,6 +577,17 @@ export default function App() {
     const files = event.target.files;
     if (!files) return;
 
+    // If there's already loaded data, save it before loading new folder
+    if (selectedStoryIndex >= 0 && storyFiles[selectedStoryIndex]) {
+      try {
+        await handleSave("v1", true); // Silent save for v1
+        await handleSave("v2", true); // Silent save for v2
+      } catch (err) {
+        console.error("Failed to save before opening new folder:", err);
+        // Continue loading new folder even if save fails
+      }
+    }
+
     const { texts, v1Jsons, v2Jsons } = organizeFiles(files);
     texts.sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true, sensitivity: 'base' }));
 
