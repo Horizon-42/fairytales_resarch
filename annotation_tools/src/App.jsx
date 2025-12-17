@@ -6,7 +6,6 @@ import { downloadJson, relPathToDatasetHint, HIGHLIGHT_COLORS, emptyProppFn } fr
 import {
   StoryBrowser,
   StoryMetadata,
-  HighLevelMeta,
   EndingAndValuesSection,
   CharacterSection,
   MotifSection,
@@ -35,14 +34,30 @@ export default function App() {
   const [culture, setCulture] = useState("Persian");
   const [title, setTitle] = useState("");
 
+  // Extract title from ID (everything after the second underscore)
+  const extractTitleFromId = (taleId) => {
+    if (!taleId) return "";
+    const parts = taleId.split("_");
+    if (parts.length > 2) {
+      // Return everything after the second underscore
+      return parts.slice(2).join("_");
+    }
+    return "";
+  };
+
+  // Handle ID change and auto-extract title
+  const handleIdChange = (newId) => {
+    setId(newId);
+    const extractedTitle = extractTitleFromId(newId);
+    setTitle(extractedTitle);
+  };
+
   const [sourceText, setSourceText] = useState({
     text: "",
     language: "en",
     type: "summary",
     reference_uri: ""
   });
-
-  const [annotationLevel, setAnnotationLevel] = useState("Deep");
 
   const [meta, setMeta] = useState({
     main_motif: "",
@@ -71,11 +86,6 @@ export default function App() {
   const [proppFns, setProppFns] = useState([emptyProppFn()]);
   const [proppNotes, setProppNotes] = useState("");
 
-  const [deepMeta, setDeepMeta] = useState({
-    ending_type: "HAPPY_REUNION",
-    key_values: []
-  });
-
   const [narrativeStructure, setNarrativeStructure] = useState([""]);
 
   const [crossValidation, setCrossValidation] = useState({
@@ -95,13 +105,6 @@ export default function App() {
     notes: ""
   });
 
-  const [persianSource, setPersianSource] = useState({
-    text: "",
-    language: "fa",
-    type: "excerpt",
-    reference_uri: ""
-  });
-
   const [activeTab, setActiveTab] = useState("characters");
   const [highlightedChars, setHighlightedChars] = useState({});
   const [highlightedRanges, setHighlightedRanges] = useState({});
@@ -118,7 +121,6 @@ export default function App() {
       culture,
       title,
       source_text: sourceText,
-      annotation_level: annotationLevel,
       metadata: meta,
       thinking_process: motif.thinking_process || "",
       annotation: {
@@ -131,17 +133,15 @@ export default function App() {
           },
           propp_functions: proppFns.filter((f) => f.fn || f.evidence),
           propp_notes: proppNotes
-        },
-        meta: deepMeta
+        }
       },
       narrative_structure: narrativeStructure.filter(
         (n) => (typeof n === "string" ? n.trim() : n.event_type)
       ),
       cross_validation: crossValidation,
-      qa,
-      source_text_persian: persianSource
+      qa
     }),
-    [id, culture, title, sourceText, annotationLevel, meta, motif, paragraphSummaries, proppFns, proppNotes, deepMeta, narrativeStructure, crossValidation, qa, persianSource]
+    [id, culture, title, sourceText, meta, motif, paragraphSummaries, proppFns, proppNotes, narrativeStructure, crossValidation, qa]
   );
 
   const jsonV2 = useMemo(() => {
@@ -159,8 +159,7 @@ export default function App() {
         culture,
         annotator: qa.annotator,
         date_annotated: qa.date_annotated,
-        confidence: qa.confidence,
-        annotation_level: annotationLevel
+        confidence: qa.confidence
       },
       source_info: {
         language: sourceText.language,
@@ -175,15 +174,10 @@ export default function App() {
           : n
       ),
       themes_and_motifs: {
-        atu_type: meta.atu_type,
-        atu_description: meta.main_motif,
         ending_type: meta.ending_type,
         key_values: meta.key_values,
         motif_type: Array.isArray(motif.motif_type) ? motif.motif_type : [],
         atu_categories: Array.isArray(motif.atu_categories) ? motif.atu_categories : [],
-        obstacle_pattern: motif.obstacle_pattern,
-        obstacle_thrower: motif.obstacle_thrower,
-        helper_type: motif.helper_type,
         thinking_process: motif.thinking_process
       },
       analysis: {
@@ -198,7 +192,7 @@ export default function App() {
         qa_notes: qa.notes
       }
     };
-  }, [id, culture, title, sourceText, annotationLevel, meta, motif, paragraphSummaries, proppFns, proppNotes, narrativeStructure, crossValidation, qa]);
+  }, [id, culture, title, sourceText, meta, motif, paragraphSummaries, proppFns, proppNotes, narrativeStructure, crossValidation, qa]);
 
   // ========== Save/Load Functions ==========
   const handleSave = async (version, silent = false) => {
@@ -471,11 +465,18 @@ export default function App() {
   }, [highlightedRanges, narrativeStructure]);
 
   const loadState = (loaded) => {
-    if (loaded.id) setId(loaded.id);
+    if (loaded.id) {
+      setId(loaded.id);
+      // Extract title from ID if not explicitly provided
+      const extractedTitle = extractTitleFromId(loaded.id);
+      if (extractedTitle) {
+        setTitle(extractedTitle);
+      } else if (loaded.title) {
+        setTitle(loaded.title);
+      }
+    }
     if (loaded.culture) setCulture(loaded.culture);
-    if (loaded.title) setTitle(loaded.title);
-    if (loaded.annotationLevel) setAnnotationLevel(loaded.annotationLevel);
-    
+
     setMeta(prev => ({ ...prev, ...loaded.meta }));
     setMotif(prev => {
       const loadedMotif = { ...loaded.motif };
@@ -526,7 +527,6 @@ export default function App() {
     }
     if (loaded.proppFns) setProppFns(loaded.proppFns);
     if (loaded.proppNotes) setProppNotes(loaded.proppNotes);
-    if (loaded.deepMeta) setDeepMeta(prev => ({ ...prev, ...loaded.deepMeta }));
     if (loaded.narrativeStructure) setNarrativeStructure(loaded.narrativeStructure);
     if (loaded.crossValidation) setCrossValidation(prev => ({ ...prev, ...loaded.crossValidation }));
     if (loaded.qa) setQa(prev => ({ ...prev, ...loaded.qa }));
@@ -554,7 +554,6 @@ export default function App() {
     setParagraphSummaries({ perParagraph: {}, combined: [], whole: "" });
     setProppFns([emptyProppFn()]);
     setProppNotes("");
-    setDeepMeta({ ending_type: "HAPPY_REUNION", key_values: [] });
     setNarrativeStructure([""]);
     setCrossValidation({
       shared_story: null,
@@ -605,10 +604,27 @@ export default function App() {
 
     const idGuess = story.id;
     setId(idGuess);
+    // Extract title from ID (everything after second underscore)
+    const extractedTitle = extractTitleFromId(idGuess);
+    setTitle(extractedTitle || "");
+    // Extract path starting from datasets directory
+    let datasetPath = relPathToDatasetHint(story.path);
+    // Ensure it starts with "datasets/" or extract from full path
+    if (!datasetPath.startsWith("datasets/")) {
+      // Try to find datasets in the path
+      const datasetsIndex = datasetPath.indexOf("datasets/");
+      if (datasetsIndex !== -1) {
+        datasetPath = datasetPath.substring(datasetsIndex);
+      } else {
+        // If datasets not found, prepend it (assuming structure)
+        datasetPath = `datasets/${datasetPath}`;
+      }
+    }
+
     setSourceText((prev) => ({
       ...prev,
       text: story.text,
-      reference_uri: `file://${relPathToDatasetHint(story.path)}`
+      reference_uri: datasetPath
     }));
 
     resetState();
@@ -1196,19 +1212,11 @@ export default function App() {
                   id={id}
                   culture={culture}
                   title={title}
-                  onChangeId={setId}
+                  onChangeId={handleIdChange}
                   onChangeCulture={setCulture}
                   onChangeTitle={setTitle}
                   sourceText={sourceText}
                   setSourceText={setSourceText}
-                  annotationLevel={annotationLevel}
-                  setAnnotationLevel={setAnnotationLevel}
-                />
-                <HighLevelMeta
-                  meta={meta}
-                  setMeta={setMeta}
-                  deepMeta={deepMeta}
-                  setDeepMeta={setDeepMeta}
                 />
               </>
             )}
@@ -1217,8 +1225,6 @@ export default function App() {
               <QASection
                 qa={qa}
                 setQa={setQa}
-                persianSource={persianSource}
-                setPersianSource={setPersianSource}
               />
             )}
 
