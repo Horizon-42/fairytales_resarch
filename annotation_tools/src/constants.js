@@ -7,6 +7,92 @@ export const ATU_TYPES = [
   "OTHER"
 ];
 
+// ATU hierarchical categories based on ATU_types.csv
+// Each row corresponds to a range of ATU numbers and a category name.
+// level:
+//  - 1: top-level group (e.g., ANIMAL TALES)
+//  - 2: subgroup
+//  - 3: sub-subgroup (most specific)
+export const ATU_CATEGORY_ROWS = [
+  { start: 1, end: 299, name: "ANIMAL TALES", level: 1 },
+  { start: 1, end: 99, name: "Wild Animals", level: 2 },
+  { start: 1, end: 69, name: "The Clever Fox (Other Animal)", level: 3 },
+  { start: 70, end: 99, name: "Other Wild Animals", level: 3 },
+  { start: 100, end: 149, name: "Wild Animals and Domestic Animals", level: 2 },
+  { start: 150, end: 199, name: "Wild Animals and Humans", level: 2 },
+  { start: 200, end: 219, name: "Domestic Animals", level: 2 },
+  { start: 220, end: 299, name: "Other Animals and Objects", level: 2 },
+
+  { start: 300, end: 749, name: "TALES OF MAGIC", level: 1 },
+  { start: 300, end: 399, name: "Supernatural Adversaries", level: 2 },
+  { start: 400, end: 459, name: "Supernatural or Enchanted Wife (Husband) or Other Relative", level: 2 },
+  { start: 400, end: 424, name: "Wife", level: 3 },
+  { start: 425, end: 449, name: "Husband", level: 3 },
+  { start: 450, end: 459, name: "Brother or Sister", level: 3 },
+  { start: 460, end: 499, name: "Supernatural Tasks", level: 2 },
+  { start: 500, end: 559, name: "Supernatural Helpers", level: 2 },
+  { start: 560, end: 649, name: "Magic Objects", level: 2 },
+  { start: 650, end: 699, name: "Supernatural Power or Knowledge", level: 2 },
+  { start: 700, end: 749, name: "Other Tales of the Supernatural", level: 2 },
+
+  { start: 750, end: 849, name: "RELIGIOUS TALES", level: 1 },
+  { start: 750, end: 779, name: "God Rewards and Punishes", level: 2 },
+  { start: 780, end: 799, name: "The Truth Comes to Light", level: 2 },
+  { start: 800, end: 809, name: "Heaven", level: 2 },
+  { start: 810, end: 826, name: "The Devil", level: 2 },
+  { start: 827, end: 849, name: "Other Religious Tales", level: 2 },
+
+  { start: 850, end: 999, name: "REALISTIC TALES", level: 1 },
+  { start: 850, end: 869, name: "The Man Marries the Princess", level: 2 },
+  { start: 870, end: 879, name: "The Woman Marries the Prince", level: 2 },
+  { start: 880, end: 899, name: "Proofs of Fidelity and Innocence", level: 2 },
+  { start: 900, end: 909, name: "The Obstinate Wife Learns to Obey", level: 2 },
+  { start: 910, end: 919, name: "Good Precepts", level: 2 },
+  { start: 920, end: 929, name: "Clever Acts and Words", level: 2 },
+  { start: 930, end: 949, name: "Tales of Fate", level: 2 },
+  { start: 950, end: 969, name: "Robbers and Murderers", level: 2 },
+  { start: 970, end: 999, name: "Other Realistic Tales", level: 2 },
+
+  { start: 1000, end: 1199, name: "TALES OF THE STUPID OGRE (GIANT, DEVIL)", level: 1 },
+  { start: 1000, end: 1029, name: "Labor Contract", level: 2 },
+  { start: 1030, end: 1059, name: "Partnership between Man and Ogre", level: 2 },
+  { start: 1060, end: 1114, name: "Contest between Man and Ogre", level: 2 },
+  { start: 1115, end: 1144, name: "Man Kills (Injures) Ogre", level: 2 },
+  { start: 1145, end: 1154, name: "Ogre Frightened by Man", level: 2 },
+  { start: 1155, end: 1169, name: "Man Outwits the Devil", level: 2 },
+  { start: 1170, end: 1199, name: "Souls Saved from the Devil", level: 2 },
+
+  { start: 1200, end: 1999, name: "ANECDOTES AND JOKES", level: 1 },
+  { start: 1200, end: 1349, name: "Stories about a Fool", level: 2 },
+  { start: 1350, end: 1439, name: "Stories about Married Couples", level: 2 },
+  { start: 1380, end: 1404, name: "The Foolish Wife and Her Husband", level: 3 },
+  { start: 1405, end: 1429, name: "The Foolish Husband and His Wife", level: 3 },
+  { start: 1430, end: 1439, name: "The Foolish Couple", level: 3 },
+  { start: 1440, end: 1524, name: "Stories about a Woman", level: 2 },
+  { start: 1450, end: 1474, name: "Looking for a Wife", level: 3 },
+  { start: 1475, end: 1499, name: "Jokes about Old Maids", level: 3 },
+  { start: 1500, end: 1524, name: "Other Stories about Women", level: 3 },
+  { start: 1525, end: 1724, name: "Stories about a Man", level: 2 },
+  { start: 1525, end: 1639, name: "The Clever Man", level: 3 },
+  { start: 1640, end: 1674, name: "Lucky Accidents", level: 3 },
+  { start: 1675, end: 1724, name: "The Stupid Man", level: 3 },
+  { start: 1725, end: 1849, name: "Jokes about Clergymen and Religious Figures", level: 2 },
+  { start: 1725, end: 1774, name: "The Clergyman is Tricked", level: 3 },
+  { start: 1775, end: 1799, name: "Clergyman and Sexton", level: 3 },
+  { start: 1800, end: 1849, name: "Other Jokes about Religious Figures", level: 3 },
+  { start: 1850, end: 1874, name: "Anecdotes about Other Groups of People", level: 2 },
+  { start: 1875, end: 1999, name: "Tall Tales", level: 2 },
+
+  { start: 2000, end: 2399, name: "FORMULA TALES", level: 1 },
+  { start: 2000, end: 2100, name: "Cumulative Tales", level: 2 },
+  { start: 2000, end: 2020, name: "Chains Based on Numbers, Objects, Animals, or Names", level: 3 },
+  { start: 2021, end: 2024, name: "Chains Involving Death", level: 3 },
+  { start: 2025, end: 2028, name: "Chains Involving Eating", level: 3 },
+  { start: 2029, end: 2075, name: "Chains Involving Other Events", level: 3 },
+  { start: 2200, end: 2299, name: "Catch Tales", level: 2 },
+  { start: 2300, end: 2399, name: "Other Formula Tales", level: 2 }
+];
+
 export const CHARACTER_ARCHETYPES = [
   "Hero",
   "Shadow",

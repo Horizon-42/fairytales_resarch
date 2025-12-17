@@ -93,6 +93,12 @@ export function mapV2ToState(data) {
         if (typeof mt === "string" && mt.trim()) return [mt];
         return [];
       })(),
+      atu_categories: (() => {
+        const ac = themes.atu_categories;
+        if (Array.isArray(ac)) return ac;
+        if (typeof ac === "string" && ac.trim()) return [ac];
+        return [];
+      })(),
       obstacle_pattern: themes.obstacle_pattern || "",
       obstacle_thrower: normalizeObstacleThrower(themes.obstacle_thrower),
       helper_type: normalizeHelperType(themes.helper_type),
@@ -202,6 +208,12 @@ export function mapV1ToState(data) {
         const mt = data.annotation?.motif?.motif_type;
         if (Array.isArray(mt)) return mt;
         if (typeof mt === "string" && mt.trim()) return [mt];
+        return [];
+      })(),
+      atu_categories: (() => {
+        const ac = data.annotation?.motif?.atu_categories;
+        if (Array.isArray(ac)) return ac;
+        if (typeof ac === "string" && ac.trim()) return [ac];
         return [];
       })(),
       obstacle_thrower: normalizeObstacleThrower(data.annotation?.motif?.obstacle_thrower),

@@ -19,9 +19,13 @@
   "thinking_process": "",
   "annotation": {
     "motif": {
-      "atu_type": "",
+      "atu_type": "510A",
+      "atu_categories": [
+        "ATU 200-219: ANIMAL TALES > Domestic Animals"
+      ],
       "motif_type": [
-        "B: B100 - B199 - Magic Animals"
+        "B: B100 - B199 - Magic Animals",
+        "T: T10 - T99 - Love"
       ],
       "character_archetypes": [
         {

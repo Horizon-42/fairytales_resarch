@@ -364,6 +364,9 @@
       "B: B100 - B199 - Magic Animals",
       "T: T10 - T99 - Love"
     ],
+    "atu_categories": [
+      "ATU 200-219: ANIMAL TALES > Domestic Animals"
+    ],
     "obstacle_pattern": [],
     "obstacle_thrower": [
       "天帝",

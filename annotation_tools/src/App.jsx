@@ -53,6 +53,7 @@ export default function App() {
 
   const [motif, setMotif] = useState({
     atu_type: "",
+    atu_categories: [],
     motif_type: [],
     character_archetypes: [],
     obstacle_pattern: [],
@@ -178,6 +179,7 @@ export default function App() {
         ending_type: meta.ending_type,
         key_values: meta.key_values,
         motif_type: Array.isArray(motif.motif_type) ? motif.motif_type : [],
+        atu_categories: Array.isArray(motif.atu_categories) ? motif.atu_categories : [],
         obstacle_pattern: motif.obstacle_pattern,
         obstacle_thrower: motif.obstacle_thrower,
         helper_type: motif.helper_type,
@@ -484,6 +486,16 @@ export default function App() {
           loadedMotif.motif_type = [];
         }
       }
+      // Ensure atu_categories is an array
+      if (loadedMotif.atu_categories !== undefined) {
+        if (typeof loadedMotif.atu_categories === "string") {
+          loadedMotif.atu_categories = loadedMotif.atu_categories
+            ? [loadedMotif.atu_categories]
+            : [];
+        } else if (!Array.isArray(loadedMotif.atu_categories)) {
+          loadedMotif.atu_categories = [];
+        }
+      }
       return { ...prev, ...loadedMotif };
     });
     
@@ -530,6 +542,7 @@ export default function App() {
     });
     setMotif({
       atu_type: "",
+      atu_categories: [],
       motif_type: [],
       character_archetypes: [],
       obstacle_pattern: [],
