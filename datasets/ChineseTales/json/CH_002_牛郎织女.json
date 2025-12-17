@@ -21,10 +21,8 @@
     "motif": {
       "atu_type": "",
       "atu_categories": [
-        "ATU 200-219: ANIMAL TALES > Domestic Animals",
-        "ATU 500-559: TALES OF MAGIC > Supernatural Helpers",
-        "ATU 300-399: TALES OF MAGIC > Supernatural Adversaries",
-        "ATU 400-424: TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Wife"
+        "ATU 300-366: TALES OF MAGIC > Supernatural Adversaries",
+        "ATU 200-217: ANIMAL TALES > Domestic Animals"
       ],
       "motif_type": [
         "B: B100 - B199 - Magic Animals",

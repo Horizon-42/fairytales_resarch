@@ -1,5 +1,6 @@
 import React from "react";
-import { MOTIF_CATEGORIES, ATU_CATEGORY_ROWS } from "../constants.js";
+import { MOTIF_CATEGORIES } from "../constants.js";
+import { ATU_HIERARCHY } from "../atu_hierarchy.js";
 
 export default function MotifSection({ motif, setMotif }) {
   const [selectedCategoryCode, setSelectedCategoryCode] = React.useState("");
@@ -7,6 +8,7 @@ export default function MotifSection({ motif, setMotif }) {
   const [selectedATULevel1, setSelectedATULevel1] = React.useState("");
   const [selectedATULevel2, setSelectedATULevel2] = React.useState("");
   const [selectedATULevel3, setSelectedATULevel3] = React.useState("");
+  const [selectedATULevel4, setSelectedATULevel4] = React.useState("");
 
   // Ensure motif_type is an array (handle migration from string)
   const motifTypes = Array.isArray(motif.motif_type) 
@@ -22,41 +24,38 @@ export default function MotifSection({ motif, setMotif }) {
   const selectedCategory = MOTIF_CATEGORIES.find(cat => cat.code === selectedCategoryCode);
   const subcategories = selectedCategory ? selectedCategory.subcategories : [];
 
-  // ATU three-level hierarchy derived from ATU_CATEGORY_ROWS
-  const level1Rows = React.useMemo(
-    () => ATU_CATEGORY_ROWS.filter(r => r.level === 1),
-    []
+  // ATU hierarchy from CSV-based structure
+  const level1Items = React.useMemo(() => ATU_HIERARCHY, []);
+
+  const selectedLevel1Item = React.useMemo(
+    () => level1Items.find(item => item.key === selectedATULevel1) || null,
+    [level1Items, selectedATULevel1]
   );
 
-  const selectedLevel1Row = React.useMemo(
-    () => level1Rows.find(r => `${r.start}-${r.end}` === selectedATULevel1) || null,
-    [level1Rows, selectedATULevel1]
+  const level2Items = React.useMemo(() => {
+    if (!selectedLevel1Item) return [];
+    return selectedLevel1Item.children || [];
+  }, [selectedLevel1Item]);
+
+  const selectedLevel2Item = React.useMemo(
+    () => level2Items.find(item => item.key === selectedATULevel2) || null,
+    [level2Items, selectedATULevel2]
   );
 
-  const level2Rows = React.useMemo(() => {
-    if (!selectedLevel1Row) return [];
-    return ATU_CATEGORY_ROWS.filter(
-      r =>
-        r.level === 2 &&
-        r.start >= selectedLevel1Row.start &&
-        r.end <= selectedLevel1Row.end
-    );
-  }, [selectedLevel1Row]);
+  const level3Items = React.useMemo(() => {
+    if (!selectedLevel2Item) return [];
+    return selectedLevel2Item.children || [];
+  }, [selectedLevel2Item]);
 
-  const selectedLevel2Row = React.useMemo(
-    () => level2Rows.find(r => `${r.start}-${r.end}` === selectedATULevel2) || null,
-    [level2Rows, selectedATULevel2]
+  const selectedLevel3Item = React.useMemo(
+    () => level3Items.find(item => item.key === selectedATULevel3) || null,
+    [level3Items, selectedATULevel3]
   );
 
-  const level3Rows = React.useMemo(() => {
-    if (!selectedLevel2Row) return [];
-    return ATU_CATEGORY_ROWS.filter(
-      r =>
-        r.level === 3 &&
-        r.start >= selectedLevel2Row.start &&
-        r.end <= selectedLevel2Row.end
-    );
-  }, [selectedLevel2Row]);
+  const level4Items = React.useMemo(() => {
+    if (!selectedLevel3Item) return [];
+    return selectedLevel3Item.children || [];
+  }, [selectedLevel3Item]);
 
   const handleCategoryChange = (e) => {
     const code = e.target.value;
@@ -75,45 +74,144 @@ export default function MotifSection({ motif, setMotif }) {
     // Reset deeper levels
     setSelectedATULevel2("");
     setSelectedATULevel3("");
+    setSelectedATULevel4("");
   };
 
   const handleATULevel2Change = (e) => {
     const value = e.target.value;
     setSelectedATULevel2(value);
-    // Reset level 3
+    // Reset deeper levels
     setSelectedATULevel3("");
+    setSelectedATULevel4("");
   };
 
   const handleATULevel3Change = (e) => {
     const value = e.target.value;
     setSelectedATULevel3(value);
+    // Reset level 4
+    setSelectedATULevel4("");
+  };
+
+  // Auto-select if only one option available at Level 2
+  React.useEffect(() => {
+    if (selectedATULevel1 && level2Items.length === 1 && !selectedATULevel2 && level2Items[0]) {
+      setSelectedATULevel2(level2Items[0].key);
+    }
+  }, [selectedATULevel1, level2Items, selectedATULevel2]);
+
+  // Auto-select if only one option available at Level 3
+  React.useEffect(() => {
+    if (selectedATULevel2 && level3Items.length === 1 && !selectedATULevel3 && level3Items[0]) {
+      setSelectedATULevel3(level3Items[0].key);
+    }
+  }, [selectedATULevel2, level3Items, selectedATULevel3]);
+
+  // Auto-select if only one option available at Level 4
+  React.useEffect(() => {
+    if (selectedATULevel3 && level4Items.length === 1 && !selectedATULevel4 && level4Items[0]) {
+      setSelectedATULevel4(level4Items[0].key);
+    }
+  }, [selectedATULevel3, level4Items, selectedATULevel4]);
+
+  const handleATULevel4Change = (e) => {
+    const value = e.target.value;
+    setSelectedATULevel4(value);
   };
 
   const handleAddATUCategory = () => {
-    if (!selectedATULevel1) return;
+    // Helper function to build path label, skipping "general" at level 3
+    const buildPathLabel = () => {
+      const parts = [];
+      if (selectedLevel1Item) parts.push(selectedLevel1Item.name);
+      if (selectedLevel2Item) parts.push(selectedLevel2Item.name);
+      // Skip level 3 if it's "general"
+      if (selectedLevel3Item && selectedLevel3Item.name !== "general") {
+        parts.push(selectedLevel3Item.name);
+      }
+      return parts.join(" > ");
+    };
 
-    const l1 = selectedLevel1Row;
-    const l2 = selectedLevel2Row;
-    const l3 =
-      level3Rows.find(r => `${r.start}-${r.end}` === selectedATULevel3) || null;
+    // Helper function to get all level 4 items from the selected level
+    const getAllLevel4Items = () => {
+      if (selectedLevel3Item && selectedLevel3Item.children) {
+        return selectedLevel3Item.children.filter(item => item.level === 4);
+      }
+      if (selectedLevel2Item && selectedLevel2Item.children) {
+        // Get all level 4 items from all level 3 children
+        const allLevel4Items = [];
+        selectedLevel2Item.children.forEach(level3 => {
+          if (level3.children) {
+            level3.children.forEach(item => {
+              if (item.level === 4) {
+                allLevel4Items.push(item);
+              }
+            });
+          }
+        });
+        return allLevel4Items;
+      }
+      return [];
+    };
 
-    // Choose the most specific available level
-    const chosen = l3 || l2 || l1;
-    if (!chosen) return;
+    // Helper function to calculate ATU range from level4Items
+    const calculateATURange = () => {
+      const allLevel4Items = getAllLevel4Items();
+      if (allLevel4Items.length === 0) return null;
+      const numbers = allLevel4Items.map(item => parseInt(item.number)).filter(n => !isNaN(n));
+      if (numbers.length === 0) return null;
+      const min = Math.min(...numbers);
+      const max = Math.max(...numbers);
+      return min === max ? `${min}` : `${min}-${max}`;
+    };
 
-    const parts = [];
-    if (l1) parts.push(l1.name);
-    if (l2) parts.push(l2.name);
-    if (l3) parts.push(l3.name);
-    const pathLabel = parts.join(" > ");
+    // If level 4 (specific ATU) is selected, use that
+    if (selectedATULevel4) {
+      const atuItem = level4Items.find(item => item.key === selectedATULevel4);
+      if (!atuItem) return;
 
-    const label = `ATU ${chosen.start}-${chosen.end}: ${pathLabel}`;
+      const pathLabel = buildPathLabel();
+      const label = `ATU ${atuItem.number}: ${atuItem.title} (${pathLabel})`;
 
-    if (atuSelections.includes(label)) {
-      // Already selected, just reset selection
+      if (atuSelections.includes(label)) {
+        // Already selected, reset selection
+        setSelectedATULevel1("");
+        setSelectedATULevel2("");
+        setSelectedATULevel3("");
+        setSelectedATULevel4("");
+        return;
+      }
+
+      const next = [...atuSelections, label];
+      setMotif({ ...motif, atu_categories: next });
+
       setSelectedATULevel1("");
       setSelectedATULevel2("");
       setSelectedATULevel3("");
+      setSelectedATULevel4("");
+      return;
+    }
+
+    // Otherwise, add the most specific selected category level
+    const chosen = selectedLevel3Item || selectedLevel2Item || selectedLevel1Item;
+    if (!chosen) return;
+
+    const pathLabel = buildPathLabel();
+
+    // If level 4 is not selected, add ATU range
+    let label;
+    const range = calculateATURange();
+    if (range) {
+      label = `ATU ${range}: ${pathLabel}`;
+    } else {
+      label = `ATU Category: ${pathLabel}`;
+    }
+
+    if (atuSelections.includes(label)) {
+      // Already selected, reset selection
+      setSelectedATULevel1("");
+      setSelectedATULevel2("");
+      setSelectedATULevel3("");
+      setSelectedATULevel4("");
       return;
     }
 
@@ -123,6 +221,7 @@ export default function MotifSection({ motif, setMotif }) {
     setSelectedATULevel1("");
     setSelectedATULevel2("");
     setSelectedATULevel3("");
+    setSelectedATULevel4("");
   };
 
   const handleRemoveATUCategory = (index) => {
@@ -185,66 +284,78 @@ export default function MotifSection({ motif, setMotif }) {
   return (
     <section className="card">
       <h2>Motifs</h2>
-      {/* ATU three-level category selector (multi-select) */}
+      {/* ATU hierarchical category selector (multi-select) - based on CSV */}
       <div style={{ marginTop: "0.75rem" }}>
         <div className="section-header-row">
           <span>ATU Categories (multi-select)</span>
         </div>
         <div className="grid-2" style={{ marginTop: "0.25rem" }}>
           <label>
-            ATU Level 1
+            Level 1 (Main Category)
             <select value={selectedATULevel1} onChange={handleATULevel1Change}>
               <option value="">– Select Level 1 –</option>
-              {level1Rows.map((row) => (
-                <option
-                  key={`${row.start}-${row.end}`}
-                  value={`${row.start}-${row.end}`}
-                >
-                  {row.start}-{row.end} – {row.name}
+              {level1Items.map((item) => (
+                <option key={item.key} value={item.key}>
+                  {item.name}
                 </option>
               ))}
             </select>
           </label>
           <label>
-            ATU Level 2
+            Level 2 (Subcategory)
             <select
               value={selectedATULevel2}
               onChange={handleATULevel2Change}
-              disabled={!selectedATULevel1 || level2Rows.length === 0}
+              disabled={!selectedATULevel1 || level2Items.length === 0}
             >
               <option value="">– Select Level 2 –</option>
-              {level2Rows.map((row) => (
-                <option
-                  key={`${row.start}-${row.end}`}
-                  value={`${row.start}-${row.end}`}
-                >
-                  {row.start}-{row.end} – {row.name}
+              {level2Items.map((item) => (
+                <option key={item.key} value={item.key}>
+                  {item.name}
                 </option>
               ))}
             </select>
           </label>
         </div>
-        <div style={{ marginTop: "0.25rem" }}>
-          <label>
-            ATU Level 3
-            <select
-              value={selectedATULevel3}
-              onChange={handleATULevel3Change}
-              disabled={!selectedATULevel2 || level3Rows.length === 0}
-            >
-              <option value="">– Select Level 3 –</option>
-              {level3Rows.map((row) => (
-                <option
-                  key={`${row.start}-${row.end}`}
-                  value={`${row.start}-${row.end}`}
-                >
-                  {row.start}-{row.end} – {row.name}
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
-        {(selectedATULevel1 || selectedATULevel2 || selectedATULevel3) && (
+        {selectedATULevel2 && level3Items.length > 0 && (
+          <div style={{ marginTop: "0.25rem" }}>
+            <label>
+              Level 3 (Sub-subcategory)
+              <select
+                value={selectedATULevel3}
+                onChange={handleATULevel3Change}
+                disabled={!selectedATULevel2}
+              >
+                <option value="">– Select Level 3 (optional) –</option>
+                {level3Items.map((item) => (
+                  <option key={item.key} value={item.key}>
+                    {item.name}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+        )}
+        {selectedATULevel3 && level4Items.length > 0 && (
+          <div style={{ marginTop: "0.25rem" }}>
+            <label>
+              Level 4 (Specific ATU)
+              <select
+                value={selectedATULevel4}
+                onChange={handleATULevel4Change}
+                disabled={!selectedATULevel3}
+              >
+                <option value="">– Select Specific ATU (optional) –</option>
+                {level4Items.map((item) => (
+                  <option key={item.key} value={item.key}>
+                    ATU {item.number}: {item.title}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+        )}
+        {(selectedATULevel1 || selectedATULevel2 || selectedATULevel3 || selectedATULevel4) && (
           <button
             type="button"
             className="ghost-btn"
