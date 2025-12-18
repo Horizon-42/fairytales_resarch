@@ -46,6 +46,16 @@
           "name": "梁山伯",
           "alias": "梁; 山伯; ",
           "archetype": "Hero"
+        },
+        {
+          "name": "师娘",
+          "alias": "",
+          "archetype": "Sidekick/Helper"
+        },
+        {
+          "name": "马文才",
+          "alias": "",
+          "archetype": ""
         }
       ],
       "obstacle_pattern": "",
@@ -139,6 +149,54 @@
           },
           "evidence": "男女主人公结为义兄弟; 梁山伯祝英台义结金兰",
           "narrative_event_id": "5915a20d-f495-45cc-a337-a60db959599f"
+        },
+        {
+          "id": "d89bbafb-12f3-4cf6-a2f8-98778d90a042",
+          "fn": "RECOGNITION",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 1345,
+            "end": 1574,
+            "text": "转眼，三年过去了。一天，祝英台收到一封家书，说母亲得了重病，要她赶快回家。祝英台想到回去之后可能再也见不着梁山伯了，心里十分难过。她告诉银心，自己已经悄悄爱上了梁山伯，不想就这样离开他。银心劝她去和师娘商量一下。\n祝英台找到师娘，鼓足勇气说：“师娘，其实我不是男子，因为想读书，才女扮男装来到杭州。”\n师娘笑着说：“我早就看出来了，你找我有什么事呢？”\n祝英台低下头，难为情地说：“我收到家书，过两天就得回去看望母亲，可我喜欢上了梁山伯，不想就这样离开他。”"
+          },
+          "evidence": "女英雄迫于无奈, 坦白隐秘之爱; 祝英台必须归家, 不得已承认女儿身以及对梁山伯的爱意",
+          "narrative_event_id": "0200683e-56e8-45a7-979f-5cadb5eb2157"
+        },
+        {
+          "id": "8e949b3f-ea53-47c9-b5bc-57fe3f54503f",
+          "fn": "TRANSFIGURATION",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 2872,
+            "end": 3211,
+            "text": "祝英台走后，梁山伯非常寂寞，他不停地抚摸着祝英台送他扇坠，想起了她临行时说的话。于是，他便急忙去找师娘问个明白。\n师娘从怀里取出另一只扇坠说：“这是英台临走时交给我的，她托我为她做媒，如果谁有同样的扇坠，就能和她结为夫妻。”\n梁山伯拿出自己的扇坠一比，刚好是一对，可是他还是大惑不解，便问：“师娘的话，山伯不明白，英台临走时只说愿意为我和她的妹妹做媒。”\n师娘笑着说：“你这个糊涂孩子，英台其实不是男人，她说的妹妹，就是她自己。”\n梁山伯又惊又喜，简直不敢相信自己的耳朵，他想起祝英台临走时一次又一次的暗示，懊悔不已，直骂自己愚钝。\n师母笑着：“既然你已经知道了事情的来龙去脉，就赶快去祝府提亲去吧，不要误了大好姻缘。”梁山伯谢过师娘，连忙和四九收拾行李，马不停蹄地向祝府赶去。"
+          },
+          "evidence": "祝英台走后，梁山伯非常寂寞，他不停地抚摸着祝英台送他扇坠，想起了她临行时说的话。于是，他便急忙去找师娘问个明白。\n师娘从怀里取出另一只扇坠说：“这是英台临走时交给我的，她托我为她做媒，如果谁有同样的扇",
+          "narrative_event_id": "c84faeef-5c89-412c-829e-40476994e3e2"
+        },
+        {
+          "id": "7ac0ccdc-36f5-4f15-a8e0-749abf00153e",
+          "fn": "STRUGGLE",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 3501,
+            "end": 3814,
+            "text": "祝员外气得浑身发抖，大声喝道：“大胆，婚姻大事乃父母之命，怎么可以自己决定？”\n祝英台倔强地回答：“我的婚姻当然我自己做主，除了梁山伯我谁也不嫁。”\n“这个由不得你，你母亲与我已经将你许配给了马太守的公子马文才，你嫁也得嫁，不嫁也得嫁。”祝员外冷冷地说。\n“那个马文才整天游手好闲，不学无术，我才不要嫁给他那样的人。”祝英台不甘示弱。\n“马家有权有势，又跟我们门当户对，这么好的姻缘上哪里找去？梁山伯寒门小户，根本不配高攀我们。”\n“反正我就是喜欢梁山伯，不管他是穷还是富。”\n“放肆，这由不得你。马家的聘礼我们都收下了。”\n祝英台见父亲执意要将自己许配给马文才，非常气愤，三天三夜不吃也不喝。眼看婚期就快到了，祝员外很着急。"
+          },
+          "evidence": "祝员外气得浑身发抖，大声喝道：“大胆，婚姻大事乃父母之命，怎么可以自己决定？”\n祝英台倔强地回答：“我的婚姻当然我自己做主，除了梁山伯我谁也不嫁。”\n“这个由不得你，你母亲与我已经将你许配给了马太守的",
+          "narrative_event_id": "9ef4ad7b-319c-4778-bdb2-76aeee3ec7f7"
         }
       ],
       "propp_notes": ""
@@ -167,7 +225,13 @@
       ],
       "targets": [
         "祝员外"
-      ]
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "persuade",
+        "status": "success",
+        "context": "beg"
+      }
     },
     {
       "id": "f67c55cf-3b7c-40fd-8140-01bdcffe65bd",
@@ -190,7 +254,13 @@
       "time_order": 1,
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "parent_child",
-      "sentiment": "negative"
+      "sentiment": "negative",
+      "action_layer": {
+        "category": "physical",
+        "type": "restrain",
+        "status": "success",
+        "context": "restrict in home"
+      }
     },
     {
       "id": "391c105f-39f0-4b10-b54f-8f63e370f1ca",
@@ -232,7 +302,12 @@
       "time_order": 4,
       "relationship_level1": "Social & Alliance",
       "relationship_level2": "friend",
-      "sentiment": "positive"
+      "sentiment": "positive",
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "status": "success"
+      }
     },
     {
       "id": "5915a20d-f495-45cc-a337-a60db959599f",
@@ -261,6 +336,93 @@
         "type": "promise",
         "status": "success",
         "context": "oath"
+      }
+    },
+    {
+      "id": "0200683e-56e8-45a7-979f-5cadb5eb2157",
+      "event_type": "RECOGNITION",
+      "description": "女英雄迫于无奈, 坦白隐秘之爱; 祝英台必须归家, 不得已承认女儿身以及对梁山伯的爱意",
+      "agents": [
+        "祝英台"
+      ],
+      "targets": [
+        "师娘"
+      ],
+      "text_span": {
+        "start": 1345,
+        "end": 1574,
+        "text": "转眼，三年过去了。一天，祝英台收到一封家书，说母亲得了重病，要她赶快回家。祝英台想到回去之后可能再也见不着梁山伯了，心里十分难过。她告诉银心，自己已经悄悄爱上了梁山伯，不想就这样离开他。银心劝她去和师娘商量一下。\n祝英台找到师娘，鼓足勇气说：“师娘，其实我不是男子，因为想读书，才女扮男装来到杭州。”\n师娘笑着说：“我早就看出来了，你找我有什么事呢？”\n祝英台低下头，难为情地说：“我收到家书，过两天就得回去看望母亲，可我喜欢上了梁山伯，不想就这样离开他。”"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6,
+      "relationship_level1": "Hierarchy",
+      "relationship_level2": "mentor_student",
+      "sentiment": "positive",
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "status": "success",
+        "context": "confess"
+      }
+    },
+    {
+      "id": "c84faeef-5c89-412c-829e-40476994e3e2",
+      "event_type": "TRANSFIGURATION",
+      "description": "男英雄意识到女英雄的真实身份以及她的爱意; 梁山伯得知祝英台是女儿身以及她的爱意",
+      "agents": [
+        "梁山伯"
+      ],
+      "targets": [
+        "祝英台"
+      ],
+      "text_span": {
+        "start": 2872,
+        "end": 3211,
+        "text": "祝英台走后，梁山伯非常寂寞，他不停地抚摸着祝英台送他扇坠，想起了她临行时说的话。于是，他便急忙去找师娘问个明白。\n师娘从怀里取出另一只扇坠说：“这是英台临走时交给我的，她托我为她做媒，如果谁有同样的扇坠，就能和她结为夫妻。”\n梁山伯拿出自己的扇坠一比，刚好是一对，可是他还是大惑不解，便问：“师娘的话，山伯不明白，英台临走时只说愿意为我和她的妹妹做媒。”\n师娘笑着说：“你这个糊涂孩子，英台其实不是男人，她说的妹妹，就是她自己。”\n梁山伯又惊又喜，简直不敢相信自己的耳朵，他想起祝英台临走时一次又一次的暗示，懊悔不已，直骂自己愚钝。\n师母笑着：“既然你已经知道了事情的来龙去脉，就赶快去祝府提亲去吧，不要误了大好姻缘。”梁山伯谢过师娘，连忙和四九收拾行李，马不停蹄地向祝府赶去。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 11,
+      "relationship_level1": "Romance",
+      "relationship_level2": "lover",
+      "sentiment": "romantic",
+      "action_layer": {
+        "category": "mental",
+        "type": "realize",
+        "status": "success",
+        "context": "discovery"
+      }
+    },
+    {
+      "id": "9ef4ad7b-319c-4778-bdb2-76aeee3ec7f7",
+      "event_type": "STRUGGLE",
+      "description": "女英雄不惜绝食向家人表达抗议; 祝员外想要祝英台嫁给马文才, 祝英台不惜绝食抗议",
+      "agents": [
+        "祝员外"
+      ],
+      "targets": [
+        "祝英台"
+      ],
+      "text_span": {
+        "start": 3501,
+        "end": 3814,
+        "text": "祝员外气得浑身发抖，大声喝道：“大胆，婚姻大事乃父母之命，怎么可以自己决定？”\n祝英台倔强地回答：“我的婚姻当然我自己做主，除了梁山伯我谁也不嫁。”\n“这个由不得你，你母亲与我已经将你许配给了马太守的公子马文才，你嫁也得嫁，不嫁也得嫁。”祝员外冷冷地说。\n“那个马文才整天游手好闲，不学无术，我才不要嫁给他那样的人。”祝英台不甘示弱。\n“马家有权有势，又跟我们门当户对，这么好的姻缘上哪里找去？梁山伯寒门小户，根本不配高攀我们。”\n“反正我就是喜欢梁山伯，不管他是穷还是富。”\n“放肆，这由不得你。马家的聘礼我们都收下了。”\n祝英台见父亲执意要将自己许配给马文才，非常气愤，三天三夜不吃也不喝。眼看婚期就快到了，祝员外很着急。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 13,
+      "relationship_level1": "Family & Kinship",
+      "relationship_level2": "parent_child",
+      "sentiment": "negative",
+      "action_layer": {
+        "category": "communicative",
+        "type": "command",
+        "status": "attempt",
+        "context": "task_assignment"
       }
     }
   ],
