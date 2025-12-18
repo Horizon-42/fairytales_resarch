@@ -1,0 +1,56 @@
+{
+  "id": "CH_198_董永与七仙女",
+  "culture": "Chinese",
+  "title": "",
+  "source_text": {
+    "text": "结婚以后，夫妻俩双双到主人傅员外家去上工，因为卖身文契上原写着\"无牵无挂\" ，如今凭空多添了一个女人，傅员外不肯收留。经过恳求和争论，才限定董永夫妻在当天晚上织成云锦十匹，如果织出来，三年长工改为百日，如果织不出，三年之后再加三年。七仙女马上答应了，董永却非常焦愁。\n当天晚上，七仙女劝烦闷的董永先去睡了，自已则在屋子里烧起一炷下凡时候姐妹们赠送她的\" 难香\" 来。顷刻之间，天上的众仙女闻香赶到，听了小妹妹的倾诉，大家马上一齐动手，\"请动天丝\"，\"‘经’将起来，‘梳’将起来\"，这些灵巧的姑娘，天庭的织造能手，果然就在一夜之间织出了布满了花鸟的绝烂的云锦十匹。\n第二天，夫妻俩便把这云锦送给主人，主人大为惊异。到了百日期满，他们就欢喜地去辞别主人，回他们自己的家。因为有约在先，主人无法留难，只好让他们回去。在回家的路上，七仙女才告诉董永，说她已经有了身孕，董永听了，更是喜上加喜。他们都幻想着建立一个小家，像牛郎织女那样过男耕女织的勤劳而幸福的生活。可是，天帝查出七仙女私下凡尘，\"龙心大怒\"，立刻派遺天使，催动钟鼓，传旨令七仙女于\" 午时三刻，返回天庭，倘若不然，定派天兵天将捉拿，并将董永“碎尸万段”。幸福的美梦就这样轻易地破碎了。七仙女怕她的情郎果遭毒手，只得在他们婚配时候的那棵老槐树下和董永惨痛分离。原来董永叫一声应一声的老槐树，现在叫千声叫万声它都不应了，真是成了一段哑木头了！恩爱夫妻一下子就要永远分离，这是何其残酷的悲剧！可是七仙女在和董永约定\"来年碧桃花开日，槐树下面把子交\" 之后，终于还是趁董永昏倒在地的顷刻，跟随着天使上天去了。\n",
+    "language": "zh",
+    "type": "full_text",
+    "reference_uri": "datasets/texts/CH_198_董永与七仙女.txt"
+  },
+  "metadata": {
+    "main_motif": "",
+    "atu_type": "",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [],
+    "target_motif": true
+  },
+  "thinking_process": "",
+  "annotation": {
+    "motif": {
+      "atu_type": "",
+      "atu_categories": [],
+      "motif_type": [],
+      "character_archetypes": [],
+      "obstacle_pattern": [],
+      "obstacle_thrower": [],
+      "helper_type": [],
+      "thinking_process": ""
+    },
+    "deep": {
+      "paragraph_summaries": {
+        "per_paragraph": {},
+        "combined": [],
+        "whole": ""
+      },
+      "propp_functions": [],
+      "propp_notes": ""
+    }
+  },
+  "narrative_structure": [],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    }
+  },
+  "qa": {
+    "annotator": "",
+    "date_annotated": "2025-12-17",
+    "confidence": 0.8,
+    "notes": ""
+  }
+}

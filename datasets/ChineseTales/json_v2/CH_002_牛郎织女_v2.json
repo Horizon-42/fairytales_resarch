@@ -85,7 +85,10 @@
         "text": "相传织女是天帝的孙女，或说是王母娘娘的外孙女，这都用不着去管它了 ，总之，是有这么一个仙女，住在银河的东边，用了一种神奇的丝，在织布机上织出了层层叠叠的美丽云彩，随着时间和季节的不同而变幻它们的颜色，叫做\" 天衣\"，意思就是给天做的衣裳。天也和人一样,是要穿衣裳的，虽然碧蓝如洗的赤裸青天自有它的美丽。做这种工作，除了织女而外，还有别的六位年轻的仙女，都是织女的姐妹，也都是天上的织造能手；织女在他们当中，是最勤勉、努力的一个。"
       },
       "id": "05828210-380c-4e6f-936c-d5164c1524f6",
-      "time_order": 1
+      "time_order": 1,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": ""
     },
     {
       "event_type": "VILLAINY",
@@ -105,7 +108,10 @@
       "object_type": "",
       "instrument": "",
       "id": "38bb88d7-ed7a-402f-a2b1-6baa1c0f5840",
-      "time_order": 2
+      "time_order": 2,
+      "relationship_level1": "家庭与亲缘(Family & Kinship)",
+      "relationship_level2": "sibling",
+      "sentiment": "negative"
     },
     {
       "event_type": "LACK",
@@ -123,7 +129,10 @@
       "object_type": "",
       "instrument": "",
       "id": "262880a0-126d-4734-9786-dcb806220381",
-      "time_order": 4
+      "time_order": 4,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": ""
     },
     {
       "id": "317d5e4b-255a-4acb-a23d-206a5e4afeb2",
@@ -143,14 +152,17 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 3
+      "time_order": 3,
+      "relationship_level1": "社交与结盟(Social & Alliance)",
+      "relationship_level2": "ally",
+      "sentiment": "positive"
     },
     {
       "id": "51923dc8-acf0-477d-b540-36baccc032fd",
       "event_type": "GUIDANCE",
       "description": "去河边, 去夺取织女的衣服",
       "agents": [
-        "牛郎"
+        "老牛"
       ],
       "targets": [
         "牛郎"
@@ -163,7 +175,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 5
+      "time_order": 5,
+      "relationship_level1": "社交与结盟(Social & Alliance)",
+      "relationship_level2": "ally",
+      "sentiment": "positive"
     },
     {
       "id": "fbbacb08-5f24-480e-8fdb-3a9fed2da817",
@@ -183,7 +198,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 6
+      "time_order": 6,
+      "relationship_level1": "浪漫与激情(Romance)",
+      "relationship_level2": "lover",
+      "sentiment": "romantic"
     },
     {
       "id": "2865c3b3-8f6e-4247-afb4-ed81b0d3cd98",
@@ -204,7 +222,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 8
+      "time_order": 8,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": ""
     },
     {
       "id": "6317923a-117f-4f21-a69d-5dd96f69b92a",
@@ -225,7 +246,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 7
+      "time_order": 7,
+      "relationship_level1": "家庭与亲缘(Family & Kinship)",
+      "relationship_level2": "parent_child",
+      "sentiment": "positive"
     },
     {
       "id": "57c3dded-bfbd-4335-aa4a-413524a8c7d5",
@@ -246,7 +270,10 @@
       "target_type": "object",
       "object_type": "normal_object",
       "instrument": "粪瓢",
-      "time_order": 9
+      "time_order": 9,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": ""
     },
     {
       "id": "098695bb-91a7-4a58-b32d-46325ac17351",
@@ -267,7 +294,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 9
+      "time_order": 9,
+      "relationship_level1": "对抗与敌对(Adversarial)",
+      "relationship_level2": "enemy",
+      "sentiment": "hostile"
     },
     {
       "id": "cdbee6a6-dc9b-4040-8ce9-1e48d382acb3",
@@ -288,7 +318,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "牛皮;Skin of the cow",
-      "time_order": 10
+      "time_order": 10,
+      "relationship_level1": "社交与结盟(Social & Alliance)",
+      "relationship_level2": "ally",
+      "sentiment": "positive"
     },
     {
       "id": "64e5afbc-b36a-4fda-a2ef-78bb6c13fa83",
@@ -309,7 +342,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "金簪",
-      "time_order": 11
+      "time_order": 11,
+      "relationship_level1": "对抗与敌对(Adversarial)",
+      "relationship_level2": "enemy",
+      "sentiment": "hostile"
     },
     {
       "id": "1dcdf54d-0930-41fd-a1b4-b4c4d2113162",
@@ -331,7 +367,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 12
+      "time_order": 12,
+      "relationship_level1": "对抗与敌对(Adversarial)",
+      "relationship_level2": "enemy",
+      "sentiment": "positive"
     },
     {
       "id": "e9a8526d-44ac-4793-a415-c1d4a526fa3e",
@@ -351,7 +390,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "梭;拐子",
-      "time_order": 13
+      "time_order": 13,
+      "relationship_level1": "浪漫与激情(Romance)",
+      "relationship_level2": "lover",
+      "sentiment": "romantic"
     }
   ],
   "themes_and_motifs": {
@@ -366,7 +408,9 @@
     ],
     "atu_categories": [
       "ATU 300-366: TALES OF MAGIC > Supernatural Adversaries",
-      "ATU 200-217: ANIMAL TALES > Domestic Animals"
+      "ATU 200-217: ANIMAL TALES > Domestic Animals",
+      "ATU 413: Marriage by Stealing Clothing (TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Wife)",
+      "ATU 400: The Quest for a Lost Bride (TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Wife)"
     ],
     "obstacle_thrower": [
       "天帝",

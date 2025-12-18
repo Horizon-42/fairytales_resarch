@@ -1,0 +1,393 @@
+{
+  "version": "2.0",
+  "metadata": {
+    "id": "CH_007_嫦娥奔月",
+    "title": "嫦娥奔月",
+    "culture": "Chinese",
+    "annotator": "",
+    "date_annotated": "2025-12-17",
+    "confidence": 0.8
+  },
+  "source_info": {
+    "language": "zh",
+    "type": "full_text",
+    "reference_uri": "datasets/texts/CH_007_嫦娥奔月.txt",
+    "text_content": "相传远古的时候，天上突然出现十个太阳，晒得老百姓民不聊生。有一个力大无比的壮汉名为后羿，他决心为老百姓解除这个苦难。后羿登上昆仑山顶，运足气力，拉满神弓并一口气射下九个太阳。并且对天上最后一个太阳说：“从今以后，你每天必须按时升起，按时落下，为民造福。”\n后羿为老百姓除害，大伙都很敬重他。皆拜他为师，跟他学习武艺。有个叫逄蒙的人，为人奸诈贪婪，也随着众人拜在后羿门下。后羿妻子嫦娥是个美丽善良的女子。她经常接济生活贫苦的乡亲，乡亲们都非常喜欢她。\n一天，西王母送给后羿一颗仙药。据说人吃了这种药，不但能长生不老，还可以升天成仙。可后羿不愿意离开嫦娥，就让她将仙药藏在百宝匣里。这件事不知怎么被蓬蒙知道，他一心想仙药弄到手。八月十五日清晨，后羿要带弟子出门去，蓬蒙假装生病，留了下来。到了晚上，蓬蒙手提宝剑，迫不及待地闯进后羿家里，威逼嫦娥把仙药交出来。嫦娥心里想，让这样的人吃了长生不老药，不是要害更多的人吗。于是便机智地与蓬蒙周旋。蓬蒙见嫦娥不肯交出仙药，就翻箱倒柜，四处搜寻。眼看就要搜到百宝匣了，嫦娥疾步向前，取出仙药，一口吞了下去。嫦娥吃了仙药，突然飘飘悠悠地飞了起来。她飞出了窗子，飞过了洒满银辉的郊野，越飞越高。碧蓝碧蓝的夜空挂着一轮明月，嫦娥一直朝着月亮飞去。\n后羿外出回来，不见嫦娥。焦急冲出门外，只见皓月当空，月亮上树影婆娑，一只玉兔在树下跳来跳去。看见妻子正站在一棵桂树旁深情地凝望着自己。“嫦娥，嫦娥”后羿连声呼唤，不顾一切地朝着月亮追去。可是他向前追三步，月亮就向后退三步，怎么也追不上。乡亲们很想念好心的嫦娥，在院子里摆上嫦娥平日爱吃的食品，遥遥地为她祝福。从此以后每年八月十五，就成为中秋节。\n"
+  },
+  "characters": [
+    {
+      "name": "后羿",
+      "alias": "",
+      "archetype": "Hero"
+    },
+    {
+      "name": "逄蒙",
+      "alias": "",
+      "archetype": "Villain"
+    },
+    {
+      "name": "嫦娥",
+      "alias": "后羿妻子",
+      "archetype": "Lover"
+    },
+    {
+      "name": "西王母",
+      "alias": "",
+      "archetype": "Ruler"
+    },
+    {
+      "name": "玉兔",
+      "alias": "",
+      "archetype": "Other"
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "1c31a618-047e-4da9-8aa7-0e08270409ec",
+      "event_type": "SOLUTION",
+      "description": "英雄解决了自然灾害;后羿射日",
+      "agents": [
+        "后羿"
+      ],
+      "targets": [
+        "多余的太阳"
+      ],
+      "text_span": {
+        "start": 0,
+        "end": 127,
+        "text": "相传远古的时候，天上突然出现十个太阳，晒得老百姓民不聊生。有一个力大无比的壮汉名为后羿，他决心为老百姓解除这个苦难。后羿登上昆仑山顶，运足气力，拉满神弓并一口气射下九个太阳。并且对天上最后一个太阳说：“从今以后，你每天必须按时升起，按时落下，为民造福。”"
+      },
+      "target_type": "object",
+      "object_type": "normal_object",
+      "instrument": "",
+      "time_order": 1,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": ""
+    },
+    {
+      "id": "75043d20-3a1b-4b96-812f-a124181d61ff",
+      "event_type": "TRICKERY",
+      "description": "徒弟假意拜师,但心怀不轨",
+      "agents": [
+        "逄蒙"
+      ],
+      "targets": [
+        "后羿"
+      ],
+      "text_span": {
+        "start": 128,
+        "end": 185,
+        "text": "后羿为老百姓除害，大伙都很敬重他。皆拜他为师，跟他学习武艺。有个叫逄蒙的人，为人奸诈贪婪，也随着众人拜在后羿门下。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationship_level1": "权威与阶级(Hierarchy)",
+      "relationship_level2": "master_servant",
+      "sentiment": "negative"
+    },
+    {
+      "id": "e3a01e45-29cb-49d2-bedb-3cef68429b37",
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "丈夫为了妻子放弃了魔法物品的使用;后羿出于对嫦娥的爱放弃了使用仙药",
+      "agents": [
+        "后羿"
+      ],
+      "targets": [
+        "嫦娥"
+      ],
+      "text_span": {
+        "start": 185,
+        "end": 289,
+        "text": "后羿妻子嫦娥是个美丽善良的女子。她经常接济生活贫苦的乡亲，乡亲们都非常喜欢她。\n一天，西王母送给后羿一颗仙药。据说人吃了这种药，不但能长生不老，还可以升天成仙。可后羿不愿意离开嫦娥，就让她将仙药藏在百宝匣里。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "仙药",
+      "time_order": 3,
+      "relationship_level1": "浪漫与激情(Romance)",
+      "relationship_level2": "lover",
+      "sentiment": "romantic"
+    },
+    {
+      "id": "139f07e6-066d-4329-bf2a-2b77871ac32e",
+      "event_type": "VILLAINY",
+      "description": "反派试图抢夺宝物;",
+      "agents": [
+        "逄蒙"
+      ],
+      "targets": [
+        "嫦娥"
+      ],
+      "text_span": {
+        "start": 289,
+        "end": 377,
+        "text": "这件事不知怎么被蓬蒙知道，他一心想仙药弄到手。八月十五日清晨，后羿要带弟子出门去，蓬蒙假装生病，留了下来。到了晚上，蓬蒙手提宝剑，迫不及待地闯进后羿家里，威逼嫦娥把仙药交出来。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationship_level1": "权威与阶级(Hierarchy)",
+      "relationship_level2": "master_servant",
+      "sentiment": "negative"
+    },
+    {
+      "id": "fca14a75-7245-4a99-bca1-54d694792e50",
+      "event_type": "STRUGGLE",
+      "description": "英雄的爱人用智慧与反派周旋",
+      "agents": [
+        "嫦娥"
+      ],
+      "targets": [
+        "逄蒙"
+      ],
+      "text_span": {
+        "start": 377,
+        "end": 418,
+        "text": "嫦娥心里想，让这样的人吃了长生不老药，不是要害更多的人吗。于是便机智地与蓬蒙周旋。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationship_level1": "权威与阶级(Hierarchy)",
+      "relationship_level2": "master_servant",
+      "sentiment": "negative"
+    },
+    {
+      "id": "c41ff3c8-35f9-47f7-a97a-1b3f35ec5e67",
+      "event_type": "STRUGGLE",
+      "description": "英雄的爱人为了阻止反派, 抢先使用魔法物品; 嫦娥为了阻止逄蒙吞服仙药",
+      "agents": [
+        "嫦娥"
+      ],
+      "targets": [
+        "仙药"
+      ],
+      "text_span": {
+        "start": 418,
+        "end": 471,
+        "text": "蓬蒙见嫦娥不肯交出仙药，就翻箱倒柜，四处搜寻。眼看就要搜到百宝匣了，嫦娥疾步向前，取出仙药，一口吞了下去。"
+      },
+      "target_type": "object",
+      "object_type": "magical_agent",
+      "instrument": "",
+      "time_order": 6,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": ""
+    },
+    {
+      "id": "496f9260-ab19-42a2-a20e-22efe0f25825",
+      "event_type": "TRANSFIGURATION",
+      "description": "嫦娥奔月",
+      "agents": [
+        "嫦娥"
+      ],
+      "targets": [
+        "月亮"
+      ],
+      "text_span": {
+        "start": 471,
+        "end": 538,
+        "text": "嫦娥吃了仙药，突然飘飘悠悠地飞了起来。她飞出了窗子，飞过了洒满银辉的郊野，越飞越高。碧蓝碧蓝的夜空挂着一轮明月，嫦娥一直朝着月亮飞去。"
+      },
+      "target_type": "object",
+      "object_type": "normal_object",
+      "instrument": "",
+      "time_order": 7
+    },
+    {
+      "id": "fcb692be-a2af-46f8-9350-a9363bee04c0",
+      "event_type": "ABSENTATION",
+      "description": "",
+      "agents": [
+        "后羿"
+      ],
+      "targets": [
+        "嫦娥"
+      ],
+      "text_span": {
+        "start": 539,
+        "end": 711,
+        "text": "后羿外出回来，不见嫦娥。焦急冲出门外，只见皓月当空，月亮上树影婆娑，一只玉兔在树下跳来跳去。看见妻子正站在一棵桂树旁深情地凝望着自己。“嫦娥，嫦娥”后羿连声呼唤，不顾一切地朝着月亮追去。可是他向前追三步，月亮就向后退三步，怎么也追不上。乡亲们很想念好心的嫦娥，在院子里摆上嫦娥平日爱吃的食品，遥遥地为她祝福。从此以后每年八月十五，就成为中秋节。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 8,
+      "relationship_level1": "家庭与亲缘(Family & Kinship)",
+      "relationship_level2": "spouse",
+      "sentiment": "romantic"
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "TRAGIC",
+    "key_values": [
+      "SACRIFICE",
+      "OTHER",
+      "LOVE"
+    ],
+    "motif_type": [
+      "Motif D800-D880: Magic > MAGIC OBJECTS > Ownership of magic objects.",
+      "Motif T80: Tragic love. Italian Novella: Rotunda; Jewish: Neuman; India: Thompson- (Sex > Love > Love)"
+    ],
+    "atu_categories": [
+      "ATU 400-424: TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Wife",
+      "ATU 425-449: TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Husband"
+    ],
+    "obstacle_thrower": [
+      "逄蒙"
+    ],
+    "helper_type": [],
+    "thinking_process": ""
+  },
+  "analysis": {
+    "propp_functions": [
+      {
+        "id": "84735fae-5cd1-41bd-a3f5-b6b30b956f21",
+        "fn": "SOLUTION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 0,
+          "end": 127,
+          "text": "相传远古的时候，天上突然出现十个太阳，晒得老百姓民不聊生。有一个力大无比的壮汉名为后羿，他决心为老百姓解除这个苦难。后羿登上昆仑山顶，运足气力，拉满神弓并一口气射下九个太阳。并且对天上最后一个太阳说：“从今以后，你每天必须按时升起，按时落下，为民造福。”"
+        },
+        "evidence": "相传远古的时候，天上突然出现十个太阳，晒得老百姓民不聊生。有一个力大无比的壮汉名为后羿，他决心为老百姓解除这个苦难。后羿登上昆仑山顶，运足气力，拉满神弓并一口气射下九个太阳。并且对天上最后一个太阳说：",
+        "narrative_event_id": "1c31a618-047e-4da9-8aa7-0e08270409ec"
+      },
+      {
+        "id": "88fe7af0-d347-43e7-a209-9c264351d89a",
+        "fn": "TRICKERY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 128,
+          "end": 185,
+          "text": "后羿为老百姓除害，大伙都很敬重他。皆拜他为师，跟他学习武艺。有个叫逄蒙的人，为人奸诈贪婪，也随着众人拜在后羿门下。"
+        },
+        "evidence": "后羿为老百姓除害，大伙都很敬重他。皆拜他为师，跟他学习武艺。有个叫逄蒙的人，为人奸诈贪婪，也随着众人拜在后羿门下。",
+        "narrative_event_id": "75043d20-3a1b-4b96-812f-a124181d61ff"
+      },
+      {
+        "id": "6e10ea82-3424-4009-bf93-cde829135064",
+        "fn": "RECEIPT_OF_AGENT",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 185,
+          "end": 289,
+          "text": "后羿妻子嫦娥是个美丽善良的女子。她经常接济生活贫苦的乡亲，乡亲们都非常喜欢她。\n一天，西王母送给后羿一颗仙药。据说人吃了这种药，不但能长生不老，还可以升天成仙。可后羿不愿意离开嫦娥，就让她将仙药藏在百宝匣里。"
+        },
+        "evidence": "后羿妻子嫦娥是个美丽善良的女子。她经常接济生活贫苦的乡亲，乡亲们都非常喜欢她。\n一天，西王母送给后羿一颗仙药。据说人吃了这种药，不但能长生不老，还可以升天成仙。可后羿不愿意离开嫦娥，就让她将仙药藏在百",
+        "narrative_event_id": "e3a01e45-29cb-49d2-bedb-3cef68429b37"
+      },
+      {
+        "id": "9f8feb3b-03b6-4207-b2be-6d7c549afbaf",
+        "fn": "VILLAINY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 289,
+          "end": 377,
+          "text": "这件事不知怎么被蓬蒙知道，他一心想仙药弄到手。八月十五日清晨，后羿要带弟子出门去，蓬蒙假装生病，留了下来。到了晚上，蓬蒙手提宝剑，迫不及待地闯进后羿家里，威逼嫦娥把仙药交出来。"
+        },
+        "evidence": "这件事不知怎么被蓬蒙知道，他一心想仙药弄到手。八月十五日清晨，后羿要带弟子出门去，蓬蒙假装生病，留了下来。到了晚上，蓬蒙手提宝剑，迫不及待地闯进后羿家里，威逼嫦娥把仙药交出来。",
+        "narrative_event_id": "139f07e6-066d-4329-bf2a-2b77871ac32e"
+      },
+      {
+        "id": "ddfce6a2-bd58-457f-a26a-d719882b36e7",
+        "fn": "STRUGGLE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 377,
+          "end": 418,
+          "text": "嫦娥心里想，让这样的人吃了长生不老药，不是要害更多的人吗。于是便机智地与蓬蒙周旋。"
+        },
+        "evidence": "嫦娥心里想，让这样的人吃了长生不老药，不是要害更多的人吗。于是便机智地与蓬蒙周旋。",
+        "narrative_event_id": "fca14a75-7245-4a99-bca1-54d694792e50"
+      },
+      {
+        "id": "0e90ee27-5ed2-439c-aa57-8d64c9c88882",
+        "fn": "STRUGGLE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 418,
+          "end": 471,
+          "text": "蓬蒙见嫦娥不肯交出仙药，就翻箱倒柜，四处搜寻。眼看就要搜到百宝匣了，嫦娥疾步向前，取出仙药，一口吞了下去。"
+        },
+        "evidence": "蓬蒙见嫦娥不肯交出仙药，就翻箱倒柜，四处搜寻。眼看就要搜到百宝匣了，嫦娥疾步向前，取出仙药，一口吞了下去。",
+        "narrative_event_id": "c41ff3c8-35f9-47f7-a97a-1b3f35ec5e67"
+      },
+      {
+        "id": "0d852827-dc57-4b60-85f1-3a37850bb654",
+        "fn": "TRANSFIGURATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 471,
+          "end": 538,
+          "text": "嫦娥吃了仙药，突然飘飘悠悠地飞了起来。她飞出了窗子，飞过了洒满银辉的郊野，越飞越高。碧蓝碧蓝的夜空挂着一轮明月，嫦娥一直朝着月亮飞去。"
+        },
+        "evidence": "嫦娥吃了仙药，突然飘飘悠悠地飞了起来。她飞出了窗子，飞过了洒满银辉的郊野，越飞越高。碧蓝碧蓝的夜空挂着一轮明月，嫦娥一直朝着月亮飞去。",
+        "narrative_event_id": "496f9260-ab19-42a2-a20e-22efe0f25825"
+      },
+      {
+        "id": "06db6223-0ff1-4cee-91f4-bb29e1bf4271",
+        "fn": "ABSENTATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 539,
+          "end": 711,
+          "text": "后羿外出回来，不见嫦娥。焦急冲出门外，只见皓月当空，月亮上树影婆娑，一只玉兔在树下跳来跳去。看见妻子正站在一棵桂树旁深情地凝望着自己。“嫦娥，嫦娥”后羿连声呼唤，不顾一切地朝着月亮追去。可是他向前追三步，月亮就向后退三步，怎么也追不上。乡亲们很想念好心的嫦娥，在院子里摆上嫦娥平日爱吃的食品，遥遥地为她祝福。从此以后每年八月十五，就成为中秋节。"
+        },
+        "evidence": "后羿外出回来，不见嫦娥。焦急冲出门外，只见皓月当空，月亮上树影婆娑，一只玉兔在树下跳来跳去。看见妻子正站在一棵桂树旁深情地凝望着自己。“嫦娥，嫦娥”后羿连声呼唤，不顾一切地朝着月亮追去。可是他向前追三",
+        "narrative_event_id": "fcb692be-a2af-46f8-9350-a9363bee04c0"
+      }
+    ],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_paragraph": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

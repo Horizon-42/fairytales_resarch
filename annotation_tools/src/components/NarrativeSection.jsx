@@ -1,6 +1,8 @@
 import React from "react";
 import CreatableSelect from 'react-select/creatable';
 import { PROPP_FUNCTIONS, TARGET_CATEGORIES, OBJECT_TYPES } from "../constants.js";
+import { RELATIONSHIP_LEVEL1, RELATIONSHIP_LEVEL2, getRelationshipLevel2Options } from "../relationship_constants.js";
+import { SENTIMENT_TAGS, SENTIMENT_DATA, getSentimentByTag } from "../sentiment_constants.js";
 import { generateUUID } from "../utils/fileHandler.js";
 import { customSelectStyles } from "../utils/helpers.js";
 
@@ -96,13 +98,29 @@ export default function NarrativeSection({
         target_type: "character",
         object_type: "",
         instrument: "",
-        time_order: maxTimeOrder + 1 + index
+        time_order: maxTimeOrder + 1 + index,
+        relationship_level1: "",
+        relationship_level2: "",
+        sentiment: ""
       };
     }
     if (!item.id) {
-      return { ...item, id: generateUUID(), time_order: item.time_order ?? (maxTimeOrder + 1 + index) };
+      return {
+        ...item,
+        id: generateUUID(),
+        time_order: item.time_order ?? (maxTimeOrder + 1 + index),
+        relationship_level1: item.relationship_level1 || "",
+        relationship_level2: item.relationship_level2 || "",
+        sentiment: item.sentiment || ""
+      };
     }
-    return { ...item, time_order: item.time_order ?? (maxTimeOrder + 1 + index) };
+    return {
+      ...item,
+      time_order: item.time_order ?? (maxTimeOrder + 1 + index),
+      relationship_level1: item.relationship_level1 || "",
+      relationship_level2: item.relationship_level2 || "",
+      sentiment: item.sentiment || ""
+    };
   });
 
   // Sort items
@@ -175,6 +193,9 @@ export default function NarrativeSection({
         object_type: "",
         instrument: "",
         time_order: maxTimeOrder + 1,
+        relationship_level1: "",
+        relationship_level2: "",
+        sentiment: "",
         [field]: value
       };
     }
@@ -200,7 +221,10 @@ export default function NarrativeSection({
         target_type: "character",
         object_type: "",
         instrument: "",
-        time_order: nextOrder
+        time_order: nextOrder,
+        relationship_level1: "",
+        relationship_level2: "",
+        sentiment: ""
       }
     ]);
   };
@@ -500,6 +524,65 @@ export default function NarrativeSection({
               />
             </label>
           </div>
+
+          {item.target_type === "character" && (
+            <div className="grid-3">
+              <label>
+                Relationship L1
+                <select
+                  value={item.relationship_level1 || ""}
+                  onChange={(e) => {
+                    updateItem(idx, "relationship_level1", e.target.value);
+                    // Reset level2 when level1 changes (React will batch these updates)
+                    if (item.relationship_level2) {
+                      updateItem(idx, "relationship_level2", "");
+                    }
+                  }}
+                >
+                  <option value="">– Select –</option>
+                  {RELATIONSHIP_LEVEL1.map((level1) => {
+                    // Extract English part from format "中文(English)" or use as-is if no parentheses
+                    const match = level1.match(/\(([^)]+)\)/);
+                    const displayName = match ? match[1] : level1;
+                    return (
+                      <option key={level1} value={level1}>
+                        {displayName}
+                      </option>
+                    );
+                  })}
+                </select>
+              </label>
+              <label>
+                Relationship L2
+                <select
+                  value={item.relationship_level2 || ""}
+                  onChange={(e) => updateItem(idx, "relationship_level2", e.target.value)}
+                  disabled={!item.relationship_level1}
+                >
+                  <option value="">– Select –</option>
+                  {item.relationship_level1 && getRelationshipLevel2Options(item.relationship_level1).map((level2) => (
+                    <option key={level2.tag} value={level2.tag}>
+                      {level2.tag}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label>
+                Sentiment
+                <select
+                  value={item.sentiment || ""}
+                  onChange={(e) => updateItem(idx, "sentiment", e.target.value)}
+                >
+                  <option value="">– Select –</option>
+                  {SENTIMENT_TAGS.map((tag) => (
+                    <option key={tag} value={tag}>
+                      {tag}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+          )}
           
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginTop: "0.5rem" }}>
             <div style={{ display: "flex", alignItems: "baseline", gap: "0.25rem" }}>

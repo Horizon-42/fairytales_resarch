@@ -129,7 +129,10 @@ export function mapV2ToState(data) {
         target_type: evt.target_type || "character",
         object_type: evt.object_type || "",
         instrument: evt.instrument || "",
-        time_order: evt.time_order ?? (index + 1)
+        time_order: evt.time_order ?? (index + 1),
+        relationship_level1: evt.relationship_level1 || "",
+        relationship_level2: evt.relationship_level2 || "",
+        sentiment: evt.sentiment || ""
       };
     }),
     
@@ -245,7 +248,10 @@ export function mapV1ToState(data) {
           target_type: "character",
           object_type: "",
           instrument: "",
-          time_order: index + 1
+          time_order: index + 1,
+          relationship_level1: "",
+          relationship_level2: "",
+          sentiment: ""
         };
       }
       return {
@@ -254,10 +260,13 @@ export function mapV1ToState(data) {
         target_type: evt.target_type || "character",
         object_type: evt.object_type || "",
         instrument: evt.instrument || "",
-        time_order: evt.time_order ?? (index + 1)
+        time_order: evt.time_order ?? (index + 1),
+        relationship_level1: evt.relationship_level1 || "",
+        relationship_level2: evt.relationship_level2 || "",
+        sentiment: evt.sentiment || ""
       };
     }),
-    
+
     proppFns: (data.annotation?.deep?.propp_functions || []).map(pf => ({
       ...pf,
       id: pf.id || generateUUID(),

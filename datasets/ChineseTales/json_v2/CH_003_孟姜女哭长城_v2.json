@@ -90,7 +90,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 4
+      "time_order": 4,
+      "relationship_level1": "浪漫与激情(Romance)",
+      "relationship_level2": "lover",
+      "sentiment": "positive"
     },
     {
       "id": "24e03b97-5899-4997-b8cb-93d9339ea99c",
@@ -110,7 +113,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 5
+      "time_order": 5,
+      "relationship_level1": "浪漫与激情(Romance)",
+      "relationship_level2": "lover",
+      "sentiment": "romantic"
     },
     {
       "id": "428f4443-29ff-4369-bf5c-f4db0c30c76c",
@@ -132,7 +138,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 6
+      "time_order": 6,
+      "relationship_level1": "对抗与敌对(Adversarial)",
+      "relationship_level2": "enemy",
+      "sentiment": "hostile"
     },
     {
       "id": "00623686-66b6-45e6-824f-0fa8a8bf7889",
@@ -152,7 +161,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 8
+      "time_order": 8,
+      "relationship_level1": "浪漫与激情(Romance)",
+      "relationship_level2": "lover",
+      "sentiment": "positive"
     },
     {
       "id": "ef4e8f0b-1b02-4bc0-8024-f55b931b5730",
@@ -170,7 +182,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 9
+      "time_order": 9,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": ""
     },
     {
       "id": "8ad82eb9-12aa-4a72-8007-fdd48c5cd4bf",
@@ -190,7 +205,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 10
+      "time_order": 10,
+      "relationship_level1": "中立(Neutral)",
+      "relationship_level2": "stranger",
+      "sentiment": "positive"
     },
     {
       "id": "0eace64f-3fcf-4f61-b167-6c67a777d956",
@@ -208,7 +226,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 11
+      "time_order": 11,
+      "relationship_level1": "中立(Neutral)",
+      "relationship_level2": "stranger",
+      "sentiment": "positive"
     },
     {
       "id": "735d048e-504f-47c8-9060-a0c335fa59c4",
@@ -228,7 +249,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 12
+      "time_order": 12,
+      "relationship_level1": "对抗与敌对(Adversarial)",
+      "relationship_level2": "enemy",
+      "sentiment": "hostile"
     },
     {
       "id": "15f5c6c3-ed52-4047-ab8b-b98c2d7a616f",
@@ -248,7 +272,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 13
+      "time_order": 13,
+      "relationship_level1": "对抗与敌对(Adversarial)",
+      "relationship_level2": "enemy",
+      "sentiment": "hostile"
     },
     {
       "id": "f7d6957a-a672-4706-b314-340bace74377",
@@ -268,7 +295,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 14
+      "time_order": 14,
+      "relationship_level1": "浪漫与激情(Romance)",
+      "relationship_level2": "lover",
+      "sentiment": "negative"
     },
     {
       "id": "613041ee-1096-4ec1-bdc8-adf4e716cbc6",
@@ -288,7 +318,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 15
+      "time_order": 15,
+      "relationship_level1": "权威与阶级(Hierarchy)",
+      "relationship_level2": "ruler_subject",
+      "sentiment": "negative"
     },
     {
       "id": "aa9df0a0-0181-4edf-a2d4-5a987f837a6a",
@@ -308,7 +341,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 16
+      "time_order": 16,
+      "relationship_level1": "权威与阶级(Hierarchy)",
+      "relationship_level2": "ruler_subject",
+      "sentiment": "romantic"
     },
     {
       "id": "cc0309f6-f040-43a3-8468-f05eaea5105f",
@@ -328,7 +364,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 17
+      "time_order": 17,
+      "relationship_level1": "对抗与敌对(Adversarial)",
+      "relationship_level2": "enemy",
+      "sentiment": "hostile"
     },
     {
       "id": "37a7d01c-85e8-45cb-b7cf-6b984eb4dffb",
@@ -348,7 +387,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 18
+      "time_order": 18,
+      "relationship_level1": "对抗与敌对(Adversarial)",
+      "relationship_level2": "enemy",
+      "sentiment": "hostile"
     },
     {
       "id": "947e61be-73b5-40d5-bffa-6e65556a0b69",
@@ -368,7 +410,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 19
+      "time_order": 19,
+      "relationship_level1": "对抗与敌对(Adversarial)",
+      "relationship_level2": "enemy",
+      "sentiment": "hostile"
     },
     {
       "id": "b6f08e5d-859e-4309-abba-60a07484cc3f",
@@ -386,7 +431,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 20
+      "time_order": 20,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": ""
     },
     {
       "id": "9b86472e-3e87-4555-a0f1-58540deb9edf",
@@ -406,7 +454,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 1
+      "time_order": 1,
+      "relationship_level1": "中立(Neutral)",
+      "relationship_level2": "stranger",
+      "sentiment": "neutral"
     },
     {
       "id": "7af49b50-2903-40cc-a2db-fd59b6854722",
@@ -426,7 +477,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 7
+      "time_order": 7,
+      "relationship_level1": "家庭与亲缘(Family & Kinship)",
+      "relationship_level2": "spouse",
+      "sentiment": "romantic"
     },
     {
       "id": "55384b2a-47e9-4ebe-bc08-87d847c9f9ed",
@@ -446,7 +500,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 2
+      "time_order": 2,
+      "relationship_level1": "对抗与敌对(Adversarial)",
+      "relationship_level2": "enemy",
+      "sentiment": "negative"
     },
     {
       "id": "5a7bbfef-984e-4ee6-86c2-08e2e670203a",
@@ -464,7 +521,10 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 3
+      "time_order": 3,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": ""
     }
   ],
   "themes_and_motifs": {

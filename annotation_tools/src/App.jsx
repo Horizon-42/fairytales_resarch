@@ -1,6 +1,7 @@
 import React, { useMemo, useState, useEffect, useRef } from "react";
 import { organizeFiles, mapV1ToState, mapV2ToState, generateUUID } from "./utils/fileHandler.js";
 import { downloadJson, relPathToDatasetHint, HIGHLIGHT_COLORS, emptyProppFn } from "./utils/helpers.js";
+import { saveFolderCache, loadFolderCache, extractFolderPath } from "./utils/folderCache.js";
 
 // Import components
 import {
@@ -31,7 +32,11 @@ export default function App() {
   const [previewVersion, setPreviewVersion] = useState("v2");
 
   const [id, setId] = useState("FA_XXX");
-  const [culture, setCulture] = useState("Persian");
+  // Initialize culture from cache if available
+  const [culture, setCulture] = useState(() => {
+    const cache = loadFolderCache();
+    return cache?.culture || "Persian";
+  });
   const [title, setTitle] = useState("");
 
   // Extract title from ID (everything after the second underscore)
@@ -238,6 +243,17 @@ export default function App() {
   useEffect(() => {
     saveRef.current = handleSave;
   });
+
+  // Save culture to cache when it changes
+  useEffect(() => {
+    const cache = loadFolderCache();
+    if (cache) {
+      saveFolderCache({
+        ...cache,
+        culture: culture
+      });
+    }
+  }, [culture]);
 
   // Keyboard shortcut: Cmd+S / Ctrl+S to save JSON
   useEffect(() => {
@@ -631,8 +647,22 @@ export default function App() {
     setV1JsonFiles(v1Jsons);
     setV2JsonFiles(v2Jsons);
 
+    // Extract folder path and save to cache
+    const folderPath = extractFolderPath(files);
+    const cache = loadFolderCache();
+    const targetIndex = (cache && cache.folderPath === folderPath && cache.selectedIndex >= 0 && cache.selectedIndex < withContent.length)
+      ? cache.selectedIndex
+      : 0;
+
+    // Save folder cache
+    saveFolderCache({
+      folderPath: folderPath,
+      selectedIndex: targetIndex,
+      culture: culture
+    });
+
     if (withContent.length > 0) {
-      selectStoryWithData(0, withContent, v1Jsons, v2Jsons);
+      selectStoryWithData(targetIndex, withContent, v1Jsons, v2Jsons);
     }
   };
 
@@ -709,6 +739,14 @@ export default function App() {
 
   const handleSelectStory = (index) => {
     selectStoryWithData(index, storyFiles, v1JsonFiles, v2JsonFiles);
+    // Update cache with new selected index
+    const cache = loadFolderCache();
+    if (cache) {
+      saveFolderCache({
+        ...cache,
+        selectedIndex: index
+      });
+    }
   };
 
   const handleStorySelection = () => {
