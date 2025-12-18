@@ -161,13 +161,18 @@ export default function NarrativeSection({
     });
   }, [highlightedRanges, items]);
 
-  const updateItem = (index, field, value) => {
+  const updateItem = (index, fieldOrUpdates, value) => {
+    // Support both single field update (field, value) and batch update (updates object)
+    const updates = typeof fieldOrUpdates === 'string'
+      ? { [fieldOrUpdates]: value }
+      : fieldOrUpdates;
+
     // Find the item by ID since items are sorted
     const itemToUpdate = items[index];
     if (!itemToUpdate || !itemToUpdate.id) {
       // Fallback to index if no ID
       const next = [...items];
-      next[index] = { ...next[index], [field]: value };
+      next[index] = { ...next[index], ...updates };
       setNarrativeStructure(next);
       return;
     }
@@ -180,7 +185,7 @@ export default function NarrativeSection({
     if (originalIndex === -1) {
       // If not found, update the sorted items array
       const next = [...items];
-      next[index] = { ...next[index], [field]: value };
+      next[index] = { ...next[index], ...updates };
       setNarrativeStructure(next);
       return;
     }
@@ -188,7 +193,7 @@ export default function NarrativeSection({
     // Update the original structure
     const next = [...narrativeStructure];
     if (typeof next[originalIndex] === "object") {
-      next[originalIndex] = { ...next[originalIndex], [field]: value };
+      next[originalIndex] = { ...next[originalIndex], ...updates };
     } else {
       // Convert string to object if needed
       next[originalIndex] = {
@@ -205,7 +210,7 @@ export default function NarrativeSection({
         relationship_level1: "",
         relationship_level2: "",
         sentiment: "",
-        [field]: value
+        ...updates
       };
     }
     setNarrativeStructure(next);
@@ -541,11 +546,11 @@ export default function NarrativeSection({
                 <select
                   value={item.relationship_level1 || ""}
                   onChange={(e) => {
-                    updateItem(idx, "relationship_level1", e.target.value);
-                    // Reset level2 when level1 changes (React will batch these updates)
-                    if (item.relationship_level2) {
-                      updateItem(idx, "relationship_level2", "");
-                    }
+                    // Update level1 and reset level2 in a single update
+                    updateItem(idx, {
+                      relationship_level1: e.target.value,
+                      relationship_level2: ""
+                    });
                   }}
                 >
                   <option value="">– Select –</option>
@@ -600,14 +605,12 @@ export default function NarrativeSection({
                 <select
                   value={item.action_category || ""}
                   onChange={(e) => {
-                    updateItem(idx, "action_category", e.target.value);
-                    // Reset action_type and action_context when category changes
-                    if (item.action_type) {
-                      updateItem(idx, "action_type", "");
-                    }
-                    if (item.action_context) {
-                      updateItem(idx, "action_context", "");
-                    }
+                    // Update category and reset action_type and action_context in a single update
+                    updateItem(idx, {
+                      action_category: e.target.value,
+                      action_type: "",
+                      action_context: ""
+                    });
                   }}
                 >
                   <option value="">– Select –</option>
@@ -623,11 +626,11 @@ export default function NarrativeSection({
                 <select
                   value={item.action_type || ""}
                   onChange={(e) => {
-                    updateItem(idx, "action_type", e.target.value);
-                    // Reset context when action type changes
-                    if (item.action_context) {
-                      updateItem(idx, "action_context", "");
-                    }
+                    // Update action_type and reset context in a single update
+                    updateItem(idx, {
+                      action_type: e.target.value,
+                      action_context: ""
+                    });
                   }}
                   disabled={!item.action_category}
                 >
