@@ -17,27 +17,142 @@
   "characters": [
     {
       "name": "祝英台",
-      "alias": "",
+      "alias": "小姐",
       "archetype": "Hero"
     },
     {
       "name": "祝员外",
       "alias": "",
       "archetype": "Other"
+    },
+    {
+      "name": "丫环银心",
+      "alias": "银心",
+      "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "算命先生",
+      "alias": "",
+      "archetype": "Other"
+    },
+    {
+      "name": "梁山伯",
+      "alias": "山伯; ",
+      "archetype": "Hero"
     }
   ],
   "narrative_events": [
     {
-      "event_type": "OTHER",
-      "description": "",
+      "event_type": "BEGINNING_COUNTERACTION",
+      "description": "女儿和她的丫鬟助手用聪明才智获取了家长的肯定; 祝英台和丫鬟银心用智慧获取了祝员外的同意",
       "id": "e18c50b8-22bc-4336-994d-4732117cbaea",
       "target_type": "character",
       "object_type": "",
       "instrument": "",
+      "time_order": 2,
+      "relationship_level1": "Family & Kinship",
+      "relationship_level2": "parent_child",
+      "sentiment": "positive",
+      "text_span": {
+        "start": 229,
+        "end": 850,
+        "text": "祝英台很失望，闷闷不乐地回到房间。丫环银心见小姐不高兴，关切地问：“小姐，什么事惹您不高兴了？”英台把自己的心思告诉了银心，银心跟着发起愁来。她们在房间里叽叽咕咕了半天，终于想到一个好办法。\n过了几天，银心向祝员外禀报：“老爷，您不让小姐去杭州，小姐茶饭不思生起病来了。”祝员外听了很着急，忙说：“那还不赶紧去请大夫。”\n银心见祝员外担心，又说：“老爷，外头来了位算命先生，不如我们请先生为小姐占一卦如何？”祝员外点点头答应了。\n过了一会儿，银心领着那位算命先生走了进来，只见他眉清目秀，俊俏异常。祝员外一边吩咐银心摆设香案，一边对算命先生说：“小女前几日闹着要去杭州读书，老夫不曾答应，这几日她竟生起病来，请先生给算上一算。”\n先生掐指一算，皱起眉头，他看看祝员外，再看看银心，欲言又止。\n祝员外忙问：“先生，结果如何？”\n先生回答：“小姐待在家中恐怕凶多吉少。”\n祝员外一惊，来回踱着步说：“哎呀，这可如何是好？”\n先生笑了笑，不慌不忙地说：“要是能去外面躲上三五年，自然就会化解，员外不该阻止小姐去杭州啊。”\n祝员外听了，悬起的心放了下来，长长嘘出一口气。\n这时，银心忽然“噗嗤”一声笑了出来。再看那位先生，脱去衣帽，竟变成了美丽的少女，这不是祝英台是谁？\n祝员外很生气，责备英台、银心不该戏弄自己。祝英台借机再次恳求父亲：“爹爹，您说女孩不能抛头露面，如果我扮成男装不就可以了吗？”祝员外拗不过她，只得答应。英台、银心兴奋得又叫又跳。"
+      },
+      "agents": [
+        "祝英台",
+        "丫环银心"
+      ],
+      "targets": [
+        "祝员外"
+      ]
+    },
+    {
+      "id": "f67c55cf-3b7c-40fd-8140-01bdcffe65bd",
+      "event_type": "INTERDICTION",
+      "description": "父亲限制女儿自由",
+      "agents": [
+        "祝员外"
+      ],
+      "targets": [
+        "祝英台"
+      ],
+      "text_span": {
+        "start": 0,
+        "end": 228,
+        "text": "一千多年前，浙江上虞有户祝姓人家，府上的祝员外有个女儿叫祝英台。祝英台刚刚十九岁，聪明又漂亮，是祝老爷的掌上明珠。只是祝府的家教非常严，不准女眷随意外出，生性活泼的祝英台只能待在家读书习字。\n这天，祝英台独自一人趴在窗前发呆，忽然被一阵嬉笑打闹的声音吸引，原来不远处有一群书生，正准备坐船去杭州读书。他们无忧无虑、自由自在的样子，让祝英台非常羡慕。她赶紧跑去对父亲说：“爹爹，我要去杭州读书。”\n父亲听了很吃惊：“荒唐，哪有女孩儿家到外面抛头露面的道理？”"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
       "time_order": 1,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": ""
+      "relationship_level1": "Family & Kinship",
+      "relationship_level2": "parent_child",
+      "sentiment": "negative"
+    },
+    {
+      "id": "391c105f-39f0-4b10-b54f-8f63e370f1ca",
+      "event_type": "UNRECOGNIZED_ARRIVAL",
+      "description": "女英雄和她的同伴隐姓埋名出发",
+      "agents": [
+        "祝英台",
+        "丫环银心"
+      ],
+      "targets": [],
+      "text_span": {
+        "start": 851,
+        "end": 958,
+        "text": "第二天，祝英台、银心就带着行李出发了。她们一个扮成翩翩书生，一个扮成可爱书童，像飞出笼子的鸟儿一样快活。一路上，桃花香、杏花红，柳枝绕着轻风，蝴蝶、小蜜蜂相互追逐，她们两个人头一次出门，觉得什么都那么新奇那么好玩。"
+      },
+      "target_type": "object",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3
+    },
+    {
+      "id": "2921cd56-7c39-4060-8aa4-0dca66520421",
+      "event_type": "FIRST_FUNCTION_DONOR",
+      "description": "男女英雄相遇, 通过了各自的社交考验; 梁山伯与祝英台一见如故",
+      "agents": [
+        "梁山伯"
+      ],
+      "targets": [
+        "祝英台"
+      ],
+      "text_span": {
+        "start": 959,
+        "end": 1163,
+        "text": "不久，她们来到一个叫“草桥亭”的地方，就坐在亭子里休息。这时，一位书生带着书童也走了进来。英台上下打量着书生，见他英俊潇洒，气宇不凡，好像也是外地求学的，便上去打了个招呼：“你好，我叫祝英台，您贵姓？”\n书生连忙回答：“我姓梁名山伯。”\n“我自上虞而来，要去杭州读书，公子去往何处啊？”\n“真巧，我和公子同路，不过我来自绍兴。”\n就这样，他们你一言我一语聊得甚是投机。银心和梁山伯的书童四九也很快打成了一片。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "friend",
+      "sentiment": "positive"
+    },
+    {
+      "id": "5915a20d-f495-45cc-a337-a60db959599f",
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "男女主人公结为义兄弟; 梁山伯祝英台义结金兰",
+      "agents": [
+        "梁山伯"
+      ],
+      "targets": [
+        "祝英台"
+      ],
+      "text_span": {
+        "start": 1163,
+        "end": 1280,
+        "text": "这时，梁山伯提出要和祝英台义结金兰，祝英台爽快地答应下来。但是，结拜得上香，没有香可怎么办呢？\n银心灵机一动：“用泥巴撮成香，不就行了。”梁山伯、祝英台一致同意，很快他们举行了结拜仪式。梁山伯比祝英台大一岁，成为兄长，祝英台做了小弟。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationship_level1": "Family & Kinship",
+      "relationship_level2": "extended_family",
+      "sentiment": "positive"
     }
   ],
   "themes_and_motifs": {
@@ -50,7 +165,88 @@
     "thinking_process": ""
   },
   "analysis": {
-    "propp_functions": [],
+    "propp_functions": [
+      {
+        "id": "cf31ce56-8e16-4fc8-9d69-a038a791aa91",
+        "fn": "INTERDICTION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 0,
+          "end": 228,
+          "text": "一千多年前，浙江上虞有户祝姓人家，府上的祝员外有个女儿叫祝英台。祝英台刚刚十九岁，聪明又漂亮，是祝老爷的掌上明珠。只是祝府的家教非常严，不准女眷随意外出，生性活泼的祝英台只能待在家读书习字。\n这天，祝英台独自一人趴在窗前发呆，忽然被一阵嬉笑打闹的声音吸引，原来不远处有一群书生，正准备坐船去杭州读书。他们无忧无虑、自由自在的样子，让祝英台非常羡慕。她赶紧跑去对父亲说：“爹爹，我要去杭州读书。”\n父亲听了很吃惊：“荒唐，哪有女孩儿家到外面抛头露面的道理？”"
+        },
+        "evidence": "父亲限制女儿自由",
+        "narrative_event_id": "f67c55cf-3b7c-40fd-8140-01bdcffe65bd"
+      },
+      {
+        "id": "90fe56ca-f690-497e-9d58-090f4cb5af23",
+        "fn": "BEGINNING_COUNTERACTION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 229,
+          "end": 324,
+          "text": "祝英台很失望，闷闷不乐地回到房间。丫环银心见小姐不高兴，关切地问：“小姐，什么事惹您不高兴了？”英台把自己的心思告诉了银心，银心跟着发起愁来。她们在房间里叽叽咕咕了半天，终于想到一个好办法。"
+        },
+        "evidence": "",
+        "narrative_event_id": "e18c50b8-22bc-4336-994d-4732117cbaea"
+      },
+      {
+        "id": "fa39b437-5c91-4365-8592-8cb3588492a7",
+        "fn": "UNRECOGNIZED_ARRIVAL",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 851,
+          "end": 958,
+          "text": "第二天，祝英台、银心就带着行李出发了。她们一个扮成翩翩书生，一个扮成可爱书童，像飞出笼子的鸟儿一样快活。一路上，桃花香、杏花红，柳枝绕着轻风，蝴蝶、小蜜蜂相互追逐，她们两个人头一次出门，觉得什么都那么新奇那么好玩。"
+        },
+        "evidence": "第二天，祝英台、银心就带着行李出发了。她们一个扮成翩翩书生，一个扮成可爱书童，像飞出笼子的鸟儿一样快活。一路上，桃花香、杏花红，柳枝绕着轻风，蝴蝶、小蜜蜂相互追逐，她们两个人头一次出门，觉得什么都那么",
+        "narrative_event_id": "391c105f-39f0-4b10-b54f-8f63e370f1ca"
+      },
+      {
+        "id": "329fb45d-332b-4a5e-bbee-c90bfd5e5af3",
+        "fn": "FIRST_FUNCTION_DONOR",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 959,
+          "end": 1163,
+          "text": "不久，她们来到一个叫“草桥亭”的地方，就坐在亭子里休息。这时，一位书生带着书童也走了进来。英台上下打量着书生，见他英俊潇洒，气宇不凡，好像也是外地求学的，便上去打了个招呼：“你好，我叫祝英台，您贵姓？”\n书生连忙回答：“我姓梁名山伯。”\n“我自上虞而来，要去杭州读书，公子去往何处啊？”\n“真巧，我和公子同路，不过我来自绍兴。”\n就这样，他们你一言我一语聊得甚是投机。银心和梁山伯的书童四九也很快打成了一片。"
+        },
+        "evidence": "不久，她们来到一个叫“草桥亭”的地方，就坐在亭子里休息。这时，一位书生带着书童也走了进来。英台上下打量着书生，见他英俊潇洒，气宇不凡，好像也是外地求学的，便上去打了个招呼：“你好，我叫祝英台，您贵姓？",
+        "narrative_event_id": "2921cd56-7c39-4060-8aa4-0dca66520421"
+      },
+      {
+        "id": "8f8ab166-293f-44c9-90c4-7adf54d7435f",
+        "fn": "RECEIPT_OF_AGENT",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1163,
+          "end": 1280,
+          "text": "这时，梁山伯提出要和祝英台义结金兰，祝英台爽快地答应下来。但是，结拜得上香，没有香可怎么办呢？\n银心灵机一动：“用泥巴撮成香，不就行了。”梁山伯、祝英台一致同意，很快他们举行了结拜仪式。梁山伯比祝英台大一岁，成为兄长，祝英台做了小弟。"
+        },
+        "evidence": "男女主人公结为义兄弟; 梁山伯祝英台义结金兰",
+        "narrative_event_id": "5915a20d-f495-45cc-a337-a60db959599f"
+      }
+    ],
     "propp_notes": "",
     "paragraph_summaries": {
       "per_paragraph": {},
