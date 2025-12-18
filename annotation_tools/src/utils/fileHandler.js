@@ -63,6 +63,24 @@ function normalizeHelperType(value) {
   return [];
 }
 
+// Helper to extract action fields from action_layer
+function extractActionFieldsFromLayer(evt) {
+  if (evt.action_layer) {
+    return {
+      action_category: evt.action_layer.category || "",
+      action_type: evt.action_layer.type || "",
+      action_context: evt.action_layer.context || "",
+      action_status: evt.action_layer.status || ""
+    };
+  }
+  return {
+    action_category: evt.action_category || "",
+    action_type: evt.action_type || "",
+    action_context: evt.action_context || "",
+    action_status: evt.action_status || ""
+  };
+}
+
 // Helper to map V2 JSON to App State
 export function mapV2ToState(data) {
   // Ensure defaults
@@ -119,7 +137,14 @@ export function mapV2ToState(data) {
           target_type: "character",
           object_type: "",
           instrument: "",
-          time_order: index + 1
+          time_order: index + 1,
+          relationship_level1: "",
+          relationship_level2: "",
+          sentiment: "",
+          action_category: "",
+          action_type: "",
+          action_context: "",
+          action_status: ""
         };
       }
       return {
@@ -132,7 +157,8 @@ export function mapV2ToState(data) {
         time_order: evt.time_order ?? (index + 1),
         relationship_level1: evt.relationship_level1 || "",
         relationship_level2: evt.relationship_level2 || "",
-        sentiment: evt.sentiment || ""
+        sentiment: evt.sentiment || "",
+        ...extractActionFieldsFromLayer(evt)
       };
     }),
     
@@ -251,7 +277,11 @@ export function mapV1ToState(data) {
           time_order: index + 1,
           relationship_level1: "",
           relationship_level2: "",
-          sentiment: ""
+          sentiment: "",
+          action_category: "",
+          action_type: "",
+          action_context: "",
+          action_status: ""
         };
       }
       return {
@@ -263,7 +293,8 @@ export function mapV1ToState(data) {
         time_order: evt.time_order ?? (index + 1),
         relationship_level1: evt.relationship_level1 || "",
         relationship_level2: evt.relationship_level2 || "",
-        sentiment: evt.sentiment || ""
+        sentiment: evt.sentiment || "",
+        ...extractActionFieldsFromLayer(evt)
       };
     }),
 

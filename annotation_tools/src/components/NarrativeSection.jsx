@@ -3,6 +3,7 @@ import CreatableSelect from 'react-select/creatable';
 import { PROPP_FUNCTIONS, TARGET_CATEGORIES, OBJECT_TYPES } from "../constants.js";
 import { RELATIONSHIP_LEVEL1, RELATIONSHIP_LEVEL2, getRelationshipLevel2Options } from "../relationship_constants.js";
 import { SENTIMENT_TAGS, SENTIMENT_DATA, getSentimentByTag } from "../sentiment_constants.js";
+import { ACTION_CATEGORIES, ACTION_TYPES, ACTION_STATUS, getActionTypesForCategory, getContextTagsForAction } from "../action_taxonomy_constants.js";
 import { generateUUID } from "../utils/fileHandler.js";
 import { customSelectStyles } from "../utils/helpers.js";
 
@@ -101,7 +102,11 @@ export default function NarrativeSection({
         time_order: maxTimeOrder + 1 + index,
         relationship_level1: "",
         relationship_level2: "",
-        sentiment: ""
+        sentiment: "",
+        action_category: "",
+        action_type: "",
+        action_context: "",
+        action_status: ""
       };
     }
     if (!item.id) {
@@ -111,7 +116,11 @@ export default function NarrativeSection({
         time_order: item.time_order ?? (maxTimeOrder + 1 + index),
         relationship_level1: item.relationship_level1 || "",
         relationship_level2: item.relationship_level2 || "",
-        sentiment: item.sentiment || ""
+        sentiment: item.sentiment || "",
+        action_category: item.action_category || (item.action_layer?.category || ""),
+        action_type: item.action_type || (item.action_layer?.type || ""),
+        action_context: item.action_context || (item.action_layer?.context || ""),
+        action_status: item.action_status || (item.action_layer?.status || "")
       };
     }
     return {
@@ -580,6 +589,89 @@ export default function NarrativeSection({
                     </option>
                   ))}
                 </select>
+              </label>
+            </div>
+          )}
+
+          {item.target_type === "character" && (
+            <div className="grid-3" style={{ marginTop: "0.5rem" }}>
+              <label>
+                Action Category
+                <select
+                  value={item.action_category || ""}
+                  onChange={(e) => {
+                    updateItem(idx, "action_category", e.target.value);
+                    // Reset action_type and action_context when category changes
+                    if (item.action_type) {
+                      updateItem(idx, "action_type", "");
+                    }
+                    if (item.action_context) {
+                      updateItem(idx, "action_context", "");
+                    }
+                  }}
+                >
+                  <option value="">– Select –</option>
+                  {ACTION_CATEGORIES.map((cat) => (
+                    <option key={cat.code} value={cat.code}>
+                      {cat.name}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label>
+                Action Type
+                <select
+                  value={item.action_type || ""}
+                  onChange={(e) => {
+                    updateItem(idx, "action_type", e.target.value);
+                    // Reset context when action type changes
+                    if (item.action_context) {
+                      updateItem(idx, "action_context", "");
+                    }
+                  }}
+                  disabled={!item.action_category}
+                >
+                  <option value="">– Select –</option>
+                  {item.action_category && getActionTypesForCategory(item.action_category).map((action) => (
+                    <option key={action.code} value={action.code}>
+                      {action.name}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label>
+                Action Status
+                <select
+                  value={item.action_status || ""}
+                  onChange={(e) => updateItem(idx, "action_status", e.target.value)}
+                >
+                  <option value="">– Select –</option>
+                  {ACTION_STATUS.map((status) => (
+                    <option key={status.code} value={status.code}>
+                      {status.name}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+          )}
+
+          {item.target_type === "character" && item.action_category && item.action_type && (
+            <div style={{ marginTop: "0.5rem" }}>
+              <label>
+                Context (optional)
+                <input
+                  type="text"
+                  value={item.action_context || ""}
+                  onChange={(e) => updateItem(idx, "action_context", e.target.value)}
+                  placeholder={`e.g., ${getContextTagsForAction(item.action_category, item.action_type).slice(0, 3).join(", ")}`}
+                  list={`context-suggestions-${idx}`}
+                />
+                <datalist id={`context-suggestions-${idx}`}>
+                  {getContextTagsForAction(item.action_category, item.action_type).map((tag) => (
+                    <option key={tag} value={tag} />
+                  ))}
+                </datalist>
               </label>
             </div>
           )}

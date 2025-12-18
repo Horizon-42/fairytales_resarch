@@ -17,7 +17,7 @@
   "characters": [
     {
       "name": "祝英台",
-      "alias": "小姐",
+      "alias": "小姐;祝",
       "archetype": "Hero"
     },
     {
@@ -37,7 +37,7 @@
     },
     {
       "name": "梁山伯",
-      "alias": "山伯; ",
+      "alias": "梁; 山伯; ",
       "archetype": "Hero"
     }
   ],
@@ -142,9 +142,9 @@
         "祝英台"
       ],
       "text_span": {
-        "start": 1163,
-        "end": 1280,
-        "text": "这时，梁山伯提出要和祝英台义结金兰，祝英台爽快地答应下来。但是，结拜得上香，没有香可怎么办呢？\n银心灵机一动：“用泥巴撮成香，不就行了。”梁山伯、祝英台一致同意，很快他们举行了结拜仪式。梁山伯比祝英台大一岁，成为兄长，祝英台做了小弟。"
+        "start": 1157,
+        "end": 1344,
+        "text": "打成了一片。这时，梁山伯提出要和祝英台义结金兰，祝英台爽快地答应下来。但是，结拜得上香，没有香可怎么办呢？\n银心灵机一动：“用泥巴撮成香，不就行了。”梁山伯、祝英台一致同意，很快他们举行了结拜仪式。梁山伯比祝英台大一岁，成为兄长，祝英台做了小弟。\n他们一行四人，结伴而行，很快来到杭州。之后，梁祝二人又一起进入“崇绮书院”，拜师入学。他们朝夕相处，互敬互爱，友情越来越深厚。"
       },
       "target_type": "character",
       "object_type": "",
@@ -152,7 +152,13 @@
       "time_order": 5,
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "extended_family",
-      "sentiment": "positive"
+      "sentiment": "positive",
+      "action_layer": {
+        "category": "communicative",
+        "type": "promise",
+        "status": "success",
+        "context": "oath"
+      }
     }
   ],
   "themes_and_motifs": {

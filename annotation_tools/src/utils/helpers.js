@@ -54,6 +54,57 @@ export function extractEnglishFromRelationship(relationshipValue) {
   return relationshipValue;
 }
 
+// Build action_layer object from individual action fields
+export function buildActionLayer(narrativeItem) {
+  if (!narrativeItem) return undefined;
+
+  const category = narrativeItem.action_category || narrativeItem.action_layer?.category;
+  const type = narrativeItem.action_type || narrativeItem.action_layer?.type;
+  const status = narrativeItem.action_status || narrativeItem.action_layer?.status;
+
+  // Only create action_layer if we have at least category, type, and status
+  if (!category || !type || !status) {
+    return undefined;
+  }
+
+  const actionLayer = {
+    category: category,
+    type: type,
+    status: status
+  };
+
+  // Add context if provided
+  const context = narrativeItem.action_context || narrativeItem.action_layer?.context;
+  if (context && context.trim()) {
+    actionLayer.context = context.trim();
+  }
+
+  return actionLayer;
+}
+
+// Extract action fields from action_layer object (for backward compatibility)
+export function extractActionFields(narrativeItem) {
+  if (!narrativeItem) return {};
+
+  // If action_layer exists, extract fields from it
+  if (narrativeItem.action_layer) {
+    return {
+      action_category: narrativeItem.action_layer.category || "",
+      action_type: narrativeItem.action_layer.type || "",
+      action_context: narrativeItem.action_layer.context || "",
+      action_status: narrativeItem.action_layer.status || ""
+    };
+  }
+
+  // Otherwise return existing fields or empty strings
+  return {
+    action_category: narrativeItem.action_category || "",
+    action_type: narrativeItem.action_type || "",
+    action_context: narrativeItem.action_context || "",
+    action_status: narrativeItem.action_status || ""
+  };
+}
+
 // Factory for empty Propp function
 export const emptyProppFn = () => ({
   id: generateUUID(),

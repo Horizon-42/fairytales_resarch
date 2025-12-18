@@ -21,3 +21,5 @@ Propp_Resoruces/propp_functions_guide_en.md
 ATU_Resources/ATU_types.md
 ### Motifs
 Motif/Motifs_extracted_hierarchy.csv
+### Universal Narrative Action Taxonomy
+Universal Narrative Action Taxonomy/Universal_Narrative_Action_Taxonomy.md

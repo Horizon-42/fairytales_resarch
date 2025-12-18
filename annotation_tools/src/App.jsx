@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useEffect, useRef } from "react";
 import { organizeFiles, mapV1ToState, mapV2ToState, generateUUID } from "./utils/fileHandler.js";
-import { downloadJson, relPathToDatasetHint, HIGHLIGHT_COLORS, emptyProppFn, extractEnglishFromRelationship } from "./utils/helpers.js";
+import { downloadJson, relPathToDatasetHint, HIGHLIGHT_COLORS, emptyProppFn, extractEnglishFromRelationship, buildActionLayer } from "./utils/helpers.js";
 import { saveFolderCache, loadFolderCache, extractFolderPath } from "./utils/folderCache.js";
 
 // Import components
@@ -143,14 +143,27 @@ export default function App() {
       narrative_structure: narrativeStructure
         .filter((n) => (typeof n === "string" ? n.trim() : n.event_type))
         .map((n) => {
-          // For objects, ensure relationship_level1 only contains English
-          if (typeof n === "object" && n.relationship_level1) {
-            return {
-              ...n,
-              relationship_level1: extractEnglishFromRelationship(n.relationship_level1)
-            };
+          if (typeof n !== "object") return n;
+
+          const result = { ...n };
+
+          // Ensure relationship_level1 only contains English
+          if (n.relationship_level1) {
+            result.relationship_level1 = extractEnglishFromRelationship(n.relationship_level1);
           }
-          return n;
+
+          // Build action_layer from individual fields
+          const actionLayer = buildActionLayer(n);
+          if (actionLayer) {
+            result.action_layer = actionLayer;
+            // Remove individual action fields to avoid duplication
+            delete result.action_category;
+            delete result.action_type;
+            delete result.action_context;
+            delete result.action_status;
+          }
+
+          return result;
         }),
       cross_validation: crossValidation,
       qa
@@ -186,14 +199,26 @@ export default function App() {
         if (typeof n === "string") {
           return { event_type: "OTHER", description: n };
         }
+
+        const result = { ...n };
+
         // Ensure relationship_level1 only contains English
         if (n.relationship_level1) {
-          return {
-            ...n,
-            relationship_level1: extractEnglishFromRelationship(n.relationship_level1)
-          };
+          result.relationship_level1 = extractEnglishFromRelationship(n.relationship_level1);
         }
-        return n;
+
+        // Build action_layer from individual fields
+        const actionLayer = buildActionLayer(n);
+        if (actionLayer) {
+          result.action_layer = actionLayer;
+          // Remove individual action fields to avoid duplication
+          delete result.action_category;
+          delete result.action_type;
+          delete result.action_context;
+          delete result.action_status;
+        }
+
+        return result;
       }),
       themes_and_motifs: {
         ending_type: meta.ending_type,
