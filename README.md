@@ -14,3 +14,10 @@ cd in to annotation_tools, run annotation_tools/install_deps.sh to download nece
 ### Run
 npm run start
 
+## Annotation Guidance
+### Propp_Resoruces
+Propp_Resoruces/propp_functions_guide_en.md
+### ATU types
+ATU_Resources/ATU_types.md
+### Motifs
+Motif/Motifs_extracted_hierarchy.csv
