@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useEffect, useRef } from "react";
 import { organizeFiles, mapV1ToState, mapV2ToState, generateUUID } from "./utils/fileHandler.js";
-import { downloadJson, relPathToDatasetHint, HIGHLIGHT_COLORS, emptyProppFn } from "./utils/helpers.js";
+import { downloadJson, relPathToDatasetHint, HIGHLIGHT_COLORS, emptyProppFn, extractEnglishFromRelationship } from "./utils/helpers.js";
 import { saveFolderCache, loadFolderCache, extractFolderPath } from "./utils/folderCache.js";
 
 // Import components
@@ -140,9 +140,18 @@ export default function App() {
           propp_notes: proppNotes
         }
       },
-      narrative_structure: narrativeStructure.filter(
-        (n) => (typeof n === "string" ? n.trim() : n.event_type)
-      ),
+      narrative_structure: narrativeStructure
+        .filter((n) => (typeof n === "string" ? n.trim() : n.event_type))
+        .map((n) => {
+          // For objects, ensure relationship_level1 only contains English
+          if (typeof n === "object" && n.relationship_level1) {
+            return {
+              ...n,
+              relationship_level1: extractEnglishFromRelationship(n.relationship_level1)
+            };
+          }
+          return n;
+        }),
       cross_validation: crossValidation,
       qa
     }),
@@ -173,11 +182,19 @@ export default function App() {
         text_content: sourceText.text
       },
       characters: characters,
-      narrative_events: narrativeStructure.map((n) =>
-        typeof n === "string"
-          ? { event_type: "OTHER", description: n }
-          : n
-      ),
+      narrative_events: narrativeStructure.map((n) => {
+        if (typeof n === "string") {
+          return { event_type: "OTHER", description: n };
+        }
+        // Ensure relationship_level1 only contains English
+        if (n.relationship_level1) {
+          return {
+            ...n,
+            relationship_level1: extractEnglishFromRelationship(n.relationship_level1)
+          };
+        }
+        return n;
+      }),
       themes_and_motifs: {
         ending_type: meta.ending_type,
         key_values: meta.key_values,

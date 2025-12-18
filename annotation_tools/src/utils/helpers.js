@@ -40,6 +40,20 @@ export const HIGHLIGHT_COLORS = [
   "#a5f3fc"  // cyan
 ];
 
+// Extract English part from relationship level1 format "中文(English)" or return as-is
+export function extractEnglishFromRelationship(relationshipValue) {
+  if (!relationshipValue || typeof relationshipValue !== 'string') {
+    return relationshipValue;
+  }
+  // Check if it matches the format "中文(English)"
+  const match = relationshipValue.match(/\(([^)]+)\)/);
+  if (match) {
+    return match[1]; // Return English part
+  }
+  // If no parentheses, return as-is (might be custom value or already English)
+  return relationshipValue;
+}
+
 // Factory for empty Propp function
 export const emptyProppFn = () => ({
   id: generateUUID(),
