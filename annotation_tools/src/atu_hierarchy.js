@@ -3227,120 +3227,120 @@ export const ATU_HIERARCHY = [
       },
       {
         "level": 2,
-        "name": "Proofs of FidelitY and Innocence",
-        "key": "REALISTIC TALES|Proofs of FidelitY and Innocence",
+        "name": "Proofs of Fidelity and Innocence",
+        "key": "REALISTIC TALES|Proofs of Fidelity and Innocence",
         "parentKey": "REALISTIC TALES",
         "children": [
           {
             "level": 3,
             "name": "general",
-            "key": "REALISTIC TALES|Proofs of FidelitY and Innocence|general",
-            "parentKey": "REALISTIC TALES|Proofs of FidelitY and Innocence",
+            "key": "REALISTIC TALES|Proofs of Fidelity and Innocence|general",
+            "parentKey": "REALISTIC TALES|Proofs of Fidelity and Innocence",
             "children": [
               {
                 "level": 4,
                 "number": "880",
                 "title": "The Man Boasts of his Wife",
                 "key": "ATU880",
-                "parentKey": "REALISTIC TALES|Proofs of FidelitY and Innocence|general"
+                "parentKey": "REALISTIC TALES|Proofs of Fidelity and Innocence|general"
               },
               {
                 "level": 4,
                 "number": "881",
-                "title": "Oft-proved Fidility",
+                "title": "Oft-proved Fidelity",
                 "key": "ATU881",
-                "parentKey": "REALISTIC TALES|Proofs of FidelitY and Innocence|general"
+                "parentKey": "REALISTIC TALES|Proofs of Fidelity and Innocence|general"
               },
               {
                 "level": 4,
                 "number": "882",
                 "title": "The wager on the wife's chastity",
                 "key": "ATU882",
-                "parentKey": "REALISTIC TALES|Proofs of FidelitY and Innocence|general"
+                "parentKey": "REALISTIC TALES|Proofs of Fidelity and Innocence|general"
               },
               {
                 "level": 4,
                 "number": "884",
                 "title": "The forgotten fiancée",
                 "key": "ATU884",
-                "parentKey": "REALISTIC TALES|Proofs of FidelitY and Innocence|general"
+                "parentKey": "REALISTIC TALES|Proofs of Fidelity and Innocence|general"
               },
               {
                 "level": 4,
                 "number": "885",
                 "title": "The Poor Boy Betrothed to the Maiden",
                 "key": "ATU885",
-                "parentKey": "REALISTIC TALES|Proofs of FidelitY and Innocence|general"
+                "parentKey": "REALISTIC TALES|Proofs of Fidelity and Innocence|general"
               },
               {
                 "level": 4,
                 "number": "887",
                 "title": "Griselda",
                 "key": "ATU887",
-                "parentKey": "REALISTIC TALES|Proofs of FidelitY and Innocence|general"
+                "parentKey": "REALISTIC TALES|Proofs of Fidelity and Innocence|general"
               },
               {
                 "level": 4,
                 "number": "888",
                 "title": "The Faithful Wife",
                 "key": "ATU888",
-                "parentKey": "REALISTIC TALES|Proofs of FidelitY and Innocence|general"
+                "parentKey": "REALISTIC TALES|Proofs of Fidelity and Innocence|general"
               },
               {
                 "level": 4,
                 "number": "889",
                 "title": "The Faithful Servant",
                 "key": "ATU889",
-                "parentKey": "REALISTIC TALES|Proofs of FidelitY and Innocence|general"
+                "parentKey": "REALISTIC TALES|Proofs of Fidelity and Innocence|general"
               },
               {
                 "level": 4,
                 "number": "890",
                 "title": "The Pound of Flesh",
                 "key": "ATU890",
-                "parentKey": "REALISTIC TALES|Proofs of FidelitY and Innocence|general"
+                "parentKey": "REALISTIC TALES|Proofs of Fidelity and Innocence|general"
               },
               {
                 "level": 4,
                 "number": "891",
                 "title": "The Man Who Deserts his Wife and Sets Her the Task of Bearing Him a Child",
                 "key": "ATU891",
-                "parentKey": "REALISTIC TALES|Proofs of FidelitY and Innocence|general"
+                "parentKey": "REALISTIC TALES|Proofs of Fidelity and Innocence|general"
               },
               {
                 "level": 4,
                 "number": "892",
                 "title": "The children of the king",
                 "key": "ATU892",
-                "parentKey": "REALISTIC TALES|Proofs of FidelitY and Innocence|general"
+                "parentKey": "REALISTIC TALES|Proofs of Fidelity and Innocence|general"
               },
               {
                 "level": 4,
                 "number": "893",
                 "title": "The Unreliable Friends. (The HalfFriend).",
                 "key": "ATU893",
-                "parentKey": "REALISTIC TALES|Proofs of FidelitY and Innocence|general"
+                "parentKey": "REALISTIC TALES|Proofs of Fidelity and Innocence|general"
               },
               {
                 "level": 4,
                 "number": "896",
                 "title": "The Lecherous Holy Man and the Maiden in a Box",
                 "key": "ATU896",
-                "parentKey": "REALISTIC TALES|Proofs of FidelitY and Innocence|general"
+                "parentKey": "REALISTIC TALES|Proofs of Fidelity and Innocence|general"
               },
               {
                 "level": 4,
                 "number": "898",
                 "title": "The Daughter of the Sun",
                 "key": "ATU898",
-                "parentKey": "REALISTIC TALES|Proofs of FidelitY and Innocence|general"
+                "parentKey": "REALISTIC TALES|Proofs of Fidelity and Innocence|general"
               },
               {
                 "level": 4,
                 "number": "899",
                 "title": "Alcestis",
                 "key": "ATU899",
-                "parentKey": "REALISTIC TALES|Proofs of FidelitY and Innocence|general"
+                "parentKey": "REALISTIC TALES|Proofs of Fidelity and Innocence|general"
               }
             ]
           }

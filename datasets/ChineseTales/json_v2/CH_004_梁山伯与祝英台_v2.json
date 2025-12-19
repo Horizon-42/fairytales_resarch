@@ -698,9 +698,11 @@
     "key_values": [
       "LOYALTY",
       "SACRIFICE",
-      "Ture Love"
+      "TRUE_LOVE"
     ],
-    "motif_type": [],
+    "motif_type": [
+      "Motif T80: Tragic love. Italian Novella: Rotunda; Jewish: Neuman; India: Thompson- (Sex > Love > Love)"
+    ],
     "atu_categories": [],
     "obstacle_thrower": [],
     "helper_type": [],
