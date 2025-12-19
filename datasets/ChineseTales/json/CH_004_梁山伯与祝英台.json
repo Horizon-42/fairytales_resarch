@@ -11,8 +11,11 @@
   "metadata": {
     "main_motif": "",
     "atu_type": "",
-    "ending_type": "HAPPY_REUNION",
-    "key_values": [],
+    "ending_type": "TRAGIC",
+    "key_values": [
+      "LOYALTY",
+      "SACRIFICE"
+    ],
     "target_motif": true
   },
   "thinking_process": "",
@@ -316,7 +319,14 @@
       "target_type": "object",
       "object_type": "",
       "instrument": "",
-      "time_order": 3
+      "time_order": 3,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "2921cd56-7c39-4060-8aa4-0dca66520421",
@@ -494,7 +504,7 @@
     {
       "id": "e3ebab93-60f9-4c6f-a815-22442c528d88",
       "event_type": "BEGINNING_COUNTERACTION",
-      "description": "祝英台听到梁山伯的死讯，悲痛欲绝，她请求父亲让她去梁山伯灵前祭奠，但是父亲始终不同意。她心一横就往旁边的柱子上使劲撞去，银心见情况不妙，急忙拉住她。祝英台绝望地说：“要是你们不让我去，我就撞死在这里。",
+      "description": "女主以死相逼, 以换取祭奠男主的机会; 祝英台以死相逼, 换得祭奠梁山伯的机会",
       "agents": [
         "祝英台"
       ],
@@ -513,9 +523,127 @@
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "parent_child",
       "sentiment": "hostile",
-      "action_category": "transaction",
-      "action_type": "request",
-      "action_context": ""
+      "action_layer": {
+        "category": "transaction",
+        "type": "request",
+        "status": "success",
+        "context": "demand"
+      }
+    },
+    {
+      "id": "f41eda5c-826f-4710-8d9e-71d1f4505ff8",
+      "event_type": "BEGINNING_COUNTERACTION",
+      "description": "女主许诺与男主同死; 祝英台许诺殉情",
+      "agents": [
+        "祝英台"
+      ],
+      "targets": [
+        "梁山伯"
+      ],
+      "text_span": {
+        "start": 5246,
+        "end": 5361,
+        "text": "祝英台急急忙忙赶到梁家，一进门就扑在梁山伯身上大哭起来：“梁兄，我来迟了，是我害了你呀，我们活着不能做夫妻，那就死了待在一起。”她哭得肝肠寸断，忽然家人来报：“小姐，老爷请你赶快回去。”他们见祝英台始终不肯离去，就强行将她拖走了。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 19,
+      "relationship_level1": "Romance",
+      "relationship_level2": "lover",
+      "sentiment": "romantic",
+      "action_layer": {
+        "category": "communicative",
+        "type": "promise",
+        "status": "success",
+        "context": "oath"
+      }
+    },
+    {
+      "id": "ddff7ac7-b7f4-45e6-9505-d7420476d800",
+      "event_type": "STRUGGLE",
+      "description": "女主佯装嫁给男主的情敌; 祝英台在丧服上面穿上婚服, 佯装出嫁",
+      "agents": [
+        "祝英台"
+      ],
+      "targets": [
+        "马文才"
+      ],
+      "text_span": {
+        "start": 5362,
+        "end": 5492,
+        "text": "自从祭奠梁山伯回来，祝英台就整天精神恍惚，一言不发。这时，马府暗中听到一些风声，就提前了婚期，早早过来迎娶。成亲这天，祝府上下，热闹异常，前来道喜的人络绎不绝。可是，祝英台却独自一个人躲在房里哭泣，她偷偷在嫁衣下穿了件白色的孝服。随后，祝英台被簇拥着上了喜船。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 20,
+      "relationship_level1": "Family & Kinship",
+      "relationship_level2": "spouse",
+      "sentiment": "negative",
+      "action_layer": {
+        "category": "communicative",
+        "type": "deceive",
+        "status": "success",
+        "context": "feign"
+      }
+    },
+    {
+      "id": "b3a24f4d-54a8-40e6-a6e2-844dfe3c5026",
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "在自然/命运的帮助下, 女主逃离控制, 到了男主坟墓之前;\n祝英台在风浪的帮助下, 上岸到了梁山伯墓前",
+      "agents": [
+        "祝英台"
+      ],
+      "targets": [
+        "马文才"
+      ],
+      "text_span": {
+        "start": 5492,
+        "end": 5599,
+        "text": "当喜船经过邵家渡时，她远远地看见了梁山伯的坟墓，便提出要去坟上祭拜。可是，马家迎亲的人不但没有同意，反而故意将船开得很快。这时，忽然狂风大作，波浪汹涌，喜船无法前行，只得靠在岸边躲避风浪。于是，祝英台从容地上了岸。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 21,
+      "relationship_level1": "Family & Kinship",
+      "relationship_level2": "spouse",
+      "sentiment": "negative",
+      "action_layer": {
+        "category": "physical",
+        "type": "flee",
+        "status": "success"
+      }
+    },
+    {
+      "id": "8f441622-589c-4e85-a527-039b5f773deb",
+      "event_type": "WEDDING",
+      "description": "女主在男主墓前自杀;祝英台投入梁山伯墓中",
+      "agents": [
+        "祝英台"
+      ],
+      "targets": [
+        "梁山伯"
+      ],
+      "text_span": {
+        "start": 5600,
+        "end": 5788,
+        "text": "祝英台越走越快，边走边脱去红色的嫁衣，露出雪白的孝服。她扑在坟头上，喊着梁山伯的名字，号啕大哭。霎时，只见地动山摇，飞沙走石，晴朗的天空也变得一片阴翳。梁山伯的坟墓忽然裂开一条长长的缝隙，祝英台毫不犹豫地跳了进去。而那坟墓顷刻间又合拢在一起，如同没有裂开过一样。\n转眼间，一切都风平浪静，恢复了正常。一对翩翩起舞的蝴蝶，从坟墓里飞了出来。据说黄色的是祝英台，褐色的就是梁山伯。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 22,
+      "relationship_level1": "Romance",
+      "relationship_level2": "lover",
+      "sentiment": "romantic",
+      "action_layer": {
+        "category": "existential",
+        "type": "die",
+        "status": "success",
+        "context": "suicide"
+      }
     }
   ],
   "cross_validation": {

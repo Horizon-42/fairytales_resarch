@@ -122,6 +122,7 @@ export const VALUE_TYPES = [
   "DISOBEDIENCE",
   "SACRIFICE",
   "JUSTICE",
+  "Ture Love",
   "OTHER"
 ];
 
