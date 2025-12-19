@@ -29,6 +29,16 @@
       "name": "牧童",
       "alias": "",
       "archetype": "Hero"
+    },
+    {
+      "name": "观世音菩萨",
+      "alias": "",
+      "archetype": "Mentor"
+    },
+    {
+      "name": "小青",
+      "alias": "青蛇; 小青蛇",
+      "archetype": "Sidekick/Helper"
     }
   ],
   "narrative_events": [
@@ -39,14 +49,19 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 1,
+      "time_order": 10,
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "",
       "action_type": "",
       "action_context": "",
-      "action_status": ""
+      "action_status": "",
+      "text_span": {
+        "start": 1226,
+        "end": 1565,
+        "text": "白素贞心中急切，暗暗做法让晴空万里突然阴云密布，眼看就要暴雨倾盆。小青向着湖中那条小舟大喊：“船家！船家！麻烦你把船靠靠岸，载我们去清波门。”\n那书生眼见就要下雨，不忍岸上的两位姑娘淋雨，便要船家将船靠岸，接了白素贞与小青上船。\n两位姑娘上船后，与书生互通了姓名。原来这位书生姓许，名仙，字汉文，家住钱塘门。清明节来祭拜亡父母后正欲坐船回家，顺便游览一下沿湖风光。\n不久，船到了清波门，眼见暴雨仍未停，许仙就拿出自己所携雨伞，借给白素贞，以免她被雨淋湿生病。白素贞看出他是个忠厚老实之人，又加上是自己的救命恩人，心中不禁欢喜万分。\n几日后，许仙前来取伞。其实他只是借取伞之由，想再见白素贞一面。小青看出二人心意，于是牵线做媒，当日就在裘王府内拜堂成亲，自此结为夫妻，恩爱两不疑。"
+      }
     },
     {
       "id": "f9ab0892-dd68-4578-b690-5b08921f8ccf",
@@ -105,28 +120,158 @@
     {
       "id": "e3db673a-1f50-48e3-9032-94ff86984368",
       "event_type": "RESCUE",
+      "description": "在男主(前世)的帮助下, (动物形态的)女主从猎人手里逃出生天; 白素贞乘捕蛇人不备逃出生天",
+      "agents": [
+        "白素贞"
+      ],
+      "targets": [
+        "捕蛇人"
+      ],
+      "text_span": {
+        "start": 370,
+        "end": 506,
+        "text": "小白蛇见捕蛇人慢慢放松了警惕，便悄悄仰起头，趁着捕蛇者不备，一口咬住他的手背。捕蛇人“哎哟”一声跳了起来，忙甩脱小白蛇。就这样，小白蛇化危为安，摇摇尾巴，迅速地钻入山林里不见了。\n眼见小白蛇已经跑得没了踪影，自己又被咬了一口，捕蛇人无奈，只好自认倒霉，又去寻找新的目标了。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "enemy",
+      "sentiment": "negative",
+      "action_layer": {
+        "category": "physical",
+        "type": "flee",
+        "status": "success",
+        "context": "strategic_retreat"
+      }
+    },
+    {
+      "id": "fd96e43e-1204-4363-946a-f8d16a6491ee",
+      "event_type": "STRUGGLE",
       "description": "正在这个时候，一阵笛声传来，有个骑着牛的牧童向捕蛇者而来。他看到捕蛇者手中的小白蛇，有些不忍心，便央求道：“叔叔，我看这蛇也怪可怜的，您行行好，放了它吧。”\n捕蛇人自然不肯答应。牧童想了想，心中有了主",
       "agents": [
         "牧童"
       ],
       "targets": [
-        "白素贞"
+        "捕蛇人"
       ],
       "text_span": {
         "start": 163,
-        "end": 506,
-        "text": "正在这个时候，一阵笛声传来，有个骑着牛的牧童向捕蛇者而来。他看到捕蛇者手中的小白蛇，有些不忍心，便央求道：“叔叔，我看这蛇也怪可怜的，您行行好，放了它吧。”\n捕蛇人自然不肯答应。牧童想了想，心中有了主意。于是，他笑嘻嘻地说道：“您既然这么累了，不如坐下休息会儿，我给您吹首小曲儿听吧。”\n牧童说着便举起手中的笛子放在嘴边吹起曲子来，小曲儿悠扬婉转，捕蛇人听得入迷，忍不住坐了下来，就连手中捏着蛇的力度也松了几分。\n小白蛇见捕蛇人慢慢放松了警惕，便悄悄仰起头，趁着捕蛇者不备，一口咬住他的手背。捕蛇人“哎哟”一声跳了起来，忙甩脱小白蛇。就这样，小白蛇化危为安，摇摇尾巴，迅速地钻入山林里不见了。\n眼见小白蛇已经跑得没了踪影，自己又被咬了一口，捕蛇人无奈，只好自认倒霉，又去寻找新的目标了。"
+        "end": 369,
+        "text": "正在这个时候，一阵笛声传来，有个骑着牛的牧童向捕蛇者而来。他看到捕蛇者手中的小白蛇，有些不忍心，便央求道：“叔叔，我看这蛇也怪可怜的，您行行好，放了它吧。”\n捕蛇人自然不肯答应。牧童想了想，心中有了主意。于是，他笑嘻嘻地说道：“您既然这么累了，不如坐下休息会儿，我给您吹首小曲儿听吧。”\n牧童说着便举起手中的笛子放在嘴边吹起曲子来，小曲儿悠扬婉转，捕蛇人听得入迷，忍不住坐了下来，就连手中捏着蛇的力度也松了几分。"
       },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 3,
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "enemy",
+      "sentiment": "negative",
+      "action_layer": {
+        "category": "mental",
+        "type": "plot",
+        "status": "success",
+        "context": "strategy"
+      }
+    },
+    {
+      "id": "12cf6ff8-4514-4943-874f-5b9bee1eed80",
+      "event_type": "UNRECOGNIZED_ARRIVAL",
+      "description": "女主由动物形态化身为人; 白素贞修炼成人, 踏入凡尘(红尘俗世);",
+      "agents": [
+        "白素贞"
+      ],
+      "targets": [],
+      "text_span": {
+        "start": 507,
+        "end": 702,
+        "text": "由于害怕再被捕蛇人捉到，小白蛇前往峨眉山的白龙洞，开始潜心修炼。山中岁月容易过，世上繁华已千年。就这样，六百年的时光飞快过去了。\n当小白蛇修满一千年，完成了上天给自己的所有考验后，它化身人形，变成一位白衣白裙、超凡脱俗的美丽女子，因前身系白蛇所化，故为自己取姓白，取名素贞。\n她变成人后的第一件事情就是去找六百年前曾经救过自己的牧童，以报当年的救命之恩。在观世音菩萨的指点下，她来到了杭州。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "action_layer": {
+        "category": "existential",
+        "type": "transform",
+        "status": "success",
+        "context": "shapeshift"
+      }
+    },
+    {
+      "id": "10f9ad39-cb0a-4a58-8add-ddda626924dd",
+      "event_type": "HERO_REACTION",
+      "description": "女主打败了潜在的对手, 但没有下死手; 白素贞遇到青蛇, 出于维护秩序的意愿, 打败了青蛇, 但没有痛下杀手",
+      "agents": [
+        "白素贞"
+      ],
+      "targets": [
+        "小青"
+      ],
+      "text_span": {
+        "start": 703,
+        "end": 862,
+        "text": "在途经钱塘江时，白素贞偶遇自己的同类，一条已经修炼了五百年的青蛇。那青蛇的修炼时间尚短，定力不足，行事乖张，猖狂任性。白素贞怕她日后祸乱人间，决心除掉这个祸患。她祭出宝剑，与青蛇在山林里打得难解难分。青蛇本不是白素贞的对手，很快就落了下风。眼见小青蛇就要命丧白素贞之手，白素贞心中念其五百年修炼不易，不忍就此杀死青蛇。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6,
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "rival",
+      "sentiment": "negative",
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "status": "success",
+        "context": "magical_blast"
+      }
+    },
+    {
+      "id": "145e5279-1009-4bc0-afd5-9f4ed79d5663",
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "魔法对手在被女主击败后臣服于她; 小青臣服于白素贞",
+      "agents": [
+        "小青"
+      ],
+      "targets": [
+        "白素贞"
+      ],
+      "text_span": {
+        "start": 862,
+        "end": 959,
+        "text": "青蛇感念白素贞对自己手下留情，决心改邪归正，一生跟随白素贞。于是，化身为一青衣女子，名唤“小青”。此后，两人以姐妹相称，将清波门双茶坊巷裘王府废屋以法术变幻为新宅，暂时居住，寻找那位转世的牧童。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 7,
       "relationship_level1": "Social & Alliance",
       "relationship_level2": "ally",
       "sentiment": "positive",
-      "action_category": "physical",
-      "action_type": "",
-      "action_context": ""
+      "action_layer": {
+        "category": "communicative",
+        "type": "promise",
+        "status": "success",
+        "context": "oath"
+      }
+    },
+    {
+      "id": "8d031b4b-5137-420d-a3c0-5dc850558809",
+      "event_type": "",
+      "description": "水光潋滟晴方好，山色空濛雨亦奇。欲把西湖比西子，淡妆浓抹总相宜。西湖的美景总让人百看不厌，白素贞与小青姐妹俩每日便在这杭州西湖畔一边游山玩水，一边找寻白素贞的转世恩人。\n三月初三，清明节这天，姐妹两人",
+      "agents": [],
+      "targets": [],
+      "text_span": {
+        "start": 960,
+        "end": 1225,
+        "text": "水光潋滟晴方好，山色空濛雨亦奇。欲把西湖比西子，淡妆浓抹总相宜。西湖的美景总让人百看不厌，白素贞与小青姐妹俩每日便在这杭州西湖畔一边游山玩水，一边找寻白素贞的转世恩人。\n三月初三，清明节这天，姐妹两人又漫步在西湖湖畔。正当两人走至断桥之上时，迎面走来一位俊雅书生，与她们擦肩而过。白素贞回眸看着书生背影，心生爱慕，不由得想：“这若就是自己救命恩人的转世该多好。”\n小青看出白素贞的心思，忙劝她用法术看看那书生的前世究竟是何人。白素贞一查，竟真的就是那牧童转世，不由喜出望外，正欲追上前去相识，无奈那书生快了一步，已登上船准备离开。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 8
     }
   ],
   "themes_and_motifs": {
