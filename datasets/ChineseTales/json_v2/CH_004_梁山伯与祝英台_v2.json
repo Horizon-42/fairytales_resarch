@@ -703,7 +703,9 @@
     "motif_type": [
       "Motif T80: Tragic love. Italian Novella: Rotunda; Jewish: Neuman; India: Thompson- (Sex > Love > Love)"
     ],
-    "atu_categories": [],
+    "atu_categories": [
+      "ATU 881: Oft-proved Fidelity (REALISTIC TALES > Proofs of Fidelity and Innocence)"
+    ],
     "obstacle_thrower": [],
     "helper_type": [],
     "thinking_process": ""

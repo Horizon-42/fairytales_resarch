@@ -138,6 +138,7 @@ export const ENDING_TYPES = [
 ];
 
 export const PROPP_FUNCTIONS = [
+  "Initial Situation",
   "ABSENTATION",
   "INTERDICTION",
   "VIOLATION",
