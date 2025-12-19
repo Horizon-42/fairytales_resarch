@@ -23,3 +23,8 @@ ATU_Resources/ATU_types.md
 Motif/Motifs_extracted_hierarchy.csv
 ### Universal Narrative Action Taxonomy
 Universal Narrative Action Taxonomy/Universal_Narrative_Action_Taxonomy.md
+
+
+## Visulization
+### Story Ribbons
+papers/story_ribbons.pdf
