@@ -284,8 +284,12 @@
     "atu_categories": [
       "ATU 400: The Quest for a Lost Bride (TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Wife)"
     ],
-    "obstacle_thrower": [],
-    "helper_type": [],
+    "obstacle_thrower": [
+      "捕蛇人"
+    ],
+    "helper_type": [
+      "SUPERNATURAL"
+    ],
     "thinking_process": ""
   },
   "analysis": {

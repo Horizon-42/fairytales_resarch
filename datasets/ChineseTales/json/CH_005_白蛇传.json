@@ -54,8 +54,12 @@
         }
       ],
       "obstacle_pattern": "",
-      "obstacle_thrower": [],
-      "helper_type": [],
+      "obstacle_thrower": [
+        "捕蛇人"
+      ],
+      "helper_type": [
+        "SUPERNATURAL"
+      ],
       "thinking_process": ""
     },
     "deep": {
