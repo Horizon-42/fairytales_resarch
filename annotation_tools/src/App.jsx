@@ -659,9 +659,9 @@ export default function App() {
   };
 
   // ========== File Handling ==========
-  const handleStoryFilesChange = async (event) => {
-    const files = event.target.files;
-    if (!files) return;
+  const loadFilesFromFolderSelection = async (filesLike, folderPathHint = null) => {
+    const files = filesLike;
+    if (!files || files.length === 0) return;
 
     // If there's already loaded data, save it before loading new folder
     if (selectedStoryIndex >= 0 && storyFiles[selectedStoryIndex]) {
@@ -690,7 +690,7 @@ export default function App() {
     setV2JsonFiles(v2Jsons);
 
     // Extract folder path and save to cache
-    const folderPath = extractFolderPath(files);
+    const folderPath = extractFolderPath(files, folderPathHint);
     const cache = loadFolderCache();
     const targetIndex = (cache && cache.folderPath === folderPath && cache.selectedIndex >= 0 && cache.selectedIndex < withContent.length)
       ? cache.selectedIndex
@@ -706,6 +706,16 @@ export default function App() {
     if (withContent.length > 0) {
       selectStoryWithData(targetIndex, withContent, v1Jsons, v2Jsons);
     }
+  };
+
+  const handleStoryFilesChange = async (event) => {
+    const files = event.target.files;
+    if (!files) return;
+    await loadFilesFromFolderSelection(files);
+  };
+
+  const handlePickDirectory = async (files, folderName) => {
+    await loadFilesFromFolderSelection(files, folderName);
   };
 
   const selectStoryWithData = async (index, texts, v1Map, v2Map) => {
@@ -1193,6 +1203,7 @@ export default function App() {
             storyFiles={storyFiles}
             selectedIndex={selectedStoryIndex}
             onFilesChange={handleStoryFilesChange}
+            onPickDirectory={handlePickDirectory}
             onSelectStory={handleSelectStory}
             culture={culture}
             onCultureChange={setCulture}
