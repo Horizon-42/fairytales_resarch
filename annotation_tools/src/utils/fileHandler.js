@@ -11,8 +11,9 @@ export function organizeFiles(fileList) {
     const fileName = parts.pop();
     const dir = parts.join('/');
 
-    if (fileName.endsWith('.txt')) {
-      texts.push({ file, id: fileName.replace('.txt', ''), path });
+    if (fileName.endsWith('.txt') || fileName.endsWith('.md')) {
+      const id = fileName.replace(/\.(txt|md)$/, '');
+      texts.push({ file, id, path });
     } else if (fileName.endsWith('.json')) {
       const id = fileName.replace(/_v[12]\.json$/, '').replace('.json', '');
       

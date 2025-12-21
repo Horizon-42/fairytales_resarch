@@ -46,14 +46,14 @@ export function clearFolderCache() {
 }
 
 // Extract folder path from file paths
-export function extractFolderPath(fileList) {
-  if (!fileList || fileList.length === 0) return null;
+export function extractFolderPath(fileList, fallbackFolderPath = null) {
+  if (!fileList || fileList.length === 0) return fallbackFolderPath;
   
   // Get the first file's path
   const firstFile = fileList[0];
   const path = firstFile.webkitRelativePath || firstFile.name;
   
-  if (!path) return null;
+  if (!path) return fallbackFolderPath;
   
   // Extract directory path (everything except the filename)
   const parts = path.split('/');
@@ -62,5 +62,5 @@ export function extractFolderPath(fileList) {
     return parts.join('/');
   }
   
-  return null;
+  return fallbackFolderPath;
 }
