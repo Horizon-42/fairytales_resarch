@@ -231,7 +231,8 @@ def analyze_character_relationships_with_levels(
                         if char_votes[target]['first_level'] is None:
                             char_votes[target]['first_level'] = friendly_level
         
-        # Track per-event friendliness for ALL participants (for gradient coloring)
+        # Track per-event friendliness ONLY for direct interactions with hero
+        # This determines the gradient coloring of ribbons
         for char_name in all_participants:
             if char_name and char_name != hero_matched and char_name in char_event_history:
                 # Determine this character's friendly level in this event
@@ -240,22 +241,27 @@ def analyze_character_relationships_with_levels(
                 hero_is_agent = hero_matched in agents
                 hero_is_target = hero_matched in targets
                 
-                event_level = 0
+                event_level = None  # Default: no direct interaction with hero
                 
-                # If character is agent towards hero
+                # Case 1: Character is AGENT acting on HERO (direct interaction)
+                # e.g., 老牛 helps 牛郎, 王母娘娘 attacks 牛郎
                 if char_is_agent and hero_is_target:
                     event_level = friendly_level
-                # If hero is agent towards character (only count negative)
+                
+                # Case 2: HERO is AGENT acting on CHARACTER (direct interaction)
+                # e.g., 牛郎 attacks enemy, 牛郎 helps friend
                 elif hero_is_agent and char_is_target:
+                    # Hero's action towards character affects their relationship
+                    # Negative: hero attacking them = they're hostile
+                    # Positive: hero helping them = doesn't make them friendly (they didn't act)
                     if friendly_level < 0:
                         event_level = friendly_level
-                    else:
-                        # Positive from hero doesn't change character's friendliness
-                        event_level = None  # Don't record
-                # If both are targets or both are agents (co-participants)
-                else:
-                    # Co-participation inherits the event sentiment
-                    event_level = friendly_level
+                    # else: don't record positive actions from hero
+                
+                # Case 3: Co-participants (both agents or both targets) - NO DIRECT INTERACTION
+                # e.g., 天帝 attacks both 牛郎 and 织女 - 织女 is victim, not hostile
+                # DO NOT inherit event sentiment - this was the bug!
+                # else: event_level stays None
                 
                 if event_level is not None:
                     # Calculate cumulative level
