@@ -4,12 +4,12 @@ Character analysis utilities for fairytale visualization.
 Handles character sorting, relationship analysis, and hero identification.
 
 Updated logic:
-1. Hostility/friendliness determined by voting across all narratives
-   - If equal votes, later (more recent) interaction decides
-   - Neutral characters treated as friendly
-2. Centrality used for character importance ordering
-   - Higher centrality = closer to hero
-   - Hero identified by highest centrality among Hero archetypes
+1. Uses Friendly Level values for voting:
+   - romantic: +2, positive: +1, neutral: +1
+   - negative: -1, fearful: -2, hostile: -2
+2. Camp classification based on total friendly level (active behaviors only)
+3. Per-event friendliness tracking for ribbon gradient coloring
+4. Initial color tone based on first interaction's friendly level
 """
 
 import networkx as nx
@@ -17,23 +17,29 @@ from collections import defaultdict
 from typing import List, Dict, Tuple, Optional
 
 
-# Sentiment classification
-FRIENDLY_SENTIMENTS = {'positive', 'romantic', 'respectful', 'grateful'}
-HOSTILE_SENTIMENTS = {'negative', 'hostile', 'fearful', 'antagonistic'}
-NEUTRAL_SENTIMENTS = {'neutral', ''}
+# Friendly Level mapping from sentiment.csv
+FRIENDLY_LEVELS = {
+    'romantic': 2,
+    'positive': 1,
+    'neutral': 1,
+    'negative': -1,
+    'fearful': -2,
+    'hostile': -2,
+}
+
+# Default level for unknown sentiments
+DEFAULT_FRIENDLY_LEVEL = 0
+
+
+def get_friendly_level(sentiment: str) -> int:
+    """Get the friendly level for a sentiment."""
+    return FRIENDLY_LEVELS.get(sentiment.lower().strip(), DEFAULT_FRIENDLY_LEVEL)
 
 
 def build_interaction_graph(events: List[Dict], characters: List[Dict]) -> nx.Graph:
     """
     Build a weighted undirected graph from character interactions.
     Edge weights represent interaction frequency.
-    
-    Args:
-        events: List of narrative events with agents and targets
-        characters: List of character dicts
-    
-    Returns:
-        NetworkX graph with characters as nodes and interactions as edges
     """
     char_names = {c['name'] for c in characters}
     
@@ -76,36 +82,24 @@ def calculate_centrality(G: nx.Graph) -> Dict[str, float]:
     """
     Calculate centrality scores for all characters.
     Uses a combination of degree centrality and eigenvector centrality.
-    
-    Args:
-        G: NetworkX graph of character interactions
-    
-    Returns:
-        Dict mapping character name to centrality score
     """
     if len(G.nodes()) == 0:
         return {}
     
-    # Calculate different centrality measures
     try:
-        # Weighted degree centrality
         degree_cent = nx.degree_centrality(G)
         
-        # Try eigenvector centrality (may fail for disconnected graphs)
         try:
             eigen_cent = nx.eigenvector_centrality_numpy(G, weight='weight')
         except:
             eigen_cent = {n: 0 for n in G.nodes()}
         
-        # Combine centralities (weighted average)
         combined = {}
         for node in G.nodes():
-            # Weight: 60% degree, 40% eigenvector
             combined[node] = 0.6 * degree_cent.get(node, 0) + 0.4 * eigen_cent.get(node, 0)
         
         return combined
     except Exception as e:
-        # Fallback to simple degree
         return {n: G.degree(n) / max(1, len(G.nodes()) - 1) for n in G.nodes()}
 
 
@@ -113,23 +107,13 @@ def identify_main_hero(characters: List[Dict], centrality: Dict[str, float]) -> 
     """
     Identify the main hero character based on centrality.
     Priority: Hero archetype with highest centrality > highest centrality overall
-    
-    Args:
-        characters: List of character dicts
-        centrality: Centrality scores from calculate_centrality
-    
-    Returns:
-        Name of the main hero character
     """
-    # First, find characters with Hero archetype
     heroes = [c for c in characters if c.get('archetype', '').lower() == 'hero']
     
     if heroes:
-        # Among heroes, pick the one with highest centrality
         main_hero = max(heroes, key=lambda c: centrality.get(c['name'], 0))
         return main_hero['name']
     
-    # If no heroes, pick character with highest centrality
     if characters and centrality:
         main_char = max(characters, key=lambda c: centrality.get(c['name'], 0))
         return main_char['name']
@@ -137,24 +121,20 @@ def identify_main_hero(characters: List[Dict], centrality: Dict[str, float]) -> 
     return None
 
 
-def analyze_character_relationships_voting(
+def analyze_character_relationships_with_levels(
     events: List[Dict], 
     characters: List[Dict], 
     hero_name: str
-) -> Dict[str, Dict]:
+) -> Tuple[Dict[str, Dict], Dict[str, List[Dict]]]:
     """
-    Analyze each character's relationship to the hero using voting.
+    Analyze each character's relationship to the hero using Friendly Levels.
     
-    Voting rules:
-    - Only count sentiment when OTHER CHARACTER is the AGENT (acting towards hero)
-    - When hero is agent, hostile sentiment towards X counts as hostile for X
-      (hero attacking X means X is likely hostile)
-    - When hero is agent with positive sentiment, it does NOT make target friendly
-      (hero showing kindness doesn't mean target is friendly)
-    - If friendly > hostile: friendly
-    - If hostile > friendly: hostile  
-    - If equal: use the most recent (later time_order) interaction
-    - Neutral characters (no interactions) are treated as friendly
+    Voting rules (for camp classification):
+    - Only count when OTHER CHARACTER is AGENT (acting towards hero)
+    - Sum up friendly levels from all interactions
+    - Total > 0: friendly camp, Total < 0: hostile camp, Total == 0: use last interaction
+    
+    Also tracks per-event friendliness for gradient coloring.
     
     Args:
         events: List of narrative events (should be sorted by time_order)
@@ -162,7 +142,9 @@ def analyze_character_relationships_voting(
         hero_name: Name of the main hero
     
     Returns:
-        Dict mapping character name to relationship analysis
+        Tuple of:
+        - Dict mapping character name to relationship analysis
+        - Dict mapping character name to per-event friendliness history
     """
     char_names = {c['name'] for c in characters}
     
@@ -174,35 +156,38 @@ def analyze_character_relationships_voting(
                 return char_name
         return None
     
-    # Track votes and last interaction for each character
-    # Structure: {char_name: {'friendly': count, 'hostile': count, 'last_sentiment': str, 'last_time': int}}
+    # Track votes using friendly levels
     char_votes = {
         c['name']: {
-            'friendly_votes': 0,
-            'hostile_votes': 0,
-            'last_sentiment': None,
-            'last_time': -1
+            'total_level': 0,           # Sum of friendly levels (for camp)
+            'last_level': None,         # Last interaction's level (for tiebreaker)
+            'last_time': -1,            # Time of last interaction
+            'first_level': None,        # First interaction's level (for initial color)
+            'interaction_count': 0,     # Number of interactions
         }
         for c in characters
     }
     
+    # Track per-event friendliness for each character
+    # {char_name: [{time_order: int, friendly_level: int, cumulative_level: int}]}
+    char_event_history = {c['name']: [] for c in characters}
+    
     hero_matched = find_char_name(hero_name)
     if not hero_matched:
-        # Return neutral for all if hero not found
         return {
             c['name']: {
-                'friendly_count': 0,
-                'hostile_count': 0,
-                'affinity_score': 0.0,
-                'classification': 'friendly'  # Default to friendly
+                'total_level': 0,
+                'classification': 'friendly',
+                'first_level': 0,
+                'interaction_count': 0,
             }
             for c in characters
-        }
+        }, char_event_history
     
-    # Sort events by time_order to ensure correct "last" determination
+    # Sort events by time_order
     sorted_events = sorted(events, key=lambda e: e.get('time_order', 0))
     
-    # Analyze events involving the hero
+    # Process each event
     for event in sorted_events:
         agents = [find_char_name(a) for a in event.get('agents', [])]
         targets = [find_char_name(t) for t in event.get('targets', [])]
@@ -211,93 +196,123 @@ def analyze_character_relationships_voting(
         
         sentiment = event.get('sentiment', '').lower()
         time_order = event.get('time_order', 0)
+        friendly_level = get_friendly_level(sentiment)
         
-        # Classify sentiment
-        if sentiment in FRIENDLY_SENTIMENTS:
-            sentiment_type = 'friendly'
-        elif sentiment in HOSTILE_SENTIMENTS:
-            sentiment_type = 'hostile'
-        else:
-            sentiment_type = 'neutral'
+        # Track all participants in this event for per-event friendliness
+        all_participants = set(agents + targets)
         
         # Case 1: Hero is TARGET - other characters (agents) are acting on hero
-        # This directly reflects how they treat the hero
+        # This determines their CAMP classification
         if hero_matched in targets:
             for agent in agents:
                 if agent and agent != hero_matched and agent in char_votes:
-                    if sentiment_type == 'friendly':
-                        char_votes[agent]['friendly_votes'] += 1
-                    elif sentiment_type == 'hostile':
-                        char_votes[agent]['hostile_votes'] += 1
-                    char_votes[agent]['last_sentiment'] = sentiment_type
+                    # Add to total level for camp classification
+                    char_votes[agent]['total_level'] += friendly_level
+                    char_votes[agent]['last_level'] = friendly_level
                     char_votes[agent]['last_time'] = time_order
+                    char_votes[agent]['interaction_count'] += 1
+                    
+                    # Track first interaction level
+                    if char_votes[agent]['first_level'] is None:
+                        char_votes[agent]['first_level'] = friendly_level
         
         # Case 2: Hero is AGENT - hero is acting on other characters (targets)
-        # Only hostile actions from hero indicate hostile relationship
-        # (If hero attacks X, X is likely an enemy)
-        # Friendly actions from hero do NOT make targets friendly
-        # (Hero showing kindness to antagonist doesn't make them friendly)
+        # Only hostile actions count for camp (hero attacking = enemy)
         if hero_matched in agents:
             for target in targets:
                 if target and target != hero_matched and target in char_votes:
-                    if sentiment_type == 'hostile':
+                    if friendly_level < 0:
                         # Hero attacking someone = they are hostile
-                        char_votes[target]['hostile_votes'] += 1
-                        char_votes[target]['last_sentiment'] = 'hostile'
+                        char_votes[target]['total_level'] += friendly_level
+                        char_votes[target]['last_level'] = friendly_level
                         char_votes[target]['last_time'] = time_order
-                    # Note: friendly sentiment from hero is ignored for classification
+                        char_votes[target]['interaction_count'] += 1
+                        
+                        if char_votes[target]['first_level'] is None:
+                            char_votes[target]['first_level'] = friendly_level
+        
+        # Track per-event friendliness for ALL participants (for gradient coloring)
+        for char_name in all_participants:
+            if char_name and char_name != hero_matched and char_name in char_event_history:
+                # Determine this character's friendly level in this event
+                char_is_agent = char_name in agents
+                char_is_target = char_name in targets
+                hero_is_agent = hero_matched in agents
+                hero_is_target = hero_matched in targets
+                
+                event_level = 0
+                
+                # If character is agent towards hero
+                if char_is_agent and hero_is_target:
+                    event_level = friendly_level
+                # If hero is agent towards character (only count negative)
+                elif hero_is_agent and char_is_target:
+                    if friendly_level < 0:
+                        event_level = friendly_level
+                    else:
+                        # Positive from hero doesn't change character's friendliness
+                        event_level = None  # Don't record
+                # If both are targets or both are agents (co-participants)
+                else:
+                    # Co-participation inherits the event sentiment
+                    event_level = friendly_level
+                
+                if event_level is not None:
+                    # Calculate cumulative level
+                    history = char_event_history[char_name]
+                    prev_cumulative = history[-1]['cumulative_level'] if history else 0
+                    
+                    char_event_history[char_name].append({
+                        'time_order': time_order,
+                        'friendly_level': event_level,
+                        'cumulative_level': prev_cumulative + event_level,
+                        'sentiment': sentiment,
+                    })
     
-    # Build final analysis with voting results
+    # Build final analysis
     analysis = {}
     for char_name, votes in char_votes.items():
         if char_name == hero_matched:
             analysis[char_name] = {
-                'friendly_count': votes['friendly_votes'],
-                'hostile_count': votes['hostile_votes'],
-                'affinity_score': 0.0,
-                'classification': 'hero'
+                'total_level': 0,
+                'classification': 'hero',
+                'first_level': 0,
+                'interaction_count': 0,
             }
             continue
         
-        friendly = votes['friendly_votes']
-        hostile = votes['hostile_votes']
-        total = friendly + hostile
+        total = votes['total_level']
+        first_level = votes['first_level'] if votes['first_level'] is not None else 0
         
-        # Calculate affinity score
+        # Determine classification by total friendly level
         if total > 0:
-            affinity_score = (friendly - hostile) / total
-        else:
-            affinity_score = 0.0
-        
-        # Determine classification by voting
-        if friendly > hostile:
             classification = 'friendly'
-        elif hostile > friendly:
+        elif total < 0:
             classification = 'hostile'
         else:
-            # Tie: use last interaction, or default to friendly
-            last_sentiment = votes['last_sentiment']
-            if last_sentiment == 'hostile':
+            # Tie (total == 0): use last interaction, or default to friendly
+            last_level = votes['last_level']
+            if last_level is not None and last_level < 0:
                 classification = 'hostile'
             else:
-                # Neutral or friendly or no interaction -> friendly
                 classification = 'friendly'
         
         analysis[char_name] = {
-            'friendly_count': friendly,
-            'hostile_count': hostile,
-            'affinity_score': affinity_score,
-            'classification': classification
+            'total_level': total,
+            'classification': classification,
+            'first_level': first_level,
+            'interaction_count': votes['interaction_count'],
         }
     
-    return analysis
+    return analysis, char_event_history
 
 
 def sort_characters_for_ribbon(
     characters: List[Dict],
     centrality: Dict[str, float],
     hero_analysis: Dict[str, Dict],
-    hero_name: str
+    hero_name: str,
+    event_history: Dict[str, List[Dict]]
 ) -> List[Dict]:
     """
     Sort characters for ribbon visualization using centrality.
@@ -311,6 +326,7 @@ def sort_characters_for_ribbon(
         centrality: Centrality scores
         hero_analysis: Relationship analysis toward hero
         hero_name: Name of the main hero
+        event_history: Per-event friendliness history for gradient coloring
     
     Returns:
         Sorted list of characters with added metadata
@@ -319,14 +335,17 @@ def sort_characters_for_ribbon(
     enriched = []
     for char in characters:
         name = char['name']
+        char_analysis = hero_analysis.get(name, {})
+        
         char_data = {
             **char,
             'centrality': centrality.get(name, 0),
-            'affinity_score': hero_analysis.get(name, {}).get('affinity_score', 0),
-            'hero_relationship': hero_analysis.get(name, {}).get('classification', 'friendly'),
+            'hero_relationship': char_analysis.get('classification', 'friendly'),
             'is_main_hero': name == hero_name,
-            'friendly_count': hero_analysis.get(name, {}).get('friendly_count', 0),
-            'hostile_count': hero_analysis.get(name, {}).get('hostile_count', 0),
+            'total_level': char_analysis.get('total_level', 0),
+            'first_level': char_analysis.get('first_level', 0),
+            'interaction_count': char_analysis.get('interaction_count', 0),
+            'event_friendliness': event_history.get(name, []),  # Per-event data for gradients
         }
         enriched.append(char_data)
     
@@ -341,29 +360,20 @@ def sort_characters_for_ribbon(
         elif char['hero_relationship'] == 'hostile':
             hostile_chars.append(char)
         else:
-            # Friendly and neutral both go to friendly side
             friendly_chars.append(char)
     
     # Sort each group by centrality (highest centrality = closest to hero)
-    # For friendly: highest centrality at the bottom (closest to hero)
-    # For hostile: highest centrality at the top (closest to hero)
     friendly_chars.sort(key=lambda c: c['centrality'])  # Low to high (high at bottom, near hero)
     hostile_chars.sort(key=lambda c: -c['centrality'])  # High to low (high at top, near hero)
     
-    # Build final order: friendly (top, low centrality first) -> hero -> hostile (bottom, high centrality first)
+    # Build final order
     sorted_chars = []
-    
-    # Add friendly characters (above hero)
     sorted_chars.extend(friendly_chars)
-    
-    # Add hero at center
     if hero_char:
         sorted_chars.append(hero_char)
-    
-    # Add hostile characters (below hero)
     sorted_chars.extend(hostile_chars)
     
-    # Add display_order to each character
+    # Add display_order
     for i, char in enumerate(sorted_chars):
         char['display_order'] = i
     
@@ -378,8 +388,9 @@ def analyze_and_sort_characters(
     Main function to analyze and sort characters for visualization.
     
     Uses:
-    1. Voting-based hostility/friendliness determination
+    1. Friendly Level-based voting for camp classification
     2. Centrality-based ordering
+    3. Per-event friendliness tracking for gradient coloring
     
     Args:
         characters: List of character dicts from original data
@@ -398,13 +409,18 @@ def analyze_and_sort_characters(
     # Step 2: Identify main hero (by centrality)
     hero_name = identify_main_hero(characters, centrality)
     
-    # Step 3: Analyze relationships using voting
+    # Step 3: Analyze relationships using friendly levels
     hero_analysis = {}
+    event_history = {}
     if hero_name:
-        hero_analysis = analyze_character_relationships_voting(events, characters, hero_name)
+        hero_analysis, event_history = analyze_character_relationships_with_levels(
+            events, characters, hero_name
+        )
     
-    # Step 4: Sort characters by centrality within groups
-    sorted_chars = sort_characters_for_ribbon(characters, centrality, hero_analysis, hero_name)
+    # Step 4: Sort characters
+    sorted_chars = sort_characters_for_ribbon(
+        characters, centrality, hero_analysis, hero_name, event_history
+    )
     
     # Build metadata
     metadata = {
@@ -433,7 +449,7 @@ if __name__ == "__main__":
         {"time_order": 2, "agents": ["祝员外"], "targets": ["祝英台"], "sentiment": "negative"},
         {"time_order": 3, "agents": ["丫环银心"], "targets": ["祝英台"], "sentiment": "positive"},
         {"time_order": 4, "agents": ["马文才"], "targets": ["祝英台"], "sentiment": "hostile"},
-        {"time_order": 5, "agents": ["祝员外"], "targets": ["祝英台"], "sentiment": "positive"},  # Changes to friendly
+        {"time_order": 5, "agents": ["祝员外"], "targets": ["祝英台"], "sentiment": "positive"},
     ]
     
     sorted_chars, meta = analyze_and_sort_characters(test_characters, test_events)
@@ -445,6 +461,8 @@ if __name__ == "__main__":
         marker = "★" if c['is_main_hero'] else " "
         print(f"  {marker} {c['display_order']}: {c['name']}")
         print(f"      Relationship: {hero_rel}, Centrality: {c['centrality']:.3f}")
-        print(f"      Friendly votes: {c['friendly_count']}, Hostile votes: {c['hostile_count']}")
+        print(f"      Total Level: {c['total_level']}, First Level: {c['first_level']}")
+        if c['event_friendliness']:
+            print(f"      Event History: {c['event_friendliness']}")
     
     print(f"\nMetadata: {meta}")

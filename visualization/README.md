@@ -142,7 +142,31 @@ Y-Axis (Characters)                    X-Axis (Narrative Events)
 - **Above hero**: Friendly characters (sorted by centrality - highest closest to hero)
 - **Below hero**: Hostile characters (sorted by centrality - highest closest to hero)
 
-**Ribbon Colors:**
+**Ribbon Colors - Gradient System:**
+
+The ribbons now use a **gradient coloring system** that shows sentiment changes over time:
+
+| Component | Color Logic |
+|-----------|-------------|
+| **Center Line** | Camp color (stable) - based on overall friendly/hostile classification |
+| **Ribbon Fill** | Gradient showing sentiment progression through narrative |
+
+**Sentiment-to-Color Mapping:**
+| Friendly Level | Color | Sentiment |
+|----------------|-------|-----------|
+| +2 | #e63946 (Vermillion) | romantic |
+| +1 | #f77f00 (Orange) | positive |
+| 0 | #9ca3af (Gray) | neutral |
+| -1 | #457b9d (Steel Blue) | negative |
+| -2 | #370617 (Dark Crimson) | hostile, fearful |
+
+**How Gradients Work:**
+1. First interaction's level determines starting color
+2. Each event updates the cumulative friendliness
+3. Ribbon fill interpolates colors based on cumulative level at each event
+4. Center line stays in camp color (stable reference)
+
+**Camp Colors (for center line):**
 | Character Type | Color Scheme | Example Colors |
 |----------------|--------------|----------------|
 | Hero | Vermillion Red | #e63946 |

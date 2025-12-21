@@ -25,64 +25,119 @@ const eventTypeColors = {
 }
 
 // Hero color - distinctive vermillion
-const heroColor = '#e63946'
+const heroColor = '#d62828'
 
-// Warm color palette for friendly characters
+// Heatmap color scale: Cold (hostile) → Neutral → Warm (friendly)
+// Using a diverging color scheme: Blue → Gray → Red
+const heatmapColors = {
+  '-2': '#1a5276',  // Deep blue (most hostile)
+  '-1': '#5dade2',  // Light blue (negative)
+  '0': '#aeb6bf',   // Gray (neutral)
+  '1': '#f5b041',   // Orange (positive)
+  '2': '#c0392b',   // Deep red (most friendly/romantic)
+}
+
+// Create D3 color interpolator for smooth heatmap
+const createHeatmapScale = () => {
+  return d3.scaleLinear()
+    .domain([-2, -1, 0, 1, 2])
+    .range([
+      '#1a5276',  // Deep blue (most hostile)
+      '#5dade2',  // Light blue (negative)  
+      '#aeb6bf',  // Gray (neutral)
+      '#f5b041',  // Orange (positive)
+      '#c0392b',  // Deep red (most friendly)
+    ])
+    .clamp(true)
+}
+
+// Get color for a specific friendly level using heatmap
+const getFriendlyLevelColor = (level) => {
+  const scale = createHeatmapScale()
+  return scale(level)
+}
+
+// Interpolate color based on friendly level (continuous heatmap scale)
+const interpolateFriendlyColor = (level) => {
+  // Clamp level to [-4, 4] for cumulative levels, then normalize to [-2, 2]
+  const normalizedLevel = Math.max(-2, Math.min(2, level / 2))
+  const scale = createHeatmapScale()
+  return scale(normalizedLevel)
+}
+
+// Warm color palette for friendly characters (camp colors) - based on heatmap warm side
 const warmColorPalette = [
-  '#e63946',  // Vermillion red
-  '#f77f00',  // Orange
-  '#d4a373',  // Golden tan
-  '#ff6b6b',  // Coral red
-  '#fca311',  // Amber
-  '#ff9f1c',  // Bright orange
-  '#e09f3e',  // Mustard
-  '#f4a261',  // Sandy orange
-  '#ee6c4d',  // Burnt sienna
-  '#bc6c25',  // Caramel
+  '#c0392b',  // Deep red (most friendly)
+  '#e74c3c',  // Bright red
+  '#f5b041',  // Orange
+  '#f7dc6f',  // Light yellow-orange
+  '#eb984e',  // Dark orange
+  '#dc7633',  // Burnt orange
+  '#ca6f1e',  // Caramel
+  '#d35400',  // Pumpkin
+  '#e67e22',  // Carrot orange
+  '#f39c12',  // Sun yellow
 ]
 
-// Cool color palette for hostile characters
+// Cool color palette for hostile characters (camp colors) - based on heatmap cool side
 const coolColorPalette = [
-  '#370617',  // Dark crimson
-  '#1d3557',  // Prussian blue
-  '#457b9d',  // Steel blue
-  '#6d597a',  // Old lavender
-  '#355070',  // Dark slate blue
-  '#2d6a4f',  // Dark green
-  '#4a5568',  // Cool gray
-  '#5f0a87',  // Purple
-  '#023e8a',  // Royal blue
-  '#0077b6',  // Ocean blue
+  '#1a5276',  // Deep blue (most hostile)
+  '#2874a6',  // Dark blue
+  '#5dade2',  // Light blue
+  '#3498db',  // Dodger blue
+  '#2980b9',  // Strong blue
+  '#1f618d',  // Dark cyan blue
+  '#154360',  // Very dark blue
+  '#21618c',  // Lapis blue
+  '#2e86ab',  // Steel blue
+  '#1b4f72',  // Navy blue
 ]
 
 // Neutral color palette
 const neutralColorPalette = [
-  '#6b7280',  // Gray
-  '#9ca3af',  // Light gray
-  '#78716c',  // Stone
-  '#737373',  // Neutral gray
-  '#a1a1aa',  // Zinc
+  '#aeb6bf',  // Gray (matches heatmap neutral)
+  '#99a3a4',  // Dark gray
+  '#bdc3c7',  // Silver
+  '#d5d8dc',  // Light gray
+  '#808b96',  // Slate gray
 ]
 
-// Get color for character based on hero relationship and index
-const getCharacterColor = (char, index) => {
+// Get CAMP color for character (used for center line)
+// Uses total_level (sum of all friendly levels) to determine color intensity
+const getCampColor = (char, index) => {
   const relationship = char.hero_relationship || 'neutral'
   
   if (relationship === 'hero') {
     return heroColor
   }
   
+  // Use total_level to determine color from heatmap
+  const totalLevel = char.total_level || 0
+  
+  // Use heatmap scale based on total_level
+  // Normalize: clamp to reasonable range and map to color
+  const scale = createHeatmapScale()
+  
   if (relationship === 'friendly') {
-    return warmColorPalette[index % warmColorPalette.length]
+    // Friendly camp - use total_level (positive values)
+    // Map to warm side of heatmap
+    const normalizedLevel = Math.min(2, Math.max(0, totalLevel))
+    return scale(normalizedLevel)
   }
   
   if (relationship === 'hostile') {
-    return coolColorPalette[index % coolColorPalette.length]
+    // Hostile camp - use total_level (negative values)
+    // Map to cool side of heatmap
+    const normalizedLevel = Math.max(-2, Math.min(0, totalLevel))
+    return scale(normalizedLevel)
   }
   
-  // Neutral
-  return neutralColorPalette[index % neutralColorPalette.length]
+  // Neutral - gray
+  return scale(0)
 }
+
+// Alias for backward compatibility
+const getCharacterColor = getCampColor
 
 // Get relationship color for legend
 const getRelationshipColor = (relationship) => {
@@ -92,6 +147,57 @@ const getRelationshipColor = (relationship) => {
     case 'hostile': return coolColorPalette[0]
     default: return neutralColorPalette[0]
   }
+}
+
+// Build gradient stops from event friendliness history
+const buildGradientStops = (char, totalEvents) => {
+  const eventHistory = char.event_friendliness || []
+  
+  if (eventHistory.length === 0) {
+    // No history - use camp color
+    const campColor = getCampColor(char, 0)
+    return [
+      { offset: 0, color: campColor, opacity: 0.3 },
+      { offset: 50, color: campColor, opacity: 0.5 },
+      { offset: 100, color: campColor, opacity: 0.3 },
+    ]
+  }
+  
+  // Calculate gradient stops based on event history
+  const stops = []
+  
+  // Start color based on first_level
+  const firstColor = interpolateFriendlyColor(char.first_level || 0)
+  stops.push({ offset: 0, color: firstColor, opacity: 0.3 })
+  
+  // Add stops for each event in history
+  eventHistory.forEach((eh, idx) => {
+    // Calculate position as percentage (based on time_order relative to total events)
+    const position = totalEvents > 1 
+      ? (eh.time_order / totalEvents) * 100 
+      : 50
+    
+    // Get color based on cumulative level
+    const color = interpolateFriendlyColor(eh.cumulative_level)
+    
+    stops.push({
+      offset: Math.min(95, Math.max(5, position)),
+      color,
+      opacity: 0.5
+    })
+  })
+  
+  // End color based on final cumulative level
+  const lastEvent = eventHistory[eventHistory.length - 1]
+  const endColor = lastEvent 
+    ? interpolateFriendlyColor(lastEvent.cumulative_level)
+    : firstColor
+  stops.push({ offset: 100, color: endColor, opacity: 0.3 })
+  
+  // Sort stops by offset and remove duplicates
+  stops.sort((a, b) => a.offset - b.offset)
+  
+  return stops
 }
 
 function StoryRibbons({ story }) {
@@ -177,7 +283,8 @@ function StoryRibbons({ story }) {
       .range([0, innerHeight])
       .padding(0.3)
 
-    const ribbonHeight = Math.min(yScale.bandwidth(), 30)
+    // Increase base ribbon height for wider ribbons
+    const ribbonHeight = Math.min(yScale.bandwidth() * 1.1, 45)
 
     // Helper: find character index by name (fuzzy match)
     const findCharIndex = (name) => {
@@ -282,44 +389,48 @@ function StoryRibbons({ story }) {
     const charRibbonData = buildRibbonPoints()
 
     // Create ribbon area generator
+    // Lower alpha (0.3) makes curves smoother, reducing visual thinning at bends
     const ribbonArea = d3.area()
       .x(d => d.x)
       .y0(d => d.y - ribbonHeight / 2)
       .y1(d => d.y + ribbonHeight / 2)
-      .curve(d3.curveCatmullRom.alpha(0.5))
+      .curve(d3.curveCatmullRom.alpha(0.3))
 
     // Create ribbon line (center path)
     const ribbonLine = d3.line()
       .x(d => d.x)
       .y(d => d.y)
-      .curve(d3.curveCatmullRom.alpha(0.5))
+      .curve(d3.curveCatmullRom.alpha(0.3))
 
-    // Add gradient definitions
+    // Add gradient definitions with dynamic color stops based on event friendliness
     const defs = svg.append('defs')
+    const totalEvents = sortedEvents.length
     
     characters.forEach((char, idx) => {
-      const color = getCharacterColor(char, idx)
+      const campColor = getCampColor(char, idx)
+      const isHero = char.is_main_hero || char.hero_relationship === 'hero'
       
-      // Gradient for ribbon fill
+      // Build gradient stops from event friendliness history
+      const gradientStops = isHero 
+        ? [
+            { offset: 0, color: heroColor, opacity: 0.4 },
+            { offset: 50, color: heroColor, opacity: 0.6 },
+            { offset: 100, color: heroColor, opacity: 0.4 },
+          ]
+        : buildGradientStops(char, totalEvents)
+      
+      // Gradient for ribbon fill (shows friendliness progression)
       const gradient = defs.append('linearGradient')
         .attr('id', `ribbon-gradient-${idx}`)
         .attr('x1', '0%').attr('y1', '0%')
         .attr('x2', '100%').attr('y2', '0%')
       
-      gradient.append('stop')
-        .attr('offset', '0%')
-        .attr('stop-color', color)
-        .attr('stop-opacity', 0.3)
-      
-      gradient.append('stop')
-        .attr('offset', '50%')
-        .attr('stop-color', color)
-        .attr('stop-opacity', 0.6)
-      
-      gradient.append('stop')
-        .attr('offset', '100%')
-        .attr('stop-color', color)
-        .attr('stop-opacity', 0.3)
+      gradientStops.forEach(stop => {
+        gradient.append('stop')
+          .attr('offset', `${stop.offset}%`)
+          .attr('stop-color', stop.color)
+          .attr('stop-opacity', stop.opacity)
+      })
     })
 
     // Draw background grid
@@ -352,38 +463,48 @@ function StoryRibbons({ story }) {
     const ribbonsGroup = g.append('g').attr('class', 'ribbons')
 
     charRibbonData.forEach((charData, idx) => {
-      const color = getCharacterColor(charData.char, idx)
+      // Camp color for center line (based on hero_relationship and first_level)
+      const campColor = getCampColor(charData.char, idx)
       const isHero = charData.char.is_main_hero || charData.char.hero_relationship === 'hero'
       const ribbonG = ribbonsGroup.append('g')
         .attr('class', `ribbon ribbon-${idx} ${isHero ? 'ribbon-hero' : ''}`)
         .attr('data-char-idx', idx)
 
-      // Ribbon fill (area)
+      // Ribbon fill (area) - uses gradient that shows friendliness progression
       ribbonG.append('path')
         .attr('class', 'ribbon-area')
         .attr('d', ribbonArea(charData.points))
         .attr('fill', `url(#ribbon-gradient-${idx})`)
         .attr('stroke', 'none')
 
-      // Ribbon stroke (center line)
+      // Ribbon stroke (center line) - uses CAMP color (stable)
       ribbonG.append('path')
         .attr('class', 'ribbon-line')
         .attr('d', ribbonLine(charData.points))
         .attr('fill', 'none')
-        .attr('stroke', color)
-        .attr('stroke-width', 2)
-        .attr('stroke-opacity', 0.8)
+        .attr('stroke', campColor)
+        .attr('stroke-width', 2.5)
+        .attr('stroke-opacity', 0.9)
 
       // Interaction points (where character is involved)
+      // Color the points based on the event's sentiment
+      const eventHistory = charData.char.event_friendliness || []
+      
       charData.points.forEach((pt, ptIdx) => {
         if (pt.isInvolved && pt.event) {
+          // Find the friendliness at this event
+          const eventEntry = eventHistory.find(eh => eh.time_order === pt.event.time_order)
+          const pointColor = eventEntry 
+            ? interpolateFriendlyColor(eventEntry.cumulative_level)
+            : campColor
+          
           ribbonG.append('circle')
             .attr('class', 'interaction-point')
             .attr('cx', pt.x)
             .attr('cy', pt.y)
             .attr('r', pt.isAgent ? 6 : 4)
-            .attr('fill', pt.isAgent ? color : 'white')
-            .attr('stroke', color)
+            .attr('fill', pt.isAgent ? pointColor : 'white')
+            .attr('stroke', pointColor)
             .attr('stroke-width', 2)
             .attr('data-event-idx', ptIdx)
             .style('cursor', 'pointer')
@@ -578,40 +699,76 @@ function StoryRibbons({ story }) {
           <div className="legend-content">
             <div className="legend-row">
               <div className="legend-section">
-                <h4>Character Position</h4>
+                <h4>Character Camp</h4>
                 <div className="legend-items compact">
                   <div className="legend-item">
                     <span className="legend-dot-large" style={{ background: heroColor }}></span>
                     <span>Hero (center)</span>
                   </div>
                   <div className="legend-item">
-                    <div className="legend-color-range warm">
-                      {warmColorPalette.slice(0, 4).map((c, i) => (
-                        <span key={i} className="color-swatch" style={{ background: c }}></span>
-                      ))}
-                    </div>
+                    <div 
+                      className="legend-mini-gradient"
+                      style={{ 
+                        background: 'linear-gradient(to right, #aeb6bf, #f5b041, #c0392b)',
+                        width: '40px',
+                        height: '10px',
+                        borderRadius: '2px'
+                      }}
+                    ></div>
                     <span>Friendly (above)</span>
                   </div>
                   <div className="legend-item">
-                    <div className="legend-color-range cool">
-                      {coolColorPalette.slice(0, 4).map((c, i) => (
-                        <span key={i} className="color-swatch" style={{ background: c }}></span>
-                      ))}
-                    </div>
+                    <div 
+                      className="legend-mini-gradient"
+                      style={{ 
+                        background: 'linear-gradient(to right, #1a5276, #5dade2, #aeb6bf)',
+                        width: '40px',
+                        height: '10px',
+                        borderRadius: '2px'
+                      }}
+                    ></div>
                     <span>Hostile (below)</span>
                   </div>
                 </div>
               </div>
               <div className="legend-section">
-                <h4>Ribbon Movement</h4>
+                <h4>Sentiment Heatmap</h4>
                 <div className="legend-items compact">
+                  <div className="legend-item heatmap-bar-container">
+                    <div 
+                      className="heatmap-gradient-bar"
+                      style={{ 
+                        background: 'linear-gradient(to right, #1a5276, #5dade2, #aeb6bf, #f5b041, #c0392b)',
+                        width: '100%',
+                        height: '20px',
+                        borderRadius: '4px',
+                        border: '1px solid #ddd'
+                      }}
+                    ></div>
+                    <div className="heatmap-labels">
+                      <span>Hostile</span>
+                      <span>Neutral</span>
+                      <span>Friendly</span>
+                    </div>
+                  </div>
+                  <div className="legend-item">
+                    <span className="legend-line" style={{ background: '#333' }}></span>
+                    <span>Center = Camp</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="legend-row">
+              <div className="legend-section">
+                <h4>Interaction</h4>
+                <div className="legend-items compact horizontal">
                   <div className="legend-item">
                     <span className="legend-dot-small" style={{ background: '#333' }}></span>
-                    <span>Agent (active)</span>
+                    <span>Agent</span>
                   </div>
                   <div className="legend-item">
                     <span className="legend-dot-hollow"></span>
-                    <span>Target (passive)</span>
+                    <span>Target</span>
                   </div>
                 </div>
               </div>

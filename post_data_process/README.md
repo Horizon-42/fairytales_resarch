@@ -259,18 +259,46 @@ The centrality score combines two measures:
 centrality = 0.6 * degree_centrality + 0.4 * eigenvector_centrality
 ```
 
-### Sentiment Classification
+### Friendly Level Values
 
-| Sentiment Values | Classification |
-|------------------|----------------|
-| positive, romantic, respectful, grateful | Friendly |
-| negative, hostile, fearful, antagonistic | Hostile |
-| neutral, (empty) | Neutral |
+Based on `docs/Character_Resources/sentiment.csv`:
 
-### Tie-Breaking for Equal Votes
+| Sentiment | Friendly Level | Description |
+|-----------|---------------|-------------|
+| romantic | +2 | High positive (love, deep affection) |
+| positive | +1 | Positive (trust, gratitude, help) |
+| neutral | +1 | Neutral (default to friendly) |
+| negative | -1 | Negative (mockery, rejection) |
+| fearful | -2 | High negative (fear, submission) |
+| hostile | -2 | High negative (attack, intent to harm) |
 
-When `friendly_votes == hostile_votes`:
+### Camp Classification Logic
+
+1. Sum friendly levels from all interactions (only when character is AGENT towards hero)
+2. If hero attacks character (hero is AGENT with negative sentiment), add negative levels
+3. `total_level > 0` → **Friendly camp**
+4. `total_level < 0` → **Hostile camp**
+5. `total_level == 0` → Use last interaction's level; default to friendly
+
+### Tie-Breaking for Equal Levels
+
+When `total_level == 0`:
 1. Find the most recent interaction (highest `time_order`)
-2. Use that interaction's sentiment
+2. Use that interaction's friendly level
 3. If neutral or no interactions → Default to Friendly
+
+### Per-Event Friendliness (for Gradient Coloring)
+
+Each character tracks friendliness at every narrative event:
+
+```python
+{
+    'time_order': 8,           # When this event occurred
+    'friendly_level': -2,       # Level at this specific event
+    'cumulative_level': -4,     # Running total of all levels
+    'sentiment': 'hostile'      # Raw sentiment value
+}
+```
+
+This enables gradient ribbon coloring that shows sentiment changes over time.
 
