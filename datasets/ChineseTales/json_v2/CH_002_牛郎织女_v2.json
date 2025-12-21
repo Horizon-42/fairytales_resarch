@@ -43,7 +43,7 @@
     {
       "name": "小女儿",
       "alias": "",
-      "archetype": "Sidekick"
+      "archetype": "Sidekick/Helper"
     },
     {
       "name": "妇女们",
@@ -88,7 +88,11 @@
       "time_order": 1,
       "relationship_level1": "",
       "relationship_level2": "",
-      "sentiment": ""
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "event_type": "VILLAINY",
@@ -109,9 +113,13 @@
       "instrument": "",
       "id": "38bb88d7-ed7a-402f-a2b1-6baa1c0f5840",
       "time_order": 2,
-      "relationship_level1": "家庭与亲缘(Family & Kinship)",
+      "relationship_level1": "Family & Kinship",
       "relationship_level2": "sibling",
-      "sentiment": "negative"
+      "sentiment": "negative",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "event_type": "LACK",
@@ -132,7 +140,11 @@
       "time_order": 4,
       "relationship_level1": "",
       "relationship_level2": "",
-      "sentiment": ""
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "317d5e4b-255a-4acb-a23d-206a5e4afeb2",
@@ -153,9 +165,13 @@
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "relationship_level1": "社交与结盟(Social & Alliance)",
+      "relationship_level1": "Social & Alliance",
       "relationship_level2": "ally",
-      "sentiment": "positive"
+      "sentiment": "positive",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "51923dc8-acf0-477d-b540-36baccc032fd",
@@ -176,9 +192,13 @@
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "relationship_level1": "社交与结盟(Social & Alliance)",
+      "relationship_level1": "Social & Alliance",
       "relationship_level2": "ally",
-      "sentiment": "positive"
+      "sentiment": "positive",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "fbbacb08-5f24-480e-8fdb-3a9fed2da817",
@@ -199,9 +219,13 @@
       "object_type": "",
       "instrument": "",
       "time_order": 6,
-      "relationship_level1": "浪漫与激情(Romance)",
+      "relationship_level1": "Romance",
       "relationship_level2": "lover",
-      "sentiment": "romantic"
+      "sentiment": "romantic",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "2865c3b3-8f6e-4247-afb4-ed81b0d3cd98",
@@ -225,7 +249,11 @@
       "time_order": 8,
       "relationship_level1": "",
       "relationship_level2": "",
-      "sentiment": ""
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "6317923a-117f-4f21-a69d-5dd96f69b92a",
@@ -247,9 +275,13 @@
       "object_type": "",
       "instrument": "",
       "time_order": 7,
-      "relationship_level1": "家庭与亲缘(Family & Kinship)",
+      "relationship_level1": "Family & Kinship",
       "relationship_level2": "parent_child",
-      "sentiment": "positive"
+      "sentiment": "positive",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "57c3dded-bfbd-4335-aa4a-413524a8c7d5",
@@ -257,23 +289,28 @@
       "description": "试图舀干天河水",
       "agents": [
         "牛郎",
-        "一儿一女"
+        "一儿一女",
+        "小女儿"
       ],
       "targets": [
-        "天河"
+        "王母娘娘"
       ],
       "text_span": {
         "start": 1413,
         "end": 1549,
         "text": "\"爹爹，我们拿这粪瓢来舀干天河的水。\"小女儿終于揩干了眼泪，瞪着一对小眼睛, 这么天真而又倔强地提议。\n\"对 ,我们来舀干天河的水。\"悲愤的牛郎毫不犹豫地答应了。\n说着，他果然拿起粪瓢，奋勇地一瓢一瓢地去舀那天河的水。他舀得倦乏了，儿女们又合力用他们稚弱的小手来帮爹爹自。"
       },
-      "target_type": "object",
+      "target_type": "character",
       "object_type": "normal_object",
       "instrument": "粪瓢",
       "time_order": 9,
       "relationship_level1": "",
       "relationship_level2": "",
-      "sentiment": ""
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "098695bb-91a7-4a58-b32d-46325ac17351",
@@ -295,9 +332,13 @@
       "object_type": "",
       "instrument": "",
       "time_order": 9,
-      "relationship_level1": "对抗与敌对(Adversarial)",
+      "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
-      "sentiment": "hostile"
+      "sentiment": "hostile",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "cdbee6a6-dc9b-4040-8ce9-1e48d382acb3",
@@ -319,9 +360,13 @@
       "object_type": "",
       "instrument": "牛皮;Skin of the cow",
       "time_order": 10,
-      "relationship_level1": "社交与结盟(Social & Alliance)",
+      "relationship_level1": "Social & Alliance",
       "relationship_level2": "ally",
-      "sentiment": "positive"
+      "sentiment": "positive",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "64e5afbc-b36a-4fda-a2ef-78bb6c13fa83",
@@ -343,9 +388,13 @@
       "object_type": "",
       "instrument": "金簪",
       "time_order": 11,
-      "relationship_level1": "对抗与敌对(Adversarial)",
+      "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
-      "sentiment": "hostile"
+      "sentiment": "hostile",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "1dcdf54d-0930-41fd-a1b4-b4c4d2113162",
@@ -368,9 +417,13 @@
       "object_type": "",
       "instrument": "",
       "time_order": 12,
-      "relationship_level1": "对抗与敌对(Adversarial)",
+      "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
-      "sentiment": "positive"
+      "sentiment": "positive",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "e9a8526d-44ac-4793-a415-c1d4a526fa3e",
@@ -391,9 +444,13 @@
       "object_type": "",
       "instrument": "梭;拐子",
       "time_order": 13,
-      "relationship_level1": "浪漫与激情(Romance)",
+      "relationship_level1": "Romance",
       "relationship_level2": "lover",
-      "sentiment": "romantic"
+      "sentiment": "romantic",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     }
   ],
   "themes_and_motifs": {

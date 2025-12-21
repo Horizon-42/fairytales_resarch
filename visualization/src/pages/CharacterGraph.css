@@ -1,0 +1,267 @@
+/* Character Graph Page */
+.character-graph {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  height: calc(100vh - 200px);
+  min-height: 600px;
+}
+
+.character-graph.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  color: var(--ink-medium);
+}
+
+.graph-header {
+  text-align: center;
+}
+
+.graph-header h2 {
+  font-family: var(--font-chinese), var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--ink-black);
+  margin-bottom: var(--space-sm);
+}
+
+.graph-subtitle {
+  color: var(--ink-light);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Graph Wrapper */
+.graph-wrapper {
+  flex: 1;
+  position: relative;
+  background: var(--paper-light);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  /* Subtle ink wash background */
+  background-image: 
+    radial-gradient(ellipse at 30% 20%, rgba(107, 107, 107, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(107, 107, 107, 0.03) 0%, transparent 50%);
+}
+
+.graph-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Legend */
+.graph-legend {
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-md);
+  background: rgba(255, 255, 255, 0.95);
+  padding: var(--space-md);
+  border-radius: 6px;
+  box-shadow: var(--shadow-md);
+  font-size: 0.7rem;
+  max-width: 320px;
+  max-height: calc(100% - 40px);
+  overflow-y: auto;
+  backdrop-filter: blur(8px);
+}
+
+.legend-section {
+  margin-bottom: var(--space-md);
+}
+
+.legend-section:last-child {
+  margin-bottom: 0;
+}
+
+.legend-section h4 {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-medium);
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--paper-warm);
+}
+
+.legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* Grid layout for character types (16 items) */
+.legend-items.legend-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  cursor: default;
+}
+
+.legend-item:hover {
+  opacity: 0.8;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+}
+
+.legend-line {
+  width: 16px;
+  height: 3px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.legend-label {
+  color: var(--ink-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.65rem;
+}
+
+/* Node Info Panel */
+.node-info-panel {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  background: rgba(26, 26, 26, 0.95);
+  color: var(--paper-cream);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: 6px;
+  box-shadow: var(--shadow-lg);
+  min-width: 180px;
+  backdrop-filter: blur(8px);
+  animation: slideIn 0.2s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.node-info-panel h4 {
+  font-family: var(--font-chinese), var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--gold-light);
+  margin-bottom: var(--space-xs);
+}
+
+.node-archetype {
+  font-size: 0.85rem;
+  color: var(--paper-warm);
+  margin-bottom: var(--space-sm) !important;
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.node-alias {
+  font-size: 0.75rem;
+  color: var(--ink-light);
+  font-style: italic;
+  margin-bottom: var(--space-xs) !important;
+}
+
+.node-connections {
+  font-size: 0.8rem;
+  color: var(--vermillion-light);
+  margin: 0 !important;
+}
+
+/* Controls */
+.graph-controls {
+  text-align: center;
+}
+
+.hint {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.8rem;
+  color: var(--ink-light);
+  background: var(--paper-warm);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 20px;
+  margin: 0;
+}
+
+.hint-icon {
+  font-size: 1rem;
+}
+
+/* SVG Styles */
+.graph-svg .node {
+  transition: r 0.2s ease;
+}
+
+.graph-svg .edge {
+  transition: stroke-opacity 0.2s ease, stroke-width 0.2s ease;
+}
+
+.graph-svg .node-label {
+  pointer-events: none;
+  user-select: none;
+  text-shadow: 
+    1px 1px 2px white,
+    -1px -1px 2px white,
+    1px -1px 2px white,
+    -1px 1px 2px white;
+}
+
+.graph-svg .archetype-badge {
+  pointer-events: none;
+  user-select: none;
+}
+
+.graph-svg .edge-label {
+  pointer-events: none;
+  user-select: none;
+  font-family: var(--font-sans);
+  text-shadow: 
+    1px 1px 2px white,
+    -1px -1px 2px white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .graph-legend {
+    position: static;
+    max-width: none;
+    margin-bottom: var(--space-md);
+  }
+  
+  .node-info-panel {
+    position: static;
+    margin-top: var(--space-md);
+  }
+  
+  .character-graph {
+    height: auto;
+    min-height: auto;
+  }
+  
+  .graph-wrapper {
+    height: 500px;
+  }
+}
+
