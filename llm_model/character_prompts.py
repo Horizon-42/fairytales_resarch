@@ -38,6 +38,16 @@ ALLOWED_ARCHETYPES = [
     "Other",
 ]
 
+ALLOWED_HELPER_TYPES = [
+    "HAPPY_REUNION",
+    "HAPPY_ENDING",
+    "BITTERSWEET",
+    "TRAGIC",
+    "OPEN_ENDED",
+    "CLIFFHANGER",
+    "CIRCULAR",
+    "OTHER",
+]
 
 SYSTEM_PROMPT_CHARACTERS = """You are an expert folktale annotation assistant.
 
@@ -79,6 +89,7 @@ def build_character_user_prompt(*, text: str, culture: Optional[str] = None) -> 
     )
 
     allowed = ", ".join(ALLOWED_ARCHETYPES)
+    allowed_helpers = ", ".join(ALLOWED_HELPER_TYPES)
 
     return (
         "Extract the characters and output JSON with this exact schema:\n"
@@ -95,7 +106,7 @@ def build_character_user_prompt(*, text: str, culture: Optional[str] = None) -> 
         "- `alias` is optional; use for titles/epithets/roles (e.g., \"the king\", \"old woman\").\n"
         "- Include only salient characters (typically 2-12).\n"
         "- If a group is mentioned (e.g., \"soldiers\"), include it only if it acts as an agent in events.\n"
-        "- `helper_type` is a coarse story-level list of helper categories if clearly present (else empty list).\n"
+        f"- `helper_type` is a coarse story-level list of helper categories if clearly present (else empty list). It should chose from {allowed_helpers}\n"
         "- `obstacle_thrower` is a story-level list of character names who create obstacles (often villains/guardians); else empty list.\n"
         "- Output strict JSON only.\n\n"
         f"{culture_hint}"
