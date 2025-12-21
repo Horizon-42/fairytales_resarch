@@ -146,11 +146,15 @@ def analyze_character_relationships_voting(
     Analyze each character's relationship to the hero using voting.
     
     Voting rules:
-    - Count friendly and hostile interactions across all events
+    - Only count sentiment when OTHER CHARACTER is the AGENT (acting towards hero)
+    - When hero is agent, hostile sentiment towards X counts as hostile for X
+      (hero attacking X means X is likely hostile)
+    - When hero is agent with positive sentiment, it does NOT make target friendly
+      (hero showing kindness doesn't mean target is friendly)
     - If friendly > hostile: friendly
     - If hostile > friendly: hostile  
     - If equal: use the most recent (later time_order) interaction
-    - Neutral characters are treated as friendly
+    - Neutral characters (no interactions) are treated as friendly
     
     Args:
         events: List of narrative events (should be sorted by time_order)
@@ -208,22 +212,7 @@ def analyze_character_relationships_voting(
         sentiment = event.get('sentiment', '').lower()
         time_order = event.get('time_order', 0)
         
-        # Check if hero is involved
-        hero_is_agent = hero_matched in agents
-        hero_is_target = hero_matched in targets
-        
-        if not (hero_is_agent or hero_is_target):
-            continue
-        
-        # Determine other participants interacting with hero
-        other_chars = set()
-        if hero_is_agent:
-            other_chars.update(targets)
-        if hero_is_target:
-            other_chars.update(agents)
-        other_chars.discard(hero_matched)
-        
-        # Classify sentiment for voting
+        # Classify sentiment
         if sentiment in FRIENDLY_SENTIMENTS:
             sentiment_type = 'friendly'
         elif sentiment in HOSTILE_SENTIMENTS:
@@ -231,16 +220,32 @@ def analyze_character_relationships_voting(
         else:
             sentiment_type = 'neutral'
         
-        # Update votes for each other character
-        for char in other_chars:
-            if char in char_votes:
-                if sentiment_type == 'friendly':
-                    char_votes[char]['friendly_votes'] += 1
-                elif sentiment_type == 'hostile':
-                    char_votes[char]['hostile_votes'] += 1
-                # Always update last interaction (neutral also counts for tiebreaker)
-                char_votes[char]['last_sentiment'] = sentiment_type
-                char_votes[char]['last_time'] = time_order
+        # Case 1: Hero is TARGET - other characters (agents) are acting on hero
+        # This directly reflects how they treat the hero
+        if hero_matched in targets:
+            for agent in agents:
+                if agent and agent != hero_matched and agent in char_votes:
+                    if sentiment_type == 'friendly':
+                        char_votes[agent]['friendly_votes'] += 1
+                    elif sentiment_type == 'hostile':
+                        char_votes[agent]['hostile_votes'] += 1
+                    char_votes[agent]['last_sentiment'] = sentiment_type
+                    char_votes[agent]['last_time'] = time_order
+        
+        # Case 2: Hero is AGENT - hero is acting on other characters (targets)
+        # Only hostile actions from hero indicate hostile relationship
+        # (If hero attacks X, X is likely an enemy)
+        # Friendly actions from hero do NOT make targets friendly
+        # (Hero showing kindness to antagonist doesn't make them friendly)
+        if hero_matched in agents:
+            for target in targets:
+                if target and target != hero_matched and target in char_votes:
+                    if sentiment_type == 'hostile':
+                        # Hero attacking someone = they are hostile
+                        char_votes[target]['hostile_votes'] += 1
+                        char_votes[target]['last_sentiment'] = 'hostile'
+                        char_votes[target]['last_time'] = time_order
+                    # Note: friendly sentiment from hero is ignored for classification
     
     # Build final analysis with voting results
     analysis = {}
