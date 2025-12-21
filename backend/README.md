@@ -32,6 +32,9 @@ If you prefer your existing conda env:
 cd /home/supercomputing/studys/fairytales_resarch
 conda run -n nlp python -m pip install -r backend/requirements.txt
 
+# Make `llm_model` importable from anywhere (fixes: ModuleNotFoundError: llm_model)
+conda run -n nlp python -m pip install -e .
+
 # IMPORTANT: ensure the model name exists in `ollama list`.
 # Example uses a model seen on many setups; replace with yours.
 conda run -n nlp env OLLAMA_MODEL='qwen3:8b' \

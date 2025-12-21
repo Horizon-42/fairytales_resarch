@@ -76,7 +76,7 @@ def annotate_v2(req: AnnotateRequest) -> AnnotateResponse:
 
     # Build model config from environment with optional per-request override.
     base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
-    default_model = _env("OLLAMA_MODEL", "llama3.1")
+    default_model = _env("OLLAMA_MODEL", "qwen3:8b")
 
     ollama_cfg = OllamaConfig(
         base_url=base_url,
