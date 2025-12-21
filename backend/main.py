@@ -19,6 +19,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 from llm_model.annotator import AnnotatorConfig, AnnotationError, annotate_text_v2
+from llm_model.character_annotator import (
+    CharacterAnnotationError,
+    CharacterAnnotatorConfig,
+    annotate_characters,
+)
 from llm_model.ollama_client import OllamaConfig
 
 
@@ -48,6 +53,23 @@ class AnnotateResponse(BaseModel):
 
     ok: bool
     annotation: Dict[str, Any]
+
+
+class CharacterAnnotateRequest(BaseModel):
+    """Character-only request payload.
+
+    This is meant to (re)fill the Characters tab without touching other fields.
+    """
+
+    text: str = Field(..., description="Raw story/summary text")
+    culture: Optional[str] = Field(None, description="Optional culture hint (e.g., Persian)")
+    # Generation controls (optional)
+    model: Optional[str] = Field(None, description="Override Ollama model name")
+
+
+class CharacterAnnotateResponse(BaseModel):
+    ok: bool
+    motif: Dict[str, Any]
 
 
 app = FastAPI(title="Fairytales Auto-Annotation API", version="0.1.0")
@@ -115,3 +137,34 @@ def annotate_v2(req: AnnotateRequest) -> AnnotateResponse:
         raise HTTPException(status_code=502, detail=str(exc)) from exc
 
     return AnnotateResponse(ok=True, annotation=annotation)
+
+
+@app.post("/api/annotate/characters", response_model=CharacterAnnotateResponse)
+def annotate_characters_endpoint(req: CharacterAnnotateRequest) -> CharacterAnnotateResponse:
+    """Extract character archetypes for the Characters tab.
+
+    Returns a `motif` object with keys:
+    - character_archetypes: [{name, alias, archetype}]
+    - helper_type: [string]
+    - obstacle_thrower: [string]
+    """
+
+    base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
+    default_model = _env("OLLAMA_MODEL", "qwen3:8b")
+
+    ollama_cfg = OllamaConfig(
+        base_url=base_url,
+        model=req.model or default_model,
+    )
+
+    try:
+        result = annotate_characters(
+            text=req.text,
+            culture=req.culture,
+            config=CharacterAnnotatorConfig(ollama=ollama_cfg),
+        )
+    except CharacterAnnotationError as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+    # Frontend merges this into state under `motif`.
+    return CharacterAnnotateResponse(ok=True, motif=result)

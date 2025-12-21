@@ -9,7 +9,9 @@ export default function CharacterSection({
   highlightedChars, 
   setHighlightedChars,
   newlyCreatedCharacterIndex,
-  setNewlyCreatedCharacterIndex
+  setNewlyCreatedCharacterIndex,
+  onAutoAnnotateCharacters,
+  autoAnnotateCharactersLoading
 }) {
   const characters = Array.isArray(motif.character_archetypes)
     ? motif.character_archetypes
@@ -178,6 +180,17 @@ export default function CharacterSection({
       <h2>Characters</h2>
       <div className="section-header-row">
         <span>Story Characters</span>
+        {typeof onAutoAnnotateCharacters === "function" && (
+          <button
+            type="button"
+            className="ghost-btn"
+            onClick={onAutoAnnotateCharacters}
+            disabled={!!autoAnnotateCharactersLoading}
+            title="Auto-fill characters, helper types, and obstacle throwers using the LLM backend"
+          >
+            {autoAnnotateCharactersLoading ? "Annotating…" : "Auto-fill"}
+          </button>
+        )}
       </div>
 
       {safeCharacters.length === 0 && (

@@ -52,6 +52,7 @@ conda run -n nlp env OLLAMA_MODEL='qwen3:8b' \
 
 - `GET /health`
 - `POST /api/annotate/v2`
+- `POST /api/annotate/characters`
 
 Example:
 
@@ -59,4 +60,12 @@ Example:
 curl -s http://localhost:8000/api/annotate/v2 \
   -H 'Content-Type: application/json' \
   -d '{"text":"Once upon a time...","reference_uri":"datasets/...","culture":"Persian"}' | jq
+```
+
+Character-only example (fills Characters tab):
+
+```bash
+curl -s http://localhost:8000/api/annotate/characters \
+  -H 'Content-Type: application/json' \
+  -d '{"text":"Once upon a time...","culture":"Persian","model":"qwen3:8b"}' | jq
 ```

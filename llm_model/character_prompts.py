@@ -1,0 +1,106 @@
+"""Prompt templates for character-only annotation.
+
+Goal: extract story characters and assign a narrative archetype.
+
+This output is designed to plug directly into the frontend "Characters" tab:
+- `motif.character_archetypes`: list of {name, alias, archetype}
+- (optional) `motif.helper_type` and `motif.obstacle_thrower`
+
+Archetype guideline source:
+- `docs/Character_Resources/character_arctypes.md`
+
+Important:
+- Use ONLY the allowed archetype labels below, because the UI uses a fixed list.
+"""
+
+from __future__ import annotations
+
+from typing import Optional
+
+
+ALLOWED_ARCHETYPES = [
+    "Hero",
+    "Shadow",
+    "Sidekick/Helper",
+    "Villain",
+    "Lover",
+    "Mentor",
+    "Mother",
+    "Everyman",
+    "Damsel",
+    "Trickster",
+    "Guardian",
+    "Herald",
+    "Scapegoat",
+    "Outlaw",
+    "Rebel",
+    "Ruler",
+    "Other",
+]
+
+
+SYSTEM_PROMPT_CHARACTERS = """You are an expert folktale annotation assistant.
+
+Task: extract characters from the provided text and classify each into ONE narrative archetype.
+
+You must output STRICT JSON only (no markdown, no commentary).
+If you are unsure about an archetype, use "Other".
+Do not invent characters that are not supported by the text.
+"""
+
+
+def build_character_user_prompt(*, text: str, culture: Optional[str] = None) -> str:
+    """Build the user prompt for character-only extraction."""
+
+    culture_hint = f"Culture hint: {culture}\n" if culture else ""
+
+    # Keep definitions compact but explicit. This is derived from the guidelines file.
+    definitions = "\n".join(
+        [
+            "Archetype definitions (choose the best fit):",
+            "- Hero: central protagonist pursuing the main objective; tested by trials.",
+            "- Shadow: dark mirror of the Hero; embodies what the Hero fears/becomes.",
+            "- Sidekick/Helper: supports the Hero; grounding, advice, comic relief.",
+            "- Villain: primary antagonist whose goals directly conflict with the Hero.",
+            "- Lover: heart-led, harmony-seeking; avoids conflict; cares for relationships.",
+            "- Mentor: wiser guide; provides knowledge/tools; nudges the Hero forward.",
+            "- Mother: nurturing refuge; provides safety/healing (not necessarily literal mother).",
+            "- Everyman: ordinary relatable person; ""normal"" viewpoint in extraordinary events.",
+            "- Damsel: innocent/naive/hopeful; may need rescue; symbolizes vulnerability/hope.",
+            "- Trickster: clever, self-interested; may help or hinder depending on advantage.",
+            "- Guardian: threshold keeper/obstacle that blocks progress; tests growth.",
+            "- Herald: announces change/call-to-adventure; triggers plot shift.",
+            "- Scapegoat: takes blame; their fall enables others; unites people against them.",
+            "- Outlaw: independent, outside society; strong self-direction; may be hunted.",
+            "- Rebel: revolutionary; fights injustice; willing to burn bridges for a cause.",
+            "- Ruler: authority figure; values order/tradition/status quo; may oppose change.",
+            "- Other: use when none fits or evidence is weak.",
+        ]
+    )
+
+    allowed = ", ".join(ALLOWED_ARCHETYPES)
+
+    return (
+        "Extract the characters and output JSON with this exact schema:\n"
+        "{\n"
+        "  \"character_archetypes\": [\n"
+        "    { \"name\": string, \"alias\": string, \"archetype\": one_of_allowed }\n"
+        "  ],\n"
+        "  \"helper_type\": [string],\n"
+        "  \"obstacle_thrower\": [string]\n"
+        "}\n\n"
+        "Rules:\n"
+        f"- `archetype` must be exactly one of: [{allowed}].\n"
+        "- `name` should be the canonical name as it appears in the story (short).\n"
+        "- `alias` is optional; use for titles/epithets/roles (e.g., \"the king\", \"old woman\").\n"
+        "- Include only salient characters (typically 2-12).\n"
+        "- If a group is mentioned (e.g., \"soldiers\"), include it only if it acts as an agent in events.\n"
+        "- `helper_type` is a coarse story-level list of helper categories if clearly present (else empty list).\n"
+        "- `obstacle_thrower` is a story-level list of character names who create obstacles (often villains/guardians); else empty list.\n"
+        "- Output strict JSON only.\n\n"
+        f"{culture_hint}"
+        f"{definitions}\n\n"
+        "Text:\n---\n"
+        f"{text}\n"
+        "---\n"
+    )

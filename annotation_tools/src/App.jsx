@@ -115,9 +115,45 @@ export default function App() {
   const [highlightedRanges, setHighlightedRanges] = useState({});
   const [lastAutoSave, setLastAutoSave] = useState(null);
   const [newlyCreatedCharacterIndex, setNewlyCreatedCharacterIndex] = useState(null);
+  const [autoAnnotateCharactersLoading, setAutoAnnotateCharactersLoading] = useState(false);
 
   // Context menu state
   const [contextMenu, setContextMenu] = useState({ visible: false, x: 0, y: 0 });
+
+  const handleAutoAnnotateCharacters = async () => {
+    if (autoAnnotateCharactersLoading) return;
+    if (!sourceText?.text || !sourceText.text.trim()) {
+      alert("No story text loaded.");
+      return;
+    }
+
+    setAutoAnnotateCharactersLoading(true);
+    try {
+      const resp = await fetch("http://127.0.0.1:8000/api/annotate/characters", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          text: sourceText.text,
+          culture
+        })
+      });
+
+      const data = await resp.json().catch(() => null);
+      if (!resp.ok || !data?.ok) {
+        const msg = (data && (data.detail || data.error)) ? (data.detail || data.error) : `HTTP ${resp.status}`;
+        throw new Error(msg);
+      }
+
+      if (data.motif && typeof data.motif === "object") {
+        setMotif((prev) => ({ ...prev, ...data.motif }));
+      }
+    } catch (err) {
+      console.error("Auto-annotate characters failed:", err);
+      alert(`Auto-annotate failed: ${err?.message || err}`);
+    } finally {
+      setAutoAnnotateCharactersLoading(false);
+    }
+  };
 
   // ========== JSON Builders ==========
   const jsonV1 = useMemo(
@@ -1282,6 +1318,8 @@ export default function App() {
                 setHighlightedChars={setHighlightedChars}
                 newlyCreatedCharacterIndex={newlyCreatedCharacterIndex}
                 setNewlyCreatedCharacterIndex={setNewlyCreatedCharacterIndex}
+                onAutoAnnotateCharacters={handleAutoAnnotateCharacters}
+                autoAnnotateCharactersLoading={autoAnnotateCharactersLoading}
               />
             )}
 
