@@ -24,28 +24,74 @@ const eventTypeColors = {
   'OTHER': '#6b6b6b',
 }
 
-// Character ribbon colors based on hero relationship
-const heroRelationshipColors = {
-  'hero': '#e63946',      // Vermillion - main hero
-  'friendly': '#40916c',  // Green - friendly to hero
-  'hostile': '#370617',   // Dark crimson - hostile to hero
-  'neutral': '#6b7280',   // Gray - neutral
-}
+// Hero color - distinctive vermillion
+const heroColor = '#e63946'
 
-// Fallback colors for variety
-const characterColorPalette = [
-  '#e63946', '#40916c', '#219ebc', '#7209b7', '#d4a373', 
-  '#f77f00', '#06d6a0', '#ff006e', '#118ab2', '#8338ec',
-  '#ef476f', '#ffd166', '#06d6a0', '#118ab2', '#073b4c'
+// Warm color palette for friendly characters (暖色系)
+const warmColorPalette = [
+  '#e63946',  // Vermillion red
+  '#f77f00',  // Orange
+  '#d4a373',  // Golden tan
+  '#ff6b6b',  // Coral red
+  '#fca311',  // Amber
+  '#ff9f1c',  // Bright orange
+  '#e09f3e',  // Mustard
+  '#f4a261',  // Sandy orange
+  '#ee6c4d',  // Burnt sienna
+  '#bc6c25',  // Caramel
 ]
 
-// Get color for character based on hero relationship
+// Cool color palette for hostile characters (冷色系)
+const coolColorPalette = [
+  '#370617',  // Dark crimson
+  '#1d3557',  // Prussian blue
+  '#457b9d',  // Steel blue
+  '#6d597a',  // Old lavender
+  '#355070',  // Dark slate blue
+  '#2d6a4f',  // Dark green
+  '#4a5568',  // Cool gray
+  '#5f0a87',  // Purple
+  '#023e8a',  // Royal blue
+  '#0077b6',  // Ocean blue
+]
+
+// Neutral color palette (中性色)
+const neutralColorPalette = [
+  '#6b7280',  // Gray
+  '#9ca3af',  // Light gray
+  '#78716c',  // Stone
+  '#737373',  // Neutral gray
+  '#a1a1aa',  // Zinc
+]
+
+// Get color for character based on hero relationship and index
 const getCharacterColor = (char, index) => {
   const relationship = char.hero_relationship || 'neutral'
-  if (relationship === 'hero') return heroRelationshipColors.hero
-  if (relationship === 'friendly') return heroRelationshipColors.friendly
-  if (relationship === 'hostile') return heroRelationshipColors.hostile
-  return characterColorPalette[index % characterColorPalette.length]
+  
+  if (relationship === 'hero') {
+    return heroColor
+  }
+  
+  if (relationship === 'friendly') {
+    return warmColorPalette[index % warmColorPalette.length]
+  }
+  
+  if (relationship === 'hostile') {
+    return coolColorPalette[index % coolColorPalette.length]
+  }
+  
+  // Neutral
+  return neutralColorPalette[index % neutralColorPalette.length]
+}
+
+// Get relationship color for legend
+const getRelationshipColor = (relationship) => {
+  switch (relationship) {
+    case 'hero': return heroColor
+    case 'friendly': return warmColorPalette[0]
+    case 'hostile': return coolColorPalette[0]
+    default: return neutralColorPalette[0]
+  }
 }
 
 function StoryRibbons({ story }) {
@@ -171,11 +217,15 @@ function StoryRibbons({ story }) {
         const agentIndices = agents.map(a => findCharIndex(a)).filter(i => i !== -1)
         const targetIndices = targets.map(t => findCharIndex(t)).filter(i => i !== -1)
         
-        // Calculate interaction center (average Y of agents)
-        let interactionCenterY = null
+        // Calculate anchor Y (average Y of all agents' base positions)
+        let anchorY = null
         if (agentIndices.length > 0) {
-          interactionCenterY = d3.mean(agentIndices, idx => yScale(idx) + yScale.bandwidth() / 2)
+          anchorY = d3.mean(agentIndices, idx => yScale(idx) + yScale.bandwidth() / 2)
         }
+
+        // Pull strengths
+        const agentPullStrength = 0.7  // Agents move 70% toward anchor
+        const targetPullStrength = 0.9  // Targets move 90% toward anchor
 
         // Update each character's position at this event
         charPoints.forEach((cp, charIdx) => {
@@ -186,17 +236,20 @@ function StoryRibbons({ story }) {
           let isInvolved = false
 
           if (agentIndices.includes(charIdx)) {
-            // Agent: stay at home position
+            // Agent: move toward anchor Y (average of all agents)
             isAgent = true
             isInvolved = true
-            y = baseY
-          } else if (targetIndices.includes(charIdx) && interactionCenterY !== null) {
-            // Target: move toward agents
+            if (anchorY !== null && agentIndices.length > 1) {
+              // Only move if there are multiple agents
+              y = baseY + (anchorY - baseY) * agentPullStrength
+            } else {
+              y = baseY  // Single agent stays at home
+            }
+          } else if (targetIndices.includes(charIdx) && anchorY !== null) {
+            // Target: move toward anchor Y
             isTarget = true
             isInvolved = true
-            // Move 60% toward the interaction center
-            const pullStrength = 0.6
-            y = baseY + (interactionCenterY - baseY) * pullStrength
+            y = baseY + (anchorY - baseY) * targetPullStrength
           }
 
           cp.points.push({
@@ -508,54 +561,61 @@ function StoryRibbons({ story }) {
           className="ribbons-svg"
         />
 
-        {/* Legend */}
+        {/* Legend - positioned at bottom right */}
         <div className="ribbons-legend">
-          <div className="legend-section">
-            <h4>角色关系 / Character Alignment</h4>
-            <div className="legend-items">
-              <div className="legend-item">
-                <span className="legend-dot-large" style={{ background: heroRelationshipColors.hero }}></span>
-                <span>主角 Hero (中心位置)</span>
-              </div>
-              <div className="legend-item">
-                <span className="legend-dot-large" style={{ background: heroRelationshipColors.friendly }}></span>
-                <span>友好 Friendly (上方)</span>
-              </div>
-              <div className="legend-item">
-                <span className="legend-dot-large" style={{ background: heroRelationshipColors.hostile }}></span>
-                <span>敌对 Hostile (下方)</span>
-              </div>
-              <div className="legend-item">
-                <span className="legend-dot-large" style={{ background: heroRelationshipColors.neutral }}></span>
-                <span>中立 Neutral</span>
+          <div className="legend-row">
+            <div className="legend-section">
+              <h4>角色位置</h4>
+              <div className="legend-items compact">
+                <div className="legend-item">
+                  <span className="legend-dot-large" style={{ background: heroColor }}></span>
+                  <span>主角(中心)</span>
+                </div>
+                <div className="legend-item">
+                  <div className="legend-color-range warm">
+                    {warmColorPalette.slice(0, 4).map((c, i) => (
+                      <span key={i} className="color-swatch" style={{ background: c }}></span>
+                    ))}
+                  </div>
+                  <span>友好(上)</span>
+                </div>
+                <div className="legend-item">
+                  <div className="legend-color-range cool">
+                    {coolColorPalette.slice(0, 4).map((c, i) => (
+                      <span key={i} className="color-swatch" style={{ background: c }}></span>
+                    ))}
+                  </div>
+                  <span>敌对(下)</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="legend-section">
-            <h4>丝带动态 / Ribbon Movement</h4>
-            <div className="legend-items">
-              <div className="legend-item">
-                <span className="legend-dot-small" style={{ background: '#333' }}></span>
-                <span>Agent: 丝带保持原位</span>
-              </div>
-              <div className="legend-item">
-                <span className="legend-dot-hollow"></span>
-                <span>Target: 丝带靠近Agent</span>
+            <div className="legend-section">
+              <h4>丝带动态</h4>
+              <div className="legend-items compact">
+                <div className="legend-item">
+                  <span className="legend-dot-small" style={{ background: '#333' }}></span>
+                  <span>Agent(主动)</span>
+                </div>
+                <div className="legend-item">
+                  <span className="legend-dot-hollow"></span>
+                  <span>Target(被动)</span>
+                </div>
               </div>
             </div>
           </div>
           {hoveredChar && (
             <div className="legend-section hovered-char">
-              <h4>当前角色</h4>
               <p className="char-name">{hoveredChar.name}</p>
-              <p className="char-archetype">{hoveredChar.archetype}</p>
-              {hoveredChar.hero_relationship && (
-                <p className="char-relationship" style={{ color: getCharacterColor(hoveredChar, 0) }}>
-                  {hoveredChar.hero_relationship === 'hero' ? '★ 主角' :
-                   hoveredChar.hero_relationship === 'friendly' ? '友好角色' :
-                   hoveredChar.hero_relationship === 'hostile' ? '敌对角色' : '中立角色'}
-                </p>
-              )}
+              <span className="char-info">
+                {hoveredChar.archetype && <span>{hoveredChar.archetype}</span>}
+                {hoveredChar.hero_relationship && (
+                  <span className="char-relationship" style={{ color: getCharacterColor(hoveredChar, 0) }}>
+                    {hoveredChar.hero_relationship === 'hero' ? '★主角' :
+                     hoveredChar.hero_relationship === 'friendly' ? '友好' :
+                     hoveredChar.hero_relationship === 'hostile' ? '敌对' : '中立'}
+                  </span>
+                )}
+              </span>
             </div>
           )}
         </div>
