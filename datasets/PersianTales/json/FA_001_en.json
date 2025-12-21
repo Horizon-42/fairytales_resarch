@@ -1,0 +1,56 @@
+{
+  "id": "FA_001_en",
+  "culture": "Persian",
+  "title": "",
+  "source_text": {
+    "text": "War breaks out between Persia and Turan. Sohrab leads Turanian forces partly to draw Rostam into single combat. Rostam answers Iran’s call, unaware his opponent is his son.\nThey wrestle and clash for honor. Rostam is wary of the youth’s strength; Sohrab is confident and merciful. In the first bout Rostam narrowly escapes; in the second he strikes Sohrab with a spear that proves fatal.\nAs Sohrab lies dying, he reveals a token from Tahmineh, proving the kinship. Rostam is shattered, begs for royal pardon and healing, but fate closes in. Father and son reconcile only at the edge of death, making pride, secrecy, and war the architects of tragedy.\n",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "datasets/texts/FA_001_en.txt"
+  },
+  "metadata": {
+    "main_motif": "",
+    "atu_type": "",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [],
+    "target_motif": true
+  },
+  "thinking_process": "",
+  "annotation": {
+    "motif": {
+      "atu_type": "",
+      "atu_categories": [],
+      "motif_type": [],
+      "character_archetypes": [],
+      "obstacle_pattern": [],
+      "obstacle_thrower": [],
+      "helper_type": [],
+      "thinking_process": ""
+    },
+    "deep": {
+      "paragraph_summaries": {
+        "per_paragraph": {},
+        "combined": [],
+        "whole": ""
+      },
+      "propp_functions": [],
+      "propp_notes": ""
+    }
+  },
+  "narrative_structure": [],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    }
+  },
+  "qa": {
+    "annotator": "",
+    "date_annotated": "2025-12-21",
+    "confidence": 0.8,
+    "notes": ""
+  }
+}
