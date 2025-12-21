@@ -13,6 +13,8 @@ from pathlib import Path
 from collections import defaultdict
 import uuid
 
+from character_analysis import analyze_and_sort_characters
+
 
 def extract_character_relationships(data: dict) -> dict:
     """
@@ -116,12 +118,16 @@ def extract_character_relationships(data: dict) -> dict:
 def extract_story_ribbons(data: dict) -> dict:
     """
     Extract story ribbon data - timeline of events with character involvement.
+    Characters are sorted by their relationship to the main hero:
+    - Hero at center
+    - Friendly characters above
+    - Hostile characters below
     """
     characters = data.get("characters", [])
     narrative_events = data.get("narrative_events", [])
     metadata = data.get("metadata", {})
     
-    # Build character list
+    # Build initial character list
     char_list = []
     for i, char in enumerate(characters):
         char_list.append({
@@ -155,15 +161,19 @@ def extract_story_ribbons(data: dict) -> dict:
             "action_layer": event.get("action_layer", {}),
         })
     
-    # Sort by time order
+    # Sort events by time order
     events.sort(key=lambda x: x["time_order"])
+    
+    # Analyze and sort characters based on hero relationships
+    sorted_characters, analysis_meta = analyze_and_sort_characters(char_list, events)
     
     return {
         "title": metadata.get("title", "Unknown Story"),
         "id": metadata.get("id", ""),
-        "characters": char_list,
+        "characters": sorted_characters,
         "events": events,
         "total_events": len(events),
+        "analysis": analysis_meta,
     }
 
 

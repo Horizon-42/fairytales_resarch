@@ -15,43 +15,52 @@
   color: var(--ink-medium);
 }
 
-.ribbons-header {
-  text-align: center;
-}
-
-.ribbons-header h2 {
-  font-family: var(--font-chinese), var(--font-serif);
-  font-size: 1.8rem;
-  color: var(--ink-black);
-  margin-bottom: var(--space-sm);
-}
-
-.ribbons-subtitle {
-  color: var(--ink-light);
-  font-size: 0.9rem;
-  margin: 0;
-}
-
 /* Ribbons Wrapper */
 .ribbons-wrapper {
   position: relative;
   background: var(--paper-light);
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: var(--shadow-md);
   overflow-x: auto;
   overflow-y: visible;
   padding: var(--space-md);
-  /* Subtle scroll pattern */
+  /* Subtle ink wash background */
   background-image: 
-    linear-gradient(90deg, var(--paper-light) 0%, transparent 20%),
-    linear-gradient(-90deg, var(--paper-light) 0%, transparent 20%),
-    radial-gradient(ellipse at 50% 0%, rgba(214, 168, 113, 0.05) 0%, transparent 50%);
-  background-attachment: local, local, scroll;
+    linear-gradient(180deg, rgba(255,255,255,0.8) 0%, transparent 30%),
+    linear-gradient(90deg, var(--paper-light) 0%, transparent 10%),
+    linear-gradient(-90deg, var(--paper-light) 0%, transparent 10%),
+    radial-gradient(ellipse at 20% 50%, rgba(214, 168, 113, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(45, 106, 79, 0.03) 0%, transparent 50%);
 }
 
 .ribbons-svg {
   display: block;
   min-width: 100%;
+}
+
+/* Ribbon SVG Styles */
+.ribbons-svg .ribbon {
+  transition: opacity 0.15s ease;
+}
+
+.ribbons-svg .ribbon-area {
+  transition: fill-opacity 0.15s ease;
+}
+
+.ribbons-svg .ribbon-line {
+  transition: stroke-width 0.15s ease, stroke-opacity 0.15s ease;
+}
+
+.ribbons-svg .interaction-point {
+  transition: r 0.15s ease, fill 0.15s ease;
+}
+
+.ribbons-svg .interaction-point:hover {
+  r: 8;
+}
+
+.ribbons-svg .event-marker {
+  transition: opacity 0.15s ease;
 }
 
 /* Legend */
@@ -61,19 +70,26 @@
   right: var(--space-md);
   background: rgba(255, 255, 255, 0.95);
   padding: var(--space-md);
-  border-radius: 6px;
+  border-radius: 8px;
   box-shadow: var(--shadow-md);
-  font-size: 0.7rem;
-  max-width: 200px;
-  max-height: 300px;
-  overflow-y: auto;
+  font-size: 0.75rem;
+  max-width: 240px;
   backdrop-filter: blur(8px);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.ribbons-legend .legend-section {
+  margin-bottom: var(--space-md);
+}
+
+.ribbons-legend .legend-section:last-child {
+  margin-bottom: 0;
 }
 
 .ribbons-legend .legend-section h4 {
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   color: var(--ink-medium);
   margin-bottom: var(--space-sm);
   padding-bottom: var(--space-xs);
@@ -83,28 +99,69 @@
 .ribbons-legend .legend-items {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .ribbons-legend .legend-item {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
+  font-size: 0.7rem;
+  color: var(--ink-dark);
 }
 
-.ribbons-legend .legend-dot {
+.ribbons-legend .legend-dot-large {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ribbons-legend .legend-dot-small {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   flex-shrink: 0;
 }
 
-.ribbons-legend .legend-label {
-  color: var(--ink-dark);
-  font-size: 0.65rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.ribbons-legend .legend-dot-hollow {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: white;
+  border: 2px solid #666;
+}
+
+.ribbons-legend .hovered-char {
+  background: var(--paper-warm);
+  margin: var(--space-sm) calc(-1 * var(--space-md));
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 0;
+}
+
+.ribbons-legend .hovered-char h4 {
+  border-bottom: none;
+  margin-bottom: var(--space-xs);
+}
+
+.ribbons-legend .char-name {
+  font-family: var(--font-chinese), var(--font-serif);
+  font-size: 1rem;
+  color: var(--ink-black);
+  margin: 0 !important;
+}
+
+.ribbons-legend .char-archetype {
+  font-size: 0.7rem;
+  color: var(--ink-light);
+  margin: 0 !important;
+}
+
+.ribbons-legend .char-relationship {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin: var(--space-xs) 0 0 0 !important;
 }
 
 /* Event Info Panel */
@@ -119,7 +176,7 @@
   border-radius: 12px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.3);
   min-width: 350px;
-  max-width: 500px;
+  max-width: 550px;
   backdrop-filter: blur(12px);
   animation: slideUp 0.2s ease;
   z-index: 100;
@@ -163,7 +220,7 @@
 
 .event-description {
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.6;
   margin-bottom: var(--space-md) !important;
   color: var(--paper-cream);
 }
@@ -179,11 +236,12 @@
   display: flex;
   gap: var(--space-sm);
   font-size: 0.8rem;
+  flex-wrap: wrap;
 }
 
 .participant-label {
   color: var(--ink-light);
-  min-width: 60px;
+  min-width: 100px;
 }
 
 .participant-names {
@@ -191,35 +249,12 @@
   font-family: var(--font-chinese), var(--font-serif);
 }
 
-.event-metadata {
-  display: flex;
-  align-items: center;
-  gap: var(--space-md);
-  font-size: 0.8rem;
-  margin-bottom: var(--space-md);
-}
-
-.metadata-item {
-  color: var(--paper-warm);
-}
-
-.metadata-item strong {
-  color: var(--ink-light);
-}
-
-.sentiment-badge {
-  padding: 2px 8px;
-  border-radius: 3px;
-  font-size: 0.7rem;
-  color: white;
-  text-transform: capitalize;
-}
-
 .event-excerpt {
   background: rgba(255,255,255,0.05);
   padding: var(--space-sm) var(--space-md);
   border-radius: 6px;
   border-left: 3px solid var(--gold);
+  margin-top: var(--space-sm);
 }
 
 .event-excerpt p {
@@ -252,47 +287,6 @@
   font-size: 1rem;
 }
 
-/* View Mode Toggle */
-.view-mode-toggle {
-  display: flex;
-  gap: var(--space-sm);
-  margin-bottom: var(--space-md);
-  justify-content: center;
-}
-
-.view-mode-btn {
-  padding: var(--space-sm) var(--space-md);
-  background: var(--paper-warm);
-  border: 1px solid transparent;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.view-mode-btn:hover {
-  background: var(--paper-cream);
-  border-color: var(--ink-light);
-}
-
-.view-mode-btn.active {
-  background: var(--ink-black);
-  color: var(--paper-cream);
-}
-
-/* SVG Styles */
-.ribbons-svg .event-dot {
-  transition: r 0.15s ease;
-}
-
-.ribbons-svg .event-glow {
-  transition: r 0.15s ease, opacity 0.15s ease;
-}
-
-.ribbons-svg .event-ribbon {
-  transition: opacity 0.15s ease;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .ribbons-legend {
@@ -315,3 +309,12 @@
   }
 }
 
+/* Animation for ribbon interaction */
+@keyframes ribbonPulse {
+  0%, 100% { 
+    stroke-opacity: 0.8; 
+  }
+  50% { 
+    stroke-opacity: 1; 
+  }
+}

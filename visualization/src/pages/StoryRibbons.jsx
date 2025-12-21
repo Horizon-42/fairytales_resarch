@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import * as d3 from 'd3'
 import './StoryRibbons.css'
 
-// Color schemes
+// Color schemes for event types
 const eventTypeColors = {
   'INTERDICTION': '#7209b7',
   'VILLAINY': '#370617',
@@ -24,26 +24,38 @@ const eventTypeColors = {
   'OTHER': '#6b6b6b',
 }
 
-const sentimentColors = {
-  'positive': '#40916c',
-  'negative': '#c1121f',
-  'neutral': '#6b6b6b',
-  'romantic': '#e63946',
-  'fearful': '#7209b7',
-  'hostile': '#370617',
+// Character ribbon colors based on hero relationship
+const heroRelationshipColors = {
+  'hero': '#e63946',      // Vermillion - main hero
+  'friendly': '#40916c',  // Green - friendly to hero
+  'hostile': '#370617',   // Dark crimson - hostile to hero
+  'neutral': '#6b7280',   // Gray - neutral
 }
 
-const characterColors = d3.scaleOrdinal()
-  .range(['#e63946', '#40916c', '#219ebc', '#7209b7', '#d4a373', '#f77f00', '#06d6a0', '#ff006e', '#118ab2', '#8338ec'])
+// Fallback colors for variety
+const characterColorPalette = [
+  '#e63946', '#40916c', '#219ebc', '#7209b7', '#d4a373', 
+  '#f77f00', '#06d6a0', '#ff006e', '#118ab2', '#8338ec',
+  '#ef476f', '#ffd166', '#06d6a0', '#118ab2', '#073b4c'
+]
+
+// Get color for character based on hero relationship
+const getCharacterColor = (char, index) => {
+  const relationship = char.hero_relationship || 'neutral'
+  if (relationship === 'hero') return heroRelationshipColors.hero
+  if (relationship === 'friendly') return heroRelationshipColors.friendly
+  if (relationship === 'hostile') return heroRelationshipColors.hostile
+  return characterColorPalette[index % characterColorPalette.length]
+}
 
 function StoryRibbons({ story }) {
   const svgRef = useRef(null)
   const containerRef = useRef(null)
   const [ribbonData, setRibbonData] = useState(null)
   const [selectedEvent, setSelectedEvent] = useState(null)
-  const [dimensions, setDimensions] = useState({ width: 800, height: 600 })
+  const [hoveredChar, setHoveredChar] = useState(null)
+  const [dimensions, setDimensions] = useState({ width: 1200, height: 600 })
   const [loading, setLoading] = useState(true)
-  const [viewMode, setViewMode] = useState('timeline') // 'timeline' or 'swimlane'
 
   // Load data
   useEffect(() => {
@@ -67,10 +79,8 @@ function StoryRibbons({ story }) {
     const updateDimensions = () => {
       if (containerRef.current) {
         const { width } = containerRef.current.getBoundingClientRect()
-        setDimensions({ 
-          width: width - 40, 
-          height: Math.max(500, ribbonData ? 100 + ribbonData.characters.length * 80 + 200 : 600)
-        })
+        const height = ribbonData ? Math.max(450, ribbonData.characters.length * 80 + 150) : 500
+        setDimensions({ width: Math.max(800, width - 40), height })
       }
     }
     
@@ -79,7 +89,7 @@ function StoryRibbons({ story }) {
     return () => window.removeEventListener('resize', updateDimensions)
   }, [ribbonData])
 
-  // Render visualization
+  // Main visualization render
   useEffect(() => {
     if (!ribbonData || !svgRef.current) return
 
@@ -88,11 +98,11 @@ function StoryRibbons({ story }) {
 
     const { width, height } = dimensions
     const { characters, events, title } = ribbonData
-    const margin = { top: 60, right: 40, bottom: 80, left: 150 }
+    const margin = { top: 80, right: 60, bottom: 60, left: 160 }
     const innerWidth = width - margin.left - margin.right
     const innerHeight = height - margin.top - margin.bottom
 
-    if (events.length === 0) {
+    if (events.length === 0 || characters.length === 0) {
       svg.append('text')
         .attr('x', width / 2)
         .attr('y', height / 2)
@@ -102,256 +112,382 @@ function StoryRibbons({ story }) {
       return
     }
 
+    // Sort events by time_order
+    const sortedEvents = [...events].filter(e => e.time_order > 0).sort((a, b) => a.time_order - b.time_order)
+    if (sortedEvents.length === 0) return
+
     // Create main group
     const g = svg.append('g')
       .attr('transform', `translate(${margin.left},${margin.top})`)
 
     // Scales
-    const timeScale = d3.scaleLinear()
-      .domain([1, d3.max(events, d => d.time_order) || 1])
+    const xScale = d3.scaleLinear()
+      .domain([0, sortedEvents.length - 1])
       .range([0, innerWidth])
 
-    const characterScale = d3.scaleBand()
-      .domain(characters.map(c => c.name))
+    const yScale = d3.scaleBand()
+      .domain(characters.map((_, i) => i))
       .range([0, innerHeight])
       .padding(0.3)
 
-    // Add background grid
+    const ribbonHeight = Math.min(yScale.bandwidth(), 30)
+
+    // Helper: find character index by name (fuzzy match)
+    const findCharIndex = (name) => {
+      return characters.findIndex(c => 
+        c.name === name || 
+        c.name.includes(name) || 
+        name.includes(c.name)
+      )
+    }
+
+    // Build ribbon path data for each character
+    // For each event, calculate Y position based on agent/target role
+    const buildRibbonPoints = () => {
+      const charPoints = characters.map((char, charIdx) => ({
+        char,
+        charIdx,
+        points: [] // [{x, y, isAgent, event}]
+      }))
+
+      // Add start point for each character
+      charPoints.forEach((cp, idx) => {
+        cp.points.push({
+          x: -20,
+          y: yScale(idx) + yScale.bandwidth() / 2,
+          baseY: yScale(idx) + yScale.bandwidth() / 2,
+          isAgent: false,
+          event: null
+        })
+      })
+
+      // Process each event
+      sortedEvents.forEach((event, eventIdx) => {
+        const x = xScale(eventIdx)
+        const agents = event.agents || []
+        const targets = event.targets || []
+        
+        // Find agent and target indices
+        const agentIndices = agents.map(a => findCharIndex(a)).filter(i => i !== -1)
+        const targetIndices = targets.map(t => findCharIndex(t)).filter(i => i !== -1)
+        
+        // Calculate interaction center (average Y of agents)
+        let interactionCenterY = null
+        if (agentIndices.length > 0) {
+          interactionCenterY = d3.mean(agentIndices, idx => yScale(idx) + yScale.bandwidth() / 2)
+        }
+
+        // Update each character's position at this event
+        charPoints.forEach((cp, charIdx) => {
+          const baseY = yScale(charIdx) + yScale.bandwidth() / 2
+          let y = baseY
+          let isAgent = false
+          let isTarget = false
+          let isInvolved = false
+
+          if (agentIndices.includes(charIdx)) {
+            // Agent: stay at home position
+            isAgent = true
+            isInvolved = true
+            y = baseY
+          } else if (targetIndices.includes(charIdx) && interactionCenterY !== null) {
+            // Target: move toward agents
+            isTarget = true
+            isInvolved = true
+            // Move 60% toward the interaction center
+            const pullStrength = 0.6
+            y = baseY + (interactionCenterY - baseY) * pullStrength
+          }
+
+          cp.points.push({
+            x,
+            y,
+            baseY,
+            isAgent,
+            isTarget,
+            isInvolved,
+            event
+          })
+        })
+      })
+
+      // Add end point for each character
+      charPoints.forEach((cp, idx) => {
+        cp.points.push({
+          x: innerWidth + 20,
+          y: yScale(idx) + yScale.bandwidth() / 2,
+          baseY: yScale(idx) + yScale.bandwidth() / 2,
+          isAgent: false,
+          event: null
+        })
+      })
+
+      return charPoints
+    }
+
+    const charRibbonData = buildRibbonPoints()
+
+    // Create ribbon area generator
+    const ribbonArea = d3.area()
+      .x(d => d.x)
+      .y0(d => d.y - ribbonHeight / 2)
+      .y1(d => d.y + ribbonHeight / 2)
+      .curve(d3.curveCatmullRom.alpha(0.5))
+
+    // Create ribbon line (center path)
+    const ribbonLine = d3.line()
+      .x(d => d.x)
+      .y(d => d.y)
+      .curve(d3.curveCatmullRom.alpha(0.5))
+
+    // Add gradient definitions
+    const defs = svg.append('defs')
+    
+    characters.forEach((char, idx) => {
+      const color = getCharacterColor(char, idx)
+      
+      // Gradient for ribbon fill
+      const gradient = defs.append('linearGradient')
+        .attr('id', `ribbon-gradient-${idx}`)
+        .attr('x1', '0%').attr('y1', '0%')
+        .attr('x2', '100%').attr('y2', '0%')
+      
+      gradient.append('stop')
+        .attr('offset', '0%')
+        .attr('stop-color', color)
+        .attr('stop-opacity', 0.3)
+      
+      gradient.append('stop')
+        .attr('offset', '50%')
+        .attr('stop-color', color)
+        .attr('stop-opacity', 0.6)
+      
+      gradient.append('stop')
+        .attr('offset', '100%')
+        .attr('stop-color', color)
+        .attr('stop-opacity', 0.3)
+    })
+
+    // Draw background grid
     const gridGroup = g.append('g').attr('class', 'grid')
 
-    // Vertical grid lines (time)
-    const timeExtent = d3.max(events, d => d.time_order) || 1
-    const tickCount = Math.min(timeExtent, 20)
-    
-    gridGroup.selectAll('.grid-line-v')
-      .data(d3.range(1, timeExtent + 1))
-      .join('line')
-      .attr('class', 'grid-line-v')
-      .attr('x1', d => timeScale(d))
-      .attr('x2', d => timeScale(d))
-      .attr('y1', -20)
-      .attr('y2', innerHeight + 20)
-      .attr('stroke', '#e0ddd5')
-      .attr('stroke-dasharray', '3,3')
-
-    // Horizontal grid lines (characters)
-    gridGroup.selectAll('.grid-line-h')
+    // Horizontal grid lines (character lanes)
+    gridGroup.selectAll('.grid-h')
       .data(characters)
       .join('line')
-      .attr('class', 'grid-line-h')
+      .attr('class', 'grid-h')
       .attr('x1', -20)
       .attr('x2', innerWidth + 20)
-      .attr('y1', d => characterScale(d.name) + characterScale.bandwidth() / 2)
-      .attr('y2', d => characterScale(d.name) + characterScale.bandwidth() / 2)
-      .attr('stroke', '#e0ddd5')
+      .attr('y1', (_, i) => yScale(i) + yScale.bandwidth() / 2)
+      .attr('y2', (_, i) => yScale(i) + yScale.bandwidth() / 2)
+      .attr('stroke', '#e5e5e5')
+      .attr('stroke-dasharray', '4,4')
+
+    // Vertical grid lines (events)
+    gridGroup.selectAll('.grid-v')
+      .data(sortedEvents)
+      .join('line')
+      .attr('class', 'grid-v')
+      .attr('x1', (_, i) => xScale(i))
+      .attr('x2', (_, i) => xScale(i))
+      .attr('y1', -10)
+      .attr('y2', innerHeight + 10)
+      .attr('stroke', '#f0f0f0')
+
+    // Draw ribbons
+    const ribbonsGroup = g.append('g').attr('class', 'ribbons')
+
+    charRibbonData.forEach((charData, idx) => {
+      const color = getCharacterColor(charData.char, idx)
+      const isHero = charData.char.is_main_hero || charData.char.hero_relationship === 'hero'
+      const ribbonG = ribbonsGroup.append('g')
+        .attr('class', `ribbon ribbon-${idx} ${isHero ? 'ribbon-hero' : ''}`)
+        .attr('data-char-idx', idx)
+
+      // Ribbon fill (area)
+      ribbonG.append('path')
+        .attr('class', 'ribbon-area')
+        .attr('d', ribbonArea(charData.points))
+        .attr('fill', `url(#ribbon-gradient-${idx})`)
+        .attr('stroke', 'none')
+
+      // Ribbon stroke (center line)
+      ribbonG.append('path')
+        .attr('class', 'ribbon-line')
+        .attr('d', ribbonLine(charData.points))
+        .attr('fill', 'none')
+        .attr('stroke', color)
+        .attr('stroke-width', 2)
+        .attr('stroke-opacity', 0.8)
+
+      // Interaction points (where character is involved)
+      charData.points.forEach((pt, ptIdx) => {
+        if (pt.isInvolved && pt.event) {
+          ribbonG.append('circle')
+            .attr('class', 'interaction-point')
+            .attr('cx', pt.x)
+            .attr('cy', pt.y)
+            .attr('r', pt.isAgent ? 6 : 4)
+            .attr('fill', pt.isAgent ? color : 'white')
+            .attr('stroke', color)
+            .attr('stroke-width', 2)
+            .attr('data-event-idx', ptIdx)
+            .style('cursor', 'pointer')
+        }
+      })
+
+      // Hover behavior for ribbon
+      ribbonG
+        .style('cursor', 'pointer')
+        .on('mouseenter', function() {
+          setHoveredChar(charData.char)
+          
+          // Highlight this ribbon
+          d3.select(this).select('.ribbon-area')
+            .transition().duration(150)
+            .attr('fill-opacity', 1)
+          
+          d3.select(this).select('.ribbon-line')
+            .transition().duration(150)
+            .attr('stroke-width', 3)
+            .attr('stroke-opacity', 1)
+
+          // Dim other ribbons
+          ribbonsGroup.selectAll('.ribbon').filter((_, i) => i !== idx)
+            .transition().duration(150)
+            .attr('opacity', 0.2)
+        })
+        .on('mouseleave', function() {
+          setHoveredChar(null)
+          
+          d3.select(this).select('.ribbon-area')
+            .transition().duration(150)
+            .attr('fill-opacity', 1)
+          
+          d3.select(this).select('.ribbon-line')
+            .transition().duration(150)
+            .attr('stroke-width', 2)
+            .attr('stroke-opacity', 0.8)
+
+          ribbonsGroup.selectAll('.ribbon')
+            .transition().duration(150)
+            .attr('opacity', 1)
+        })
+    })
+
+    // Draw event markers on top
+    const eventsGroup = g.append('g').attr('class', 'events-markers')
+
+    sortedEvents.forEach((event, eventIdx) => {
+      const x = xScale(eventIdx)
+      const eventG = eventsGroup.append('g')
+        .attr('class', 'event-marker')
+        .attr('transform', `translate(${x}, 0)`)
+
+      // Event number at top
+      eventG.append('text')
+        .attr('y', -25)
+        .attr('text-anchor', 'middle')
+        .attr('font-size', '10px')
+        .attr('fill', '#999')
+        .text(event.time_order)
+
+      // Event type label (rotated)
+      eventG.append('text')
+        .attr('y', innerHeight + 20)
+        .attr('text-anchor', 'start')
+        .attr('font-size', '8px')
+        .attr('fill', eventTypeColors[event.event_type] || '#666')
+        .attr('transform', `rotate(45, 0, ${innerHeight + 20})`)
+        .text(event.event_type?.replace(/_/g, ' ').substring(0, 15) || '')
+
+      // Invisible hit area for event hover
+      eventG.append('rect')
+        .attr('x', -15)
+        .attr('y', -10)
+        .attr('width', 30)
+        .attr('height', innerHeight + 20)
+        .attr('fill', 'transparent')
+        .style('cursor', 'pointer')
+        .on('mouseenter', () => setSelectedEvent(event))
+        .on('mouseleave', () => setSelectedEvent(null))
+    })
 
     // Character labels (Y axis)
-    const characterLabels = g.append('g')
-      .attr('class', 'character-labels')
-      .attr('transform', 'translate(-10, 0)')
-
-    characterLabels.selectAll('.character-label')
-      .data(characters)
-      .join('g')
-      .attr('class', 'character-label')
-      .attr('transform', d => `translate(0, ${characterScale(d.name) + characterScale.bandwidth() / 2})`)
-      .each(function(d, i) {
-        const group = d3.select(this)
-        
-        // Character dot
-        group.append('circle')
-          .attr('r', 8)
-          .attr('cx', -20)
-          .attr('fill', characterColors(i))
-
-        // Character name
-        group.append('text')
-          .attr('text-anchor', 'end')
-          .attr('dy', '0.35em')
-          .attr('x', -35)
-          .attr('font-family', 'var(--font-chinese), var(--font-serif)')
-          .attr('font-size', '13px')
-          .attr('fill', '#1a1a1a')
-          .text(d.name)
-
-        // Archetype badge
-        group.append('text')
-          .attr('text-anchor', 'end')
-          .attr('dy', '1.8em')
-          .attr('x', -35)
-          .attr('font-size', '9px')
-          .attr('fill', '#999')
-          .text(d.archetype || '')
-      })
-
-    // Time axis
-    const timeAxis = g.append('g')
-      .attr('class', 'time-axis')
-      .attr('transform', `translate(0, ${innerHeight + 30})`)
-
-    timeAxis.append('text')
-      .attr('x', innerWidth / 2)
-      .attr('y', 35)
-      .attr('text-anchor', 'middle')
-      .attr('font-size', '12px')
-      .attr('fill', '#666')
-      .text('Story Timeline →')
-
-    // Event ribbons/nodes
-    const eventGroup = g.append('g').attr('class', 'events')
-
-    // Draw connecting ribbons between characters in same event
-    const ribbonPaths = eventGroup.append('g').attr('class', 'ribbons')
-
-    events.forEach((event, eventIndex) => {
-      const allParticipants = [...(event.agents || []), ...(event.targets || [])]
-      const participantIndices = allParticipants
-        .map(name => characters.findIndex(c => 
-          c.name === name || c.name.includes(name) || name.includes(c.name)
-        ))
-        .filter(i => i !== -1)
-        .sort((a, b) => a - b)
-
-      if (participantIndices.length > 1) {
-        // Draw ribbon connecting all participants
-        const x = timeScale(event.time_order)
-        const yMin = characterScale(characters[participantIndices[0]].name) + characterScale.bandwidth() / 2
-        const yMax = characterScale(characters[participantIndices[participantIndices.length - 1]].name) + characterScale.bandwidth() / 2
-
-        ribbonPaths.append('rect')
-          .attr('class', 'event-ribbon')
-          .attr('x', x - 3)
-          .attr('y', yMin)
-          .attr('width', 6)
-          .attr('height', yMax - yMin)
-          .attr('fill', eventTypeColors[event.event_type] || eventTypeColors['OTHER'])
-          .attr('opacity', 0.3)
-          .attr('rx', 3)
-      }
-    })
-
-    // Draw event nodes
-    const eventNodes = eventGroup.selectAll('.event-node')
-      .data(events)
-      .join('g')
-      .attr('class', 'event-node')
-      .attr('transform', d => `translate(${timeScale(d.time_order)}, 0)`)
-
-    // For each event, draw dots for each participating character
-    eventNodes.each(function(event, eventIndex) {
-      const group = d3.select(this)
-      const allParticipants = [...new Set([...(event.agents || []), ...(event.targets || [])])]
+    const labelsGroup = g.append('g').attr('class', 'char-labels')
+    
+    characters.forEach((char, idx) => {
+      const y = yScale(idx) + yScale.bandwidth() / 2
+      const color = getCharacterColor(char, idx)
+      const isHero = char.is_main_hero || char.hero_relationship === 'hero'
+      const relationship = char.hero_relationship || 'neutral'
       
-      allParticipants.forEach(participant => {
-        const charIndex = characters.findIndex(c => 
-          c.name === participant || c.name.includes(participant) || participant.includes(c.name)
-        )
-        
-        if (charIndex !== -1) {
-          const y = characterScale(characters[charIndex].name) + characterScale.bandwidth() / 2
-          const isAgent = (event.agents || []).some(a => 
-            a === participant || a.includes(participant) || participant.includes(a)
-          )
+      const labelG = labelsGroup.append('g')
+        .attr('transform', `translate(-10, ${y})`)
+        .attr('class', `char-label ${isHero ? 'char-label-hero' : ''}`)
 
-          // Node glow
-          group.append('circle')
-            .attr('class', 'event-glow')
-            .attr('cy', y)
-            .attr('r', 14)
-            .attr('fill', eventTypeColors[event.event_type] || eventTypeColors['OTHER'])
-            .attr('opacity', 0.15)
+      // Color dot (larger for hero)
+      labelG.append('circle')
+        .attr('cx', -10)
+        .attr('r', isHero ? 8 : 6)
+        .attr('fill', color)
+        .attr('stroke', isHero ? '#fff' : 'none')
+        .attr('stroke-width', isHero ? 2 : 0)
 
-          // Main node
-          group.append('circle')
-            .attr('class', 'event-dot')
-            .attr('cy', y)
-            .attr('r', isAgent ? 10 : 7)
-            .attr('fill', eventTypeColors[event.event_type] || eventTypeColors['OTHER'])
-            .attr('stroke', isAgent ? '#fff' : 'none')
-            .attr('stroke-width', isAgent ? 2 : 0)
-            .attr('cursor', 'pointer')
-            .attr('data-event-id', event.id)
-        }
-      })
+      // Character name
+      labelG.append('text')
+        .attr('x', -25)
+        .attr('text-anchor', 'end')
+        .attr('dy', '0.35em')
+        .attr('font-family', 'var(--font-chinese), var(--font-serif)')
+        .attr('font-size', isHero ? '14px' : '12px')
+        .attr('font-weight', isHero ? 'bold' : 'normal')
+        .attr('fill', '#333')
+        .text(char.name)
 
-      // Event type label (show on top of the first character involved)
-      const firstParticipant = allParticipants[0]
-      if (firstParticipant) {
-        const charIndex = characters.findIndex(c => 
-          c.name === firstParticipant || c.name.includes(firstParticipant) || firstParticipant.includes(c.name)
-        )
-        if (charIndex !== -1) {
-          const y = characterScale(characters[charIndex].name)
-          
-          group.append('text')
-            .attr('class', 'event-type-label')
-            .attr('y', y - 15)
-            .attr('text-anchor', 'middle')
-            .attr('font-size', '8px')
-            .attr('fill', eventTypeColors[event.event_type] || '#666')
-            .attr('opacity', 0)
-            .text(event.event_type?.replace(/_/g, ' ') || 'Event')
-        }
+      // Relationship badge
+      const badgeText = isHero ? '★ 主角' : 
+                        relationship === 'friendly' ? '友好' :
+                        relationship === 'hostile' ? '敌对' : ''
+      
+      if (badgeText) {
+        labelG.append('text')
+          .attr('x', -25)
+          .attr('y', 14)
+          .attr('text-anchor', 'end')
+          .attr('font-size', '9px')
+          .attr('fill', color)
+          .text(badgeText)
       }
+
+      // Archetype (smaller, below relationship)
+      labelG.append('text')
+        .attr('x', -25)
+        .attr('y', badgeText ? 26 : 14)
+        .attr('text-anchor', 'end')
+        .attr('font-size', '8px')
+        .attr('fill', '#aaa')
+        .text(char.archetype || '')
     })
-
-    // Interaction overlay
-    eventNodes
-      .on('mouseenter', function(mouseEvent, d) {
-        d3.select(this).selectAll('.event-dot')
-          .transition()
-          .duration(150)
-          .attr('r', function() {
-            const current = d3.select(this).attr('r')
-            return parseFloat(current) + 3
-          })
-
-        d3.select(this).selectAll('.event-glow')
-          .transition()
-          .duration(150)
-          .attr('r', 20)
-          .attr('opacity', 0.3)
-
-        d3.select(this).selectAll('.event-type-label')
-          .transition()
-          .duration(150)
-          .attr('opacity', 1)
-
-        setSelectedEvent(d)
-      })
-      .on('mouseleave', function() {
-        d3.select(this).selectAll('.event-dot')
-          .transition()
-          .duration(150)
-          .attr('r', function() {
-            const current = d3.select(this).attr('r')
-            return parseFloat(current) - 3
-          })
-
-        d3.select(this).selectAll('.event-glow')
-          .transition()
-          .duration(150)
-          .attr('r', 14)
-          .attr('opacity', 0.15)
-
-        d3.select(this).selectAll('.event-type-label')
-          .transition()
-          .duration(150)
-          .attr('opacity', 0)
-
-        setSelectedEvent(null)
-      })
 
     // Title
     svg.append('text')
       .attr('x', margin.left)
-      .attr('y', 30)
+      .attr('y', 35)
       .attr('font-family', 'var(--font-chinese), var(--font-serif)')
-      .attr('font-size', '16px')
+      .attr('font-size', '18px')
       .attr('fill', '#1a1a1a')
-      .text(`${title} - Story Ribbon`)
+      .text(title || 'Story Ribbons')
 
-  }, [ribbonData, dimensions, viewMode])
+    // Subtitle
+    svg.append('text')
+      .attr('x', margin.left)
+      .attr('y', 55)
+      .attr('font-size', '11px')
+      .attr('fill', '#888')
+      .text('丝带流动展示角色在故事中的互动 • Ribbons show character interactions through the narrative')
+
+  }, [ribbonData, dimensions])
 
   if (loading) {
     return (
@@ -364,13 +500,6 @@ function StoryRibbons({ story }) {
 
   return (
     <div className="story-ribbons" ref={containerRef}>
-      <div className="ribbons-header">
-        <h2>{story?.title || 'Story Timeline'}</h2>
-        <p className="ribbons-subtitle">
-          Visual timeline of narrative events and character involvement
-        </p>
-      </div>
-
       <div className="ribbons-wrapper">
         <svg 
           ref={svgRef} 
@@ -382,16 +511,53 @@ function StoryRibbons({ story }) {
         {/* Legend */}
         <div className="ribbons-legend">
           <div className="legend-section">
-            <h4>Event Types</h4>
+            <h4>角色关系 / Character Alignment</h4>
             <div className="legend-items">
-              {Object.entries(eventTypeColors).slice(0, 8).map(([type, color]) => (
-                <div key={type} className="legend-item">
-                  <span className="legend-dot" style={{ background: color }}></span>
-                  <span className="legend-label">{type.replace(/_/g, ' ')}</span>
-                </div>
-              ))}
+              <div className="legend-item">
+                <span className="legend-dot-large" style={{ background: heroRelationshipColors.hero }}></span>
+                <span>主角 Hero (中心位置)</span>
+              </div>
+              <div className="legend-item">
+                <span className="legend-dot-large" style={{ background: heroRelationshipColors.friendly }}></span>
+                <span>友好 Friendly (上方)</span>
+              </div>
+              <div className="legend-item">
+                <span className="legend-dot-large" style={{ background: heroRelationshipColors.hostile }}></span>
+                <span>敌对 Hostile (下方)</span>
+              </div>
+              <div className="legend-item">
+                <span className="legend-dot-large" style={{ background: heroRelationshipColors.neutral }}></span>
+                <span>中立 Neutral</span>
+              </div>
             </div>
           </div>
+          <div className="legend-section">
+            <h4>丝带动态 / Ribbon Movement</h4>
+            <div className="legend-items">
+              <div className="legend-item">
+                <span className="legend-dot-small" style={{ background: '#333' }}></span>
+                <span>Agent: 丝带保持原位</span>
+              </div>
+              <div className="legend-item">
+                <span className="legend-dot-hollow"></span>
+                <span>Target: 丝带靠近Agent</span>
+              </div>
+            </div>
+          </div>
+          {hoveredChar && (
+            <div className="legend-section hovered-char">
+              <h4>当前角色</h4>
+              <p className="char-name">{hoveredChar.name}</p>
+              <p className="char-archetype">{hoveredChar.archetype}</p>
+              {hoveredChar.hero_relationship && (
+                <p className="char-relationship" style={{ color: getCharacterColor(hoveredChar, 0) }}>
+                  {hoveredChar.hero_relationship === 'hero' ? '★ 主角' :
+                   hoveredChar.hero_relationship === 'friendly' ? '友好角色' :
+                   hoveredChar.hero_relationship === 'hostile' ? '敌对角色' : '中立角色'}
+                </p>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Selected event info */}
@@ -412,33 +578,17 @@ function StoryRibbons({ story }) {
             <div className="event-participants">
               {selectedEvent.agents?.length > 0 && (
                 <div className="participant-group">
-                  <span className="participant-label">Agents:</span>
+                  <span className="participant-label">主动方 Agents:</span>
                   <span className="participant-names">{selectedEvent.agents.join(', ')}</span>
                 </div>
               )}
               {selectedEvent.targets?.length > 0 && (
                 <div className="participant-group">
-                  <span className="participant-label">Targets:</span>
+                  <span className="participant-label">被动方 Targets:</span>
                   <span className="participant-names">{selectedEvent.targets.join(', ')}</span>
                 </div>
               )}
             </div>
-
-            {selectedEvent.relationship_level1 && (
-              <div className="event-metadata">
-                <span className="metadata-item">
-                  <strong>Relationship:</strong> {selectedEvent.relationship_level1}
-                </span>
-                {selectedEvent.sentiment && (
-                  <span 
-                    className="sentiment-badge"
-                    style={{ background: sentimentColors[selectedEvent.sentiment] || '#666' }}
-                  >
-                    {selectedEvent.sentiment}
-                  </span>
-                )}
-              </div>
-            )}
 
             {selectedEvent.text_excerpt && (
               <div className="event-excerpt">
@@ -452,7 +602,7 @@ function StoryRibbons({ story }) {
       <div className="ribbons-controls">
         <p className="hint">
           <span className="hint-icon">💡</span>
-          Hover over event nodes to see details • Larger dots = Agents • Smaller dots = Targets
+          悬停丝带查看角色 • 悬停事件节点查看详情 • Hover ribbons for characters, hover events for details
         </p>
       </div>
     </div>
@@ -460,4 +610,3 @@ function StoryRibbons({ story }) {
 }
 
 export default StoryRibbons
-
