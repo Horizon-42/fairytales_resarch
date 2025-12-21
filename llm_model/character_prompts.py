@@ -39,14 +39,13 @@ ALLOWED_ARCHETYPES = [
 ]
 
 ALLOWED_HELPER_TYPES = [
-    "HAPPY_REUNION",
-    "HAPPY_ENDING",
-    "BITTERSWEET",
-    "TRAGIC",
-    "OPEN_ENDED",
-    "CLIFFHANGER",
-    "CIRCULAR",
-    "OTHER",
+    "ANIMAL",
+    "SUPERNATURAL",
+    "COMPANION",
+    "DEAD",
+    "MAIDEN",
+    "HUMAN",
+    "OBJECT"
 ]
 
 SYSTEM_PROMPT_CHARACTERS = """You are an expert folktale annotation assistant.
@@ -88,6 +87,17 @@ def build_character_user_prompt(*, text: str, culture: Optional[str] = None) -> 
         ]
     )
 
+    helper_definition = (
+        "Helper types (choose all that clearly apply):\n"
+        "- ANIMAL: talking or magical animals that assist the hero.\n"
+        "- SUPERNATURAL: gods, spirits, deities, or magical beings aiding the hero.\n"
+        "- COMPANION: friends or allies who accompany the hero on their journey.\n"
+        "- DEAD: deceased characters who provide guidance or assistance.\n"
+        "- MAIDEN: young female characters who help the hero, often with kindness or gifts.\n"
+        "- HUMAN: ordinary people who assist the hero through practical help or advice.\n"
+        "- OBJECT: magical or special items that aid the hero in their quest."
+    )
+
     allowed = ", ".join(ALLOWED_ARCHETYPES)
     allowed_helpers = ", ".join(ALLOWED_HELPER_TYPES)
 
@@ -110,6 +120,7 @@ def build_character_user_prompt(*, text: str, culture: Optional[str] = None) -> 
         "- `obstacle_thrower` is a story-level list of character names who create obstacles (often villains/guardians); else empty list.\n"
         "- Output strict JSON only.\n\n"
         f"{culture_hint}"
+        f"helper definations: {helper_definition}\n"
         f"{definitions}\n\n"
         "Text:\n---\n"
         f"{text}\n"
