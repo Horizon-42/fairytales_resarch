@@ -41,12 +41,12 @@ const archetypeColors = {
 
 // Color mapping for relationship types (from relationship.csv - Level 1)
 const relationshipColors = {
-  'Family & Kinship': '#d4a373',   // Gold - 家庭与亲缘
-  'Romance': '#e63946',            // Red - 浪漫与激情
-  'Hierarchy': '#7209b7',          // Purple - 权威与阶级
-  'Social & Alliance': '#219ebc',  // Blue - 社交与结盟
-  'Adversarial': '#370617',        // Dark crimson - 对抗与敌对
-  'Neutral': '#9ca3af',            // Gray - 中立
+  'Family & Kinship': '#d4a373',   // Gold
+  'Romance': '#e63946',            // Red
+  'Hierarchy': '#7209b7',          // Purple
+  'Social & Alliance': '#219ebc',  // Blue
+  'Adversarial': '#370617',        // Dark crimson
+  'Neutral': '#9ca3af',            // Gray
   'Unknown': '#6b7280',            // Fallback gray
 }
 
@@ -412,27 +412,15 @@ function CharacterGraph({ story }) {
         {/* Legend */}
         <div className="graph-legend">
           <div className="legend-section">
-            <h4>Character Types (角色原型)</h4>
+            <h4>Character Types</h4>
             <div className="legend-items legend-grid">
               {[
-                ['Hero', '英雄'],
-                ['Villain', '反派'],
-                ['Mentor', '导师'],
-                ['Sidekick/Helper', '助手'],
-                ['Shadow', '阴影'],
-                ['Mother', '母亲'],
-                ['Guardian', '守护者'],
-                ['Trickster', '骗子'],
-                ['Lover', '恋人'],
-                ['Everyman', '普通人'],
-                ['Damsel', '受难者'],
-                ['Herald', '信使'],
-                ['Ruler', '统治者'],
-                ['Rebel', '反叛者'],
-                ['Outlaw', '法外者'],
-                ['Scapegoat', '替罪羊'],
-              ].map(([type, zhName]) => (
-                <div key={type} className="legend-item" title={zhName}>
+                'Hero', 'Villain', 'Mentor', 'Sidekick/Helper',
+                'Shadow', 'Mother', 'Guardian', 'Trickster',
+                'Lover', 'Everyman', 'Damsel', 'Herald',
+                'Ruler', 'Rebel', 'Outlaw', 'Scapegoat',
+              ].map((type) => (
+                <div key={type} className="legend-item">
                   <span className="legend-dot" style={{ background: archetypeColors[type] }}></span>
                   <span className="legend-label">{type}</span>
                 </div>
@@ -440,17 +428,13 @@ function CharacterGraph({ story }) {
             </div>
           </div>
           <div className="legend-section">
-            <h4>Relationship Types (关系类型)</h4>
+            <h4>Relationship Types</h4>
             <div className="legend-items">
               {[
-                ['Family & Kinship', '家庭与亲缘'],
-                ['Romance', '浪漫与激情'],
-                ['Hierarchy', '权威与阶级'],
-                ['Social & Alliance', '社交与结盟'],
-                ['Adversarial', '对抗与敌对'],
-                ['Neutral', '中立'],
-              ].map(([type, zhName]) => (
-                <div key={type} className="legend-item" title={zhName}>
+                'Family & Kinship', 'Romance', 'Hierarchy',
+                'Social & Alliance', 'Adversarial', 'Neutral',
+              ].map((type) => (
+                <div key={type} className="legend-item">
                   <span className="legend-line" style={{ background: relationshipColors[type] }}></span>
                   <span className="legend-label">{type}</span>
                 </div>

@@ -36,8 +36,8 @@ function App() {
       <header className="app-header">
         <div className="header-content">
           <h1 className="app-title">
-            <span className="title-chinese">故事可视化</span>
-            <span className="title-english">Fairytale Visualization</span>
+            <span className="title-main">Fairytale Visualization</span>
+            <span className="title-sub">Story Analysis Framework</span>
           </h1>
           
           <nav className="main-nav">

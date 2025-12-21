@@ -63,20 +63,71 @@
   transition: opacity 0.15s ease;
 }
 
-/* Legend */
+/* Legend - Collapsible - Fixed position */
 .ribbons-legend {
-  position: absolute;
-  bottom: var(--space-md);
-  right: var(--space-md);
-  background: rgba(255, 255, 255, 0.95);
-  padding: var(--space-sm) var(--space-md);
+  position: fixed;
+  top: 140px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.97);
   border-radius: 8px;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
   font-size: 0.7rem;
-  max-width: 280px;
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(0,0,0,0.05);
-  z-index: 10;
+  border: 1px solid rgba(0,0,0,0.08);
+  z-index: 100;
+  transition: all 0.2s ease;
+}
+
+.ribbons-legend.collapsed {
+  padding: 0;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.ribbons-legend.open {
+  padding: var(--space-xs) var(--space-sm);
+  padding-top: 0;
+  max-width: 300px;
+}
+
+/* Toggle button */
+.ribbons-legend .legend-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.65rem;
+  color: var(--ink-dark);
+  font-weight: 600;
+  width: 100%;
+  text-align: left;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+
+.ribbons-legend .legend-toggle:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.ribbons-legend .legend-toggle .toggle-icon {
+  font-size: 0.55rem;
+  opacity: 0.6;
+}
+
+.ribbons-legend.open .legend-toggle {
+  border-bottom: 1px solid var(--paper-warm);
+  border-radius: 6px 6px 0 0;
+  margin-bottom: 4px;
+}
+
+.ribbons-legend .legend-content {
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .ribbons-legend .legend-section {

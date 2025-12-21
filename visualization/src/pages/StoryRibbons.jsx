@@ -27,7 +27,7 @@ const eventTypeColors = {
 // Hero color - distinctive vermillion
 const heroColor = '#e63946'
 
-// Warm color palette for friendly characters (暖色系)
+// Warm color palette for friendly characters
 const warmColorPalette = [
   '#e63946',  // Vermillion red
   '#f77f00',  // Orange
@@ -41,7 +41,7 @@ const warmColorPalette = [
   '#bc6c25',  // Caramel
 ]
 
-// Cool color palette for hostile characters (冷色系)
+// Cool color palette for hostile characters
 const coolColorPalette = [
   '#370617',  // Dark crimson
   '#1d3557',  // Prussian blue
@@ -55,7 +55,7 @@ const coolColorPalette = [
   '#0077b6',  // Ocean blue
 ]
 
-// Neutral color palette (中性色)
+// Neutral color palette
 const neutralColorPalette = [
   '#6b7280',  // Gray
   '#9ca3af',  // Light gray
@@ -102,6 +102,7 @@ function StoryRibbons({ story }) {
   const [hoveredChar, setHoveredChar] = useState(null)
   const [dimensions, setDimensions] = useState({ width: 1200, height: 600 })
   const [loading, setLoading] = useState(true)
+  const [legendOpen, setLegendOpen] = useState(false)
 
   // Load data
   useEffect(() => {
@@ -499,9 +500,9 @@ function StoryRibbons({ story }) {
         .text(char.name)
 
       // Relationship badge
-      const badgeText = isHero ? '★ 主角' : 
-                        relationship === 'friendly' ? '友好' :
-                        relationship === 'hostile' ? '敌对' : ''
+      const badgeText = isHero ? '★ Hero' : 
+                        relationship === 'friendly' ? 'Friendly' :
+                        relationship === 'hostile' ? 'Hostile' : ''
       
       if (badgeText) {
         labelG.append('text')
@@ -538,7 +539,7 @@ function StoryRibbons({ story }) {
       .attr('y', 55)
       .attr('font-size', '11px')
       .attr('fill', '#888')
-      .text('丝带流动展示角色在故事中的互动 • Ribbons show character interactions through the narrative')
+      .text('Ribbons show character interactions through the narrative')
 
   }, [ribbonData, dimensions])
 
@@ -560,109 +561,123 @@ function StoryRibbons({ story }) {
           height={dimensions.height}
           className="ribbons-svg"
         />
+      </div>
 
-        {/* Legend - positioned at bottom right */}
-        <div className="ribbons-legend">
-          <div className="legend-row">
-            <div className="legend-section">
-              <h4>角色位置</h4>
-              <div className="legend-items compact">
-                <div className="legend-item">
-                  <span className="legend-dot-large" style={{ background: heroColor }}></span>
-                  <span>主角(中心)</span>
-                </div>
-                <div className="legend-item">
-                  <div className="legend-color-range warm">
-                    {warmColorPalette.slice(0, 4).map((c, i) => (
-                      <span key={i} className="color-swatch" style={{ background: c }}></span>
-                    ))}
+      {/* Collapsible Legend - Fixed position, outside scrollable wrapper */}
+      <div className={`ribbons-legend ${legendOpen ? 'open' : 'collapsed'}`}>
+        <button 
+          className="legend-toggle"
+          onClick={() => setLegendOpen(!legendOpen)}
+          title={legendOpen ? 'Hide legend' : 'Show legend'}
+        >
+          <span className="toggle-icon">{legendOpen ? '✕' : '?'}</span>
+          <span className="toggle-text">{legendOpen ? 'Hide' : 'Legend'}</span>
+        </button>
+        
+        {legendOpen && (
+          <div className="legend-content">
+            <div className="legend-row">
+              <div className="legend-section">
+                <h4>Character Position</h4>
+                <div className="legend-items compact">
+                  <div className="legend-item">
+                    <span className="legend-dot-large" style={{ background: heroColor }}></span>
+                    <span>Hero (center)</span>
                   </div>
-                  <span>友好(上)</span>
-                </div>
-                <div className="legend-item">
-                  <div className="legend-color-range cool">
-                    {coolColorPalette.slice(0, 4).map((c, i) => (
-                      <span key={i} className="color-swatch" style={{ background: c }}></span>
-                    ))}
+                  <div className="legend-item">
+                    <div className="legend-color-range warm">
+                      {warmColorPalette.slice(0, 4).map((c, i) => (
+                        <span key={i} className="color-swatch" style={{ background: c }}></span>
+                      ))}
+                    </div>
+                    <span>Friendly (above)</span>
                   </div>
-                  <span>敌对(下)</span>
+                  <div className="legend-item">
+                    <div className="legend-color-range cool">
+                      {coolColorPalette.slice(0, 4).map((c, i) => (
+                        <span key={i} className="color-swatch" style={{ background: c }}></span>
+                      ))}
+                    </div>
+                    <span>Hostile (below)</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="legend-section">
-              <h4>丝带动态</h4>
-              <div className="legend-items compact">
-                <div className="legend-item">
-                  <span className="legend-dot-small" style={{ background: '#333' }}></span>
-                  <span>Agent(主动)</span>
-                </div>
-                <div className="legend-item">
-                  <span className="legend-dot-hollow"></span>
-                  <span>Target(被动)</span>
+              <div className="legend-section">
+                <h4>Ribbon Movement</h4>
+                <div className="legend-items compact">
+                  <div className="legend-item">
+                    <span className="legend-dot-small" style={{ background: '#333' }}></span>
+                    <span>Agent (active)</span>
+                  </div>
+                  <div className="legend-item">
+                    <span className="legend-dot-hollow"></span>
+                    <span>Target (passive)</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          {hoveredChar && (
-            <div className="legend-section hovered-char">
-              <p className="char-name">{hoveredChar.name}</p>
-              <span className="char-info">
-                {hoveredChar.archetype && <span>{hoveredChar.archetype}</span>}
-                {hoveredChar.hero_relationship && (
-                  <span className="char-relationship" style={{ color: getCharacterColor(hoveredChar, 0) }}>
-                    {hoveredChar.hero_relationship === 'hero' ? '★主角' :
-                     hoveredChar.hero_relationship === 'friendly' ? '友好' :
-                     hoveredChar.hero_relationship === 'hostile' ? '敌对' : '中立'}
-                  </span>
-                )}
-              </span>
-            </div>
-          )}
-        </div>
-
-        {/* Selected event info */}
-        {selectedEvent && (
-          <div className="event-info-panel">
-            <div className="event-info-header">
-              <span 
-                className="event-type-badge" 
-                style={{ background: eventTypeColors[selectedEvent.event_type] || '#666' }}
-              >
-                {selectedEvent.event_type?.replace(/_/g, ' ') || 'Event'}
-              </span>
-              <span className="event-time">#{selectedEvent.time_order}</span>
-            </div>
-            
-            <p className="event-description">{selectedEvent.description}</p>
-            
-            <div className="event-participants">
-              {selectedEvent.agents?.length > 0 && (
-                <div className="participant-group">
-                  <span className="participant-label">主动方 Agents:</span>
-                  <span className="participant-names">{selectedEvent.agents.join(', ')}</span>
-                </div>
+        )}
+        
+        {hoveredChar && (
+          <div className="legend-section hovered-char">
+            <p className="char-name">{hoveredChar.name}</p>
+            <span className="char-info">
+              {hoveredChar.archetype && <span>{hoveredChar.archetype}</span>}
+              {hoveredChar.hero_relationship && (
+                <span className="char-relationship" style={{ color: getCharacterColor(hoveredChar, 0) }}>
+                  {hoveredChar.hero_relationship === 'hero' ? '★ Hero' :
+                   hoveredChar.hero_relationship === 'friendly' ? 'Friendly' :
+                   hoveredChar.hero_relationship === 'hostile' ? 'Hostile' : 'Neutral'}
+                </span>
               )}
-              {selectedEvent.targets?.length > 0 && (
-                <div className="participant-group">
-                  <span className="participant-label">被动方 Targets:</span>
-                  <span className="participant-names">{selectedEvent.targets.join(', ')}</span>
-                </div>
-              )}
-            </div>
-
-            {selectedEvent.text_excerpt && (
-              <div className="event-excerpt">
-                <p>"{selectedEvent.text_excerpt}"</p>
-              </div>
-            )}
+            </span>
           </div>
         )}
       </div>
 
+      {/* Selected event info */}
+      {selectedEvent && (
+        <div className="event-info-panel">
+          <div className="event-info-header">
+            <span 
+              className="event-type-badge" 
+              style={{ background: eventTypeColors[selectedEvent.event_type] || '#666' }}
+            >
+              {selectedEvent.event_type?.replace(/_/g, ' ') || 'Event'}
+            </span>
+            <span className="event-time">#{selectedEvent.time_order}</span>
+          </div>
+          
+          <p className="event-description">{selectedEvent.description}</p>
+          
+          <div className="event-participants">
+            {selectedEvent.agents?.length > 0 && (
+              <div className="participant-group">
+                <span className="participant-label">Agents:</span>
+                <span className="participant-names">{selectedEvent.agents.join(', ')}</span>
+              </div>
+            )}
+            {selectedEvent.targets?.length > 0 && (
+              <div className="participant-group">
+                <span className="participant-label">Targets:</span>
+                <span className="participant-names">{selectedEvent.targets.join(', ')}</span>
+              </div>
+            )}
+          </div>
+
+          {selectedEvent.text_excerpt && (
+            <div className="event-excerpt">
+              <p>"{selectedEvent.text_excerpt}"</p>
+            </div>
+          )}
+        </div>
+      )}
+
       <div className="ribbons-controls">
         <p className="hint">
           <span className="hint-icon">💡</span>
-          悬停丝带查看角色 • 悬停事件节点查看详情 • Hover ribbons for characters, hover events for details
+          Hover ribbons for characters • Hover events for details
         </p>
       </div>
     </div>
