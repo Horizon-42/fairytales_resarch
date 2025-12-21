@@ -245,7 +245,10 @@
         "type": "transform",
         "status": "success",
         "context": "shapeshift"
-      }
+      },
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": ""
     },
     {
       "id": "10f9ad39-cb0a-4a58-8add-ddda626924dd",
