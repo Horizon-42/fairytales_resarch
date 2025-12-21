@@ -89,7 +89,12 @@ run_server() {
     RELOAD_FLAG=(--reload)
   fi
 
+  echo "[run] Starting backend on http://${HOST}:${PORT} (env=${ENV_NAME})"
+  echo "[run] Ollama: ${OLLAMA_BASE_URL}  model=${OLLAMA_MODEL}"
+  echo "[run] Press Ctrl+C to stop"
+
   exec conda run -n "${ENV_NAME}" env \
+    PYTHONUNBUFFERED=1 \
     OLLAMA_BASE_URL="${OLLAMA_BASE_URL}" \
     OLLAMA_MODEL="${OLLAMA_MODEL}" \
     python -m uvicorn backend.main:app \
@@ -97,6 +102,7 @@ run_server() {
       --host "${HOST}" \
       --port "${PORT}" \
       --log-level "${LOG_LEVEL}" \
+      --access-log \
       "${RELOAD_FLAG[@]}"
 }
 

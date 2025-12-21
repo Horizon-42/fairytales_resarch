@@ -10,6 +10,7 @@ Run:
 
 from __future__ import annotations
 
+import logging
 import os
 from typing import Any, Dict, Optional
 
@@ -19,6 +20,9 @@ from pydantic import BaseModel, Field
 
 from llm_model.annotator import AnnotatorConfig, AnnotationError, annotate_text_v2
 from llm_model.ollama_client import OllamaConfig
+
+
+logger = logging.getLogger("fairytales.backend")
 
 
 def _env(name: str, default: str) -> str:
@@ -47,6 +51,20 @@ class AnnotateResponse(BaseModel):
 
 
 app = FastAPI(title="Fairytales Auto-Annotation API", version="0.1.0")
+
+
+@app.on_event("startup")
+def _on_startup() -> None:
+    # Uvicorn configures logging; this will show up in the server output.
+    base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
+    model = _env("OLLAMA_MODEL", "qwen3:8b")
+    logger.info("Backend starting")
+    logger.info("Ollama: base_url=%s model=%s", base_url, model)
+
+
+@app.on_event("shutdown")
+def _on_shutdown() -> None:
+    logger.info("Backend shutting down")
 
 # CORS: allow your Vite dev servers (5177/5173) and the Node save/load server.
 # For dev convenience, we also allow any localhost port.
