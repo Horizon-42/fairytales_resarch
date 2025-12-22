@@ -78,11 +78,70 @@ check_env() {
   echo "[check] OK"
 }
 
+# Check if a port is available (returns 0 if available, 1 if in use)
+check_port_available() {
+  local host=$1
+  local port=$2
+  # Try to connect to the port, if connection succeeds, port is in use
+  if command -v nc >/dev/null 2>&1; then
+    if nc -z "${host}" "${port}" >/dev/null 2>&1; then
+      return 1  # Port is in use
+    else
+      return 0  # Port is available
+    fi
+  elif command -v python3 >/dev/null 2>&1; then
+    # Python check: if connect_ex returns 0, port is in use; if non-zero, port is available
+    python3 -c "import socket; s = socket.socket(); s.settimeout(0.1); result = s.connect_ex(('${host}', ${port})); s.close(); exit(0 if result != 0 else 1)" >/dev/null 2>&1
+    return $?
+  else
+    # Fallback: assume port is available if we can't check
+    return 0
+  fi
+}
+
+# Find an available port starting from the specified port
+find_available_port() {
+  local host=$1
+  local start_port=$2
+  local max_attempts=10
+  local current_port=$start_port
+  local attempt=0
+
+  while [ $attempt -lt $max_attempts ]; do
+    if check_port_available "${host}" "${current_port}"; then
+      echo "${current_port}"
+      return 0
+    fi
+    echo "[run] Port ${current_port} is in use, trying $((current_port + 1))..." >&2
+    current_port=$((current_port + 1))
+    attempt=$((attempt + 1))
+  done
+
+  echo "[run] ERROR: Could not find an available port after ${max_attempts} attempts" >&2
+  return 1
+}
+
 run_server() {
   cd "${ROOT_DIR}"
 
   # Don’t auto-install, but do a quick check so failures are actionable.
   check_env
+
+  # Find an available port if the default one is in use
+  AVAILABLE_PORT=$(find_available_port "${HOST}" "${PORT}")
+  if [ $? -ne 0 ]; then
+    echo "[run] Failed to find an available port. Exiting." >&2
+    exit 1
+  fi
+
+  # Update PORT if we had to use a different one
+  if [ "${AVAILABLE_PORT}" != "${PORT}" ]; then
+    echo "[run] Using port ${AVAILABLE_PORT} instead of ${PORT} (port ${PORT} was in use)"
+    PORT="${AVAILABLE_PORT}"
+  fi
+
+  # Write port to file for frontend to discover
+  echo "${PORT}" > "${ROOT_DIR}/.backend-port"
 
   RELOAD_FLAG=()
   if [[ "${RELOAD}" == "1" ]]; then

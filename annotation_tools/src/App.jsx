@@ -2,6 +2,7 @@ import React, { useMemo, useState, useEffect, useRef } from "react";
 import { organizeFiles, mapV1ToState, mapV2ToState, generateUUID } from "./utils/fileHandler.js";
 import { downloadJson, relPathToDatasetHint, HIGHLIGHT_COLORS, emptyProppFn, extractEnglishFromRelationship, buildActionLayer } from "./utils/helpers.js";
 import { saveFolderCache, loadFolderCache, extractFolderPath } from "./utils/folderCache.js";
+import { getBackendUrl, clearBackendCache } from "./utils/backendConfig.js";
 
 // Import components
 import {
@@ -129,7 +130,8 @@ export default function App() {
 
     setAutoAnnotateCharactersLoading(true);
     try {
-      const resp = await fetch("http://127.0.0.1:8000/api/annotate/characters", {
+      const backendUrl = await getBackendUrl();
+      const resp = await fetch(`${backendUrl}/api/annotate/characters`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -321,6 +323,16 @@ export default function App() {
   useEffect(() => {
     saveRef.current = handleSave;
   });
+
+  // Discover backend port on app startup
+  useEffect(() => {
+    // Clear cache on mount to force re-discovery
+    clearBackendCache();
+    // Pre-discover backend URL (this will cache it for later use)
+    getBackendUrl().catch(err => {
+      console.warn("Backend port discovery failed, will use default port:", err);
+    });
+  }, []); // Run once on mount
 
   // Save culture to cache when it changes
   useEffect(() => {
