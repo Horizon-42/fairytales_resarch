@@ -142,37 +142,42 @@ Y-Axis (Characters)                    X-Axis (Narrative Events)
 - **Above hero**: Friendly characters (sorted by centrality - highest closest to hero)
 - **Below hero**: Hostile characters (sorted by centrality - highest closest to hero)
 
-**Ribbon Colors - Gradient System:**
+**Ribbon Colors - Heatmap Gradient System:**
 
-The ribbons now use a **gradient coloring system** that shows sentiment changes over time:
+The ribbons use a **heatmap color scale** that maps friendliness levels to colors:
 
 | Component | Color Logic |
 |-----------|-------------|
-| **Center Line** | Camp color (stable) - based on overall friendly/hostile classification |
-| **Ribbon Fill** | Gradient showing sentiment progression through narrative |
+| **Center Line** | Based on `total_level` (sum of all friendly levels with hero) |
+| **Ribbon Fill** | Gradient showing cumulative friendliness progression |
 
-**Sentiment-to-Color Mapping:**
-| Friendly Level | Color | Sentiment |
-|----------------|-------|-----------|
-| +2 | #e63946 (Vermillion) | romantic |
-| +1 | #f77f00 (Orange) | positive |
-| 0 | #9ca3af (Gray) | neutral |
-| -1 | #457b9d (Steel Blue) | negative |
-| -2 | #370617 (Dark Crimson) | hostile, fearful |
+**Heatmap Color Scale:**
+```
+Most Hostile ←————————————————————————→ Most Friendly
+   #1a5276     #5dade2    #aeb6bf    #f5b041    #c0392b
+  Deep Blue   Light Blue    Gray      Orange    Deep Red
+    (-2)        (-1)        (0)        (+1)       (+2)
+```
 
-**How Gradients Work:**
-1. First interaction's level determines starting color
-2. Each event updates the cumulative friendliness
-3. Ribbon fill interpolates colors based on cumulative level at each event
-4. Center line stays in camp color (stable reference)
+| Friendly Level | Color | Hex | Sentiment Examples |
+|----------------|-------|-----|-------------------|
+| +2 | Deep Red | #c0392b | romantic |
+| +1 | Orange | #f5b041 | positive, neutral |
+| 0 | Gray | #aeb6bf | no interaction |
+| -1 | Light Blue | #5dade2 | negative |
+| -2 | Deep Blue | #1a5276 | hostile, fearful |
 
-**Camp Colors (for center line):**
-| Character Type | Color Scheme | Example Colors |
-|----------------|--------------|----------------|
-| Hero | Vermillion Red | #e63946 |
-| Friendly | Warm palette | #f4a261, #e76f51, #ffc300, #fb8500 |
-| Hostile | Cool palette | #370617, #0077b6, #457b9d, #023e8a |
-| Neutral | Gray palette | #6b6b6b, #9ca3af |
+**Center Line Color (based on `total_level`):**
+- Uses `total_level` (sum of all friendly levels from direct interactions with hero)
+- Mapped directly to heatmap scale
+- Example: 老牛 has `total_level=+3` → Deep red center line
+- Example: 王母娘娘 has `total_level=-4` → Deep blue center line
+- Example: 织女 has `total_level=0` → Gray center line
+
+**Ribbon Fill Gradient:**
+- Shows cumulative friendliness at each event
+- Only tracks **direct interactions** with hero (not co-participation)
+- Characters with no direct hero interaction have uniform gray fill
 
 **Ribbon Movement:**
 - **Agent (Active)**: Ribbon stays at home position (filled dot marker)
@@ -339,19 +344,34 @@ The app uses CSS custom properties defined in `src/styles/App.css`:
 
 **Character Graph colors:** Edit `archetypeColors` and `relationshipColors` in `CharacterGraph.jsx`
 
-**Story Ribbons colors:** Edit color palettes in `StoryRibbons.jsx`:
+**Story Ribbons colors:** Edit heatmap scale in `StoryRibbons.jsx`:
 ```javascript
-const heroColor = '#e63946'
-const warmColorPalette = ['#f4a261', '#e76f51', '#ffc300', ...]
-const coolColorPalette = ['#370617', '#0077b6', '#457b9d', ...]
+// Heatmap color scale: Hostile → Neutral → Friendly
+const createHeatmapScale = () => {
+  return d3.scaleLinear()
+    .domain([-2, -1, 0, 1, 2])
+    .range([
+      '#1a5276',  // Deep blue (most hostile)
+      '#5dade2',  // Light blue (negative)  
+      '#aeb6bf',  // Gray (neutral)
+      '#f5b041',  // Orange (positive)
+      '#c0392b',  // Deep red (most friendly)
+    ])
+}
+
+// Hero color
+const heroColor = '#d62828'
 ```
 
 ### Adjusting Ribbon Behavior
 
 In `StoryRibbons.jsx`:
 ```javascript
-// How much targets move toward agents (0-1)
-const pullStrength = 0.9
+// Ribbon width
+const ribbonHeight = Math.min(yScale.bandwidth() * 1.1, 45)
+
+// Curve smoothness (lower = smoother, less thinning at curves)
+.curve(d3.curveCatmullRom.alpha(0.3))
 
 // For multi-agent events:
 const agentPullStrength = 0.7   // Agents move 70% toward anchor

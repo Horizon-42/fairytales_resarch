@@ -59,21 +59,23 @@ Identifies the protagonist based on:
 3. If no heroes, character with highest overall centrality
 
 ##### `analyze_character_relationships_voting(events, characters, hero_name)`
-Determines if each character is friendly or hostile to the hero using a voting system.
+Determines if each character is friendly or hostile to the hero using a voting system based on **direct interactions only**.
 
-**Voting Rules:**
-| Scenario | Vote |
-|----------|------|
-| Character is AGENT, hero is TARGET, sentiment=positive | Friendly |
-| Character is AGENT, hero is TARGET, sentiment=hostile | Hostile |
-| Hero is AGENT, character is TARGET, sentiment=hostile | Hostile |
-| Hero is AGENT, character is TARGET, sentiment=positive | *Ignored* |
+**Direct Interaction Rules:**
+| Scenario | Friendly Level | Effect |
+|----------|----------------|--------|
+| Character is AGENT → Hero is TARGET, positive | +1 to +2 | Adds to friendly total |
+| Character is AGENT → Hero is TARGET, hostile | -1 to -2 | Adds to hostile total |
+| Hero is AGENT → Character is TARGET, hostile | -1 to -2 | Marks character as hostile |
+| Hero is AGENT → Character is TARGET, positive | *Ignored* | Hero helping doesn't change classification |
+| **Co-participants (both agents or both targets)** | **Ignored** | Not a direct interaction |
+
+**Important:** When a third party attacks both the hero and another character (e.g., 天帝 attacks 牛郎 and 织女), the other character (织女) is NOT marked as hostile - they are a fellow victim, not an enemy.
 
 **Classification Logic:**
-- `friendly_votes > hostile_votes` → **Friendly**
-- `hostile_votes > friendly_votes` → **Hostile**
-- Equal votes → Use the **later (more recent)** interaction's sentiment
-- No interactions → Default to **Friendly**
+- `total_level > 0` → **Friendly camp**
+- `total_level < 0` → **Hostile camp**
+- `total_level == 0` → Use the **most recent** interaction's level; default to Friendly
 
 ##### `sort_characters_for_ribbon(characters, centrality, hero_analysis, hero_name)`
 Sorts characters for Y-axis positioning in ribbon visualization:
@@ -210,23 +212,26 @@ Bottom (furthest from hero)
 
 ### 牛郎织女 (The Cowherd and the Weaver Girl)
 
-| Character | Centrality | Votes | Classification | Reason |
-|-----------|------------|-------|----------------|--------|
-| 牛郎 | 0.533 | - | **Hero** | Highest centrality Hero archetype |
-| 织女 | 0.267 | 0F/0H | Friendly | Default (no negative actions) |
-| 老牛 | 0.133 | 3F/0H | Friendly | Mentor who helps hero |
-| 王母娘娘 | 0.400 | 0F/2H | Hostile | Separates the couple |
-| 天帝 | 0.200 | 0F/1H | Hostile | Antagonist authority |
-| 哥嫂 | 0.067 | 0F/1H | Hostile | Mistreats the hero |
+| Character | Centrality | Total Level | Direct Interactions | Classification | Reason |
+|-----------|------------|-------------|---------------------|----------------|--------|
+| 牛郎 | 0.533 | - | - | **Hero** | Highest centrality Hero archetype |
+| 织女 | 0.267 | 0 | 0 | Friendly | No direct interaction with hero (co-participant only) |
+| 老牛 | 0.133 | +3 | 3 | Friendly | Mentor who helps hero 3 times |
+| 王母娘娘 | 0.400 | -4 | 2 | Hostile | Attacks hero twice |
+| 天帝 | 0.200 | -2 | 1 | Hostile | Attacks hero once |
+| 天神 | - | -2 | 1 | Hostile | Attacks hero once |
+| 哥嫂 | 0.067 | -1 | 1 | Hostile | Mistreats the hero |
+
+**Note:** 织女 appears in many events with 牛郎 but always as co-participants (both targets or both agents). She has NO direct interactions where she acts on 牛郎 or vice versa, so her `total_level = 0` and she defaults to friendly.
 
 ### 梁山伯与祝英台 (Butterfly Lovers)
 
-| Character | Centrality | Votes | Classification | Reason |
-|-----------|------------|-------|----------------|--------|
+| Character | Centrality | Total Level | Classification | Reason |
+|-----------|------------|-------------|----------------|--------|
 | 祝英台 | 0.429 | - | **Hero** | Highest centrality Hero archetype |
-| 梁山伯 | 0.171 | 5F/0H | Friendly | The lover |
-| 祝员外 | 0.257 | 0F/5H | Hostile | Forces arranged marriage |
-| 马文才 | 0.086 | 0F/2H | Hostile | The antagonist suitor |
+| 梁山伯 | 0.171 | +N | Friendly | The lover with positive interactions |
+| 祝员外 | 0.257 | -N | Hostile | Forces arranged marriage |
+| 马文才 | 0.086 | -N | Hostile | The antagonist suitor |
 
 ---
 
@@ -289,7 +294,7 @@ When `total_level == 0`:
 
 ### Per-Event Friendliness (for Gradient Coloring)
 
-Each character tracks friendliness at every narrative event:
+Each character tracks friendliness **only for events where they have direct interaction with the hero**:
 
 ```python
 {
@@ -300,5 +305,13 @@ Each character tracks friendliness at every narrative event:
 }
 ```
 
-This enables gradient ribbon coloring that shows sentiment changes over time.
+**Direct Interaction Definition:**
+- Character is AGENT acting on HERO (target)
+- HERO is AGENT acting on character (target)
+
+**NOT Direct Interaction (excluded):**
+- Co-participants: Both are agents in same event
+- Co-victims: Both are targets in same event (e.g., villain attacks hero AND friend)
+
+This ensures that ribbon gradient colors accurately reflect each character's relationship with the hero, not third-party actions.
 
