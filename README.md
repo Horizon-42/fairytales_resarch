@@ -28,3 +28,11 @@ Universal Narrative Action Taxonomy/Universal_Narrative_Action_Taxonomy.md
 ## Visulization
 ### Story Ribbons
 papers/story_ribbons.pdf
+
+## Backend Service
+This backend enable you use qwen3 8b to help you annotate.
+### Setup
+./backend/start.sh setup
+### Run
+OLLAMA_MODEL=qwen3:8b ./backend/start.sh
+**Make sure you have download and open ollama in your system.**
