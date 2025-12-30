@@ -13,6 +13,8 @@ export default function CharacterSection({
   onAutoAnnotateCharacters,
   autoAnnotateCharactersLoading
 }) {
+  // State for annotation mode selection
+  const [annotationMode, setAnnotationMode] = React.useState("recreate");
   const characters = Array.isArray(motif.character_archetypes)
     ? motif.character_archetypes
     : [];
@@ -181,15 +183,45 @@ export default function CharacterSection({
       <div className="section-header-row">
         <span>Story Characters</span>
         {typeof onAutoAnnotateCharacters === "function" && (
-          <button
-            type="button"
-            className="ghost-btn"
-            onClick={onAutoAnnotateCharacters}
-            disabled={!!autoAnnotateCharactersLoading}
-            title="Auto-fill characters, helper types, and obstacle throwers using the LLM backend"
-          >
-            {autoAnnotateCharactersLoading ? "Annotating…" : "Auto-fill"}
-          </button>
+          <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+            <select
+              value={annotationMode}
+              onChange={(e) => setAnnotationMode(e.target.value)}
+              disabled={!!autoAnnotateCharactersLoading}
+              style={{
+                padding: "0.4rem 0.5rem",
+                fontSize: "0.8rem",
+                lineHeight: "1.2",
+                border: "1px solid #cbd5e1",
+                borderRadius: "6px",
+                backgroundColor: "white",
+                cursor: autoAnnotateCharactersLoading ? "not-allowed" : "pointer",
+                marginBottom: 0,
+                width: "auto",
+                minWidth: "110px",
+                height: "32px",
+                boxSizing: "border-box",
+                appearance: "none",
+                WebkitAppearance: "none",
+                MozAppearance: "none"
+              }}
+              title="Select annotation mode: Supplement (add missing), Modify (update existing), or Recreate (from scratch)"
+            >
+              <option value="recreate">Recreate</option>
+              <option value="supplement">Supplement</option>
+              <option value="modify">Modify</option>
+            </select>
+            <button
+              type="button"
+              className="ghost-btn"
+              onClick={() => onAutoAnnotateCharacters(annotationMode)}
+              disabled={!!autoAnnotateCharactersLoading}
+              title="Auto-fill characters, helper types, and obstacle throwers using the LLM backend"
+              style={{ minWidth: "100px", whiteSpace: "nowrap", height: "32px" }}
+            >
+              {autoAnnotateCharactersLoading ? "Annotating…" : "Auto-fill"}
+            </button>
+          </div>
         )}
       </div>
 

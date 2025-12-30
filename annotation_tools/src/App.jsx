@@ -121,7 +121,7 @@ export default function App() {
   // Context menu state
   const [contextMenu, setContextMenu] = useState({ visible: false, x: 0, y: 0 });
 
-  const handleAutoAnnotateCharacters = async () => {
+  const handleAutoAnnotateCharacters = async (mode = "recreate") => {
     if (autoAnnotateCharactersLoading) return;
     if (!sourceText?.text || !sourceText.text.trim()) {
       alert("No story text loaded.");
@@ -131,12 +131,22 @@ export default function App() {
     setAutoAnnotateCharactersLoading(true);
     try {
       const backendUrl = await getBackendUrl();
+      
+      // Prepare existing characters data for incremental annotation
+      const existingCharacters = mode !== "recreate" ? {
+        character_archetypes: motif.character_archetypes || [],
+        helper_type: motif.helper_type || [],
+        obstacle_thrower: motif.obstacle_thrower || []
+      } : null;
+
       const resp = await fetch(`${backendUrl}/api/annotate/characters`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           text: sourceText.text,
-          culture
+          culture,
+          existing_characters: existingCharacters,
+          mode: mode
         })
       });
 
