@@ -5,7 +5,8 @@ Keep prompts centralized so you can iterate without touching the API server.
 
 from __future__ import annotations
 
-from typing import Optional
+import json
+from typing import Any, Dict, Literal, Optional
 
 
 SYSTEM_PROMPT = """You are an expert narrative-annotation assistant for folktales.
@@ -17,15 +18,58 @@ If unsure, return empty lists/strings rather than hallucinating.
 """
 
 
-def build_user_prompt(*, text: str, culture: Optional[str] = None) -> str:
-    """Build the user prompt that instructs the model to produce a v2 annotation."""
+def build_user_prompt(
+    *,
+    text: str,
+    culture: Optional[str] = None,
+    existing_annotation: Optional[Dict[str, Any]] = None,
+    mode: Literal["supplement", "modify", "recreate"] = "recreate",
+) -> str:
+    """Build the user prompt that instructs the model to produce a v2 annotation.
+
+    Args:
+        text: The story text to annotate.
+        culture: Optional culture hint.
+        existing_annotation: Optional existing annotation to use as base.
+        mode: Annotation mode ("supplement", "modify", or "recreate").
+    """
 
     culture_hint = f"\nCulture hint: {culture}\n" if culture else "\n"
+
+    # Build mode-specific instructions
+    mode_instructions = ""
+    existing_json_str = ""
+    if existing_annotation is not None and mode != "recreate":
+        existing_json_str = json.dumps(existing_annotation, ensure_ascii=False, indent=2)
+        if mode == "supplement":
+            mode_instructions = (
+                "\nIMPORTANT: You have been provided with an existing annotation. "
+                "Your task is to SUPPLEMENT it by adding ONLY missing or incomplete fields. "
+                "DO NOT modify or remove existing fields. "
+                "Keep all existing characters, events, motifs, and analysis exactly as they are. "
+                "Only add new items that are clearly missing.\n\n"
+                "Existing annotation:\n"
+                "---\n"
+                f"{existing_json_str}\n"
+                "---\n\n"
+            )
+        elif mode == "modify":
+            mode_instructions = (
+                "\nIMPORTANT: You have been provided with an existing annotation. "
+                "Your task is to MODIFY and IMPROVE it. "
+                "You can update existing fields, fix errors, add missing information, "
+                "and improve the quality of annotations. "
+                "You should review the existing annotation and enhance it based on the text.\n\n"
+                "Existing annotation:\n"
+                "---\n"
+                f"{existing_json_str}\n"
+                "---\n\n"
+            )
 
     # Minimal schema aligned to `annotation_tools` jsonV2 shape.
     # We generate only the parts that can be inferred from text and are useful
     # to pre-fill the UI.
-    return (
+    schema_prompt = (
         "Create an annotation JSON object with this exact schema:\n"
         "{\n"
         "  \"version\": \"2.0\",\n"
@@ -90,4 +134,7 @@ def build_user_prompt(*, text: str, culture: Optional[str] = None) -> str:
         "---\n"
         f"{text}\n"
         "---\n"
+        + ("" if mode == "recreate" else f"\nRemember: Mode is '{mode}'. Follow the instructions above.\n")
     )
+
+    return mode_instructions + schema_prompt

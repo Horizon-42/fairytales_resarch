@@ -15,7 +15,8 @@ Important:
 
 from __future__ import annotations
 
-from typing import Optional
+import json
+from typing import Any, Dict, Literal, Optional
 
 
 ALLOWED_ARCHETYPES = [
@@ -58,10 +59,52 @@ Do not invent characters that are not supported by the text.
 """
 
 
-def build_character_user_prompt(*, text: str, culture: Optional[str] = None) -> str:
-    """Build the user prompt for character-only extraction."""
+def build_character_user_prompt(
+    *,
+    text: str,
+    culture: Optional[str] = None,
+    existing_characters: Optional[Dict[str, Any]] = None,
+    mode: Literal["supplement", "modify", "recreate"] = "recreate",
+) -> str:
+    """Build the user prompt for character-only extraction.
+
+    Args:
+        text: The story text to annotate.
+        culture: Optional culture hint.
+        existing_characters: Optional existing character annotation to use as base.
+        mode: Annotation mode ("supplement", "modify", or "recreate").
+    """
 
     culture_hint = f"Culture hint: {culture}\n" if culture else ""
+
+    # Build mode-specific instructions
+    mode_instructions = ""
+    if existing_characters is not None and mode != "recreate":
+        existing_json_str = json.dumps(existing_characters, ensure_ascii=False, indent=2)
+        if mode == "supplement":
+            mode_instructions = (
+                "\nIMPORTANT: You have been provided with an existing character annotation. "
+                "Your task is to SUPPLEMENT it by adding ONLY missing characters. "
+                "DO NOT modify or remove existing characters. "
+                "Keep all existing character_archetypes, helper_type, and obstacle_thrower exactly as they are. "
+                "Only add new characters that are clearly missing from the existing annotation.\n\n"
+                "Existing character annotation:\n"
+                "---\n"
+                f"{existing_json_str}\n"
+                "---\n\n"
+            )
+        elif mode == "modify":
+            mode_instructions = (
+                "\nIMPORTANT: You have been provided with an existing character annotation. "
+                "Your task is to MODIFY and IMPROVE it. "
+                "You can update existing character archetypes, fix errors, add missing characters, "
+                "and improve the quality of annotations. "
+                "You should review the existing annotation and enhance it based on the text.\n\n"
+                "Existing character annotation:\n"
+                "---\n"
+                f"{existing_json_str}\n"
+                "---\n\n"
+            )
 
     # Keep definitions compact but explicit. This is derived from the guidelines file.
     definitions = "\n".join(
@@ -102,7 +145,8 @@ def build_character_user_prompt(*, text: str, culture: Optional[str] = None) -> 
     allowed_helpers = ", ".join(ALLOWED_HELPER_TYPES)
 
     return (
-        "Extract the characters and output JSON with this exact schema:\n"
+        mode_instructions
+        + "Extract the characters and output JSON with this exact schema:\n"
         "{\n"
         "  \"character_archetypes\": [\n"
         "    { \"name\": string, \"alias\": string, \"archetype\": one_of_allowed }\n"
@@ -125,4 +169,5 @@ def build_character_user_prompt(*, text: str, culture: Optional[str] = None) -> 
         "Text:\n---\n"
         f"{text}\n"
         "---\n"
+        + ("" if mode == "recreate" else f"\nRemember: Mode is '{mode}'. Follow the instructions above.\n")
     )

@@ -46,6 +46,14 @@ class AnnotateRequest(BaseModel):
 
     # Generation controls (optional)
     model: Optional[str] = Field(None, description="Override Ollama model name")
+    
+    # Incremental annotation (optional)
+    existing_annotation: Optional[Dict[str, Any]] = Field(
+        None, description="Existing annotation for incremental annotation"
+    )
+    mode: str = Field(
+        "recreate", description="Annotation mode: supplement, modify, or recreate"
+    )
 
 
 class AnnotateResponse(BaseModel):
@@ -65,6 +73,14 @@ class CharacterAnnotateRequest(BaseModel):
     culture: Optional[str] = Field(None, description="Optional culture hint (e.g., Persian)")
     # Generation controls (optional)
     model: Optional[str] = Field(None, description="Override Ollama model name")
+    
+    # Incremental annotation (optional)
+    existing_characters: Optional[Dict[str, Any]] = Field(
+        None, description="Existing character annotation for incremental annotation"
+    )
+    mode: str = Field(
+        "recreate", description="Annotation mode: supplement, modify, or recreate"
+    )
 
 
 class CharacterAnnotateResponse(BaseModel):
@@ -130,6 +146,8 @@ def annotate_v2(req: AnnotateRequest) -> AnnotateResponse:
             culture=req.culture,
             language=req.language,
             source_type=req.source_type,
+            existing_annotation=req.existing_annotation,
+            mode=req.mode,  # type: ignore
             config=AnnotatorConfig(ollama=ollama_cfg),
         )
     except AnnotationError as exc:
@@ -161,6 +179,8 @@ def annotate_characters_endpoint(req: CharacterAnnotateRequest) -> CharacterAnno
         result = annotate_characters(
             text=req.text,
             culture=req.culture,
+            existing_characters=req.existing_characters,
+            mode=req.mode,  # type: ignore
             config=CharacterAnnotatorConfig(ollama=ollama_cfg),
         )
     except CharacterAnnotationError as exc:
