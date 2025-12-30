@@ -12,7 +12,7 @@ from __future__ import annotations
 
 import logging
 import os
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -23,6 +23,11 @@ from llm_model.character_annotator import (
     CharacterAnnotationError,
     CharacterAnnotatorConfig,
     annotate_characters,
+)
+from llm_model.narrative_annotator import (
+    NarrativeAnnotationError,
+    NarrativeAnnotatorConfig,
+    annotate_narrative_event,
 )
 from llm_model.ollama_client import OllamaConfig
 
@@ -89,6 +94,27 @@ class CharacterAnnotateRequest(BaseModel):
 class CharacterAnnotateResponse(BaseModel):
     ok: bool
     motif: Dict[str, Any]
+
+
+class NarrativeAnnotateRequest(BaseModel):
+    """Narrative-only request payload for a single event."""
+
+    narrative_id: str
+    text_span: Dict[str, Any]
+    narrative_text: str
+    character_list: List[str]
+    culture: Optional[str] = None
+    existing_event: Optional[Dict[str, Any]] = None
+    history_events: Optional[List[Dict[str, Any]]] = None
+    mode: str = "recreate"
+    additional_prompt: Optional[str] = None
+    # Generation controls
+    model: Optional[str] = None
+
+
+class NarrativeAnnotateResponse(BaseModel):
+    ok: bool
+    event: Dict[str, Any]
 
 
 app = FastAPI(title="Fairytales Auto-Annotation API", version="0.1.0")
@@ -192,3 +218,34 @@ def annotate_characters_endpoint(req: CharacterAnnotateRequest) -> CharacterAnno
 
     # Frontend merges this into state under `motif`.
     return CharacterAnnotateResponse(ok=True, motif=result)
+
+
+@app.post("/api/annotate/narrative", response_model=NarrativeAnnotateResponse)
+def annotate_narrative_endpoint(req: NarrativeAnnotateRequest) -> NarrativeAnnotateResponse:
+    """Extract or refine a single narrative event."""
+
+    base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
+    default_model = _env("OLLAMA_MODEL", "qwen3:8b")
+
+    ollama_cfg = OllamaConfig(
+        base_url=base_url,
+        model=req.model or default_model,
+    )
+
+    try:
+        result = annotate_narrative_event(
+            narrative_id=req.narrative_id,
+            text_span=req.text_span,
+            narrative_text=req.narrative_text,
+            character_list=req.character_list,
+            culture=req.culture,
+            existing_event=req.existing_event,
+            history_events=req.history_events,
+            mode=req.mode,  # type: ignore
+            additional_prompt=req.additional_prompt,
+            config=NarrativeAnnotatorConfig(ollama=ollama_cfg),
+        )
+    except NarrativeAnnotationError as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+    return NarrativeAnnotateResponse(ok=True, event=result)

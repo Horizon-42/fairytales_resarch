@@ -169,11 +169,71 @@ export default function App() {
     }
   };
 
-  // Placeholder function for event auto-annotation (backend to be implemented)
   const handleAutoAnnotateEvent = async (eventId, eventIndex, mode = "recreate", additionalPrompt = "") => {
-    // TODO: Implement backend API call for event annotation
-    console.log("Auto-annotate event:", { eventId, eventIndex, mode, additionalPrompt });
-    alert("Event auto-annotation feature is coming soon!");
+    if (autoAnnotateEventLoading[eventId]) return;
+    if (!sourceText?.text || !sourceText.text.trim()) {
+      alert("No story text loaded.");
+      return;
+    }
+
+    setAutoAnnotateEventLoading((prev) => ({ ...prev, [eventId]: true }));
+    try {
+      const backendUrl = await getBackendUrl();
+
+      const characterList = Array.isArray(motif.character_archetypes)
+        ? motif.character_archetypes.map(c => typeof c === "string" ? c : c.name).filter(Boolean)
+        : [];
+
+      const currentEvent = narrativeStructure.find(n => typeof n === "object" && n.id === eventId);
+      if (!currentEvent) throw new Error("Event not found in narrative structure");
+
+      // history_events: events that occurred earlier (based on time_order)
+      const historyEvents = narrativeStructure
+        .filter(n => typeof n === "object" && n.id !== eventId && n.time_order < (currentEvent.time_order || Infinity))
+        .sort((a, b) => (a.time_order || 0) - (b.time_order || 0));
+
+      const resp = await fetch(`${backendUrl}/api/annotate/narrative`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          narrative_id: eventId,
+          text_span: currentEvent.text_span || { start: 0, end: sourceText.text.length, text: sourceText.text.substring(0, 100) },
+          narrative_text: sourceText.text,
+          character_list: characterList,
+          culture: culture,
+          existing_event: mode !== "recreate" ? currentEvent : null,
+          history_events: historyEvents.length > 0 ? historyEvents : null,
+          mode: mode,
+          additional_prompt: additionalPrompt || null
+        })
+      });
+
+      const data = await resp.json().catch(() => null);
+      if (!resp.ok || !data?.ok) {
+        const msg = (data && (data.detail || data.error)) ? (data.detail || data.error) : `HTTP ${resp.status}`;
+        throw new Error(msg);
+      }
+
+      if (data.event && typeof data.event === "object") {
+        setNarrativeStructure((prev) => {
+          const next = [...prev];
+          const idx = next.findIndex(n => typeof n === "object" && n.id === eventId);
+          if (idx !== -1) {
+            next[idx] = { ...next[idx], ...data.event };
+          }
+          return next;
+        });
+      }
+    } catch (err) {
+      console.error("Auto-annotate event failed:", err);
+      alert(`Auto-annotate failed: ${err?.message || err}`);
+    } finally {
+      setAutoAnnotateEventLoading((prev) => {
+        const next = { ...prev };
+        delete next[eventId];
+        return next;
+      });
+    }
   };
 
   // ========== JSON Builders ==========
