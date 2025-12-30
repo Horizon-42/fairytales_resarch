@@ -17,12 +17,12 @@
   "characters": [
     {
       "name": "武松",
-      "alias": "打虎英雄",
+      "alias": "",
       "archetype": "Hero"
     },
     {
       "name": "酒倌",
-      "alias": "店小二",
+      "alias": "",
       "archetype": "Herald"
     },
     {
@@ -33,7 +33,7 @@
   ],
   "narrative_events": [
     {
-      "event_type": "OTHER",
+      "event_type": "",
       "description": "",
       "id": "2f762f67-28ab-4c6d-8c8b-36a22a2dc40c",
       "target_type": "character",

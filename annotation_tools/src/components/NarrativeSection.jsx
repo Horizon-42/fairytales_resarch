@@ -62,9 +62,14 @@ export default function NarrativeSection({
   currentSelection,
   onAddProppFn,
   highlightedRanges,
-  setHighlightedRanges
+  setHighlightedRanges,
+  onAutoAnnotateEvent,
+  autoAnnotateEventLoading
 }) {
   const [sortByTimeOrder, setSortByTimeOrder] = React.useState(false);
+  // State for annotation mode and additional prompt for each event
+  const [eventAnnotationModes, setEventAnnotationModes] = React.useState({});
+  const [eventAdditionalPrompts, setEventAdditionalPrompts] = React.useState({});
 
   const charactersList = Array.isArray(motif.character_archetypes)
     ? motif.character_archetypes
@@ -656,6 +661,90 @@ export default function NarrativeSection({
                   ))}
                 </select>
               </label>
+            </div>
+          )}
+
+          {/* Auto-annotation UI for individual event */}
+          {typeof onAutoAnnotateEvent === "function" && (
+            <div style={{ marginTop: "0.5rem" }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+                  <select
+                    value={eventAnnotationModes[item.id] || "recreate"}
+                    onChange={(e) => {
+                      const mode = e.target.value;
+                      setEventAnnotationModes(prev => ({ ...prev, [item.id]: mode }));
+                      // Clear additional prompt when switching to recreate mode
+                      if (mode === "recreate") {
+                        setEventAdditionalPrompts(prev => {
+                          const next = { ...prev };
+                          delete next[item.id];
+                          return next;
+                        });
+                      }
+                    }}
+                    disabled={!!(autoAnnotateEventLoading && autoAnnotateEventLoading[item.id])}
+                    style={{
+                      padding: "0.4rem 0.5rem",
+                      fontSize: "0.8rem",
+                      lineHeight: "1.2",
+                      border: "1px solid #cbd5e1",
+                      borderRadius: "6px",
+                      backgroundColor: "white",
+                      cursor: (autoAnnotateEventLoading && autoAnnotateEventLoading[item.id]) ? "not-allowed" : "pointer",
+                      marginBottom: 0,
+                      width: "auto",
+                      minWidth: "110px",
+                      height: "32px",
+                      boxSizing: "border-box",
+                      appearance: "none",
+                      WebkitAppearance: "none",
+                      MozAppearance: "none"
+                    }}
+                    title="Select annotation mode: Supplement (add missing), Modify (update existing), or Recreate (from scratch)"
+                  >
+                    <option value="recreate">Recreate</option>
+                    <option value="supplement">Supplement</option>
+                    <option value="modify">Modify</option>
+                  </select>
+                  <button
+                    type="button"
+                    className="ghost-btn"
+                    onClick={() => {
+                      const mode = eventAnnotationModes[item.id] || "recreate";
+                      const additionalPrompt = eventAdditionalPrompts[item.id] || "";
+                      onAutoAnnotateEvent(item.id, idx, mode, additionalPrompt);
+                    }}
+                    disabled={!!(autoAnnotateEventLoading && autoAnnotateEventLoading[item.id])}
+                    title="Auto-annotate this event using the LLM backend"
+                    style={{ minWidth: "100px", whiteSpace: "nowrap", height: "32px" }}
+                  >
+                    {(autoAnnotateEventLoading && autoAnnotateEventLoading[item.id]) ? "Annotating…" : "Auto-annotate"}
+                  </button>
+                </div>
+                {((eventAnnotationModes[item.id] === "supplement") || (eventAnnotationModes[item.id] === "modify")) && (
+                  <input
+                    type="text"
+                    value={eventAdditionalPrompts[item.id] || ""}
+                    onChange={(e) => {
+                      setEventAdditionalPrompts(prev => ({ ...prev, [item.id]: e.target.value }));
+                    }}
+                    placeholder="Additional instructions (optional)..."
+                    disabled={!!(autoAnnotateEventLoading && autoAnnotateEventLoading[item.id])}
+                    style={{
+                      padding: "0.4rem 0.5rem",
+                      fontSize: "0.8rem",
+                      border: "1px solid #cbd5e1",
+                      borderRadius: "6px",
+                      backgroundColor: "white",
+                      marginBottom: 0,
+                      width: "100%",
+                      boxSizing: "border-box"
+                    }}
+                    title="Enter additional instructions for the annotation model"
+                  />
+                )}
+              </div>
             </div>
           )}
 

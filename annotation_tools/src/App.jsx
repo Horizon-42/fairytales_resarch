@@ -117,6 +117,7 @@ export default function App() {
   const [lastAutoSave, setLastAutoSave] = useState(null);
   const [newlyCreatedCharacterIndex, setNewlyCreatedCharacterIndex] = useState(null);
   const [autoAnnotateCharactersLoading, setAutoAnnotateCharactersLoading] = useState(false);
+  const [autoAnnotateEventLoading, setAutoAnnotateEventLoading] = useState({});
 
   // Context menu state
   const [contextMenu, setContextMenu] = useState({ visible: false, x: 0, y: 0 });
@@ -166,6 +167,13 @@ export default function App() {
     } finally {
       setAutoAnnotateCharactersLoading(false);
     }
+  };
+
+  // Placeholder function for event auto-annotation (backend to be implemented)
+  const handleAutoAnnotateEvent = async (eventId, eventIndex, mode = "recreate", additionalPrompt = "") => {
+    // TODO: Implement backend API call for event annotation
+    console.log("Auto-annotate event:", { eventId, eventIndex, mode, additionalPrompt });
+    alert("Event auto-annotation feature is coming soon!");
   };
 
   // ========== JSON Builders ==========
@@ -1357,6 +1365,8 @@ export default function App() {
                 onAddProppFn={onAddProppFn}
                 highlightedRanges={highlightedRanges}
                 setHighlightedRanges={setHighlightedRanges}
+                onAutoAnnotateEvent={handleAutoAnnotateEvent}
+                autoAnnotateEventLoading={autoAnnotateEventLoading}
               />
             )}
 
