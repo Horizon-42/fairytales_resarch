@@ -34,6 +34,11 @@ def main() -> int:
         default="recreate",
         help="Annotation mode: supplement (add missing), modify (update existing), recreate (from scratch)",
     )
+    parser.add_argument(
+        "--additional-prompt",
+        default=None,
+        help="Additional instructions for the annotation model",
+    )
     args = parser.parse_args()
 
     text = args.text_file.read_text(encoding="utf-8")
@@ -58,6 +63,7 @@ def main() -> int:
         culture=args.culture,
         existing_characters=existing_characters,
         mode=args.mode,
+        additional_prompt=args.additional_prompt,
         config=cfg,
     )
     print(json.dumps(result, ensure_ascii=False, indent=2))

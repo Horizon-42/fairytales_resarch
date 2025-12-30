@@ -121,7 +121,7 @@ export default function App() {
   // Context menu state
   const [contextMenu, setContextMenu] = useState({ visible: false, x: 0, y: 0 });
 
-  const handleAutoAnnotateCharacters = async (mode = "recreate") => {
+  const handleAutoAnnotateCharacters = async (mode = "recreate", additionalPrompt = "") => {
     if (autoAnnotateCharactersLoading) return;
     if (!sourceText?.text || !sourceText.text.trim()) {
       alert("No story text loaded.");
@@ -146,7 +146,8 @@ export default function App() {
           text: sourceText.text,
           culture,
           existing_characters: existingCharacters,
-          mode: mode
+          mode: mode,
+          additional_prompt: additionalPrompt || null
         })
       });
 

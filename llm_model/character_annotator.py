@@ -36,6 +36,7 @@ def annotate_characters(
     culture: Optional[str] = None,
     existing_characters: Optional[Dict[str, Any]] = None,
     mode: Literal["supplement", "modify", "recreate"] = "recreate",
+    additional_prompt: Optional[str] = None,
     config: CharacterAnnotatorConfig = CharacterAnnotatorConfig(),
 ) -> Dict[str, Any]:
     """Extract character archetypes (and simple helper/obstacle hints) from text.
@@ -48,6 +49,7 @@ def annotate_characters(
             - "supplement": Add missing characters, keep existing ones unchanged
             - "modify": Update and improve existing characters, may add new ones
             - "recreate": Ignore existing annotation, generate from scratch
+        additional_prompt: Optional additional instructions from the user.
         config: Character annotator configuration.
 
     Returns a dict:
@@ -74,7 +76,7 @@ def annotate_characters(
         {
             "role": "user",
             "content": build_character_user_prompt(
-                text=text, culture=culture, existing_characters=existing_characters, mode=mode
+                text=text, culture=culture, existing_characters=existing_characters, mode=mode, additional_prompt=additional_prompt
             ),
         },
     ]

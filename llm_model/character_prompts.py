@@ -65,6 +65,7 @@ def build_character_user_prompt(
     culture: Optional[str] = None,
     existing_characters: Optional[Dict[str, Any]] = None,
     mode: Literal["supplement", "modify", "recreate"] = "recreate",
+    additional_prompt: Optional[str] = None,
 ) -> str:
     """Build the user prompt for character-only extraction.
 
@@ -73,6 +74,7 @@ def build_character_user_prompt(
         culture: Optional culture hint.
         existing_characters: Optional existing character annotation to use as base.
         mode: Annotation mode ("supplement", "modify", or "recreate").
+        additional_prompt: Optional additional instructions from the user.
     """
 
     culture_hint = f"Culture hint: {culture}\n" if culture else ""
@@ -170,4 +172,5 @@ def build_character_user_prompt(
         f"{text}\n"
         "---\n"
         + ("" if mode == "recreate" else f"\nRemember: Mode is '{mode}'. Follow the instructions above.\n")
+        + (f"\n\nAdditional instructions from user:\n{additional_prompt}\n" if additional_prompt and additional_prompt.strip() else "")
     )

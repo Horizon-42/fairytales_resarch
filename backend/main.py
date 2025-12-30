@@ -81,6 +81,9 @@ class CharacterAnnotateRequest(BaseModel):
     mode: str = Field(
         "recreate", description="Annotation mode: supplement, modify, or recreate"
     )
+    additional_prompt: Optional[str] = Field(
+        None, description="Additional instructions for the annotation model"
+    )
 
 
 class CharacterAnnotateResponse(BaseModel):
@@ -181,6 +184,7 @@ def annotate_characters_endpoint(req: CharacterAnnotateRequest) -> CharacterAnno
             culture=req.culture,
             existing_characters=req.existing_characters,
             mode=req.mode,  # type: ignore
+            additional_prompt=req.additional_prompt,
             config=CharacterAnnotatorConfig(ollama=ollama_cfg),
         )
     except CharacterAnnotationError as exc:
