@@ -26,7 +26,7 @@
       "archetype": "Herald"
     },
     {
-      "name": "吊睛白额大虎",
+      "name": "老虎",
       "alias": "",
       "archetype": "Guardian"
     }
@@ -55,7 +55,7 @@
     "motif_type": [],
     "atu_categories": [],
     "obstacle_thrower": [
-      "吊睛白额大虎"
+      "老虎"
     ],
     "helper_type": [],
     "thinking_process": ""
