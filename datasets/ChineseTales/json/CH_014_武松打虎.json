@@ -57,7 +57,38 @@
       "propp_notes": ""
     }
   },
-  "narrative_structure": [],
+  "narrative_structure": [
+    {
+      "event_type": "gamma",
+      "description": "Warning about consequences of drinking; Innkeeper explains wine's effects and the danger of the mountain",
+      "id": "2f762f67-28ab-4c6d-8c8b-36a22a2dc40c",
+      "target_type": "object",
+      "object_type": "normal_object",
+      "instrument": "sign",
+      "time_order": 3,
+      "relationship_level1": "stranger",
+      "relationship_level2": "neutral",
+      "sentiment": "neutral",
+      "text_span": {
+        "start": 0,
+        "end": 337,
+        "text": "晌午，武松走进一家酒店，放下哨棒，叫酒倌把好酒好肉拿上来。\n酒倌端上三碗酒三盆肉。武松端起酒碗，腕子一仰，咕嘟咕嘟，便把三大碗酒喝得精光。嘴巴一抹，啧啧称道：“好酒！”\n武松叫酒倌接着送酒送肉。酒倌说：“客官，肉要多少给多少，酒么，最多不超过三碗！”\n武松火了，酒倌说：“请别发怒，你看看那上面的字。”\n武松顺着酒倌指的方向看去——店门口竖着一面旗，旗上写着五个字：“三碗不过冈③”。\n酒倌解释说，这儿的酒远近闻名。凡是来喝酒的客人，三碗以后没有一个能过得景阳冈，都醉倒爬不起来了。\n武松哈哈大笑说：“原来这样，可是我喝了三碗怎么一点儿不醉呢？”\n酒倌说：“我这酒叫‘出门倒’，劲儿在后头哩！”\n武松不信，催他快上酒。酒倌见他身强体壮，气势威武，不敢怠慢，只好又送肉又端酒。"
+      },
+      "agents": [
+        "武松",
+        "酒倌"
+      ],
+      "targets": [
+        "三碗不过冈③"
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "status": "success",
+        "context": "warning"
+      }
+    }
+  ],
   "cross_validation": {
     "shared_story": null,
     "bias_reflection": {
