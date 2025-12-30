@@ -35,7 +35,7 @@ def chat(
     config: OllamaConfig,
     messages: List[Dict[str, str]],
     response_format_json: bool = True,
-    timeout_s: float = 120.0,
+    timeout_s: float = 300.0,
 ) -> str:
     """Send a chat request and return the assistant content as a string.
 
