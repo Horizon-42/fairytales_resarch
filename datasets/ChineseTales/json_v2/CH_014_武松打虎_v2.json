@@ -17,17 +17,17 @@
   "characters": [
     {
       "name": "武松",
-      "alias": "",
+      "alias": "打虎英雄",
       "archetype": "Hero"
     },
     {
       "name": "酒倌",
-      "alias": "",
+      "alias": "店小二",
       "archetype": "Herald"
     },
     {
       "name": "老虎",
-      "alias": "",
+      "alias": "吊睛白额大虎",
       "archetype": "Guardian"
     }
   ],
@@ -57,7 +57,9 @@
     "obstacle_thrower": [
       "老虎"
     ],
-    "helper_type": [],
+    "helper_type": [
+      "HUMAN"
+    ],
     "thinking_process": ""
   },
   "analysis": {

@@ -159,7 +159,7 @@ def build_character_user_prompt(
         "Rules:\n"
         f"- `archetype` must be exactly one of: [{allowed}].\n"
         "- `name` should be the canonical name as it appears in the story (short).\n"
-        "- `alias` is optional; use for titles/epithets/roles (e.g., \"the king\", \"old woman\").\n"
+        "- `alias` is optional; use ONLY for titles/epithets/roles that are EXPLICITLY mentioned in the story text itself (e.g., \"the king\", \"old woman\"). DO NOT invent aliases based on common sense or general knowledge. The alias must be directly quoted or clearly referenced in the provided text.\n"
         "- Include only salient characters (typically 2-12).\n"
         "- If a group is mentioned (e.g., \"soldiers\"), include it only if it acts as an agent in events.\n"
         f"- `helper_type` is a coarse story-level list of helper categories if clearly present (else empty list). It should chose from {allowed_helpers}\n"
