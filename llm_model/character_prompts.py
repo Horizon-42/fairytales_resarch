@@ -49,6 +49,15 @@ ALLOWED_HELPER_TYPES = [
     "OBJECT"
 ]
 
+SYSTEM_PROMPT_CHARACTERS = """You are an expert folktale annotation assistant.
+
+Task: extract characters from the provided text and classify each into ONE narrative archetype.
+
+You must output STRICT JSON only (no markdown, no commentary).
+If you are unsure about an archetype, use "Other".
+Do not invent characters that are not supported by the text.
+"""
+
 def build_character_user_prompt(
     *,
     text: str,
