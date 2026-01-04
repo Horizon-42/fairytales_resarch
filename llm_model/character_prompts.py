@@ -49,16 +49,6 @@ ALLOWED_HELPER_TYPES = [
     "OBJECT"
 ]
 
-SYSTEM_PROMPT_CHARACTERS = """You are an expert folktale annotation assistant.
-
-Task: extract characters from the provided text and classify each into ONE narrative archetype.
-
-You must output STRICT JSON only (no markdown, no commentary).
-If you are unsure about an archetype, use "Other".
-Do not invent characters that are not supported by the text.
-"""
-
-
 def build_character_user_prompt(
     *,
     text: str,
@@ -157,9 +147,10 @@ def build_character_user_prompt(
         "  \"obstacle_thrower\": [string]\n"
         "}\n\n"
         "Rules:\n"
+        "- Characters maybe human, but also could be animals, mythical beings, or anthropomorphized objects.\n"
         f"- `archetype` must be exactly one of: [{allowed}].\n"
         "- `name` should be the canonical name as it appears in the story (short).\n"
-        "- `alias` is optional; use ONLY for titles/epithets/roles that are EXPLICITLY mentioned in the story text itself (e.g., \"the king\", \"old woman\"). DO NOT invent aliases based on common sense or general knowledge. The alias must be directly quoted or clearly referenced in the provided text.\n"
+        "- `alias` is optional; one character may have one or more aliases; use ONLY for titles/epithets/roles that are EXPLICITLY mentioned in the story text itself (e.g., \"the king\", \"old woman\"). DO NOT invent aliases based on common sense or general knowledge. The alias must be directly quoted or clearly referenced in the provided text.\n"
         "- Include only salient characters (typically 2-12).\n"
         "- If a group is mentioned (e.g., \"soldiers\"), include it only if it acts as an agent in events.\n"
         f"- `helper_type` is a coarse story-level list of helper categories if clearly present (else empty list). It should chose from {allowed_helpers}\n"
