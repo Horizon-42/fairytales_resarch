@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import html as html_lib
 import re
 import sys
 import time
@@ -42,6 +43,8 @@ class ATUType:
     level_1_category: Optional[str] = None
     level_2_category: Optional[str] = None
     level_3_category: Optional[str] = None
+    detail_url: Optional[str] = None
+    description: Optional[str] = None
 
 
 def _fetch_html(url: str, timeout_s: int = 30) -> str:
@@ -149,28 +152,30 @@ def _extract_atu_types_from_range_page(html: str, range_start: int, range_end: i
         tr_content = html[tr_start:tr_end]
         
         # Extract ATU number and title
-        # The id attribute gives us the ATU number
-        try:
-            # Handle cases like "1", "2A", etc.
-            atu_num_str = tr_id_str.rstrip('A-Z')
-            atu_number = int(atu_num_str)
-        except ValueError:
-            # Skip if we can't parse the number
+        # The id attribute gives us the ATU number (sometimes with suffixes like "2A")
+        num_match = re.match(r"(\d+)", tr_id_str)
+        if not num_match:
             pos = tr_end
             continue
+
+        atu_number = int(num_match.group(1))
         
         # Extract title from the <a> tag
-        link_match = re.search(r'<a[^>]*href=[\'"]([^\'"]*)[\'"][^>]*>([^<]+)</a>', tr_content)
+        link_match = re.search(r'<a[^>]*href=[\'\"]([^\'\"]*)[\'\"][^>]*>([^<]+)</a>', tr_content)
         if link_match:
+            detail_url = link_match.group(1).strip().replace("&amp;", "&")
             title = link_match.group(2).strip()
             
             # Only include if within the expected range
             if range_start <= atu_number <= range_end:
-                atu_types.append(ATUType(
-                    atu_number=atu_number,
-                    title=title,
-                    category_range=f"{range_start}-{range_end}"
-                ))
+                atu_types.append(
+                    ATUType(
+                        atu_number=atu_number,
+                        title=title,
+                        category_range=f"{range_start}-{range_end}",
+                        detail_url=detail_url,
+                    )
+                )
         
         pos = tr_end
     
@@ -210,13 +215,92 @@ def _get_all_range_urls(html: str) -> list[Tuple[int, int, str]]:
         span = end - start
         sorted_ranges.append((level, span, start, end, url))
     
-    # Sort by level (ascending, so 3 comes before 2 before 1) and span (ascending)
-    sorted_ranges.sort()
+    # Sort by level (descending: 3 before 2 before 1) and span (ascending)
+    sorted_ranges.sort(key=lambda x: (-x[0], x[1], x[2], x[3]))
     
     # Return all ranges sorted by granularity (smallest first)
     # We'll handle deduplication when collecting ATU types (using seen_numbers set)
     # This ensures we get all types even if some are in both parent and child ranges
     return [(start, end, url) for _, _, start, end, url in sorted_ranges]
+
+
+def _html_fragment_to_text(fragment_html: str) -> str:
+    """Convert an HTML fragment to readable plain text."""
+    text = fragment_html
+    # Normalize line breaks first
+    text = re.sub(r"<\s*br\s*/?\s*>", "\n", text, flags=re.IGNORECASE)
+    text = re.sub(r"</\s*p\s*>", "\n", text, flags=re.IGNORECASE)
+    # Drop scripts/styles
+    text = re.sub(r"<script\b[^>]*>.*?</script>", "", text, flags=re.IGNORECASE | re.DOTALL)
+    text = re.sub(r"<style\b[^>]*>.*?</style>", "", text, flags=re.IGNORECASE | re.DOTALL)
+    # Strip tags
+    text = re.sub(r"<[^>]+>", " ", text)
+    # Unescape entities and normalize whitespace
+    text = html_lib.unescape(text)
+    text = re.sub(r"[\t\r ]+", " ", text)
+    text = re.sub(r"\n\s*\n+", "\n", text)
+    return text.strip()
+
+
+def _extract_description_from_type_page(type_page_html: str) -> Optional[str]:
+    """Extract the Description field from a single ATU type page.
+
+    The exact HTML structure can vary, so this uses a small set of fallback
+    patterns and returns plain text.
+    """
+    patterns = [
+        # Table-style: <td>Description</td><td>...</td>
+        r"<td[^>]*>\s*Description\s*</td>\s*<td[^>]*>(.*?)</td>",
+        r"<th[^>]*>\s*Description\s*</th>\s*<td[^>]*>(.*?)</td>",
+        # Bold label style: <b>Description:</b> ...
+        r"<b[^>]*>\s*Description\s*:?\s*</b>\s*(.*?)(?:<br\b|</p>|</div>|</td>)",
+        # Sometimes called Summary
+        r"<td[^>]*>\s*Summary\s*</td>\s*<td[^>]*>(.*?)</td>",
+        r"<th[^>]*>\s*Summary\s*</th>\s*<td[^>]*>(.*?)</td>",
+    ]
+
+    for pattern in patterns:
+        m = re.search(pattern, type_page_html, flags=re.IGNORECASE | re.DOTALL)
+        if not m:
+            continue
+        text = _html_fragment_to_text(m.group(1))
+        if text:
+            return text
+    return None
+
+
+def _populate_atu_type_descriptions(
+    atu_types: list[ATUType],
+    *,
+    sleep_s: float,
+    timeout_s: int = 30,
+    max_types: Optional[int] = None,
+) -> None:
+    """Fetch and populate `description` for each ATU type using its detail page."""
+    url_to_description: dict[str, Optional[str]] = {}
+
+    types_to_process = atu_types
+    if max_types is not None:
+        types_to_process = atu_types[:max_types]
+
+    for i, atu_type in enumerate(types_to_process, 1):
+        if not atu_type.detail_url:
+            continue
+
+        url = atu_type.detail_url
+        if url in url_to_description:
+            atu_type.description = url_to_description[url]
+            continue
+
+        time.sleep(sleep_s)
+        try:
+            page_html = _fetch_html(url, timeout_s=timeout_s)
+            desc = _extract_description_from_type_page(page_html)
+            atu_type.description = desc
+            url_to_description[url] = desc
+        except Exception:
+            atu_type.description = None
+            url_to_description[url] = None
 
 
 def _write_csv(categories: list[ATUCategory], atu_types: list[ATUType], output_path: str) -> None:
@@ -277,7 +361,8 @@ def _write_atu_types_csv(atu_types: list[ATUType], output_path: str) -> None:
             "level_1_category",
             "level_2_category", 
             "level_3_category",
-            "category_range"
+            "category_range",
+            "description",
         ])
         
         for atu_type in sorted(atu_types, key=lambda x: x.atu_number):
@@ -287,7 +372,8 @@ def _write_atu_types_csv(atu_types: list[ATUType], output_path: str) -> None:
                 atu_type.level_1_category or "",
                 atu_type.level_2_category or "",
                 atu_type.level_3_category or "",
-                atu_type.category_range or ""
+                atu_type.category_range or "",
+                (atu_type.description or "").replace("\n", " ").strip(),
             ])
 
 
@@ -321,15 +407,19 @@ def _write_atu_types_markdown(atu_types: list[ATUType], output_path: str) -> Non
     with open(output_path, "w", encoding="utf-8") as f:
         f.write("# ATU Types (Complete List with Hierarchy)\n\n")
         f.write("This file contains all individual ATU types scraped from mftd.org with hierarchical category information.\n\n")
-        f.write("| ATU Number | Title | Level 1 | Level 2 | Level 3 | Range |\n")
-        f.write("| :--------- | :---- | :------ | :------ | :------ | :---- |\n")
+        f.write("| ATU Number | Title | Level 1 | Level 2 | Level 3 | Range | Description |\n")
+        f.write("| :--------- | :---- | :------ | :------ | :------ | :---- | :---------- |\n")
         
         for atu_type in sorted(atu_types, key=lambda x: x.atu_number):
+            desc = (atu_type.description or "").replace("\n", " ").strip()
+            # Escape pipe to keep Markdown table valid
+            desc = desc.replace("|", "\\|")
             f.write(f"| {atu_type.atu_number} | {atu_type.title} | "
                    f"{atu_type.level_1_category or ''} | "
                    f"{atu_type.level_2_category or ''} | "
                    f"{atu_type.level_3_category or ''} | "
-                   f"{atu_type.category_range or ''} |\n")
+                   f"{atu_type.category_range or ''} | "
+                   f"{desc} |\n")
 
 
 def main(argv: list[str]) -> int:
@@ -367,6 +457,29 @@ def main(argv: list[str]) -> int:
         type=float,
         default=0.5,
         help="Delay between requests (seconds, default: 0.5)"
+    )
+    p.add_argument(
+        "--with-descriptions",
+        action="store_true",
+        help="Also fetch each ATU type page to extract its Description (adds many requests)"
+    )
+    p.add_argument(
+        "--desc-sleep",
+        type=float,
+        default=0.5,
+        help="Delay between per-type description requests (seconds, default: 0.5)"
+    )
+    p.add_argument(
+        "--desc-timeout",
+        type=int,
+        default=30,
+        help="Timeout (seconds) for per-type description requests (default: 30)"
+    )
+    p.add_argument(
+        "--max-types",
+        type=int,
+        default=None,
+        help="Maximum number of ATU type pages to fetch descriptions for (for testing, default: all)"
     )
     p.add_argument(
         "--max-ranges",
@@ -429,6 +542,15 @@ def main(argv: list[str]) -> int:
     # Assign hierarchical category information to ATU types
     print("Assigning hierarchical categories to ATU types...")
     _assign_hierarchical_categories(all_atu_types, categories)
+
+    if args.with_descriptions:
+        print("Fetching per-type descriptions (this can take a while)...")
+        _populate_atu_type_descriptions(
+            all_atu_types,
+            sleep_s=args.desc_sleep,
+            timeout_s=args.desc_timeout,
+            max_types=args.max_types,
+        )
     
     # Write category files
     print(f"Writing categories to {args.csv} and {args.md}...")
