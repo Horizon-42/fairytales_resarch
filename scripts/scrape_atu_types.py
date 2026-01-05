@@ -2,8 +2,10 @@
 """Scrape ATU types from http://www.mftd.org/index.php?action=atu
 
 This script fetches the ATU classification structure from mftd.org and generates
-both CSV and Markdown documentation files. It crawls all sub-levels to extract
-all individual ATU types (approximately 2300 types).
+both CSV and Markdown documentation files.
+
+Note: mftd.org does not appear to list every ATU number; its range pages contain
+only the subset of types present in its database (currently ~890 unique types).
 """
 
 from __future__ import annotations
@@ -256,12 +258,15 @@ def _extract_description_from_type_page(type_page_html: str) -> Optional[str]:
     patterns and returns plain text.
     """
     patterns = [
+        # Section-style headings (as seen on mftd.org): <h2>Description</h2> ... <h2>Examples</h2>
+        r"<h[1-6][^>]*>\s*Description\s*</h[1-6]>\s*(.*?)(?=<h[1-6][^>]*>\s*(?:Examples|External\s+Examples|References|Notes)\s*</h[1-6]>|$)",
         # Table-style: <td>Description</td><td>...</td>
         r"<td[^>]*>\s*Description\s*</td>\s*<td[^>]*>(.*?)</td>",
         r"<th[^>]*>\s*Description\s*</th>\s*<td[^>]*>(.*?)</td>",
         # Bold label style: <b>Description:</b> ...
         r"<b[^>]*>\s*Description\s*:?\s*</b>\s*(.*?)(?:<br\b|</p>|</div>|</td>)",
         # Sometimes called Summary
+        r"<h[1-6][^>]*>\s*Summary\s*</h[1-6]>\s*(.*?)(?=<h[1-6][^>]*>\s*(?:Examples|External\s+Examples|References|Notes)\s*</h[1-6]>|$)",
         r"<td[^>]*>\s*Summary\s*</td>\s*<td[^>]*>(.*?)</td>",
         r"<th[^>]*>\s*Summary\s*</th>\s*<td[^>]*>(.*?)</td>",
     ]
