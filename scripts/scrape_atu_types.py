@@ -9,16 +9,23 @@ all individual ATU types (approximately 2300 types).
 from __future__ import annotations
 
 import argparse
+import concurrent.futures
 import csv
 import html as html_lib
 import re
 import sys
+import threading
 import time
 import urllib.error
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass
 from typing import Optional, Set, Tuple
+
+try:
+    from tqdm import tqdm  # type: ignore
+except Exception:  # pragma: no cover
+    tqdm = None
 
 
 BASE_URL = "http://www.mftd.org/index.php?action=atu"
@@ -274,33 +281,68 @@ def _populate_atu_type_descriptions(
     *,
     sleep_s: float,
     timeout_s: int = 30,
+    threads: int = 8,
     max_types: Optional[int] = None,
 ) -> None:
-    """Fetch and populate `description` for each ATU type using its detail page."""
-    url_to_description: dict[str, Optional[str]] = {}
+    """Fetch and populate `description` for each ATU type using its detail page.
 
-    types_to_process = atu_types
-    if max_types is not None:
-        types_to_process = atu_types[:max_types]
+    Uses multi-threaded fetching for speed and shows a tqdm progress bar if
+    available.
+    """
+    types_to_process = atu_types if max_types is None else atu_types[:max_types]
 
-    for i, atu_type in enumerate(types_to_process, 1):
+    # Deduplicate URLs so we fetch each detail page once.
+    url_to_types: dict[str, list[ATUType]] = {}
+    urls_in_order: list[str] = []
+    for atu_type in types_to_process:
         if not atu_type.detail_url:
             continue
-
         url = atu_type.detail_url
-        if url in url_to_description:
-            atu_type.description = url_to_description[url]
-            continue
+        if url not in url_to_types:
+            url_to_types[url] = []
+            urls_in_order.append(url)
+        url_to_types[url].append(atu_type)
 
-        time.sleep(sleep_s)
+    if not urls_in_order:
+        return
+
+    if tqdm is None:
+        print("Note: install tqdm for a progress bar: pip install tqdm")
+
+    url_to_description: dict[str, Optional[str]] = {}
+    url_to_lock = threading.Lock()
+
+    def _worker(url: str) -> tuple[str, Optional[str]]:
+        if sleep_s > 0:
+            time.sleep(sleep_s)
         try:
             page_html = _fetch_html(url, timeout_s=timeout_s)
             desc = _extract_description_from_type_page(page_html)
-            atu_type.description = desc
-            url_to_description[url] = desc
+            return url, desc
         except Exception:
-            atu_type.description = None
-            url_to_description[url] = None
+            return url, None
+
+    max_workers = max(1, int(threads))
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as ex:
+        futures = [ex.submit(_worker, url) for url in urls_in_order]
+        completed_iter = concurrent.futures.as_completed(futures)
+        if tqdm is not None:
+            completed_iter = tqdm(
+                completed_iter,
+                total=len(futures),
+                desc="Fetching ATU descriptions",
+                unit="page",
+            )
+
+        for fut in completed_iter:
+            url, desc = fut.result()
+            with url_to_lock:
+                url_to_description[url] = desc
+
+    for url, types in url_to_types.items():
+        desc = url_to_description.get(url)
+        for t in types:
+            t.description = desc
 
 
 def _write_csv(categories: list[ATUCategory], atu_types: list[ATUType], output_path: str) -> None:
@@ -362,6 +404,7 @@ def _write_atu_types_csv(atu_types: list[ATUType], output_path: str) -> None:
             "level_2_category", 
             "level_3_category",
             "category_range",
+            "detail_url",
             "description",
         ])
         
@@ -373,6 +416,7 @@ def _write_atu_types_csv(atu_types: list[ATUType], output_path: str) -> None:
                 atu_type.level_2_category or "",
                 atu_type.level_3_category or "",
                 atu_type.category_range or "",
+                atu_type.detail_url or "",
                 (atu_type.description or "").replace("\n", " ").strip(),
             ])
 
@@ -476,6 +520,12 @@ def main(argv: list[str]) -> int:
         help="Timeout (seconds) for per-type description requests (default: 30)"
     )
     p.add_argument(
+        "--desc-threads",
+        type=int,
+        default=8,
+        help="Number of threads for fetching descriptions (default: 8)"
+    )
+    p.add_argument(
         "--max-types",
         type=int,
         default=None,
@@ -544,11 +594,14 @@ def main(argv: list[str]) -> int:
     _assign_hierarchical_categories(all_atu_types, categories)
 
     if args.with_descriptions:
+        print(f"Writing pre-fetch ATU types snapshot (with URLs) to {args.atu_csv}...")
+        _write_atu_types_csv(all_atu_types, args.atu_csv)
         print("Fetching per-type descriptions (this can take a while)...")
         _populate_atu_type_descriptions(
             all_atu_types,
             sleep_s=args.desc_sleep,
             timeout_s=args.desc_timeout,
+            threads=args.desc_threads,
             max_types=args.max_types,
         )
     
