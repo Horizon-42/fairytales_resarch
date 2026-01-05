@@ -9,6 +9,13 @@ description = "Fairytales research: annotation tool + Ollama-backed auto-annotat
 readme = "README.md"
 requires-python = ">=3.9"
 
+[project.optional-dependencies]
+vector-db = [
+	"requests>=2.32.0",
+	"numpy>=1.24.0",
+	"hnswlib>=0.8.0",
+]
+
 # Keep runtime deps minimal here; the backend has its own requirements.txt.
 # You can optionally install backend deps with: pip install -r backend/requirements.txt
 

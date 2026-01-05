@@ -8,7 +8,7 @@ We use /api/chat because it's better suited for structured prompting.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Sequence
 
 import requests
 
@@ -28,6 +28,91 @@ class OllamaConfig:
 
 class OllamaError(RuntimeError):
     pass
+
+
+def embed(
+    *,
+    base_url: str,
+    model: str,
+    inputs: Sequence[str],
+    timeout_s: float = 600.0,
+) -> List[List[float]]:
+    """Generate embeddings for one or more input strings.
+
+    This function prefers Ollama's batch endpoint when available.
+
+    Endpoints (varies by Ollama version):
+    - POST /api/embed  (batch): {model, input: [..]} -> {embeddings: [[..], ...]}
+    - POST /api/embeddings (single): {model, prompt} -> {embedding: [..]}
+
+    Args:
+        base_url: Ollama server URL (e.g., http://localhost:11434)
+        model: Embedding model name (e.g., qwen3-embedding:4b)
+        inputs: Texts to embed.
+        timeout_s: HTTP timeout.
+
+    Returns:
+        List of embedding vectors aligned with inputs.
+    """
+
+    if not inputs:
+        return []
+
+    base = base_url.rstrip("/")
+
+    # 1) Prefer batch endpoint
+    url_batch = f"{base}/api/embed"
+    payload_batch: Dict[str, Any] = {
+        "model": model,
+        "input": list(inputs),
+    }
+    try:
+        resp = requests.post(url_batch, json=payload_batch, timeout=timeout_s)
+        if resp.status_code == 200:
+            data = resp.json()
+            embeddings = data.get("embeddings")
+            if isinstance(embeddings, list) and all(isinstance(v, list) for v in embeddings):
+                return embeddings  # type: ignore[return-value]
+        # If not supported, fall through to single-request API.
+    except requests.RequestException:
+        # Fall back to single endpoint below.
+        pass
+    except ValueError as exc:
+        raise OllamaError(
+            f"Ollama returned non-JSON response on {url_batch}: {resp.text[:500]}"  # type: ignore[name-defined]
+        ) from exc
+
+    # 2) Fallback: single embedding endpoint
+    url_single = f"{base}/api/embeddings"
+    out: List[List[float]] = []
+    for text in inputs:
+        payload_single: Dict[str, Any] = {
+            "model": model,
+            "prompt": text,
+        }
+        try:
+            resp = requests.post(url_single, json=payload_single, timeout=timeout_s)
+        except requests.RequestException as exc:
+            raise OllamaError(f"Failed to reach Ollama at {url_single}: {exc}") from exc
+
+        if resp.status_code != 200:
+            raise OllamaError(
+                f"Ollama /api/embeddings failed: HTTP {resp.status_code}: {resp.text[:500]}"
+            )
+
+        try:
+            data = resp.json()
+        except ValueError as exc:
+            raise OllamaError(
+                f"Ollama returned non-JSON response on {url_single}: {resp.text[:500]}"
+            ) from exc
+
+        emb = data.get("embedding")
+        if not isinstance(emb, list):
+            raise OllamaError(f"Unexpected embeddings response shape: {data}")
+        out.append(emb)
+
+    return out
 
 
 def chat(

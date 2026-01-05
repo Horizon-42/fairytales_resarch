@@ -1,0 +1,6 @@
+# Local vector database (HNSW + SQLite) requirements
+# Install with: pip install -r llm_model/vector_database/requirements.txt
+
+requests>=2.32.0
+numpy>=1.24.0
+hnswlib>=0.8.0
