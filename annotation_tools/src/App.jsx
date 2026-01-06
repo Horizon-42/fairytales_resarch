@@ -120,6 +120,7 @@ export default function App() {
   const [autoAnnotateEventLoading, setAutoAnnotateEventLoading] = useState({});
   const [autoSummariesLoading, setAutoSummariesLoading] = useState(false);
   const [autoSummariesProgress, setAutoSummariesProgress] = useState({ done: 0, total: 0 });
+  const [autoDetectMotifLoading, setAutoDetectMotifLoading] = useState(false);
 
   // Context menu state
   const [contextMenu, setContextMenu] = useState({ visible: false, x: 0, y: 0 });
@@ -317,6 +318,73 @@ export default function App() {
       alert(`Auto-summary failed: ${err?.message || err}`);
     } finally {
       setAutoSummariesLoading(false);
+    }
+  };
+
+  const handleAutoDetectMotifAtu = async () => {
+    if (autoDetectMotifLoading) return;
+    if (!sourceText?.text || !sourceText.text.trim()) {
+      alert("No story text loaded.");
+      return;
+    }
+
+    setAutoDetectMotifLoading(true);
+    try {
+      const backendUrl = await getBackendUrl();
+
+      const per = paragraphSummaries?.perParagraph || {};
+      const perKeys = Object.keys(per).sort((a, b) => (parseInt(a, 10) || 0) - (parseInt(b, 10) || 0));
+      const perJoined = perKeys.map(k => per[k]).filter(v => typeof v === "string" && v.trim()).join("\n");
+      const whole = (paragraphSummaries?.whole || "").trim();
+
+      const hasSummaries = !!perJoined || !!whole;
+
+      const inputText = hasSummaries
+        ? [
+            perJoined ? `Paragraph summaries:\n${perJoined}` : null,
+            whole ? `Whole story summary:\n${whole}` : null
+          ].filter(Boolean).join("\n\n")
+        : sourceText.text;
+
+      const resp = await fetch(`${backendUrl}/api/detect/motif_atu`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          text: inputText,
+          top_k: 10
+        })
+      });
+
+      const data = await resp.json().catch(() => null);
+      if (!resp.ok || !data?.ok) {
+        const msg = (data && (data.detail || data.error)) ? (data.detail || data.error) : `HTTP ${resp.status}`;
+        throw new Error(msg);
+      }
+
+      const atuLabels = Array.isArray(data.atu) ? data.atu.map(x => x.label).filter(Boolean) : [];
+      const motifLabels = Array.isArray(data.motifs) ? data.motifs.map(x => x.label).filter(Boolean) : [];
+
+      setMotif(prev => {
+        const prevAtu = Array.isArray(prev.atu_categories) ? prev.atu_categories : (prev.atu_categories ? [prev.atu_categories] : []);
+        const prevMotifs = Array.isArray(prev.motif_type) ? prev.motif_type : (prev.motif_type ? [prev.motif_type] : []);
+
+        const nextAtu = [...prevAtu];
+        atuLabels.forEach(l => { if (!nextAtu.includes(l)) nextAtu.push(l); });
+
+        const nextMotifs = [...prevMotifs];
+        motifLabels.forEach(l => { if (!nextMotifs.includes(l)) nextMotifs.push(l); });
+
+        return {
+          ...prev,
+          atu_categories: nextAtu,
+          motif_type: nextMotifs
+        };
+      });
+    } catch (err) {
+      console.error("Auto detect motif/ATU failed:", err);
+      alert(`Auto detect failed: ${err?.message || err}`);
+    } finally {
+      setAutoDetectMotifLoading(false);
     }
   };
 
@@ -1546,6 +1614,8 @@ export default function App() {
               <MotifSection
                 motif={motif}
                 setMotif={setMotif}
+                onAutoDetectMotifAtu={handleAutoDetectMotifAtu}
+                autoDetectMotifLoading={autoDetectMotifLoading}
               />
             )}
 

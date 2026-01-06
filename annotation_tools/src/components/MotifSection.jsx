@@ -2,7 +2,7 @@ import React from "react";
 import { ATU_HIERARCHY } from "../atu_hierarchy.js";
 import { MOTIF_HIERARCHY_LEVEL1_3 } from "../motif_hierarchy_level1_3.js";
 
-export default function MotifSection({ motif, setMotif }) {
+export default function MotifSection({ motif, setMotif, onAutoDetectMotifAtu, autoDetectMotifLoading }) {
   const [selectedATULevel1, setSelectedATULevel1] = React.useState("");
   const [selectedATULevel2, setSelectedATULevel2] = React.useState("");
   const [selectedATULevel3, setSelectedATULevel3] = React.useState("");
@@ -426,7 +426,20 @@ export default function MotifSection({ motif, setMotif }) {
 
   return (
     <section className="card">
-      <h2>Motifs</h2>
+      <div className="section-header-row" style={{ alignItems: "center" }}>
+        <h2 style={{ margin: 0 }}>Motifs</h2>
+        <div style={{ display: "flex", gap: "0.5rem", marginLeft: "auto" }}>
+          <button
+            type="button"
+            className="ghost-btn"
+            onClick={() => onAutoDetectMotifAtu && onAutoDetectMotifAtu()}
+            disabled={!onAutoDetectMotifAtu || autoDetectMotifLoading}
+            title="Auto-detect ATU + Motifs using the local vector database"
+          >
+            {autoDetectMotifLoading ? "Auto Detect..." : "Auto Detect"}
+          </button>
+        </div>
+      </div>
       {/* ATU hierarchical category selector (multi-select) - based on CSV */}
       <div style={{ marginTop: "0.75rem" }}>
         <div className="section-header-row">

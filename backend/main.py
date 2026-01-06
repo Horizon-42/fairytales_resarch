@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import logging
 import os
+from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from fastapi import FastAPI, HTTPException
@@ -37,9 +38,61 @@ from llm_model.summaries_annotator import (
     annotate_whole_summary_from_per_paragraph,
 )
 from llm_model.ollama_client import OllamaConfig
+from llm_model.vector_database import FairyVectorDB, VectorDBPaths
+from llm_model.vector_database.db import QueryConfig, VectorDBNotBuiltError
 
 
 logger = logging.getLogger("fairytales.backend")
+
+
+_VECTOR_DB: Optional[FairyVectorDB] = None
+
+
+def _get_vector_db() -> FairyVectorDB:
+    global _VECTOR_DB
+    if _VECTOR_DB is not None:
+        return _VECTOR_DB
+
+    # Allow overriding the store directory (defaults to llm_model/vector_database/store)
+    store_dir = _env("VECTOR_DB_DIR", "")
+    paths = VectorDBPaths(root_dir=Path(store_dir)) if store_dir else None
+
+    db = FairyVectorDB(paths=paths)
+    db.load()
+    _VECTOR_DB = db
+    return db
+
+
+def _format_atu_label(meta: Dict[str, Any]) -> str:
+    num = (meta.get("atu_number") or "").strip()
+    title = (meta.get("title") or "").strip()
+    l1 = (meta.get("level_1_category") or "").strip()
+    l2 = (meta.get("level_2_category") or "").strip()
+    l3 = (meta.get("level_3_category") or "").strip()
+    rng = (meta.get("category_range") or "").strip()
+
+    parts = [p for p in [l1, l2, l3] if p]
+    path = " > ".join(parts)
+    if rng:
+        path = f"{path} ({rng})" if path else f"({rng})"
+
+    core = f"ATU {num}: {title}" if title else f"ATU {num}"
+    return f"{core} ({path})" if path else core
+
+
+def _format_motif_label(meta: Dict[str, Any]) -> str:
+    code = (meta.get("code") or "").strip()
+    motif = (meta.get("motif") or "").strip()
+    chapter = (meta.get("chapter") or "").strip()
+    d1 = (meta.get("division1") or "").strip()
+    d2 = (meta.get("division2") or "").strip()
+    d3 = (meta.get("division3") or "").strip()
+
+    path_parts = [p for p in [chapter, d1, d2, d3] if p]
+    path = " > ".join(path_parts)
+
+    core = f"Motif {code}: {motif}" if motif else f"Motif {code}"
+    return f"{core} ({path})" if path else core
 
 
 def _env(name: str, default: str) -> str:
@@ -161,6 +214,25 @@ class SummaryWholeRequest(BaseModel):
 class SummaryWholeResponse(BaseModel):
     ok: bool
     whole: str
+
+
+class MotifAtuDetectRequest(BaseModel):
+    text: str = Field(..., description="Story text or summaries to use for retrieval")
+    top_k: int = Field(10, ge=1, le=50, description="Top-k neighbors per chunk")
+    embedding_model: Optional[str] = Field(None, description="Override embedding model (Ollama)")
+
+
+class MotifAtuDetectItem(BaseModel):
+    label: str
+    similarity: float
+    doc_key: str
+
+
+class MotifAtuDetectResponse(BaseModel):
+    ok: bool
+    atu: List[MotifAtuDetectItem]
+    motifs: List[MotifAtuDetectItem]
+    chunks: int
 
 
 app = FastAPI(title="Fairytales Auto-Annotation API", version="0.1.0")
@@ -372,3 +444,60 @@ def annotate_summary_whole_endpoint(req: SummaryWholeRequest) -> SummaryWholeRes
         raise HTTPException(status_code=502, detail=str(exc)) from exc
 
     return SummaryWholeResponse(ok=True, whole=whole)
+
+
+@app.post("/api/detect/motif_atu", response_model=MotifAtuDetectResponse)
+def detect_motif_atu(req: MotifAtuDetectRequest) -> MotifAtuDetectResponse:
+    """Detect likely ATU types and motifs using the local vector database."""
+
+    if not isinstance(req.text, str) or not req.text.strip():
+        raise HTTPException(status_code=400, detail="`text` must be a non-empty string")
+
+    base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
+    embedding_model = req.embedding_model or _env("OLLAMA_EMBEDDING_MODEL", "qwen3-embedding:4b")
+
+    try:
+        db = _get_vector_db()
+        result = db.detect(
+            text=req.text,
+            config=QueryConfig(
+                ollama_base_url=base_url,
+                embedding_model=embedding_model,
+                top_k=int(req.top_k),
+            ),
+        )
+    except VectorDBNotBuiltError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+    except Exception as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+    atu_items: List[MotifAtuDetectItem] = []
+    for item in (result.get("atu") or [])[:10]:
+        meta = item.get("metadata") or {}
+        label = _format_atu_label(meta)
+        atu_items.append(
+            MotifAtuDetectItem(
+                label=label,
+                similarity=float(item.get("similarity") or 0.0),
+                doc_key=str(item.get("doc_key") or ""),
+            )
+        )
+
+    motif_items: List[MotifAtuDetectItem] = []
+    for item in (result.get("motifs") or [])[:10]:
+        meta = item.get("metadata") or {}
+        label = _format_motif_label(meta)
+        motif_items.append(
+            MotifAtuDetectItem(
+                label=label,
+                similarity=float(item.get("similarity") or 0.0),
+                doc_key=str(item.get("doc_key") or ""),
+            )
+        )
+
+    return MotifAtuDetectResponse(
+        ok=True,
+        atu=atu_items,
+        motifs=motif_items,
+        chunks=int(result.get("chunks") or 0),
+    )
