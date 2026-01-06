@@ -9,7 +9,7 @@ export function deriveTextSectionsFromNarratives(narrativeStructure, fullText) {
   const events = Array.isArray(narrativeStructure) ? narrativeStructure : [];
 
   // Keep insertion order of first appearance.
-  const sectionMap = new Map(); // key -> { key, start, end, firstOrder }
+  const sectionMap = new Map(); // key -> { key, start, end, firstOrder, narrativeNumbers:Set<number> }
 
   for (let i = 0; i < events.length; i++) {
     const evt = events[i];
@@ -35,7 +35,10 @@ export function deriveTextSectionsFromNarratives(narrativeStructure, fullText) {
         key,
         start: sectionBounds.start,
         end: sectionBounds.end,
-        firstOrder: typeof evt.time_order === "number" ? evt.time_order : i
+        firstOrder: typeof evt.time_order === "number" ? evt.time_order : i,
+        narrativeNumbers: new Set([
+          typeof evt.time_order === "number" ? evt.time_order : (i + 1)
+        ])
       });
     } else {
       const acc = sectionMap.get(key);
@@ -49,6 +52,11 @@ export function deriveTextSectionsFromNarratives(narrativeStructure, fullText) {
       }
       if (typeof evt.time_order === "number") {
         acc.firstOrder = Math.min(acc.firstOrder, evt.time_order);
+      }
+
+      const n = typeof evt.time_order === "number" ? evt.time_order : (i + 1);
+      if (typeof n === "number" && Number.isFinite(n)) {
+        acc.narrativeNumbers.add(n);
       }
     }
   }
@@ -72,8 +80,17 @@ export function deriveTextSectionsFromNarratives(narrativeStructure, fullText) {
       sectionText = text.slice(start, end);
     }
 
+    const narrative_numbers = Array.from(s.narrativeNumbers || [])
+      .filter((n) => typeof n === "number" && Number.isFinite(n))
+      .sort((a, b) => a - b);
+    const display_label = narrative_numbers.length > 0
+      ? `N${narrative_numbers.join(",")}`
+      : s.key;
+
     return {
       text_section: s.key,
+      display_label,
+      narrative_numbers,
       start,
       end,
       text: sectionText

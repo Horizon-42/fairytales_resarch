@@ -35,7 +35,10 @@
         "ATU 822: The lazy boy and the industrious girl (RELIGIOUS TALES > The Devil (810-826))",
         "ATU 2030: The Old Woman and Her Pig (FORMULA TALES > Cumulative Tales > Chains Involving Other Events (2029-2075))",
         "ATU 413: Marriage by Stealing Clothing (TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Wife (400-424))",
-        "ATU 1004: Hogs in the mud; sheep in the air (TALES OF THE STUPID OGRE (GIANT, DEVIL) > Labor Contract (1000-1029))"
+        "ATU 1004: Hogs in the mud; sheep in the air (TALES OF THE STUPID OGRE (GIANT, DEVIL) > Labor Contract (1000-1029))",
+        "ATU 1029: The woman as cuckoo in the tree (TALES OF THE STUPID OGRE (GIANT, DEVIL) > Labor Contract (1000-1029))",
+        "ATU 899: Alcestis (REALISTIC TALES > Proofs of FidelitY and Innocence (880-899))",
+        "ATU 2023: Little Ant Finds a Penny, Buys New Clothes with it, and Sits in her Doorway (FORMULA TALES > Cumulative Tales > Chains Involving Death (2021-2024))"
       ],
       "motif_type": [
         "Motif A200-A280: Mythological Motifs > GODS > Gods of the upper world.",
@@ -50,7 +53,13 @@
         "Motif F300.2: F300.2. Husband pursues fairy wife to heaven. (F. Marvels. > F200–F699. Marvelous creatures. > F200–F399. Fairies and elves. > F300–F399. Fairies and mortals.)",
         "Motif T68.5: T68.5. Girl marries hunter when he promises to return to monkey brothers their human form. (Cf. D118.) (T. Sex. > T0–T99. Love.)",
         "Motif Q42.1.1: Q42.1.1. Child divides last loaf with fairy (witch, etc.). Rewarded. (Q. Rewards and punishments. > Q10–Q99. Deeds rewarded.)",
-        "Motif T251.0.1: T251.0.1. Man ejected from heaven for folly of marrying twice. (T. Sex. > T200–T299. Married life.)"
+        "Motif T251.0.1: T251.0.1. Man ejected from heaven for folly of marrying twice. (T. Sex. > T200–T299. Married life.)",
+        "Motif N856.2: N856.2. Cowherd as foster father. (N. Chance and fate. > N800–N899. Helpers.)",
+        "Motif J2133.5.1: J2133.5.1. Wife carried up tree to sky in bag in husband's teeth. She asks question and he drops her when he answers. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J2050–J2199. Absurd short-sightedness.)",
+        "Motif T255.2: T255.2. The obstinate wife sought for up-stream. When she falls into the stream, the husband concludes that she would be too obstinate to go with the current. (T. Sex. > T200–T299. Married life.)",
+        "Motif Z49.7: Z49.7. Cumulative tale: bird who seeks carpenter to release young caught in closed tree. Beetle bites calf, calf bites cow, cow hoofs carpenter, carpenter beats wife, hunters save carpenter's cow, carpenter releases birds. (Z. Miscellaneous groups of motifs. > Z0–Z99. Formulas. > Z20–Z59. Cumulative tales.)",
+        "Motif J2075.4: J2075.4. Wife granted wish for beauty, elopes with prince. Husband wishes her into a pig; son must use third wish to restore her. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J2050–J2199. Absurd short-sightedness.)",
+        "Motif T252.2.1: T252.2.1. King sees how male stork kills his unfaithful wife. Follows its example. (T. Sex. > T200–T299. Married life.)"
       ],
       "character_archetypes": [
         {
@@ -112,7 +121,15 @@
       "helper_type": [
         "ANIMAL"
       ],
-      "thinking_process": ""
+      "thinking_process": "",
+      "atu_evidence": {
+        "ATU 200-217: ANIMAL TALES > Domestic Animals": {
+          "related_sections": [],
+          "include_whole_summary": false,
+          "whole_summary": ""
+        }
+      },
+      "motif_evidence": {}
     },
     "deep": {
       "paragraph_summaries": {

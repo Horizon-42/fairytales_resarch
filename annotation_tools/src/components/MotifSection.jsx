@@ -2,7 +2,17 @@ import React from "react";
 import { ATU_HIERARCHY } from "../atu_hierarchy.js";
 import { MOTIF_HIERARCHY_LEVEL1_3 } from "../motif_hierarchy_level1_3.js";
 
-export default function MotifSection({ motif, setMotif, onAutoDetectMotifAtu, autoDetectMotifLoading }) {
+export default function MotifSection({
+  motif,
+  setMotif,
+  onAutoDetectMotifAtu,
+  autoDetectMotifLoading,
+  textSections = [],
+  wholeSummary = ""
+}) {
+  const WHOLE_SUMMARY_KEY = "__WHOLE_SUMMARY__";
+  const PREVIEW_CHARS = 300;
+
   const [selectedATULevel1, setSelectedATULevel1] = React.useState("");
   const [selectedATULevel2, setSelectedATULevel2] = React.useState("");
   const [selectedATULevel3, setSelectedATULevel3] = React.useState("");
@@ -13,6 +23,187 @@ export default function MotifSection({ motif, setMotif, onAutoDetectMotifAtu, au
   const [selectedMotifLevel2, setSelectedMotifLevel2] = React.useState("");
   const [selectedMotifLevel3, setSelectedMotifLevel3] = React.useState("");
   const [selectedMotifLevel4, setSelectedMotifLevel4] = React.useState("");
+
+  const [selectedAtuSectionByLabel, setSelectedAtuSectionByLabel] = React.useState({});
+  const [selectedMotifSectionByLabel, setSelectedMotifSectionByLabel] = React.useState({});
+  const [expandedAtuEvidence, setExpandedAtuEvidence] = React.useState({});
+  const [expandedMotifEvidence, setExpandedMotifEvidence] = React.useState({});
+
+  const atuEvidence = (motif.atu_evidence && typeof motif.atu_evidence === "object" && !Array.isArray(motif.atu_evidence))
+    ? motif.atu_evidence
+    : {};
+  const motifEvidence = (motif.motif_evidence && typeof motif.motif_evidence === "object" && !Array.isArray(motif.motif_evidence))
+    ? motif.motif_evidence
+    : {};
+
+  const sectionLabelByKey = React.useMemo(() => {
+    const map = new Map();
+    (Array.isArray(textSections) ? textSections : []).forEach((sec) => {
+      if (!sec || typeof sec !== "object") return;
+      const key = sec.text_section;
+      if (!key) return;
+      map.set(key, sec.display_label || key);
+    });
+    return map;
+  }, [textSections]);
+
+  const sectionTextByKey = React.useMemo(() => {
+    const map = new Map();
+    (Array.isArray(textSections) ? textSections : []).forEach((sec) => {
+      if (!sec || typeof sec !== "object") return;
+      const key = sec.text_section;
+      if (!key) return;
+      map.set(key, typeof sec.text === "string" ? sec.text : "");
+    });
+    return map;
+  }, [textSections]);
+
+  const normalizeEvidenceRecord = (rec) => {
+    const related = Array.isArray(rec?.related_sections) ? rec.related_sections.filter(Boolean) : [];
+    const includeWhole = typeof rec?.include_whole_summary === "boolean" ? rec.include_whole_summary : false;
+    const ws = typeof rec?.whole_summary === "string" ? rec.whole_summary : "";
+    return { related_sections: related, include_whole_summary: includeWhole, whole_summary: ws };
+  };
+
+  const ensureAtuEvidenceRecord = (label) => {
+    const next = { ...atuEvidence };
+    if (!next[label] || typeof next[label] !== "object") {
+      next[label] = { related_sections: [], include_whole_summary: false, whole_summary: "" };
+    } else {
+      next[label] = normalizeEvidenceRecord(next[label]);
+    }
+    return next;
+  };
+
+  const ensureMotifEvidenceRecord = (label) => {
+    const next = { ...motifEvidence };
+    if (!next[label] || typeof next[label] !== "object") {
+      next[label] = { related_sections: [], include_whole_summary: false, whole_summary: "" };
+    } else {
+      next[label] = normalizeEvidenceRecord(next[label]);
+    }
+    return next;
+  };
+
+  const previewText = (text, expanded) => {
+    const t = (text || "").trim();
+    if (!t) return "";
+    if (expanded) return t;
+    if (t.length <= PREVIEW_CHARS) return t;
+    return `${t.slice(0, PREVIEW_CHARS)}…`;
+  };
+
+  const handleClearAllAtu = () => {
+    setMotif({ ...motif, atu_categories: [], atu_evidence: {} });
+    setSelectedAtuSectionByLabel({});
+  };
+
+  const handleClearAllMotifs = () => {
+    setMotif({ ...motif, motif_type: [], motif_evidence: {} });
+    setSelectedMotifSectionByLabel({});
+  };
+
+  const setAtuIncludeWholeSummary = (label, include) => {
+    if (!label) return;
+    const nextEvidence = ensureAtuEvidenceRecord(label);
+    const rec = normalizeEvidenceRecord(nextEvidence[label]);
+    nextEvidence[label] = {
+      ...rec,
+      include_whole_summary: !!include,
+      whole_summary: include ? (wholeSummary || "") : ""
+    };
+    setMotif({ ...motif, atu_evidence: nextEvidence });
+  };
+
+  const setMotifIncludeWholeSummary = (label, include) => {
+    if (!label) return;
+    const nextEvidence = ensureMotifEvidenceRecord(label);
+    const rec = normalizeEvidenceRecord(nextEvidence[label]);
+    nextEvidence[label] = {
+      ...rec,
+      include_whole_summary: !!include,
+      whole_summary: include ? (wholeSummary || "") : ""
+    };
+    setMotif({ ...motif, motif_evidence: nextEvidence });
+  };
+
+  const handleAddAtuRelatedSection = (label, sectionKey) => {
+    if (!label || !sectionKey) return;
+
+    if (sectionKey === WHOLE_SUMMARY_KEY) {
+      setAtuIncludeWholeSummary(label, true);
+      setSelectedAtuSectionByLabel((prev) => ({ ...prev, [label]: "" }));
+      return;
+    }
+
+    const rec = normalizeEvidenceRecord(atuEvidence[label]);
+    if (rec.related_sections.includes(sectionKey)) return;
+    const nextEvidence = ensureAtuEvidenceRecord(label);
+    const nextRec = normalizeEvidenceRecord(nextEvidence[label]);
+    nextEvidence[label] = {
+      related_sections: [...nextRec.related_sections, sectionKey],
+      include_whole_summary: nextRec.include_whole_summary,
+      whole_summary: nextRec.include_whole_summary ? (wholeSummary || nextRec.whole_summary || "") : ""
+    };
+    setMotif({ ...motif, atu_evidence: nextEvidence });
+    setSelectedAtuSectionByLabel((prev) => ({ ...prev, [label]: "" }));
+  };
+
+  const handleRemoveAtuRelatedSection = (label, sectionKey) => {
+    if (!label || !sectionKey) return;
+    if (sectionKey === WHOLE_SUMMARY_KEY) {
+      setAtuIncludeWholeSummary(label, false);
+      return;
+    }
+    const rec = normalizeEvidenceRecord(atuEvidence[label]);
+    const nextRelated = rec.related_sections.filter((k) => k !== sectionKey);
+    const nextEvidence = ensureAtuEvidenceRecord(label);
+    nextEvidence[label] = {
+      related_sections: nextRelated,
+      include_whole_summary: rec.include_whole_summary,
+      whole_summary: rec.include_whole_summary ? (wholeSummary || rec.whole_summary || "") : ""
+    };
+    setMotif({ ...motif, atu_evidence: nextEvidence });
+  };
+
+  const handleAddMotifRelatedSection = (label, sectionKey) => {
+    if (!label || !sectionKey) return;
+
+    if (sectionKey === WHOLE_SUMMARY_KEY) {
+      setMotifIncludeWholeSummary(label, true);
+      setSelectedMotifSectionByLabel((prev) => ({ ...prev, [label]: "" }));
+      return;
+    }
+
+    const rec = normalizeEvidenceRecord(motifEvidence[label]);
+    if (rec.related_sections.includes(sectionKey)) return;
+    const nextEvidence = ensureMotifEvidenceRecord(label);
+    const nextRec = normalizeEvidenceRecord(nextEvidence[label]);
+    nextEvidence[label] = {
+      related_sections: [...nextRec.related_sections, sectionKey],
+      include_whole_summary: nextRec.include_whole_summary,
+      whole_summary: nextRec.include_whole_summary ? (wholeSummary || nextRec.whole_summary || "") : ""
+    };
+    setMotif({ ...motif, motif_evidence: nextEvidence });
+    setSelectedMotifSectionByLabel((prev) => ({ ...prev, [label]: "" }));
+  };
+
+  const handleRemoveMotifRelatedSection = (label, sectionKey) => {
+    if (!label || !sectionKey) return;
+    if (sectionKey === WHOLE_SUMMARY_KEY) {
+      setMotifIncludeWholeSummary(label, false);
+      return;
+    }
+    const rec = normalizeEvidenceRecord(motifEvidence[label]);
+    const nextRelated = rec.related_sections.filter((k) => k !== sectionKey);
+    const nextEvidence = ensureMotifEvidenceRecord(label);
+    nextEvidence[label] = {
+      related_sections: nextRelated,
+      include_whole_summary: rec.include_whole_summary,
+      whole_summary: rec.include_whole_summary ? (wholeSummary || rec.whole_summary || "") : ""
+    };
+    setMotif({ ...motif, motif_evidence: nextEvidence });
+  };
 
   // Ensure motif_type is an array (handle migration from string)
   const motifTypes = Array.isArray(motif.motif_type) 
@@ -172,7 +363,8 @@ export default function MotifSection({ motif, setMotif, onAutoDetectMotifAtu, au
       }
 
       const next = [...atuSelections, label];
-      setMotif({ ...motif, atu_categories: next });
+      const nextEvidence = ensureAtuEvidenceRecord(label);
+      setMotif({ ...motif, atu_categories: next, atu_evidence: nextEvidence });
 
       setSelectedATULevel1("");
       setSelectedATULevel2("");
@@ -206,7 +398,8 @@ export default function MotifSection({ motif, setMotif, onAutoDetectMotifAtu, au
     }
 
     const next = [...atuSelections, label];
-    setMotif({ ...motif, atu_categories: next });
+    const nextEvidence = ensureAtuEvidenceRecord(label);
+    setMotif({ ...motif, atu_categories: next, atu_evidence: nextEvidence });
 
     setSelectedATULevel1("");
     setSelectedATULevel2("");
@@ -215,8 +408,18 @@ export default function MotifSection({ motif, setMotif, onAutoDetectMotifAtu, au
   };
 
   const handleRemoveATUCategory = (index) => {
+    const label = atuSelections[index];
     const next = atuSelections.filter((_, i) => i !== index);
-    setMotif({ ...motif, atu_categories: next });
+    const nextEvidence = { ...atuEvidence };
+    if (label && Object.prototype.hasOwnProperty.call(nextEvidence, label)) {
+      delete nextEvidence[label];
+    }
+    setSelectedAtuSectionByLabel((prev) => {
+      const p = { ...prev };
+      if (label && Object.prototype.hasOwnProperty.call(p, label)) delete p[label];
+      return p;
+    });
+    setMotif({ ...motif, atu_categories: next, atu_evidence: nextEvidence });
   };
 
   // Motif hierarchy from Motifs_level1_3.csv (4 levels)
@@ -370,7 +573,8 @@ export default function MotifSection({ motif, setMotif, onAutoDetectMotifAtu, au
       }
 
       const updatedTypes = [...currentTypes, label];
-      setMotif({ ...motif, motif_type: updatedTypes });
+      const nextEvidence = ensureMotifEvidenceRecord(label);
+      setMotif({ ...motif, motif_type: updatedTypes, motif_evidence: nextEvidence });
 
       setSelectedMotifLevel1("");
       setSelectedMotifLevel2("");
@@ -407,7 +611,8 @@ export default function MotifSection({ motif, setMotif, onAutoDetectMotifAtu, au
     }
 
     const updatedTypes = [...currentTypes, label];
-    setMotif({ ...motif, motif_type: updatedTypes });
+    const nextEvidence = ensureMotifEvidenceRecord(label);
+    setMotif({ ...motif, motif_type: updatedTypes, motif_evidence: nextEvidence });
 
     setSelectedMotifLevel1("");
     setSelectedMotifLevel2("");
@@ -420,8 +625,18 @@ export default function MotifSection({ motif, setMotif, onAutoDetectMotifAtu, au
     const currentTypes = Array.isArray(motif.motif_type) 
       ? motif.motif_type 
       : (motif.motif_type ? [motif.motif_type] : []);
+    const label = currentTypes[index];
     const updatedTypes = currentTypes.filter((_, i) => i !== index);
-    setMotif({ ...motif, motif_type: updatedTypes });
+    const nextEvidence = { ...motifEvidence };
+    if (label && Object.prototype.hasOwnProperty.call(nextEvidence, label)) {
+      delete nextEvidence[label];
+    }
+    setSelectedMotifSectionByLabel((prev) => {
+      const p = { ...prev };
+      if (label && Object.prototype.hasOwnProperty.call(p, label)) delete p[label];
+      return p;
+    });
+    setMotif({ ...motif, motif_type: updatedTypes, motif_evidence: nextEvidence });
   };
 
   return (
@@ -437,6 +652,24 @@ export default function MotifSection({ motif, setMotif, onAutoDetectMotifAtu, au
             title="Auto-detect ATU + Motifs using the local vector database"
           >
             {autoDetectMotifLoading ? "Auto Detect..." : "Auto Detect"}
+          </button>
+          <button
+            type="button"
+            className="ghost-btn"
+            onClick={handleClearAllAtu}
+            disabled={atuSelections.length === 0}
+            title="Clear all selected ATU categories"
+          >
+            Clear ATU
+          </button>
+          <button
+            type="button"
+            className="ghost-btn"
+            onClick={handleClearAllMotifs}
+            disabled={motifTypes.length === 0}
+            title="Clear all selected Motifs"
+          >
+            Clear Motifs
           </button>
         </div>
       </div>
@@ -534,23 +767,138 @@ export default function MotifSection({ motif, setMotif, onAutoDetectMotifAtu, au
                 key={index}
                 style={{
                   display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
+                  flexDirection: "column",
+                  alignItems: "stretch",
                   padding: "0.5rem",
                   background: "#f3f4f6",
                   borderRadius: "4px",
                   gap: "0.5rem"
                 }}
               >
-                <span style={{ flex: 1 }}>{item}</span>
-                <button
-                  type="button"
-                  className="ghost-btn"
-                  onClick={() => handleRemoveATUCategory(index)}
-                  style={{ padding: "0.25rem 0.5rem", fontSize: "0.875rem" }}
-                >
-                  Remove
-                </button>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "0.5rem" }}>
+                  <span style={{ flex: 1 }}>{item}</span>
+                  <button
+                    type="button"
+                    className="ghost-btn"
+                    onClick={() => handleRemoveATUCategory(index)}
+                    style={{ padding: "0.25rem 0.5rem", fontSize: "0.875rem" }}
+                  >
+                    Remove
+                  </button>
+                </div>
+
+                <div style={{ fontSize: "0.875rem" }}>
+                  <div style={{ marginBottom: "0.25rem" }}>
+                    <strong>Evidence:</strong>{" "}
+                    {(() => {
+                      const rec = normalizeEvidenceRecord(atuEvidence[item]);
+                      const parts = [];
+                      if (rec.include_whole_summary) parts.push("Whole summary");
+                      if (rec.related_sections.length) {
+                        parts.push(...rec.related_sections.map((k) => sectionLabelByKey.get(k) || k));
+                      }
+                      return parts.length ? parts.join(", ") : "—";
+                    })()}
+                  </div>
+
+                  {(() => {
+                    const rec = normalizeEvidenceRecord(atuEvidence[item]);
+                    if (!rec.include_whole_summary && rec.related_sections.length === 0) return null;
+                    return (
+                      <div style={{ display: "flex", flexWrap: "wrap", gap: "0.25rem", marginBottom: "0.25rem" }}>
+                        {rec.include_whole_summary && (
+                          <button
+                            type="button"
+                            className="ghost-btn"
+                            onClick={() => handleRemoveAtuRelatedSection(item, WHOLE_SUMMARY_KEY)}
+                            style={{ padding: "0.15rem 0.35rem", fontSize: "0.75rem" }}
+                            title="Remove whole summary evidence"
+                          >
+                            Whole summary ×
+                          </button>
+                        )}
+                        {rec.related_sections.map((k) => (
+                          <button
+                            key={k}
+                            type="button"
+                            className="ghost-btn"
+                            onClick={() => handleRemoveAtuRelatedSection(item, k)}
+                            style={{ padding: "0.15rem 0.35rem", fontSize: "0.75rem" }}
+                            title="Remove related section"
+                          >
+                            {(sectionLabelByKey.get(k) || k)} ×
+                          </button>
+                        ))}
+                      </div>
+                    );
+                  })()}
+
+                  <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+                    <select
+                      value={selectedAtuSectionByLabel[item] || ""}
+                      onChange={(e) => setSelectedAtuSectionByLabel((prev) => ({ ...prev, [item]: e.target.value }))}
+                    >
+                      <option value="">– Add evidence –</option>
+                      <option value={WHOLE_SUMMARY_KEY}>Whole summary</option>
+                      {(Array.isArray(textSections) ? textSections : []).map((sec) => (
+                        <option key={sec.text_section} value={sec.text_section}>
+                          {sec.display_label || sec.text_section}
+                        </option>
+                      ))}
+                    </select>
+                    <button
+                      type="button"
+                      className="ghost-btn"
+                      onClick={() => handleAddAtuRelatedSection(item, selectedAtuSectionByLabel[item] || "")}
+                      disabled={!(selectedAtuSectionByLabel[item] || "")}
+                      style={{ padding: "0.25rem 0.5rem", fontSize: "0.875rem" }}
+                    >
+                      Add
+                    </button>
+                  </div>
+
+                  {(() => {
+                    const rec = normalizeEvidenceRecord(atuEvidence[item]);
+                    const evidenceKeys = [
+                      ...(rec.include_whole_summary ? [WHOLE_SUMMARY_KEY] : []),
+                      ...rec.related_sections
+                    ];
+                    if (!evidenceKeys.length) return null;
+
+                    return (
+                      <div style={{ display: "flex", flexDirection: "column", gap: "0.35rem", marginTop: "0.35rem" }}>
+                        {evidenceKeys.map((k) => {
+                          const isWhole = k === WHOLE_SUMMARY_KEY;
+                          const label = isWhole ? "Whole summary" : (sectionLabelByKey.get(k) || k);
+                          const raw = isWhole ? (wholeSummary || rec.whole_summary || "") : (sectionTextByKey.get(k) || "");
+                          const idKey = `${item}::${k}`;
+                          const expanded = !!expandedAtuEvidence[idKey];
+                          const text = previewText(raw, expanded);
+                          const canToggle = (raw || "").trim().length > PREVIEW_CHARS;
+
+                          return (
+                            <div key={k} style={{ padding: "0.35rem", borderRadius: "4px" }}>
+                              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "0.5rem" }}>
+                                <div style={{ fontWeight: 600 }}>{label}</div>
+                                {canToggle && (
+                                  <button
+                                    type="button"
+                                    className="ghost-btn"
+                                    onClick={() => setExpandedAtuEvidence((prev) => ({ ...prev, [idKey]: !expanded }))}
+                                    style={{ padding: "0.15rem 0.35rem", fontSize: "0.75rem" }}
+                                  >
+                                    {expanded ? "Close" : "Open"}
+                                  </button>
+                                )}
+                              </div>
+                              <div style={{ whiteSpace: "pre-wrap" }}>{text || "(empty)"}</div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    );
+                  })()}
+                </div>
               </div>
             ))}
           </div>
@@ -660,23 +1008,138 @@ export default function MotifSection({ motif, setMotif, onAutoDetectMotifAtu, au
                 key={index}
                 style={{
                   display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
+                  flexDirection: "column",
+                  alignItems: "stretch",
                   padding: "0.5rem",
                   background: "#f3f4f6",
                   borderRadius: "4px",
                   gap: "0.5rem"
                 }}
               >
-                <span style={{ flex: 1 }}>{type}</span>
-                <button
-                  type="button"
-                  className="ghost-btn"
-                  onClick={() => handleRemoveMotif(index)}
-                  style={{ padding: "0.25rem 0.5rem", fontSize: "0.875rem" }}
-                >
-                  Remove
-                </button>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "0.5rem" }}>
+                  <span style={{ flex: 1 }}>{type}</span>
+                  <button
+                    type="button"
+                    className="ghost-btn"
+                    onClick={() => handleRemoveMotif(index)}
+                    style={{ padding: "0.25rem 0.5rem", fontSize: "0.875rem" }}
+                  >
+                    Remove
+                  </button>
+                </div>
+
+                <div style={{ fontSize: "0.875rem" }}>
+                  <div style={{ marginBottom: "0.25rem" }}>
+                    <strong>Evidence:</strong>{" "}
+                    {(() => {
+                      const rec = normalizeEvidenceRecord(motifEvidence[type]);
+                      const parts = [];
+                      if (rec.include_whole_summary) parts.push("Whole summary");
+                      if (rec.related_sections.length) {
+                        parts.push(...rec.related_sections.map((k) => sectionLabelByKey.get(k) || k));
+                      }
+                      return parts.length ? parts.join(", ") : "—";
+                    })()}
+                  </div>
+
+                  {(() => {
+                    const rec = normalizeEvidenceRecord(motifEvidence[type]);
+                    if (!rec.include_whole_summary && rec.related_sections.length === 0) return null;
+                    return (
+                      <div style={{ display: "flex", flexWrap: "wrap", gap: "0.25rem", marginBottom: "0.25rem" }}>
+                        {rec.include_whole_summary && (
+                          <button
+                            type="button"
+                            className="ghost-btn"
+                            onClick={() => handleRemoveMotifRelatedSection(type, WHOLE_SUMMARY_KEY)}
+                            style={{ padding: "0.15rem 0.35rem", fontSize: "0.75rem" }}
+                            title="Remove whole summary evidence"
+                          >
+                            Whole summary ×
+                          </button>
+                        )}
+                        {rec.related_sections.map((k) => (
+                          <button
+                            key={k}
+                            type="button"
+                            className="ghost-btn"
+                            onClick={() => handleRemoveMotifRelatedSection(type, k)}
+                            style={{ padding: "0.15rem 0.35rem", fontSize: "0.75rem" }}
+                            title="Remove related section"
+                          >
+                            {(sectionLabelByKey.get(k) || k)} ×
+                          </button>
+                        ))}
+                      </div>
+                    );
+                  })()}
+
+                  <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+                    <select
+                      value={selectedMotifSectionByLabel[type] || ""}
+                      onChange={(e) => setSelectedMotifSectionByLabel((prev) => ({ ...prev, [type]: e.target.value }))}
+                    >
+                      <option value="">– Add evidence –</option>
+                      <option value={WHOLE_SUMMARY_KEY}>Whole summary</option>
+                      {(Array.isArray(textSections) ? textSections : []).map((sec) => (
+                        <option key={sec.text_section} value={sec.text_section}>
+                          {sec.display_label || sec.text_section}
+                        </option>
+                      ))}
+                    </select>
+                    <button
+                      type="button"
+                      className="ghost-btn"
+                      onClick={() => handleAddMotifRelatedSection(type, selectedMotifSectionByLabel[type] || "")}
+                      disabled={!(selectedMotifSectionByLabel[type] || "")}
+                      style={{ padding: "0.25rem 0.5rem", fontSize: "0.875rem" }}
+                    >
+                      Add
+                    </button>
+                  </div>
+
+                  {(() => {
+                    const rec = normalizeEvidenceRecord(motifEvidence[type]);
+                    const evidenceKeys = [
+                      ...(rec.include_whole_summary ? [WHOLE_SUMMARY_KEY] : []),
+                      ...rec.related_sections
+                    ];
+                    if (!evidenceKeys.length) return null;
+
+                    return (
+                      <div style={{ display: "flex", flexDirection: "column", gap: "0.35rem", marginTop: "0.35rem" }}>
+                        {evidenceKeys.map((k) => {
+                          const isWhole = k === WHOLE_SUMMARY_KEY;
+                          const label = isWhole ? "Whole summary" : (sectionLabelByKey.get(k) || k);
+                          const raw = isWhole ? (wholeSummary || rec.whole_summary || "") : (sectionTextByKey.get(k) || "");
+                          const idKey = `${type}::${k}`;
+                          const expanded = !!expandedMotifEvidence[idKey];
+                          const text = previewText(raw, expanded);
+                          const canToggle = (raw || "").trim().length > PREVIEW_CHARS;
+
+                          return (
+                            <div key={k} style={{ padding: "0.35rem", borderRadius: "4px" }}>
+                              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "0.5rem" }}>
+                                <div style={{ fontWeight: 600 }}>{label}</div>
+                                {canToggle && (
+                                  <button
+                                    type="button"
+                                    className="ghost-btn"
+                                    onClick={() => setExpandedMotifEvidence((prev) => ({ ...prev, [idKey]: !expanded }))}
+                                    style={{ padding: "0.15rem 0.35rem", fontSize: "0.75rem" }}
+                                  >
+                                    {expanded ? "Close" : "Open"}
+                                  </button>
+                                )}
+                              </div>
+                              <div style={{ whiteSpace: "pre-wrap" }}>{text || "(empty)"}</div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    );
+                  })()}
+                </div>
               </div>
             ))}
           </div>

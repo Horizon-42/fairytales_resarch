@@ -82,7 +82,9 @@ export default function App() {
     obstacle_pattern: [],
     obstacle_thrower: [],
     helper_type: [],
-    thinking_process: ""
+    thinking_process: "",
+    atu_evidence: {},
+    motif_evidence: {}
   });
 
   const [paragraphSummaries, setParagraphSummaries] = useState({
@@ -374,16 +376,33 @@ export default function App() {
         const prevAtu = Array.isArray(prev.atu_categories) ? prev.atu_categories : (prev.atu_categories ? [prev.atu_categories] : []);
         const prevMotifs = Array.isArray(prev.motif_type) ? prev.motif_type : (prev.motif_type ? [prev.motif_type] : []);
 
+        const prevAtuEvidence = (prev.atu_evidence && typeof prev.atu_evidence === "object") ? prev.atu_evidence : {};
+        const prevMotifEvidence = (prev.motif_evidence && typeof prev.motif_evidence === "object") ? prev.motif_evidence : {};
+        const nextAtuEvidence = { ...prevAtuEvidence };
+        const nextMotifEvidence = { ...prevMotifEvidence };
+
         const nextAtu = [...prevAtu];
-        atuLabels.forEach(l => { if (!nextAtu.includes(l)) nextAtu.push(l); });
+        atuLabels.forEach(l => {
+          if (!nextAtu.includes(l)) nextAtu.push(l);
+          if (!nextAtuEvidence[l]) {
+            nextAtuEvidence[l] = { related_sections: [], include_whole_summary: false, whole_summary: "" };
+          }
+        });
 
         const nextMotifs = [...prevMotifs];
-        motifLabels.forEach(l => { if (!nextMotifs.includes(l)) nextMotifs.push(l); });
+        motifLabels.forEach(l => {
+          if (!nextMotifs.includes(l)) nextMotifs.push(l);
+          if (!nextMotifEvidence[l]) {
+            nextMotifEvidence[l] = { related_sections: [], include_whole_summary: false, whole_summary: "" };
+          }
+        });
 
         return {
           ...prev,
           atu_categories: nextAtu,
-          motif_type: nextMotifs
+          motif_type: nextMotifs,
+          atu_evidence: nextAtuEvidence,
+          motif_evidence: nextMotifEvidence
         };
       });
     } catch (err) {
@@ -404,7 +423,37 @@ export default function App() {
       metadata: meta,
       thinking_process: motif.thinking_process || "",
       annotation: {
-        motif,
+        motif: (() => {
+          const whole = paragraphSummaries.whole || "";
+          const atuEvidence = (motif.atu_evidence && typeof motif.atu_evidence === "object") ? motif.atu_evidence : {};
+          const motifEvidence = (motif.motif_evidence && typeof motif.motif_evidence === "object") ? motif.motif_evidence : {};
+
+          // Keep arrays as-is; just ensure evidence snapshots include the current whole summary.
+          const nextAtuEvidence = {};
+          Object.keys(atuEvidence).forEach((k) => {
+            const v = atuEvidence[k] || {};
+            nextAtuEvidence[k] = {
+              related_sections: Array.isArray(v.related_sections) ? v.related_sections : [],
+              include_whole_summary: !!v.include_whole_summary,
+              whole_summary: v.include_whole_summary ? whole : ""
+            };
+          });
+          const nextMotifEvidence = {};
+          Object.keys(motifEvidence).forEach((k) => {
+            const v = motifEvidence[k] || {};
+            nextMotifEvidence[k] = {
+              related_sections: Array.isArray(v.related_sections) ? v.related_sections : [],
+              include_whole_summary: !!v.include_whole_summary,
+              whole_summary: v.include_whole_summary ? whole : ""
+            };
+          });
+
+          return {
+            ...motif,
+            atu_evidence: nextAtuEvidence,
+            motif_evidence: nextMotifEvidence
+          };
+        })(),
         deep: {
           paragraph_summaries: {
             per_section: paragraphSummaries.perSection || {},
@@ -504,7 +553,35 @@ export default function App() {
         atu_categories: Array.isArray(motif.atu_categories) ? motif.atu_categories : [],
         obstacle_thrower: Array.isArray(motif.obstacle_thrower) ? motif.obstacle_thrower : [],
         helper_type: Array.isArray(motif.helper_type) ? motif.helper_type : [],
-        thinking_process: motif.thinking_process
+        thinking_process: motif.thinking_process,
+        atu_evidence: (() => {
+          const whole = paragraphSummaries.whole || "";
+          const src = (motif.atu_evidence && typeof motif.atu_evidence === "object") ? motif.atu_evidence : {};
+          const next = {};
+          Object.keys(src).forEach((k) => {
+            const v = src[k] || {};
+            next[k] = {
+              related_sections: Array.isArray(v.related_sections) ? v.related_sections : [],
+              include_whole_summary: !!v.include_whole_summary,
+              whole_summary: v.include_whole_summary ? whole : ""
+            };
+          });
+          return next;
+        })(),
+        motif_evidence: (() => {
+          const whole = paragraphSummaries.whole || "";
+          const src = (motif.motif_evidence && typeof motif.motif_evidence === "object") ? motif.motif_evidence : {};
+          const next = {};
+          Object.keys(src).forEach((k) => {
+            const v = src[k] || {};
+            next[k] = {
+              related_sections: Array.isArray(v.related_sections) ? v.related_sections : [],
+              include_whole_summary: !!v.include_whole_summary,
+              whole_summary: v.include_whole_summary ? whole : ""
+            };
+          });
+          return next;
+        })()
       },
       analysis: {
         propp_functions: proppFns.filter((f) => f.fn || f.evidence),
@@ -915,7 +992,9 @@ export default function App() {
       obstacle_pattern: [],
       obstacle_thrower: [],
       helper_type: [],
-      thinking_process: ""
+      thinking_process: "",
+      atu_evidence: {},
+      motif_evidence: {}
     });
     setParagraphSummaries({ perSection: {}, combined: [], whole: "" });
     setProppFns([emptyProppFn()]);
@@ -1618,6 +1697,8 @@ export default function App() {
                 setMotif={setMotif}
                 onAutoDetectMotifAtu={handleAutoDetectMotifAtu}
                 autoDetectMotifLoading={autoDetectMotifLoading}
+                  textSections={deriveTextSectionsFromNarratives(narrativeStructure, sourceText.text)}
+                  wholeSummary={paragraphSummaries.whole || ""}
               />
             )}
 
