@@ -413,7 +413,7 @@ export default function NarrativeSection({
       </div>
 
       {typeof onAutoSegmentNarratives === "function" && (
-        <div style={{ marginTop: "0.5rem", display: "flex", justifyContent: "flex-end" }}>
+        <div style={{ marginTop: "0.5rem", marginBottom: "0.75rem", display: "flex", justifyContent: "flex-end" }}>
           <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
             <select
               value={autoSegmentMode}
@@ -735,7 +735,27 @@ export default function NarrativeSection({
             </div>
           )}
 
-          {/* Auto-annotation UI for individual event */}
+          {item.target_type === "character" && item.action_category && item.action_type && (
+            <div style={{ marginTop: "0.5rem" }}>
+              <label>
+                Context (optional)
+                <input
+                  type="text"
+                  value={item.action_context || ""}
+                  onChange={(e) => updateItem(idx, "action_context", e.target.value)}
+                  placeholder={`e.g., ${getContextTagsForAction(item.action_category, item.action_type).slice(0, 3).join(", ")}`}
+                  list={`context-suggestions-${idx}`}
+                />
+                <datalist id={`context-suggestions-${idx}`}>
+                  {getContextTagsForAction(item.action_category, item.action_type).map((tag) => (
+                    <option key={tag} value={tag} />
+                  ))}
+                </datalist>
+              </label>
+            </div>
+          )}
+
+          {/* Auto-annotation UI for individual event (placed under Context control) */}
           {typeof onAutoAnnotateEvent === "function" && (
             <div style={{ marginTop: "0.5rem" }}>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
@@ -767,10 +787,7 @@ export default function NarrativeSection({
                       width: "auto",
                       minWidth: "110px",
                       height: "32px",
-                      boxSizing: "border-box",
-                      appearance: "none",
-                      WebkitAppearance: "none",
-                      MozAppearance: "none"
+                      boxSizing: "border-box"
                     }}
                     title="Select annotation mode: Supplement (add missing), Modify (update existing), or Recreate (from scratch)"
                   >
@@ -816,26 +833,6 @@ export default function NarrativeSection({
                   />
                 )}
               </div>
-            </div>
-          )}
-
-          {item.target_type === "character" && item.action_category && item.action_type && (
-            <div style={{ marginTop: "0.5rem" }}>
-              <label>
-                Context (optional)
-                <input
-                  type="text"
-                  value={item.action_context || ""}
-                  onChange={(e) => updateItem(idx, "action_context", e.target.value)}
-                  placeholder={`e.g., ${getContextTagsForAction(item.action_category, item.action_type).slice(0, 3).join(", ")}`}
-                  list={`context-suggestions-${idx}`}
-                />
-                <datalist id={`context-suggestions-${idx}`}>
-                  {getContextTagsForAction(item.action_category, item.action_type).map((tag) => (
-                    <option key={tag} value={tag} />
-                  ))}
-                </datalist>
-              </label>
             </div>
           )}
           
