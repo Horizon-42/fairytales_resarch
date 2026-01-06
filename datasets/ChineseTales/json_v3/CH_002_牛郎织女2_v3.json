@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "3.0",
   "metadata": {
     "id": "CH_002_牛郎织女2",
     "title": "牛郎织女2",
@@ -62,7 +62,7 @@
       "object_type": "prize",
       "instrument": "",
       "time_order": 1,
-      "relationship_multi": [
+      "relationships": [
         {
           "agent": "老牛",
           "target": "老牛",
@@ -71,14 +71,13 @@
           "sentiment": "romantic"
         }
       ],
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "",
-      "narrative_function": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     }
   ],
   "themes_and_motifs": {
