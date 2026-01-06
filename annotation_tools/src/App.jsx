@@ -881,7 +881,7 @@ export default function App() {
           return {
             event_type: "OTHER",
             description: n,
-            relationship: { items: [] },
+            relationships: [],
             action_layer: buildActionLayerV3({})
           };
         }
@@ -911,7 +911,7 @@ export default function App() {
         const actionLayer = buildActionLayerV3(result);
 
         // v3 schema: store nested structures and keep core fields; do not emit legacy relationship/action flat fields.
-        result.relationship = { items: relList };
+        result.relationships = relList;
         result.action_layer = actionLayer;
         delete result.relationship_level1;
         delete result.relationship_level2;
@@ -922,6 +922,9 @@ export default function App() {
         delete result.action_context;
         delete result.action_status;
         delete result.narrative_function;
+
+        // Remove any legacy v3 wrapper field if present
+        delete result.relationship;
 
         return result;
       }),
@@ -1075,7 +1078,7 @@ export default function App() {
     }
 
     const saveData = (version) => {
-      const data = version === "v2" ? jsonV2 : jsonV1;
+      const data = version === "v3" ? jsonV3 : (version === "v2" ? jsonV2 : jsonV1);
       const payload = JSON.stringify({
         originalPath: currentStory.path,
         content: data,

@@ -119,10 +119,9 @@ function extractActionFieldsFromLayer(evt) {
 }
 
 function normalizeV3RelationshipList(evt) {
-  const rel = evt && typeof evt === "object" ? evt.relationship : null;
-  const list = Array.isArray(rel)
-    ? rel
-    : (rel && typeof rel === "object" && Array.isArray(rel.items) ? rel.items : []);
+  const list = (evt && typeof evt === "object" && Array.isArray(evt.relationships))
+    ? evt.relationships
+    : [];
 
   return (Array.isArray(list) ? list : []).map((r) => {
     const rr = (r && typeof r === "object") ? r : {};
