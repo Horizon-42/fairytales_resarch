@@ -19,8 +19,21 @@
   "annotation": {
     "motif": {
       "atu_type": "",
-      "atu_categories": [],
-      "motif_type": [],
+      "atu_categories": [
+        "ATU 501: The Three Spinners (TALES OF MAGIC > Supernatural Helpers (500-559))"
+      ],
+      "motif_type": [
+        "Motif A705.1.2: A705.1.2. Clouds as tapa beaten out by woman in moon. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens.)",
+        "Motif A1133.2: A1133.2. Origin of clouds: creator ornaments the sky with clouds so that the mountains are sometimes shaded. (A. Mythological motifs. > A1100–A1199. Establishment of natural order.)",
+        "Motif A702.8: A702.8. Sky is black because once raised by means of dirty stick. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens.)",
+        "Motif A189.10: A189.10. Goddesses come down to earth by a silken thread, are offended by raja and produce drought. (A. Mythological motifs. > A100–A499. Gods. > A100–A199. The gods in general.)",
+        "Motif A625.2.3: A625.2.3. Raising the sky: striking with broom. Old woman's hump strikes clouds as she sweeps. She strikes at sky with broom and thus raises it. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A600–A699. The universe. > A600–A649. Creation of the universe.)",
+        "Motif A21.1: A21.1. Woman who fell from the sky. – Daughter of the sky-chief falls from the sky, is caught by birds, and lowered to the surface of the water. She becomes the creator. (A. Mythological motifs. > A0–A99. Creator.)",
+        "Motif A705.1.1: A705.1.1. Creator makes clouds from own vitals. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens.)",
+        "Motif A791.3: A791.3. Rainbow made as bridge by the gods. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens. > A790–A799. The heavenly lights.)",
+        "Motif A941.5.6: A941.5.6. Cloth from goddess, when spread by holy man over a spot, causes water to spring from earth. (A. Mythological motifs. > A900–A999. Topographical features of the earth. > A910–A949. Water features.)",
+        "Motif A705.2: A705.2. Nature of clouds (covered with skin). (Cf. A702.9.) (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens.)"
+      ],
       "character_archetypes": [
         {
           "name": "牛郎",
@@ -34,7 +47,7 @@
         },
         {
           "name": "老牛",
-          "alias": "Old Cow",
+          "alias": "Old Ox",
           "archetype": "Sidekick/Helper"
         },
         {
@@ -44,7 +57,7 @@
         },
         {
           "name": "天帝",
-          "alias": "Heavenly Emperor",
+          "alias": "Jade Emperor",
           "archetype": "Ruler"
         }
       ],
@@ -57,14 +70,73 @@
         "ANIMAL"
       ],
       "thinking_process": "",
-      "atu_evidence": {},
-      "motif_evidence": {}
+      "atu_evidence": {
+        "ATU 501: The Three Spinners (TALES OF MAGIC > Supernatural Helpers (500-559))": {
+          "evidence_keys": [
+            "S0-119"
+          ]
+        }
+      },
+      "motif_evidence": {
+        "Motif A705.1.2: A705.1.2. Clouds as tapa beaten out by woman in moon. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens.)": {
+          "evidence_keys": [
+            "S0-119"
+          ]
+        },
+        "Motif A1133.2: A1133.2. Origin of clouds: creator ornaments the sky with clouds so that the mountains are sometimes shaded. (A. Mythological motifs. > A1100–A1199. Establishment of natural order.)": {
+          "evidence_keys": [
+            "S0-119"
+          ]
+        },
+        "Motif A702.8: A702.8. Sky is black because once raised by means of dirty stick. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens.)": {
+          "evidence_keys": [
+            "S0-119"
+          ]
+        },
+        "Motif A189.10: A189.10. Goddesses come down to earth by a silken thread, are offended by raja and produce drought. (A. Mythological motifs. > A100–A499. Gods. > A100–A199. The gods in general.)": {
+          "evidence_keys": [
+            "S0-119"
+          ]
+        },
+        "Motif A625.2.3: A625.2.3. Raising the sky: striking with broom. Old woman's hump strikes clouds as she sweeps. She strikes at sky with broom and thus raises it. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A600–A699. The universe. > A600–A649. Creation of the universe.)": {
+          "evidence_keys": [
+            "S0-119"
+          ]
+        },
+        "Motif A21.1: A21.1. Woman who fell from the sky. – Daughter of the sky-chief falls from the sky, is caught by birds, and lowered to the surface of the water. She becomes the creator. (A. Mythological motifs. > A0–A99. Creator.)": {
+          "evidence_keys": [
+            "S0-119"
+          ]
+        },
+        "Motif A705.1.1: A705.1.1. Creator makes clouds from own vitals. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens.)": {
+          "evidence_keys": [
+            "S0-119"
+          ]
+        },
+        "Motif A791.3: A791.3. Rainbow made as bridge by the gods. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens. > A790–A799. The heavenly lights.)": {
+          "evidence_keys": [
+            "S0-119"
+          ]
+        },
+        "Motif A941.5.6: A941.5.6. Cloth from goddess, when spread by holy man over a spot, causes water to spring from earth. (A. Mythological motifs. > A900–A999. Topographical features of the earth. > A910–A949. Water features.)": {
+          "evidence_keys": [
+            "S0-119"
+          ]
+        },
+        "Motif A705.2: A705.2. Nature of clouds (covered with skin). (Cf. A702.9.) (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens.)": {
+          "evidence_keys": [
+            "S0-119"
+          ]
+        }
+      }
     },
     "deep": {
       "paragraph_summaries": {
-        "per_section": {},
+        "per_section": {
+          "S0-119": "相传织女是天帝的孙女或王母娘娘的外孙女，她住在银河东边，用神奇丝线在织布机上织出随季节变幻颜色的美丽云彩，称为‘天衣’。\nEnglish: According to legend, Zhi Nu is the granddaughter of the Heaven Emperor or the niece of the Queen Mother of Heaven. She resides in the east of the Milky Way, weaving beautiful clouds that change colors with the seasons using magical silk on a loom, known as 'heavenly robes'."
+        },
         "combined": [],
-        "whole": ""
+        "whole": "相传织女是天帝的孙女或王母娘娘的外孙女，居住在银河东岸，用神奇丝线在织布机上编织随季节变幻色彩的云霞，所织云彩被称为‘天衣’。\nEnglish: According to legend, Zhi Nu is the granddaughter of the Heaven Emperor or the niece of the Queen Mother of Heaven. She resides in the east of the Milky Way, weaving clouds that change colors with the seasons using magical silk on a loom, known as 'heavenly robes'."
       },
       "propp_functions": [],
       "propp_notes": ""
