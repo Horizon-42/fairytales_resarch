@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useEffect, useRef } from "react";
-import { organizeFiles, mapV1ToState, mapV2ToState, generateUUID } from "./utils/fileHandler.js";
+import { organizeFiles, mapV1ToState, mapV2ToState, mapV3ToState, generateUUID } from "./utils/fileHandler.js";
 import { downloadJson, relPathToDatasetHint, HIGHLIGHT_COLORS, emptyProppFn, extractEnglishFromRelationship, buildActionLayer } from "./utils/helpers.js";
 import { saveFolderCache, loadFolderCache, extractFolderPath } from "./utils/folderCache.js";
 import { getBackendUrl, clearBackendCache } from "./utils/backendConfig.js";
@@ -24,6 +24,7 @@ export default function App() {
   const [storyFiles, setStoryFiles] = useState([]);
   const [v1JsonFiles, setV1JsonFiles] = useState({});
   const [v2JsonFiles, setV2JsonFiles] = useState({});
+  const [v3JsonFiles, setV3JsonFiles] = useState({});
   const [selectedStoryIndex, setSelectedStoryIndex] = useState(-1);
   const [currentSelection, setCurrentSelection] = useState(null);
 
@@ -31,7 +32,7 @@ export default function App() {
     "datasets/iron/persian/persian/json/FA_XXX.json"
   );
   const [showPreview, setShowPreview] = useState(false);
-  const [previewVersion, setPreviewVersion] = useState("v2");
+  const [previewVersion, setPreviewVersion] = useState("v3");
 
   const [id, setId] = useState("FA_XXX");
   // Initialize culture from cache if available
@@ -828,9 +829,132 @@ export default function App() {
     };
   }, [id, culture, title, sourceText, meta, motif, paragraphSummaries, proppFns, proppNotes, narrativeStructure, crossValidation, qa]);
 
+  const jsonV3 = useMemo(() => {
+    const characters = Array.isArray(motif.character_archetypes)
+      ? motif.character_archetypes.map((c) =>
+          typeof c === "string" ? { name: "", alias: "", archetype: c } : c
+        )
+      : [];
+
+    const normalizeRelEntry = (r) => {
+      const rel = (r && typeof r === "object") ? r : {};
+      const level1 = rel.relationship_level1 || "";
+      return {
+        agent: rel.agent || "",
+        target: rel.target || "",
+        relationship_level1: level1 ? extractEnglishFromRelationship(level1) : "",
+        relationship_level2: rel.relationship_level2 || "",
+        sentiment: rel.sentiment || ""
+      };
+    };
+
+    const buildActionLayerV3 = (n) => {
+      const item = (n && typeof n === "object") ? n : {};
+      return {
+        category: item.action_category || "",
+        type: item.action_type || "",
+        context: item.action_context || "",
+        status: item.action_status || "",
+        function: item.narrative_function || ""
+      };
+    };
+
+    return {
+      version: "3.0",
+      metadata: {
+        id,
+        title,
+        culture,
+        annotator: qa.annotator,
+        date_annotated: qa.date_annotated,
+        confidence: qa.confidence
+      },
+      source_info: {
+        language: sourceText.language,
+        type: sourceText.type,
+        reference_uri: sourceText.reference_uri,
+        text_content: sourceText.text
+      },
+      characters: characters,
+      narrative_events: narrativeStructure.map((n) => {
+        if (typeof n === "string") {
+          return {
+            event_type: "OTHER",
+            description: n,
+            relationship: { items: [] },
+            action_layer: buildActionLayerV3({})
+          };
+        }
+
+        const result = { ...n };
+
+        const agents = Array.isArray(result.agents) ? result.agents.filter(Boolean) : [];
+        const targets = Array.isArray(result.targets) ? result.targets.filter(Boolean) : [];
+
+        const existingMultiList = Array.isArray(result.relationship_multi)
+          ? result.relationship_multi
+          : ((result.relationship_multi && typeof result.relationship_multi === "object") ? [result.relationship_multi] : []);
+
+        let relList = [];
+        if (existingMultiList.length > 0) {
+          relList = existingMultiList.map(normalizeRelEntry);
+        } else if (result.relationship_level1 || result.relationship_level2 || result.sentiment) {
+          relList = [normalizeRelEntry({
+            agent: agents[0] || "",
+            target: targets[0] || "",
+            relationship_level1: result.relationship_level1 || "",
+            relationship_level2: result.relationship_level2 || "",
+            sentiment: result.sentiment || ""
+          })];
+        }
+
+        const actionLayer = buildActionLayerV3(result);
+
+        // v3 schema: store nested structures and keep core fields; do not emit legacy relationship/action flat fields.
+        result.relationship = { items: relList };
+        result.action_layer = actionLayer;
+        delete result.relationship_level1;
+        delete result.relationship_level2;
+        delete result.relationship_multi;
+        delete result.sentiment;
+        delete result.action_category;
+        delete result.action_type;
+        delete result.action_context;
+        delete result.action_status;
+        delete result.narrative_function;
+
+        return result;
+      }),
+      themes_and_motifs: {
+        ending_type: meta.ending_type,
+        key_values: meta.key_values,
+        motif_type: Array.isArray(motif.motif_type) ? motif.motif_type : [],
+        atu_categories: Array.isArray(motif.atu_categories) ? motif.atu_categories : [],
+        obstacle_thrower: Array.isArray(motif.obstacle_thrower) ? motif.obstacle_thrower : [],
+        helper_type: Array.isArray(motif.helper_type) ? motif.helper_type : [],
+        thinking_process: motif.thinking_process,
+        atu_evidence: motif.atu_evidence || {},
+        motif_evidence: motif.motif_evidence || {}
+      },
+      analysis: {
+        propp_functions: proppFns.filter((f) => f.fn || f.evidence),
+        propp_notes: proppNotes,
+        paragraph_summaries: {
+          per_section: paragraphSummaries.perSection || {},
+          combined: (paragraphSummaries.combined || []).filter(
+            c => c && c.start_section && c.end_section && c.text && c.text.trim()
+          ),
+          whole: paragraphSummaries.whole || ""
+        },
+        bias_reflection: crossValidation.bias_reflection,
+        qa_notes: qa.notes
+      }
+    };
+  }, [id, culture, title, sourceText, meta, motif, paragraphSummaries, proppFns, proppNotes, narrativeStructure, crossValidation, qa]);
+
   // ========== Save/Load Functions ==========
   const handleSave = async (version, silent = false) => {
-    const data = version === "v2" ? jsonV2 : jsonV1;
+    const data = version === "v3" ? jsonV3 : (version === "v2" ? jsonV2 : jsonV1);
     const currentStory = storyFiles[selectedStoryIndex];
     
     if (!currentStory) {
@@ -859,9 +983,20 @@ export default function App() {
       }
     } catch (err) {
       console.error("Save failed, falling back to download", err);
-      const suffix = version === "v2" ? "_v2" : "_v1";
+      const suffix = version === "v3" ? "_v3" : (version === "v2" ? "_v2" : "_v1");
       if (!silent) downloadJson(`${id}${suffix}.json`, data);
     }
+  };
+
+  const handleSaveAll = async (silent = false) => {
+    if (selectedStoryIndex < 0 || !storyFiles[selectedStoryIndex]) {
+      if (!silent) alert("No story selected to save.");
+      return;
+    }
+    await handleSave("v1", true);
+    await handleSave("v2", true);
+    await handleSave("v3", true);
+    if (!silent) setLastAutoSave(new Date());
   };
 
   // Auto-save logic
@@ -899,10 +1034,11 @@ export default function App() {
       if ((e.metaKey || e.ctrlKey) && e.key === 's') {
         e.preventDefault(); // Prevent default browser save behavior
 
-        // Save both v1 and v2
+        // Save v1 + v2 + v3
         if (selectedStoryIndex >= 0 && storyFiles[selectedStoryIndex]) {
-          saveRef.current("v1", true); // Silent save for v1
-          saveRef.current("v2", true); // Silent save for v2
+          saveRef.current("v1", true);
+          saveRef.current("v2", true);
+          saveRef.current("v3", true);
         } else {
           alert("No story selected to save.");
         }
@@ -920,6 +1056,7 @@ export default function App() {
       if (selectedStoryIndex !== -1) {
         saveRef.current("v1", true);
         saveRef.current("v2", true);
+        saveRef.current("v3", true);
       }
     }, 5 * 60 * 1000);
 
@@ -979,10 +1116,11 @@ export default function App() {
       }
     };
 
-    // Save both versions
+    // Save all versions
     saveData("v1");
     saveData("v2");
-  }, [selectedStoryIndex, storyFiles, jsonV1, jsonV2]);
+    saveData("v3");
+  }, [selectedStoryIndex, storyFiles, jsonV1, jsonV2, jsonV3]);
 
   // Save before page unload/refresh
   useEffect(() => {
@@ -1254,15 +1392,16 @@ export default function App() {
     // If there's already loaded data, save it before loading new folder
     if (selectedStoryIndex >= 0 && storyFiles[selectedStoryIndex]) {
       try {
-        await handleSave("v1", true); // Silent save for v1
-        await handleSave("v2", true); // Silent save for v2
+        await handleSave("v1", true);
+        await handleSave("v2", true);
+        await handleSave("v3", true);
       } catch (err) {
         console.error("Failed to save before opening new folder:", err);
         // Continue loading new folder even if save fails
       }
     }
 
-    const { texts, v1Jsons, v2Jsons } = organizeFiles(files);
+    const { texts, v1Jsons, v2Jsons, v3Jsons } = organizeFiles(files);
     texts.sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true, sensitivity: 'base' }));
 
     const withContent = await Promise.all(
@@ -1276,6 +1415,7 @@ export default function App() {
     setStoryFiles(withContent);
     setV1JsonFiles(v1Jsons);
     setV2JsonFiles(v2Jsons);
+    setV3JsonFiles(v3Jsons);
 
     // Extract folder path and save to cache
     const folderPath = extractFolderPath(files, folderPathHint);
@@ -1292,7 +1432,7 @@ export default function App() {
     });
 
     if (withContent.length > 0) {
-      selectStoryWithData(targetIndex, withContent, v1Jsons, v2Jsons);
+      selectStoryWithData(targetIndex, withContent, v1Jsons, v2Jsons, v3Jsons);
     }
   };
 
@@ -1306,7 +1446,7 @@ export default function App() {
     await loadFilesFromFolderSelection(files, folderName);
   };
 
-  const selectStoryWithData = async (index, texts, v1Map, v2Map) => {
+  const selectStoryWithData = async (index, texts, v1Map, v2Map, v3Map) => {
     setSelectedStoryIndex(index);
     const story = texts[index];
     if (!story) return;
@@ -1349,7 +1489,9 @@ export default function App() {
       
       const result = await response.json();
       if (result.found && result.content) {
-        const mappedState = result.version === 2 ? mapV2ToState(result.content) : mapV1ToState(result.content);
+        const mappedState = result.version === 3
+          ? mapV3ToState(result.content)
+          : (result.version === 2 ? mapV2ToState(result.content) : mapV1ToState(result.content));
         loadState(mappedState);
         return;
       }
@@ -1357,8 +1499,8 @@ export default function App() {
       console.warn("Server load failed, falling back to browser memory files", err);
     }
 
-    let jsonFile = v2Map[idGuess];
-    let version = 2;
+    let jsonFile = (v3Map && v3Map[idGuess]) ? v3Map[idGuess] : v2Map[idGuess];
+    let version = (v3Map && v3Map[idGuess]) ? 3 : 2;
     
     if (!jsonFile) {
       jsonFile = v1Map[idGuess];
@@ -1369,7 +1511,7 @@ export default function App() {
       try {
         const content = await jsonFile.text();
         const data = JSON.parse(content);
-        const mappedState = version === 2 ? mapV2ToState(data) : mapV1ToState(data);
+        const mappedState = version === 3 ? mapV3ToState(data) : (version === 2 ? mapV2ToState(data) : mapV1ToState(data));
         loadState(mappedState);
       } catch (err) {
         console.error("Failed to load JSON annotation from memory", err);
@@ -1378,7 +1520,7 @@ export default function App() {
   };
 
   const handleSelectStory = (index) => {
-    selectStoryWithData(index, storyFiles, v1JsonFiles, v2JsonFiles);
+    selectStoryWithData(index, storyFiles, v1JsonFiles, v2JsonFiles, v3JsonFiles);
     // Update cache with new selected index
     const cache = loadFolderCache();
     if (cache) {
@@ -1775,11 +1917,8 @@ export default function App() {
                 Saved: {lastAutoSave.toLocaleTimeString()}
               </span>
             )}
-            <button className="primary-btn" onClick={() => handleSave("v1")}>
-              Save V1
-            </button>
-            <button className="primary-btn" onClick={() => handleSave("v2")}>
-              Save V2
+            <button className="primary-btn" onClick={() => handleSaveAll(false)}>
+              Save JSON
             </button>
           </div>
         </div>
@@ -1979,10 +2118,16 @@ export default function App() {
                     >
                       V2
                     </button>
+                    <button 
+                      className={`tab-btn ${previewVersion === "v3" ? "active" : ""}`}
+                      onClick={() => setPreviewVersion("v3")}
+                    >
+                      V3
+                    </button>
                   </div>
                 </div>
                 <pre className="json-preview">
-                  {JSON.stringify(previewVersion === "v2" ? jsonV2 : jsonV1, null, 2)}
+                  {JSON.stringify(previewVersion === "v3" ? jsonV3 : (previewVersion === "v2" ? jsonV2 : jsonV1), null, 2)}
                 </pre>
               </section>
             )}

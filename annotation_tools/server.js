@@ -138,7 +138,7 @@ app.post('/api/save', (req, res) => {
   const fileDir = path.dirname(fullOriginalPath);
   const fileName = path.basename(fullOriginalPath, path.extname(fullOriginalPath));
 
-  let targetDirName = version === 'v2' ? 'json_v2' : 'json';
+  let targetDirName = version === 'v3' ? 'json_v3' : (version === 'v2' ? 'json_v2' : 'json');
   let targetDir;
 
   const parentDir = path.dirname(fileDir);
@@ -159,7 +159,7 @@ app.post('/api/save', (req, res) => {
     return res.status(500).json({ error: 'Failed to create directory' });
   }
 
-    const suffix = version === 'v2' ? '_v2' : '';
+    const suffix = version === 'v3' ? '_v3' : (version === 'v2' ? '_v2' : '');
     const targetFileName = `${fileName}${suffix}.json`;
     const targetPath = path.join(targetDir, targetFileName);
 
@@ -194,12 +194,16 @@ app.post('/api/load', (req, res) => {
   
   // Sibling folder strategy (datasets/Category/texts -> datasets/Category/json_v2)
   if (currentDirName === 'texts' || currentDirName === 'traditional_texts') {
+    candidates.push({ path: path.join(parentDir, 'json_v3', `${fileName}_v3.json`), version: 3 });
+    candidates.push({ path: path.join(parentDir, 'json_v3', `${fileName}.json`), version: 3 });
     candidates.push({ path: path.join(parentDir, 'json_v2', `${fileName}_v2.json`), version: 2 });
     candidates.push({ path: path.join(parentDir, 'json_v2', `${fileName}.json`), version: 2 });
     candidates.push({ path: path.join(parentDir, 'json', `${fileName}.json`), version: 1 });
     candidates.push({ path: path.join(parentDir, 'json', `${fileName}_v1.json`), version: 1 });
   } else {
     // Nested strategy (MyStory/texts -> MyStory/json_v2)
+    candidates.push({ path: path.join(fileDir, 'json_v3', `${fileName}_v3.json`), version: 3 });
+    candidates.push({ path: path.join(fileDir, 'json_v3', `${fileName}.json`), version: 3 });
     candidates.push({ path: path.join(fileDir, 'json_v2', `${fileName}_v2.json`), version: 2 });
     candidates.push({ path: path.join(fileDir, 'json_v2', `${fileName}.json`), version: 2 });
     candidates.push({ path: path.join(fileDir, 'json', `${fileName}.json`), version: 1 });

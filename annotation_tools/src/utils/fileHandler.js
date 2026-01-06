@@ -4,6 +4,7 @@ export function organizeFiles(fileList) {
   const texts = [];
   const v1Jsons = {};
   const v2Jsons = {};
+  const v3Jsons = {};
 
   Array.from(fileList).forEach((file) => {
     const path = file.webkitRelativePath || file.name;
@@ -15,18 +16,23 @@ export function organizeFiles(fileList) {
       const id = fileName.replace('.txt', '');
       texts.push({ file, id, path });
     } else if (fileName.endsWith('.json')) {
-      const id = fileName.replace(/_v[12]\.json$/, '').replace('.json', '');
+      const id = fileName.replace(/_v[123]\.json$/, '').replace('.json', '');
       
       // Heuristic: check directory or filename suffix
-      // Users might name v2 files as *_v2.json or put them in json_v2 folder
+      // Users might name v2/v3 files as *_v2.json / *_v3.json or put them in json_v2/json_v3 folder
       const isV2Folder = dir.endsWith('json_v2') || dir.includes('/json_v2/');
       const isV2File = fileName.endsWith('_v2.json');
+
+      const isV3Folder = dir.endsWith('json_v3') || dir.includes('/json_v3/');
+      const isV3File = fileName.endsWith('_v3.json');
       
       // Also check content version if we could read it, but we can't here easily.
       // We rely on folder structure or naming conventions for now.
       // The user prompt said: "open or create 2 json folders... json and json_v2"
       
-      if (isV2Folder || isV2File) {
+      if (isV3Folder || isV3File) {
+        v3Jsons[id] = file;
+      } else if (isV2Folder || isV2File) {
         v2Jsons[id] = file;
       } else {
         v1Jsons[id] = file;
@@ -34,7 +40,7 @@ export function organizeFiles(fileList) {
     }
   });
 
-  return { texts, v1Jsons, v2Jsons };
+  return { texts, v1Jsons, v2Jsons, v3Jsons };
 }
 
 // Helper to generate UUID
@@ -99,15 +105,35 @@ function extractActionFieldsFromLayer(evt) {
       action_category: evt.action_layer.category || "",
       action_type: evt.action_layer.type || "",
       action_context: evt.action_layer.context || "",
-      action_status: evt.action_layer.status || ""
+      action_status: evt.action_layer.status || "",
+      narrative_function: evt.action_layer.function || evt.action_layer.narrative_function || evt.narrative_function || ""
     };
   }
   return {
     action_category: evt.action_category || "",
     action_type: evt.action_type || "",
     action_context: evt.action_context || "",
-    action_status: evt.action_status || ""
+    action_status: evt.action_status || "",
+    narrative_function: evt.narrative_function || ""
   };
+}
+
+function normalizeV3RelationshipList(evt) {
+  const rel = evt && typeof evt === "object" ? evt.relationship : null;
+  const list = Array.isArray(rel)
+    ? rel
+    : (rel && typeof rel === "object" && Array.isArray(rel.items) ? rel.items : []);
+
+  return (Array.isArray(list) ? list : []).map((r) => {
+    const rr = (r && typeof r === "object") ? r : {};
+    return {
+      agent: rr.agent || "",
+      target: rr.target || "",
+      relationship_level1: rr.relationship_level1 || rr.level1 || "",
+      relationship_level2: rr.relationship_level2 || rr.level2 || "",
+      sentiment: rr.sentiment || ""
+    };
+  });
 }
 
 // Helper to map V2 JSON to App State
@@ -252,6 +278,159 @@ export function mapV2ToState(data) {
     },
 
     // Source Text
+    sourceText: data.source_info ? {
+      text: data.source_info.text_content || "",
+      language: data.source_info.language || "",
+      type: data.source_info.type || "",
+      reference_uri: data.source_info.reference_uri || ""
+    } : {
+      text: "",
+      language: "",
+      type: "",
+      reference_uri: ""
+    }
+  };
+}
+
+// Helper to map V3 JSON to App State
+export function mapV3ToState(data) {
+  const meta = data.metadata || {};
+  const themes = data.themes_and_motifs || {};
+  const analysis = data.analysis || {};
+
+  return {
+    id: meta.id || "",
+    culture: meta.culture || "",
+    title: meta.title || "",
+    annotationLevel: meta.annotation_level || "story",
+
+    meta: {
+      atu_type: themes.atu_type || "",
+      main_motif: themes.atu_description || "",
+      ending_type: themes.ending_type || "",
+      key_values: themes.key_values || []
+    },
+
+    motif: {
+      character_archetypes: data.characters || [],
+      motif_type: (() => {
+        const mt = themes.motif_type;
+        if (Array.isArray(mt)) return mt;
+        if (typeof mt === "string" && mt.trim()) return [mt];
+        return [];
+      })(),
+      atu_categories: (() => {
+        const ac = themes.atu_categories;
+        if (Array.isArray(ac)) return ac;
+        if (typeof ac === "string" && ac.trim()) return [ac];
+        return [];
+      })(),
+      atu_evidence: (() => normalizeEvidenceMap(themes.atu_evidence))(),
+      motif_evidence: (() => normalizeEvidenceMap(themes.motif_evidence))(),
+      obstacle_pattern: themes.obstacle_pattern || "",
+      obstacle_thrower: normalizeObstacleThrower(themes.obstacle_thrower),
+      helper_type: normalizeHelperType(themes.helper_type),
+      thinking_process: themes.thinking_process || ""
+    },
+
+    narrativeStructure: (data.narrative_events || []).map((evt, index) => {
+      if (typeof evt === "string") {
+        return {
+          id: generateUUID(),
+          event_type: "OTHER",
+          description: evt,
+          narrative_function: "",
+          agents: [],
+          targets: [],
+          text_span: null,
+          target_type: "character",
+          object_type: "",
+          instrument: "",
+          time_order: index + 1,
+          relationship_level1: "",
+          relationship_level2: "",
+          relationship_multi: [],
+          sentiment: "",
+          action_category: "",
+          action_type: "",
+          action_context: "",
+          action_status: ""
+        };
+      }
+
+      const relList = normalizeV3RelationshipList(evt);
+      const actionFields = extractActionFieldsFromLayer(evt);
+      const narrativeFunction = actionFields.narrative_function || evt.narrative_function || "";
+
+      const agents = Array.isArray(evt.agents) ? evt.agents.filter(Boolean) : [];
+      const targets = Array.isArray(evt.targets) ? evt.targets.filter(Boolean) : [];
+      const isMultiRelationship = (evt.target_type || "character") === "character" && (agents.length > 1 || targets.length > 1 || relList.length > 1);
+
+      // Backfill legacy single-relationship fields from relationship list when unambiguous
+      const firstRel = relList[0] || {};
+      const legacyRelationshipLevel1 = isMultiRelationship ? "" : (evt.relationship_level1 || firstRel.relationship_level1 || "");
+      const legacyRelationshipLevel2 = isMultiRelationship ? "" : (evt.relationship_level2 || firstRel.relationship_level2 || "");
+      const legacySentiment = isMultiRelationship ? "" : (evt.sentiment || firstRel.sentiment || "");
+
+      return {
+        ...evt,
+        id: evt.id || generateUUID(),
+        target_type: evt.target_type || "character",
+        object_type: evt.object_type || "",
+        instrument: evt.instrument || "",
+        time_order: evt.time_order ?? (index + 1),
+        narrative_function: narrativeFunction,
+        relationship_multi: relList,
+        relationship_level1: legacyRelationshipLevel1,
+        relationship_level2: legacyRelationshipLevel2,
+        sentiment: legacySentiment,
+        action_category: actionFields.action_category || "",
+        action_type: actionFields.action_type || "",
+        action_context: actionFields.action_context || "",
+        action_status: actionFields.action_status || ""
+      };
+    }),
+
+    proppFns: (analysis.propp_functions || []).map(pf => ({
+      ...pf,
+      id: pf.id || generateUUID(),
+      narrative_event_id: pf.narrative_event_id || null
+    })),
+    proppNotes: analysis.propp_notes || "",
+    paragraphSummaries: (() => {
+      const raw = analysis.paragraph_summaries;
+      if (raw && typeof raw === "object" && !Array.isArray(raw)) {
+        const combined = Array.isArray(raw.combined)
+          ? raw.combined.filter(c => c && c.start_section && c.end_section)
+          : [];
+        return {
+          perSection: raw.per_section || {},
+          combined,
+          whole: raw.whole || ""
+        };
+      }
+      if (Array.isArray(raw)) {
+        return { perSection: {}, combined: [], whole: "" };
+      }
+      return { perSection: {}, combined: [], whole: "" };
+    })(),
+
+    crossValidation: {
+      bias_reflection: analysis.bias_reflection || {
+        cultural_reading: "",
+        gender_norms: "",
+        hero_villain_mapping: "",
+        ambiguous_motifs: []
+      }
+    },
+
+    qa: {
+      annotator: meta.annotator || "",
+      date_annotated: meta.date_annotated || new Date().toISOString().split("T")[0],
+      confidence: meta.confidence || "High",
+      notes: analysis.qa_notes || ""
+    },
+
     sourceText: data.source_info ? {
       text: data.source_info.text_content || "",
       language: data.source_info.language || "",
