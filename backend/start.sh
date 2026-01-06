@@ -20,6 +20,7 @@ RELOAD="${RELOAD:-0}"
 # Ollama settings (used by backend/main.py)
 OLLAMA_BASE_URL="${OLLAMA_BASE_URL:-http://127.0.0.1:11434}"
 OLLAMA_MODEL="${OLLAMA_MODEL:-qwen3:8b}"
+OLLAMA_EMBEDDING_MODEL="${OLLAMA_EMBEDDING_MODEL:-qwen3-embedding:4b}"
 
 usage() {
   cat <<EOF
@@ -39,6 +40,7 @@ Environment variables:
   RELOAD           1 to enable --reload (default: 0)
   OLLAMA_BASE_URL  Ollama URL (default: http://127.0.0.1:11434)
   OLLAMA_MODEL     Ollama model name (default: qwen3:8b)
+  OLLAMA_EMBEDDING_MODEL  Ollama embedding model (default: qwen3-embedding:4b)
 
 Examples:
   ./backend/start.sh setup
@@ -62,6 +64,7 @@ check_env() {
   echo "[check] HOST=${HOST} PORT=${PORT} LOG_LEVEL=${LOG_LEVEL} RELOAD=${RELOAD}"
   echo "[check] OLLAMA_BASE_URL=${OLLAMA_BASE_URL}"
   echo "[check] OLLAMA_MODEL=${OLLAMA_MODEL}"
+  echo "[check] OLLAMA_EMBEDDING_MODEL=${OLLAMA_EMBEDDING_MODEL}"
 
   # Import checks (fast fail with a helpful message)
   if ! conda run -n "${ENV_NAME}" python -c "import fastapi, uvicorn, requests" >/dev/null 2>&1; then
@@ -150,12 +153,14 @@ run_server() {
 
   echo "[run] Starting backend on http://${HOST}:${PORT} (env=${ENV_NAME})"
   echo "[run] Ollama: ${OLLAMA_BASE_URL}  model=${OLLAMA_MODEL}"
+  echo "[run] Embedding model: ${OLLAMA_EMBEDDING_MODEL}"
   echo "[run] Press Ctrl+C to stop"
 
   exec conda run -n "${ENV_NAME}" env \
     PYTHONUNBUFFERED=1 \
     OLLAMA_BASE_URL="${OLLAMA_BASE_URL}" \
     OLLAMA_MODEL="${OLLAMA_MODEL}" \
+    OLLAMA_EMBEDDING_MODEL="${OLLAMA_EMBEDDING_MODEL}" \
     python -m uvicorn backend.main:app \
       --app-dir "${ROOT_DIR}" \
       --host "${HOST}" \

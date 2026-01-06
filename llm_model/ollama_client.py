@@ -30,6 +30,48 @@ class OllamaError(RuntimeError):
     pass
 
 
+def list_local_models(
+    *,
+    base_url: str,
+    timeout_s: float = 5.0,
+) -> List[str]:
+    """List locally available model names from Ollama.
+
+    Uses GET /api/tags.
+
+    Returns:
+        A list of model names like ["qwen3:8b", "qwen3-embedding:4b", ...].
+    """
+
+    url = f"{base_url.rstrip('/')}/api/tags"
+    try:
+        resp = requests.get(url, timeout=timeout_s)
+    except requests.RequestException as exc:
+        raise OllamaError(f"Failed to reach Ollama at {url}: {exc}") from exc
+
+    if resp.status_code != 200:
+        raise OllamaError(f"Ollama /api/tags failed: HTTP {resp.status_code}: {resp.text[:500]}")
+
+    try:
+        data = resp.json()
+    except ValueError as exc:
+        raise OllamaError(f"Ollama returned non-JSON response on {url}: {resp.text[:500]}") from exc
+
+    models = data.get("models")
+    if not isinstance(models, list):
+        raise OllamaError(f"Unexpected /api/tags response shape: {data}")
+
+    names: List[str] = []
+    for m in models:
+        if not isinstance(m, dict):
+            continue
+        name = m.get("name")
+        if isinstance(name, str) and name:
+            names.append(name)
+
+    return names
+
+
 def embed(
     *,
     base_url: str,

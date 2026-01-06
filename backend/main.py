@@ -42,7 +42,7 @@ from llm_model.summaries_annotator import (
     annotate_single_paragraph_summary,
     annotate_whole_summary_from_per_paragraph,
 )
-from llm_model.ollama_client import OllamaConfig
+from llm_model.ollama_client import OllamaConfig, OllamaError, list_local_models
 from llm_model.vector_database import FairyVectorDB, VectorDBPaths
 from llm_model.vector_database.db import QueryConfig, VectorDBNotBuiltError
 
@@ -51,6 +51,48 @@ logger = logging.getLogger("fairytales.backend")
 
 
 _VECTOR_DB: Optional[FairyVectorDB] = None
+
+# Cached set of local Ollama model names (from GET /api/tags).
+_OLLAMA_MODELS: Optional[set[str]] = None
+
+
+def _refresh_ollama_models() -> Optional[set[str]]:
+    """Best-effort refresh of the local Ollama model list.
+
+    Returns None if Ollama is unreachable or returns an unexpected response.
+    """
+
+    global _OLLAMA_MODELS
+    base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
+    try:
+        names = list_local_models(base_url=base_url, timeout_s=3.0)
+    except OllamaError as exc:
+        logger.warning("Ollama model check failed (%s): %s", base_url, exc)
+        _OLLAMA_MODELS = None
+        return None
+
+    _OLLAMA_MODELS = set(names)
+    return _OLLAMA_MODELS
+
+
+def _ensure_ollama_model_available(*, model_name: str, purpose: str) -> None:
+    """Fail fast if we know a required Ollama model is not pulled."""
+
+    if not model_name:
+        return
+
+    # If we haven't checked yet, try once (best-effort).
+    if _OLLAMA_MODELS is None:
+        _refresh_ollama_models()
+
+    if _OLLAMA_MODELS is not None and model_name not in _OLLAMA_MODELS:
+        raise HTTPException(
+            status_code=503,
+            detail=(
+                f"Required Ollama model for {purpose} is not available locally: '{model_name}'. "
+                f"Run: ollama pull {model_name}"
+            ),
+        )
 
 
 def _get_vector_db() -> FairyVectorDB:
@@ -271,8 +313,22 @@ def _on_startup() -> None:
     # Uvicorn configures logging; this will show up in the server output.
     base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
     model = _env("OLLAMA_MODEL", "qwen3:8b")
+    embedding_model = _env("OLLAMA_EMBEDDING_MODEL", "qwen3-embedding:4b")
     logger.info("Backend starting")
-    logger.info("Ollama: base_url=%s model=%s", base_url, model)
+    logger.info(
+        "Ollama: base_url=%s model=%s embedding_model=%s", base_url, model, embedding_model
+    )
+
+    models = _refresh_ollama_models()
+    if models is not None:
+        if model not in models:
+            logger.warning("Ollama chat model not found locally: %s (run: ollama pull %s)", model, model)
+        if embedding_model not in models:
+            logger.warning(
+                "Ollama embedding model not found locally: %s (run: ollama pull %s)",
+                embedding_model,
+                embedding_model,
+            )
 
 
 @app.on_event("shutdown")
@@ -408,6 +464,13 @@ def auto_segment_narrative_endpoint(req: NarrativeAutoSegmentRequest) -> Narrati
     default_model = _env("OLLAMA_MODEL", "qwen3:8b")
     default_embedding_model = _env("OLLAMA_EMBEDDING_MODEL", "qwen3-embedding:4b")
 
+    # Fail fast when embeddings are required.
+    if req.mode == "embedding_assisted":
+        _ensure_ollama_model_available(
+            model_name=req.embedding_model or default_embedding_model,
+            purpose="embedding-assisted narrative segmentation",
+        )
+
     seg_cfg = NarrativeSegmentationConfig(
         ollama=OllamaConfig(
             base_url=base_url,
@@ -516,6 +579,11 @@ def detect_motif_atu(req: MotifAtuDetectRequest) -> MotifAtuDetectResponse:
 
     base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
     embedding_model = req.embedding_model or _env("OLLAMA_EMBEDDING_MODEL", "qwen3-embedding:4b")
+
+    _ensure_ollama_model_available(
+        model_name=embedding_model,
+        purpose="motif/ATU retrieval embeddings",
+    )
 
     try:
         db = _get_vector_db()
