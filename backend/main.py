@@ -206,7 +206,12 @@ class SummaryParagraphResponse(BaseModel):
 
 
 class SummaryWholeRequest(BaseModel):
-    per_paragraph: Dict[str, str] = Field(..., description="Map of paragraph index to summary")
+    per_paragraph: Optional[Dict[str, str]] = Field(
+        None, description="Map of paragraph index to summary (legacy)"
+    )
+    per_section: Optional[Dict[str, str]] = Field(
+        None, description="Map of text_section to summary (preferred)"
+    )
     language: str = Field("en", description="en/zh/fa/ja/other")
     model: Optional[str] = Field(None, description="Override Ollama model name")
 
@@ -435,8 +440,9 @@ def annotate_summary_whole_endpoint(req: SummaryWholeRequest) -> SummaryWholeRes
     )
 
     try:
+        per = req.per_section or req.per_paragraph or {}
         whole = annotate_whole_summary_from_per_paragraph(
-            per_paragraph=req.per_paragraph,
+            per_paragraph=per,
             language=req.language,
             config=SummariesAnnotatorConfig(ollama=ollama_cfg),
         )
