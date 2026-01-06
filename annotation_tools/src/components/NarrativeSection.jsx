@@ -800,19 +800,20 @@ export default function NarrativeSection({
                         key={relIdx}
                         style={{
                           display: "grid",
-                          gridTemplateColumns: "1fr 1.2fr 1fr 1fr 1fr auto",
+                          gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) auto",
                           gap: "0.5rem",
                           alignItems: "end",
                           marginTop: "0.4rem"
                         }}
                       >
-                        <label>
+                        <label style={{ marginBottom: 0, minWidth: 0 }}>
                           Agent
                           <select
                             value={relEntry.agent}
                             onChange={(e) => updateRel({ agent: e.target.value })}
                             disabled={agents.length <= 1}
                             style={controlStyle}
+                            title={relEntry.agent || "Agent"}
                           >
                             <option value="">– Select –</option>
                             {agents.map((name) => (
@@ -823,12 +824,13 @@ export default function NarrativeSection({
                           </select>
                         </label>
 
-                        <label>
+                        <label style={{ marginBottom: 0, minWidth: 0 }}>
                           Relationship L1
                           <select
                             value={relEntry.relationship_level1}
                             onChange={(e) => updateRel({ relationship_level1: e.target.value }, true)}
                             style={controlStyle}
+                            title={relEntry.relationship_level1 || "Relationship L1"}
                           >
                             <option value="">– Select –</option>
                             {RELATIONSHIP_LEVEL1.map((l1) => {
@@ -843,13 +845,14 @@ export default function NarrativeSection({
                           </select>
                         </label>
 
-                        <label>
+                        <label style={{ marginBottom: 0, minWidth: 0 }}>
                           Relationship L2
                           <select
                             value={relEntry.relationship_level2}
                             onChange={(e) => updateRel({ relationship_level2: e.target.value })}
                             disabled={!level1}
                             style={controlStyle}
+                            title={relEntry.relationship_level2 || "Relationship L2"}
                           >
                             <option value="">– Select –</option>
                             {level1 && getRelationshipLevel2Options(level1).map((l2) => (
@@ -860,12 +863,13 @@ export default function NarrativeSection({
                           </select>
                         </label>
 
-                        <label>
+                        <label style={{ marginBottom: 0, minWidth: 0 }}>
                           Sentiment
                           <select
                             value={relEntry.sentiment}
                             onChange={(e) => updateRel({ sentiment: e.target.value })}
                             style={controlStyle}
+                            title={relEntry.sentiment || "Sentiment"}
                           >
                             <option value="">– Select –</option>
                             {SENTIMENT_TAGS.map((tag) => (
@@ -876,13 +880,14 @@ export default function NarrativeSection({
                           </select>
                         </label>
 
-                        <label>
+                        <label style={{ marginBottom: 0, minWidth: 0 }}>
                           Target
                           <select
                             value={relEntry.target}
                             onChange={(e) => updateRel({ target: e.target.value })}
                             disabled={targets.length <= 1}
                             style={controlStyle}
+                            title={relEntry.target || "Target"}
                           >
                             <option value="">– Select –</option>
                             {targets.map((name) => (
@@ -893,19 +898,21 @@ export default function NarrativeSection({
                           </select>
                         </label>
 
-                        <button
-                          type="button"
-                          className="ghost-btn"
-                          style={{ padding: "0 0.45rem", height: "32px" }}
-                          onClick={() => {
-                            const current = ensureAtLeastOneRelationship().map(ensureRelationshipMultiEntryShape);
-                            const next = current.filter((_, i) => i !== relIdx);
-                            setRelationshipMultiList(next.length > 0 ? next : [ensureRelationshipMultiEntryShape({})]);
-                          }}
-                          title="Remove relationship"
-                        >
-                          ×
-                        </button>
+                        <div style={{ paddingTop: "1.15rem" }}>
+                          <button
+                            type="button"
+                            className="ghost-btn"
+                            style={{ padding: "0 0.45rem", height: "32px", marginBottom: 0, alignSelf: "end" }}
+                            onClick={() => {
+                              const current = ensureAtLeastOneRelationship().map(ensureRelationshipMultiEntryShape);
+                              const next = current.filter((_, i) => i !== relIdx);
+                              setRelationshipMultiList(next.length > 0 ? next : [ensureRelationshipMultiEntryShape({})]);
+                            }}
+                            title="Remove relationship"
+                          >
+                            ×
+                          </button>
+                        </div>
                       </div>
                     );
                   })}
