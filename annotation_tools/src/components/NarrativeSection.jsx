@@ -258,6 +258,644 @@ export default function NarrativeSection({
     boxSizing: "border-box"
   };
 
+  const renderMultiRelationshipEditor = ({
+    agents,
+    targets,
+    ensureAtLeastOneRelationship,
+    setRelationshipMultiList
+  }) => {
+    return (
+      <div style={{ marginBottom: "0.25rem" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "0.5rem" }}>
+          <div style={{ fontSize: "0.8rem", color: "#6b7280" }}>
+            Relationship (multi)
+          </div>
+          <button
+            type="button"
+            className="ghost-btn"
+            onClick={() => {
+              const current = ensureAtLeastOneRelationship();
+              setRelationshipMultiList(addRelationshipMultiRow(current, { agents, targets }));
+            }}
+            style={{ padding: "0.2rem 0.45rem", height: "28px", fontSize: "0.8rem" }}
+          >
+            + Add
+          </button>
+        </div>
+
+        {ensureAtLeastOneRelationship().map((rel, relIdx) => {
+          const relEntry = ensureRelationshipMultiEntryShape(rel);
+          const level1 = relEntry.relationship_level1 || "";
+
+          const updateRel = (partial, resetLevel2 = false) => {
+            const current = ensureAtLeastOneRelationship();
+            setRelationshipMultiList(updateRelationshipMultiRow(current, relIdx, partial, resetLevel2));
+          };
+
+          return (
+            <div
+              key={relIdx}
+              style={{
+                display: "grid",
+                gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) auto",
+                gap: "0.5rem",
+                alignItems: "end",
+                marginTop: "0.4rem"
+              }}
+            >
+              <label style={{ marginBottom: 0, minWidth: 0 }}>
+                Agent
+                <select
+                  value={agents.length === 1 ? (agents[0] || "") : relEntry.agent}
+                  onChange={(e) => updateRel({ agent: e.target.value })}
+                  disabled={agents.length <= 1}
+                  style={relationshipRowControlStyle}
+                  title={(agents.length === 1 ? agents[0] : relEntry.agent) || "Agent"}
+                >
+                  <option value="">– Select –</option>
+                  {agents.map((name) => (
+                    <option key={name} value={name}>
+                      {name}
+                    </option>
+                  ))}
+                </select>
+              </label>
+
+              <label style={{ marginBottom: 0, minWidth: 0 }}>
+                Relationship L1
+                <select
+                  value={relEntry.relationship_level1}
+                  onChange={(e) => updateRel({ relationship_level1: e.target.value }, true)}
+                  style={relationshipRowControlStyle}
+                  title={relEntry.relationship_level1 || "Relationship L1"}
+                >
+                  <option value="">– Select –</option>
+                  {renderRelationshipLevel1Options()}
+                </select>
+              </label>
+
+              <label style={{ marginBottom: 0, minWidth: 0 }}>
+                Relationship L2
+                <select
+                  value={relEntry.relationship_level2}
+                  onChange={(e) => updateRel({ relationship_level2: e.target.value })}
+                  disabled={!level1}
+                  style={relationshipRowControlStyle}
+                  title={relEntry.relationship_level2 || "Relationship L2"}
+                >
+                  <option value="">– Select –</option>
+                  {renderRelationshipLevel2Options(level1)}
+                </select>
+              </label>
+
+              <label style={{ marginBottom: 0, minWidth: 0 }}>
+                Sentiment
+                <select
+                  value={relEntry.sentiment}
+                  onChange={(e) => updateRel({ sentiment: e.target.value })}
+                  style={relationshipRowControlStyle}
+                  title={relEntry.sentiment || "Sentiment"}
+                >
+                  <option value="">– Select –</option>
+                  {SENTIMENT_TAGS.map((tag) => (
+                    <option key={tag} value={tag}>
+                      {tag}
+                    </option>
+                  ))}
+                </select>
+              </label>
+
+              <label style={{ marginBottom: 0, minWidth: 0 }}>
+                Target
+                <select
+                  value={targets.length === 1 ? (targets[0] || "") : relEntry.target}
+                  onChange={(e) => updateRel({ target: e.target.value })}
+                  disabled={targets.length <= 1}
+                  style={relationshipRowControlStyle}
+                  title={(targets.length === 1 ? targets[0] : relEntry.target) || "Target"}
+                >
+                  <option value="">– Select –</option>
+                  {targets.map((name) => (
+                    <option key={name} value={name}>
+                      {name}
+                    </option>
+                  ))}
+                </select>
+              </label>
+
+              <div style={{ paddingTop: "1.15rem" }}>
+                <button
+                  type="button"
+                  className="ghost-btn"
+                  style={{ padding: "0 0.45rem", height: "32px", marginBottom: 0, alignSelf: "end" }}
+                  onClick={() => {
+                    const current = ensureAtLeastOneRelationship();
+                    setRelationshipMultiList(removeRelationshipMultiRow(current, relIdx));
+                  }}
+                  title="Remove relationship"
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
+  const renderRelationshipSection = ({
+    item,
+    idx,
+    multiRel,
+    agents,
+    targets,
+    effectiveRelationshipLevel1,
+    effectiveRelationshipLevel2,
+    ensureAtLeastOneRelationship,
+    setRelationshipMultiList
+  }) => {
+    if (item.target_type !== "character") return null;
+
+    return (
+      <>
+        {!multiRel ? (
+          <div className="grid-3">
+            <label>
+              Relationship L1
+              <select
+                value={effectiveRelationshipLevel1}
+                onChange={(e) => {
+                  // Update level1 and reset level2 in a single update
+                  updateItem(idx, {
+                    relationship_level1: e.target.value,
+                    relationship_level2: ""
+                  });
+                }}
+              >
+                <option value="">– Select –</option>
+                {renderRelationshipLevel1Options()}
+              </select>
+            </label>
+            <label>
+              Relationship L2
+              <select
+                value={effectiveRelationshipLevel2}
+                onChange={(e) => updateItem(idx, "relationship_level2", e.target.value)}
+                disabled={!effectiveRelationshipLevel1}
+              >
+                <option value="">– Select –</option>
+                {renderRelationshipLevel2Options(effectiveRelationshipLevel1)}
+              </select>
+            </label>
+            <label>
+              Sentiment
+              <select
+                value={item.sentiment || ""}
+                onChange={(e) => updateItem(idx, "sentiment", e.target.value)}
+              >
+                <option value="">– Select –</option>
+                {SENTIMENT_TAGS.map((tag) => (
+                  <option key={tag} value={tag}>
+                    {tag}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+        ) : (
+          renderMultiRelationshipEditor({
+            agents,
+            targets,
+            ensureAtLeastOneRelationship,
+            setRelationshipMultiList
+          })
+        )}
+      </>
+    );
+  };
+
+  const renderAutoAnnotateEventControls = ({ item, idx }) => {
+    if (typeof onAutoAnnotateEvent !== "function") return null;
+
+    return (
+      <div style={{ marginTop: "0.5rem" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+          <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+            <select
+              value={eventAnnotationModes[item.id] || "recreate"}
+              onChange={(e) => {
+                const mode = e.target.value;
+                setEventAnnotationModes(prev => ({ ...prev, [item.id]: mode }));
+                // Clear additional prompt when switching to recreate mode
+                if (mode === "recreate") {
+                  setEventAdditionalPrompts(prev => {
+                    const next = { ...prev };
+                    delete next[item.id];
+                    return next;
+                  });
+                }
+              }}
+              disabled={!!(autoAnnotateEventLoading && autoAnnotateEventLoading[item.id])}
+              style={{
+                padding: "0.4rem 0.5rem",
+                fontSize: "0.8rem",
+                lineHeight: "1.2",
+                border: "1px solid #cbd5e1",
+                borderRadius: "6px",
+                backgroundColor: "white",
+                cursor: (autoAnnotateEventLoading && autoAnnotateEventLoading[item.id]) ? "not-allowed" : "pointer",
+                marginBottom: 0,
+                width: "auto",
+                minWidth: "110px",
+                height: "32px",
+                boxSizing: "border-box"
+              }}
+              title="Select annotation mode: Supplement (add missing), Modify (update existing), or Recreate (from scratch)"
+            >
+              <option value="recreate">Recreate</option>
+              <option value="supplement">Supplement</option>
+              <option value="modify">Modify</option>
+            </select>
+            <button
+              type="button"
+              className="ghost-btn"
+              onClick={() => {
+                const mode = eventAnnotationModes[item.id] || "recreate";
+                const additionalPrompt = eventAdditionalPrompts[item.id] || "";
+                onAutoAnnotateEvent(item.id, idx, mode, additionalPrompt);
+              }}
+              disabled={!!(autoAnnotateEventLoading && autoAnnotateEventLoading[item.id])}
+              title="Auto-annotate this event using the LLM backend"
+              style={{ minWidth: "100px", whiteSpace: "nowrap", height: "32px" }}
+            >
+              {(autoAnnotateEventLoading && autoAnnotateEventLoading[item.id]) ? "Annotating…" : "Auto-annotate"}
+            </button>
+          </div>
+          {((eventAnnotationModes[item.id] === "supplement") || (eventAnnotationModes[item.id] === "modify")) && (
+            <input
+              type="text"
+              value={eventAdditionalPrompts[item.id] || ""}
+              onChange={(e) => {
+                setEventAdditionalPrompts(prev => ({ ...prev, [item.id]: e.target.value }));
+              }}
+              placeholder="Additional instructions (optional)..."
+              disabled={!!(autoAnnotateEventLoading && autoAnnotateEventLoading[item.id])}
+              style={{
+                padding: "0.4rem 0.5rem",
+                fontSize: "0.8rem",
+                border: "1px solid #cbd5e1",
+                borderRadius: "6px",
+                backgroundColor: "white",
+                marginBottom: 0,
+                width: "100%",
+                boxSizing: "border-box"
+              }}
+              title="Enter additional instructions for the annotation model"
+            />
+          )}
+        </div>
+      </div>
+    );
+  };
+
+  const renderActionSection = ({ item, idx }) => {
+    if (item.target_type !== "character") return null;
+
+    return (
+      <>
+        <div className="grid-3" style={{ marginTop: "0.5rem" }}>
+          <label>
+            Action Category
+            <select
+              value={item.action_category || ""}
+              onChange={(e) => {
+                // Update category and reset action_type and action_context in a single update
+                updateItem(idx, {
+                  action_category: e.target.value,
+                  action_type: "",
+                  action_context: ""
+                });
+              }}
+            >
+              <option value="">– Select –</option>
+              {ACTION_CATEGORIES.map((cat) => (
+                <option key={cat.code} value={cat.code}>
+                  {cat.name}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label>
+            Action Type
+            <select
+              value={item.action_type || ""}
+              onChange={(e) => {
+                // Update action_type and reset context in a single update
+                updateItem(idx, {
+                  action_type: e.target.value,
+                  action_context: ""
+                });
+              }}
+              disabled={!item.action_category}
+            >
+              <option value="">– Select –</option>
+              {item.action_category && getActionTypesForCategory(item.action_category).map((action) => (
+                <option key={action.code} value={action.code}>
+                  {action.name}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label>
+            Action Status
+            <select
+              value={item.action_status || ""}
+              onChange={(e) => updateItem(idx, "action_status", e.target.value)}
+            >
+              <option value="">– Select –</option>
+              {ACTION_STATUS.map((status) => (
+                <option key={status.code} value={status.code}>
+                  {status.name}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
+
+        {item.action_category && item.action_type && (
+          <div style={{ marginTop: "0.5rem" }}>
+            <label>
+              Context (optional)
+              <input
+                type="text"
+                value={item.action_context || ""}
+                onChange={(e) => updateItem(idx, "action_context", e.target.value)}
+                placeholder={`e.g., ${getContextTagsForAction(item.action_category, item.action_type).slice(0, 3).join(", ")}`}
+                list={`context-suggestions-${idx}`}
+              />
+              <datalist id={`context-suggestions-${idx}`}>
+                {getContextTagsForAction(item.action_category, item.action_type).map((tag) => (
+                  <option key={tag} value={tag} />
+                ))}
+              </datalist>
+            </label>
+          </div>
+        )}
+      </>
+    );
+  };
+
+  const renderEventHeaderSection = ({ item, idx }) => {
+    return (
+      <div className="grid-2">
+        <div>
+          <label>Event Type (Propp)</label>
+          <select
+            value={item.event_type}
+            onChange={(e) => updateItem(idx, "event_type", e.target.value)}
+          >
+            <option value="">– Select Event –</option>
+            {PROPP_FUNCTIONS.map((fn) => (
+              <option key={fn} value={fn}>
+                {formatProppFunctionName(fn)}
+              </option>
+            ))}
+            <option value="OTHER">Other</option>
+          </select>
+        </div>
+        <div>
+          <label>Text Selection</label>
+          <div style={{ display: "flex", gap: "0.5rem" }}>
+            <input
+              value={
+                item.text_span
+                  ? `${item.text_span.start}-${item.text_span.end}`
+                  : "None"
+              }
+              readOnly
+              placeholder="No selection"
+              style={{ background: "#f3f4f6", marginBottom: 0, flex: 1 }}
+            />
+            <button
+              type="button"
+              className="primary-btn"
+              style={{ padding: "0.5rem", fontSize: "0.75rem", height: "34px", whiteSpace: "nowrap" }}
+              onClick={() => captureSelection(idx)}
+              disabled={!currentSelection}
+            >
+              Capture
+            </button>
+            <button
+              type="button"
+              className={`ghost-btn ${isHighlighted(idx) ? "active-highlight" : ""}`}
+              style={{
+                padding: "0.5rem",
+                fontSize: "0.75rem",
+                height: "34px",
+                background: isHighlighted(idx) ? "#60a5fa" : undefined,
+                color: isHighlighted(idx) ? "#fff" : undefined,
+                fontWeight: isHighlighted(idx) ? "bold" : undefined,
+                whiteSpace: "nowrap"
+              }}
+              onClick={() => toggleHighlight(idx, item.text_span)}
+              disabled={!item.text_span}
+            >
+              {isHighlighted(idx) ? "Hide" : "Highlight"}
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const renderEventDetailsSection = ({ item, idx }) => {
+    return (
+      <>
+        <div style={{ marginTop: "0.25rem" }}>
+          <label>
+            Narrative Function
+            <select
+              value={item.narrative_function || ""}
+              onChange={(e) => updateItem(idx, "narrative_function", e.target.value)}
+            >
+              <option value="">– Select –</option>
+              {NARRATIVE_FUNCTIONS.map((fn) => (
+                <option key={fn.code} value={fn.code}>
+                  {fn.name}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
+
+        <label>
+          Description / Detail
+          <textarea
+            rows={2}
+            value={item.description}
+            onChange={(e) => updateItem(idx, "description", e.target.value)}
+            placeholder="Describe the specific event..."
+          />
+        </label>
+
+        <div className="grid-2">
+          <label>
+            Agents (Doer)
+            <CreatableSelect
+              isMulti
+              options={characterOptions}
+              value={(item.agents || []).map(agentName => {
+                const found = characterOptions.find(opt => opt.value === agentName);
+                return found || { label: agentName, value: agentName };
+              })}
+              onChange={(newValue) => handleMultiCharChange(idx, "agents", newValue)}
+              placeholder="Select or create agents..."
+              styles={customSelectStyles}
+            />
+          </label>
+          <label>
+            Targets (Receiver)
+            {item.target_type === "object" ? (
+              <input
+                value={item.targets && item.targets.length > 0 ? item.targets[0] : ""}
+                onChange={(e) => updateItem(idx, "targets", [e.target.value])}
+                placeholder="Enter object target name..."
+                style={{ marginTop: '4px', width: '100%', padding: '8px', border: '1px solid #ccc', borderRadius: '4px' }}
+              />
+            ) : (
+              <CreatableSelect
+                isMulti
+                options={characterOptions}
+                value={(item.targets || []).map(targetName => {
+                  const found = characterOptions.find(opt => opt.value === targetName);
+                  return found || { label: targetName, value: targetName };
+                })}
+                onChange={(newValue) => handleMultiCharChange(idx, "targets", newValue)}
+                placeholder="Select or create targets..."
+                styles={customSelectStyles}
+              />
+            )}
+          </label>
+        </div>
+
+        <div className="grid-3">
+          <label>
+            Target Type
+            <select
+              value={item.target_type || ""}
+              onChange={(e) => updateItem(idx, "target_type", e.target.value)}
+            >
+              <option value="">– Select –</option>
+              {TARGET_CATEGORIES.map((t) => (
+                <option key={t} value={t}>
+                  {t}
+                </option>
+              ))}
+            </select>
+          </label>
+          {item.target_type === "object" && (
+            <label>
+              Object Type
+              <select
+                value={item.object_type || ""}
+                onChange={(e) => updateItem(idx, "object_type", e.target.value)}
+              >
+                <option value="">– Select –</option>
+                {OBJECT_TYPES.map((t) => (
+                  <option key={t} value={t}>
+                    {t}
+                  </option>
+                ))}
+              </select>
+            </label>
+          )}
+          <label>
+            Instrument
+            <input
+              value={item.instrument || ""}
+              onChange={(e) => updateItem(idx, "instrument", e.target.value)}
+              placeholder="Instrument used..."
+            />
+          </label>
+        </div>
+      </>
+    );
+  };
+
+  const renderNarrativeItemRow = (item, idx) => {
+    const {
+      multiRel,
+      rmList,
+      agents,
+      targets,
+      effectiveRelationshipLevel1,
+      effectiveRelationshipLevel2
+    } = deriveRelationshipUiState(item);
+
+    const setRelationshipMultiList = (nextList) => {
+      updateItem(idx, buildSetRelationshipMultiUpdates(nextList));
+    };
+
+    const ensureAtLeastOneRelationship = () =>
+      ensureAtLeastOneRelationshipMulti({ item, rmList, agents, targets });
+
+    return (
+      <div key={item.id || idx} className="propp-row">
+        {renderEventHeaderSection({ item, idx })}
+
+        {renderEventDetailsSection({ item, idx })}
+
+        {renderRelationshipSection({
+          item,
+          idx,
+          multiRel,
+          agents,
+          targets,
+          effectiveRelationshipLevel1,
+          effectiveRelationshipLevel2,
+          ensureAtLeastOneRelationship,
+          setRelationshipMultiList
+        })}
+
+        {renderActionSection({ item, idx })}
+
+        {/* Auto-annotation UI for individual event (placed under Context control) */}
+        {renderAutoAnnotateEventControls({ item, idx })}
+
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginTop: "0.5rem" }}>
+          <div style={{ display: "flex", alignItems: "baseline", gap: "0.25rem" }}>
+            <span style={{ fontSize: "0.85rem", color: "#6b7280" }}>Time Order:</span>
+            <input
+              type="number"
+              min="1"
+              value={item.time_order ?? ""}
+              onChange={(e) => updateItem(idx, "time_order", parseInt(e.target.value) || null)}
+              style={{
+                width: "60px",
+                padding: "0.4rem 0.5rem",
+                fontSize: "0.8rem",
+                border: "1px solid #cbd5e1",
+                borderRadius: "6px",
+                boxSizing: "border-box",
+                lineHeight: "1.2"
+              }}
+              placeholder="#"
+            />
+          </div>
+          <button
+            type="button"
+            className="ghost-btn"
+            style={{ color: "#ef4444", borderColor: "#ef4444" }}
+            onClick={() => removeItem(idx)}
+          >
+            Remove Event
+          </button>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <section className="card">
       <h2>Narrative Events</h2>
@@ -361,577 +999,7 @@ export default function NarrativeSection({
         </div>
       )}
 
-      {items.map((item, idx) => (
-        <div key={item.id || idx} className="propp-row">
-          {(() => {
-            const {
-              multiRel,
-              rmList,
-              agents,
-              targets,
-              effectiveRelationshipLevel1,
-              effectiveRelationshipLevel2
-            } = deriveRelationshipUiState(item);
-
-            const setRelationshipMultiList = (nextList) => {
-              updateItem(idx, buildSetRelationshipMultiUpdates(nextList));
-            };
-
-            const ensureAtLeastOneRelationship = () =>
-              ensureAtLeastOneRelationshipMulti({ item, rmList, agents, targets });
-
-            return (
-              <>
-          <div className="grid-2">
-            <div>
-              <label>Event Type (Propp)</label>
-              <select
-                value={item.event_type}
-                onChange={(e) => updateItem(idx, "event_type", e.target.value)}
-              >
-                <option value="">– Select Event –</option>
-                {PROPP_FUNCTIONS.map((fn) => (
-                  <option key={fn} value={fn}>
-                    {formatProppFunctionName(fn)}
-                  </option>
-                ))}
-                <option value="OTHER">Other</option>
-              </select>
-            </div>
-            <div>
-              <label>Text Selection</label>
-              <div style={{ display: "flex", gap: "0.5rem" }}>
-                <input
-                  value={
-                    item.text_span
-                      ? `${item.text_span.start}-${item.text_span.end}`
-                      : "None"
-                  }
-                  readOnly
-                  placeholder="No selection"
-                  style={{ background: "#f3f4f6", marginBottom: 0, flex: 1 }}
-                />
-                <button
-                  type="button"
-                  className="primary-btn"
-                  style={{ padding: "0.5rem", fontSize: "0.75rem", height: "34px", whiteSpace: "nowrap" }}
-                  onClick={() => captureSelection(idx)}
-                  disabled={!currentSelection}
-                >
-                  Capture
-                </button>
-                <button
-                  type="button"
-                  className={`ghost-btn ${isHighlighted(idx) ? "active-highlight" : ""}`}
-                  style={{
-                    padding: "0.5rem",
-                    fontSize: "0.75rem",
-                    height: "34px",
-                    background: isHighlighted(idx) ? "#60a5fa" : undefined,
-                    color: isHighlighted(idx) ? "#fff" : undefined,
-                    fontWeight: isHighlighted(idx) ? "bold" : undefined,
-                    whiteSpace: "nowrap"
-                  }}
-                  onClick={() => toggleHighlight(idx, item.text_span)}
-                  disabled={!item.text_span}
-                >
-                  {isHighlighted(idx) ? "Hide" : "Highlight"}
-                </button>
-              </div>
-            </div>
-          </div>
-
-            <div style={{ marginTop: "0.25rem" }}>
-              <label>
-                Narrative Function
-                <select
-                  value={item.narrative_function || ""}
-                  onChange={(e) => updateItem(idx, "narrative_function", e.target.value)}
-                >
-                  <option value="">– Select –</option>
-                  {NARRATIVE_FUNCTIONS.map((fn) => (
-                    <option key={fn.code} value={fn.code}>
-                      {fn.name}
-                    </option>
-                  ))}
-                </select>
-              </label>
-            </div>
-
-          <label>
-            Description / Detail
-            <textarea
-              rows={2}
-              value={item.description}
-              onChange={(e) => updateItem(idx, "description", e.target.value)}
-              placeholder="Describe the specific event..."
-            />
-          </label>
-
-          <div className="grid-2">
-            <label>
-              Agents (Doer)
-              <CreatableSelect
-                isMulti
-                options={characterOptions}
-                value={(item.agents || []).map(agentName => {
-                  const found = characterOptions.find(opt => opt.value === agentName);
-                  return found || { label: agentName, value: agentName };
-                })}
-                onChange={(newValue) => handleMultiCharChange(idx, "agents", newValue)}
-                placeholder="Select or create agents..."
-                styles={customSelectStyles}
-              />
-            </label>
-            <label>
-              Targets (Receiver)
-              {item.target_type === "object" ? (
-                <input
-                  value={item.targets && item.targets.length > 0 ? item.targets[0] : ""}
-                  onChange={(e) => updateItem(idx, "targets", [e.target.value])}
-                  placeholder="Enter object target name..."
-                  style={{ marginTop: '4px', width: '100%', padding: '8px', border: '1px solid #ccc', borderRadius: '4px' }}
-                />
-              ) : (
-                <CreatableSelect
-                  isMulti
-                  options={characterOptions}
-                  value={(item.targets || []).map(targetName => {
-                    const found = characterOptions.find(opt => opt.value === targetName);
-                    return found || { label: targetName, value: targetName };
-                  })}
-                  onChange={(newValue) => handleMultiCharChange(idx, "targets", newValue)}
-                  placeholder="Select or create targets..."
-                  styles={customSelectStyles}
-                />
-              )}
-            </label>
-          </div>
-
-          <div className="grid-3">
-            <label>
-              Target Type
-              <select
-                value={item.target_type || ""}
-                onChange={(e) => updateItem(idx, "target_type", e.target.value)}
-              >
-                <option value="">– Select –</option>
-                {TARGET_CATEGORIES.map((t) => (
-                  <option key={t} value={t}>
-                    {t}
-                  </option>
-                ))}
-              </select>
-            </label>
-            {item.target_type === "object" && (
-              <label>
-                Object Type
-                <select
-                  value={item.object_type || ""}
-                  onChange={(e) => updateItem(idx, "object_type", e.target.value)}
-                >
-                  <option value="">– Select –</option>
-                  {OBJECT_TYPES.map((t) => (
-                    <option key={t} value={t}>
-                      {t}
-                    </option>
-                  ))}
-                </select>
-              </label>
-            )}
-            <label>
-              Instrument
-              <input
-                value={item.instrument || ""}
-                onChange={(e) => updateItem(idx, "instrument", e.target.value)}
-                placeholder="Instrument used..."
-              />
-            </label>
-          </div>
-
-          {item.target_type === "character" && (
-            <>
-              {!multiRel ? (
-                <div className="grid-3">
-                  <label>
-                    Relationship L1
-                    <select
-                      value={effectiveRelationshipLevel1}
-                      onChange={(e) => {
-                        // Update level1 and reset level2 in a single update
-                        updateItem(idx, {
-                          relationship_level1: e.target.value,
-                          relationship_level2: ""
-                        });
-                      }}
-                    >
-                      <option value="">– Select –</option>
-                      {renderRelationshipLevel1Options()}
-                    </select>
-                  </label>
-                  <label>
-                    Relationship L2
-                    <select
-                      value={effectiveRelationshipLevel2}
-                      onChange={(e) => updateItem(idx, "relationship_level2", e.target.value)}
-                      disabled={!effectiveRelationshipLevel1}
-                    >
-                      <option value="">– Select –</option>
-                      {renderRelationshipLevel2Options(effectiveRelationshipLevel1)}
-                    </select>
-                  </label>
-                  <label>
-                    Sentiment
-                    <select
-                      value={item.sentiment || ""}
-                      onChange={(e) => updateItem(idx, "sentiment", e.target.value)}
-                    >
-                      <option value="">– Select –</option>
-                      {SENTIMENT_TAGS.map((tag) => (
-                        <option key={tag} value={tag}>
-                          {tag}
-                        </option>
-                      ))}
-                    </select>
-                  </label>
-                </div>
-              ) : (
-                <div style={{ marginBottom: "0.25rem" }}>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "0.5rem" }}>
-                    <div style={{ fontSize: "0.8rem", color: "#6b7280" }}>
-                      Relationship (multi)
-                    </div>
-                    <button
-                      type="button"
-                      className="ghost-btn"
-                      onClick={() => {
-                        const current = ensureAtLeastOneRelationship();
-                        setRelationshipMultiList(addRelationshipMultiRow(current, { agents, targets }));
-                      }}
-                      style={{ padding: "0.2rem 0.45rem", height: "28px", fontSize: "0.8rem" }}
-                    >
-                      + Add
-                    </button>
-                  </div>
-
-                  {ensureAtLeastOneRelationship().map((rel, relIdx) => {
-                    const relEntry = ensureRelationshipMultiEntryShape(rel);
-                    const level1 = relEntry.relationship_level1 || "";
-
-                    const updateRel = (partial, resetLevel2 = false) => {
-                      const current = ensureAtLeastOneRelationship();
-                      setRelationshipMultiList(updateRelationshipMultiRow(current, relIdx, partial, resetLevel2));
-                    };
-
-                    return (
-                      <div
-                        key={relIdx}
-                        style={{
-                          display: "grid",
-                          gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) auto",
-                          gap: "0.5rem",
-                          alignItems: "end",
-                          marginTop: "0.4rem"
-                        }}
-                      >
-                        <label style={{ marginBottom: 0, minWidth: 0 }}>
-                          Agent
-                          <select
-                            value={agents.length === 1 ? (agents[0] || "") : relEntry.agent}
-                            onChange={(e) => updateRel({ agent: e.target.value })}
-                            disabled={agents.length <= 1}
-                            style={relationshipRowControlStyle}
-                            title={(agents.length === 1 ? agents[0] : relEntry.agent) || "Agent"}
-                          >
-                            <option value="">– Select –</option>
-                            {agents.map((name) => (
-                              <option key={name} value={name}>
-                                {name}
-                              </option>
-                            ))}
-                          </select>
-                        </label>
-
-                        <label style={{ marginBottom: 0, minWidth: 0 }}>
-                          Relationship L1
-                          <select
-                            value={relEntry.relationship_level1}
-                            onChange={(e) => updateRel({ relationship_level1: e.target.value }, true)}
-                            style={relationshipRowControlStyle}
-                            title={relEntry.relationship_level1 || "Relationship L1"}
-                          >
-                            <option value="">– Select –</option>
-                            {renderRelationshipLevel1Options()}
-                          </select>
-                        </label>
-
-                        <label style={{ marginBottom: 0, minWidth: 0 }}>
-                          Relationship L2
-                          <select
-                            value={relEntry.relationship_level2}
-                            onChange={(e) => updateRel({ relationship_level2: e.target.value })}
-                            disabled={!level1}
-                            style={relationshipRowControlStyle}
-                            title={relEntry.relationship_level2 || "Relationship L2"}
-                          >
-                            <option value="">– Select –</option>
-                            {renderRelationshipLevel2Options(level1)}
-                          </select>
-                        </label>
-
-                        <label style={{ marginBottom: 0, minWidth: 0 }}>
-                          Sentiment
-                          <select
-                            value={relEntry.sentiment}
-                            onChange={(e) => updateRel({ sentiment: e.target.value })}
-                            style={relationshipRowControlStyle}
-                            title={relEntry.sentiment || "Sentiment"}
-                          >
-                            <option value="">– Select –</option>
-                            {SENTIMENT_TAGS.map((tag) => (
-                              <option key={tag} value={tag}>
-                                {tag}
-                              </option>
-                            ))}
-                          </select>
-                        </label>
-
-                        <label style={{ marginBottom: 0, minWidth: 0 }}>
-                          Target
-                          <select
-                            value={targets.length === 1 ? (targets[0] || "") : relEntry.target}
-                            onChange={(e) => updateRel({ target: e.target.value })}
-                            disabled={targets.length <= 1}
-                            style={relationshipRowControlStyle}
-                            title={(targets.length === 1 ? targets[0] : relEntry.target) || "Target"}
-                          >
-                            <option value="">– Select –</option>
-                            {targets.map((name) => (
-                              <option key={name} value={name}>
-                                {name}
-                              </option>
-                            ))}
-                          </select>
-                        </label>
-
-                        <div style={{ paddingTop: "1.15rem" }}>
-                          <button
-                            type="button"
-                            className="ghost-btn"
-                            style={{ padding: "0 0.45rem", height: "32px", marginBottom: 0, alignSelf: "end" }}
-                            onClick={() => {
-                              const current = ensureAtLeastOneRelationship();
-                              setRelationshipMultiList(removeRelationshipMultiRow(current, relIdx));
-                            }}
-                            title="Remove relationship"
-                          >
-                            ×
-                          </button>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
-            </>
-          )}
-
-          {item.target_type === "character" && (
-            <div className="grid-3" style={{ marginTop: "0.5rem" }}>
-              <label>
-                Action Category
-                <select
-                  value={item.action_category || ""}
-                  onChange={(e) => {
-                    // Update category and reset action_type and action_context in a single update
-                    updateItem(idx, {
-                      action_category: e.target.value,
-                      action_type: "",
-                      action_context: ""
-                    });
-                  }}
-                >
-                  <option value="">– Select –</option>
-                  {ACTION_CATEGORIES.map((cat) => (
-                    <option key={cat.code} value={cat.code}>
-                      {cat.name}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label>
-                Action Type
-                <select
-                  value={item.action_type || ""}
-                  onChange={(e) => {
-                    // Update action_type and reset context in a single update
-                    updateItem(idx, {
-                      action_type: e.target.value,
-                      action_context: ""
-                    });
-                  }}
-                  disabled={!item.action_category}
-                >
-                  <option value="">– Select –</option>
-                  {item.action_category && getActionTypesForCategory(item.action_category).map((action) => (
-                    <option key={action.code} value={action.code}>
-                      {action.name}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label>
-                Action Status
-                <select
-                  value={item.action_status || ""}
-                  onChange={(e) => updateItem(idx, "action_status", e.target.value)}
-                >
-                  <option value="">– Select –</option>
-                  {ACTION_STATUS.map((status) => (
-                    <option key={status.code} value={status.code}>
-                      {status.name}
-                    </option>
-                  ))}
-                </select>
-              </label>
-            </div>
-          )}
-
-          {item.target_type === "character" && item.action_category && item.action_type && (
-            <div style={{ marginTop: "0.5rem" }}>
-              <label>
-                Context (optional)
-                <input
-                  type="text"
-                  value={item.action_context || ""}
-                  onChange={(e) => updateItem(idx, "action_context", e.target.value)}
-                  placeholder={`e.g., ${getContextTagsForAction(item.action_category, item.action_type).slice(0, 3).join(", ")}`}
-                  list={`context-suggestions-${idx}`}
-                />
-                <datalist id={`context-suggestions-${idx}`}>
-                  {getContextTagsForAction(item.action_category, item.action_type).map((tag) => (
-                    <option key={tag} value={tag} />
-                  ))}
-                </datalist>
-              </label>
-            </div>
-          )}
-
-          {/* Auto-annotation UI for individual event (placed under Context control) */}
-          {typeof onAutoAnnotateEvent === "function" && (
-            <div style={{ marginTop: "0.5rem" }}>
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-                <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
-                  <select
-                    value={eventAnnotationModes[item.id] || "recreate"}
-                    onChange={(e) => {
-                      const mode = e.target.value;
-                      setEventAnnotationModes(prev => ({ ...prev, [item.id]: mode }));
-                      // Clear additional prompt when switching to recreate mode
-                      if (mode === "recreate") {
-                        setEventAdditionalPrompts(prev => {
-                          const next = { ...prev };
-                          delete next[item.id];
-                          return next;
-                        });
-                      }
-                    }}
-                    disabled={!!(autoAnnotateEventLoading && autoAnnotateEventLoading[item.id])}
-                    style={{
-                      padding: "0.4rem 0.5rem",
-                      fontSize: "0.8rem",
-                      lineHeight: "1.2",
-                      border: "1px solid #cbd5e1",
-                      borderRadius: "6px",
-                      backgroundColor: "white",
-                      cursor: (autoAnnotateEventLoading && autoAnnotateEventLoading[item.id]) ? "not-allowed" : "pointer",
-                      marginBottom: 0,
-                      width: "auto",
-                      minWidth: "110px",
-                      height: "32px",
-                      boxSizing: "border-box"
-                    }}
-                    title="Select annotation mode: Supplement (add missing), Modify (update existing), or Recreate (from scratch)"
-                  >
-                    <option value="recreate">Recreate</option>
-                    <option value="supplement">Supplement</option>
-                    <option value="modify">Modify</option>
-                  </select>
-                  <button
-                    type="button"
-                    className="ghost-btn"
-                    onClick={() => {
-                      const mode = eventAnnotationModes[item.id] || "recreate";
-                      const additionalPrompt = eventAdditionalPrompts[item.id] || "";
-                      onAutoAnnotateEvent(item.id, idx, mode, additionalPrompt);
-                    }}
-                    disabled={!!(autoAnnotateEventLoading && autoAnnotateEventLoading[item.id])}
-                    title="Auto-annotate this event using the LLM backend"
-                    style={{ minWidth: "100px", whiteSpace: "nowrap", height: "32px" }}
-                  >
-                    {(autoAnnotateEventLoading && autoAnnotateEventLoading[item.id]) ? "Annotating…" : "Auto-annotate"}
-                  </button>
-                </div>
-                {((eventAnnotationModes[item.id] === "supplement") || (eventAnnotationModes[item.id] === "modify")) && (
-                  <input
-                    type="text"
-                    value={eventAdditionalPrompts[item.id] || ""}
-                    onChange={(e) => {
-                      setEventAdditionalPrompts(prev => ({ ...prev, [item.id]: e.target.value }));
-                    }}
-                    placeholder="Additional instructions (optional)..."
-                    disabled={!!(autoAnnotateEventLoading && autoAnnotateEventLoading[item.id])}
-                    style={{
-                      padding: "0.4rem 0.5rem",
-                      fontSize: "0.8rem",
-                      border: "1px solid #cbd5e1",
-                      borderRadius: "6px",
-                      backgroundColor: "white",
-                      marginBottom: 0,
-                      width: "100%",
-                      boxSizing: "border-box"
-                    }}
-                    title="Enter additional instructions for the annotation model"
-                  />
-                )}
-              </div>
-            </div>
-          )}
-          
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginTop: "0.5rem" }}>
-            <div style={{ display: "flex", alignItems: "baseline", gap: "0.25rem" }}>
-              <span style={{ fontSize: "0.85rem", color: "#6b7280" }}>Time Order:</span>
-              <input
-                type="number"
-                min="1"
-                value={item.time_order ?? ""}
-                onChange={(e) => updateItem(idx, "time_order", parseInt(e.target.value) || null)}
-                style={{ 
-                  width: "60px", 
-                  padding: "0.4rem 0.5rem", 
-                  fontSize: "0.8rem", 
-                  border: "1px solid #cbd5e1",
-                  borderRadius: "6px",
-                  boxSizing: "border-box",
-                  lineHeight: "1.2"
-                }}
-                placeholder="#"
-              />
-            </div>
-            <button
-              type="button"
-              className="ghost-btn"
-              style={{ color: "#ef4444", borderColor: "#ef4444" }}
-              onClick={() => removeItem(idx)}
-            >
-              Remove Event
-            </button>
-          </div>
-              </>
-            );
-          })()}
-        </div>
-      ))}
+      {items.map((item, idx) => renderNarrativeItemRow(item, idx))}
 
       <button type="button" className="ghost-btn" onClick={addItem} style={{ marginTop: "1rem" }}>
         + Add Event
