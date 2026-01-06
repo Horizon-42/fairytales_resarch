@@ -589,9 +589,58 @@ export default function App() {
 
           const result = { ...n };
 
-          // Ensure relationship_level1 only contains English
-          if (n.relationship_level1) {
-            result.relationship_level1 = extractEnglishFromRelationship(n.relationship_level1);
+          const agents = Array.isArray(result.agents) ? result.agents.filter(Boolean) : [];
+          const targets = Array.isArray(result.targets) ? result.targets.filter(Boolean) : [];
+          const isMultiRelationship = result.target_type === "character" && (agents.length > 1 || targets.length > 1);
+
+          const existingMultiList = Array.isArray(result.relationship_multi)
+            ? result.relationship_multi
+            : ((result.relationship_multi && typeof result.relationship_multi === "object") ? [result.relationship_multi] : []);
+
+          if (isMultiRelationship) {
+            const listSource = (existingMultiList.length > 0)
+              ? existingMultiList
+              : [{
+                  agent: agents.length === 1 ? agents[0] : (agents[0] || ""),
+                  target: targets.length === 1 ? targets[0] : (targets[0] || ""),
+                  relationship_level1: result.relationship_level1 || "",
+                  relationship_level2: result.relationship_level2 || "",
+                  sentiment: result.sentiment || ""
+                }];
+
+            result.relationship_multi = listSource.map((r) => {
+              const rel = (r && typeof r === "object") ? r : {};
+              const level1 = rel.relationship_level1 || "";
+              return {
+                agent: rel.agent || "",
+                target: rel.target || "",
+                relationship_level1: level1 ? extractEnglishFromRelationship(level1) : "",
+                relationship_level2: rel.relationship_level2 || "",
+                sentiment: rel.sentiment || ""
+              };
+            });
+
+            // In multi-person cases, keep legacy fields empty to avoid ambiguity
+            result.relationship_level1 = "";
+            result.relationship_level2 = "";
+            // Sentiment becomes per-relationship in multi-person case
+            result.sentiment = "";
+          } else {
+            // Ensure relationship_level1 only contains English
+            if (result.relationship_level1) {
+              result.relationship_level1 = extractEnglishFromRelationship(result.relationship_level1);
+            } else if (existingMultiList[0]?.relationship_level1) {
+              // Backward-compat fallback if only relationship_multi exists
+              result.relationship_level1 = extractEnglishFromRelationship(existingMultiList[0].relationship_level1);
+            }
+
+            if (!result.relationship_level2 && existingMultiList[0]?.relationship_level2) {
+              result.relationship_level2 = existingMultiList[0].relationship_level2;
+            }
+
+            if (!result.sentiment && existingMultiList[0]?.sentiment) {
+              result.sentiment = existingMultiList[0].sentiment;
+            }
           }
 
           // Build action_layer from individual fields
@@ -644,9 +693,55 @@ export default function App() {
 
         const result = { ...n };
 
-        // Ensure relationship_level1 only contains English
-        if (n.relationship_level1) {
-          result.relationship_level1 = extractEnglishFromRelationship(n.relationship_level1);
+        const agents = Array.isArray(result.agents) ? result.agents.filter(Boolean) : [];
+        const targets = Array.isArray(result.targets) ? result.targets.filter(Boolean) : [];
+        const isMultiRelationship = result.target_type === "character" && (agents.length > 1 || targets.length > 1);
+
+        const existingMultiList = Array.isArray(result.relationship_multi)
+          ? result.relationship_multi
+          : ((result.relationship_multi && typeof result.relationship_multi === "object") ? [result.relationship_multi] : []);
+
+        if (isMultiRelationship) {
+          const listSource = (existingMultiList.length > 0)
+            ? existingMultiList
+            : [{
+                agent: agents.length === 1 ? agents[0] : (agents[0] || ""),
+                target: targets.length === 1 ? targets[0] : (targets[0] || ""),
+                relationship_level1: result.relationship_level1 || "",
+                relationship_level2: result.relationship_level2 || "",
+                sentiment: result.sentiment || ""
+              }];
+
+          result.relationship_multi = listSource.map((r) => {
+            const rel = (r && typeof r === "object") ? r : {};
+            const level1 = rel.relationship_level1 || "";
+            return {
+              agent: rel.agent || "",
+              target: rel.target || "",
+              relationship_level1: level1 ? extractEnglishFromRelationship(level1) : "",
+              relationship_level2: rel.relationship_level2 || "",
+              sentiment: rel.sentiment || ""
+            };
+          });
+
+          result.relationship_level1 = "";
+          result.relationship_level2 = "";
+          result.sentiment = "";
+        } else {
+          // Ensure relationship_level1 only contains English
+          if (result.relationship_level1) {
+            result.relationship_level1 = extractEnglishFromRelationship(result.relationship_level1);
+          } else if (existingMultiList[0]?.relationship_level1) {
+            result.relationship_level1 = extractEnglishFromRelationship(existingMultiList[0].relationship_level1);
+          }
+
+          if (!result.relationship_level2 && existingMultiList[0]?.relationship_level2) {
+            result.relationship_level2 = existingMultiList[0].relationship_level2;
+          }
+
+          if (!result.sentiment && existingMultiList[0]?.sentiment) {
+            result.sentiment = existingMultiList[0].sentiment;
+          }
         }
 
         // Build action_layer from individual fields

@@ -53,6 +53,33 @@ const formatProppFunctionName = (fn) => {
     .join(' ');
 };
 
+const ensureRelationshipMultiEntryShape = (entry) => {
+  if (!entry || typeof entry !== "object") {
+    return { agent: "", target: "", relationship_level1: "", relationship_level2: "", sentiment: "" };
+  }
+  return {
+    agent: entry.agent || "",
+    target: entry.target || "",
+    relationship_level1: entry.relationship_level1 || "",
+    relationship_level2: entry.relationship_level2 || "",
+    sentiment: entry.sentiment || ""
+  };
+};
+
+const normalizeRelationshipMulti = (relationshipMulti) => {
+  if (!relationshipMulti) return [];
+  if (Array.isArray(relationshipMulti)) return relationshipMulti.map(ensureRelationshipMultiEntryShape);
+  if (typeof relationshipMulti === "object") return [ensureRelationshipMultiEntryShape(relationshipMulti)];
+  return [];
+};
+
+const isMultiRelationshipEvent = (item) => {
+  if (!item || item.target_type !== "character") return false;
+  const agents = Array.isArray(item.agents) ? item.agents : [];
+  const targets = Array.isArray(item.targets) ? item.targets : [];
+  return agents.length > 1 || targets.length > 1;
+};
+
 export default function NarrativeSection({
   narrativeStructure,
   setNarrativeStructure,
@@ -110,6 +137,7 @@ export default function NarrativeSection({
         time_order: maxTimeOrder + 1 + index,
         relationship_level1: "",
         relationship_level2: "",
+        relationship_multi: [],
         sentiment: "",
         action_category: "",
         action_type: "",
@@ -124,6 +152,7 @@ export default function NarrativeSection({
         time_order: item.time_order ?? (maxTimeOrder + 1 + index),
         relationship_level1: item.relationship_level1 || "",
         relationship_level2: item.relationship_level2 || "",
+        relationship_multi: Array.isArray(item.relationship_multi) ? item.relationship_multi : (item.relationship_multi ? [item.relationship_multi] : []),
         sentiment: item.sentiment || "",
         action_category: item.action_category || (item.action_layer?.category || ""),
         action_type: item.action_type || (item.action_layer?.type || ""),
@@ -136,6 +165,7 @@ export default function NarrativeSection({
       time_order: item.time_order ?? (maxTimeOrder + 1 + index),
       relationship_level1: item.relationship_level1 || "",
       relationship_level2: item.relationship_level2 || "",
+      relationship_multi: Array.isArray(item.relationship_multi) ? item.relationship_multi : (item.relationship_multi ? [item.relationship_multi] : []),
       sentiment: item.sentiment || ""
     };
   });
@@ -217,6 +247,7 @@ export default function NarrativeSection({
         time_order: maxTimeOrder + 1,
         relationship_level1: "",
         relationship_level2: "",
+        relationship_multi: [],
         sentiment: "",
         ...updates
       };
@@ -246,6 +277,7 @@ export default function NarrativeSection({
         time_order: nextOrder,
         relationship_level1: "",
         relationship_level2: "",
+        relationship_multi: [],
         sentiment: ""
       }
     ]);
@@ -465,6 +497,45 @@ export default function NarrativeSection({
 
       {items.map((item, idx) => (
         <div key={item.id || idx} className="propp-row">
+          {(() => {
+            const multiRel = isMultiRelationshipEvent(item);
+            const rmList = normalizeRelationshipMulti(item.relationship_multi);
+
+            const agents = Array.isArray(item.agents) ? item.agents : [];
+            const targets = Array.isArray(item.targets) ? item.targets : [];
+
+            const effectiveRelationshipLevel1 = multiRel
+              ? ((rmList[0] && rmList[0].relationship_level1) || item.relationship_level1 || "")
+              : (item.relationship_level1 || "");
+            const effectiveRelationshipLevel2 = multiRel
+              ? ((rmList[0] && rmList[0].relationship_level2) || item.relationship_level2 || "")
+              : (item.relationship_level2 || "");
+
+            const setRelationshipMultiList = (nextList) => {
+              updateItem(idx, {
+                relationship_multi: nextList,
+                // keep legacy fields empty for multi-person relationship
+                relationship_level1: "",
+                relationship_level2: "",
+                // sentiment becomes per-relationship in multi-person case
+                sentiment: ""
+              });
+            };
+
+            const ensureAtLeastOneRelationship = () => {
+              if (rmList.length > 0) return rmList;
+              const fallback = {
+                agent: agents.length === 1 ? agents[0] : (agents[0] || ""),
+                target: targets.length === 1 ? targets[0] : (targets[0] || ""),
+                relationship_level1: item.relationship_level1 || "",
+                relationship_level2: item.relationship_level2 || "",
+                sentiment: item.sentiment || ""
+              };
+              return [ensureRelationshipMultiEntryShape(fallback)];
+            };
+
+            return (
+              <>
           <div className="grid-2">
             <div>
               <label>Event Type (Propp)</label>
@@ -616,62 +687,235 @@ export default function NarrativeSection({
           </div>
 
           {item.target_type === "character" && (
-            <div className="grid-3">
-              <label>
-                Relationship L1
-                <select
-                  value={item.relationship_level1 || ""}
-                  onChange={(e) => {
-                    // Update level1 and reset level2 in a single update
-                    updateItem(idx, {
-                      relationship_level1: e.target.value,
-                      relationship_level2: ""
-                    });
-                  }}
-                >
-                  <option value="">– Select –</option>
-                  {RELATIONSHIP_LEVEL1.map((level1) => {
-                    // Extract English part from format "中文(English)" or use as-is if no parentheses
-                    const match = level1.match(/\(([^)]+)\)/);
-                    const displayName = match ? match[1] : level1;
+            <>
+              {multiRel && (
+                <div style={{ marginBottom: "0.5rem" }}>
+                  <label style={{ display: "block", fontWeight: 600, marginBottom: "0.25rem" }}>
+                    Relationships (multi)
+                  </label>
+                  {ensureAtLeastOneRelationship().map((rel, relIdx) => {
+                    const relEntry = ensureRelationshipMultiEntryShape(rel);
+                    const level1 = relEntry.relationship_level1 || "";
                     return (
-                      <option key={level1} value={level1}>
-                        {displayName}
-                      </option>
+                      <div
+                        key={relIdx}
+                        style={{
+                          display: "flex",
+                          flexWrap: "wrap",
+                          gap: "0.5rem",
+                          alignItems: "center",
+                          marginBottom: "0.5rem"
+                        }}
+                      >
+                        <select
+                          value={relEntry.agent}
+                          onChange={(e) => {
+                            const next = ensureAtLeastOneRelationship().map((r, i) =>
+                              i === relIdx ? { ...ensureRelationshipMultiEntryShape(r), agent: e.target.value } : ensureRelationshipMultiEntryShape(r)
+                            );
+                            setRelationshipMultiList(next);
+                          }}
+                          disabled={agents.length <= 1}
+                          style={{ minWidth: "140px" }}
+                          title="Select the agent side of this relationship"
+                        >
+                          <option value="">Agent…</option>
+                          {agents.map((name) => (
+                            <option key={name} value={name}>
+                              {name}
+                            </option>
+                          ))}
+                        </select>
+
+                        <select
+                          value={relEntry.target}
+                          onChange={(e) => {
+                            const next = ensureAtLeastOneRelationship().map((r, i) =>
+                              i === relIdx ? { ...ensureRelationshipMultiEntryShape(r), target: e.target.value } : ensureRelationshipMultiEntryShape(r)
+                            );
+                            setRelationshipMultiList(next);
+                          }}
+                          disabled={targets.length <= 1}
+                          style={{ minWidth: "140px" }}
+                          title="Select the target side of this relationship"
+                        >
+                          <option value="">Target…</option>
+                          {targets.map((name) => (
+                            <option key={name} value={name}>
+                              {name}
+                            </option>
+                          ))}
+                        </select>
+
+                        <select
+                          value={relEntry.relationship_level1}
+                          onChange={(e) => {
+                            const nextLevel1 = e.target.value;
+                            const next = ensureAtLeastOneRelationship().map((r, i) =>
+                              i === relIdx
+                                ? { ...ensureRelationshipMultiEntryShape(r), relationship_level1: nextLevel1, relationship_level2: "" }
+                                : ensureRelationshipMultiEntryShape(r)
+                            );
+                            setRelationshipMultiList(next);
+                          }}
+                          style={{ minWidth: "160px" }}
+                          title="Relationship L1"
+                        >
+                          <option value="">L1…</option>
+                          {RELATIONSHIP_LEVEL1.map((l1) => {
+                            const match = l1.match(/\(([^)]+)\)/);
+                            const displayName = match ? match[1] : l1;
+                            return (
+                              <option key={l1} value={l1}>
+                                {displayName}
+                              </option>
+                            );
+                          })}
+                        </select>
+
+                        <select
+                          value={relEntry.relationship_level2}
+                          onChange={(e) => {
+                            const next = ensureAtLeastOneRelationship().map((r, i) =>
+                              i === relIdx ? { ...ensureRelationshipMultiEntryShape(r), relationship_level2: e.target.value } : ensureRelationshipMultiEntryShape(r)
+                            );
+                            setRelationshipMultiList(next);
+                          }}
+                          disabled={!level1}
+                          style={{ minWidth: "140px" }}
+                          title="Relationship L2"
+                        >
+                          <option value="">L2…</option>
+                          {level1 && getRelationshipLevel2Options(level1).map((l2) => (
+                            <option key={l2.tag} value={l2.tag}>
+                              {l2.tag}
+                            </option>
+                          ))}
+                        </select>
+
+                        <select
+                          value={relEntry.sentiment}
+                          onChange={(e) => {
+                            const next = ensureAtLeastOneRelationship().map((r, i) =>
+                              i === relIdx ? { ...ensureRelationshipMultiEntryShape(r), sentiment: e.target.value } : ensureRelationshipMultiEntryShape(r)
+                            );
+                            setRelationshipMultiList(next);
+                          }}
+                          style={{ minWidth: "120px" }}
+                          title="Sentiment for this relationship"
+                        >
+                          <option value="">Sentiment…</option>
+                          {SENTIMENT_TAGS.map((tag) => (
+                            <option key={tag} value={tag}>
+                              {tag}
+                            </option>
+                          ))}
+                        </select>
+
+                        <button
+                          type="button"
+                          className="ghost-btn"
+                          style={{ padding: "0.25rem 0.5rem", height: "32px" }}
+                          onClick={() => {
+                            const current = ensureAtLeastOneRelationship();
+                            const next = current.filter((_, i) => i !== relIdx);
+                            setRelationshipMultiList(next.length > 0 ? next : [ensureRelationshipMultiEntryShape({})]);
+                          }}
+                          title="Remove this relationship"
+                        >
+                          Remove
+                        </button>
+                      </div>
                     );
                   })}
-                </select>
-              </label>
-              <label>
-                Relationship L2
-                <select
-                  value={item.relationship_level2 || ""}
-                  onChange={(e) => updateItem(idx, "relationship_level2", e.target.value)}
-                  disabled={!item.relationship_level1}
-                >
-                  <option value="">– Select –</option>
-                  {item.relationship_level1 && getRelationshipLevel2Options(item.relationship_level1).map((level2) => (
-                    <option key={level2.tag} value={level2.tag}>
-                      {level2.tag}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label>
-                Sentiment
-                <select
-                  value={item.sentiment || ""}
-                  onChange={(e) => updateItem(idx, "sentiment", e.target.value)}
-                >
-                  <option value="">– Select –</option>
-                  {SENTIMENT_TAGS.map((tag) => (
-                    <option key={tag} value={tag}>
-                      {tag}
-                    </option>
-                  ))}
-                </select>
-              </label>
-            </div>
+
+                  <button
+                    type="button"
+                    className="ghost-btn"
+                    onClick={() => {
+                      const current = ensureAtLeastOneRelationship();
+                      const next = [
+                        ...current.map(ensureRelationshipMultiEntryShape),
+                        ensureRelationshipMultiEntryShape({
+                          agent: agents.length === 1 ? agents[0] : "",
+                          target: targets.length === 1 ? targets[0] : ""
+                        })
+                      ];
+                      setRelationshipMultiList(next);
+                    }}
+                    style={{ padding: "0.25rem 0.5rem", height: "32px" }}
+                  >
+                    + Add relationship
+                  </button>
+                </div>
+              )}
+              <div className="grid-3">
+                <label>
+                  Relationship L1
+                  <select
+                    value={effectiveRelationshipLevel1}
+                    onChange={(e) => {
+                      const nextLevel1 = e.target.value;
+                      if (!multiRel) {
+                        // Update level1 and reset level2 in a single update
+                        updateItem(idx, {
+                          relationship_level1: nextLevel1,
+                          relationship_level2: ""
+                        });
+                      }
+                    }}
+                    disabled={multiRel}
+                  >
+                    <option value="">– Select –</option>
+                    {RELATIONSHIP_LEVEL1.map((level1) => {
+                      // Extract English part from format "中文(English)" or use as-is if no parentheses
+                      const match = level1.match(/\(([^)]+)\)/);
+                      const displayName = match ? match[1] : level1;
+                      return (
+                        <option key={level1} value={level1}>
+                          {displayName}
+                        </option>
+                      );
+                    })}
+                  </select>
+                </label>
+                <label>
+                  Relationship L2
+                  <select
+                    value={effectiveRelationshipLevel2}
+                    onChange={(e) => {
+                      const nextLevel2 = e.target.value;
+                      if (!multiRel) {
+                        updateItem(idx, "relationship_level2", nextLevel2);
+                      }
+                    }}
+                    disabled={!effectiveRelationshipLevel1}
+                  >
+                    <option value="">– Select –</option>
+                    {effectiveRelationshipLevel1 && getRelationshipLevel2Options(effectiveRelationshipLevel1).map((level2) => (
+                      <option key={level2.tag} value={level2.tag}>
+                        {level2.tag}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <label>
+                  Sentiment
+                  <select
+                    value={item.sentiment || ""}
+                    onChange={(e) => updateItem(idx, "sentiment", e.target.value)}
+                    disabled={multiRel}
+                  >
+                    <option value="">– Select –</option>
+                    {SENTIMENT_TAGS.map((tag) => (
+                      <option key={tag} value={tag}>
+                        {tag}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              </div>
+            </>
           )}
 
           {item.target_type === "character" && (
@@ -865,6 +1109,9 @@ export default function NarrativeSection({
               Remove Event
             </button>
           </div>
+              </>
+            );
+          })()}
         </div>
       ))}
 

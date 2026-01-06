@@ -175,6 +175,7 @@ export function mapV2ToState(data) {
           time_order: index + 1,
           relationship_level1: "",
           relationship_level2: "",
+          relationship_multi: [],
           sentiment: "",
           action_category: "",
           action_type: "",
@@ -192,6 +193,9 @@ export function mapV2ToState(data) {
         time_order: evt.time_order ?? (index + 1),
         relationship_level1: evt.relationship_level1 || "",
         relationship_level2: evt.relationship_level2 || "",
+        relationship_multi: Array.isArray(evt.relationship_multi)
+          ? evt.relationship_multi
+          : (evt.relationship_multi ? [evt.relationship_multi] : []),
         sentiment: evt.sentiment || "",
         ...extractActionFieldsFromLayer(evt)
       };
@@ -309,6 +313,7 @@ export function mapV1ToState(data) {
           time_order: index + 1,
           relationship_level1: "",
           relationship_level2: "",
+          relationship_multi: [],
           sentiment: "",
           action_category: "",
           action_type: "",
@@ -325,6 +330,9 @@ export function mapV1ToState(data) {
         time_order: evt.time_order ?? (index + 1),
         relationship_level1: evt.relationship_level1 || "",
         relationship_level2: evt.relationship_level2 || "",
+        relationship_multi: Array.isArray(evt.relationship_multi)
+          ? evt.relationship_multi
+          : (evt.relationship_multi ? [evt.relationship_multi] : []),
         sentiment: evt.sentiment || "",
         ...extractActionFieldsFromLayer(evt)
       };
