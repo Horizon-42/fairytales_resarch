@@ -1,4 +1,4 @@
-"""Quick smoke test for the FastAPI endpoint.
+"""Quick smoke test for the FastAPI endpoints.
 
 Run (after server is up):
     python backend/smoke_test.py
@@ -6,6 +6,10 @@ Run (after server is up):
 Tips:
 - If you don't have `llama3.1` pulled, pass `--model qwen3:8b` (or set OLLAMA_MODEL).
 - If the request hangs, Ollama may be downloading the model on first use.
+
+This script currently tests `/api/annotate/v2`.
+For Summaries auto-generation, the backend exposes:
+- POST `/api/annotate/summaries`
 """
 
 from __future__ import annotations

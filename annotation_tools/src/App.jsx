@@ -118,6 +118,8 @@ export default function App() {
   const [newlyCreatedCharacterIndex, setNewlyCreatedCharacterIndex] = useState(null);
   const [autoAnnotateCharactersLoading, setAutoAnnotateCharactersLoading] = useState(false);
   const [autoAnnotateEventLoading, setAutoAnnotateEventLoading] = useState({});
+  const [autoSummariesLoading, setAutoSummariesLoading] = useState(false);
+  const [autoSummariesProgress, setAutoSummariesProgress] = useState({ done: 0, total: 0 });
 
   // Context menu state
   const [contextMenu, setContextMenu] = useState({ visible: false, x: 0, y: 0 });
@@ -233,6 +235,88 @@ export default function App() {
         delete next[eventId];
         return next;
       });
+    }
+  };
+
+  const handleAutoSummarize = async () => {
+    if (autoSummariesLoading) return;
+    if (!sourceText?.text || !sourceText.text.trim()) {
+      alert("No story text loaded.");
+      return;
+    }
+
+    setAutoSummariesLoading(true);
+    setAutoSummariesProgress({ done: 0, total: 0 });
+    try {
+      const backendUrl = await getBackendUrl();
+
+      // Split paragraphs the same way as SummariesSection: by line, keep non-empty.
+      const paragraphs = sourceText.text
+        .split("\n")
+        .filter((line) => line.trim());
+
+      setAutoSummariesProgress({ done: 0, total: paragraphs.length });
+
+      // Clear existing per-paragraph summaries first (keep combined).
+      setParagraphSummaries(prev => ({ ...prev, perParagraph: {}, whole: "" }));
+
+      const lang = sourceText.language || "en";
+
+      // Generate per-paragraph summaries incrementally.
+      const perParagraphLocal = {};
+      for (let i = 0; i < paragraphs.length; i++) {
+        const resp = await fetch(`${backendUrl}/api/annotate/summaries/paragraph`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            index: i,
+            paragraph: paragraphs[i],
+            language: lang,
+            model: "qwen3:8b"
+          })
+        });
+
+        const data = await resp.json().catch(() => null);
+        if (!resp.ok || !data?.ok) {
+          const msg = (data && (data.detail || data.error)) ? (data.detail || data.error) : `HTTP ${resp.status}`;
+          throw new Error(msg);
+        }
+
+        const text = data.text || "";
+        perParagraphLocal[String(i)] = text;
+        setParagraphSummaries(prev => ({
+          ...prev,
+          perParagraph: { ...(prev.perParagraph || {}), [String(i)]: text }
+        }));
+        setAutoSummariesProgress(prev => ({ ...prev, done: Math.min(prev.total, prev.done + 1) }));
+      }
+
+      // Now request whole-story summary based on the per-paragraph summaries.
+      const respWhole = await fetch(`${backendUrl}/api/annotate/summaries/whole`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          per_paragraph: perParagraphLocal,
+          language: lang,
+          model: "qwen3:8b"
+        })
+      });
+
+      const dataWhole = await respWhole.json().catch(() => null);
+      if (!respWhole.ok || !dataWhole?.ok) {
+        const msg = (dataWhole && (dataWhole.detail || dataWhole.error)) ? (dataWhole.detail || dataWhole.error) : `HTTP ${respWhole.status}`;
+        throw new Error(msg);
+      }
+
+      setParagraphSummaries(prev => ({
+        ...prev,
+        whole: dataWhole.whole || ""
+      }));
+    } catch (err) {
+      console.error("Auto-summary failed:", err);
+      alert(`Auto-summary failed: ${err?.message || err}`);
+    } finally {
+      setAutoSummariesLoading(false);
     }
   };
 
@@ -1449,8 +1533,12 @@ export default function App() {
                 paragraphSummaries={paragraphSummaries}
                 setParagraphSummaries={setParagraphSummaries}
                 sourceText={sourceText.text}
+                sourceLanguage={sourceText.language}
                 highlightedRanges={highlightedRanges}
                 setHighlightedRanges={setHighlightedRanges}
+                onAutoSummarize={handleAutoSummarize}
+                autoSummariesLoading={autoSummariesLoading}
+                autoSummariesProgress={autoSummariesProgress}
               />
             )}
 

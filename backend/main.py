@@ -29,6 +29,13 @@ from llm_model.narrative_annotator import (
     NarrativeAnnotatorConfig,
     annotate_narrative_event,
 )
+from llm_model.summaries_annotator import (
+    SummariesAnnotationError,
+    SummariesAnnotatorConfig,
+    annotate_summaries,
+    annotate_single_paragraph_summary,
+    annotate_whole_summary_from_per_paragraph,
+)
 from llm_model.ollama_client import OllamaConfig
 
 
@@ -115,6 +122,45 @@ class NarrativeAnnotateRequest(BaseModel):
 class NarrativeAnnotateResponse(BaseModel):
     ok: bool
     event: Dict[str, Any]
+
+
+class SummariesAnnotateRequest(BaseModel):
+    """Summaries request payload."""
+
+    text: str = Field(..., description="Raw story text")
+    language: str = Field("en", description="en/zh/fa/ja/other")
+    # Generation controls
+    model: Optional[str] = Field(None, description="Override Ollama model name")
+
+
+class SummariesAnnotateResponse(BaseModel):
+    ok: bool
+    per_paragraph: Dict[str, str]
+    whole: str
+
+
+class SummaryParagraphRequest(BaseModel):
+    index: int = Field(..., ge=0, description="Paragraph index")
+    paragraph: str = Field(..., description="Paragraph text")
+    language: str = Field("en", description="en/zh/fa/ja/other")
+    model: Optional[str] = Field(None, description="Override Ollama model name")
+
+
+class SummaryParagraphResponse(BaseModel):
+    ok: bool
+    index: int
+    text: str
+
+
+class SummaryWholeRequest(BaseModel):
+    per_paragraph: Dict[str, str] = Field(..., description="Map of paragraph index to summary")
+    language: str = Field("en", description="en/zh/fa/ja/other")
+    model: Optional[str] = Field(None, description="Override Ollama model name")
+
+
+class SummaryWholeResponse(BaseModel):
+    ok: bool
+    whole: str
 
 
 app = FastAPI(title="Fairytales Auto-Annotation API", version="0.1.0")
@@ -249,3 +295,80 @@ def annotate_narrative_endpoint(req: NarrativeAnnotateRequest) -> NarrativeAnnot
         raise HTTPException(status_code=502, detail=str(exc)) from exc
 
     return NarrativeAnnotateResponse(ok=True, event=result)
+
+
+@app.post("/api/annotate/summaries", response_model=SummariesAnnotateResponse)
+def annotate_summaries_endpoint(req: SummariesAnnotateRequest) -> SummariesAnnotateResponse:
+    """Generate per-paragraph summaries + whole-story summary for the Summaries tab."""
+
+    base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
+    default_model = _env("OLLAMA_MODEL", "qwen3:8b")
+
+    ollama_cfg = OllamaConfig(
+        base_url=base_url,
+        model=req.model or default_model,
+    )
+
+    try:
+        result = annotate_summaries(
+            text=req.text,
+            language=req.language,
+            config=SummariesAnnotatorConfig(ollama=ollama_cfg),
+        )
+    except SummariesAnnotationError as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+    return SummariesAnnotateResponse(
+        ok=True,
+        per_paragraph=result.get("per_paragraph", {}) or {},
+        whole=result.get("whole", "") or "",
+    )
+
+
+@app.post("/api/annotate/summaries/paragraph", response_model=SummaryParagraphResponse)
+def annotate_summary_paragraph_endpoint(req: SummaryParagraphRequest) -> SummaryParagraphResponse:
+    """Generate a summary for one paragraph (used for incremental UI updates)."""
+
+    base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
+    default_model = _env("OLLAMA_MODEL", "qwen3:8b")
+
+    ollama_cfg = OllamaConfig(
+        base_url=base_url,
+        model=req.model or default_model,
+    )
+
+    try:
+        text = annotate_single_paragraph_summary(
+            index=req.index,
+            paragraph=req.paragraph,
+            language=req.language,
+            config=SummariesAnnotatorConfig(ollama=ollama_cfg),
+        )
+    except SummariesAnnotationError as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+    return SummaryParagraphResponse(ok=True, index=req.index, text=text)
+
+
+@app.post("/api/annotate/summaries/whole", response_model=SummaryWholeResponse)
+def annotate_summary_whole_endpoint(req: SummaryWholeRequest) -> SummaryWholeResponse:
+    """Generate a whole-story summary from per-paragraph summaries."""
+
+    base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
+    default_model = _env("OLLAMA_MODEL", "qwen3:8b")
+
+    ollama_cfg = OllamaConfig(
+        base_url=base_url,
+        model=req.model or default_model,
+    )
+
+    try:
+        whole = annotate_whole_summary_from_per_paragraph(
+            per_paragraph=req.per_paragraph,
+            language=req.language,
+            config=SummariesAnnotatorConfig(ollama=ollama_cfg),
+        )
+    except SummariesAnnotationError as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+    return SummaryWholeResponse(ok=True, whole=whole)

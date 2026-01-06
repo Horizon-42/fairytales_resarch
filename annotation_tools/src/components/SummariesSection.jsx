@@ -1,6 +1,16 @@
 import React, { useMemo } from "react";
 
-export default function SummariesSection({ paragraphSummaries, setParagraphSummaries, sourceText, highlightedRanges, setHighlightedRanges }) {
+export default function SummariesSection({
+  paragraphSummaries,
+  setParagraphSummaries,
+  sourceText,
+  sourceLanguage,
+  highlightedRanges,
+  setHighlightedRanges,
+  onAutoSummarize,
+  autoSummariesLoading,
+  autoSummariesProgress
+}) {
   // Compute text paragraphs with character indices
   const textParagraphs = useMemo(() => {
     if (!sourceText) return [];
@@ -138,7 +148,29 @@ export default function SummariesSection({ paragraphSummaries, setParagraphSumma
 
   return (
     <section className="card">
-      <h2>Summaries</h2>
+      <div className="section-header-row" style={{ alignItems: "center" }}>
+        <h2 style={{ margin: 0 }}>Summaries</h2>
+        <div style={{ display: "flex", gap: "0.5rem", marginLeft: "auto" }}>
+          {autoSummariesLoading && autoSummariesProgress && (
+            <span style={{ fontSize: "0.8rem", color: "#6b7280", alignSelf: "center" }}>
+              {autoSummariesProgress.done}/{autoSummariesProgress.total}
+            </span>
+          )}
+          <button
+            type="button"
+            className="ghost-btn"
+            onClick={() => onAutoSummarize && onAutoSummarize()}
+            disabled={!onAutoSummarize || autoSummariesLoading || !sourceText || !sourceText.trim()}
+            title={
+              sourceLanguage && sourceLanguage.toLowerCase() === "en"
+                ? "Auto-generate English summaries"
+                : "Auto-generate bilingual (source language + English) summaries"
+            }
+          >
+            {autoSummariesLoading ? "Auto Summary..." : "Auto Summary"}
+          </button>
+        </div>
+      </div>
 
       {/* Section 1: Per-Paragraph Summaries */}
       <div style={{ marginBottom: "1.5rem" }}>
