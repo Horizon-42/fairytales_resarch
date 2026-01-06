@@ -24,7 +24,7 @@
       "character_archetypes": [
         {
           "name": "花木兰",
-          "alias": "",
+          "alias": "妹妹",
           "archetype": "Hero"
         },
         {
@@ -34,13 +34,28 @@
         },
         {
           "name": "花母",
-          "alias": "",
+          "alias": "母亲",
           "archetype": "Other"
         },
         {
           "name": "姐姐",
           "alias": "木兰的姐姐",
           "archetype": "Sidekick/Helper"
+        },
+        {
+          "name": "官兵",
+          "alias": "",
+          "archetype": "Other"
+        },
+        {
+          "name": "姐姐",
+          "alias": "",
+          "archetype": ""
+        },
+        {
+          "name": "弟弟",
+          "alias": "",
+          "archetype": ""
         }
       ],
       "obstacle_pattern": "",
@@ -68,7 +83,7 @@
     {
       "id": "20e0bc4b-f84a-4569-956a-cbd4b6908af7",
       "event_type": "Initial Situation",
-      "description": "古时候，有个叫花木兰的姑娘，她从小和父亲学了一身高超的武艺。父亲对自己的这个女儿十分喜爱，总是称赞木兰有男子气概，只可惜是个女儿身，要不现在国难当头，木兰应该在战场上保家卫国。可是木兰才不喜欢父亲这样",
+      "description": "父亲从女儿身上看到男儿的特质，而女儿觉得自己不输于男儿; 花父欣赏花木兰的“男子气概”,惋惜于她是女儿身，而花木兰不服气",
       "agents": [
         "花木兰"
       ],

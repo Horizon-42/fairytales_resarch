@@ -17,7 +17,7 @@
   "characters": [
     {
       "name": "花木兰",
-      "alias": "",
+      "alias": "妹妹",
       "archetype": "Hero"
     },
     {
@@ -27,20 +27,35 @@
     },
     {
       "name": "花母",
-      "alias": "",
+      "alias": "母亲",
       "archetype": "Other"
     },
     {
       "name": "姐姐",
       "alias": "木兰的姐姐",
       "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "官兵",
+      "alias": "",
+      "archetype": "Other"
+    },
+    {
+      "name": "姐姐",
+      "alias": "",
+      "archetype": ""
+    },
+    {
+      "name": "弟弟",
+      "alias": "",
+      "archetype": ""
     }
   ],
   "narrative_events": [
     {
       "id": "20e0bc4b-f84a-4569-956a-cbd4b6908af7",
       "event_type": "Initial Situation",
-      "description": "古时候，有个叫花木兰的姑娘，她从小和父亲学了一身高超的武艺。父亲对自己的这个女儿十分喜爱，总是称赞木兰有男子气概，只可惜是个女儿身，要不现在国难当头，木兰应该在战场上保家卫国。可是木兰才不喜欢父亲这样",
+      "description": "父亲从女儿身上看到男儿的特质，而女儿觉得自己不输于男儿; 花父欣赏花木兰的“男子气概”,惋惜于她是女儿身，而花木兰不服气",
       "agents": [
         "花木兰"
       ],
@@ -65,6 +80,163 @@
         "status": "attempt",
         "context": "debate"
       }
+    },
+    {
+      "id": "1701e9ae-2cd5-426c-b1c5-df4c404d99f2",
+      "event_type": "",
+      "description": "女英雄接到了征兵信;花木兰收到了征兵信",
+      "agents": [
+        "官兵"
+      ],
+      "targets": [
+        "花木兰"
+      ],
+      "text_span": {
+        "start": 126,
+        "end": 332,
+        "text": "那时候，中国的边境经常发生战乱，朝廷每年都要征兵，木兰所在村子的好多壮丁被拉去打仗。可是战争不停息，很多男子都战死在沙场上，而国家的壮丁已经越来越少了。\n有一天，官兵又一次来到木兰的村子征兵。他们来到木兰家时，木兰正在织布，突然听见一阵急促的敲门声。木兰忙放下手中的活儿，从织布机架上下来，打开门一看，官兵就交给木兰一份文书，说：“朝廷下令，每家每户必须出一位壮丁入伍抗敌，明天早上在村口集合。”说完他们就走了。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationship_level1": "Hierarchy",
+      "relationship_level2": "ruler_subject",
+      "sentiment": "neutral",
+      "action_layer": {
+        "category": "communicative",
+        "type": "command",
+        "status": "success",
+        "context": "task_assignment"
+      }
+    },
+    {
+      "id": "c7550112-5e65-45bd-990f-680734b5c411",
+      "event_type": "",
+      "description": "女英雄下定决心；木兰决心替父从军",
+      "agents": [
+        "花木兰"
+      ],
+      "targets": [
+        "花父"
+      ],
+      "text_span": {
+        "start": 333,
+        "end": 437,
+        "text": "木兰拿着文书思前想后，这可怎么办啊？父亲年老，弟弟年幼，都不能出征。正在愁闷之时，一个大胆的想法在她脑海中浮现。古时候，好多女子都征战在前线，自己为什么不能和她们一样呢？何况，自己的一身武艺并不比男孩子差呀。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationship_level1": "Family & Kinship",
+      "relationship_level2": "parent_child",
+      "sentiment": "positive",
+      "action_layer": {
+        "category": "mental",
+        "type": "plot",
+        "status": "success",
+        "context": "make up one's mind"
+      }
+    },
+    {
+      "id": "67f3cd2d-6d27-4993-a2a1-2339d643dd98",
+      "event_type": "",
+      "description": "木兰的姐姐看见妹妹满脸愁容，连声叹气，知道一定出了什么事情。木兰就把征兵的事告诉了姐姐，姐妹俩商量了半天，也不知道怎么办才好。她们就把这件事情告诉了父母，花父觉得保家卫国，义不容辞，自己应当入伍抗敌。",
+      "agents": [
+        "花木兰",
+        "姐姐",
+        "花母"
+      ],
+      "targets": [
+        "花父"
+      ],
+      "text_span": {
+        "start": 438,
+        "end": 568,
+        "text": "木兰的姐姐看见妹妹满脸愁容，连声叹气，知道一定出了什么事情。木兰就把征兵的事告诉了姐姐，姐妹俩商量了半天，也不知道怎么办才好。她们就把这件事情告诉了父母，花父觉得保家卫国，义不容辞，自己应当入伍抗敌。木兰和姐姐坚决不同意，花母也觉得丈夫年事已高，万万不可出征。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "relationship_multi": [
+        {
+          "agent": "花木兰",
+          "target": "花父",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "parent_child",
+          "sentiment": "negative"
+        },
+        {
+          "agent": "姐姐",
+          "target": "花父",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "parent_child",
+          "sentiment": "negative"
+        },
+        {
+          "agent": "花母",
+          "target": "花父",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "parent_child",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "persuade",
+        "status": "attempt",
+        "context": "debate"
+      }
+    },
+    {
+      "id": "bf8d2e64-6a94-4d11-ac3c-76bf4c52e74a",
+      "event_type": "",
+      "description": "英雄试图承担责任，但被母亲（出于爱和偏见）拒绝; 花木兰提出替父从军，但被家人尤其母亲（出于对女人的偏见）拒绝",
+      "agents": [
+        "花木兰"
+      ],
+      "targets": [
+        "花母"
+      ],
+      "text_span": {
+        "start": 568,
+        "end": 707,
+        "text": "但木兰的弟弟年龄太小，自己都不会照顾自己，也不可能出征。家里人正在为难之际，木兰突然对父母说：“父亲年老，弟弟年幼，我愿意顶替弟弟的名字，替父从军。”\n大家听了木兰的话都吃惊不小，没有一个人同意木兰的做法，特别是母亲极力反对。她认为女子应该在家纺线织布，哪能在战场上冲锋陷阵呢。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationship_level1": "Family & Kinship",
+      "relationship_level2": "parent_child",
+      "sentiment": "negative",
+      "action_layer": {
+        "category": "communicative",
+        "type": "persuade",
+        "status": "failure",
+        "context": "advise"
+      }
+    },
+    {
+      "id": "c28e4d9e-29a6-4f85-84dd-e1d241e7061e",
+      "event_type": "",
+      "description": "木兰看劝说不了父母，就提出要和父亲比剑，谁赢了谁就出征。花父向来不服老，经女儿一说就答应了。\n于是，父女俩就一起来到院中比剑。花父剑法熟练，木兰身手矫健，几个回合下来分不出高低。但是到了后来，花父毕竟",
+      "agents": [],
+      "targets": [],
+      "text_span": {
+        "start": 707,
+        "end": 925,
+        "text": "木兰看劝说不了父母，就提出要和父亲比剑，谁赢了谁就出征。花父向来不服老，经女儿一说就答应了。\n于是，父女俩就一起来到院中比剑。花父剑法熟练，木兰身手矫健，几个回合下来分不出高低。但是到了后来，花父毕竟年龄大了，有点儿招架不住。木兰却越战越勇，最后，花父终于招架不住，撇下剑，蹲在地上喘气。\n木兰看见父亲身体这般虚弱，心意更加坚定，她一边扶起父亲，一边说道：“爹爹，你现在没有什么可以说的了吧，我胜了你，按照比剑前说的，我要替你去从军。”"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6
     }
   ],
   "themes_and_motifs": {

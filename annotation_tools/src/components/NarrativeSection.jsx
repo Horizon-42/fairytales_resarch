@@ -688,233 +688,229 @@ export default function NarrativeSection({
 
           {item.target_type === "character" && (
             <>
-              {multiRel && (
-                <div style={{ marginBottom: "0.5rem" }}>
-                  <label style={{ display: "block", fontWeight: 600, marginBottom: "0.25rem" }}>
-                    Relationships (multi)
+              {!multiRel ? (
+                <div className="grid-3">
+                  <label>
+                    Relationship L1
+                    <select
+                      value={effectiveRelationshipLevel1}
+                      onChange={(e) => {
+                        // Update level1 and reset level2 in a single update
+                        updateItem(idx, {
+                          relationship_level1: e.target.value,
+                          relationship_level2: ""
+                        });
+                      }}
+                    >
+                      <option value="">– Select –</option>
+                      {RELATIONSHIP_LEVEL1.map((level1) => {
+                        // Extract English part from format "中文(English)" or use as-is if no parentheses
+                        const match = level1.match(/\(([^)]+)\)/);
+                        const displayName = match ? match[1] : level1;
+                        return (
+                          <option key={level1} value={level1}>
+                            {displayName}
+                          </option>
+                        );
+                      })}
+                    </select>
                   </label>
+                  <label>
+                    Relationship L2
+                    <select
+                      value={effectiveRelationshipLevel2}
+                      onChange={(e) => updateItem(idx, "relationship_level2", e.target.value)}
+                      disabled={!effectiveRelationshipLevel1}
+                    >
+                      <option value="">– Select –</option>
+                      {effectiveRelationshipLevel1 && getRelationshipLevel2Options(effectiveRelationshipLevel1).map((level2) => (
+                        <option key={level2.tag} value={level2.tag}>
+                          {level2.tag}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                  <label>
+                    Sentiment
+                    <select
+                      value={item.sentiment || ""}
+                      onChange={(e) => updateItem(idx, "sentiment", e.target.value)}
+                    >
+                      <option value="">– Select –</option>
+                      {SENTIMENT_TAGS.map((tag) => (
+                        <option key={tag} value={tag}>
+                          {tag}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                </div>
+              ) : (
+                <div style={{ marginBottom: "0.25rem" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "0.5rem" }}>
+                    <div style={{ fontSize: "0.8rem", color: "#6b7280" }}>
+                      Relationship (multi)
+                    </div>
+                    <button
+                      type="button"
+                      className="ghost-btn"
+                      onClick={() => {
+                        const current = ensureAtLeastOneRelationship();
+                        const next = [
+                          ...current.map(ensureRelationshipMultiEntryShape),
+                          ensureRelationshipMultiEntryShape({
+                            agent: agents.length === 1 ? agents[0] : "",
+                            target: targets.length === 1 ? targets[0] : ""
+                          })
+                        ];
+                        setRelationshipMultiList(next);
+                      }}
+                      style={{ padding: "0.2rem 0.45rem", height: "28px", fontSize: "0.8rem" }}
+                    >
+                      + Add
+                    </button>
+                  </div>
+
                   {ensureAtLeastOneRelationship().map((rel, relIdx) => {
                     const relEntry = ensureRelationshipMultiEntryShape(rel);
                     const level1 = relEntry.relationship_level1 || "";
+
+                    const controlStyle = {
+                      height: "32px",
+                      fontSize: "0.85rem",
+                      padding: "0.3rem 0.45rem",
+                      lineHeight: "1.2",
+                      marginBottom: 0,
+                      boxSizing: "border-box"
+                    };
+
+                    const updateRel = (partial, resetLevel2 = false) => {
+                      const current = ensureAtLeastOneRelationship().map(ensureRelationshipMultiEntryShape);
+                      const next = current.map((r, i) => {
+                        if (i !== relIdx) return r;
+                        const merged = { ...r, ...partial };
+                        if (resetLevel2) merged.relationship_level2 = "";
+                        return merged;
+                      });
+                      setRelationshipMultiList(next);
+                    };
+
                     return (
                       <div
                         key={relIdx}
                         style={{
-                          display: "flex",
-                          flexWrap: "wrap",
+                          display: "grid",
+                          gridTemplateColumns: "1fr 1.2fr 1fr 1fr 1fr auto",
                           gap: "0.5rem",
-                          alignItems: "center",
-                          marginBottom: "0.5rem"
+                          alignItems: "end",
+                          marginTop: "0.4rem"
                         }}
                       >
-                        <select
-                          value={relEntry.agent}
-                          onChange={(e) => {
-                            const next = ensureAtLeastOneRelationship().map((r, i) =>
-                              i === relIdx ? { ...ensureRelationshipMultiEntryShape(r), agent: e.target.value } : ensureRelationshipMultiEntryShape(r)
-                            );
-                            setRelationshipMultiList(next);
-                          }}
-                          disabled={agents.length <= 1}
-                          style={{ minWidth: "140px" }}
-                          title="Select the agent side of this relationship"
-                        >
-                          <option value="">Agent…</option>
-                          {agents.map((name) => (
-                            <option key={name} value={name}>
-                              {name}
-                            </option>
-                          ))}
-                        </select>
-
-                        <select
-                          value={relEntry.target}
-                          onChange={(e) => {
-                            const next = ensureAtLeastOneRelationship().map((r, i) =>
-                              i === relIdx ? { ...ensureRelationshipMultiEntryShape(r), target: e.target.value } : ensureRelationshipMultiEntryShape(r)
-                            );
-                            setRelationshipMultiList(next);
-                          }}
-                          disabled={targets.length <= 1}
-                          style={{ minWidth: "140px" }}
-                          title="Select the target side of this relationship"
-                        >
-                          <option value="">Target…</option>
-                          {targets.map((name) => (
-                            <option key={name} value={name}>
-                              {name}
-                            </option>
-                          ))}
-                        </select>
-
-                        <select
-                          value={relEntry.relationship_level1}
-                          onChange={(e) => {
-                            const nextLevel1 = e.target.value;
-                            const next = ensureAtLeastOneRelationship().map((r, i) =>
-                              i === relIdx
-                                ? { ...ensureRelationshipMultiEntryShape(r), relationship_level1: nextLevel1, relationship_level2: "" }
-                                : ensureRelationshipMultiEntryShape(r)
-                            );
-                            setRelationshipMultiList(next);
-                          }}
-                          style={{ minWidth: "160px" }}
-                          title="Relationship L1"
-                        >
-                          <option value="">L1…</option>
-                          {RELATIONSHIP_LEVEL1.map((l1) => {
-                            const match = l1.match(/\(([^)]+)\)/);
-                            const displayName = match ? match[1] : l1;
-                            return (
-                              <option key={l1} value={l1}>
-                                {displayName}
+                        <label>
+                          Agent
+                          <select
+                            value={relEntry.agent}
+                            onChange={(e) => updateRel({ agent: e.target.value })}
+                            disabled={agents.length <= 1}
+                            style={controlStyle}
+                          >
+                            <option value="">– Select –</option>
+                            {agents.map((name) => (
+                              <option key={name} value={name}>
+                                {name}
                               </option>
-                            );
-                          })}
-                        </select>
+                            ))}
+                          </select>
+                        </label>
 
-                        <select
-                          value={relEntry.relationship_level2}
-                          onChange={(e) => {
-                            const next = ensureAtLeastOneRelationship().map((r, i) =>
-                              i === relIdx ? { ...ensureRelationshipMultiEntryShape(r), relationship_level2: e.target.value } : ensureRelationshipMultiEntryShape(r)
-                            );
-                            setRelationshipMultiList(next);
-                          }}
-                          disabled={!level1}
-                          style={{ minWidth: "140px" }}
-                          title="Relationship L2"
-                        >
-                          <option value="">L2…</option>
-                          {level1 && getRelationshipLevel2Options(level1).map((l2) => (
-                            <option key={l2.tag} value={l2.tag}>
-                              {l2.tag}
-                            </option>
-                          ))}
-                        </select>
+                        <label>
+                          Relationship L1
+                          <select
+                            value={relEntry.relationship_level1}
+                            onChange={(e) => updateRel({ relationship_level1: e.target.value }, true)}
+                            style={controlStyle}
+                          >
+                            <option value="">– Select –</option>
+                            {RELATIONSHIP_LEVEL1.map((l1) => {
+                              const match = l1.match(/\(([^)]+)\)/);
+                              const displayName = match ? match[1] : l1;
+                              return (
+                                <option key={l1} value={l1}>
+                                  {displayName}
+                                </option>
+                              );
+                            })}
+                          </select>
+                        </label>
 
-                        <select
-                          value={relEntry.sentiment}
-                          onChange={(e) => {
-                            const next = ensureAtLeastOneRelationship().map((r, i) =>
-                              i === relIdx ? { ...ensureRelationshipMultiEntryShape(r), sentiment: e.target.value } : ensureRelationshipMultiEntryShape(r)
-                            );
-                            setRelationshipMultiList(next);
-                          }}
-                          style={{ minWidth: "120px" }}
-                          title="Sentiment for this relationship"
-                        >
-                          <option value="">Sentiment…</option>
-                          {SENTIMENT_TAGS.map((tag) => (
-                            <option key={tag} value={tag}>
-                              {tag}
-                            </option>
-                          ))}
-                        </select>
+                        <label>
+                          Relationship L2
+                          <select
+                            value={relEntry.relationship_level2}
+                            onChange={(e) => updateRel({ relationship_level2: e.target.value })}
+                            disabled={!level1}
+                            style={controlStyle}
+                          >
+                            <option value="">– Select –</option>
+                            {level1 && getRelationshipLevel2Options(level1).map((l2) => (
+                              <option key={l2.tag} value={l2.tag}>
+                                {l2.tag}
+                              </option>
+                            ))}
+                          </select>
+                        </label>
+
+                        <label>
+                          Sentiment
+                          <select
+                            value={relEntry.sentiment}
+                            onChange={(e) => updateRel({ sentiment: e.target.value })}
+                            style={controlStyle}
+                          >
+                            <option value="">– Select –</option>
+                            {SENTIMENT_TAGS.map((tag) => (
+                              <option key={tag} value={tag}>
+                                {tag}
+                              </option>
+                            ))}
+                          </select>
+                        </label>
+
+                        <label>
+                          Target
+                          <select
+                            value={relEntry.target}
+                            onChange={(e) => updateRel({ target: e.target.value })}
+                            disabled={targets.length <= 1}
+                            style={controlStyle}
+                          >
+                            <option value="">– Select –</option>
+                            {targets.map((name) => (
+                              <option key={name} value={name}>
+                                {name}
+                              </option>
+                            ))}
+                          </select>
+                        </label>
 
                         <button
                           type="button"
                           className="ghost-btn"
-                          style={{ padding: "0.25rem 0.5rem", height: "32px" }}
+                          style={{ padding: "0 0.45rem", height: "32px" }}
                           onClick={() => {
-                            const current = ensureAtLeastOneRelationship();
+                            const current = ensureAtLeastOneRelationship().map(ensureRelationshipMultiEntryShape);
                             const next = current.filter((_, i) => i !== relIdx);
                             setRelationshipMultiList(next.length > 0 ? next : [ensureRelationshipMultiEntryShape({})]);
                           }}
-                          title="Remove this relationship"
+                          title="Remove relationship"
                         >
-                          Remove
+                          ×
                         </button>
                       </div>
                     );
                   })}
-
-                  <button
-                    type="button"
-                    className="ghost-btn"
-                    onClick={() => {
-                      const current = ensureAtLeastOneRelationship();
-                      const next = [
-                        ...current.map(ensureRelationshipMultiEntryShape),
-                        ensureRelationshipMultiEntryShape({
-                          agent: agents.length === 1 ? agents[0] : "",
-                          target: targets.length === 1 ? targets[0] : ""
-                        })
-                      ];
-                      setRelationshipMultiList(next);
-                    }}
-                    style={{ padding: "0.25rem 0.5rem", height: "32px" }}
-                  >
-                    + Add relationship
-                  </button>
                 </div>
               )}
-              <div className="grid-3">
-                <label>
-                  Relationship L1
-                  <select
-                    value={effectiveRelationshipLevel1}
-                    onChange={(e) => {
-                      const nextLevel1 = e.target.value;
-                      if (!multiRel) {
-                        // Update level1 and reset level2 in a single update
-                        updateItem(idx, {
-                          relationship_level1: nextLevel1,
-                          relationship_level2: ""
-                        });
-                      }
-                    }}
-                    disabled={multiRel}
-                  >
-                    <option value="">– Select –</option>
-                    {RELATIONSHIP_LEVEL1.map((level1) => {
-                      // Extract English part from format "中文(English)" or use as-is if no parentheses
-                      const match = level1.match(/\(([^)]+)\)/);
-                      const displayName = match ? match[1] : level1;
-                      return (
-                        <option key={level1} value={level1}>
-                          {displayName}
-                        </option>
-                      );
-                    })}
-                  </select>
-                </label>
-                <label>
-                  Relationship L2
-                  <select
-                    value={effectiveRelationshipLevel2}
-                    onChange={(e) => {
-                      const nextLevel2 = e.target.value;
-                      if (!multiRel) {
-                        updateItem(idx, "relationship_level2", nextLevel2);
-                      }
-                    }}
-                    disabled={!effectiveRelationshipLevel1}
-                  >
-                    <option value="">– Select –</option>
-                    {effectiveRelationshipLevel1 && getRelationshipLevel2Options(effectiveRelationshipLevel1).map((level2) => (
-                      <option key={level2.tag} value={level2.tag}>
-                        {level2.tag}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-                <label>
-                  Sentiment
-                  <select
-                    value={item.sentiment || ""}
-                    onChange={(e) => updateItem(idx, "sentiment", e.target.value)}
-                    disabled={multiRel}
-                  >
-                    <option value="">– Select –</option>
-                    {SENTIMENT_TAGS.map((tag) => (
-                      <option key={tag} value={tag}>
-                        {tag}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-              </div>
             </>
           )}
 
