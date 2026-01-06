@@ -66,3 +66,32 @@ In the Narrative tab there is an “Automatic sectioning” helper with two mode
 - `Embedding assisted`: computes adjacent chunk similarity (embeddings) as hints to improve boundaries.
 
 If `Embedding assisted` is selected but the embedding model is not available, the backend will warn on startup and the request will fail with a clear error until you run `ollama pull qwen3-embedding:4b`.
+
+### Vector database (optional, skip build)
+Motif/ATU retrieval uses a local vector database stored under:
+- Default location: `llm_model/vector_database/store/`
+
+If you already have a prebuilt vector database archive, you can install it to skip the build step.
+
+Prebuilt archive (Google Drive):
+- https://drive.google.com/file/d/11Lj0yi6yCTjHfIFPjd28EeeAeGKjQxt-/view?usp=sharing
+
+Expected files in the store directory:
+- `docs.sqlite`
+- `atu_hnsw.bin`
+- `motif_hnsw.bin`
+- `meta.json`
+
+Install option A (recommended): extract into the default store folder
+1) Download the archive from the link above.
+2) Extract it so that the files above end up in `llm_model/vector_database/store/`.
+	- If the archive contains a top-level folder (e.g. `store/`), move its contents into `llm_model/vector_database/store/`.
+
+Install option B: extract anywhere and point the backend to it
+1) Extract the archive to some directory, for example: `/path/to/vector_db_store/`
+2) Start backend with:
+	- `VECTOR_DB_DIR=/path/to/vector_db_store ./backend/start.sh`
+
+Quick check
+- Once installed, the backend Motif/ATU endpoint should work without rebuilding:
+  - `POST /api/detect/motif_atu`
