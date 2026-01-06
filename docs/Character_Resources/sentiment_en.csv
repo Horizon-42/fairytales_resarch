@@ -1,0 +1,7 @@
+Tag,English Name,Polarity,Typical Psychology & Behavior,Friendly Level
+romantic,Romantic attraction/infatuation,High Positive,"Courtship; sexual attraction; affectionate gaze; blushing.",2
+positive,Friendly/affectionate,Positive,"Trust; gratitude; respect; help; agreement.",1
+neutral,Neutral/indifferent,Neutral,"Transactional exchange; emotionless Q&A; passing by.",1
+negative,Dislike/aversion,Negative,"Sneering; refusal; impatience; contempt; arguing.",-1
+fearful,Fearful/submissive,Negative (Passive),"Trembling; begging; forced kneeling; fleeing.",-2
+hostile,Hostile/killing intent,High Negative,"Attack; curse; anger; attempt to harm/kill.",-2
