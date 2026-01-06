@@ -74,6 +74,8 @@ class FairyVectorDB:
 
         self.paths.root_dir.mkdir(parents=True, exist_ok=True)
 
+        print("[vector-db] Loading CSV sources...")
+
         # (Re)create sqlite content
         conn = connect(self.paths.sqlite_path)
         ensure_schema(conn)
@@ -82,9 +84,14 @@ class FairyVectorDB:
         atu_records = list(iter_atu_records(sources.atu_csv))
         motif_records = list(iter_motif_records(sources.motif_csv))
 
+        print(f"[vector-db] Parsed ATU records: {len(atu_records)}")
+        print(f"[vector-db] Parsed Motif records: {len(motif_records)}")
+
         upsert_documents(conn, atu_records)
         upsert_documents(conn, motif_records)
         conn.commit()
+
+        print("[vector-db] Wrote documents to SQLite")
 
         # Determine embedding dimension
         sample_text = (atu_records[0].text if atu_records else None) or (motif_records[0].text if motif_records else None)
@@ -107,6 +114,9 @@ class FairyVectorDB:
         motif_count = count_collection(conn, "motif")
         total = atu_count + motif_count
 
+        print(f"[vector-db] SQLite counts: atu={atu_count} motif={motif_count} total={total}")
+        print(f"[vector-db] Embedding model: {config.embedding_model} (dim={dim})")
+
         meta = {
             "embedding_model": config.embedding_model,
             "ollama_base_url": config.ollama_base_url,
@@ -121,6 +131,7 @@ class FairyVectorDB:
         }
 
         # Build ATU index
+        print("[vector-db] Building ATU HNSW index...")
         self._build_index_for_collection(
             conn=conn,
             collection="atu",
@@ -131,6 +142,7 @@ class FairyVectorDB:
         )
 
         # Build Motif index
+        print("[vector-db] Building Motif HNSW index...")
         self._build_index_for_collection(
             conn=conn,
             collection="motif",
@@ -142,6 +154,8 @@ class FairyVectorDB:
 
         # Save meta
         self.paths.meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+        print("[vector-db] Wrote meta.json")
+        print(f"[vector-db] Build complete: {self.paths.root_dir}")
         conn.close()
 
     def _build_index_for_collection(
@@ -156,11 +170,20 @@ class FairyVectorDB:
     ) -> None:
         from .sqlite_store import iter_collection
 
+        try:
+            from tqdm import tqdm  # type: ignore
+        except Exception:  # pragma: no cover
+            tqdm = None  # type: ignore
+
         idx = HNSWIndex(dim=dim, config=config.hnsw)
         idx.init(max_elements=max(1, max_elements))
 
         batch_texts: List[str] = []
         batch_ids: List[int] = []
+
+        pbar = None
+        if tqdm is not None:
+            pbar = tqdm(total=max_elements, desc=f"Embedding+Indexing {collection}")
 
         def flush() -> None:
             if not batch_texts:
@@ -172,6 +195,8 @@ class FairyVectorDB:
                 timeout_s=600.0,
             )
             idx.add(vectors=vecs, ids=batch_ids)
+            if pbar is not None:
+                pbar.update(len(batch_texts))
             batch_texts.clear()
             batch_ids.clear()
 
@@ -181,6 +206,9 @@ class FairyVectorDB:
             if len(batch_texts) >= config.embed_batch_size:
                 flush()
         flush()
+
+        if pbar is not None:
+            pbar.close()
 
         idx.save(index_path)
 

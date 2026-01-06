@@ -52,7 +52,7 @@ def main(argv: list[str] | None = None) -> int:
     p_build.add_argument(
         "--embed-batch-size",
         type=int,
-        default=32,
+        default=512,
         help="Embedding batch size sent to Ollama",
     )
 

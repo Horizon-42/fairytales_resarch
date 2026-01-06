@@ -101,7 +101,7 @@ def iter_collection(
         "SELECT id, collection, doc_key, text, metadata_json FROM documents WHERE collection=? ORDER BY id",
         (collection,),
     )
-    for row in cur.fetchall():
+    for row in cur:
         doc_id, collection, doc_key, text, metadata_json = row
         yield int(doc_id), DocRecord(
             collection=str(collection),

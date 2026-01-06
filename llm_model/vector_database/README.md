@@ -21,6 +21,10 @@ For a single-machine research workflow, `hnswlib + sqlite3` is a good fit:
 
 If you later want multi-user / remote access, we can swap to a server-backed DB (e.g. Qdrant).
 
+For implementation details (architecture, build pipeline, scoring), see:
+
+- [llm_model/vector_database/TECHNICAL.md](llm_model/vector_database/TECHNICAL.md)
+
 ## Setup
 
 ### Option A: Use your conda env `nlp` (recommended)
