@@ -106,7 +106,8 @@
       "action_type": "persuade",
       "action_context": "debate",
       "action_status": "attempt",
-      "narrative_function": "setup"
+      "narrative_function": "setup",
+      "relationship_multi": []
     }
   ],
   "cross_validation": {

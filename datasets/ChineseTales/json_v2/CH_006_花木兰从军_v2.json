@@ -78,7 +78,8 @@
       "action_type": "persuade",
       "action_context": "debate",
       "action_status": "attempt",
-      "narrative_function": "setup"
+      "narrative_function": "setup",
+      "relationship_multi": []
     },
     {
       "id": "1701e9ae-2cd5-426c-b1c5-df4c404d99f2",
@@ -106,7 +107,8 @@
       "action_type": "command",
       "action_context": "task_assignment",
       "action_status": "success",
-      "narrative_function": "trigger"
+      "narrative_function": "trigger",
+      "relationship_multi": []
     },
     {
       "id": "c7550112-5e65-45bd-990f-680734b5c411",
@@ -134,7 +136,8 @@
       "relationship_level2": "parent_child",
       "sentiment": "positive",
       "action_status": "success",
-      "narrative_function": "character_arc"
+      "narrative_function": "character_arc",
+      "relationship_multi": []
     },
     {
       "id": "67f3cd2d-6d27-4993-a2a1-2339d643dd98",
@@ -186,7 +189,8 @@
           "relationship_level2": "parent_child",
           "sentiment": "negative"
         }
-      ]
+      ],
+      "narrative_function": ""
     },
     {
       "id": "bf8d2e64-6a94-4d11-ac3c-76bf4c52e74a",
@@ -213,7 +217,9 @@
       "action_category": "communicative",
       "action_type": "persuade",
       "action_context": "advise",
-      "action_status": "failure"
+      "action_status": "failure",
+      "narrative_function": "",
+      "relationship_multi": []
     },
     {
       "id": "c28e4d9e-29a6-4f85-84dd-e1d241e7061e",
@@ -241,7 +247,8 @@
       "action_type": "challenge",
       "action_context": "",
       "narrative_function": "climax",
-      "action_status": "partial"
+      "action_status": "partial",
+      "relationship_multi": []
     },
     {
       "id": "e91dccba-77e1-4828-9c40-7fdc08e07afb",
@@ -257,7 +264,16 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 7
+      "time_order": 7,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "0f48c09f-ace1-41cf-8494-5a557348cafa",
@@ -273,7 +289,16 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 8
+      "time_order": 8,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "1d038f63-af70-4f6d-bc76-57bf328d5081",
@@ -289,7 +314,16 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 9
+      "time_order": 9,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "e8fcd5bc-c5fd-46a9-8670-18b7a916b01a",
@@ -305,7 +339,16 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 10
+      "time_order": 10,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "44051554-1387-470d-b5cc-53d780f04d2a",
@@ -321,7 +364,16 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 11
+      "time_order": 11,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "ecab7c52-9984-4c9d-ae86-fb5f82b69167",
@@ -337,7 +389,16 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 12
+      "time_order": 12,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "c6b9db18-f73e-4c03-9b46-da6da84091fa",
@@ -353,7 +414,16 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 13
+      "time_order": 13,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "a123d827-3a29-452c-9950-e7c1295e8bad",
@@ -369,7 +439,16 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 14
+      "time_order": 14,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "5dbe640d-6eea-4b22-8699-ee6d1cb55a4a",
@@ -385,7 +464,16 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 15
+      "time_order": 15,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "2c038325-0bad-42ff-b80d-46830c1bfb3f",
@@ -401,7 +489,16 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 16
+      "time_order": 16,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "065a71a9-1e7a-4198-8dda-a3df18d46290",
@@ -417,7 +514,16 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 17
+      "time_order": 17,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "90f715dd-428c-4f15-86c5-95c10f87e3e0",
@@ -433,7 +539,16 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 18
+      "time_order": 18,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     }
   ],
   "themes_and_motifs": {
