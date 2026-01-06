@@ -3,7 +3,7 @@ import CreatableSelect from 'react-select/creatable';
 import { PROPP_FUNCTIONS, TARGET_CATEGORIES, OBJECT_TYPES } from "../constants.js";
 import { RELATIONSHIP_LEVEL1, RELATIONSHIP_LEVEL2, getRelationshipLevel2Options } from "../relationship_constants.js";
 import { SENTIMENT_TAGS, SENTIMENT_DATA, getSentimentByTag } from "../sentiment_constants.js";
-import { ACTION_CATEGORIES, ACTION_TYPES, ACTION_STATUS, getActionTypesForCategory, getContextTagsForAction } from "../action_taxonomy_constants.js";
+import { ACTION_CATEGORIES, ACTION_TYPES, ACTION_STATUS, NARRATIVE_FUNCTIONS, getActionTypesForCategory, getContextTagsForAction } from "../action_taxonomy_constants.js";
 import { generateUUID } from "../utils/fileHandler.js";
 import { customSelectStyles } from "../utils/helpers.js";
 
@@ -128,6 +128,7 @@ export default function NarrativeSection({
         id: generateUUID(),
         event_type: "OTHER",
         description: item,
+        narrative_function: "",
         agents: [],
         targets: [],
         text_span: null,
@@ -150,6 +151,7 @@ export default function NarrativeSection({
         ...item,
         id: generateUUID(),
         time_order: item.time_order ?? (maxTimeOrder + 1 + index),
+        narrative_function: item.narrative_function || "",
         relationship_level1: item.relationship_level1 || "",
         relationship_level2: item.relationship_level2 || "",
         relationship_multi: Array.isArray(item.relationship_multi) ? item.relationship_multi : (item.relationship_multi ? [item.relationship_multi] : []),
@@ -163,6 +165,7 @@ export default function NarrativeSection({
     return {
       ...item,
       time_order: item.time_order ?? (maxTimeOrder + 1 + index),
+      narrative_function: item.narrative_function || "",
       relationship_level1: item.relationship_level1 || "",
       relationship_level2: item.relationship_level2 || "",
       relationship_multi: Array.isArray(item.relationship_multi) ? item.relationship_multi : (item.relationship_multi ? [item.relationship_multi] : []),
@@ -594,6 +597,23 @@ export default function NarrativeSection({
               </div>
             </div>
           </div>
+
+            <div style={{ marginTop: "0.25rem" }}>
+              <label>
+                Narrative Function
+                <select
+                  value={item.narrative_function || ""}
+                  onChange={(e) => updateItem(idx, "narrative_function", e.target.value)}
+                >
+                  <option value="">– Select –</option>
+                  {NARRATIVE_FUNCTIONS.map((fn) => (
+                    <option key={fn.code} value={fn.code}>
+                      {fn.name}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
 
           <label>
             Description / Detail

@@ -4,51 +4,77 @@
 // Level 1: Action Categories
 export const ACTION_CATEGORIES = [
   { code: "physical", name: "Physical & Conflict" },
-  { code: "communicative", name: "Communicative & Social" },
+  // Code kept as "communicative" for backward compatibility (legacy JSON may use it)
+  { code: "communicative", name: "Social & Communicative" },
   { code: "transaction", name: "Transaction & Exchange" },
   { code: "mental", name: "Mental & Cognitive" },
-  { code: "existential", name: "Existential & Magical" }
+  // Code kept as "existential" for backward compatibility (legacy JSON may use it)
+  { code: "existential", name: "Existential & Supernatural" }
 ];
 
 // Level 2: Action Types by Category
 export const ACTION_TYPES = {
   physical: [
-    { code: "attack", name: "Attack", contextTags: ["ambush", "duel", "mass_battle", "magical_blast"] },
-    { code: "defend", name: "Defend", contextTags: ["parry", "shield", "dodge"] },
-    { code: "restrain", name: "Restrain", contextTags: ["bind", "imprison", "seal", "arrest"] },
-    { code: "flee", name: "Flee", contextTags: ["panic", "strategic_retreat", "obstacle_flight"] },
-    { code: "steal", name: "Steal", contextTags: ["pickpocket", "heist", "switch"] },
-    { code: "travel", name: "Travel", contextTags: ["quest_journey", "flight", "sneak"] }
+    // Canonical v2 taxonomy
+    { code: "attack", name: "Attack", contextTags: ["ambush", "duel", "spar", "brawl", "mass_battle", "magical_blast"] },
+    { code: "defend", name: "Defend", contextTags: ["parry", "shield", "dodge", "bracing"] },
+    { code: "restrain", name: "Restrain", contextTags: ["bind", "imprison", "pin_down", "arrest", "seal"] },
+    { code: "flee", name: "Flee", contextTags: ["panic", "strategic_retreat", "escape", "obstacle_flight"] },
+    { code: "travel", name: "Travel", contextTags: ["quest", "quest_journey", "sneak", "chase", "wander", "flight"] },
+    { code: "interact", name: "Interact", contextTags: ["consume", "repair", "destroy_obj", "craft"] },
+
+    // Legacy / compatibility: keep old codes selectable so old JSON round-trips
+    { code: "steal", name: "Steal", contextTags: ["pickpocket", "heist", "switch"] }
   ],
   communicative: [
-    { code: "inform", name: "Inform", contextTags: ["report", "rumor", "confess"] },
-    { code: "persuade", name: "Persuade", contextTags: ["advise", "beg", "seduce", "debate"] },
-    { code: "deceive", name: "Deceive", contextTags: ["disguise", "lie", "feign"] },
-    { code: "command", name: "Command", contextTags: ["decree", "intimidation", "task_assignment"] },
+    // Canonical v2 taxonomy
+    { code: "inform", name: "Inform", contextTags: ["report", "reveal", "explain", "confess", "rumor"] },
+    { code: "persuade", name: "Persuade", contextTags: ["advise", "beg", "negotiate", "seduce", "debate"] },
+    { code: "deceive", name: "Deceive", contextTags: ["lie", "feign", "disguise", "mislead"] },
+    { code: "challenge", name: "Challenge", contextTags: ["provoke", "duel_proposal", "threaten"] },
+    { code: "command", name: "Command", contextTags: ["order", "decree", "coerce", "assign_task", "intimidation", "task_assignment"] },
+    { code: "betray", name: "Betray", contextTags: ["backstab", "defect", "break_oath"] },
+    { code: "reconcile", name: "Reconcile", contextTags: ["apologize", "comfort", "forgive", "mediate"] },
+
+    // Legacy / compatibility
     { code: "slander", name: "Slander", contextTags: ["framing", "court_intrigue", "defamation"] },
     { code: "promise", name: "Promise", contextTags: ["oath", "marriage_proposal", "contract"] }
   ],
   transaction: [
-    { code: "give", name: "Give", contextTags: ["alms", "gift", "inheritance"] },
+    // Canonical v2 taxonomy
+    { code: "give", name: "Give", contextTags: ["gift", "alms", "legacy", "supply", "inheritance"] },
+    { code: "acquire", name: "Acquire", contextTags: ["steal", "borrow", "seize", "loot"] },
+    { code: "exchange", name: "Exchange", contextTags: ["trade", "barter", "bribe", "buy"] },
+    { code: "reward", name: "Reward", contextTags: ["promote", "pay", "honor", "bless", "promotion", "title", "treasure"] },
+    { code: "punish", name: "Punish", contextTags: ["fine", "exile", "execution", "demote"] },
+
+    // Legacy / compatibility
     { code: "request", name: "Request", contextTags: ["demand", "pray", "borrow"] },
-    { code: "exchange", name: "Exchange", contextTags: ["barter", "buy", "bribe"] },
-    { code: "reward", name: "Reward", contextTags: ["promotion", "title", "treasure"] },
-    { code: "punish", name: "Punish", contextTags: ["execution", "exile", "fine"] },
     { code: "sacrifice", name: "Sacrifice", contextTags: ["self_sacrifice", "offering", "martyrdom"] }
   ],
   mental: [
+    // Canonical v2 taxonomy
+    { code: "resolve", name: "Resolve", contextTags: ["decide", "vow", "steel_oneself", "harden_heart"] },
+    { code: "plan", name: "Plan", contextTags: ["scheme", "strategize", "plot", "strategy"] },
+    { code: "realize", name: "Realize", contextTags: ["epiphany", "detect", "deduce", "discovery", "see_through"] },
+    { code: "hesitate", name: "Hesitate", contextTags: ["doubt", "fear", "waver", "confuse"] },
+
+    // Legacy / compatibility
     { code: "observe", name: "Observe", contextTags: ["spy", "inspect", "watch"] },
-    { code: "realize", name: "Realize", contextTags: ["epiphany", "discovery", "see_through"] },
     { code: "investigate", name: "Investigate", contextTags: ["search", "interrogate", "track"] },
     { code: "plot", name: "Plot", contextTags: ["scheme", "strategy", "hesitate"] },
     { code: "forget", name: "Forget", contextTags: ["amnesia", "ignore", "magic_forgetfulness"] }
   ],
   existential: [
-    { code: "transform", name: "Transform", contextTags: ["shapeshift", "disguise_reveal", "growth"] },
+    // Canonical v2 taxonomy
+    { code: "cast", name: "Cast", contextTags: ["curse", "heal", "summon", "enchant", "bless"] },
+    { code: "transform", name: "Transform", contextTags: ["shapeshift", "grow", "shrink", "disguise_reveal", "growth"] },
+    { code: "die", name: "Die", contextTags: ["sacrifice", "perish", "murdered", "suicide", "natural_death"] },
+    { code: "revive", name: "Revive", contextTags: ["awaken", "resurrect", "regenerate", "resurrection", "reincarnation", "awakening"] },
+
+    // Legacy / compatibility
     { code: "cast_spell", name: "Cast Spell", contextTags: ["curse", "bless", "summon", "heal"] },
-    { code: "express_emotion", name: "Express Emotion", contextTags: ["cry", "mourn", "laugh", "rage"] },
-    { code: "die", name: "Die", contextTags: ["suicide", "natural_death", "murdered"] },
-    { code: "revive", name: "Revive", contextTags: ["resurrection", "reincarnation", "awakening"] }
+    { code: "express_emotion", name: "Express Emotion", contextTags: ["cry", "mourn", "laugh", "rage"] }
   ]
 };
 
@@ -57,7 +83,23 @@ export const ACTION_STATUS = [
   { code: "attempt", name: "Attempt" },
   { code: "success", name: "Success" },
   { code: "failure", name: "Failure" },
-  { code: "interrupted", name: "Interrupted" }
+  { code: "interrupted", name: "Interrupted" },
+  // Newer taxonomy tags (kept optional)
+  { code: "backfire", name: "Backfire" },
+  { code: "partial", name: "Partial" }
+];
+
+// Narrative Function layer (optional)
+// Default is empty string (unset). Keep options stable and minimal.
+// Note: some docs use "exposition" while the bilingual v2.0 doc uses "setup".
+// We include both to preserve backward compatibility.
+export const NARRATIVE_FUNCTIONS = [
+  { code: "trigger", name: "Trigger" },
+  { code: "climax", name: "Climax" },
+  { code: "resolution", name: "Resolution" },
+  { code: "character_arc", name: "Character arc" },
+  { code: "setup", name: "Setup" },
+  { code: "exposition", name: "Exposition" }
 ];
 
 // Helper function to get action types for a category

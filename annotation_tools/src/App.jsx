@@ -688,7 +688,7 @@ export default function App() {
       characters: characters,
       narrative_events: narrativeStructure.map((n) => {
         if (typeof n === "string") {
-          return { event_type: "OTHER", description: n };
+          return { event_type: "OTHER", description: n, narrative_function: "" };
         }
 
         const result = { ...n };

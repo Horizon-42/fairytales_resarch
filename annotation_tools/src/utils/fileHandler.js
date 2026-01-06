@@ -166,6 +166,7 @@ export function mapV2ToState(data) {
           id: generateUUID(),
           event_type: "OTHER",
           description: evt,
+          narrative_function: "",
           agents: [],
           targets: [],
           text_span: null,
@@ -187,6 +188,7 @@ export function mapV2ToState(data) {
         ...evt,
         // Ensure new fields exist
         id: evt.id || generateUUID(),
+        narrative_function: evt.narrative_function || "",
         target_type: evt.target_type || "character",
         object_type: evt.object_type || "",
         instrument: evt.instrument || "",
@@ -304,6 +306,7 @@ export function mapV1ToState(data) {
           id: generateUUID(),
           event_type: "OTHER",
           description: evt,
+          narrative_function: "",
           agents: [],
           targets: [],
           text_span: null,
@@ -324,6 +327,7 @@ export function mapV1ToState(data) {
       return {
         ...evt,
         id: evt.id || generateUUID(),
+        narrative_function: evt.narrative_function || "",
         target_type: evt.target_type || "character",
         object_type: evt.object_type || "",
         instrument: evt.instrument || "",
