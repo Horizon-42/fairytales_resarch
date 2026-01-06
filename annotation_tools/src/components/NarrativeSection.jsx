@@ -8,17 +8,24 @@ import { generateUUID } from "../utils/fileHandler.js";
 import { customSelectStyles } from "../utils/helpers.js";
 import {
   ensureRelationshipMultiEntryShape,
-  normalizeRelationshipMulti,
-  isMultiRelationshipEvent,
   buildMultiCharUpdatesWithEndpointSync,
-  getEffectiveRelationshipLevels,
+  deriveRelationshipUiState,
   ensureAtLeastOneRelationshipMulti,
   computeMaxTimeOrder,
   buildNarrativeItems,
   sortNarrativeItemsInPlace,
-  findOriginalNarrativeIndexById,
   removeNarrativeEntryById,
-  buildNarrativeObjectFromString
+  applyNarrativeItemUpdate,
+  toggleNarrativeHighlightMap,
+  toggleAllNarrativeHighlightsMap,
+  computeAllNarrativeHighlighted,
+  narrativeHighlightKey,
+  narrativeHighlightMarkIdFromKey,
+  updateRelationshipMultiRow,
+  addRelationshipMultiRow,
+  removeRelationshipMultiRow,
+  buildSetRelationshipMultiUpdates,
+  formatRelationshipLevel1Label
 } from "./narrativeSectionLogic.js";
 
 // Map Propp function codes to full display names from CSV
@@ -114,14 +121,7 @@ export default function NarrativeSection({
 
   // Check if all items with text_span are highlighted
   const allHighlighted = React.useMemo(() => {
-    if (!highlightedRanges) return false;
-    const itemsWithSpan = items.filter(item => item.text_span);
-    if (itemsWithSpan.length === 0) return false;
-
-    return itemsWithSpan.every((item, idx) => {
-      const key = `narrative-${idx}`;
-      return highlightedRanges[key];
-    });
+    return computeAllNarrativeHighlighted({ highlightedRanges, items });
   }, [highlightedRanges, items]);
 
   const updateItem = (index, fieldOrUpdates, value) => {
@@ -130,46 +130,17 @@ export default function NarrativeSection({
       ? { [fieldOrUpdates]: value }
       : fieldOrUpdates;
 
-    // Find the item by ID since items are sorted
-    const itemToUpdate = items[index];
-    if (!itemToUpdate || !itemToUpdate.id) {
-      // Fallback to index if no ID
-      const next = [...items];
-      next[index] = { ...next[index], ...updates };
-      setNarrativeStructure(next);
-      return;
-    }
-
-    // Find the original index in narrativeStructure by ID
-    const originalIndex = findOriginalNarrativeIndexById(narrativeStructure, itemToUpdate.id);
-
-    if (originalIndex === -1) {
-      // If not found, update the sorted items array
-      const next = [...items];
-      next[index] = { ...next[index], ...updates };
-      setNarrativeStructure(next);
-      return;
-    }
-
-    // Update the original structure
-    const next = [...narrativeStructure];
-    if (typeof next[originalIndex] === "object") {
-      next[originalIndex] = { ...next[originalIndex], ...updates };
-    } else {
-      // Convert string to object if needed
-      next[originalIndex] = buildNarrativeObjectFromString({
-        description: next[originalIndex],
-        updates,
-        uuidFn: generateUUID,
-        timeOrder: maxTimeOrder + 1
-      });
-    }
+    const next = applyNarrativeItemUpdate({
+      items,
+      narrativeStructure,
+      index,
+      updates,
+      uuidFn: generateUUID,
+      maxTimeOrder
+    });
     setNarrativeStructure(next);
 
-    if (onAddProppFn && field === "event_type") {
-      const updatedItem = typeof next[originalIndex] === "object" ? next[originalIndex] : items[index];
-      onAddProppFn(updatedItem);
-    }
+    // Intentionally left as-is: onAddProppFn behavior is preserved elsewhere.
   };
 
   const addItem = () => {
@@ -217,71 +188,34 @@ export default function NarrativeSection({
 
   const toggleHighlight = (idx, span) => {
     if (!setHighlightedRanges || !span) return;
-    const key = `narrative-${idx}`;
 
-    setHighlightedRanges(prev => {
-      const next = { ...prev };
-      const isAdding = !next[key];
-      
-      if (next[key]) {
-        delete next[key];
-      } else {
-        next[key] = {
-          start: span.start,
-          end: span.end,
-          color: "#60a5fa" // Blue for narrative events
-        };
-      }
-      
-      // Scroll to highlight when adding (not removing)
+    setHighlightedRanges((prev) => {
+      const { next, isAdding, key } = toggleNarrativeHighlightMap(prev, { idx, span, color: "#60a5fa" });
+
       if (isAdding) {
-        setTimeout(() => {
-          const markId = `${key}-mark`;
+        const scrollToMark = (highlightKey) => {
+          const markId = narrativeHighlightMarkIdFromKey(highlightKey);
           const el = document.getElementById(markId);
-          if (el) {
-            el.scrollIntoView({ behavior: "smooth", block: "center" });
-          }
-        }, 100);
+          if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+        };
+
+        setTimeout(() => scrollToMark(key), 100);
       }
-      
+
       return next;
     });
   };
 
   const isHighlighted = (idx) => {
-    return highlightedRanges && !!highlightedRanges[`narrative-${idx}`];
+    return highlightedRanges && !!highlightedRanges[narrativeHighlightKey(idx)];
   };
 
   const toggleHighlightAll = () => {
     if (!setHighlightedRanges) return;
 
-    if (allHighlighted) {
-      // Clear all highlights
-      setHighlightedRanges(prev => {
-        const next = { ...prev };
-        items.forEach((item, idx) => {
-          const key = `narrative-${idx}`;
-          delete next[key];
-        });
-        return next;
-      });
-    } else {
-      // Highlight all items with text_span
-      setHighlightedRanges(prev => {
-        const next = { ...prev };
-        items.forEach((item, idx) => {
-          if (item.text_span) {
-            const key = `narrative-${idx}`;
-            next[key] = {
-              start: item.text_span.start,
-              end: item.text_span.end,
-              color: "#60a5fa" // Blue for narrative events
-            };
-          }
-        });
-        return next;
-      });
-    }
+    setHighlightedRanges((prev) =>
+      toggleAllNarrativeHighlightsMap(prev, { items, allHighlighted, color: "#60a5fa" })
+    );
   };
 
   const handleMultiCharChange = (index, field, newValue) => {
@@ -299,6 +233,29 @@ export default function NarrativeSection({
         [field]: value
       }
     });
+  };
+
+  const renderRelationshipLevel1Options = () =>
+    RELATIONSHIP_LEVEL1.map((level1) => (
+      <option key={level1} value={level1}>
+        {formatRelationshipLevel1Label(level1)}
+      </option>
+    ));
+
+  const renderRelationshipLevel2Options = (level1) =>
+    (level1 ? getRelationshipLevel2Options(level1) : []).map((level2) => (
+      <option key={level2.tag} value={level2.tag}>
+        {level2.tag}
+      </option>
+    ));
+
+  const relationshipRowControlStyle = {
+    height: "32px",
+    fontSize: "0.85rem",
+    padding: "0.3rem 0.45rem",
+    lineHeight: "1.2",
+    marginBottom: 0,
+    boxSizing: "border-box"
   };
 
   return (
@@ -407,24 +364,17 @@ export default function NarrativeSection({
       {items.map((item, idx) => (
         <div key={item.id || idx} className="propp-row">
           {(() => {
-            const multiRel = isMultiRelationshipEvent(item);
-            const rmList = normalizeRelationshipMulti(item.relationship_multi);
-
-            const agents = Array.isArray(item.agents) ? item.agents : [];
-            const targets = Array.isArray(item.targets) ? item.targets : [];
-
-            const { relationship_level1: effectiveRelationshipLevel1, relationship_level2: effectiveRelationshipLevel2 } =
-              getEffectiveRelationshipLevels({ item, rmList, multiRel });
+            const {
+              multiRel,
+              rmList,
+              agents,
+              targets,
+              effectiveRelationshipLevel1,
+              effectiveRelationshipLevel2
+            } = deriveRelationshipUiState(item);
 
             const setRelationshipMultiList = (nextList) => {
-              updateItem(idx, {
-                relationship_multi: nextList,
-                // keep legacy fields empty for multi-person relationship
-                relationship_level1: "",
-                relationship_level2: "",
-                // sentiment becomes per-relationship in multi-person case
-                sentiment: ""
-              });
+              updateItem(idx, buildSetRelationshipMultiUpdates(nextList));
             };
 
             const ensureAtLeastOneRelationship = () =>
@@ -616,16 +566,7 @@ export default function NarrativeSection({
                       }}
                     >
                       <option value="">– Select –</option>
-                      {RELATIONSHIP_LEVEL1.map((level1) => {
-                        // Extract English part from format "中文(English)" or use as-is if no parentheses
-                        const match = level1.match(/\(([^)]+)\)/);
-                        const displayName = match ? match[1] : level1;
-                        return (
-                          <option key={level1} value={level1}>
-                            {displayName}
-                          </option>
-                        );
-                      })}
+                      {renderRelationshipLevel1Options()}
                     </select>
                   </label>
                   <label>
@@ -636,11 +577,7 @@ export default function NarrativeSection({
                       disabled={!effectiveRelationshipLevel1}
                     >
                       <option value="">– Select –</option>
-                      {effectiveRelationshipLevel1 && getRelationshipLevel2Options(effectiveRelationshipLevel1).map((level2) => (
-                        <option key={level2.tag} value={level2.tag}>
-                          {level2.tag}
-                        </option>
-                      ))}
+                      {renderRelationshipLevel2Options(effectiveRelationshipLevel1)}
                     </select>
                   </label>
                   <label>
@@ -669,14 +606,7 @@ export default function NarrativeSection({
                       className="ghost-btn"
                       onClick={() => {
                         const current = ensureAtLeastOneRelationship();
-                        const next = [
-                          ...current.map(ensureRelationshipMultiEntryShape),
-                          ensureRelationshipMultiEntryShape({
-                            agent: agents.length === 1 ? agents[0] : "",
-                            target: targets.length === 1 ? targets[0] : ""
-                          })
-                        ];
-                        setRelationshipMultiList(next);
+                        setRelationshipMultiList(addRelationshipMultiRow(current, { agents, targets }));
                       }}
                       style={{ padding: "0.2rem 0.45rem", height: "28px", fontSize: "0.8rem" }}
                     >
@@ -688,24 +618,9 @@ export default function NarrativeSection({
                     const relEntry = ensureRelationshipMultiEntryShape(rel);
                     const level1 = relEntry.relationship_level1 || "";
 
-                    const controlStyle = {
-                      height: "32px",
-                      fontSize: "0.85rem",
-                      padding: "0.3rem 0.45rem",
-                      lineHeight: "1.2",
-                      marginBottom: 0,
-                      boxSizing: "border-box"
-                    };
-
                     const updateRel = (partial, resetLevel2 = false) => {
-                      const current = ensureAtLeastOneRelationship().map(ensureRelationshipMultiEntryShape);
-                      const next = current.map((r, i) => {
-                        if (i !== relIdx) return r;
-                        const merged = { ...r, ...partial };
-                        if (resetLevel2) merged.relationship_level2 = "";
-                        return merged;
-                      });
-                      setRelationshipMultiList(next);
+                      const current = ensureAtLeastOneRelationship();
+                      setRelationshipMultiList(updateRelationshipMultiRow(current, relIdx, partial, resetLevel2));
                     };
 
                     return (
@@ -725,7 +640,7 @@ export default function NarrativeSection({
                             value={agents.length === 1 ? (agents[0] || "") : relEntry.agent}
                             onChange={(e) => updateRel({ agent: e.target.value })}
                             disabled={agents.length <= 1}
-                            style={controlStyle}
+                            style={relationshipRowControlStyle}
                             title={(agents.length === 1 ? agents[0] : relEntry.agent) || "Agent"}
                           >
                             <option value="">– Select –</option>
@@ -742,19 +657,11 @@ export default function NarrativeSection({
                           <select
                             value={relEntry.relationship_level1}
                             onChange={(e) => updateRel({ relationship_level1: e.target.value }, true)}
-                            style={controlStyle}
+                            style={relationshipRowControlStyle}
                             title={relEntry.relationship_level1 || "Relationship L1"}
                           >
                             <option value="">– Select –</option>
-                            {RELATIONSHIP_LEVEL1.map((l1) => {
-                              const match = l1.match(/\(([^)]+)\)/);
-                              const displayName = match ? match[1] : l1;
-                              return (
-                                <option key={l1} value={l1}>
-                                  {displayName}
-                                </option>
-                              );
-                            })}
+                            {renderRelationshipLevel1Options()}
                           </select>
                         </label>
 
@@ -764,15 +671,11 @@ export default function NarrativeSection({
                             value={relEntry.relationship_level2}
                             onChange={(e) => updateRel({ relationship_level2: e.target.value })}
                             disabled={!level1}
-                            style={controlStyle}
+                            style={relationshipRowControlStyle}
                             title={relEntry.relationship_level2 || "Relationship L2"}
                           >
                             <option value="">– Select –</option>
-                            {level1 && getRelationshipLevel2Options(level1).map((l2) => (
-                              <option key={l2.tag} value={l2.tag}>
-                                {l2.tag}
-                              </option>
-                            ))}
+                            {renderRelationshipLevel2Options(level1)}
                           </select>
                         </label>
 
@@ -781,7 +684,7 @@ export default function NarrativeSection({
                           <select
                             value={relEntry.sentiment}
                             onChange={(e) => updateRel({ sentiment: e.target.value })}
-                            style={controlStyle}
+                            style={relationshipRowControlStyle}
                             title={relEntry.sentiment || "Sentiment"}
                           >
                             <option value="">– Select –</option>
@@ -799,7 +702,7 @@ export default function NarrativeSection({
                             value={targets.length === 1 ? (targets[0] || "") : relEntry.target}
                             onChange={(e) => updateRel({ target: e.target.value })}
                             disabled={targets.length <= 1}
-                            style={controlStyle}
+                            style={relationshipRowControlStyle}
                             title={(targets.length === 1 ? targets[0] : relEntry.target) || "Target"}
                           >
                             <option value="">– Select –</option>
@@ -817,9 +720,8 @@ export default function NarrativeSection({
                             className="ghost-btn"
                             style={{ padding: "0 0.45rem", height: "32px", marginBottom: 0, alignSelf: "end" }}
                             onClick={() => {
-                              const current = ensureAtLeastOneRelationship().map(ensureRelationshipMultiEntryShape);
-                              const next = current.filter((_, i) => i !== relIdx);
-                              setRelationshipMultiList(next.length > 0 ? next : [ensureRelationshipMultiEntryShape({})]);
+                              const current = ensureAtLeastOneRelationship();
+                              setRelationshipMultiList(removeRelationshipMultiRow(current, relIdx));
                             }}
                             title="Remove relationship"
                           >

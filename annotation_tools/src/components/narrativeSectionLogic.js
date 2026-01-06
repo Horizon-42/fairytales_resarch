@@ -5,6 +5,14 @@
  * They should not change UX/logic; they only make code easier to read and test.
  */
 
+export function narrativeHighlightKey(idx) {
+  return `narrative-${idx}`;
+}
+
+export function narrativeHighlightMarkIdFromKey(key) {
+  return `${key}-mark`;
+}
+
 export function ensureRelationshipMultiEntryShape(entry) {
   if (!entry || typeof entry !== "object") {
     return { agent: "", target: "", relationship_level1: "", relationship_level2: "", sentiment: "" };
@@ -30,6 +38,25 @@ export function isMultiRelationshipEvent(item) {
   const agents = Array.isArray(item.agents) ? item.agents : [];
   const targets = Array.isArray(item.targets) ? item.targets : [];
   return agents.length > 1 || targets.length > 1;
+}
+
+export function deriveRelationshipUiState(item) {
+  const safeItem = item && typeof item === "object" ? item : {};
+  const multiRel = isMultiRelationshipEvent(safeItem);
+  const rmList = normalizeRelationshipMulti(safeItem.relationship_multi);
+  const agents = Array.isArray(safeItem.agents) ? safeItem.agents : [];
+  const targets = Array.isArray(safeItem.targets) ? safeItem.targets : [];
+  const { relationship_level1: effectiveRelationshipLevel1, relationship_level2: effectiveRelationshipLevel2 } =
+    getEffectiveRelationshipLevels({ item: safeItem, rmList, multiRel });
+
+  return {
+    multiRel,
+    rmList,
+    agents,
+    targets,
+    effectiveRelationshipLevel1,
+    effectiveRelationshipLevel2
+  };
 }
 
 /**
@@ -79,6 +106,52 @@ export function ensureAtLeastOneRelationshipMulti({ item, rmList, agents, target
   };
 
   return [ensureRelationshipMultiEntryShape(fallback)];
+}
+
+export function updateRelationshipMultiRow(list, relIdx, partial, resetLevel2 = false) {
+  const current = Array.isArray(list) ? list.map(ensureRelationshipMultiEntryShape) : [];
+  return current.map((r, i) => {
+    if (i !== relIdx) return r;
+    const merged = { ...r, ...(partial || {}) };
+    if (resetLevel2) merged.relationship_level2 = "";
+    return ensureRelationshipMultiEntryShape(merged);
+  });
+}
+
+export function addRelationshipMultiRow(list, { agents, targets }) {
+  const current = Array.isArray(list) ? list.map(ensureRelationshipMultiEntryShape) : [];
+  const safeAgents = Array.isArray(agents) ? agents.filter(Boolean) : [];
+  const safeTargets = Array.isArray(targets) ? targets.filter(Boolean) : [];
+  return [
+    ...current,
+    ensureRelationshipMultiEntryShape({
+      agent: safeAgents.length === 1 ? safeAgents[0] : "",
+      target: safeTargets.length === 1 ? safeTargets[0] : ""
+    })
+  ];
+}
+
+export function removeRelationshipMultiRow(list, relIdx) {
+  const current = Array.isArray(list) ? list.map(ensureRelationshipMultiEntryShape) : [];
+  const next = current.filter((_, i) => i !== relIdx);
+  return next.length > 0 ? next : [ensureRelationshipMultiEntryShape({})];
+}
+
+export function buildSetRelationshipMultiUpdates(nextList) {
+  return {
+    relationship_multi: Array.isArray(nextList) ? nextList : (nextList ? [nextList] : []),
+    // keep legacy fields empty for multi-person relationship
+    relationship_level1: "",
+    relationship_level2: "",
+    // sentiment becomes per-relationship in multi-person case
+    sentiment: ""
+  };
+}
+
+export function formatRelationshipLevel1Label(level1) {
+  if (!level1) return level1;
+  const match = String(level1).match(/\(([^)]+)\)/);
+  return match ? match[1] : level1;
 }
 
 /**
@@ -307,4 +380,120 @@ export function buildNarrativeObjectFromString({
     sentiment: "",
     ...safeUpdates
   };
+}
+
+/**
+ * Apply an update to a narrative item by *sorted* index.
+ *
+ * Mirrors NarrativeSection.updateItem behavior:
+ * - If the sorted item has no id, update the sorted `items` array and use that as next narrativeStructure.
+ * - Otherwise, try to find the original entry in `narrativeStructure` by id.
+ *   - If not found, update the sorted `items` array and use that.
+ *   - If found:
+ *     - If original entry is an object, shallow-merge updates.
+ *     - If original entry is a string, convert it to an object with defaults and apply updates.
+ */
+export function applyNarrativeItemUpdate({
+  items,
+  narrativeStructure,
+  index,
+  updates,
+  uuidFn,
+  maxTimeOrder
+}) {
+  const safeItems = Array.isArray(items) ? items : [];
+  const safeNarrativeStructure = Array.isArray(narrativeStructure) ? narrativeStructure : [];
+  const safeUpdates = updates && typeof updates === "object" ? updates : {};
+
+  const itemToUpdate = safeItems[index];
+  if (!itemToUpdate || !itemToUpdate.id) {
+    const next = [...safeItems];
+    next[index] = { ...next[index], ...safeUpdates };
+    return next;
+  }
+
+  const originalIndex = findOriginalNarrativeIndexById(safeNarrativeStructure, itemToUpdate.id);
+  if (originalIndex === -1) {
+    const next = [...safeItems];
+    next[index] = { ...next[index], ...safeUpdates };
+    return next;
+  }
+
+  const next = [...safeNarrativeStructure];
+  if (typeof next[originalIndex] === "object" && next[originalIndex]) {
+    next[originalIndex] = { ...next[originalIndex], ...safeUpdates };
+    return next;
+  }
+
+  next[originalIndex] = buildNarrativeObjectFromString({
+    description: next[originalIndex],
+    updates: safeUpdates,
+    uuidFn,
+    timeOrder: maxTimeOrder + 1
+  });
+  return next;
+}
+
+export function toggleNarrativeHighlightMap(prev, { idx, span, color = "#60a5fa" }) {
+  const next = { ...(prev || {}) };
+  const key = narrativeHighlightKey(idx);
+  const isAdding = !next[key];
+
+  if (next[key]) {
+    delete next[key];
+    return { next, isAdding: false, key };
+  }
+
+  if (!span) return { next, isAdding: false, key };
+
+  next[key] = {
+    start: span.start,
+    end: span.end,
+    color
+  };
+  return { next, isAdding: true, key };
+}
+
+export function toggleAllNarrativeHighlightsMap(prev, { items, allHighlighted, color = "#60a5fa" }) {
+  const next = { ...(prev || {}) };
+  const list = Array.isArray(items) ? items : [];
+
+  if (allHighlighted) {
+    list.forEach((_, idx) => {
+      const key = narrativeHighlightKey(idx);
+      delete next[key];
+    });
+    return next;
+  }
+
+  list.forEach((item, idx) => {
+    if (item && item.text_span) {
+      const key = narrativeHighlightKey(idx);
+      next[key] = {
+        start: item.text_span.start,
+        end: item.text_span.end,
+        color
+      };
+    }
+  });
+
+  return next;
+}
+
+/**
+ * Compute whether "all" narrative highlights are currently active.
+ *
+ * Behavior-preserving: this intentionally matches NarrativeSection's current logic,
+ * including the fact that it keys by the index within the filtered `itemsWithSpan` array.
+ */
+export function computeAllNarrativeHighlighted({ highlightedRanges, items }) {
+  if (!highlightedRanges) return false;
+  const list = Array.isArray(items) ? items : [];
+  const itemsWithSpan = list.filter((item) => item && item.text_span);
+  if (itemsWithSpan.length === 0) return false;
+
+  return itemsWithSpan.every((_, idx) => {
+    const key = narrativeHighlightKey(idx);
+    return highlightedRanges[key];
+  });
 }

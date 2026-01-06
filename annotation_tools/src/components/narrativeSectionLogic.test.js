@@ -10,7 +10,19 @@ import {
   sortNarrativeItemsInPlace,
   findOriginalNarrativeIndexById,
   removeNarrativeEntryById,
-  buildNarrativeObjectFromString
+  buildNarrativeObjectFromString,
+  applyNarrativeItemUpdate,
+  toggleNarrativeHighlightMap,
+  toggleAllNarrativeHighlightsMap,
+  computeAllNarrativeHighlighted,
+  narrativeHighlightKey,
+  narrativeHighlightMarkIdFromKey,
+  updateRelationshipMultiRow,
+  addRelationshipMultiRow,
+  removeRelationshipMultiRow,
+  deriveRelationshipUiState,
+  buildSetRelationshipMultiUpdates,
+  formatRelationshipLevel1Label
 } from "./narrativeSectionLogic.js";
 
 describe("narrativeSectionLogic", () => {
@@ -278,5 +290,152 @@ describe("narrativeSectionLogic", () => {
       relationship_multi: [],
       sentiment: ""
     });
+  });
+
+  it("applyNarrativeItemUpdate() falls back to updating sorted items when id missing", () => {
+    const items = [{ description: "x" }];
+    const narrativeStructure = [{ id: "orig", description: "orig" }];
+    const next = applyNarrativeItemUpdate({
+      items,
+      narrativeStructure,
+      index: 0,
+      updates: { description: "updated" },
+      uuidFn: () => "new",
+      maxTimeOrder: 0
+    });
+    expect(next[0].description).toBe("updated");
+  });
+
+  it("applyNarrativeItemUpdate() updates original narrativeStructure entry by id", () => {
+    const items = [{ id: "b", description: "sorted" }];
+    const narrativeStructure = [{ id: "a", description: "a" }, { id: "b", description: "b" }];
+    const next = applyNarrativeItemUpdate({
+      items,
+      narrativeStructure,
+      index: 0,
+      updates: { description: "B2" },
+      uuidFn: () => "new",
+      maxTimeOrder: 0
+    });
+    expect(next).toEqual([{ id: "a", description: "a" }, { id: "b", description: "B2" }]);
+  });
+
+  it("applyNarrativeItemUpdate() falls back to sorted items when id not found in original structure", () => {
+    const items = [{ id: "missing", description: "sorted" }];
+    const narrativeStructure = ["legacy", { id: "b", description: "b" }];
+    const next = applyNarrativeItemUpdate({
+      items,
+      narrativeStructure,
+      index: 0,
+      updates: { description: "UPDATED" },
+      uuidFn: () => "newid",
+      maxTimeOrder: 10
+    });
+    expect(next).toEqual([{ id: "missing", description: "UPDATED" }]);
+  });
+
+  it("toggleNarrativeHighlightMap() toggles a single highlight entry", () => {
+    const span = { start: 1, end: 2 };
+    const first = toggleNarrativeHighlightMap({}, { idx: 0, span, color: "#60a5fa" });
+    expect(first.isAdding).toBe(true);
+    expect(first.next["narrative-0"]).toEqual({ start: 1, end: 2, color: "#60a5fa" });
+
+    const second = toggleNarrativeHighlightMap(first.next, { idx: 0, span, color: "#60a5fa" });
+    expect(second.isAdding).toBe(false);
+    expect(second.next["narrative-0"]).toBeUndefined();
+  });
+
+  it("toggleAllNarrativeHighlightsMap() adds/removes all narrative highlights", () => {
+    const items = [
+      { text_span: { start: 10, end: 20 } },
+      { text_span: null },
+      { text_span: { start: 30, end: 40 } }
+    ];
+
+    const added = toggleAllNarrativeHighlightsMap({}, { items, allHighlighted: false, color: "#60a5fa" });
+    expect(Object.keys(added).sort()).toEqual(["narrative-0", "narrative-2"]);
+
+    const removed = toggleAllNarrativeHighlightsMap(added, { items, allHighlighted: true, color: "#60a5fa" });
+    expect(removed["narrative-0"]).toBeUndefined();
+    expect(removed["narrative-2"]).toBeUndefined();
+  });
+
+  it("computeAllNarrativeHighlighted() matches current filtered-index semantics", () => {
+    const items = [
+      { text_span: null },
+      { text_span: { start: 1, end: 2 } },
+      { text_span: { start: 3, end: 4 } }
+    ];
+
+    // NOTE: keys are narrative-0 and narrative-1 (indexes within the filtered list)
+    const highlightedRanges = {
+      "narrative-0": { start: 1, end: 2, color: "#60a5fa" },
+      "narrative-1": { start: 3, end: 4, color: "#60a5fa" }
+    };
+
+    expect(computeAllNarrativeHighlighted({ highlightedRanges, items })).toBe(true);
+    expect(computeAllNarrativeHighlighted({ highlightedRanges: null, items })).toBe(false);
+    expect(computeAllNarrativeHighlighted({ highlightedRanges: {}, items: [] })).toBe(false);
+  });
+
+  it("narrativeHighlightKey()/narrativeHighlightMarkIdFromKey() keep the id format stable", () => {
+    expect(narrativeHighlightKey(3)).toBe("narrative-3");
+    expect(narrativeHighlightMarkIdFromKey("narrative-3")).toBe("narrative-3-mark");
+  });
+
+  it("relationship_multi list helpers add/update/remove rows", () => {
+    const base = [
+      { agent: "A", target: "T", relationship_level1: "L1", relationship_level2: "L2", sentiment: "pos" }
+    ];
+
+    const updated = updateRelationshipMultiRow(base, 0, { relationship_level1: "NEW" }, true);
+    expect(updated[0].relationship_level1).toBe("NEW");
+    expect(updated[0].relationship_level2).toBe("");
+
+    const added = addRelationshipMultiRow(base, { agents: ["Solo"], targets: ["Only" ] });
+    expect(added).toHaveLength(2);
+    expect(added[1].agent).toBe("Solo");
+    expect(added[1].target).toBe("Only");
+
+    const removedToOne = removeRelationshipMultiRow(added, 1);
+    expect(removedToOne).toHaveLength(1);
+
+    const removedToEmpty = removeRelationshipMultiRow(base, 0);
+    expect(removedToEmpty).toHaveLength(1);
+    expect(removedToEmpty[0]).toEqual({ agent: "", target: "", relationship_level1: "", relationship_level2: "", sentiment: "" });
+  });
+
+  it("deriveRelationshipUiState() computes multiRel/rmList and effective levels", () => {
+    const item = {
+      target_type: "character",
+      agents: ["A", "B"],
+      targets: ["T"],
+      relationship_level1: "LEGACY",
+      relationship_level2: "LEGACY2",
+      relationship_multi: [{ relationship_level1: "ROW", relationship_level2: "ROW2" }]
+    };
+
+    const state = deriveRelationshipUiState(item);
+    expect(state.multiRel).toBe(true);
+    expect(state.agents).toEqual(["A", "B"]);
+    expect(state.targets).toEqual(["T"]);
+    expect(state.rmList).toHaveLength(1);
+    expect(state.rmList[0].relationship_level1).toBe("ROW");
+    // multiRel prefers first relationship_multi row for effective level values
+    expect(state.effectiveRelationshipLevel1).toBe("ROW");
+    expect(state.effectiveRelationshipLevel2).toBe("ROW2");
+  });
+
+  it("buildSetRelationshipMultiUpdates() sets relationship_multi and clears legacy fields", () => {
+    const updates = buildSetRelationshipMultiUpdates([{ agent: "A" }]);
+    expect(updates.relationship_multi).toEqual([{ agent: "A" }]);
+    expect(updates.relationship_level1).toBe("");
+    expect(updates.relationship_level2).toBe("");
+    expect(updates.sentiment).toBe("");
+  });
+
+  it("formatRelationshipLevel1Label() extracts English in parentheses", () => {
+    expect(formatRelationshipLevel1Label("亲属关系(Family)")).toBe("Family");
+    expect(formatRelationshipLevel1Label("NoParens")).toBe("NoParens");
   });
 });
