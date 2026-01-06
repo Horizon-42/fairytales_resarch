@@ -461,13 +461,33 @@
     "motif_type": [
       "Motif A200-A280: Mythological Motifs > GODS > Gods of the upper world.",
       "Motif B190: Magic animals: miscellaneous motifs. (Animal Motifs > Magic animals > Magic animals)",
-      "Motif T0-T90: Sex > Love > Love"
+      "Motif T0-T90: Sex > Love > Love",
+      "Motif F361.1.2.1: F361.1.2.1. Fairy takes revenge for mortal's failure to bring food and drink to fairy son's wedding. (F. Marvels. > F200–F699. Marvelous creatures. > F200–F399. Fairies and elves. > F300–F399. Fairies and mortals.)",
+      "Motif F1071.1: F1071.1. Crossing a river with help of a fig tree whose branches touch the opposite bank. (F. Marvels. > F900-F1099. Extraordinary occurrences.)",
+      "Motif T591.1.2: T591.1.2. Milk of hornless, single-colored cow drunk by man to make wife fruitful. (T. Sex. > T500–T599. Conception and birth.)",
+      "Motif F361.17.5: F361.17.5. Fairies bathe children in churn when housewife forgets to leave a supply of clear water for the fairies. (F. Marvels. > F200–F699. Marvelous creatures. > F200–F399. Fairies and elves. > F300–F399. Fairies and mortals.)",
+      "Motif F361.17.3: F361.17.3. Fairies pinch plowboy who breaks their wooden oven as he plows. (F. Marvels. > F200–F699. Marvelous creatures. > F200–F399. Fairies and elves. > F300–F399. Fairies and mortals.)",
+      "Motif F302.4.1: F302.4.1. Man shoots into wreath of mist and brings down fairy. She becomes his wife. (F. Marvels. > F200–F699. Marvelous creatures. > F200–F399. Fairies and elves. > F300–F399. Fairies and mortals.)",
+      "Motif F300.2: F300.2. Husband pursues fairy wife to heaven. (F. Marvels. > F200–F699. Marvelous creatures. > F200–F399. Fairies and elves. > F300–F399. Fairies and mortals.)",
+      "Motif T68.5: T68.5. Girl marries hunter when he promises to return to monkey brothers their human form. (Cf. D118.) (T. Sex. > T0–T99. Love.)",
+      "Motif Q42.1.1: Q42.1.1. Child divides last loaf with fairy (witch, etc.). Rewarded. (Q. Rewards and punishments. > Q10–Q99. Deeds rewarded.)",
+      "Motif T251.0.1: T251.0.1. Man ejected from heaven for folly of marrying twice. (T. Sex. > T200–T299. Married life.)"
     ],
     "atu_categories": [
       "ATU 300-366: TALES OF MAGIC > Supernatural Adversaries",
       "ATU 200-217: ANIMAL TALES > Domestic Animals",
       "ATU 413: Marriage by Stealing Clothing (TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Wife)",
-      "ATU 400: The Quest for a Lost Bride (TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Wife)"
+      "ATU 400: The Quest for a Lost Bride (TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Wife)",
+      "ATU 465: Man persecuted for his beautiful wife (TALES OF MAGIC > Supernatural Tasks (460-499))",
+      "ATU 804: Peter's Mother Falls from Heaven (RELIGIOUS TALES > Heaven (800-809))",
+      "ATU 805: Joseph and Mary Threatens to Leave Heaven... (RELIGIOUS TALES > Heaven (800-809))",
+      "ATU 877: The Old Woman who was Skinned (REALISTIC TALES > The Woman Marries the Prince (870-879))",
+      "ATU 1451: A suitor chooses the thrifty girl (ANECDOTES AND JOKES > Stories about a Woman > Looking for a Wife (1450-1474))",
+      "ATU 402: The Animal Bride (TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Wife (400-424))",
+      "ATU 822: The lazy boy and the industrious girl (RELIGIOUS TALES > The Devil (810-826))",
+      "ATU 2030: The Old Woman and Her Pig (FORMULA TALES > Cumulative Tales > Chains Involving Other Events (2029-2075))",
+      "ATU 413: Marriage by Stealing Clothing (TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Wife (400-424))",
+      "ATU 1004: Hogs in the mud; sheep in the air (TALES OF THE STUPID OGRE (GIANT, DEVIL) > Labor Contract (1000-1029))"
     ],
     "obstacle_thrower": [
       "天帝",
