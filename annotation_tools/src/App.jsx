@@ -1449,6 +1449,7 @@ export default function App() {
                 paragraphSummaries={paragraphSummaries}
                 setParagraphSummaries={setParagraphSummaries}
                 sourceText={sourceText.text}
+                highlightedRanges={highlightedRanges}
                 setHighlightedRanges={setHighlightedRanges}
               />
             )}
