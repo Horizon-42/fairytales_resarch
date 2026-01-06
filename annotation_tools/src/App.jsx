@@ -643,16 +643,8 @@ export default function App() {
             }
           }
 
-          // Build action_layer from individual fields
-          const actionLayer = buildActionLayer(n);
-          if (actionLayer) {
-            result.action_layer = actionLayer;
-            // Remove individual action fields to avoid duplication
-            delete result.action_category;
-            delete result.action_type;
-            delete result.action_context;
-            delete result.action_status;
-          }
+          // Preserve existing annotation structure: keep action_* fields as-is.
+          // (We still support reading legacy action_layer via fileHandler.js.)
 
           return result;
         }),
@@ -744,16 +736,8 @@ export default function App() {
           }
         }
 
-        // Build action_layer from individual fields
-        const actionLayer = buildActionLayer(n);
-        if (actionLayer) {
-          result.action_layer = actionLayer;
-          // Remove individual action fields to avoid duplication
-          delete result.action_category;
-          delete result.action_type;
-          delete result.action_context;
-          delete result.action_status;
-        }
+        // Preserve existing annotation structure: keep action_* fields as-is.
+        // (We still support reading legacy action_layer via fileHandler.js.)
 
         return result;
       }),
