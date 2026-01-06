@@ -59,8 +59,11 @@ class FairyVectorDB:
     """
 
     def __init__(self, *, paths: Optional[VectorDBPaths] = None):
+        import threading
+
         self.paths = paths or default_paths()
         self._conn = None
+        self._conn_lock = threading.Lock()
         self._meta: Dict[str, Any] = {}
         self._atu_index: Optional[HNSWIndex] = None
         self._motif_index: Optional[HNSWIndex] = None
@@ -333,7 +336,8 @@ class FairyVectorDB:
 
         # Fetch doc records and sort
         id_list = sorted(best.keys())
-        docs = fetch_by_ids(self._conn, id_list)
+        with self._conn_lock:
+            docs = fetch_by_ids(self._conn, id_list)
 
         scored: List[Dict[str, Any]] = []
         for doc_id, sim in best.items():

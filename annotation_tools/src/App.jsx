@@ -339,38 +339,106 @@ export default function App() {
 
       const per = paragraphSummaries?.perSection || {};
       const sections = deriveTextSectionsFromNarratives(narrativeStructure, sourceText.text);
-      const perJoined = sections
-        .map(s => per[String(s.text_section)])
-        .filter(v => typeof v === "string" && v.trim())
-        .join("\n");
       const whole = (paragraphSummaries?.whole || "").trim();
 
-      const hasSummaries = !!perJoined || !!whole;
+      const detectOnce = async (text) => {
+        const resp = await fetch(`${backendUrl}/api/detect/motif_atu`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            text,
+            top_k: 10
+          })
+        });
 
-      const inputText = hasSummaries
-        ? [
-            perJoined ? `Paragraph summaries:\n${perJoined}` : null,
-            whole ? `Whole story summary:\n${whole}` : null
-          ].filter(Boolean).join("\n\n")
-        : sourceText.text;
+        const data = await resp.json().catch(() => null);
+        if (!resp.ok || !data?.ok) {
+          const msg = (data && (data.detail || data.error)) ? (data.detail || data.error) : `HTTP ${resp.status}`;
+          throw new Error(msg);
+        }
+        return data;
+      };
 
-      const resp = await fetch(`${backendUrl}/api/detect/motif_atu`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          text: inputText,
-          top_k: 10
+      const sectionCandidates = sections
+        .map((s) => {
+          const key = String(s.text_section);
+          const summary = per[key];
+          return { key, summary };
         })
-      });
+        .filter((x) => typeof x.summary === "string" && x.summary.trim());
 
-      const data = await resp.json().catch(() => null);
-      if (!resp.ok || !data?.ok) {
-        const msg = (data && (data.detail || data.error)) ? (data.detail || data.error) : `HTTP ${resp.status}`;
-        throw new Error(msg);
+      const WHOLE_SUMMARY_KEY = "__WHOLE_SUMMARY__";
+
+      const bestAtu = {};
+      const bestMotif = {};
+
+      const recordBest = (bestMap, label, similarity, sectionKey) => {
+        if (!label) return;
+        const prev = bestMap[label];
+        if (!prev || similarity > prev.similarity) {
+          bestMap[label] = { similarity, sectionKey };
+        }
+      };
+
+      // Prefer section-summary-based evidence. We detect per section, then choose the section
+      // with the highest similarity as evidence for each label.
+      if (sectionCandidates.length > 0) {
+        // Cap requests to avoid overwhelming backend on very long stories.
+        const MAX_SECTION_DETECT = 30;
+        const picked = sectionCandidates
+          .slice()
+          .sort((a, b) => (b.summary.length || 0) - (a.summary.length || 0))
+          .slice(0, MAX_SECTION_DETECT);
+
+        const results = await Promise.all(
+          picked.map(async ({ key, summary }) => {
+            const data = await detectOnce(summary);
+            return { key, data };
+          })
+        );
+
+        results.forEach(({ key, data }) => {
+          (Array.isArray(data.atu) ? data.atu : []).forEach((item) => {
+            recordBest(bestAtu, item?.label, Number(item?.similarity || 0), key);
+          });
+          (Array.isArray(data.motifs) ? data.motifs : []).forEach((item) => {
+            recordBest(bestMotif, item?.label, Number(item?.similarity || 0), key);
+          });
+        });
       }
 
-      const atuLabels = Array.isArray(data.atu) ? data.atu.map(x => x.label).filter(Boolean) : [];
-      const motifLabels = Array.isArray(data.motifs) ? data.motifs.map(x => x.label).filter(Boolean) : [];
+      // Also run once on whole summary (if available) to recover global labels.
+      // Evidence will still prefer a best section match; otherwise it falls back to whole.
+      let wholeData = null;
+      if (whole) {
+        wholeData = await detectOnce(whole);
+      }
+
+      const mergeLabels = (bestMap, listFromWhole) => {
+        const labels = Object.keys(bestMap);
+        (Array.isArray(listFromWhole) ? listFromWhole : []).forEach((item) => {
+          const label = item?.label;
+          if (label && !labels.includes(label)) labels.push(label);
+        });
+        // Sort by best similarity when we have it; otherwise put at the end.
+        labels.sort((a, b) => {
+          const sa = bestMap[a]?.similarity ?? -1;
+          const sb = bestMap[b]?.similarity ?? -1;
+          return sb - sa;
+        });
+        return labels.slice(0, 10);
+      };
+
+      const atuLabels = mergeLabels(bestAtu, wholeData?.atu);
+      const motifLabels = mergeLabels(bestMotif, wholeData?.motifs);
+
+      const evidenceKeyForLabel = (bestMap, label) => {
+        const best = bestMap[label];
+        if (best?.sectionKey) return best.sectionKey;
+        if (whole) return WHOLE_SUMMARY_KEY;
+        const firstSectionKey = sections && sections.length > 0 ? String(sections[0].text_section) : "";
+        return firstSectionKey || "";
+      };
 
       setMotif(prev => {
         const prevAtu = Array.isArray(prev.atu_categories) ? prev.atu_categories : (prev.atu_categories ? [prev.atu_categories] : []);
@@ -385,7 +453,8 @@ export default function App() {
         atuLabels.forEach(l => {
           if (!nextAtu.includes(l)) nextAtu.push(l);
           if (!nextAtuEvidence[l]) {
-            nextAtuEvidence[l] = { related_sections: [], include_whole_summary: false, whole_summary: "" };
+            const k = evidenceKeyForLabel(bestAtu, l);
+            nextAtuEvidence[l] = { evidence_keys: k ? [k] : [] };
           }
         });
 
@@ -393,7 +462,8 @@ export default function App() {
         motifLabels.forEach(l => {
           if (!nextMotifs.includes(l)) nextMotifs.push(l);
           if (!nextMotifEvidence[l]) {
-            nextMotifEvidence[l] = { related_sections: [], include_whole_summary: false, whole_summary: "" };
+            const k = evidenceKeyForLabel(bestMotif, l);
+            nextMotifEvidence[l] = { evidence_keys: k ? [k] : [] };
           }
         });
 
@@ -424,34 +494,37 @@ export default function App() {
       thinking_process: motif.thinking_process || "",
       annotation: {
         motif: (() => {
-          const whole = paragraphSummaries.whole || "";
-          const atuEvidence = (motif.atu_evidence && typeof motif.atu_evidence === "object") ? motif.atu_evidence : {};
-          const motifEvidence = (motif.motif_evidence && typeof motif.motif_evidence === "object") ? motif.motif_evidence : {};
-
-          // Keep arrays as-is; just ensure evidence snapshots include the current whole summary.
-          const nextAtuEvidence = {};
-          Object.keys(atuEvidence).forEach((k) => {
-            const v = atuEvidence[k] || {};
-            nextAtuEvidence[k] = {
-              related_sections: Array.isArray(v.related_sections) ? v.related_sections : [],
-              include_whole_summary: !!v.include_whole_summary,
-              whole_summary: v.include_whole_summary ? whole : ""
-            };
-          });
-          const nextMotifEvidence = {};
-          Object.keys(motifEvidence).forEach((k) => {
-            const v = motifEvidence[k] || {};
-            nextMotifEvidence[k] = {
-              related_sections: Array.isArray(v.related_sections) ? v.related_sections : [],
-              include_whole_summary: !!v.include_whole_summary,
-              whole_summary: v.include_whole_summary ? whole : ""
-            };
-          });
+          const WHOLE_SUMMARY_KEY = "__WHOLE_SUMMARY__";
+          const sanitizeEvidenceMap = (src) => {
+            const input = (src && typeof src === "object" && !Array.isArray(src)) ? src : {};
+            const out = {};
+            Object.keys(input).forEach((k) => {
+              const v = input[k] || {};
+              let keys = [];
+              if (Array.isArray(v.evidence_keys)) {
+                keys = v.evidence_keys;
+              } else {
+                const related = Array.isArray(v.related_sections) ? v.related_sections : [];
+                const includeWhole = !!v.include_whole_summary;
+                keys = [
+                  ...(includeWhole ? [WHOLE_SUMMARY_KEY] : []),
+                  ...related
+                ];
+              }
+              const uniq = [];
+              (Array.isArray(keys) ? keys : []).forEach((ek) => {
+                if (!ek) return;
+                if (!uniq.includes(ek)) uniq.push(ek);
+              });
+              out[k] = { evidence_keys: uniq };
+            });
+            return out;
+          };
 
           return {
             ...motif,
-            atu_evidence: nextAtuEvidence,
-            motif_evidence: nextMotifEvidence
+            atu_evidence: sanitizeEvidenceMap(motif.atu_evidence),
+            motif_evidence: sanitizeEvidenceMap(motif.motif_evidence)
           };
         })(),
         deep: {
@@ -555,32 +628,66 @@ export default function App() {
         helper_type: Array.isArray(motif.helper_type) ? motif.helper_type : [],
         thinking_process: motif.thinking_process,
         atu_evidence: (() => {
-          const whole = paragraphSummaries.whole || "";
-          const src = (motif.atu_evidence && typeof motif.atu_evidence === "object") ? motif.atu_evidence : {};
-          const next = {};
-          Object.keys(src).forEach((k) => {
-            const v = src[k] || {};
-            next[k] = {
-              related_sections: Array.isArray(v.related_sections) ? v.related_sections : [],
-              include_whole_summary: !!v.include_whole_summary,
-              whole_summary: v.include_whole_summary ? whole : ""
-            };
+          const WHOLE_SUMMARY_KEY = "__WHOLE_SUMMARY__";
+          const input = (motif.atu_evidence && typeof motif.atu_evidence === "object" && !Array.isArray(motif.atu_evidence))
+            ? motif.atu_evidence
+            : {};
+
+          const out = {};
+          Object.keys(input).forEach((k) => {
+            const v = input[k] || {};
+            let keys = [];
+
+            if (Array.isArray(v.evidence_keys)) {
+              keys = v.evidence_keys;
+            } else {
+              const related = Array.isArray(v.related_sections) ? v.related_sections : [];
+              const includeWhole = !!v.include_whole_summary;
+              keys = [
+                ...(includeWhole ? [WHOLE_SUMMARY_KEY] : []),
+                ...related
+              ];
+            }
+
+            const uniq = [];
+            (Array.isArray(keys) ? keys : []).forEach((ek) => {
+              if (!ek) return;
+              if (!uniq.includes(ek)) uniq.push(ek);
+            });
+            out[k] = { evidence_keys: uniq };
           });
-          return next;
+          return out;
         })(),
         motif_evidence: (() => {
-          const whole = paragraphSummaries.whole || "";
-          const src = (motif.motif_evidence && typeof motif.motif_evidence === "object") ? motif.motif_evidence : {};
-          const next = {};
-          Object.keys(src).forEach((k) => {
-            const v = src[k] || {};
-            next[k] = {
-              related_sections: Array.isArray(v.related_sections) ? v.related_sections : [],
-              include_whole_summary: !!v.include_whole_summary,
-              whole_summary: v.include_whole_summary ? whole : ""
-            };
+          const WHOLE_SUMMARY_KEY = "__WHOLE_SUMMARY__";
+          const input = (motif.motif_evidence && typeof motif.motif_evidence === "object" && !Array.isArray(motif.motif_evidence))
+            ? motif.motif_evidence
+            : {};
+
+          const out = {};
+          Object.keys(input).forEach((k) => {
+            const v = input[k] || {};
+            let keys = [];
+
+            if (Array.isArray(v.evidence_keys)) {
+              keys = v.evidence_keys;
+            } else {
+              const related = Array.isArray(v.related_sections) ? v.related_sections : [];
+              const includeWhole = !!v.include_whole_summary;
+              keys = [
+                ...(includeWhole ? [WHOLE_SUMMARY_KEY] : []),
+                ...related
+              ];
+            }
+
+            const uniq = [];
+            (Array.isArray(keys) ? keys : []).forEach((ek) => {
+              if (!ek) return;
+              if (!uniq.includes(ek)) uniq.push(ek);
+            });
+            out[k] = { evidence_keys: uniq };
           });
-          return next;
+          return out;
         })()
       },
       analysis: {

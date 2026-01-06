@@ -59,16 +59,36 @@ export default function MotifSection({
   }, [textSections]);
 
   const normalizeEvidenceRecord = (rec) => {
-    const related = Array.isArray(rec?.related_sections) ? rec.related_sections.filter(Boolean) : [];
-    const includeWhole = typeof rec?.include_whole_summary === "boolean" ? rec.include_whole_summary : false;
-    const ws = typeof rec?.whole_summary === "string" ? rec.whole_summary : "";
-    return { related_sections: related, include_whole_summary: includeWhole, whole_summary: ws };
+    // New preferred shape:
+    //   { evidence_keys: ["__WHOLE_SUMMARY__", "S10-20", ...] }
+    // Legacy shape (migrated on load):
+    //   { related_sections: [...], include_whole_summary: boolean, whole_summary: string }
+    let keys = [];
+
+    if (Array.isArray(rec?.evidence_keys)) {
+      keys = rec.evidence_keys;
+    } else {
+      const related = Array.isArray(rec?.related_sections) ? rec.related_sections : [];
+      const includeWhole = !!rec?.include_whole_summary;
+      keys = [
+        ...(includeWhole ? [WHOLE_SUMMARY_KEY] : []),
+        ...related
+      ];
+    }
+
+    const uniq = [];
+    (Array.isArray(keys) ? keys : []).forEach((k) => {
+      if (!k) return;
+      if (!uniq.includes(k)) uniq.push(k);
+    });
+
+    return { evidence_keys: uniq };
   };
 
   const ensureAtuEvidenceRecord = (label) => {
     const next = { ...atuEvidence };
     if (!next[label] || typeof next[label] !== "object") {
-      next[label] = { related_sections: [], include_whole_summary: false, whole_summary: "" };
+      next[label] = { evidence_keys: [] };
     } else {
       next[label] = normalizeEvidenceRecord(next[label]);
     }
@@ -78,7 +98,7 @@ export default function MotifSection({
   const ensureMotifEvidenceRecord = (label) => {
     const next = { ...motifEvidence };
     if (!next[label] || typeof next[label] !== "object") {
-      next[label] = { related_sections: [], include_whole_summary: false, whole_summary: "" };
+      next[label] = { evidence_keys: [] };
     } else {
       next[label] = normalizeEvidenceRecord(next[label]);
     }
@@ -103,105 +123,39 @@ export default function MotifSection({
     setSelectedMotifSectionByLabel({});
   };
 
-  const setAtuIncludeWholeSummary = (label, include) => {
-    if (!label) return;
+  const handleAddAtuEvidenceKey = (label, key) => {
+    if (!label || !key) return;
     const nextEvidence = ensureAtuEvidenceRecord(label);
     const rec = normalizeEvidenceRecord(nextEvidence[label]);
-    nextEvidence[label] = {
-      ...rec,
-      include_whole_summary: !!include,
-      whole_summary: include ? (wholeSummary || "") : ""
-    };
-    setMotif({ ...motif, atu_evidence: nextEvidence });
-  };
-
-  const setMotifIncludeWholeSummary = (label, include) => {
-    if (!label) return;
-    const nextEvidence = ensureMotifEvidenceRecord(label);
-    const rec = normalizeEvidenceRecord(nextEvidence[label]);
-    nextEvidence[label] = {
-      ...rec,
-      include_whole_summary: !!include,
-      whole_summary: include ? (wholeSummary || "") : ""
-    };
-    setMotif({ ...motif, motif_evidence: nextEvidence });
-  };
-
-  const handleAddAtuRelatedSection = (label, sectionKey) => {
-    if (!label || !sectionKey) return;
-
-    if (sectionKey === WHOLE_SUMMARY_KEY) {
-      setAtuIncludeWholeSummary(label, true);
-      setSelectedAtuSectionByLabel((prev) => ({ ...prev, [label]: "" }));
-      return;
-    }
-
-    const rec = normalizeEvidenceRecord(atuEvidence[label]);
-    if (rec.related_sections.includes(sectionKey)) return;
-    const nextEvidence = ensureAtuEvidenceRecord(label);
-    const nextRec = normalizeEvidenceRecord(nextEvidence[label]);
-    nextEvidence[label] = {
-      related_sections: [...nextRec.related_sections, sectionKey],
-      include_whole_summary: nextRec.include_whole_summary,
-      whole_summary: nextRec.include_whole_summary ? (wholeSummary || nextRec.whole_summary || "") : ""
-    };
+    if (rec.evidence_keys.includes(key)) return;
+    nextEvidence[label] = { evidence_keys: [...rec.evidence_keys, key] };
     setMotif({ ...motif, atu_evidence: nextEvidence });
     setSelectedAtuSectionByLabel((prev) => ({ ...prev, [label]: "" }));
   };
 
-  const handleRemoveAtuRelatedSection = (label, sectionKey) => {
-    if (!label || !sectionKey) return;
-    if (sectionKey === WHOLE_SUMMARY_KEY) {
-      setAtuIncludeWholeSummary(label, false);
-      return;
-    }
-    const rec = normalizeEvidenceRecord(atuEvidence[label]);
-    const nextRelated = rec.related_sections.filter((k) => k !== sectionKey);
+  const handleRemoveAtuEvidenceKey = (label, key) => {
+    if (!label || !key) return;
     const nextEvidence = ensureAtuEvidenceRecord(label);
-    nextEvidence[label] = {
-      related_sections: nextRelated,
-      include_whole_summary: rec.include_whole_summary,
-      whole_summary: rec.include_whole_summary ? (wholeSummary || rec.whole_summary || "") : ""
-    };
+    const rec = normalizeEvidenceRecord(nextEvidence[label]);
+    nextEvidence[label] = { evidence_keys: rec.evidence_keys.filter((k) => k !== key) };
     setMotif({ ...motif, atu_evidence: nextEvidence });
   };
 
-  const handleAddMotifRelatedSection = (label, sectionKey) => {
-    if (!label || !sectionKey) return;
-
-    if (sectionKey === WHOLE_SUMMARY_KEY) {
-      setMotifIncludeWholeSummary(label, true);
-      setSelectedMotifSectionByLabel((prev) => ({ ...prev, [label]: "" }));
-      return;
-    }
-
-    const rec = normalizeEvidenceRecord(motifEvidence[label]);
-    if (rec.related_sections.includes(sectionKey)) return;
+  const handleAddMotifEvidenceKey = (label, key) => {
+    if (!label || !key) return;
     const nextEvidence = ensureMotifEvidenceRecord(label);
-    const nextRec = normalizeEvidenceRecord(nextEvidence[label]);
-    nextEvidence[label] = {
-      related_sections: [...nextRec.related_sections, sectionKey],
-      include_whole_summary: nextRec.include_whole_summary,
-      whole_summary: nextRec.include_whole_summary ? (wholeSummary || nextRec.whole_summary || "") : ""
-    };
+    const rec = normalizeEvidenceRecord(nextEvidence[label]);
+    if (rec.evidence_keys.includes(key)) return;
+    nextEvidence[label] = { evidence_keys: [...rec.evidence_keys, key] };
     setMotif({ ...motif, motif_evidence: nextEvidence });
     setSelectedMotifSectionByLabel((prev) => ({ ...prev, [label]: "" }));
   };
 
-  const handleRemoveMotifRelatedSection = (label, sectionKey) => {
-    if (!label || !sectionKey) return;
-    if (sectionKey === WHOLE_SUMMARY_KEY) {
-      setMotifIncludeWholeSummary(label, false);
-      return;
-    }
-    const rec = normalizeEvidenceRecord(motifEvidence[label]);
-    const nextRelated = rec.related_sections.filter((k) => k !== sectionKey);
+  const handleRemoveMotifEvidenceKey = (label, key) => {
+    if (!label || !key) return;
     const nextEvidence = ensureMotifEvidenceRecord(label);
-    nextEvidence[label] = {
-      related_sections: nextRelated,
-      include_whole_summary: rec.include_whole_summary,
-      whole_summary: rec.include_whole_summary ? (wholeSummary || rec.whole_summary || "") : ""
-    };
+    const rec = normalizeEvidenceRecord(nextEvidence[label]);
+    nextEvidence[label] = { evidence_keys: rec.evidence_keys.filter((k) => k !== key) };
     setMotif({ ...motif, motif_evidence: nextEvidence });
   };
 
@@ -792,41 +746,29 @@ export default function MotifSection({
                     <strong>Evidence:</strong>{" "}
                     {(() => {
                       const rec = normalizeEvidenceRecord(atuEvidence[item]);
-                      const parts = [];
-                      if (rec.include_whole_summary) parts.push("Whole summary");
-                      if (rec.related_sections.length) {
-                        parts.push(...rec.related_sections.map((k) => sectionLabelByKey.get(k) || k));
-                      }
+                      const parts = rec.evidence_keys.map((k) => {
+                        if (k === WHOLE_SUMMARY_KEY) return "Whole summary";
+                        return sectionLabelByKey.get(k) || k;
+                      });
                       return parts.length ? parts.join(", ") : "—";
                     })()}
                   </div>
 
                   {(() => {
                     const rec = normalizeEvidenceRecord(atuEvidence[item]);
-                    if (!rec.include_whole_summary && rec.related_sections.length === 0) return null;
+                    if (!rec.evidence_keys.length) return null;
                     return (
                       <div style={{ display: "flex", flexWrap: "wrap", gap: "0.25rem", marginBottom: "0.25rem" }}>
-                        {rec.include_whole_summary && (
-                          <button
-                            type="button"
-                            className="ghost-btn"
-                            onClick={() => handleRemoveAtuRelatedSection(item, WHOLE_SUMMARY_KEY)}
-                            style={{ padding: "0.15rem 0.35rem", fontSize: "0.75rem" }}
-                            title="Remove whole summary evidence"
-                          >
-                            Whole summary ×
-                          </button>
-                        )}
-                        {rec.related_sections.map((k) => (
+                        {rec.evidence_keys.map((k) => (
                           <button
                             key={k}
                             type="button"
                             className="ghost-btn"
-                            onClick={() => handleRemoveAtuRelatedSection(item, k)}
+                            onClick={() => handleRemoveAtuEvidenceKey(item, k)}
                             style={{ padding: "0.15rem 0.35rem", fontSize: "0.75rem" }}
-                            title="Remove related section"
+                            title="Remove evidence"
                           >
-                            {(sectionLabelByKey.get(k) || k)} ×
+                            {k === WHOLE_SUMMARY_KEY ? "Whole summary" : (sectionLabelByKey.get(k) || k)} ×
                           </button>
                         ))}
                       </div>
@@ -849,7 +791,7 @@ export default function MotifSection({
                     <button
                       type="button"
                       className="ghost-btn"
-                      onClick={() => handleAddAtuRelatedSection(item, selectedAtuSectionByLabel[item] || "")}
+                      onClick={() => handleAddAtuEvidenceKey(item, selectedAtuSectionByLabel[item] || "")}
                       disabled={!(selectedAtuSectionByLabel[item] || "")}
                       style={{ padding: "0.25rem 0.5rem", fontSize: "0.875rem" }}
                     >
@@ -859,10 +801,7 @@ export default function MotifSection({
 
                   {(() => {
                     const rec = normalizeEvidenceRecord(atuEvidence[item]);
-                    const evidenceKeys = [
-                      ...(rec.include_whole_summary ? [WHOLE_SUMMARY_KEY] : []),
-                      ...rec.related_sections
-                    ];
+                    const evidenceKeys = rec.evidence_keys;
                     if (!evidenceKeys.length) return null;
 
                     return (
@@ -870,7 +809,7 @@ export default function MotifSection({
                         {evidenceKeys.map((k) => {
                           const isWhole = k === WHOLE_SUMMARY_KEY;
                           const label = isWhole ? "Whole summary" : (sectionLabelByKey.get(k) || k);
-                          const raw = isWhole ? (wholeSummary || rec.whole_summary || "") : (sectionTextByKey.get(k) || "");
+                          const raw = isWhole ? (wholeSummary || "") : (sectionTextByKey.get(k) || "");
                           const idKey = `${item}::${k}`;
                           const expanded = !!expandedAtuEvidence[idKey];
                           const text = previewText(raw, expanded);
@@ -1033,41 +972,29 @@ export default function MotifSection({
                     <strong>Evidence:</strong>{" "}
                     {(() => {
                       const rec = normalizeEvidenceRecord(motifEvidence[type]);
-                      const parts = [];
-                      if (rec.include_whole_summary) parts.push("Whole summary");
-                      if (rec.related_sections.length) {
-                        parts.push(...rec.related_sections.map((k) => sectionLabelByKey.get(k) || k));
-                      }
+                      const parts = rec.evidence_keys.map((k) => {
+                        if (k === WHOLE_SUMMARY_KEY) return "Whole summary";
+                        return sectionLabelByKey.get(k) || k;
+                      });
                       return parts.length ? parts.join(", ") : "—";
                     })()}
                   </div>
 
                   {(() => {
                     const rec = normalizeEvidenceRecord(motifEvidence[type]);
-                    if (!rec.include_whole_summary && rec.related_sections.length === 0) return null;
+                    if (!rec.evidence_keys.length) return null;
                     return (
                       <div style={{ display: "flex", flexWrap: "wrap", gap: "0.25rem", marginBottom: "0.25rem" }}>
-                        {rec.include_whole_summary && (
-                          <button
-                            type="button"
-                            className="ghost-btn"
-                            onClick={() => handleRemoveMotifRelatedSection(type, WHOLE_SUMMARY_KEY)}
-                            style={{ padding: "0.15rem 0.35rem", fontSize: "0.75rem" }}
-                            title="Remove whole summary evidence"
-                          >
-                            Whole summary ×
-                          </button>
-                        )}
-                        {rec.related_sections.map((k) => (
+                        {rec.evidence_keys.map((k) => (
                           <button
                             key={k}
                             type="button"
                             className="ghost-btn"
-                            onClick={() => handleRemoveMotifRelatedSection(type, k)}
+                            onClick={() => handleRemoveMotifEvidenceKey(type, k)}
                             style={{ padding: "0.15rem 0.35rem", fontSize: "0.75rem" }}
-                            title="Remove related section"
+                            title="Remove evidence"
                           >
-                            {(sectionLabelByKey.get(k) || k)} ×
+                            {k === WHOLE_SUMMARY_KEY ? "Whole summary" : (sectionLabelByKey.get(k) || k)} ×
                           </button>
                         ))}
                       </div>
@@ -1090,7 +1017,7 @@ export default function MotifSection({
                     <button
                       type="button"
                       className="ghost-btn"
-                      onClick={() => handleAddMotifRelatedSection(type, selectedMotifSectionByLabel[type] || "")}
+                      onClick={() => handleAddMotifEvidenceKey(type, selectedMotifSectionByLabel[type] || "")}
                       disabled={!(selectedMotifSectionByLabel[type] || "")}
                       style={{ padding: "0.25rem 0.5rem", fontSize: "0.875rem" }}
                     >
@@ -1100,10 +1027,7 @@ export default function MotifSection({
 
                   {(() => {
                     const rec = normalizeEvidenceRecord(motifEvidence[type]);
-                    const evidenceKeys = [
-                      ...(rec.include_whole_summary ? [WHOLE_SUMMARY_KEY] : []),
-                      ...rec.related_sections
-                    ];
+                    const evidenceKeys = rec.evidence_keys;
                     if (!evidenceKeys.length) return null;
 
                     return (
@@ -1111,7 +1035,7 @@ export default function MotifSection({
                         {evidenceKeys.map((k) => {
                           const isWhole = k === WHOLE_SUMMARY_KEY;
                           const label = isWhole ? "Whole summary" : (sectionLabelByKey.get(k) || k);
-                          const raw = isWhole ? (wholeSummary || rec.whole_summary || "") : (sectionTextByKey.get(k) || "");
+                          const raw = isWhole ? (wholeSummary || "") : (sectionTextByKey.get(k) || "");
                           const idKey = `${type}::${k}`;
                           const expanded = !!expandedMotifEvidence[idKey];
                           const text = previewText(raw, expanded);

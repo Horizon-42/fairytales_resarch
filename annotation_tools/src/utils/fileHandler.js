@@ -64,6 +64,34 @@ function normalizeHelperType(value) {
   return [];
 }
 
+function normalizeEvidenceMap(value) {
+  const WHOLE_SUMMARY_KEY = "__WHOLE_SUMMARY__";
+  const input = (value && typeof value === "object" && !Array.isArray(value)) ? value : {};
+  const out = {};
+  Object.keys(input).forEach((label) => {
+    const v = input[label] || {};
+    let keys = [];
+    if (Array.isArray(v.evidence_keys)) {
+      keys = v.evidence_keys;
+    } else {
+      const related = Array.isArray(v.related_sections) ? v.related_sections : [];
+      const includeWhole = !!v.include_whole_summary;
+      keys = [
+        ...(includeWhole ? [WHOLE_SUMMARY_KEY] : []),
+        ...related
+      ];
+    }
+
+    const uniq = [];
+    (Array.isArray(keys) ? keys : []).forEach((ek) => {
+      if (!ek) return;
+      if (!uniq.includes(ek)) uniq.push(ek);
+    });
+    out[label] = { evidence_keys: uniq };
+  });
+  return out;
+}
+
 // Helper to extract action fields from action_layer
 function extractActionFieldsFromLayer(evt) {
   if (evt.action_layer) {
@@ -119,14 +147,10 @@ export function mapV2ToState(data) {
         return [];
       })(),
       atu_evidence: (() => {
-        const e = themes.atu_evidence;
-        if (e && typeof e === "object" && !Array.isArray(e)) return e;
-        return {};
+        return normalizeEvidenceMap(themes.atu_evidence);
       })(),
       motif_evidence: (() => {
-        const e = themes.motif_evidence;
-        if (e && typeof e === "object" && !Array.isArray(e)) return e;
-        return {};
+        return normalizeEvidenceMap(themes.motif_evidence);
       })(),
       obstacle_pattern: themes.obstacle_pattern || "",
       obstacle_thrower: normalizeObstacleThrower(themes.obstacle_thrower),
@@ -261,14 +285,10 @@ export function mapV1ToState(data) {
         return [];
       })(),
       atu_evidence: (() => {
-        const e = data.annotation?.motif?.atu_evidence;
-        if (e && typeof e === "object" && !Array.isArray(e)) return e;
-        return {};
+        return normalizeEvidenceMap(data.annotation?.motif?.atu_evidence);
       })(),
       motif_evidence: (() => {
-        const e = data.annotation?.motif?.motif_evidence;
-        if (e && typeof e === "object" && !Array.isArray(e)) return e;
-        return {};
+        return normalizeEvidenceMap(data.annotation?.motif?.motif_evidence);
       })(),
       obstacle_thrower: normalizeObstacleThrower(data.annotation?.motif?.obstacle_thrower),
       helper_type: normalizeHelperType(data.annotation?.motif?.helper_type)
