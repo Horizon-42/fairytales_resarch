@@ -382,7 +382,60 @@ export default function NarrativeSection({
 
   const handleMultiCharChange = (index, field, newValue) => {
     const values = newValue ? newValue.map(o => o.value) : [];
-    updateItem(index, field, values);
+
+    const item = items[index];
+    const updates = { [field]: values };
+
+    // Keep relationship_multi endpoints consistent with agents/targets when editing a character-target event.
+    // This prevents disabled endpoint selectors from rendering as '-' when the selected endpoint was removed.
+    if (
+      item &&
+      item.target_type === "character" &&
+      (field === "agents" || field === "targets")
+    ) {
+      const currentRelList = normalizeRelationshipMulti(item.relationship_multi);
+      if (currentRelList.length > 0) {
+        const nextAgents = field === "agents"
+          ? values
+          : (Array.isArray(item.agents) ? item.agents.filter(Boolean) : []);
+        const nextTargets = field === "targets"
+          ? values
+          : (Array.isArray(item.targets) ? item.targets.filter(Boolean) : []);
+
+        const lastAgent = nextAgents.length > 0 ? nextAgents[nextAgents.length - 1] : "";
+        const lastTarget = nextTargets.length > 0 ? nextTargets[nextTargets.length - 1] : "";
+
+        const nextRelList = currentRelList.map((r) => {
+          const rr = ensureRelationshipMultiEntryShape(r);
+          const next = { ...rr };
+
+          if (field === "agents") {
+            if (nextAgents.length === 1) next.agent = nextAgents[0] || "";
+            else if (next.agent && !nextAgents.includes(next.agent)) next.agent = lastAgent;
+            else if (!next.agent && nextAgents.length === 1) next.agent = nextAgents[0] || "";
+          }
+
+          if (field === "targets") {
+            if (nextTargets.length === 1) next.target = nextTargets[0] || "";
+            else if (next.target && !nextTargets.includes(next.target)) next.target = lastTarget;
+            else if (!next.target && nextTargets.length === 1) next.target = nextTargets[0] || "";
+          }
+
+          return next;
+        });
+
+        updates.relationship_multi = nextRelList;
+
+        const shouldBeMulti = (nextAgents.length > 1 || nextTargets.length > 1 || nextRelList.length > 1);
+        if (shouldBeMulti) {
+          updates.relationship_level1 = "";
+          updates.relationship_level2 = "";
+          updates.sentiment = "";
+        }
+      }
+    }
+
+    updateItem(index, updates);
   };
 
   const handleBiasChange = (field, value) => {
@@ -829,11 +882,11 @@ export default function NarrativeSection({
                         <label style={{ marginBottom: 0, minWidth: 0 }}>
                           Agent
                           <select
-                            value={relEntry.agent}
+                            value={agents.length === 1 ? (agents[0] || "") : relEntry.agent}
                             onChange={(e) => updateRel({ agent: e.target.value })}
                             disabled={agents.length <= 1}
                             style={controlStyle}
-                            title={relEntry.agent || "Agent"}
+                            title={(agents.length === 1 ? agents[0] : relEntry.agent) || "Agent"}
                           >
                             <option value="">– Select –</option>
                             {agents.map((name) => (
@@ -903,11 +956,11 @@ export default function NarrativeSection({
                         <label style={{ marginBottom: 0, minWidth: 0 }}>
                           Target
                           <select
-                            value={relEntry.target}
+                            value={targets.length === 1 ? (targets[0] || "") : relEntry.target}
                             onChange={(e) => updateRel({ target: e.target.value })}
                             disabled={targets.length <= 1}
                             style={controlStyle}
-                            title={relEntry.target || "Target"}
+                            title={(targets.length === 1 ? targets[0] : relEntry.target) || "Target"}
                           >
                             <option value="">– Select –</option>
                             {targets.map((name) => (
