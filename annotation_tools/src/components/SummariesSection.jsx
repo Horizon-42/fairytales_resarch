@@ -1,38 +1,24 @@
 import React, { useMemo } from "react";
+import { deriveTextSectionsFromNarratives } from "../utils/summarySections.js";
 
 export default function SummariesSection({
   paragraphSummaries,
   setParagraphSummaries,
   sourceText,
   sourceLanguage,
+  narrativeStructure,
   highlightedRanges,
   setHighlightedRanges,
   onAutoSummarize,
   autoSummariesLoading,
   autoSummariesProgress
 }) {
-  // Compute text paragraphs with character indices
-  const textParagraphs = useMemo(() => {
+  const textSections = useMemo(() => {
     if (!sourceText) return [];
-    const lines = sourceText.split('\n');
-    const paras = [];
-    let currentIndex = 0;
+    return deriveTextSectionsFromNarratives(narrativeStructure, sourceText);
+  }, [narrativeStructure, sourceText]);
 
-    lines.forEach((line) => {
-      const len = line.length;
-      if (line.trim()) {
-        paras.push({
-          text: line,
-          start: currentIndex,
-          end: currentIndex + len
-        });
-      }
-      currentIndex += len + 1;
-    });
-    return paras;
-  }, [sourceText]);
-
-  const { perParagraph = {}, combined = [], whole = "" } = paragraphSummaries;
+  const { perSection = {}, combined = [], whole = "" } = paragraphSummaries;
 
   const summaryFocus = highlightedRanges ? highlightedRanges["summary-focus"] : null;
 
@@ -44,17 +30,25 @@ export default function SummariesSection({
 
   const getCombinedCharRange = (item) => {
     if (!item) return null;
-    const pStart = Math.min(item.start_para, item.end_para);
-    const pEnd = Math.max(item.start_para, item.end_para);
+    const a = item.start_section;
+    const b = item.end_section;
+    if (!a || !b) return null;
+
+    const startIdx = textSections.findIndex(s => s.text_section === a);
+    const endIdx = textSections.findIndex(s => s.text_section === b);
+    if (startIdx === -1 || endIdx === -1) return null;
+
+    const lo = Math.min(startIdx, endIdx);
+    const hi = Math.max(startIdx, endIdx);
 
     let startChar = Infinity;
     let endChar = -Infinity;
 
-    for (let i = pStart; i <= pEnd; i++) {
-      const p = textParagraphs[i];
-      if (p) {
-        startChar = Math.min(startChar, p.start);
-        endChar = Math.max(endChar, p.end);
+    for (let i = lo; i <= hi; i++) {
+      const s = textSections[i];
+      if (s && typeof s.start === "number" && typeof s.end === "number") {
+        startChar = Math.min(startChar, s.start);
+        endChar = Math.max(endChar, s.end);
       }
     }
 
@@ -62,10 +56,10 @@ export default function SummariesSection({
     return { start: startChar, end: endChar };
   };
 
-  const updatePerParagraph = (index, value) => {
+  const updatePerSection = (key, value) => {
     setParagraphSummaries(prev => ({
       ...prev,
-      perParagraph: { ...prev.perParagraph, [index]: value }
+      perSection: { ...prev.perSection, [key]: value }
     }));
   };
 
@@ -78,9 +72,10 @@ export default function SummariesSection({
   };
 
   const addCombined = () => {
+    const first = textSections[0]?.text_section || "";
     setParagraphSummaries(prev => ({
       ...prev,
-      combined: [...prev.combined, { start_para: 0, end_para: 0, text: "" }]
+      combined: [...(prev.combined || []), { start_section: first, end_section: first, text: "" }]
     }));
   };
 
@@ -128,22 +123,8 @@ export default function SummariesSection({
   };
 
   const focusCombined = (item, { toggle = false } = {}) => {
-    let startChar = Infinity;
-    let endChar = -Infinity;
-    const pStart = Math.min(item.start_para, item.end_para);
-    const pEnd = Math.max(item.start_para, item.end_para);
-
-    for (let i = pStart; i <= pEnd; i++) {
-      const p = textParagraphs[i];
-      if (p) {
-        startChar = Math.min(startChar, p.start);
-        endChar = Math.max(endChar, p.end);
-      }
-    }
-
-    if (startChar !== Infinity) {
-      setSummaryFocus({ start: startChar, end: endChar }, { toggle });
-    }
+    const range = getCombinedCharRange(item);
+    if (range) setSummaryFocus(range, { toggle });
   };
 
   return (
@@ -172,31 +153,39 @@ export default function SummariesSection({
         </div>
       </div>
 
-      {/* Section 1: Per-Paragraph Summaries */}
+      {/* Section 1: Per-Section Summaries */}
       <div style={{ marginBottom: "1.5rem" }}>
         <div className="section-header-row">
-          <span style={{ fontWeight: "bold" }}>Per-Paragraph Summaries</span>
-          <span style={{ fontSize: "0.75rem", color: "#6b7280" }}>({textParagraphs.length} paragraphs)</span>
+          <span style={{ fontWeight: "bold" }}>Per-Section Summaries</span>
+          <span style={{ fontSize: "0.75rem", color: "#6b7280" }}>({textSections.length} sections)</span>
         </div>
 
-        {textParagraphs.length === 0 && (
-          <p className="hint">No text loaded.</p>
+        {textSections.length === 0 && (
+          <p className="hint">No narratives with text_span found.</p>
         )}
 
-        {textParagraphs.map((para, idx) => {
-          const preview = para.text.length > 50 ? para.text.substring(0, 50) + "..." : para.text;
-          const summaryText = perParagraph[idx] || "";
-          const paraRange = { start: para.start, end: para.end };
-          const paraIsFocused = isSummaryFocusRange(paraRange);
+        {textSections.map((sec, idx) => {
+          const previewRaw = (sec.text || "").replace(/\s+/g, " ").trim();
+          const preview = previewRaw.length > 60 ? previewRaw.substring(0, 60) + "..." : previewRaw;
+          const summaryText = perSection[sec.text_section] || "";
+          const secRange = (typeof sec.start === "number" && typeof sec.end === "number")
+            ? { start: sec.start, end: sec.end }
+            : null;
+          const secIsFocused = secRange ? isSummaryFocusRange(secRange) : false;
 
           return (
             <div key={idx} style={{ marginBottom: "0.75rem", border: "1px solid #e5e7eb", padding: "0.5rem", borderRadius: "4px" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.25rem" }}>
                 <span style={{ fontWeight: "bold", fontSize: "0.8rem" }}>
-                  Paragraph {idx + 1}
+                  Section {idx + 1}
                   <span style={{ fontWeight: "normal", color: "#6b7280", marginLeft: "0.5rem" }}>
-                    ({para.start}-{para.end})
+                    (text_section: {sec.text_section})
                   </span>
+                  {secRange && (
+                    <span style={{ fontWeight: "normal", color: "#6b7280", marginLeft: "0.5rem" }}>
+                      ({secRange.start}-{secRange.end})
+                    </span>
+                  )}
                 </span>
                 <button
                   type="button"
@@ -204,25 +193,26 @@ export default function SummariesSection({
                   style={{
                     padding: "2px 6px",
                     fontSize: "0.7rem",
-                    background: paraIsFocused ? "#86efac" : undefined,
-                    color: paraIsFocused ? "#000" : undefined,
-                    fontWeight: paraIsFocused ? "bold" : undefined
+                    background: secIsFocused ? "#86efac" : undefined,
+                    color: secIsFocused ? "#000" : undefined,
+                    fontWeight: secIsFocused ? "bold" : undefined
                   }}
-                  onClick={() => focusParagraph(para, { toggle: true })}
+                  onClick={() => secRange && setSummaryFocus(secRange, { toggle: true })}
+                  disabled={!secRange}
                 >
-                  {paraIsFocused ? "Hide" : "Highlight"}
+                  {secIsFocused ? "Hide" : "Highlight"}
                 </button>
               </div>
               <div style={{ fontSize: "0.7rem", color: "#666", marginBottom: "0.25rem", fontStyle: "italic", background: "#f9fafb", padding: "0.25rem", borderRadius: "2px" }}>
-                "{preview}"
+                "{preview || "(no text_span range to preview)"}"
               </div>
               <textarea
                 rows={2}
                 value={summaryText}
-                onChange={(e) => updatePerParagraph(idx, e.target.value)}
-                placeholder={`Summary for paragraph ${idx + 1}...`}
+                onChange={(e) => updatePerSection(sec.text_section, e.target.value)}
+                placeholder={`Summary for section ${idx + 1}...`}
                 style={{ width: "100%", fontSize: "0.85rem" }}
-                onFocus={() => focusParagraph(para, { toggle: false })}
+                onFocus={() => secRange && setSummaryFocus(secRange, { toggle: false })}
               />
             </div>
           );
@@ -231,10 +221,10 @@ export default function SummariesSection({
 
       <hr />
 
-      {/* Section 2: Combined Paragraph Summaries */}
+      {/* Section 2: Combined Section Summaries */}
       <div style={{ marginBottom: "1.5rem" }}>
         <div className="section-header-row">
-          <span style={{ fontWeight: "bold" }}>Combined Paragraph Summaries</span>
+          <span style={{ fontWeight: "bold" }}>Combined Section Summaries</span>
         </div>
 
         {combined.length === 0 && (
@@ -242,16 +232,14 @@ export default function SummariesSection({
         )}
 
         {combined.map((item, idx) => {
-          const pStart = Math.min(item.start_para, item.end_para);
-          const pEnd = Math.max(item.start_para, item.end_para);
-          const relevantParas = textParagraphs.slice(pStart, pEnd + 1);
-          const fullText = relevantParas.map(p => p.text).join(" ");
-          const preview = fullText.length > 60 ? fullText.substring(0, 60) + "..." : fullText;
-
-          let charStart = relevantParas[0]?.start ?? 0;
-          let charEnd = relevantParas[relevantParas.length - 1]?.end ?? 0;
           const combinedRange = getCombinedCharRange(item);
           const combinedIsFocused = combinedRange ? isSummaryFocusRange(combinedRange) : false;
+          const preview = (() => {
+            if (!combinedRange) return "Invalid Range";
+            const raw = (sourceText || "").slice(combinedRange.start, combinedRange.end);
+            const cleaned = raw.replace(/\s+/g, " ").trim();
+            return cleaned.length > 80 ? cleaned.substring(0, 80) + "..." : cleaned;
+          })();
 
           return (
             <div key={idx} style={{ marginBottom: "0.75rem", border: "1px solid #d1d5db", padding: "0.5rem", borderRadius: "4px", background: "#fefce8" }}>
@@ -259,29 +247,33 @@ export default function SummariesSection({
                 <span style={{ fontWeight: "bold", fontSize: "0.8rem" }}>Range:</span>
                 <label style={{ fontSize: "0.8rem" }}>
                   Start:
-                  <input
-                    type="number"
-                    min="0"
-                    max={textParagraphs.length - 1}
-                    value={item.start_para}
-                    onChange={(e) => updateCombined(idx, "start_para", parseInt(e.target.value) || 0)}
-                    style={{ width: "50px", marginLeft: "0.25rem" }}
-                  />
+                  <select
+                    value={item.start_section || ""}
+                    onChange={(e) => updateCombined(idx, "start_section", e.target.value)}
+                    style={{ marginLeft: "0.25rem" }}
+                  >
+                    {textSections.map(s => (
+                      <option key={s.text_section} value={s.text_section}>{s.text_section}</option>
+                    ))}
+                  </select>
                 </label>
                 <label style={{ fontSize: "0.8rem" }}>
                   End:
-                  <input
-                    type="number"
-                    min="0"
-                    max={textParagraphs.length - 1}
-                    value={item.end_para}
-                    onChange={(e) => updateCombined(idx, "end_para", parseInt(e.target.value) || 0)}
-                    style={{ width: "50px", marginLeft: "0.25rem" }}
-                  />
+                  <select
+                    value={item.end_section || ""}
+                    onChange={(e) => updateCombined(idx, "end_section", e.target.value)}
+                    style={{ marginLeft: "0.25rem" }}
+                  >
+                    {textSections.map(s => (
+                      <option key={s.text_section} value={s.text_section}>{s.text_section}</option>
+                    ))}
+                  </select>
                 </label>
-                <span style={{ fontSize: "0.75rem", color: "#6b7280" }}>
-                  (chars: {charStart}-{charEnd})
-                </span>
+                {combinedRange && (
+                  <span style={{ fontSize: "0.75rem", color: "#6b7280" }}>
+                    (chars: {combinedRange.start}-{combinedRange.end})
+                  </span>
+                )}
                 <button
                   type="button"
                   className="ghost-btn"
@@ -307,7 +299,7 @@ export default function SummariesSection({
                 </button>
               </div>
               <div style={{ fontSize: "0.7rem", color: "#666", marginBottom: "0.25rem", fontStyle: "italic", background: "#fff", padding: "0.25rem", borderRadius: "2px" }}>
-                Preview: "{preview || "Invalid Range"}"
+                Preview: "{preview}"
               </div>
               <textarea
                 rows={2}

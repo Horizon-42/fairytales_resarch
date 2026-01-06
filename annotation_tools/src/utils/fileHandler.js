@@ -176,30 +176,21 @@ export function mapV2ToState(data) {
       const raw = analysis.paragraph_summaries;
       // Check if already new structure
       if (raw && typeof raw === "object" && !Array.isArray(raw)) {
+        const combined = Array.isArray(raw.combined)
+          ? raw.combined.filter(c => c && c.start_section && c.end_section)
+          : [];
         return {
-          perParagraph: raw.per_paragraph || {},
-          combined: raw.combined || [],
+          perSection: raw.per_section || {},
+          combined,
           whole: raw.whole || ""
         };
       }
       // Legacy array format - migrate
       if (Array.isArray(raw)) {
-        const perParagraph = {};
-        const combined = [];
-        raw.forEach((item, i) => {
-          if (typeof item === "string" && item.trim()) {
-            perParagraph[i] = item;
-          } else if (item && typeof item === "object") {
-            if (item.start_para === item.end_para) {
-              perParagraph[item.start_para] = item.text || "";
-            } else {
-              combined.push({ start_para: item.start_para, end_para: item.end_para, text: item.text || "" });
-            }
-          }
-        });
-        return { perParagraph, combined, whole: "" };
+        // Deprecated: old paragraph-based format
+        return { perSection: {}, combined: [], whole: "" };
       }
-      return { perParagraph: {}, combined: [], whole: "" };
+      return { perSection: {}, combined: [], whole: "" };
     })(),
     
     // Cross Validation
@@ -310,30 +301,29 @@ export function mapV1ToState(data) {
       const raw = data.annotation?.deep?.paragraph_summaries;
       // Check if already new structure
       if (raw && typeof raw === "object" && !Array.isArray(raw)) {
+        const combined = Array.isArray(raw.combined)
+          ? raw.combined.filter(c => c && c.start_section && c.end_section)
+          : [];
         return {
-          perParagraph: raw.per_paragraph || {},
-          combined: raw.combined || [],
+          perSection: raw.per_section || {},
+          combined,
           whole: raw.whole || ""
         };
       }
       // Legacy array format - migrate
       if (Array.isArray(raw)) {
-        const perParagraph = {};
-        const combined = [];
-        raw.forEach((item, i) => {
-          if (typeof item === "string" && item.trim()) {
-            perParagraph[i] = item;
-          } else if (item && typeof item === "object") {
-            if (item.start_para === item.end_para) {
-              perParagraph[item.start_para] = item.text || "";
-            } else {
-              combined.push({ start_para: item.start_para, end_para: item.end_para, text: item.text || "" });
-            }
-          }
-        });
-        return { perParagraph, combined, whole: "" };
+        // Deprecated: old paragraph-based format
+        return { perSection: {}, combined: [], whole: "" };
       }
-      return { perParagraph: {}, combined: [], whole: "" };
+      // Fallback: support older object shape so the app doesn't crash
+      if (raw && typeof raw === "object" && raw.per_paragraph) {
+        return {
+          perSection: raw.per_paragraph || {},
+          combined: raw.combined || [],
+          whole: raw.whole || ""
+        };
+      }
+      return { perSection: {}, combined: [], whole: "" };
     })(),
     
     crossValidation: data.cross_validation || {},

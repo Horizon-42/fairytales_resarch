@@ -3,6 +3,7 @@ import { organizeFiles, mapV1ToState, mapV2ToState, generateUUID } from "./utils
 import { downloadJson, relPathToDatasetHint, HIGHLIGHT_COLORS, emptyProppFn, extractEnglishFromRelationship, buildActionLayer } from "./utils/helpers.js";
 import { saveFolderCache, loadFolderCache, extractFolderPath } from "./utils/folderCache.js";
 import { getBackendUrl, clearBackendCache } from "./utils/backendConfig.js";
+import { deriveTextSectionsFromNarratives } from "./utils/summarySections.js";
 
 // Import components
 import {
@@ -85,7 +86,7 @@ export default function App() {
   });
 
   const [paragraphSummaries, setParagraphSummaries] = useState({
-    perParagraph: {},
+    perSection: {},
     combined: [],
     whole: ""
   });
@@ -251,27 +252,29 @@ export default function App() {
     try {
       const backendUrl = await getBackendUrl();
 
-      // Split paragraphs the same way as SummariesSection: by line, keep non-empty.
-      const paragraphs = sourceText.text
-        .split("\n")
-        .filter((line) => line.trim());
+      const sections = deriveTextSectionsFromNarratives(narrativeStructure, sourceText.text);
+      if (sections.length === 0) {
+        alert("No narratives with text_span found to build sections.");
+        return;
+      }
+      setAutoSummariesProgress({ done: 0, total: sections.length });
 
-      setAutoSummariesProgress({ done: 0, total: paragraphs.length });
-
-      // Clear existing per-paragraph summaries first (keep combined).
-      setParagraphSummaries(prev => ({ ...prev, perParagraph: {}, whole: "" }));
+      // Clear existing per-section summaries first (keep combined).
+      setParagraphSummaries(prev => ({ ...prev, perSection: {}, whole: "" }));
 
       const lang = sourceText.language || "en";
 
-      // Generate per-paragraph summaries incrementally.
-      const perParagraphLocal = {};
-      for (let i = 0; i < paragraphs.length; i++) {
+      // Generate per-section summaries incrementally.
+      const perSectionLocal = {};
+      for (let i = 0; i < sections.length; i++) {
+        const sectionKey = sections[i]?.text_section || String(i);
+        const sectionText = sections[i]?.text || "";
         const resp = await fetch(`${backendUrl}/api/annotate/summaries/paragraph`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             index: i,
-            paragraph: paragraphs[i],
+            paragraph: sectionText,
             language: lang,
             model: "qwen3:8b"
           })
@@ -284,10 +287,10 @@ export default function App() {
         }
 
         const text = data.text || "";
-        perParagraphLocal[String(i)] = text;
+        perSectionLocal[String(sectionKey)] = text;
         setParagraphSummaries(prev => ({
           ...prev,
-          perParagraph: { ...(prev.perParagraph || {}), [String(i)]: text }
+          perSection: { ...(prev.perSection || {}), [String(sectionKey)]: text }
         }));
         setAutoSummariesProgress(prev => ({ ...prev, done: Math.min(prev.total, prev.done + 1) }));
       }
@@ -297,7 +300,7 @@ export default function App() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          per_paragraph: perParagraphLocal,
+          per_section: perSectionLocal,
           language: lang,
           model: "qwen3:8b"
         })
@@ -332,9 +335,12 @@ export default function App() {
     try {
       const backendUrl = await getBackendUrl();
 
-      const per = paragraphSummaries?.perParagraph || {};
-      const perKeys = Object.keys(per).sort((a, b) => (parseInt(a, 10) || 0) - (parseInt(b, 10) || 0));
-      const perJoined = perKeys.map(k => per[k]).filter(v => typeof v === "string" && v.trim()).join("\n");
+      const per = paragraphSummaries?.perSection || {};
+      const sections = deriveTextSectionsFromNarratives(narrativeStructure, sourceText.text);
+      const perJoined = sections
+        .map(s => per[String(s.text_section)])
+        .filter(v => typeof v === "string" && v.trim())
+        .join("\n");
       const whole = (paragraphSummaries?.whole || "").trim();
 
       const hasSummaries = !!perJoined || !!whole;
@@ -401,8 +407,10 @@ export default function App() {
         motif,
         deep: {
           paragraph_summaries: {
-            per_paragraph: paragraphSummaries.perParagraph || {},
-            combined: (paragraphSummaries.combined || []).filter(c => c.text && c.text.trim()),
+            per_section: paragraphSummaries.perSection || {},
+            combined: (paragraphSummaries.combined || []).filter(
+              c => c && c.start_section && c.end_section && c.text && c.text.trim()
+            ),
             whole: paragraphSummaries.whole || ""
           },
           propp_functions: proppFns.filter((f) => f.fn || f.evidence),
@@ -502,8 +510,10 @@ export default function App() {
         propp_functions: proppFns.filter((f) => f.fn || f.evidence),
         propp_notes: proppNotes,
         paragraph_summaries: {
-          per_paragraph: paragraphSummaries.perParagraph || {},
-          combined: (paragraphSummaries.combined || []).filter(c => c.text && c.text.trim()),
+          per_section: paragraphSummaries.perSection || {},
+          combined: (paragraphSummaries.combined || []).filter(
+            c => c && c.start_section && c.end_section && c.text && c.text.trim()
+          ),
           whole: paragraphSummaries.whole || ""
         },
         bias_reflection: crossValidation.bias_reflection,
@@ -868,24 +878,15 @@ export default function App() {
     
     if (loaded.paragraphSummaries) {
       if (Array.isArray(loaded.paragraphSummaries)) {
-        const perParagraph = {};
-        loaded.paragraphSummaries.forEach((item, i) => {
-          if (typeof item === "string" && item.trim()) {
-            perParagraph[i] = item;
-          } else if (item && item.text && item.text.trim()) {
-            if (item.start_para === item.end_para) {
-              perParagraph[item.start_para] = item.text;
-            }
-          }
-        });
-        const combined = loaded.paragraphSummaries
-          .filter(item => item && typeof item === "object" && item.start_para !== item.end_para)
-          .map(item => ({ start_para: item.start_para, end_para: item.end_para, text: item.text }));
-        setParagraphSummaries({ perParagraph, combined, whole: "" });
+        // Legacy format no longer supported for segmented summaries.
+        setParagraphSummaries({ perSection: {}, combined: [], whole: "" });
       } else if (typeof loaded.paragraphSummaries === "object") {
+        const combined = Array.isArray(loaded.paragraphSummaries.combined)
+          ? loaded.paragraphSummaries.combined.filter(c => c && c.start_section && c.end_section)
+          : [];
         setParagraphSummaries({
-          perParagraph: loaded.paragraphSummaries.perParagraph || {},
-          combined: loaded.paragraphSummaries.combined || [],
+          perSection: loaded.paragraphSummaries.perSection || {},
+          combined,
           whole: loaded.paragraphSummaries.whole || ""
         });
       }
@@ -916,7 +917,7 @@ export default function App() {
       helper_type: [],
       thinking_process: ""
     });
-    setParagraphSummaries({ perParagraph: {}, combined: [], whole: "" });
+    setParagraphSummaries({ perSection: {}, combined: [], whole: "" });
     setProppFns([emptyProppFn()]);
     setProppNotes("");
     setNarrativeStructure([""]);
@@ -1602,6 +1603,7 @@ export default function App() {
                 setParagraphSummaries={setParagraphSummaries}
                 sourceText={sourceText.text}
                 sourceLanguage={sourceText.language}
+                narrativeStructure={narrativeStructure}
                 highlightedRanges={highlightedRanges}
                 setHighlightedRanges={setHighlightedRanges}
                 onAutoSummarize={handleAutoSummarize}
