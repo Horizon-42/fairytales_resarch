@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "3.0",
   "metadata": {
     "id": "CH_006_花木兰从军",
     "title": "花木兰从军",
@@ -71,15 +71,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "relationship_level1": "Family & Kinship",
-      "relationship_level2": "parent_child",
-      "sentiment": "negative",
-      "action_category": "communicative",
-      "action_type": "persuade",
-      "action_context": "debate",
-      "action_status": "attempt",
-      "narrative_function": "setup",
-      "relationship_multi": []
+      "relationships": [
+        {
+          "agent": "花木兰",
+          "target": "花父",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "parent_child",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "persuade",
+        "context": "debate",
+        "status": "attempt",
+        "function": "setup"
+      }
     },
     {
       "id": "1701e9ae-2cd5-426c-b1c5-df4c404d99f2",
@@ -100,15 +107,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 2,
-      "relationship_level1": "Hierarchy",
-      "relationship_level2": "ruler_subject",
-      "sentiment": "neutral",
-      "action_category": "communicative",
-      "action_type": "command",
-      "action_context": "task_assignment",
-      "action_status": "success",
-      "narrative_function": "trigger",
-      "relationship_multi": []
+      "relationships": [
+        {
+          "agent": "官兵",
+          "target": "花木兰",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "command",
+        "context": "task_assignment",
+        "status": "success",
+        "function": "trigger"
+      }
     },
     {
       "id": "c7550112-5e65-45bd-990f-680734b5c411",
@@ -129,15 +143,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "action_category": "mental",
-      "action_type": "plot",
-      "action_context": "make up one's mind",
-      "relationship_level1": "Family & Kinship",
-      "relationship_level2": "parent_child",
-      "sentiment": "positive",
-      "action_status": "success",
-      "narrative_function": "character_arc",
-      "relationship_multi": []
+      "relationships": [
+        {
+          "agent": "花木兰",
+          "target": "花父",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "parent_child",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "plot",
+        "context": "make up one's mind",
+        "status": "success",
+        "function": "character_arc"
+      }
     },
     {
       "id": "67f3cd2d-6d27-4993-a2a1-2339d643dd98",
@@ -160,14 +181,7 @@
       "object_type": "",
       "instrument": "",
       "time_order": 4,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "",
-      "action_category": "communicative",
-      "action_type": "persuade",
-      "action_context": "debate",
-      "action_status": "attempt",
-      "relationship_multi": [
+      "relationships": [
         {
           "agent": "花木兰",
           "target": "花父",
@@ -190,7 +204,13 @@
           "sentiment": "negative"
         }
       ],
-      "narrative_function": ""
+      "action_layer": {
+        "category": "communicative",
+        "type": "persuade",
+        "context": "debate",
+        "status": "attempt",
+        "function": ""
+      }
     },
     {
       "id": "bf8d2e64-6a94-4d11-ac3c-76bf4c52e74a",
@@ -211,15 +231,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "relationship_level1": "Family & Kinship",
-      "relationship_level2": "parent_child",
-      "sentiment": "negative",
-      "action_category": "communicative",
-      "action_type": "persuade",
-      "action_context": "advise",
-      "action_status": "failure",
-      "narrative_function": "",
-      "relationship_multi": []
+      "relationships": [
+        {
+          "agent": "花木兰",
+          "target": "花母",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "parent_child",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "persuade",
+        "context": "advise",
+        "status": "failure",
+        "function": ""
+      }
     },
     {
       "id": "c28e4d9e-29a6-4f85-84dd-e1d241e7061e",
@@ -240,15 +267,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 6,
-      "relationship_level1": "Family & Kinship",
-      "relationship_level2": "parent_child",
-      "sentiment": "positive",
-      "action_category": "communicative",
-      "action_type": "challenge",
-      "action_context": "",
-      "narrative_function": "climax",
-      "action_status": "partial",
-      "relationship_multi": []
+      "relationships": [
+        {
+          "agent": "花木兰",
+          "target": "花父",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "parent_child",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "challenge",
+        "context": "",
+        "status": "partial",
+        "function": "climax"
+      }
     },
     {
       "id": "e91dccba-77e1-4828-9c40-7fdc08e07afb",
@@ -265,15 +299,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 7,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "0f48c09f-ace1-41cf-8494-5a557348cafa",
@@ -290,15 +323,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 8,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "1d038f63-af70-4f6d-bc76-57bf328d5081",
@@ -315,15 +347,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 9,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "e8fcd5bc-c5fd-46a9-8670-18b7a916b01a",
@@ -340,15 +371,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 10,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "44051554-1387-470d-b5cc-53d780f04d2a",
@@ -365,15 +395,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 11,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "ecab7c52-9984-4c9d-ae86-fb5f82b69167",
@@ -390,15 +419,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 12,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "c6b9db18-f73e-4c03-9b46-da6da84091fa",
@@ -415,15 +443,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 13,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "a123d827-3a29-452c-9950-e7c1295e8bad",
@@ -440,15 +467,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 14,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "5dbe640d-6eea-4b22-8699-ee6d1cb55a4a",
@@ -465,15 +491,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 15,
-      "narrative_function": "",
-      "relationship_level1": "Family & Kinship",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "communicative",
-      "action_type": "inform",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [
+        {
+          "agent": "",
+          "target": "",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "",
+          "sentiment": ""
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "2c038325-0bad-42ff-b80d-46830c1bfb3f",
@@ -490,15 +523,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 16,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "065a71a9-1e7a-4198-8dda-a3df18d46290",
@@ -515,15 +547,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 17,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "90f715dd-428c-4f15-86c5-95c10f87e3e0",
@@ -540,15 +571,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 18,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     }
   ],
   "themes_and_motifs": {
