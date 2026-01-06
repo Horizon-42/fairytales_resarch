@@ -226,8 +226,12 @@
       "id": "c28e4d9e-29a6-4f85-84dd-e1d241e7061e",
       "event_type": "",
       "description": "木兰看劝说不了父母，就提出要和父亲比剑，谁赢了谁就出征。花父向来不服老，经女儿一说就答应了。\n于是，父女俩就一起来到院中比剑。花父剑法熟练，木兰身手矫健，几个回合下来分不出高低。但是到了后来，花父毕竟",
-      "agents": [],
-      "targets": [],
+      "agents": [
+        "花木兰"
+      ],
+      "targets": [
+        "花父"
+      ],
       "text_span": {
         "start": 707,
         "end": 925,
@@ -236,7 +240,13 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 6
+      "time_order": 6,
+      "relationship_level1": "Family & Kinship",
+      "relationship_level2": "parent_child",
+      "sentiment": "positive",
+      "action_category": "transaction",
+      "action_type": "",
+      "action_context": ""
     }
   ],
   "themes_and_motifs": {
