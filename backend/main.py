@@ -30,6 +30,11 @@ from llm_model.narrative_annotator import (
     NarrativeAnnotatorConfig,
     annotate_narrative_event,
 )
+from llm_model.narrative_segmentation import (
+    NarrativeSegmentationConfig,
+    NarrativeSegmentationError,
+    auto_segment_to_empty_narratives,
+)
 from llm_model.summaries_annotator import (
     SummariesAnnotationError,
     SummariesAnnotatorConfig,
@@ -175,6 +180,20 @@ class NarrativeAnnotateRequest(BaseModel):
 class NarrativeAnnotateResponse(BaseModel):
     ok: bool
     event: Dict[str, Any]
+
+
+class NarrativeAutoSegmentRequest(BaseModel):
+    """Pre-annotation: auto-segment story text into narrative spans."""
+
+    text: str = Field(..., description="Raw story text")
+    culture: Optional[str] = Field(None, description="Optional culture hint")
+    model: Optional[str] = Field(None, description="Override LLM model for segmentation")
+    embedding_model: Optional[str] = Field(None, description="Override embedding model (Ollama)")
+
+
+class NarrativeAutoSegmentResponse(BaseModel):
+    ok: bool
+    narrative_events: List[Dict[str, Any]]
 
 
 class SummariesAnnotateRequest(BaseModel):
@@ -372,6 +391,37 @@ def annotate_narrative_endpoint(req: NarrativeAnnotateRequest) -> NarrativeAnnot
         raise HTTPException(status_code=502, detail=str(exc)) from exc
 
     return NarrativeAnnotateResponse(ok=True, event=result)
+
+
+@app.post("/api/narrative/auto_segment", response_model=NarrativeAutoSegmentResponse)
+def auto_segment_narrative_endpoint(req: NarrativeAutoSegmentRequest) -> NarrativeAutoSegmentResponse:
+    """Auto-segment a story into coherent narrative spans for later event annotation."""
+
+    if not isinstance(req.text, str) or not req.text.strip():
+        raise HTTPException(status_code=400, detail="`text` must be a non-empty string")
+
+    base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
+    default_model = _env("OLLAMA_MODEL", "qwen3:8b")
+    default_embedding_model = _env("OLLAMA_EMBEDDING_MODEL", "qwen3-embedding:4b")
+
+    seg_cfg = NarrativeSegmentationConfig(
+        ollama=OllamaConfig(
+            base_url=base_url,
+            model=req.model or default_model,
+        ),
+        embedding_model=req.embedding_model or default_embedding_model,
+    )
+
+    try:
+        events = auto_segment_to_empty_narratives(
+            text=req.text,
+            culture=req.culture,
+            config=seg_cfg,
+        )
+    except NarrativeSegmentationError as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+    return NarrativeAutoSegmentResponse(ok=True, narrative_events=events)
 
 
 @app.post("/api/annotate/summaries", response_model=SummariesAnnotateResponse)

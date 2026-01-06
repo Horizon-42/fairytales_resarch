@@ -63,6 +63,8 @@ export default function NarrativeSection({
   onAddProppFn,
   highlightedRanges,
   setHighlightedRanges,
+  onAutoSegmentNarratives,
+  autoSegmentNarrativesLoading,
   onAutoAnnotateEvent,
   autoAnnotateEventLoading
 }) {
@@ -363,6 +365,18 @@ export default function NarrativeSection({
       <div className="section-header-row">
         <span>Story Sequence</span>
         <div style={{ display: "flex", gap: "0.5rem" }}>
+          {typeof onAutoSegmentNarratives === "function" && (
+            <button
+              type="button"
+              className="ghost-btn"
+              onClick={() => onAutoSegmentNarratives()}
+              disabled={!!autoSegmentNarrativesLoading}
+              style={{ fontSize: "0.85rem", padding: "0.4rem 0.8rem" }}
+              title="Auto-segment the story into narrative spans"
+            >
+              {autoSegmentNarrativesLoading ? "Sectioning…" : "Automatic sectioning"}
+            </button>
+          )}
           <button
             type="button"
             className="ghost-btn"

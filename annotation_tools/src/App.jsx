@@ -124,6 +124,7 @@ export default function App() {
   const [autoSummariesLoading, setAutoSummariesLoading] = useState(false);
   const [autoSummariesProgress, setAutoSummariesProgress] = useState({ done: 0, total: 0 });
   const [autoDetectMotifLoading, setAutoDetectMotifLoading] = useState(false);
+  const [autoSegmentNarrativesLoading, setAutoSegmentNarrativesLoading] = useState(false);
 
   // Context menu state
   const [contextMenu, setContextMenu] = useState({ visible: false, x: 0, y: 0 });
@@ -239,6 +240,47 @@ export default function App() {
         delete next[eventId];
         return next;
       });
+    }
+  };
+
+  const handleAutoSegmentNarratives = async () => {
+    if (autoSegmentNarrativesLoading) return;
+    if (!sourceText?.text || !sourceText.text.trim()) {
+      alert("No story text loaded.");
+      return;
+    }
+
+    setAutoSegmentNarrativesLoading(true);
+    try {
+      const backendUrl = await getBackendUrl();
+
+      const resp = await fetch(`${backendUrl}/api/narrative/auto_segment`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          text: sourceText.text,
+          culture: culture
+        })
+      });
+
+      const data = await resp.json().catch(() => null);
+      if (!resp.ok || !data?.ok) {
+        const msg = (data && (data.detail || data.error)) ? (data.detail || data.error) : `HTTP ${resp.status}`;
+        throw new Error(msg);
+      }
+
+      const events = Array.isArray(data.narrative_events) ? data.narrative_events : [];
+      if (events.length === 0) {
+        alert("Auto-segmentation returned no segments.");
+        return;
+      }
+
+      setNarrativeStructure(events);
+    } catch (err) {
+      console.error("Auto-segment narratives failed:", err);
+      alert(`Auto-segmentation failed: ${err?.message || err}`);
+    } finally {
+      setAutoSegmentNarrativesLoading(false);
     }
   };
 
@@ -1764,6 +1806,8 @@ export default function App() {
                 onAddProppFn={onAddProppFn}
                 highlightedRanges={highlightedRanges}
                 setHighlightedRanges={setHighlightedRanges}
+                onAutoSegmentNarratives={handleAutoSegmentNarratives}
+                autoSegmentNarrativesLoading={autoSegmentNarrativesLoading}
                 onAutoAnnotateEvent={handleAutoAnnotateEvent}
                 autoAnnotateEventLoading={autoAnnotateEventLoading}
               />
