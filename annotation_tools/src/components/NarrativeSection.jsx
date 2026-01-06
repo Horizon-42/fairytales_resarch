@@ -6,6 +6,20 @@ import { SENTIMENT_TAGS, SENTIMENT_DATA, getSentimentByTag } from "../sentiment_
 import { ACTION_CATEGORIES, ACTION_TYPES, ACTION_STATUS, NARRATIVE_FUNCTIONS, getActionTypesForCategory, getContextTagsForAction } from "../action_taxonomy_constants.js";
 import { generateUUID } from "../utils/fileHandler.js";
 import { customSelectStyles } from "../utils/helpers.js";
+import {
+  ensureRelationshipMultiEntryShape,
+  normalizeRelationshipMulti,
+  isMultiRelationshipEvent,
+  buildMultiCharUpdatesWithEndpointSync,
+  getEffectiveRelationshipLevels,
+  ensureAtLeastOneRelationshipMulti,
+  computeMaxTimeOrder,
+  buildNarrativeItems,
+  sortNarrativeItemsInPlace,
+  findOriginalNarrativeIndexById,
+  removeNarrativeEntryById,
+  buildNarrativeObjectFromString
+} from "./narrativeSectionLogic.js";
 
 // Map Propp function codes to full display names from CSV
 const PROPP_FUNCTION_DISPLAY_NAMES = {
@@ -53,33 +67,6 @@ const formatProppFunctionName = (fn) => {
     .join(' ');
 };
 
-const ensureRelationshipMultiEntryShape = (entry) => {
-  if (!entry || typeof entry !== "object") {
-    return { agent: "", target: "", relationship_level1: "", relationship_level2: "", sentiment: "" };
-  }
-  return {
-    agent: entry.agent || "",
-    target: entry.target || "",
-    relationship_level1: entry.relationship_level1 || "",
-    relationship_level2: entry.relationship_level2 || "",
-    sentiment: entry.sentiment || ""
-  };
-};
-
-const normalizeRelationshipMulti = (relationshipMulti) => {
-  if (!relationshipMulti) return [];
-  if (Array.isArray(relationshipMulti)) return relationshipMulti.map(ensureRelationshipMultiEntryShape);
-  if (typeof relationshipMulti === "object") return [ensureRelationshipMultiEntryShape(relationshipMulti)];
-  return [];
-};
-
-const isMultiRelationshipEvent = (item) => {
-  if (!item || item.target_type !== "character") return false;
-  const agents = Array.isArray(item.agents) ? item.agents : [];
-  const targets = Array.isArray(item.targets) ? item.targets : [];
-  return agents.length > 1 || targets.length > 1;
-};
-
 export default function NarrativeSection({
   narrativeStructure,
   setNarrativeStructure,
@@ -115,80 +102,15 @@ export default function NarrativeSection({
     .filter((o) => o.value && o.value !== "Unnamed");
 
   // Calculate max time_order to auto-assign for new items
-  const maxTimeOrder = Math.max(
-    0,
-    ...narrativeStructure
-      .filter(n => typeof n === "object" && n.time_order != null)
-      .map(n => n.time_order || 0)
-  );
+  const maxTimeOrder = computeMaxTimeOrder(narrativeStructure);
 
-  let items = narrativeStructure.map((item, index) => {
-    if (typeof item === "string") {
-      return {
-        id: generateUUID(),
-        event_type: "OTHER",
-        description: item,
-        narrative_function: "",
-        agents: [],
-        targets: [],
-        text_span: null,
-        target_type: "character",
-        object_type: "",
-        instrument: "",
-        time_order: maxTimeOrder + 1 + index,
-        relationship_level1: "",
-        relationship_level2: "",
-        relationship_multi: [],
-        sentiment: "",
-        action_category: "",
-        action_type: "",
-        action_context: "",
-        action_status: ""
-      };
-    }
-    if (!item.id) {
-      return {
-        ...item,
-        id: generateUUID(),
-        time_order: item.time_order ?? (maxTimeOrder + 1 + index),
-        narrative_function: item.narrative_function || "",
-        relationship_level1: item.relationship_level1 || "",
-        relationship_level2: item.relationship_level2 || "",
-        relationship_multi: Array.isArray(item.relationship_multi) ? item.relationship_multi : (item.relationship_multi ? [item.relationship_multi] : []),
-        sentiment: item.sentiment || "",
-        action_category: item.action_category || (item.action_layer?.category || ""),
-        action_type: item.action_type || (item.action_layer?.type || ""),
-        action_context: item.action_context || (item.action_layer?.context || ""),
-        action_status: item.action_status || (item.action_layer?.status || "")
-      };
-    }
-    return {
-      ...item,
-      time_order: item.time_order ?? (maxTimeOrder + 1 + index),
-      narrative_function: item.narrative_function || "",
-      relationship_level1: item.relationship_level1 || "",
-      relationship_level2: item.relationship_level2 || "",
-      relationship_multi: Array.isArray(item.relationship_multi) ? item.relationship_multi : (item.relationship_multi ? [item.relationship_multi] : []),
-      sentiment: item.sentiment || ""
-    };
+  let items = buildNarrativeItems({
+    narrativeStructure,
+    maxTimeOrder,
+    uuidFn: generateUUID
   });
 
-  // Sort items
-  if (sortByTimeOrder) {
-    // Sort by time_order, with items without time_order at the end
-    items = items.sort((a, b) => {
-      const orderA = a.time_order ?? Infinity;
-      const orderB = b.time_order ?? Infinity;
-      return orderA - orderB;
-    });
-  } else {
-    // Default: sort by text_span start position, with items without text_span at the end
-    items = items.sort((a, b) => {
-      const startA = a.text_span?.start ?? Infinity;
-      const startB = b.text_span?.start ?? Infinity;
-      return startA - startB;
-    });
-  }
+  sortNarrativeItemsInPlace(items, sortByTimeOrder);
 
   // Check if all items with text_span are highlighted
   const allHighlighted = React.useMemo(() => {
@@ -219,9 +141,7 @@ export default function NarrativeSection({
     }
 
     // Find the original index in narrativeStructure by ID
-    const originalIndex = narrativeStructure.findIndex(n => 
-      typeof n === "object" && n.id === itemToUpdate.id
-    );
+    const originalIndex = findOriginalNarrativeIndexById(narrativeStructure, itemToUpdate.id);
 
     if (originalIndex === -1) {
       // If not found, update the sorted items array
@@ -237,23 +157,12 @@ export default function NarrativeSection({
       next[originalIndex] = { ...next[originalIndex], ...updates };
     } else {
       // Convert string to object if needed
-      next[originalIndex] = {
-        id: generateUUID(),
-        event_type: "OTHER",
+      next[originalIndex] = buildNarrativeObjectFromString({
         description: next[originalIndex],
-        agents: [],
-        targets: [],
-        text_span: null,
-        target_type: "character",
-        object_type: "",
-        instrument: "",
-        time_order: maxTimeOrder + 1,
-        relationship_level1: "",
-        relationship_level2: "",
-        relationship_multi: [],
-        sentiment: "",
-        ...updates
-      };
+        updates,
+        uuidFn: generateUUID,
+        timeOrder: maxTimeOrder + 1
+      });
     }
     setNarrativeStructure(next);
 
@@ -297,12 +206,7 @@ export default function NarrativeSection({
     }
 
     // Find and remove from original structure by ID
-    const next = narrativeStructure.filter(n => {
-      if (typeof n === "object" && n.id === itemToRemove.id) {
-        return false;
-      }
-      return true;
-    });
+    const next = removeNarrativeEntryById(narrativeStructure, itemToRemove.id);
     setNarrativeStructure(next);
   };
 
@@ -382,59 +286,8 @@ export default function NarrativeSection({
 
   const handleMultiCharChange = (index, field, newValue) => {
     const values = newValue ? newValue.map(o => o.value) : [];
-
     const item = items[index];
-    const updates = { [field]: values };
-
-    // Keep relationship_multi endpoints consistent with agents/targets when editing a character-target event.
-    // This prevents disabled endpoint selectors from rendering as '-' when the selected endpoint was removed.
-    if (
-      item &&
-      item.target_type === "character" &&
-      (field === "agents" || field === "targets")
-    ) {
-      const currentRelList = normalizeRelationshipMulti(item.relationship_multi);
-      if (currentRelList.length > 0) {
-        const nextAgents = field === "agents"
-          ? values
-          : (Array.isArray(item.agents) ? item.agents.filter(Boolean) : []);
-        const nextTargets = field === "targets"
-          ? values
-          : (Array.isArray(item.targets) ? item.targets.filter(Boolean) : []);
-
-        const lastAgent = nextAgents.length > 0 ? nextAgents[nextAgents.length - 1] : "";
-        const lastTarget = nextTargets.length > 0 ? nextTargets[nextTargets.length - 1] : "";
-
-        const nextRelList = currentRelList.map((r) => {
-          const rr = ensureRelationshipMultiEntryShape(r);
-          const next = { ...rr };
-
-          if (field === "agents") {
-            if (nextAgents.length === 1) next.agent = nextAgents[0] || "";
-            else if (next.agent && !nextAgents.includes(next.agent)) next.agent = lastAgent;
-            else if (!next.agent && nextAgents.length === 1) next.agent = nextAgents[0] || "";
-          }
-
-          if (field === "targets") {
-            if (nextTargets.length === 1) next.target = nextTargets[0] || "";
-            else if (next.target && !nextTargets.includes(next.target)) next.target = lastTarget;
-            else if (!next.target && nextTargets.length === 1) next.target = nextTargets[0] || "";
-          }
-
-          return next;
-        });
-
-        updates.relationship_multi = nextRelList;
-
-        const shouldBeMulti = (nextAgents.length > 1 || nextTargets.length > 1 || nextRelList.length > 1);
-        if (shouldBeMulti) {
-          updates.relationship_level1 = "";
-          updates.relationship_level2 = "";
-          updates.sentiment = "";
-        }
-      }
-    }
-
+    const updates = buildMultiCharUpdatesWithEndpointSync({ item, field, values });
     updateItem(index, updates);
   };
 
@@ -560,12 +413,8 @@ export default function NarrativeSection({
             const agents = Array.isArray(item.agents) ? item.agents : [];
             const targets = Array.isArray(item.targets) ? item.targets : [];
 
-            const effectiveRelationshipLevel1 = multiRel
-              ? ((rmList[0] && rmList[0].relationship_level1) || item.relationship_level1 || "")
-              : (item.relationship_level1 || "");
-            const effectiveRelationshipLevel2 = multiRel
-              ? ((rmList[0] && rmList[0].relationship_level2) || item.relationship_level2 || "")
-              : (item.relationship_level2 || "");
+            const { relationship_level1: effectiveRelationshipLevel1, relationship_level2: effectiveRelationshipLevel2 } =
+              getEffectiveRelationshipLevels({ item, rmList, multiRel });
 
             const setRelationshipMultiList = (nextList) => {
               updateItem(idx, {
@@ -578,17 +427,8 @@ export default function NarrativeSection({
               });
             };
 
-            const ensureAtLeastOneRelationship = () => {
-              if (rmList.length > 0) return rmList;
-              const fallback = {
-                agent: agents.length === 1 ? agents[0] : (agents[0] || ""),
-                target: targets.length === 1 ? targets[0] : (targets[0] || ""),
-                relationship_level1: item.relationship_level1 || "",
-                relationship_level2: item.relationship_level2 || "",
-                sentiment: item.sentiment || ""
-              };
-              return [ensureRelationshipMultiEntryShape(fallback)];
-            };
+            const ensureAtLeastOneRelationship = () =>
+              ensureAtLeastOneRelationshipMulti({ item, rmList, agents, targets });
 
             return (
               <>
