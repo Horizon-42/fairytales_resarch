@@ -116,9 +116,24 @@
     },
     "deep": {
       "paragraph_summaries": {
-        "per_section": {},
+        "per_section": {
+          "S0-214": "相传织女是天帝孙女或王母娘娘外孙女，她与六位仙女姐妹共同在银河东岸织造变幻色彩的天衣，以供天界穿戴，其中织女因勤勉努力而最为突出。\nEnglish: Zhi Nu is said to be the granddaughter of the Heaven Emperor or the Queen Mother's granddaughter. She, along with six sister仙女, weaves colorful heavenly robes in the east of the Milky Way, with Zhi Nu being the most diligent among them.",
+          "S215-297": "隔著那條清淺的閃光銀河便是人間，牧牛郎牛郎因父母早逝遭哥嫂虐待，最終被分家時隻得一頭老牛自立門戶。\nEnglish: Beyond the clear, shining Milky Way lies the mortal world. The cowherd Niu Lang, having lost his parents, was mistreated by his in-laws and eventually given an old cow to start his own life.",
+          "S298-363": "在老牛的帮助下和自己的努力劳动下，他通过开荒种地、盖屋等努力，一两年后建起一个小家，勉强维持生活。\nEnglish: With the help of an old ox and his own hard work, he cleared land, farmed, and built a house, eventually creating a small home after a couple of years that could barely sustain his life.",
+          "S363-401": "除了不会说话的老牛外，家中只有他一人，生活十分寂寞。\nEnglish: Besides the old cow that doesn't speak, he is alone in the house, leading a very lonely life.",
+          "S402-514": "老牛告知牛郎织女将去银河沐浴，建议他趁机夺取织女衣物以娶她。牛郎惊讶但遵从，前往河岸芦苇丛等待。\nEnglish: The old ox told the cowherd that Zhi Nu would go to the Milky Way to bathe and advised him to seize her clothes to marry her. The cowherd, surprised but obedient, went to the reed丛 by the riverbank to wait.",
+          "S515-753": "织女和仙女们来到银河洗浴，牛郎抢走织女的衣裳，仙女们惊慌逃散，织女被迫答应成为牛郎的妻子。\nEnglish: The Weaver Girl and her companions come to the Milky Way to bathe, but Cowherd takes her clothes, causing the仙女们 to flee, and the Weaver Girl reluctantly agrees to marry him.",
+          "S754-818": "夫妻结婚后男耕女织，生活美满幸福，育有一子一女，期盼白首偕老。\nEnglish: After getting married, the couple worked together, lived a happy life, had a son and daughter, and hoped to stay together forever.",
+          "S819-908": "天帝和王母娘娘查明后震怒，派天神捉拿织女回天庭问罪，导致织女与家人被迫分离。\nEnglish: The Jade Emperor and Queen Mother, upon investigating, were furious and sent heavenly soldiers to arrest Zhi Nu, leading to her forced separation from her family.",
+          "S908-1055": "牛郎见爱妻离去悲痛欲绝，带着儿女连夜追赶，却发现银河已被王母娘娘移至天上，仙凡永隔。\nEnglish: Niu Lang, overwhelmed with grief after his wife left, took his children and rushed to follow her, only to find the Milky Way had been moved by the Queen Mother to the heavens, separating them forever.",
+          "S1056-1212": "牛郎与儿女悲痛欲绝，老牛临终前嘱咐他剥皮上天，牛郎依言行事并用粪瓢平衡箩筐。\nEnglish: Niulang grieved with his children, and the old ox instructed him to skin it to ascend to heaven, which he did, balancing the basket with a dung basin.",
+          "S1213-1412": "牛郎穿越星群接近银河时，王母娘娘用金簪划出天河阻隔，令他只能含泪凝望。\nEnglish: Niulang approaches the Milky Way, but the Queen Mother blocks his path with her hairpin, leaving him to weep helplessly.",
+          "S1413-1549": "小女儿提议用粪瓢舀干天河的水，牛郎悲愤地答应并立即行动，儿女们随后合力协助。\nEnglish: The daughter suggests using a dung scoop to dry the Heaven River, which the father agrees to, and they begin the task with the children's assistance.",
+          "S1549-1692": "这段坚定的爱情最终感动了天帝和王母娘娘，允许牛郎织女每年七月七日相会，由喜鹤搭桥。而织女的泪水化作细雨，引发人间妇人的同情。\nEnglish: This steadfast love eventually moved the heavenly beings, allowing Cowherd and Weaver Maid to meet once a year on July 7th via the magpie bridge. Weaver Maid's tears turn into rain, evoking sympathy from women on earth.",
+          "S1693-1959": "牛郎与织女被天河分隔，但通过子女星和织布梭、牛拐子等星象传递书信，以象征他们坚贞不渝的爱情。\nEnglish: Cowherd and Weaver Girl are separated by the Milky Way, but they communicate through their children's stars and symbols like the loom shuttle and ox plow, symbolizing their eternal love."
+        },
         "combined": [],
-        "whole": "相传织女与七仙女在银河东岸织造天衣，织女勤勉闻名。牛郎因家贫被哥嫂驱逐，得老牛相助在荒野建屋立业。老牛指点他夺取织女衣裳可娶其为妻，牛郎遂潜至芦苇丛等待。织女沐浴时被牛郎抢衣，被迫嫁与他。婚后夫妻恩爱，生子育女，却遭天帝惩罚将织女拘回天庭。牛郎披牛皮携子追至天界，被王母阻隔。最终夫妻以织梭与牛拐传递书信，每年七月七日由喜鹊搭桥相会，化作天界牵牛星与织女星。\nEnglish: Zhi Nu, famed for weaving heavenly silk with seven仙女 on the Milky Way, was tricked by Niu Lang, a poor cowherd driven from his home by in-laws. Guided by an old ox, Niu Lang stole Zhi Nu's clothes to marry her, leading to their union and a happy life with children. However, the heavens punished them, separating Zhi Nu from Niu Lang. Niu Lang, wearing the ox's skin, chased her to heaven but was blocked by Wangmu's hairpin. Their steadfast love eventually allowed annual meetings on July 7th via magpies, symbolized by the stars Altair and Vega."
+        "whole": "相传织女是天帝孙女，与六位仙女姐妹在银河东岸织造天衣。牛郎因家贫被分得老牛自立门户，后因孤独而求助老牛。老牛指引他夺取织女衣物以娶她，牛郎遂抢得织女衣物并与之成婚，夫妻育有一子一女。天帝得知后怒派天兵捉拿织女，牛郎带儿女追赶却遇天河阻隔。最终天帝允许牛郎织女每年七月七日相会，织女泪水化作人间细雨，两人通过星象传递书信象征永恒爱情。\nEnglish: Zhi Nu, the granddaughter of the Heaven Emperor, wove heavenly robes with six sister仙女 by the Milky Way. Niu Lang, left with an old cow after being mistreated, sought help from the cow and eventually took Zhi Nu's clothes to marry her. After marrying and having children, the heavens punished them by separating Zhi Nu. Niu Lang's desperate attempt to cross the Milky Way failed, but the heavens allowed them to meet once a year on July 7th. Zhi Nu's tears became rain, and their love was symbolized by celestial symbols."
       },
       "propp_functions": [
         {
