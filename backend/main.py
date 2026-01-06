@@ -13,7 +13,7 @@ from __future__ import annotations
 import logging
 import os
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Literal, Optional
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -187,6 +187,10 @@ class NarrativeAutoSegmentRequest(BaseModel):
 
     text: str = Field(..., description="Raw story text")
     culture: Optional[str] = Field(None, description="Optional culture hint")
+    mode: Literal["llm_only", "embedding_assisted"] = Field(
+        "embedding_assisted",
+        description="Segmentation mode: llm_only (no embeddings) or embedding_assisted (use adjacent similarity hints)",
+    )
     model: Optional[str] = Field(None, description="Override LLM model for segmentation")
     embedding_model: Optional[str] = Field(None, description="Override embedding model (Ollama)")
 
@@ -416,6 +420,7 @@ def auto_segment_narrative_endpoint(req: NarrativeAutoSegmentRequest) -> Narrati
         events = auto_segment_to_empty_narratives(
             text=req.text,
             culture=req.culture,
+            mode=req.mode,
             config=seg_cfg,
         )
     except NarrativeSegmentationError as exc:

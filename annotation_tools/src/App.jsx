@@ -243,7 +243,7 @@ export default function App() {
     }
   };
 
-  const handleAutoSegmentNarratives = async () => {
+  const handleAutoSegmentNarratives = async (mode = "embedding_assisted") => {
     if (autoSegmentNarrativesLoading) return;
     if (!sourceText?.text || !sourceText.text.trim()) {
       alert("No story text loaded.");
@@ -259,7 +259,8 @@ export default function App() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           text: sourceText.text,
-          culture: culture
+          culture: culture,
+          mode: mode
         })
       });
 

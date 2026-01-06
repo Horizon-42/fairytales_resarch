@@ -3,11 +3,15 @@
 Goal:
 - Split a story into narrative-friendly segments before event annotation.
 
-Pipeline:
+Modes:
+- llm_only: LLM segments using story logic only (no embedding similarity signal).
+- embedding_assisted: compute embedding cosine similarity between adjacent chunks and
+    provide it as a boundary hint to the LLM.
+
+Pipeline (embedding_assisted):
 1) Create initial overlapping chunks based on text length.
 2) Compute embedding cosine similarity between adjacent chunks.
-3) Ask an LLM (e.g., qwen3:8b) to propose final segment spans using
-   similarity signals + story logic.
+3) Ask an LLM (e.g., qwen3:8b) to propose final segment spans using similarity + logic.
 4) Return "empty" narrative event objects with populated `text_span`.
 
 This module is intentionally lightweight and backend-friendly.
@@ -19,7 +23,7 @@ import json
 import math
 import uuid
 from dataclasses import dataclass
-from typing import Any, Dict, List, Optional, Sequence, Tuple
+from typing import Any, Dict, List, Literal, Optional, Sequence, Tuple
 
 from .json_utils import loads_strict_json
 from .ollama_client import OllamaConfig, OllamaError, chat, embed
@@ -178,9 +182,10 @@ def _build_segmentation_prompt(
     chunks: List[Dict[str, Any]],
     adjacent_similarities: List[float],
     culture: Optional[str],
+    include_similarity: bool,
 ) -> List[Dict[str, str]]:
     # We keep the prompt very explicit about indices and coverage.
-    payload = {
+    payload: Dict[str, Any] = {
         "text_length": len(text),
         "chunks": [
             {
@@ -192,16 +197,21 @@ def _build_segmentation_prompt(
             }
             for c in chunks
         ],
-        "adjacent_similarities": [
+    }
+
+    if include_similarity and adjacent_similarities:
+        payload["adjacent_similarities"] = [
             {
                 "between": [i, i + 1],
                 "similarity": float(adjacent_similarities[i]),
                 # boundary region center hint near the overlap zone
-                "boundary_hint": int(chunks[i]["end"] - max(1, int((chunks[i]["end"] - chunks[i]["start"]) * 0.15))),
+                "boundary_hint": int(
+                    chunks[i]["end"]
+                    - max(1, int((chunks[i]["end"] - chunks[i]["start"]) * 0.15))
+                ),
             }
             for i in range(len(adjacent_similarities))
-        ],
-    }
+        ]
 
     culture_hint = f"Culture hint: {culture}\n" if culture else ""
 
@@ -210,29 +220,41 @@ def _build_segmentation_prompt(
         "You must output STRICT JSON only (no markdown, no commentary)."
     )
 
-    user = (
-        "Task: Segment the full story text into a sequence of coherent narrative segments for later narrative-event annotation.\n\n"
+    similarity_instructions = (
         "You are given: (1) the full story text, (2) initial overlapping chunks and (3) embedding cosine similarities between adjacent chunks. "
         "Lower similarity often suggests a boundary; higher similarity suggests continuity, but you must also use story logic.\n\n"
-        "IMPORTANT constraints:\n"
-        "- Output spans MUST use character indices into the full text (Python-style slicing indices).\n"
-        "- Spans MUST cover the entire text from start=0 to end=text_length with NO gaps and NO overlaps.\n"
-        "- Spans MUST be in increasing order.\n"
+        if include_similarity
+        else "You are given: (1) the full story text and (2) initial overlapping chunks. Use story logic to choose boundaries.\n\n"
+    )
+
+    low_sim_line = (
         "- Choose boundaries near low-similarity points when it makes narrative sense, but do not over-segment.\n"
-        "- Aim for segments that are usable for narrative annotation (typically multi-sentence, coherent action unit).\n\n"
-        "Return STRICT JSON with EXACTLY this schema (top-level key must be 'spans'):\n"
-        "{\n"
-        "  \"spans\": [\n"
-        "    {\"start\": 0, \"end\": 1234},\n"
-        "    ...\n"
-        "  ]\n"
-        "}\n\n"
-        "Do NOT output keys like 'segments', 'events', 'narrative_events', or 'boundaries'. Only output {\"spans\": [...]}\n\n"
-        f"{culture_hint}"
-        "Input signals (JSON):\n"
-        f"{json.dumps(payload, ensure_ascii=False)}\n\n"
-        "Full story text:\n"
-        f"{text}"
+        if include_similarity
+        else ""
+    )
+
+    user = (
+        "Task: Segment the full story text into a sequence of coherent narrative segments for later narrative-event annotation.\n\n"
+        + similarity_instructions
+        + "IMPORTANT constraints:\n"
+        + "- Output spans MUST use character indices into the full text (Python-style slicing indices).\n"
+        + "- Spans MUST cover the entire text from start=0 to end=text_length with NO gaps and NO overlaps.\n"
+        + "- Spans MUST be in increasing order.\n"
+        + low_sim_line
+        + "- Aim for segments that are usable for narrative annotation (typically multi-sentence, coherent action unit).\n\n"
+        + "Return STRICT JSON with EXACTLY this schema (top-level key must be 'spans'):\n"
+        + "{\n"
+        + '  "spans": [\n'
+        + '    {"start": 0, "end": 1234},\n'
+        + "    ...\n"
+        + "  ]\n"
+        + "}\n\n"
+        + "Do NOT output keys like 'segments', 'events', 'narrative_events', or 'boundaries'. Only output {\"spans\": [...]}\n\n"
+        + f"{culture_hint}"
+        + "Input signals (JSON):\n"
+        + f"{json.dumps(payload, ensure_ascii=False)}\n\n"
+        + "Full story text:\n"
+        + f"{text}"
     )
 
     return [
@@ -245,6 +267,7 @@ def auto_segment_to_empty_narratives(
     *,
     text: str,
     culture: Optional[str] = None,
+    mode: Literal["llm_only", "embedding_assisted"] = "embedding_assisted",
     config: NarrativeSegmentationConfig = NarrativeSegmentationConfig(),
 ) -> List[Dict[str, Any]]:
     if not isinstance(text, str) or not text.strip():
@@ -256,9 +279,9 @@ def auto_segment_to_empty_narratives(
         overlap_ratio=config.overlap_ratio,
     )
 
-    # Compute similarities between adjacent chunks via embeddings.
+    # Compute similarities between adjacent chunks via embeddings (optional).
     adjacent_similarities: List[float] = []
-    if len(chunks) >= 2:
+    if mode == "embedding_assisted" and len(chunks) >= 2:
         try:
             embs = embed(
                 base_url=config.ollama.base_url,
@@ -278,6 +301,7 @@ def auto_segment_to_empty_narratives(
         chunks=chunks,
         adjacent_similarities=adjacent_similarities,
         culture=culture,
+        include_similarity=(mode == "embedding_assisted"),
     )
 
     try:

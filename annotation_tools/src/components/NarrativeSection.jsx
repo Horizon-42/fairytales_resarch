@@ -69,6 +69,7 @@ export default function NarrativeSection({
   autoAnnotateEventLoading
 }) {
   const [sortByTimeOrder, setSortByTimeOrder] = React.useState(false);
+  const [autoSegmentMode, setAutoSegmentMode] = React.useState("embedding_assisted");
   // State for annotation mode and additional prompt for each event
   const [eventAnnotationModes, setEventAnnotationModes] = React.useState({});
   const [eventAdditionalPrompts, setEventAdditionalPrompts] = React.useState({});
@@ -365,18 +366,6 @@ export default function NarrativeSection({
       <div className="section-header-row">
         <span>Story Sequence</span>
         <div style={{ display: "flex", gap: "0.5rem" }}>
-          {typeof onAutoSegmentNarratives === "function" && (
-            <button
-              type="button"
-              className="ghost-btn"
-              onClick={() => onAutoSegmentNarratives()}
-              disabled={!!autoSegmentNarrativesLoading}
-              style={{ fontSize: "0.85rem", padding: "0.4rem 0.8rem" }}
-              title="Auto-segment the story into narrative spans"
-            >
-              {autoSegmentNarrativesLoading ? "Sectioning…" : "Automatic sectioning"}
-            </button>
-          )}
           <button
             type="button"
             className="ghost-btn"
@@ -403,8 +392,76 @@ export default function NarrativeSection({
           >
             {sortByTimeOrder ? "✓ By Time Order" : "By Text Position"}
           </button>
+          <button
+            type="button"
+            className="ghost-btn"
+            onClick={() => {
+              setNarrativeStructure([]);
+              if (typeof setHighlightedRanges === "function") setHighlightedRanges({});
+            }}
+            style={{
+              fontSize: "0.85rem",
+              padding: "0.4rem 0.8rem",
+              color: "#ef4444",
+              borderColor: "#ef4444"
+            }}
+            title="Clear all narrative events"
+          >
+            Clear
+          </button>
         </div>
       </div>
+
+      {typeof onAutoSegmentNarratives === "function" && (
+        <div style={{ marginTop: "0.5rem", display: "flex", justifyContent: "flex-end" }}>
+          <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+            <select
+              value={autoSegmentMode}
+              onChange={(e) => setAutoSegmentMode(e.target.value)}
+              disabled={!!autoSegmentNarrativesLoading}
+              style={{
+                padding: "0.4rem 0.5rem",
+                fontSize: "0.85rem",
+                lineHeight: "1.2",
+                border: "1px solid #cbd5e1",
+                borderRadius: "6px",
+                backgroundColor: "white",
+                width: "auto",
+                minWidth: "170px",
+                height: "32px",
+                boxSizing: "border-box",
+                marginBottom: 0
+              }}
+              title="Choose segmentation mode"
+            >
+              <option value="llm_only">LLM only</option>
+              <option value="embedding_assisted">Embedding assisted</option>
+            </select>
+            <button
+              type="button"
+              className="ghost-btn"
+              onClick={() => onAutoSegmentNarratives(autoSegmentMode)}
+              disabled={!!autoSegmentNarrativesLoading}
+              style={{
+                fontSize: "0.85rem",
+                padding: "0.4rem 0.8rem",
+                minWidth: "180px",
+                whiteSpace: "nowrap",
+                height: "32px",
+                boxSizing: "border-box",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                lineHeight: "1.2",
+                marginBottom: 0
+              }}
+              title="Auto-segment the story into narrative spans"
+            >
+              {autoSegmentNarrativesLoading ? "Sectioning…" : "Automatic sectioning"}
+            </button>
+          </div>
+        </div>
+      )}
 
       {items.map((item, idx) => (
         <div key={item.id || idx} className="propp-row">
