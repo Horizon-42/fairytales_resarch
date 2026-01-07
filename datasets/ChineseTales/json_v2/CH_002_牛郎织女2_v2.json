@@ -62,6 +62,23 @@
       "object_type": "prize",
       "instrument": "",
       "time_order": 1,
+      "relationships": [
+        {
+          "agent": "老牛",
+          "target": "老牛",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "parent_child",
+          "sentiment": "romantic"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      },
+      "narrative_function": "",
       "relationship_multi": [
         {
           "agent": "老牛",
@@ -74,11 +91,48 @@
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
-      "narrative_function": "",
       "action_category": "",
       "action_type": "",
       "action_context": "",
       "action_status": ""
+    },
+    {
+      "id": "1435b251-11f1-45ff-88a9-aaab9d9a1e1f",
+      "event_type": "Initial Situation",
+      "description": "rreg",
+      "agents": [
+        "织女",
+        "老牛"
+      ],
+      "targets": [
+        "织女"
+      ],
+      "text_span": {
+        "start": 402,
+        "end": 514,
+        "text": "有一天，老牛忽然口吐人言，告诉他，织女和别的仙女将要到银河去洗澡,叫他趁她们洗澡的时候，夺取织女的衣裳，她就可以成为他的妻子了。惊异的牛郎终于听从了老牛的话，到时候悄悄便到银河岸边的芦牽丛里躲着，等候织女和她的女伴们的来临。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "narrative_function": "trigger",
+      "relationship_multi": [
+        {
+          "agent": "织女",
+          "target": "织女",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "sibling",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "communicative",
+      "action_type": "deceive",
+      "action_context": "feign",
+      "action_status": "success"
     }
   ],
   "themes_and_motifs": {
