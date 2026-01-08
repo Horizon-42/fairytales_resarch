@@ -37,37 +37,66 @@
       "character_archetypes": [
         {
           "name": "牛郎",
-          "alias": "Niu Lang",
+          "alias": "牧牛郎; 爹爹; 牵牛星; 少年",
           "archetype": "Hero"
         },
         {
           "name": "织女",
-          "alias": "Zhi Nu",
+          "alias": "仙女; 姐姐; 织女星; 妻子; 爱妻; 天帝的孙女; 王母娘娘的外孙女",
           "archetype": "Lover"
         },
         {
           "name": "老牛",
-          "alias": "Old Ox",
-          "archetype": "Sidekick/Helper"
+          "alias": "",
+          "archetype": "Mentor"
         },
         {
           "name": "王母娘娘",
-          "alias": "Queen Mother",
+          "alias": "",
           "archetype": "Villain"
         },
         {
           "name": "天帝",
-          "alias": "Jade Emperor",
+          "alias": "",
           "archetype": "Ruler"
+        },
+        {
+          "name": "哥嫂",
+          "alias": "",
+          "archetype": "Shadow"
+        },
+        {
+          "name": "儿女",
+          "alias": "小女儿; 小儿女",
+          "archetype": "Sidekick/Helper"
+        },
+        {
+          "name": "天神",
+          "alias": "",
+          "archetype": "Guardian"
+        },
+        {
+          "name": "喜鹊",
+          "alias": "",
+          "archetype": "Sidekick/Helper"
+        },
+        {
+          "name": "织女的姐妹",
+          "alias": "仙女; 天上的织造能手",
+          "archetype": "Other"
         }
       ],
       "obstacle_pattern": "",
       "obstacle_thrower": [
         "王母娘娘",
-        "天帝"
+        "天帝",
+        "哥嫂",
+        "天神"
       ],
       "helper_type": [
-        "ANIMAL"
+        "ANIMAL",
+        "HUMAN",
+        "OBJECT"
       ],
       "thinking_process": "",
       "atu_evidence": {
