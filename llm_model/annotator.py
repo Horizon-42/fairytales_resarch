@@ -10,15 +10,15 @@ from dataclasses import dataclass
 from typing import Any, Dict, Literal, Optional
 
 from .json_utils import loads_strict_json
-from .ollama_client import OllamaConfig, OllamaError, chat
+from .llm_router import LLMConfig, LLMRouterError, chat
 from .prompts import SYSTEM_PROMPT, build_user_prompt
 
 
 @dataclass(frozen=True)
 class AnnotatorConfig:
-    """Controls model choice and Ollama connection."""
+    """Controls model choice and LLM provider."""
 
-    ollama: OllamaConfig = OllamaConfig()
+    llm: LLMConfig = LLMConfig()
 
 
 class AnnotationError(RuntimeError):
@@ -79,8 +79,8 @@ def annotate_text_v2(
     ]
 
     try:
-        raw = chat(config=config.ollama, messages=messages, response_format_json=True)
-    except OllamaError as exc:
+        raw = chat(config=config.llm, messages=messages, response_format_json=True)
+    except LLMRouterError as exc:
         raise AnnotationError(str(exc)) from exc
 
     data = loads_strict_json(raw)

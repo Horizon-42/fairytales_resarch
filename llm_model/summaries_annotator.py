@@ -16,12 +16,12 @@ from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 from .json_utils import loads_strict_json
-from .ollama_client import OllamaConfig, OllamaError, chat
+from .llm_router import LLMConfig, LLMRouterError, chat
 
 
 @dataclass(frozen=True)
 class SummariesAnnotatorConfig:
-    ollama: OllamaConfig = OllamaConfig()
+    llm: LLMConfig = LLMConfig()
 
     # Keep requests small-ish to reduce context overflows.
     max_paragraphs_per_batch: int = 20
@@ -190,8 +190,8 @@ def annotate_summaries(
         ]
 
         try:
-            raw = chat(config=config.ollama, messages=messages, response_format_json=True, timeout_s=600.0)
-        except OllamaError as exc:
+            raw = chat(config=config.llm, messages=messages, response_format_json=True, timeout_s=600.0)
+        except LLMRouterError as exc:
             raise SummariesAnnotationError(str(exc)) from exc
 
         data = loads_strict_json(raw)
@@ -244,8 +244,8 @@ def annotate_summaries(
     ]
 
     try:
-        raw_whole = chat(config=config.ollama, messages=messages_whole, response_format_json=True, timeout_s=600.0)
-    except OllamaError as exc:
+        raw_whole = chat(config=config.llm, messages=messages_whole, response_format_json=True, timeout_s=600.0)
+    except LLMRouterError as exc:
         raise SummariesAnnotationError(str(exc)) from exc
 
     data_whole = loads_strict_json(raw_whole)
@@ -284,8 +284,8 @@ def annotate_single_paragraph_summary(
     ]
 
     try:
-        raw = chat(config=config.ollama, messages=messages, response_format_json=True, timeout_s=600.0)
-    except OllamaError as exc:
+        raw = chat(config=config.llm, messages=messages, response_format_json=True, timeout_s=600.0)
+    except LLMRouterError as exc:
         raise SummariesAnnotationError(str(exc)) from exc
 
     data = loads_strict_json(raw)
@@ -342,8 +342,8 @@ def annotate_whole_summary_from_per_paragraph(
     ]
 
     try:
-        raw_whole = chat(config=config.ollama, messages=messages_whole, response_format_json=True, timeout_s=600.0)
-    except OllamaError as exc:
+        raw_whole = chat(config=config.llm, messages=messages_whole, response_format_json=True, timeout_s=600.0)
+    except LLMRouterError as exc:
         raise SummariesAnnotationError(str(exc)) from exc
 
     data_whole = loads_strict_json(raw_whole)

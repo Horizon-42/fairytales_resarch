@@ -47,13 +47,24 @@ Universal Narrative Action Taxonomy/Universal_Narrative_Action_Taxonomy.md
 papers/story_ribbons.pdf
 
 ## Backend Service
-This backend enable you use qwen3 8b to help you annotate.
+This backend supports local Ollama (e.g., qwen3) and Google Gemini for annotation.
 ### Setup
 ./backend/start.sh setup
 ### Run
 OLLAMA_MODEL=qwen3:8b OLLAMA_EMBEDDING_MODEL=qwen3-embedding:4b ./backend/start.sh
 
+To use Gemini, create a repo-root `.env` (copy from `.env.example`) and set:
+- `LLM_PROVIDER=gemini`
+- `GEMINI_API_KEY=...`
+- `GEMINI_MODEL=...`
+- (optional) `GEMINI_MODEL_THINKING=...` and `LLM_THINKING=1`
+
 Environment variables:
+- `LLM_PROVIDER` (default: `ollama`, values: `ollama` or `gemini`)
+- `LLM_THINKING` (default: `0`)
+- `GEMINI_API_KEY` (required when `LLM_PROVIDER=gemini`)
+- `GEMINI_MODEL` (required when `LLM_PROVIDER=gemini`)
+- `GEMINI_MODEL_THINKING` (optional, used when `LLM_THINKING=1`)
 - `OLLAMA_BASE_URL` (default: `http://127.0.0.1:11434`)
 - `OLLAMA_MODEL` (default: `qwen3:8b`)
 - `OLLAMA_EMBEDDING_MODEL` (default: `qwen3-embedding:4b`)

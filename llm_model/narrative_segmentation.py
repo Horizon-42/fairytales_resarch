@@ -26,7 +26,8 @@ from dataclasses import dataclass
 from typing import Any, Dict, List, Literal, Optional, Sequence, Tuple
 
 from .json_utils import loads_strict_json
-from .ollama_client import OllamaConfig, OllamaError, chat, embed
+from .llm_router import LLMConfig, LLMRouterError, chat
+from .ollama_client import OllamaError, embed
 
 
 class NarrativeSegmentationError(RuntimeError):
@@ -35,7 +36,7 @@ class NarrativeSegmentationError(RuntimeError):
 
 @dataclass(frozen=True)
 class NarrativeSegmentationConfig:
-    ollama: OllamaConfig = OllamaConfig()
+    llm: LLMConfig = LLMConfig()
 
     # Embedding model used for chunk similarity.
     embedding_model: str = "qwen3-embedding:4b"
@@ -284,7 +285,7 @@ def auto_segment_to_empty_narratives(
     if mode == "embedding_assisted" and len(chunks) >= 2:
         try:
             embs = embed(
-                base_url=config.ollama.base_url,
+                base_url=config.llm.ollama.base_url,
                 model=config.embedding_model,
                 inputs=[c.get("text") or "" for c in chunks],
                 timeout_s=600.0,
@@ -305,8 +306,8 @@ def auto_segment_to_empty_narratives(
     )
 
     try:
-        raw = chat(config=config.ollama, messages=messages, response_format_json=True, timeout_s=600.0)
-    except OllamaError as exc:
+        raw = chat(config=config.llm, messages=messages, response_format_json=True, timeout_s=600.0)
+    except LLMRouterError as exc:
         raise NarrativeSegmentationError(str(exc)) from exc
 
     data = loads_strict_json(raw)

@@ -1,4 +1,4 @@
-"""FastAPI server that exposes Ollama-powered auto-annotation endpoints.
+"""FastAPI server that exposes auto-annotation endpoints.
 
 This server is intentionally small:
 - `llm_model/` contains all model/prompt/parsing logic.
@@ -19,12 +19,17 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
+from llm_model.env import load_repo_dotenv
+
 from llm_model.annotator import AnnotatorConfig, AnnotationError, annotate_text_v2
 from llm_model.character_annotator import (
     CharacterAnnotationError,
     CharacterAnnotatorConfig,
     annotate_characters,
 )
+from llm_model.env import load_repo_dotenv
+from llm_model.gemini_client import GeminiConfig
+from llm_model.llm_router import LLMConfig
 from llm_model.narrative_annotator import (
     NarrativeAnnotationError,
     NarrativeAnnotatorConfig,
@@ -47,7 +52,14 @@ from llm_model.vector_database import FairyVectorDB, VectorDBPaths
 from llm_model.vector_database.db import QueryConfig, VectorDBNotBuiltError
 
 
+# Load repo-root .env early (so running uvicorn directly still works).
+load_repo_dotenv()
+
+
 logger = logging.getLogger("fairytales.backend")
+
+# Load repo-root .env if present (for GEMINI_API_KEY etc.)
+load_repo_dotenv()
 
 
 _VECTOR_DB: Optional[FairyVectorDB] = None
@@ -147,6 +159,52 @@ def _env(name: str, default: str) -> str:
     return value if value is not None and value != "" else default
 
 
+def _env_bool(name: str, default: bool) -> bool:
+    raw = _env(name, "1" if default else "0").strip().lower()
+    return raw in ("1", "true", "yes", "y", "on")
+
+
+def _env_int(name: str, default: int) -> int:
+    raw = _env(name, str(default)).strip()
+    try:
+        return int(raw)
+    except ValueError:
+        return int(default)
+
+
+def _env_float(name: str, default: float) -> float:
+    raw = _env(name, str(default)).strip()
+    try:
+        return float(raw)
+    except ValueError:
+        return float(default)
+
+
+def _build_llm_config(*, provider: Optional[str], model: Optional[str], thinking: Optional[bool]) -> LLMConfig:
+    provider_final = (provider or _env("LLM_PROVIDER", "ollama")).strip().lower()
+    thinking_final = bool(thinking) if thinking is not None else _env_bool("LLM_THINKING", False)
+
+    base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
+
+    # Per-request `model` is interpreted as the active provider's model.
+    ollama_model = model if provider_final != "gemini" and model else _env("OLLAMA_MODEL", "qwen3:8b")
+    gemini_model = model if provider_final == "gemini" and model else _env("GEMINI_MODEL", "")
+
+    return LLMConfig(
+        provider=provider_final,  # normalized inside llm_router
+        thinking=thinking_final,
+        ollama=OllamaConfig(base_url=base_url, model=ollama_model),
+        gemini=GeminiConfig(
+            api_key=_env("GEMINI_API_KEY", ""),
+            model=gemini_model,
+            model_thinking=_env("GEMINI_MODEL_THINKING", ""),
+            temperature=_env_float("GEMINI_TEMPERATURE", 0.2),
+            top_p=_env_float("GEMINI_TOP_P", 0.9),
+            max_output_tokens=_env_int("GEMINI_MAX_OUTPUT_TOKENS", 8192),
+        ),
+    )
+
+
 class AnnotateRequest(BaseModel):
     """Request payload from the frontend."""
 
@@ -157,7 +215,9 @@ class AnnotateRequest(BaseModel):
     source_type: str = Field("story", description="story/summary/other")
 
     # Generation controls (optional)
-    model: Optional[str] = Field(None, description="Override Ollama model name")
+    provider: Optional[str] = Field(None, description="LLM provider override: ollama or gemini")
+    thinking: Optional[bool] = Field(None, description="Enable thinking mode (Gemini uses GEMINI_MODEL_THINKING)")
+    model: Optional[str] = Field(None, description="Override model name (provider-specific)")
     
     # Incremental annotation (optional)
     existing_annotation: Optional[Dict[str, Any]] = Field(
@@ -184,7 +244,9 @@ class CharacterAnnotateRequest(BaseModel):
     text: str = Field(..., description="Raw story/summary text")
     culture: Optional[str] = Field(None, description="Optional culture hint (e.g., Persian)")
     # Generation controls (optional)
-    model: Optional[str] = Field(None, description="Override Ollama model name")
+    provider: Optional[str] = Field(None, description="LLM provider override: ollama or gemini")
+    thinking: Optional[bool] = Field(None, description="Enable thinking mode (Gemini uses GEMINI_MODEL_THINKING)")
+    model: Optional[str] = Field(None, description="Override model name (provider-specific)")
     
     # Incremental annotation (optional)
     existing_characters: Optional[Dict[str, Any]] = Field(
@@ -216,6 +278,8 @@ class NarrativeAnnotateRequest(BaseModel):
     mode: str = "recreate"
     additional_prompt: Optional[str] = None
     # Generation controls
+    provider: Optional[str] = None
+    thinking: Optional[bool] = None
     model: Optional[str] = None
 
 
@@ -233,7 +297,9 @@ class NarrativeAutoSegmentRequest(BaseModel):
         "embedding_assisted",
         description="Segmentation mode: llm_only (no embeddings) or embedding_assisted (use adjacent similarity hints)",
     )
-    model: Optional[str] = Field(None, description="Override LLM model for segmentation")
+    provider: Optional[str] = Field(None, description="LLM provider override: ollama or gemini")
+    thinking: Optional[bool] = Field(None, description="Enable thinking mode (Gemini uses GEMINI_MODEL_THINKING)")
+    model: Optional[str] = Field(None, description="Override LLM model for segmentation (provider-specific)")
     embedding_model: Optional[str] = Field(None, description="Override embedding model (Ollama)")
 
 
@@ -248,7 +314,9 @@ class SummariesAnnotateRequest(BaseModel):
     text: str = Field(..., description="Raw story text")
     language: str = Field("en", description="en/zh/fa/ja/other")
     # Generation controls
-    model: Optional[str] = Field(None, description="Override Ollama model name")
+    provider: Optional[str] = Field(None, description="LLM provider override: ollama or gemini")
+    thinking: Optional[bool] = Field(None, description="Enable thinking mode (Gemini uses GEMINI_MODEL_THINKING)")
+    model: Optional[str] = Field(None, description="Override model name (provider-specific)")
 
 
 class SummariesAnnotateResponse(BaseModel):
@@ -261,7 +329,9 @@ class SummaryParagraphRequest(BaseModel):
     index: int = Field(..., ge=0, description="Paragraph index")
     paragraph: str = Field(..., description="Paragraph text")
     language: str = Field("en", description="en/zh/fa/ja/other")
-    model: Optional[str] = Field(None, description="Override Ollama model name")
+    provider: Optional[str] = Field(None, description="LLM provider override: ollama or gemini")
+    thinking: Optional[bool] = Field(None, description="Enable thinking mode (Gemini uses GEMINI_MODEL_THINKING)")
+    model: Optional[str] = Field(None, description="Override model name (provider-specific)")
 
 
 class SummaryParagraphResponse(BaseModel):
@@ -278,7 +348,9 @@ class SummaryWholeRequest(BaseModel):
         None, description="Map of text_section to summary (preferred)"
     )
     language: str = Field("en", description="en/zh/fa/ja/other")
-    model: Optional[str] = Field(None, description="Override Ollama model name")
+    provider: Optional[str] = Field(None, description="LLM provider override: ollama or gemini")
+    thinking: Optional[bool] = Field(None, description="Enable thinking mode (Gemini uses GEMINI_MODEL_THINKING)")
+    model: Optional[str] = Field(None, description="Override model name (provider-specific)")
 
 
 class SummaryWholeResponse(BaseModel):
@@ -308,16 +380,93 @@ class MotifAtuDetectResponse(BaseModel):
 app = FastAPI(title="Fairytales Auto-Annotation API", version="0.1.0")
 
 
+class GeminiModelItem(BaseModel):
+    id: str
+    name: str
+    display_name: str = ""
+    description: str = ""
+    supported_generation_methods: List[str] = []
+
+
+class GeminiModelsResponse(BaseModel):
+    ok: bool
+    models: List[GeminiModelItem]
+
+
+@app.get("/api/gemini/models", response_model=GeminiModelsResponse)
+def gemini_models() -> GeminiModelsResponse:
+    """List Gemini models available to the configured API key.
+
+    This is proxied via backend to avoid exposing GEMINI_API_KEY in the browser.
+    """
+
+    api_key = _env("GEMINI_API_KEY", "")
+    if not api_key:
+        raise HTTPException(status_code=400, detail="GEMINI_API_KEY is not configured")
+
+    from llm_model.gemini_client import GeminiError, list_models
+
+    try:
+        raw_models = list_models(api_key=api_key, timeout_s=10.0)
+    except GeminiError as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+    out: List[GeminiModelItem] = []
+    for m in raw_models:
+        name = str(m.get("name", "") or "").strip()
+        if not name:
+            continue
+        model_id = name
+        if model_id.startswith("models/"):
+            model_id = model_id[len("models/") :]
+
+        methods = m.get("supportedGenerationMethods")
+        if not isinstance(methods, list):
+            methods = []
+        methods = [str(x) for x in methods if str(x)]
+
+        # Only show models that can generate content.
+        if "generateContent" not in methods:
+            continue
+
+        out.append(
+            GeminiModelItem(
+                id=model_id,
+                name=name,
+                display_name=str(m.get("displayName", "") or ""),
+                description=str(m.get("description", "") or ""),
+                supported_generation_methods=methods,
+            )
+        )
+
+    out.sort(key=lambda x: x.id)
+    return GeminiModelsResponse(ok=True, models=out)
+
+
 @app.on_event("startup")
 def _on_startup() -> None:
     # Uvicorn configures logging; this will show up in the server output.
+    provider = _env("LLM_PROVIDER", "ollama")
+    thinking = _env_bool("LLM_THINKING", False)
+
     base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
     model = _env("OLLAMA_MODEL", "qwen3:8b")
     embedding_model = _env("OLLAMA_EMBEDDING_MODEL", "qwen3-embedding:4b")
+    gemini_model = _env("GEMINI_MODEL", "")
+    gemini_model_thinking = _env("GEMINI_MODEL_THINKING", "")
+
     logger.info("Backend starting")
+    logger.info("LLM: provider=%s thinking=%s", provider, thinking)
     logger.info(
         "Ollama: base_url=%s model=%s embedding_model=%s", base_url, model, embedding_model
     )
+    if gemini_model or gemini_model_thinking:
+        logger.info(
+            "Gemini: model=%s model_thinking=%s (api_key=%s)",
+            gemini_model,
+            gemini_model_thinking,
+            "set" if bool(_env("GEMINI_API_KEY", "")) else "missing",
+        )
 
     models = _refresh_ollama_models()
     if models is not None:
@@ -361,14 +510,7 @@ def health() -> Dict[str, str]:
 def annotate_v2(req: AnnotateRequest) -> AnnotateResponse:
     """Generate a v2 JSON annotation from raw text."""
 
-    # Build model config from environment with optional per-request override.
-    base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
-    default_model = _env("OLLAMA_MODEL", "qwen3:8b")
-
-    ollama_cfg = OllamaConfig(
-        base_url=base_url,
-        model=req.model or default_model,
-    )
+    llm_cfg = _build_llm_config(provider=req.provider, model=req.model, thinking=req.thinking)
 
     try:
         annotation = annotate_text_v2(
@@ -379,7 +521,7 @@ def annotate_v2(req: AnnotateRequest) -> AnnotateResponse:
             source_type=req.source_type,
             existing_annotation=req.existing_annotation,
             mode=req.mode,  # type: ignore
-            config=AnnotatorConfig(ollama=ollama_cfg),
+            config=AnnotatorConfig(llm=llm_cfg),
         )
     except AnnotationError as exc:
         # Return a clean 502 for "model upstream" errors.
@@ -398,13 +540,7 @@ def annotate_characters_endpoint(req: CharacterAnnotateRequest) -> CharacterAnno
     - obstacle_thrower: [string]
     """
 
-    base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
-    default_model = _env("OLLAMA_MODEL", "qwen3:8b")
-
-    ollama_cfg = OllamaConfig(
-        base_url=base_url,
-        model=req.model or default_model,
-    )
+    llm_cfg = _build_llm_config(provider=req.provider, model=req.model, thinking=req.thinking)
 
     try:
         result = annotate_characters(
@@ -413,7 +549,7 @@ def annotate_characters_endpoint(req: CharacterAnnotateRequest) -> CharacterAnno
             existing_characters=req.existing_characters,
             mode=req.mode,  # type: ignore
             additional_prompt=req.additional_prompt,
-            config=CharacterAnnotatorConfig(ollama=ollama_cfg),
+            config=CharacterAnnotatorConfig(llm=llm_cfg),
         )
     except CharacterAnnotationError as exc:
         raise HTTPException(status_code=502, detail=str(exc)) from exc
@@ -426,13 +562,7 @@ def annotate_characters_endpoint(req: CharacterAnnotateRequest) -> CharacterAnno
 def annotate_narrative_endpoint(req: NarrativeAnnotateRequest) -> NarrativeAnnotateResponse:
     """Extract or refine a single narrative event."""
 
-    base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
-    default_model = _env("OLLAMA_MODEL", "qwen3:8b")
-
-    ollama_cfg = OllamaConfig(
-        base_url=base_url,
-        model=req.model or default_model,
-    )
+    llm_cfg = _build_llm_config(provider=req.provider, model=req.model, thinking=req.thinking)
 
     try:
         result = annotate_narrative_event(
@@ -445,7 +575,7 @@ def annotate_narrative_endpoint(req: NarrativeAnnotateRequest) -> NarrativeAnnot
             history_events=req.history_events,
             mode=req.mode,  # type: ignore
             additional_prompt=req.additional_prompt,
-            config=NarrativeAnnotatorConfig(ollama=ollama_cfg),
+            config=NarrativeAnnotatorConfig(llm=llm_cfg),
         )
     except NarrativeAnnotationError as exc:
         raise HTTPException(status_code=502, detail=str(exc)) from exc
@@ -460,8 +590,6 @@ def auto_segment_narrative_endpoint(req: NarrativeAutoSegmentRequest) -> Narrati
     if not isinstance(req.text, str) or not req.text.strip():
         raise HTTPException(status_code=400, detail="`text` must be a non-empty string")
 
-    base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
-    default_model = _env("OLLAMA_MODEL", "qwen3:8b")
     default_embedding_model = _env("OLLAMA_EMBEDDING_MODEL", "qwen3-embedding:4b")
 
     # Fail fast when embeddings are required.
@@ -471,11 +599,10 @@ def auto_segment_narrative_endpoint(req: NarrativeAutoSegmentRequest) -> Narrati
             purpose="embedding-assisted narrative segmentation",
         )
 
+    llm_cfg = _build_llm_config(provider=req.provider, model=req.model, thinking=req.thinking)
+
     seg_cfg = NarrativeSegmentationConfig(
-        ollama=OllamaConfig(
-            base_url=base_url,
-            model=req.model or default_model,
-        ),
+        llm=llm_cfg,
         embedding_model=req.embedding_model or default_embedding_model,
     )
 
@@ -496,19 +623,13 @@ def auto_segment_narrative_endpoint(req: NarrativeAutoSegmentRequest) -> Narrati
 def annotate_summaries_endpoint(req: SummariesAnnotateRequest) -> SummariesAnnotateResponse:
     """Generate per-paragraph summaries + whole-story summary for the Summaries tab."""
 
-    base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
-    default_model = _env("OLLAMA_MODEL", "qwen3:8b")
-
-    ollama_cfg = OllamaConfig(
-        base_url=base_url,
-        model=req.model or default_model,
-    )
+    llm_cfg = _build_llm_config(provider=req.provider, model=req.model, thinking=req.thinking)
 
     try:
         result = annotate_summaries(
             text=req.text,
             language=req.language,
-            config=SummariesAnnotatorConfig(ollama=ollama_cfg),
+            config=SummariesAnnotatorConfig(llm=llm_cfg),
         )
     except SummariesAnnotationError as exc:
         raise HTTPException(status_code=502, detail=str(exc)) from exc
@@ -524,20 +645,14 @@ def annotate_summaries_endpoint(req: SummariesAnnotateRequest) -> SummariesAnnot
 def annotate_summary_paragraph_endpoint(req: SummaryParagraphRequest) -> SummaryParagraphResponse:
     """Generate a summary for one paragraph (used for incremental UI updates)."""
 
-    base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
-    default_model = _env("OLLAMA_MODEL", "qwen3:8b")
-
-    ollama_cfg = OllamaConfig(
-        base_url=base_url,
-        model=req.model or default_model,
-    )
+    llm_cfg = _build_llm_config(provider=req.provider, model=req.model, thinking=req.thinking)
 
     try:
         text = annotate_single_paragraph_summary(
             index=req.index,
             paragraph=req.paragraph,
             language=req.language,
-            config=SummariesAnnotatorConfig(ollama=ollama_cfg),
+            config=SummariesAnnotatorConfig(llm=llm_cfg),
         )
     except SummariesAnnotationError as exc:
         raise HTTPException(status_code=502, detail=str(exc)) from exc
@@ -549,20 +664,14 @@ def annotate_summary_paragraph_endpoint(req: SummaryParagraphRequest) -> Summary
 def annotate_summary_whole_endpoint(req: SummaryWholeRequest) -> SummaryWholeResponse:
     """Generate a whole-story summary from per-paragraph summaries."""
 
-    base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
-    default_model = _env("OLLAMA_MODEL", "qwen3:8b")
-
-    ollama_cfg = OllamaConfig(
-        base_url=base_url,
-        model=req.model or default_model,
-    )
+    llm_cfg = _build_llm_config(provider=req.provider, model=req.model, thinking=req.thinking)
 
     try:
         per = req.per_section or req.per_paragraph or {}
         whole = annotate_whole_summary_from_per_paragraph(
             per_paragraph=per,
             language=req.language,
-            config=SummariesAnnotatorConfig(ollama=ollama_cfg),
+            config=SummariesAnnotatorConfig(llm=llm_cfg),
         )
     except SummariesAnnotationError as exc:
         raise HTTPException(status_code=502, detail=str(exc)) from exc

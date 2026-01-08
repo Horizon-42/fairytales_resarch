@@ -16,14 +16,14 @@ from typing import Any, Dict, List, Literal, Optional
 
 from .character_prompts import SYSTEM_PROMPT_CHARACTERS, build_character_user_prompt
 from .json_utils import loads_strict_json
-from .ollama_client import OllamaConfig, OllamaError, chat
+from .llm_router import LLMConfig, LLMRouterError, chat
 
 
 @dataclass(frozen=True)
 class CharacterAnnotatorConfig:
-    """Controls model choice and Ollama connection."""
+    """Controls model choice and LLM provider."""
 
-    ollama: OllamaConfig = OllamaConfig()
+    llm: LLMConfig = LLMConfig()
 
 
 class CharacterAnnotationError(RuntimeError):
@@ -82,8 +82,8 @@ def annotate_characters(
     ]
 
     try:
-        raw = chat(config=config.ollama, messages=messages, response_format_json=True)
-    except OllamaError as exc:
+        raw = chat(config=config.llm, messages=messages, response_format_json=True)
+    except LLMRouterError as exc:
         raise CharacterAnnotationError(str(exc)) from exc
 
     data = loads_strict_json(raw)

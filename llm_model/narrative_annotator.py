@@ -16,14 +16,14 @@ from typing import Any, Dict, List, Literal, Optional
 
 from .json_utils import loads_strict_json
 from .narrative_prompts import SYSTEM_PROMPT_NARRATIVE, build_narrative_user_prompt
-from .ollama_client import OllamaConfig, OllamaError, chat
+from .llm_router import LLMConfig, LLMRouterError, chat
 
 
 @dataclass(frozen=True)
 class NarrativeAnnotatorConfig:
-    """Controls model choice and Ollama connection."""
+    """Controls model choice and LLM provider."""
 
-    ollama: OllamaConfig = OllamaConfig()
+    llm: LLMConfig = LLMConfig()
 
 
 class NarrativeAnnotationError(RuntimeError):
@@ -88,8 +88,8 @@ def annotate_narrative_event(
     ]
 
     try:
-        raw = chat(config=config.ollama, messages=messages, response_format_json=True)
-    except OllamaError as exc:
+        raw = chat(config=config.llm, messages=messages, response_format_json=True)
+    except LLMRouterError as exc:
         raise NarrativeAnnotationError(str(exc)) from exc
 
     data = loads_strict_json(raw)

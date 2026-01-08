@@ -1,0 +1,82 @@
+"""Unified LLM routing layer.
+
+The rest of the repo was originally Ollama-only.
+This module makes it possible to switch between:
+- local Ollama (e.g., Qwen3 via `ollama`)
+- Google Gemini (cloud)
+
+without changing prompt-building logic.
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+from typing import Dict, List, Literal
+
+from .gemini_client import GeminiConfig, GeminiError
+from .ollama_client import OllamaConfig, OllamaError
+
+
+LLMProvider = Literal["ollama", "gemini"]
+
+
+class LLMRouterError(RuntimeError):
+    pass
+
+
+def _normalize_provider(provider: str) -> LLMProvider:
+    p = (provider or "").strip().lower()
+    # Allow a few aliases to make switching ergonomic.
+    if p in ("ollama", "qwen", "qwen3", "local"):
+        return "ollama"
+    if p in ("gemini", "gemini3", "google"):
+        return "gemini"
+    raise LLMRouterError(f"Unknown provider: {provider!r} (use 'ollama' or 'gemini')")
+
+
+@dataclass(frozen=True)
+class LLMConfig:
+    provider: LLMProvider = "ollama"
+    thinking: bool = False
+
+    ollama: OllamaConfig = OllamaConfig()
+    gemini: GeminiConfig = GeminiConfig()
+
+
+def chat(
+    *,
+    config: LLMConfig,
+    messages: List[Dict[str, str]],
+    response_format_json: bool = True,
+    timeout_s: float = 300.0,
+) -> str:
+    """Chat with the configured provider and return assistant text."""
+
+    provider = _normalize_provider(config.provider)
+
+    if provider == "ollama":
+        from .ollama_client import chat as ollama_chat
+
+        try:
+            return ollama_chat(
+                config=config.ollama,
+                messages=messages,
+                response_format_json=response_format_json,
+                timeout_s=timeout_s,
+            )
+        except OllamaError as exc:
+            raise LLMRouterError(str(exc)) from exc
+
+    # provider == "gemini"
+    from .gemini_client import chat as gemini_chat
+
+    try:
+        return gemini_chat(
+            config=config.gemini,
+            messages=messages,
+            response_format_json=response_format_json,
+            timeout_s=timeout_s,
+            thinking=bool(config.thinking),
+        )
+    except GeminiError as exc:
+        raise LLMRouterError(str(exc)) from exc

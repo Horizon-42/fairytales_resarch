@@ -130,6 +130,57 @@ export default function App() {
   // Context menu state
   const [contextMenu, setContextMenu] = useState({ visible: false, x: 0, y: 0 });
 
+  // LLM routing (sent to backend per request)
+  const [llmProvider, setLlmProvider] = useState("ollama");
+  const [llmThinking, setLlmThinking] = useState(false);
+  const [ollamaModel, setOllamaModel] = useState("qwen3:8b");
+  const [geminiModel, setGeminiModel] = useState("");
+  const [geminiModels, setGeminiModels] = useState([]);
+  const [geminiModelsLoading, setGeminiModelsLoading] = useState(false);
+  const [geminiModelsError, setGeminiModelsError] = useState("");
+
+  const currentLlmModel = llmProvider === "gemini" ? geminiModel : ollamaModel;
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const loadGeminiModels = async () => {
+      if (llmProvider !== "gemini") return;
+      setGeminiModelsLoading(true);
+      setGeminiModelsError("");
+      try {
+        const backendUrl = await getBackendUrl();
+        const resp = await fetch(`${backendUrl}/api/gemini/models`, {
+          method: "GET",
+          headers: { "Content-Type": "application/json" }
+        });
+        const data = await resp.json().catch(() => null);
+        if (!resp.ok || !data?.ok) {
+          const msg = (data && (data.detail || data.error)) ? (data.detail || data.error) : `HTTP ${resp.status}`;
+          throw new Error(msg);
+        }
+        const items = Array.isArray(data.models) ? data.models : [];
+        if (!cancelled) {
+          setGeminiModels(items);
+          // If current selection is empty, pick the first available model.
+          if (!geminiModel && items[0]?.id) {
+            setGeminiModel(items[0].id);
+          }
+        }
+      } catch (err) {
+        if (!cancelled) {
+          setGeminiModels([]);
+          setGeminiModelsError(err?.message || String(err));
+        }
+      } finally {
+        if (!cancelled) setGeminiModelsLoading(false);
+      }
+    };
+
+    loadGeminiModels();
+    return () => { cancelled = true; };
+  }, [llmProvider]);
+
   const handleAutoAnnotateCharacters = async (mode = "recreate", additionalPrompt = "") => {
     if (autoAnnotateCharactersLoading) return;
     if (!sourceText?.text || !sourceText.text.trim()) {
@@ -154,6 +205,9 @@ export default function App() {
         body: JSON.stringify({
           text: sourceText.text,
           culture,
+          provider: llmProvider,
+          thinking: llmThinking,
+          model: currentLlmModel || null,
           existing_characters: existingCharacters,
           mode: mode,
           additional_prompt: additionalPrompt || null
@@ -209,6 +263,9 @@ export default function App() {
           narrative_text: sourceText.text,
           character_list: characterList,
           culture: culture,
+          provider: llmProvider,
+          thinking: llmThinking,
+          model: currentLlmModel || null,
           existing_event: mode !== "recreate" ? currentEvent : null,
           history_events: historyEvents.length > 0 ? historyEvents : null,
           mode: mode,
@@ -261,6 +318,9 @@ export default function App() {
         body: JSON.stringify({
           text: sourceText.text,
           culture: culture,
+          provider: llmProvider,
+          thinking: llmThinking,
+          model: currentLlmModel || null,
           mode: mode
         })
       });
@@ -322,7 +382,9 @@ export default function App() {
             index: i,
             paragraph: sectionText,
             language: lang,
-            model: "qwen3:8b"
+            provider: llmProvider,
+            thinking: llmThinking,
+            model: currentLlmModel || null
           })
         });
 
@@ -348,7 +410,9 @@ export default function App() {
         body: JSON.stringify({
           per_section: perSectionLocal,
           language: lang,
-          model: "qwen3:8b"
+          provider: llmProvider,
+          thinking: llmThinking,
+          model: currentLlmModel || null
         })
       });
 
@@ -1906,6 +1970,61 @@ export default function App() {
           >
             {showPreview ? "Hide JSON" : "Show JSON"}
           </button>
+
+          <div className="save-hint">
+            <span className="save-hint-label">LLM:</span>
+            <select
+              className="save-hint-input"
+              style={{ width: "160px" }}
+              value={llmProvider}
+              onChange={(e) => setLlmProvider(e.target.value)}
+              title="Choose LLM provider"
+            >
+              <option value="ollama">Ollama (local)</option>
+              <option value="gemini">Gemini</option>
+            </select>
+
+            {llmProvider === "gemini" ? (
+              <select
+                className="save-hint-input"
+                style={{ width: "240px" }}
+                value={geminiModel}
+                onChange={(e) => setGeminiModel(e.target.value)}
+                title={geminiModelsError ? `Gemini models load failed: ${geminiModelsError}` : "Gemini model (loaded from backend)"}
+                disabled={geminiModelsLoading || geminiModels.length === 0}
+              >
+                {geminiModelsLoading ? (
+                  <option value="">Loading Gemini models…</option>
+                ) : geminiModels.length === 0 ? (
+                  <option value="">No models (check GEMINI_API_KEY)</option>
+                ) : (
+                  geminiModels.map((m) => (
+                    <option key={m.id} value={m.id}>
+                      {m.display_name ? `${m.display_name} (${m.id})` : m.id}
+                    </option>
+                  ))
+                )}
+              </select>
+            ) : (
+              <input
+                className="save-hint-input"
+                style={{ width: "240px" }}
+                value={ollamaModel}
+                onChange={(e) => setOllamaModel(e.target.value)}
+                placeholder="Ollama model (e.g. qwen3:8b)"
+                title="Ollama model name"
+              />
+            )}
+
+            <label style={{ display: "flex", alignItems: "center", gap: "0.25rem", fontSize: "0.75rem", color: "#64748b" }}>
+              <input
+                type="checkbox"
+                checked={llmThinking}
+                onChange={(e) => setLlmThinking(e.target.checked)}
+              />
+              thinking
+            </label>
+          </div>
           <div className="save-hint">
             <span className="save-hint-label">Intended JSON path:</span>
             <input

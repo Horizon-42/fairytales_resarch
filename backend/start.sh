@@ -11,6 +11,14 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
+# Optional: load repo-root .env (for GEMINI_API_KEY etc.)
+if [ -f "${ROOT_DIR}/.env" ]; then
+  set -a
+  # shellcheck disable=SC1091
+  source "${ROOT_DIR}/.env"
+  set +a
+fi
+
 ENV_NAME="${ENV_NAME:-nlp}"
 HOST="${HOST:-127.0.0.1}"
 PORT="${PORT:-8000}"
@@ -38,6 +46,14 @@ Environment variables:
   PORT             Bind port (default: 8000)
   LOG_LEVEL        Uvicorn log level (default: info)
   RELOAD           1 to enable --reload (default: 0)
+
+  LLM_PROVIDER      LLM provider: ollama or gemini (default: ollama)
+  LLM_THINKING      1 to enable thinking mode (default: 0)
+
+  GEMINI_API_KEY    Gemini API key (recommended via repo-root .env)
+  GEMINI_MODEL      Gemini model name (provider-specific)
+  GEMINI_MODEL_THINKING  Gemini thinking model name
+
   OLLAMA_BASE_URL  Ollama URL (default: http://127.0.0.1:11434)
   OLLAMA_MODEL     Ollama model name (default: qwen3:8b)
   OLLAMA_EMBEDDING_MODEL  Ollama embedding model (default: qwen3-embedding:4b)
@@ -62,6 +78,8 @@ check_env() {
   cd "${ROOT_DIR}"
   echo "[check] ENV_NAME=${ENV_NAME}"
   echo "[check] HOST=${HOST} PORT=${PORT} LOG_LEVEL=${LOG_LEVEL} RELOAD=${RELOAD}"
+  echo "[check] LLM_PROVIDER=${LLM_PROVIDER:-ollama} LLM_THINKING=${LLM_THINKING:-0}"
+  echo "[check] GEMINI_MODEL=${GEMINI_MODEL:-} GEMINI_MODEL_THINKING=${GEMINI_MODEL_THINKING:-} GEMINI_API_KEY=$([ -n "${GEMINI_API_KEY:-}" ] && echo set || echo missing)"
   echo "[check] OLLAMA_BASE_URL=${OLLAMA_BASE_URL}"
   echo "[check] OLLAMA_MODEL=${OLLAMA_MODEL}"
   echo "[check] OLLAMA_EMBEDDING_MODEL=${OLLAMA_EMBEDDING_MODEL}"

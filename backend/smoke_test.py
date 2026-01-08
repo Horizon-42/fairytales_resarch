@@ -25,9 +25,19 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Smoke test for the auto-annotation backend.")
     parser.add_argument("--api-base", default="http://127.0.0.1:8000", help="Backend base URL")
     parser.add_argument(
+        "--provider",
+        default=os.getenv("LLM_PROVIDER", "ollama"),
+        help="LLM provider: ollama or gemini",
+    )
+    parser.add_argument(
+        "--thinking",
+        action="store_true",
+        help="Enable thinking mode (Gemini uses GEMINI_MODEL_THINKING)",
+    )
+    parser.add_argument(
         "--model",
         default=os.getenv("OLLAMA_MODEL", "qwen3:8b"),
-        help="Ollama model name (overrides backend default)",
+        help="Model name (Ollama model or Gemini model, depends on --provider)",
     )
     args = parser.parse_args()
 
@@ -48,6 +58,8 @@ def main() -> int:
         "culture": "Persian",
         "language": "en",
         "source_type": "story",
+        "provider": args.provider,
+        "thinking": bool(args.thinking),
         "model": args.model,
     }
 
