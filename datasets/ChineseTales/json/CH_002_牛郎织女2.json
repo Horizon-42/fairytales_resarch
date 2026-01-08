@@ -171,7 +171,72 @@
       "propp_notes": ""
     }
   },
-  "narrative_structure": [],
+  "narrative_structure": [
+    {
+      "id": "170e4690-bf48-4fa5-b9d2-b369fbe03327",
+      "event_type": "alpha",
+      "description": "Introduction of the protagonist's identity and magical occupation; Zhinv, the granddaughter of the Heavenly Emperor, weaves magical clouds called 'Heavenly Clothes' using a loom in the celestial realm.",
+      "agents": [
+        "织女"
+      ],
+      "targets": [
+        "天衣"
+      ],
+      "text_span": {
+        "start": 0,
+        "end": 201,
+        "text": "相传织女是天帝的孙女，或说是王母娘娘的外孙女，这都用不着去管它了 ，总之，是有这么一个仙女，住在银河的东边，用了一种神奇的丝，在织布机上织出了层层叠叠的美丽云彩，随着时间和季节的不同而变幻它们的颜色，叫做\" 天衣\"，意思就是给天做的衣裳。天也和人一样,是要穿衣裳的，虽然碧蓝如洗的赤裸青天自有它的美丽。做这种工作，除了织女而外，还有别的六位年轻的仙女，都是织女的姐妹，也都是天上的织造能手；织女在他们当"
+      },
+      "target_type": "object",
+      "object_type": "normal_object",
+      "instrument": "织布机",
+      "time_order": 1,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "neutral",
+      "action_category": "Existential & Magical",
+      "action_type": "transform",
+      "action_context": "crafting",
+      "action_status": "success"
+    },
+    {
+      "id": "d72f65f5-b3e8-4534-ace7-e89ae19e0e78",
+      "event_type": "alpha",
+      "description": "Hero is mistreated by kin and expelled from home with a meager inheritance; Niulang is mistreated by his brother and sister-in-law, who unfairly divide the family property and force him to live independently with only an old ox.",
+      "agents": [
+        "哥嫂"
+      ],
+      "targets": [
+        "牛郎"
+      ],
+      "text_span": {
+        "start": 201,
+        "end": 414,
+        "text": "中，是最勤勉、努力的一个。\n隔着那条清浅的闪光的银河，就是人间。在那里住着一个牧牛郎，叫做牛郎，他的父母早死去了，常受哥嫂的虐待。終于，他被哥嫂不公平地分家出去，给了他一头老牛，叫他自立门户。\n靠了老牛的帮助和他自己的努力劳动，他在荒野地上披荆斩棘，耕田种地，盖造屋子，一 两年后，居然菅建了一个小小的家，勉强可以维持生活。可是，除了那头不会说话的老牛以外，冷清的家里只有他一个人，日子过得相当寂寞。\n有一天，老牛忽然口吐人言"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "老牛",
+      "time_order": 2,
+      "relationship_level1": "Family & Kinship",
+      "relationship_level2": "sibling",
+      "sentiment": "negative",
+      "action_category": "transaction",
+      "action_type": "punish",
+      "action_context": "expulsion",
+      "action_status": "success",
+      "relationship_multi": [
+        {
+          "agent": "哥嫂",
+          "target": "牛郎",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "sibling",
+          "sentiment": "negative"
+        }
+      ],
+      "narrative_function": "setup"
+    }
+  ],
   "cross_validation": {
     "shared_story": null,
     "bias_reflection": {
