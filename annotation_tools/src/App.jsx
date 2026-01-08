@@ -280,11 +280,74 @@ export default function App() {
       }
 
       if (data.event && typeof data.event === "object") {
+        const normalizeEventFromV3 = (evt) => {
+          const e = (evt && typeof evt === "object") ? evt : {};
+
+          const agents = Array.isArray(e.agents) ? e.agents.filter(Boolean) : [];
+          const targets = Array.isArray(e.targets) ? e.targets.filter(Boolean) : [];
+          const targetType = e.target_type || "character";
+
+          const relationships = Array.isArray(e.relationships) ? e.relationships : [];
+          const relationship_multi = relationships
+            .filter((r) => r && typeof r === "object")
+            .map((r) => ({
+              agent: r.agent || "",
+              target: r.target || "",
+              relationship_level1: r.relationship_level1 ? extractEnglishFromRelationship(r.relationship_level1) : "",
+              relationship_level2: r.relationship_level2 || "",
+              sentiment: r.sentiment || ""
+            }));
+
+          const isMultiRelationship = targetType === "character" && (
+            agents.length > 1 || targets.length > 1 || relationship_multi.length > 1
+          );
+
+          const firstRel = relationship_multi[0] || {};
+          const legacyRelationshipLevel1 = isMultiRelationship ? "" : (firstRel.relationship_level1 || "");
+          const legacyRelationshipLevel2 = isMultiRelationship ? "" : (firstRel.relationship_level2 || "");
+          const legacySentiment = isMultiRelationship ? "" : (firstRel.sentiment || "");
+
+          const al = (e.action_layer && typeof e.action_layer === "object") ? e.action_layer : null;
+          const action_category = al ? (al.category || "") : (e.action_category || "");
+          const action_type = al ? (al.type || "") : (e.action_type || "");
+          const action_context = al ? (al.context || "") : (e.action_context || "");
+          const action_status = al ? (al.status || "") : (e.action_status || "");
+          const narrative_function = al ? (al.function || "") : (e.narrative_function || "");
+
+          return {
+            id: e.id || eventId,
+            text_span: e.text_span || null,
+            event_type: e.event_type || "",
+            description: e.description || "",
+            agents,
+            targets,
+            target_type: targetType,
+            object_type: e.object_type || "",
+            instrument: e.instrument || "",
+            time_order: (typeof e.time_order === "number" ? e.time_order : (Number.isFinite(Number(e.time_order)) ? Number(e.time_order) : undefined)),
+
+            // UI fields
+            relationship_multi: isMultiRelationship ? relationship_multi : (relationship_multi.length > 0 ? relationship_multi : []),
+            relationship_level1: legacyRelationshipLevel1,
+            relationship_level2: legacyRelationshipLevel2,
+            sentiment: legacySentiment,
+            narrative_function,
+            action_category,
+            action_type,
+            action_context,
+            action_status
+          };
+        };
+
+        const normalizedEvent = (data.event.relationships || data.event.action_layer)
+          ? normalizeEventFromV3(data.event)
+          : data.event;
+
         setNarrativeStructure((prev) => {
           const next = [...prev];
           const idx = next.findIndex(n => typeof n === "object" && n.id === eventId);
           if (idx !== -1) {
-            next[idx] = { ...next[idx], ...data.event };
+            next[idx] = { ...next[idx], ...normalizedEvent };
           }
           return next;
         });

@@ -94,17 +94,26 @@ ACTION_GUIDE = """
 ### 4. Action Category (Universal Taxonomy)
 Mandatory field. Select the most appropriate Category and Type.
 
-* **I. Physical & Conflict**: `attack`, `defend`, `restrain`, `flee`, `steal`, `travel`
-* **II. Communicative & Social**: `inform`, `persuade`, `deceive`, `command`, `slander`, `promise`
-* **III. Transaction & Exchange**: `give`, `request`, `exchange`, `reward`, `punish`, `sacrifice`
-* **IV. Mental & Cognitive**: `observe`, `realize`, `investigate`, `plot`, `forget`
-* **V. Existential & Magical**: `transform`, `cast_spell`, `express_emotion`, `die`, `revive`
+Use these exact category codes:
+* `physical` (Physical & Conflict)
+* `communicative` (Social & Communicative)
+* `transaction` (Transaction & Exchange)
+* `mental` (Mental & Cognitive)
+* `existential` (Existential & Supernatural)
+
+Action types must be the exact code under the chosen category. Common examples:
+* `physical`: `attack`, `defend`, `restrain`, `flee`, `travel`, `interact`
+* `communicative`: `inform`, `persuade`, `deceive`, `challenge`, `command`, `betray`, `reconcile`
+* `transaction`: `give`, `acquire`, `exchange`, `reward`, `punish`
+* `mental`: `resolve`, `plan`, `realize`, `hesitate`
+* `existential`: `cast`, `transform`, `die`, `revive`
 
 **Status Codes**:
 - `attempt`: Initiated but result unknown.
 - `success`: Goal achieved.
 - `failure`: Blocked or ineffective.
 - `interrupted`: Stopped by external force.
+Optional (only if clearly supported): `backfire`, `partial`.
 """
 
 TARGET_LOGIC = """
@@ -116,6 +125,29 @@ TARGET_LOGIC = """
 1. `normal_object`: Standard items.
 2. `magical_agent`: Item with agency/personality but not a full character.
 3. `price`: The ultimate goal/prize of the hero's quest (e.g., The Golden Apple).
+"""
+
+NARRATIVE_FUNCTION_GUIDE = """
+### 6. Narrative Function (Optional)
+In v3, narrative function is stored in `action_layer.function`.
+Set `action_layer.function` to one of these codes if it fits; otherwise use empty string "":
+- `trigger`, `climax`, `resolution`, `character_arc`, `setup`, `exposition`
+"""
+
+RELATIONSHIPS_V3_GUIDE = """
+### 7. Relationships (v3)
+In v3, relationships are stored in `relationships`.
+
+- If `target_type` is `object`, set `relationships` to an empty list [].
+- If `target_type` is `character`, set `relationships` to a list of relationship entries.
+    Each entry MUST be:
+    {agent, target, relationship_level1, relationship_level2, sentiment}
+
+Multi-agent/target rule:
+- If there are multiple agents and/or multiple targets, include ALL salient pairs explicitly as separate entries.
+- If there is exactly one agent and one target, include a single entry.
+
+Output English-only relationship codes (e.g., `parent_child`, `enemy`, etc.).
 """
 
 SYSTEM_PROMPT_NARRATIVE = """You are an expert narrative analyst. Your task is to annotate a specific narrative event within a story segment based on strict structural and taxonomy guidelines.
@@ -208,6 +240,8 @@ def build_narrative_user_prompt(
         f"{RELATIONSHIP_GUIDE}\n"
         f"{SENTIMENT_GUIDE}\n"
         f"{TARGET_LOGIC}\n"
+        f"{NARRATIVE_FUNCTION_GUIDE}\n"
+        f"{RELATIONSHIPS_V3_GUIDE}\n"
         "---\n\n"
         "# DESCRIPTION REQUIREMENTS\n"
         "Provide a `description` field containing two versions separated by a semicolon (;):\n"
@@ -219,20 +253,29 @@ def build_narrative_user_prompt(
         "{\n"
         f"    \"id\": \"{narrative_id}\",\n"
         f"    \"text_span\": {span_str},\n"
-        "    \"event_type\": \"String (Propp Symbol, e.g., 'A' or 'H')\",\n"
+        "    \"event_type\": \"String (Propp Symbol, e.g., 'A' or 'H'; or 'OTHER')\",\n"
         "    \"description\": \"String (General;Specific)\",\n"
         "    \"agents\": [\"String (Name from character list)\"],\n"
         "    \"targets\": [\"String (Name or Object Name)\"],\n"
         "    \"target_type\": \"String ('character' or 'object')\",\n"
         "    \"object_type\": \"String (Only if target_type is object: 'normal_object', 'magical_agent', or 'price'. Else empty string)\",\n"
         "    \"instrument\": \"String (Optional tool used by agent, else empty string)\",\n"
-        "    \"relationship_level1\": \"String (From Relationship Guide, if target is character)\",\n"
-        "    \"relationship_level2\": \"String (From Relationship Guide, if target is character)\",\n"
-        "    \"sentiment\": \"String (From Sentiment Guide)\",\n"
-        "    \"action_category\": \"String (From Action Guide, e.g., 'physical')\",\n"
-        "    \"action_type\": \"String (From Action Guide, e.g., 'attack')\",\n"
-        "    \"action_context\": \"String (Context keyword, e.g., 'ambush')\",\n"
-        "    \"action_status\": \"String ('attempt', 'success', 'failure', 'interrupted')\",\n"
+        "    \"relationships\": [\n"
+        "      {\n"
+        "        \"agent\": \"String (Name from agents)\",\n"
+        "        \"target\": \"String (Name from targets)\",\n"
+        "        \"relationship_level1\": \"String (Relationship code; English only)\",\n"
+        "        \"relationship_level2\": \"String (Relationship code; English only)\",\n"
+        "        \"sentiment\": \"String (Sentiment code)\"\n"
+        "      }\n"
+        "    ],\n"
+        "    \"action_layer\": {\n"
+        "      \"category\": \"String (physical/communicative/transaction/mental/existential)\",\n"
+        "      \"type\": \"String (Action type code under the chosen category)\",\n"
+        "      \"context\": \"String (Optional context tag, else empty string)\",\n"
+        "      \"status\": \"String (attempt/success/failure/interrupted; optional backfire/partial)\",\n"
+        "      \"function\": \"String (Optional narrative function code, else empty string)\"\n"
+        "    },\n"
         "    \"time_order\": integer\n"
         "}\n\n"
         f"{culture_hint}"

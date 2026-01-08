@@ -1,12 +1,11 @@
 """Narrative event annotation API.
 
-This produces fields that map directly onto the narrative_events in the frontend:
-- event_type, description, agents, targets, target_type, object_type, instrument,
-- relationship_level1, relationship_level2, sentiment,
-- action_category, action_type, action_context, action_status,
-- text_span, time_order
+v3-first: the model returns nested structures:
+- `relationships`: list of {agent, target, relationship_level1, relationship_level2, sentiment}
+- `action_layer`: {category, type, context, status, function}
 
-Use this when you want to (re)generate or refine specific narrative events.
+The frontend UI still edits a flat internal shape, but we keep the LLM output in v3
+to match the exported JSON format.
 """
 
 from __future__ import annotations
@@ -107,7 +106,7 @@ def annotate_narrative_event(
 
 
 def _normalize_event_data(data: Dict[str, Any], narrative_id: str, text_span: Dict[str, Any]) -> Dict[str, Any]:
-    """Ensure the model output matches the narrative event schema."""
+    """Ensure the model output matches the v3 narrative event schema."""
     
     # Force ID and text_span to match input if model deviated
     data["id"] = narrative_id
@@ -117,12 +116,16 @@ def _normalize_event_data(data: Dict[str, Any], narrative_id: str, text_span: Di
     for key in ["agents", "targets"]:
         if not isinstance(data.get(key), list):
             data[key] = [str(data.get(key))] if data.get(key) else []
-    
+        else:
+            data[key] = [str(x) for x in data.get(key) if str(x).strip()]
+
     # Ensure standard string fields exist
     string_fields = [
-        "event_type", "description", "target_type", "object_type", "instrument",
-        "relationship_level1", "relationship_level2", "sentiment",
-        "action_category", "action_type", "action_context", "action_status"
+        "event_type",
+        "description",
+        "target_type",
+        "object_type",
+        "instrument",
     ]
     for field in string_fields:
         if field not in data:
@@ -130,13 +133,58 @@ def _normalize_event_data(data: Dict[str, Any], narrative_id: str, text_span: Di
         else:
             data[field] = str(data[field])
 
+    # Normalize relationships (v3)
+    rels_raw = data.get("relationships")
+    if not isinstance(rels_raw, list):
+        rels_raw = []
+    rels: List[Dict[str, str]] = []
+    for r in rels_raw:
+        if not isinstance(r, dict):
+            continue
+        rels.append(
+            {
+                "agent": str(r.get("agent", "")),
+                "target": str(r.get("target", "")),
+                "relationship_level1": str(r.get("relationship_level1", r.get("level1", ""))),
+                "relationship_level2": str(r.get("relationship_level2", r.get("level2", ""))),
+                "sentiment": str(r.get("sentiment", "")),
+            }
+        )
+    data["relationships"] = rels
+
+    # Normalize action_layer (v3)
+    al_raw = data.get("action_layer")
+    if not isinstance(al_raw, dict):
+        al_raw = {}
+    data["action_layer"] = {
+        "category": str(al_raw.get("category", "")),
+        "type": str(al_raw.get("type", "")),
+        "context": str(al_raw.get("context", "")),
+        "status": str(al_raw.get("status", "")),
+        "function": str(al_raw.get("function", al_raw.get("narrative_function", data.get("narrative_function", "")))),
+    }
+
     # Ensure time_order is int
     try:
         data["time_order"] = int(data.get("time_order", 0))
     except (ValueError, TypeError):
         data["time_order"] = 0
 
-    return data
+    # Return only the expected v3 keys (keeps output stable)
+    return {
+        "id": data.get("id", narrative_id),
+        "text_span": data.get("text_span", text_span),
+        "event_type": data.get("event_type", ""),
+        "description": data.get("description", ""),
+        "agents": data.get("agents", []),
+        "targets": data.get("targets", []),
+        "target_type": data.get("target_type", ""),
+        "object_type": data.get("object_type", ""),
+        "instrument": data.get("instrument", ""),
+        "relationships": data.get("relationships", []),
+        "action_layer": data.get("action_layer", {}),
+        "time_order": data.get("time_order", 0),
+    }
 
 
 def _merge_event_annotations(
@@ -150,17 +198,29 @@ def _merge_event_annotations(
     
     # supplement mode: keep existing non-empty values
     result = existing_data.copy()
+
     for key, value in new_data.items():
         existing_val = result.get(key)
-        
+
         # If existing is empty/null/falsey, use new value
         if not existing_val:
             result[key] = value
+            continue
+
+        # Special case: action_layer deep-merge empty-string fields
+        if key == "action_layer" and isinstance(existing_val, dict) and isinstance(value, dict):
+            merged = dict(existing_val)
+            for kk, vv in value.items():
+                if not merged.get(kk):
+                    merged[kk] = vv
+            result[key] = merged
+            continue
+
         # Special case for lists
-        elif isinstance(existing_val, list) and isinstance(value, list):
-            for item in value:
-                if item not in existing_val:
-                    existing_val.append(item)
-            result[key] = existing_val
-            
+        if isinstance(existing_val, list) and isinstance(value, list):
+            if len(existing_val) == 0:
+                result[key] = value
+            # else: keep existing list as-is in supplement mode
+            continue
+
     return result
