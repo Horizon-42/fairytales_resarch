@@ -1,0 +1,437 @@
+{
+  "version": "2.0",
+  "metadata": {
+    "id": "EN_001_The_Lion_and_the_Crane",
+    "title": "",
+    "culture": "Indian",
+    "annotator": "Deb",
+    "date_annotated": "2026-01-12",
+    "confidence": 90
+  },
+  "source_info": {
+    "language": "",
+    "type": "",
+    "reference_uri": "",
+    "text_content": ""
+  },
+  "characters": [
+    {
+      "name": "Bodhisatta",
+      "alias": "White Crane",
+      "archetype": "Hero"
+    },
+    {
+      "name": "Lion",
+      "alias": "Devadatta",
+      "archetype": "Villain"
+    },
+    {
+      "name": "Gautama the Buddha",
+      "alias": "The Great Teacher",
+      "archetype": "Mentor"
+    },
+    {
+      "name": "Reader",
+      "alias": "",
+      "archetype": "Other"
+    },
+    {
+      "name": "Bone",
+      "alias": "bone",
+      "archetype": "Other"
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "f0d1b9cb-a8fa-4586-9055-c6787fd5b570",
+      "event_type": "Initial Situation",
+      "description": "The setting and the protagonist's incarnation are established.",
+      "agents": [
+        "Gautama the Buddha"
+      ],
+      "targets": [],
+      "text_span": {
+        "start": 0,
+        "end": 134,
+        "text": "The Bodhisatta was at one time born in the region of Himavanta as a white crane; now Brahmadatta was at that time reigning in Benares."
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationship_level1": "Neutral",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "neutral",
+      "narrative_function": "exposition",
+      "action_category": "existential",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "76da3dc2-6bac-4c00-a8a5-1ce267023fbf",
+      "event_type": "LACK",
+      "description": "The Lion suffers a physical ailment that prevents him from eating.",
+      "agents": [
+        "Bone"
+      ],
+      "targets": [
+        "Lion"
+      ],
+      "text_span": {
+        "start": 135,
+        "end": 288,
+        "text": "Now it chanced that as a lion was eating meat a bone stuck in his throat. The throat became swollen, he could not take food, his suffering was terrible. "
+      },
+      "target_type": "object",
+      "object_type": "normal_object",
+      "instrument": "",
+      "time_order": 2,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "narrative_function": "trigger"
+    },
+    {
+      "id": "d415b1d7-f9f0-4806-9e25-6f9cc6286be9",
+      "event_type": "BEGINNING_COUNTERACTION",
+      "description": "The Crane offers help conditionally; the Lion promises safety in exchange for the cure.",
+      "agents": [
+        "Bodhisatta"
+      ],
+      "targets": [
+        "Lion"
+      ],
+      "text_span": {
+        "start": 288,
+        "end": 573,
+        "text": "The crane seeing him, as he was perched on a tree looking for food, asked, \"What ails thee, friend?\" He told him why. \"I could free thee from that bone, friend, but dare not enter thy mouth for fear thou mightest eat me.\" \"Don't be afraid, friend, I'll not eat thee; only save my life."
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "fearful",
+      "narrative_function": "setup",
+      "action_category": "communicative",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "attempt"
+    },
+    {
+      "id": "317c8f58-4ac7-4ead-97a3-4afdcfff9e16",
+      "event_type": "LIQUIDATION",
+      "description": "The Crane uses a stick as a safety tool and successfully removes the bone.",
+      "agents": [
+        "Bodhisatta"
+      ],
+      "targets": [
+        "Lion"
+      ],
+      "text_span": {
+        "start": 705,
+        "end": 916,
+        "text": "he placed a small stick upright between his two jaws that he could not close his mouth, and inserting his head inside his mouth struck one end of the bone with his beak. Whereupon the bone dropped and fell out. "
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "positive",
+      "narrative_function": "climax",
+      "action_category": "physical",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "8cc9cb48-4c61-4e8f-863c-6f12dff1db02",
+      "event_type": "DIFFICULT_TASK",
+      "description": "The Crane tests the Lion's character by asking for a return favor/gratitude.",
+      "agents": [
+        "Bodhisatta"
+      ],
+      "targets": [
+        "Lion"
+      ],
+      "text_span": {
+        "start": 1146,
+        "end": 1392,
+        "text": "The crane thinking \"I will sound him,\" settled on a branch just over him, and in conversation spoke this first verse:\n\n\"A service have we done thee\nTo the best of our ability,\nKing of the Beasts! Your Majesty!\nWhat return shall we get from thee?\""
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "romantic",
+      "narrative_function": "character_arc",
+      "action_category": "communicative",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "attempt"
+    },
+    {
+      "id": "32591099-a4c1-44dc-81ba-eb4d45daad95",
+      "event_type": "UNFOUNDED_CLAIMS",
+      "description": "The Lion refuses to reward the Crane, claiming that sparing the Crane's life is sufficient reward.",
+      "agents": [
+        "Lion"
+      ],
+      "targets": [
+        "Bodhisatta"
+      ],
+      "text_span": {
+        "start": 1393,
+        "end": 1554,
+        "text": "In reply the Lion spoke the second verse:\n\n\"As I feed on blood,\nAnd always hunt for prey,\n'Tis much that thou art still alive\nHaving once been between my teeth.\""
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6,
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "hostile",
+      "narrative_function": "climax",
+      "action_category": "communicative",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "failure"
+    },
+    {
+      "id": "ce371dbc-28c2-49f3-b887-06451f54fe03",
+      "event_type": "DEPARTURE",
+      "description": "The Crane verbally condemns the Lion's ingratitude and leaves to ensure his safety.",
+      "agents": [
+        "Bodhisatta"
+      ],
+      "targets": [
+        "Lion"
+      ],
+      "text_span": {
+        "start": 1555,
+        "end": 1884,
+        "text": "Then in reply the crane said the two other verses:\n\n\"Ungrateful, doing no good,\nNot doing as he would be done by,\nIn him there is no gratitude,\nTo serve him is useless.\n\"His friendship is not won\nBy the clearest good deed.\nBetter softly withdraw from him,\nNeither envying nor abusing.\"\nAnd having thus spoken the crane flew away."
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 7,
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "negative",
+      "narrative_function": "resolution",
+      "action_category": "mental",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "06e16c28-a7d3-42d7-add2-b4521dc17712",
+      "event_type": "TRANSFIGURATION",
+      "description": "The narrator reveals the past-life identities of the characters.",
+      "agents": [
+        "Gautama the Buddha"
+      ],
+      "targets": [
+        "Reader"
+      ],
+      "text_span": {
+        "start": 1967,
+        "end": 2053,
+        "text": "Now at that time the lion was Devadatta the Traitor, but the white crane was I myself."
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 8,
+      "relationship_level1": "Neutral",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "neutral",
+      "narrative_function": "exposition",
+      "action_category": "existential",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "success"
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "OTHER",
+    "key_values": [
+      "CUNNING",
+      "JUSTICE",
+      "OTHER"
+    ],
+    "motif_type": [],
+    "atu_categories": [],
+    "obstacle_thrower": [
+      "Lion",
+      "Bone"
+    ],
+    "helper_type": [
+      "ANIMAL"
+    ],
+    "thinking_process": "",
+    "atu_evidence": {},
+    "motif_evidence": {}
+  },
+  "analysis": {
+    "propp_functions": [
+      {
+        "id": "37a0b03e-3df3-41f7-a93d-63d40c49a83b",
+        "fn": "Initial Situation",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 0,
+          "end": 134,
+          "text": "The Bodhisatta was at one time born in the region of Himavanta as a white crane; now Brahmadatta was at that time reigning in Benares."
+        },
+        "evidence": "The setting and the protagonist's incarnation are established.",
+        "narrative_event_id": "f0d1b9cb-a8fa-4586-9055-c6787fd5b570"
+      },
+      {
+        "id": "272a5923-94e2-4b22-b428-452cc8652578",
+        "fn": "LACK",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 135,
+          "end": 288,
+          "text": "Now it chanced that as a lion was eating meat a bone stuck in his throat. The throat became swollen, he could not take food, his suffering was terrible. "
+        },
+        "evidence": "The Lion suffers a physical ailment that prevents him from eating.",
+        "narrative_event_id": "76da3dc2-6bac-4c00-a8a5-1ce267023fbf"
+      },
+      {
+        "id": "cfdecef5-6ffb-40e1-8638-00be3cb33b15",
+        "fn": "BEGINNING_COUNTERACTION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 288,
+          "end": 573,
+          "text": "The crane seeing him, as he was perched on a tree looking for food, asked, \"What ails thee, friend?\" He told him why. \"I could free thee from that bone, friend, but dare not enter thy mouth for fear thou mightest eat me.\" \"Don't be afraid, friend, I'll not eat thee; only save my life."
+        },
+        "evidence": "The Crane offers help conditionally; the Lion promises safety in exchange for the cure.",
+        "narrative_event_id": "d415b1d7-f9f0-4806-9e25-6f9cc6286be9"
+      },
+      {
+        "id": "90086e0e-4ea2-4574-979a-d87c80aa40b9",
+        "fn": "LIQUIDATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 705,
+          "end": 916,
+          "text": "he placed a small stick upright between his two jaws that he could not close his mouth, and inserting his head inside his mouth struck one end of the bone with his beak. Whereupon the bone dropped and fell out. "
+        },
+        "evidence": "The Crane uses a stick as a safety tool and successfully removes the bone.",
+        "narrative_event_id": "317c8f58-4ac7-4ead-97a3-4afdcfff9e16"
+      },
+      {
+        "id": "abec60da-8cde-4331-b718-3f69caab187c",
+        "fn": "DIFFICULT_TASK",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1146,
+          "end": 1392,
+          "text": "The crane thinking \"I will sound him,\" settled on a branch just over him, and in conversation spoke this first verse:\n\n\"A service have we done thee\nTo the best of our ability,\nKing of the Beasts! Your Majesty!\nWhat return shall we get from thee?\""
+        },
+        "evidence": "The Crane tests the Lion's character by asking for a return favor/gratitude.",
+        "narrative_event_id": "8cc9cb48-4c61-4e8f-863c-6f12dff1db02"
+      },
+      {
+        "id": "79dbd5e1-7a4a-4057-88e5-ee472d766950",
+        "fn": "UNFOUNDED_CLAIMS",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1393,
+          "end": 1554,
+          "text": "In reply the Lion spoke the second verse:\n\n\"As I feed on blood,\nAnd always hunt for prey,\n'Tis much that thou art still alive\nHaving once been between my teeth.\""
+        },
+        "evidence": "The Lion refuses to reward the Crane, claiming that sparing the Crane's life is sufficient reward.",
+        "narrative_event_id": "32591099-a4c1-44dc-81ba-eb4d45daad95"
+      },
+      {
+        "id": "673d2048-7e69-441c-8067-0f518154f4a8",
+        "fn": "DEPARTURE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1555,
+          "end": 1884,
+          "text": "Then in reply the crane said the two other verses:\n\n\"Ungrateful, doing no good,\nNot doing as he would be done by,\nIn him there is no gratitude,\nTo serve him is useless.\n\"His friendship is not won\nBy the clearest good deed.\nBetter softly withdraw from him,\nNeither envying nor abusing.\"\nAnd having thus spoken the crane flew away."
+        },
+        "evidence": "The Crane verbally condemns the Lion's ingratitude and leaves to ensure his safety.",
+        "narrative_event_id": "ce371dbc-28c2-49f3-b887-06451f54fe03"
+      },
+      {
+        "id": "4e9a03e4-194c-42b4-9faf-9d18cd896582",
+        "fn": "TRANSFIGURATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1967,
+          "end": 2053,
+          "text": "Now at that time the lion was Devadatta the Traitor, but the white crane was I myself."
+        },
+        "evidence": "The narrator reveals the past-life identities of the characters.",
+        "narrative_event_id": "06e16c28-a7d3-42d7-add2-b4521dc17712"
+      }
+    ],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}
