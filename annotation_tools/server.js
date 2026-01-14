@@ -44,18 +44,29 @@ const PROJECT_ROOT = path.resolve(__dirname, '..');
 
 console.log(`Server running. Project root: ${PROJECT_ROOT}`);
 
-// Helper to resolve folder path relative to project root
-// Support arbitrary paths - if path is absolute, use it; otherwise resolve relative to PROJECT_ROOT
+// Helper to resolve folder path
+// Simple logic: assume user-selected folders are in PROJECT_ROOT/datasets/
+// If absolute path is provided, use it directly
+// Otherwise, resolve as PROJECT_ROOT/datasets/{folderPath}
 const resolveFolderPath = (folderPath) => {
   if (!folderPath || folderPath.trim() === '') {
-    return PROJECT_ROOT;
+    throw new Error('Folder path is empty');
   }
+  
   // If it's an absolute path, use it directly
   if (path.isAbsolute(folderPath)) {
     return folderPath;
   }
-  // Otherwise, resolve relative to PROJECT_ROOT
-  return path.resolve(PROJECT_ROOT, folderPath);
+  
+  // Otherwise, assume it's in datasets/ folder
+  const resolvedPath = path.join(PROJECT_ROOT, 'datasets', folderPath);
+  
+  // Check if the folder exists
+  if (!fs.existsSync(resolvedPath)) {
+    throw new Error(`Folder not found in datasets/: ${folderPath} -> ${resolvedPath}`);
+  }
+  
+  return resolvedPath;
 };
 
 // Validate that folder path contains a texts subfolder
@@ -113,8 +124,14 @@ app.post('/api/save', (req, res) => {
     }
 
     // folderPath is the parent folder that contains texts subfolder
-    // Resolve it to absolute path
-    const fullFolderPath = resolveFolderPath(folderPath);
+    // Resolve it to absolute path (assumes folder is in datasets/)
+    let fullFolderPath;
+    try {
+      fullFolderPath = resolveFolderPath(folderPath);
+    } catch (err) {
+      console.error(`[SAVE] Failed to resolve folder path: ${err.message}`);
+      return res.status(400).json({ error: err.message });
+    }
     
     console.log(`[SAVE] folderPath: ${folderPath}, fileName: ${fileName}, version: ${version}`);
     console.log(`[SAVE] Resolved fullFolderPath: ${fullFolderPath}`);
@@ -122,7 +139,7 @@ app.post('/api/save', (req, res) => {
     // Validate: folder must contain texts subfolder
     if (!validateFolderHasTexts(fullFolderPath)) {
       return res.status(400).json({ 
-        error: `Folder does not contain "texts" or "traditional_texts" subfolder: ${fullFolderPath}` 
+        error: `Folder does not contain "texts" subfolder: ${fullFolderPath}` 
       });
     }
     
@@ -131,25 +148,36 @@ app.post('/api/save', (req, res) => {
     
     // Create target directory: json folders are in the parent folder (same level as texts)
     const targetDir = path.join(fullFolderPath, targetDirName);
+    
+    console.log(`[SAVE] Target directory: ${targetDir}`);
+    console.log(`[SAVE] Parent folder exists: ${fs.existsSync(fullFolderPath)}`);
+    console.log(`[SAVE] Texts folder exists: ${fs.existsSync(path.join(fullFolderPath, 'texts'))}`);
 
     // Ensure target directory exists
     try {
       fs.mkdirSync(targetDir, { recursive: true });
+      console.log(`[SAVE] Directory created/verified: ${targetDir}`);
     } catch (err) {
-      console.error(`Failed to create directory ${targetDir}:`, err);
-      return res.status(500).json({ error: 'Failed to create directory' });
+      console.error(`[SAVE] Failed to create directory ${targetDir}:`, err);
+      return res.status(500).json({ error: 'Failed to create directory: ' + err.message });
     }
 
     // Create file name with suffix
     const suffix = version === 'v3' ? '_v3' : (version === 'v2' ? '_v2' : '');
     const targetFileName = `${fileName}${suffix}.json`;
     const targetPath = path.join(targetDir, targetFileName);
+    
+    console.log(`[SAVE] Target file path: ${targetPath}`);
+    console.log(`[SAVE] Content size: ${JSON.stringify(content).length} bytes`);
 
     try {
       fs.writeFileSync(targetPath, JSON.stringify(content, null, 2));
+      console.log(`[SAVE] Successfully saved to: ${targetPath}`);
+      const stats = fs.statSync(targetPath);
+      console.log(`[SAVE] File written, size: ${stats.size} bytes`);
       res.json({ success: true, path: targetPath });
     } catch (err) {
-      console.error(`Error writing file ${targetPath}:`, err);
+      console.error(`[SAVE] Error writing file ${targetPath}:`, err);
       res.status(500).json({ error: 'Failed to write file: ' + err.message });
     }
   } catch (err) {
@@ -167,7 +195,13 @@ app.post('/api/load', (req, res) => {
   // Use folderPath and fileName directly
   if (folderPath && fileName) {
     // folderPath is the parent folder that contains texts subfolder
-    fullFolderPath = resolveFolderPath(folderPath);
+    // Resolve it to absolute path (assumes folder is in datasets/)
+    try {
+      fullFolderPath = resolveFolderPath(folderPath);
+    } catch (err) {
+      console.error(`[LOAD] Failed to resolve folder path: ${err.message}`);
+      return res.status(400).json({ error: err.message });
+    }
     targetFileName = fileName;
     
     console.log(`[LOAD] folderPath: ${folderPath}, fileName: ${fileName}`);
@@ -176,7 +210,7 @@ app.post('/api/load', (req, res) => {
     // Validate: folder must contain texts subfolder
     if (!validateFolderHasTexts(fullFolderPath)) {
       return res.status(400).json({ 
-        error: `Folder does not contain "texts" or "traditional_texts" subfolder: ${fullFolderPath}` 
+        error: `Folder does not contain "texts" subfolder: ${fullFolderPath}` 
       });
     }
   } 
@@ -199,7 +233,12 @@ app.post('/api/load', (req, res) => {
       baseFolderPath = pathParts.slice(0, textsIndex).join('/');
     }
     
-    fullFolderPath = resolveFolderPath(baseFolderPath);
+    try {
+      fullFolderPath = resolveFolderPath(baseFolderPath);
+    } catch (err) {
+      console.error(`[LOAD] Failed to resolve folder path from originalPath: ${err.message}`);
+      return res.json({ found: false, error: err.message });
+    }
     
     // Validate
     if (!validateFolderHasTexts(fullFolderPath)) {
@@ -258,13 +297,19 @@ app.post('/api/save-cache', (req, res) => {
       return res.status(400).json({ error: 'Missing folderPath' });
     }
     
-    // Resolve the folder path
-    const fullFolderPath = resolveFolderPath(folderPath);
+    // Resolve the folder path (assumes folder is in datasets/)
+    let fullFolderPath;
+    try {
+      fullFolderPath = resolveFolderPath(folderPath);
+    } catch (err) {
+      console.error(`[SAVE-CACHE] Failed to resolve folder path: ${err.message}`);
+      return res.status(400).json({ error: err.message });
+    }
     
     // Validate: folder must contain texts subfolder
     if (!validateFolderHasTexts(fullFolderPath)) {
       return res.status(400).json({ 
-        error: `Folder does not contain "texts" or "traditional_texts" subfolder: ${fullFolderPath}` 
+        error: `Folder does not contain "texts" subfolder: ${fullFolderPath}` 
       });
     }
     
@@ -304,8 +349,14 @@ app.post('/api/load-cache', (req, res) => {
       return res.status(400).json({ error: 'Missing folderPath' });
     }
     
-    // Resolve the folder path
-    const fullFolderPath = resolveFolderPath(folderPath);
+    // Resolve the folder path (assumes folder is in datasets/)
+    let fullFolderPath;
+    try {
+      fullFolderPath = resolveFolderPath(folderPath);
+    } catch (err) {
+      console.error(`[LOAD-CACHE] Failed to resolve folder path: ${err.message}`);
+      return res.json({ found: false, error: err.message });
+    }
     
     // Validate: folder must contain texts subfolder
     if (!validateFolderHasTexts(fullFolderPath)) {

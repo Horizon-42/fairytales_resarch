@@ -1082,7 +1082,7 @@ export default function App() {
   }, [id, culture, title, sourceText, meta, motif, paragraphSummaries, proppFns, proppNotes, narrativeStructure, crossValidation, qa]);
 
   // ========== Save/Load Functions ==========
-  const handleSave = async (version, silent = false) => {
+  const handleSave = React.useCallback(async (version, silent = false) => {
     const data = version === "v3" ? jsonV3 : (version === "v2" ? jsonV2 : jsonV1);
     const currentStory = storyFiles[selectedStoryIndex];
     
@@ -1118,14 +1118,14 @@ export default function App() {
       } else {
         if (!silent) alert(`Failed to save: ${result.error}`);
         console.error(`Save (${version}) failed: ${result.error}`);
-        if (!silent) downloadJson(`${id}_${version}.json`, data);
+        if (!silent) downloadJson(`${currentStory.id}_${version}.json`, data);
       }
     } catch (err) {
       console.error("Save failed, falling back to download", err);
       const suffix = version === "v3" ? "_v3" : (version === "v2" ? "_v2" : "_v1");
-      if (!silent) downloadJson(`${id}${suffix}.json`, data);
+      if (!silent) downloadJson(`${currentStory.id}${suffix}.json`, data);
     }
-  };
+  }, [selectedStoryIndex, storyFiles, selectedFolderPath, jsonV1, jsonV2, jsonV3]);
 
   const handleSaveAll = async (silent = false) => {
     if (selectedStoryIndex < 0 || !storyFiles[selectedStoryIndex]) {
@@ -1174,9 +1174,9 @@ export default function App() {
 
         // Save v1 + v2 + v3
         if (selectedStoryIndex >= 0 && storyFiles[selectedStoryIndex]) {
-          saveRef.current("v1", true);
-          saveRef.current("v2", true);
-          saveRef.current("v3", true);
+          handleSave("v1", true);
+          handleSave("v2", true);
+          handleSave("v3", true);
         } else {
           alert("No story selected to save.");
         }
@@ -1187,7 +1187,7 @@ export default function App() {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [selectedStoryIndex, storyFiles]);
+  }, [selectedStoryIndex, storyFiles, handleSave]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -1231,9 +1231,10 @@ export default function App() {
       // Modern browsers block synchronous XHR during page dismissal
       if (navigator.sendBeacon) {
         try {
-          // Send as plain text to avoid CORS preflight (simple request)
-          // Server will parse it as JSON
-          const sent = navigator.sendBeacon("http://localhost:3001/api/save", payload);
+          // sendBeacon requires Blob or FormData, not string
+          // Create a Blob with text/plain type so server can parse it
+          const blob = new Blob([payload], { type: 'text/plain' });
+          const sent = navigator.sendBeacon("http://localhost:3001/api/save", blob);
           if (sent) {
             setLastAutoSave(new Date());
           } else {
@@ -1723,6 +1724,11 @@ export default function App() {
   };
 
   const handleSelectStory = async (index) => {
+    // Save current story before switching
+    if (selectedStoryIndex >= 0 && selectedStoryIndex !== index && selectedFolderPath) {
+      performAutoSave();
+    }
+    
     selectStoryWithData(index, storyFiles, v1JsonFiles, v2JsonFiles, v3JsonFiles);
     // Update cache with new selected index
     if (selectedFolderPath) {

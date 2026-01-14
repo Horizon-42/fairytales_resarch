@@ -9,42 +9,30 @@ export function organizeFiles(fileList) {
   Array.from(fileList).forEach((file) => {
     const path = file.webkitRelativePath || file.name;
     const pathLower = path.toLowerCase();
-    
-    // Skip files in unwanted folders - only read from texts folder
-    // Skip traditional_texts, texts copy, texts_copy, etc.
-    if (pathLower.includes('/traditional_texts/') || 
-        pathLower.includes('/texts copy/') ||
-        pathLower.includes('/texts_copy/')) {
-      return;
-    }
-    
-    // Only process files from texts folder
-    // Check if path contains /texts/ or ends with /texts (for files directly in texts root)
-    if (!pathLower.includes('/texts/') && !pathLower.startsWith('texts/')) {
-      return; // Skip files not in texts folder
-    }
-    
     const parts = path.split('/');
     const fileName = parts.pop();
     const dir = parts.join('/');
 
-    if (fileName.endsWith('.txt')) {
+    // Process .txt files from texts folder
+    if (fileName.endsWith('.txt') && 
+        (pathLower.includes('/texts/') || pathLower.startsWith('texts/'))) {
       const id = fileName.replace('.txt', '');
       texts.push({ file, id, path });
-    } else if (fileName.endsWith('.json')) {
+    }
+    // Process .json files from json/json_v2/json_v3 folders (for fallback loading)
+    else if (fileName.endsWith('.json')) {
+      // Skip JSON files in texts folder
+      if (pathLower.includes('/texts/') || pathLower.startsWith('texts/')) {
+        return;
+      }
+      
       const id = fileName.replace(/_v[123]\.json$/, '').replace('.json', '');
       
-      // Heuristic: check directory or filename suffix
-      // Users might name v2/v3 files as *_v2.json / *_v3.json or put them in json_v2/json_v3 folder
+      // Determine version from folder or filename
       const isV2Folder = dir.endsWith('json_v2') || dir.includes('/json_v2/');
       const isV2File = fileName.endsWith('_v2.json');
-
       const isV3Folder = dir.endsWith('json_v3') || dir.includes('/json_v3/');
       const isV3File = fileName.endsWith('_v3.json');
-      
-      // Also check content version if we could read it, but we can't here easily.
-      // We rely on folder structure or naming conventions for now.
-      // The user prompt said: "open or create 2 json folders... json and json_v2"
       
       if (isV3Folder || isV3File) {
         v3Jsons[id] = file;

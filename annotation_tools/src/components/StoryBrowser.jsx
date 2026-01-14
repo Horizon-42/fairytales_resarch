@@ -39,7 +39,6 @@ export default function StoryBrowser({
 
   const collectFilesFromDirHandle = async (dirHandle, rootName) => {
     const collected = [];
-    const allowed = [".txt", ".md", ".json"];
     let hasTextsFolder = false;
 
     const walk = async (handle, prefix) => {
@@ -47,38 +46,35 @@ export default function StoryBrowser({
         if (entryHandle.kind === "directory") {
           const dirNameLower = entryName.toLowerCase();
           
-          // Only walk into exactly "texts" folder (case insensitive)
-          // Skip all other directories including "texts copy", "traditional_texts", etc.
+          // Walk into "texts" folder to collect story files (.txt)
           if (dirNameLower === 'texts') {
             hasTextsFolder = true;
-            // Only walk into texts folder
             await walk(entryHandle, `${prefix}/${entryName}`);
           }
-          // Skip all other directories (texts copy, traditional_texts, json folders, etc.)
+          // Also walk into json folders to collect annotation files (for fallback)
+          else if (dirNameLower === 'json' || dirNameLower === 'json_v2' || dirNameLower === 'json_v3') {
+            await walk(entryHandle, `${prefix}/${entryName}`);
+          }
+          // Skip all other directories
         } else if (entryHandle.kind === "file") {
-          // Only collect files that are directly in the texts folder or its subdirectories
-          // Check if the path contains unwanted folders
           const fullPath = `${prefix}/${entryName}`;
           const fullPathLower = fullPath.toLowerCase();
-          
-          // Skip files in traditional_texts, texts copy, or other unwanted folders
-          if (fullPathLower.includes('/traditional_texts/') || 
-              fullPathLower.includes('/texts copy/') ||
-              fullPathLower.includes('/texts_copy/')) {
-            continue;
-          }
-          
-          // Only collect files from texts folder (prefix should contain /texts/ or end with /texts)
-          if (!fullPathLower.includes('/texts/') && !fullPathLower.endsWith('/texts')) {
-            continue; // Skip files not in texts folder
-          }
-          
           const lower = entryName.toLowerCase();
-          if (!allowed.some((ext) => lower.endsWith(ext))) continue;
-
-          const f = await entryHandle.getFile();
-          const rel = `${prefix}/${entryName}`;
-          collected.push(wrapFileWithRelativePath(f, rel));
+          
+          // Collect .txt and .md files from texts folder
+          if ((lower.endsWith('.txt') || lower.endsWith('.md')) && 
+              (fullPathLower.includes('/texts/') || fullPathLower.endsWith('/texts'))) {
+            const f = await entryHandle.getFile();
+            const rel = `${prefix}/${entryName}`;
+            collected.push(wrapFileWithRelativePath(f, rel));
+          }
+          // Collect .json files from json/json_v2/json_v3 folders (for fallback loading)
+          else if (lower.endsWith('.json') && 
+                   (fullPathLower.includes('/json/') || fullPathLower.includes('/json_v2/') || fullPathLower.includes('/json_v3/'))) {
+            const f = await entryHandle.getFile();
+            const rel = `${prefix}/${entryName}`;
+            collected.push(wrapFileWithRelativePath(f, rel));
+          }
         }
       }
     };
