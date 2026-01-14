@@ -8,7 +8,9 @@
     "start": "concurrently \"npm run server\" \"npm run dev\"",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:save-load": "node test_save_load.js",
+    "test:api": "node test_api.js"
   },
   "dependencies": {
     "body-parser": "^2.2.1",

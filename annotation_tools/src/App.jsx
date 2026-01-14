@@ -4,6 +4,7 @@ import { downloadJson, relPathToDatasetHint, HIGHLIGHT_COLORS, emptyProppFn, ext
 import { saveFolderCache, loadFolderCache, extractFolderPath } from "./utils/folderCache.js";
 import { getBackendUrl, clearBackendCache } from "./utils/backendConfig.js";
 import { deriveTextSectionsFromNarratives } from "./utils/summarySections.js";
+import { VERSION } from "./version.js";
 
 // Import components
 import {
@@ -27,6 +28,7 @@ export default function App() {
   const [v3JsonFiles, setV3JsonFiles] = useState({});
   const [selectedStoryIndex, setSelectedStoryIndex] = useState(-1);
   const [currentSelection, setCurrentSelection] = useState(null);
+  const [selectedFolderPath, setSelectedFolderPath] = useState(null); // Store the selected folder path
 
   const [jsonSaveHint, setJsonSaveHint] = useState(
     "datasets/iron/persian/persian/json/FA_XXX.json"
@@ -35,11 +37,8 @@ export default function App() {
   const [previewVersion, setPreviewVersion] = useState("v3");
 
   const [id, setId] = useState("FA_XXX");
-  // Initialize culture from cache if available
-  const [culture, setCulture] = useState(() => {
-    const cache = loadFolderCache();
-    return cache?.culture || "Persian";
-  });
+  // Initialize culture - will be loaded from folder cache when folder is selected
+  const [culture, setCulture] = useState("Persian");
   const [title, setTitle] = useState("");
 
   // Extract title from ID (everything after the second underscore)
@@ -1092,12 +1091,22 @@ export default function App() {
       return;
     }
 
+    if (!selectedFolderPath) {
+      if (!silent) alert("No folder selected. Please select a folder first.");
+      return;
+    }
+
+    // selectedFolderPath is the parent folder that contains texts subfolder
+    // Use it directly without any modification
+    const folderPathToUse = selectedFolderPath;
+
     try {
       const response = await fetch("http://localhost:3001/api/save", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          originalPath: currentStory.path,
+          folderPath: folderPathToUse,
+          fileName: currentStory.id,
           content: data,
           version: version
         })
@@ -1146,16 +1155,15 @@ export default function App() {
     });
   }, []); // Run once on mount
 
-  // Save culture to cache when it changes
+  // Save culture to cache when it changes (only if folder is selected)
   useEffect(() => {
-    const cache = loadFolderCache();
-    if (cache) {
+    if (selectedFolderPath && culture) {
       saveFolderCache({
-        ...cache,
+        folderPath: selectedFolderPath,
         culture: culture
       });
     }
-  }, [culture]);
+  }, [culture, selectedFolderPath]);
 
   // Keyboard shortcut: Cmd+S / Ctrl+S to save JSON
   useEffect(() => {
@@ -1204,10 +1212,17 @@ export default function App() {
       return;
     }
 
-    const saveData = (version) => {
+      const saveData = (version) => {
       const data = version === "v3" ? jsonV3 : (version === "v2" ? jsonV2 : jsonV1);
+      if (!selectedFolderPath) return;
+      
+      // selectedFolderPath is the parent folder that contains texts subfolder
+      // Use it directly
+      const folderPathToUse = selectedFolderPath;
+      
       const payload = JSON.stringify({
-        originalPath: currentStory.path,
+        folderPath: folderPathToUse,
+        fileName: currentStory.id,
         content: data,
         version: version
       });
@@ -1250,7 +1265,7 @@ export default function App() {
     saveData("v1");
     saveData("v2");
     saveData("v3");
-  }, [selectedStoryIndex, storyFiles, jsonV1, jsonV2, jsonV3]);
+  }, [selectedStoryIndex, storyFiles, jsonV1, jsonV2, jsonV3, selectedFolderPath]);
 
   // Save before page unload/refresh
   useEffect(() => {
@@ -1547,19 +1562,47 @@ export default function App() {
     setV2JsonFiles(v2Jsons);
     setV3JsonFiles(v3Jsons);
 
-    // Extract folder path and save to cache
-    const folderPath = extractFolderPath(files, folderPathHint);
-    const cache = loadFolderCache();
-    const targetIndex = (cache && cache.folderPath === folderPath && cache.selectedIndex >= 0 && cache.selectedIndex < withContent.length)
+    // Extract parent folder path (the folder that contains texts subfolder)
+    // User must select the parent folder that contains "texts" subfolder
+    // folderPathHint is the folder name the user selected (should be the parent folder)
+    // extractFolderPath extracts from file paths (e.g., "Japanese_test2/texts/file.txt" -> "Japanese_test2")
+    let folderPath = extractFolderPath(files, folderPathHint);
+    
+    // If extraction from file paths failed, use folderPathHint (the folder name user selected)
+    if (!folderPath && folderPathHint) {
+      folderPath = folderPathHint;
+      console.log(`[EXTRACT] Using folderPathHint as parent folder: ${folderPath}`);
+    }
+    
+    if (!folderPath) {
+      console.error(`[EXTRACT] Could not determine parent folder path`);
+      alert("错误：无法确定父文件夹路径。请确保选择的文件夹包含 texts 子文件夹。");
+      return;
+    }
+    
+    console.log(`[EXTRACT] Parent folder path: ${folderPath}`);
+    
+    // Load cache from the folder
+    const cache = await loadFolderCache(folderPath);
+    const targetIndex = (cache && cache.selectedIndex >= 0 && cache.selectedIndex < withContent.length)
       ? cache.selectedIndex
       : 0;
+    
+    // Set culture from cache if available
+    if (cache && cache.culture) {
+      setCulture(cache.culture);
+    }
 
-    // Save folder cache
-    saveFolderCache({
+    // Save folder cache with initial selection
+    await saveFolderCache({
       folderPath: folderPath,
       selectedIndex: targetIndex,
       culture: culture
     });
+
+    // Store the selected folder path - this is the folder containing txt files
+    // JSON folders (json_v3, json_v2, json) will be created/accessed at the same level
+    setSelectedFolderPath(folderPath);
 
     if (withContent.length > 0) {
       selectStoryWithData(targetIndex, withContent, v1Jsons, v2Jsons, v3Jsons);
@@ -1610,6 +1653,36 @@ export default function App() {
     setHighlightedRanges({});
     setHighlightedChars({});
 
+    // selectedFolderPath is the parent folder that contains texts subfolder
+    // Use it directly to load JSON files from json_v3/json_v2/json folders
+    const folderPathToUse = selectedFolderPath;
+    
+    if (folderPathToUse && folderPathToUse.trim() !== '') {
+      try {
+        const response = await fetch("http://localhost:3001/api/load", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ 
+            folderPath: folderPathToUse,
+            fileName: idGuess
+          })
+        });
+        
+        const result = await response.json();
+        if (result.found && result.content) {
+          const mappedState = result.version === 3
+            ? mapV3ToState(result.content)
+            : (result.version === 2 ? mapV2ToState(result.content) : mapV1ToState(result.content));
+          loadState(mappedState);
+          return;
+        }
+      } catch (err) {
+        console.warn("Server load failed with selectedFolderPath, trying originalPath", err);
+      }
+    }
+    
+    // Fallback: try with originalPath
+    // This is mainly for backward compatibility
     try {
       const response = await fetch("http://localhost:3001/api/load", {
         method: "POST",
@@ -1649,14 +1722,14 @@ export default function App() {
     }
   };
 
-  const handleSelectStory = (index) => {
+  const handleSelectStory = async (index) => {
     selectStoryWithData(index, storyFiles, v1JsonFiles, v2JsonFiles, v3JsonFiles);
     // Update cache with new selected index
-    const cache = loadFolderCache();
-    if (cache) {
-      saveFolderCache({
-        ...cache,
-        selectedIndex: index
+    if (selectedFolderPath) {
+      await saveFolderCache({
+        folderPath: selectedFolderPath,
+        selectedIndex: index,
+        culture: culture
       });
     }
   };
@@ -2018,7 +2091,7 @@ export default function App() {
         <div className="header-left">
           <span className="logo-icon">✨</span>
           <div>
-            <h1>Fairy Tale Annotation Tool</h1>
+            <h1>Fairy Tale Annotation Tool <span style={{ fontSize: "0.6em", fontWeight: "normal", color: "#64748b", marginLeft: "0.5rem" }}>v{VERSION}</span></h1>
             <p>
               Aligns with the Persian JSON schema in{" "}
               <code>datasets/iron/persian/persian/json</code>.
