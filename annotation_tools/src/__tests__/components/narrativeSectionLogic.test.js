@@ -22,7 +22,7 @@ import {
   removeRelationshipMultiRow,
   deriveRelationshipUiState,
   buildSetRelationshipMultiUpdates,
-} from "./narrativeSectionLogic.js";
+} from "../../components/narrativeSectionLogic.js";
 
 describe("narrativeSectionLogic", () => {
   it("normalizeRelationshipMulti() always returns shaped entries", () => {
