@@ -714,64 +714,34 @@ export default function App() {
         .map((n) => {
           if (typeof n !== "object") return n;
 
-          const result = { ...n };
+          // v1 format: only flat fields, no relationship_multi or action_layer
+          const result = {
+            id: n.id,
+            text_span: n.text_span,
+            event_type: n.event_type || "",
+            description: n.description || "",
+            agents: Array.isArray(n.agents) ? n.agents.filter(Boolean) : [],
+            targets: Array.isArray(n.targets) ? n.targets.filter(Boolean) : [],
+            target_type: n.target_type || "",
+            object_type: n.object_type || "",
+            instrument: n.instrument || "",
+            time_order: n.time_order,
+            // v1 only uses flat relationship fields
+            relationship_level1: n.relationship_level1 ? extractEnglishFromRelationship(n.relationship_level1) : "",
+            relationship_level2: n.relationship_level2 || "",
+            sentiment: n.sentiment || "",
+            // v1 only uses flat action fields
+            action_category: n.action_category || "",
+            action_type: n.action_type || "",
+            action_context: n.action_context || "",
+            action_status: n.action_status || "",
+            narrative_function: n.narrative_function || ""
+          };
 
-          const agents = Array.isArray(result.agents) ? result.agents.filter(Boolean) : [];
-          const targets = Array.isArray(result.targets) ? result.targets.filter(Boolean) : [];
-          const isMultiRelationship = result.target_type === "character" && (agents.length > 1 || targets.length > 1);
-
-          const existingMultiList = Array.isArray(result.relationship_multi)
-            ? result.relationship_multi
-            : ((result.relationship_multi && typeof result.relationship_multi === "object") ? [result.relationship_multi] : []);
-
-          if (isMultiRelationship) {
-            const listSource = (existingMultiList.length > 0)
-              ? existingMultiList
-              : [{
-                  agent: agents.length === 1 ? agents[0] : (agents[0] || ""),
-                  target: targets.length === 1 ? targets[0] : (targets[0] || ""),
-                  relationship_level1: result.relationship_level1 || "",
-                  relationship_level2: result.relationship_level2 || "",
-                  sentiment: result.sentiment || ""
-                }];
-
-            result.relationship_multi = listSource.map((r) => {
-              const rel = (r && typeof r === "object") ? r : {};
-              const level1 = rel.relationship_level1 || "";
-              return {
-                agent: rel.agent || "",
-                target: rel.target || "",
-                relationship_level1: level1 ? extractEnglishFromRelationship(level1) : "",
-                relationship_level2: rel.relationship_level2 || "",
-                sentiment: rel.sentiment || ""
-              };
-            });
-
-            // In multi-person cases, keep legacy fields empty to avoid ambiguity
-            result.relationship_level1 = "";
-            result.relationship_level2 = "";
-            // Sentiment becomes per-relationship in multi-person case
-            result.sentiment = "";
-          } else {
-            // Ensure relationship_level1 only contains English
-            if (result.relationship_level1) {
-              result.relationship_level1 = extractEnglishFromRelationship(result.relationship_level1);
-            } else if (existingMultiList[0]?.relationship_level1) {
-              // Backward-compat fallback if only relationship_multi exists
-              result.relationship_level1 = extractEnglishFromRelationship(existingMultiList[0].relationship_level1);
-            }
-
-            if (!result.relationship_level2 && existingMultiList[0]?.relationship_level2) {
-              result.relationship_level2 = existingMultiList[0].relationship_level2;
-            }
-
-            if (!result.sentiment && existingMultiList[0]?.sentiment) {
-              result.sentiment = existingMultiList[0].sentiment;
-            }
-          }
-
-          // Preserve existing annotation structure: keep action_* fields as-is.
-          // (We still support reading legacy action_layer via fileHandler.js.)
+          // Remove v3-specific fields if they exist
+          delete result.relationship_multi;
+          delete result.relationships;
+          delete result.action_layer;
 
           return result;
         }),
@@ -810,61 +780,34 @@ export default function App() {
           return { event_type: "OTHER", description: n, narrative_function: "" };
         }
 
-        const result = { ...n };
+        // v2 format: only flat fields, no relationship_multi or action_layer
+        const result = {
+          id: n.id,
+          text_span: n.text_span,
+          event_type: n.event_type || "",
+          description: n.description || "",
+          agents: Array.isArray(n.agents) ? n.agents.filter(Boolean) : [],
+          targets: Array.isArray(n.targets) ? n.targets.filter(Boolean) : [],
+          target_type: n.target_type || "",
+          object_type: n.object_type || "",
+          instrument: n.instrument || "",
+          time_order: n.time_order,
+          // v2 only uses flat relationship fields
+          relationship_level1: n.relationship_level1 ? extractEnglishFromRelationship(n.relationship_level1) : "",
+          relationship_level2: n.relationship_level2 || "",
+          sentiment: n.sentiment || "",
+          // v2 only uses flat action fields
+          action_category: n.action_category || "",
+          action_type: n.action_type || "",
+          action_context: n.action_context || "",
+          action_status: n.action_status || "",
+          narrative_function: n.narrative_function || ""
+        };
 
-        const agents = Array.isArray(result.agents) ? result.agents.filter(Boolean) : [];
-        const targets = Array.isArray(result.targets) ? result.targets.filter(Boolean) : [];
-        const isMultiRelationship = result.target_type === "character" && (agents.length > 1 || targets.length > 1);
-
-        const existingMultiList = Array.isArray(result.relationship_multi)
-          ? result.relationship_multi
-          : ((result.relationship_multi && typeof result.relationship_multi === "object") ? [result.relationship_multi] : []);
-
-        if (isMultiRelationship) {
-          const listSource = (existingMultiList.length > 0)
-            ? existingMultiList
-            : [{
-                agent: agents.length === 1 ? agents[0] : (agents[0] || ""),
-                target: targets.length === 1 ? targets[0] : (targets[0] || ""),
-                relationship_level1: result.relationship_level1 || "",
-                relationship_level2: result.relationship_level2 || "",
-                sentiment: result.sentiment || ""
-              }];
-
-          result.relationship_multi = listSource.map((r) => {
-            const rel = (r && typeof r === "object") ? r : {};
-            const level1 = rel.relationship_level1 || "";
-            return {
-              agent: rel.agent || "",
-              target: rel.target || "",
-              relationship_level1: level1 ? extractEnglishFromRelationship(level1) : "",
-              relationship_level2: rel.relationship_level2 || "",
-              sentiment: rel.sentiment || ""
-            };
-          });
-
-          result.relationship_level1 = "";
-          result.relationship_level2 = "";
-          result.sentiment = "";
-        } else {
-          // Ensure relationship_level1 only contains English
-          if (result.relationship_level1) {
-            result.relationship_level1 = extractEnglishFromRelationship(result.relationship_level1);
-          } else if (existingMultiList[0]?.relationship_level1) {
-            result.relationship_level1 = extractEnglishFromRelationship(existingMultiList[0].relationship_level1);
-          }
-
-          if (!result.relationship_level2 && existingMultiList[0]?.relationship_level2) {
-            result.relationship_level2 = existingMultiList[0].relationship_level2;
-          }
-
-          if (!result.sentiment && existingMultiList[0]?.sentiment) {
-            result.sentiment = existingMultiList[0].sentiment;
-          }
-        }
-
-        // Preserve existing annotation structure: keep action_* fields as-is.
-        // (We still support reading legacy action_layer via fileHandler.js.)
+        // Remove v3-specific fields if they exist
+        delete result.relationship_multi;
+        delete result.relationships;
+        delete result.action_layer;
 
         return result;
       }),
@@ -1012,47 +955,47 @@ export default function App() {
           };
         }
 
-        const result = { ...n };
+        // v3 format: extract from UI state (which may have relationship_multi or flat fields)
+        // Only access v3-specific fields here, not in v1/v2
+        const agents = Array.isArray(n.agents) ? n.agents.filter(Boolean) : [];
+        const targets = Array.isArray(n.targets) ? n.targets.filter(Boolean) : [];
 
-        const agents = Array.isArray(result.agents) ? result.agents.filter(Boolean) : [];
-        const targets = Array.isArray(result.targets) ? result.targets.filter(Boolean) : [];
-
-        const existingMultiList = Array.isArray(result.relationship_multi)
-          ? result.relationship_multi
-          : ((result.relationship_multi && typeof result.relationship_multi === "object") ? [result.relationship_multi] : []);
+        // v3: extract relationships from relationship_multi (UI state) or flat fields
+        const existingMultiList = Array.isArray(n.relationship_multi)
+          ? n.relationship_multi
+          : ((n.relationship_multi && typeof n.relationship_multi === "object") ? [n.relationship_multi] : []);
 
         let relList = [];
         if (existingMultiList.length > 0) {
           relList = existingMultiList.map(normalizeRelEntry);
-        } else if (result.relationship_level1 || result.relationship_level2 || result.sentiment) {
+        } else if (n.relationship_level1 || n.relationship_level2 || n.sentiment) {
           relList = [normalizeRelEntry({
             agent: agents[0] || "",
             target: targets[0] || "",
-            relationship_level1: result.relationship_level1 || "",
-            relationship_level2: result.relationship_level2 || "",
-            sentiment: result.sentiment || ""
+            relationship_level1: n.relationship_level1 || "",
+            relationship_level2: n.relationship_level2 || "",
+            sentiment: n.sentiment || ""
           })];
         }
 
-        const actionLayer = buildActionLayerV3(result);
+        const actionLayer = buildActionLayerV3(n);
 
-        // v3 schema: store nested structures and keep core fields; do not emit legacy relationship/action flat fields.
-        result.relationships = relList;
-        result.action_layer = actionLayer;
-        delete result.relationship_level1;
-        delete result.relationship_level2;
-        delete result.relationship_multi;
-        delete result.sentiment;
-        delete result.action_category;
-        delete result.action_type;
-        delete result.action_context;
-        delete result.action_status;
-        delete result.narrative_function;
-
-        // Remove any legacy v3 wrapper field if present
-        delete result.relationship;
-
-        return result;
+        // v3 schema: only include v3-specific fields, explicitly construct the object
+        return {
+          id: n.id,
+          text_span: n.text_span,
+          event_type: n.event_type || "",
+          description: n.description || "",
+          agents: agents,
+          targets: targets,
+          target_type: n.target_type || "",
+          object_type: n.object_type || "",
+          instrument: n.instrument || "",
+          time_order: n.time_order,
+          // v3 only uses nested structures
+          relationships: relList,
+          action_layer: actionLayer
+        };
       }),
       themes_and_motifs: {
         ending_type: meta.ending_type,
@@ -1160,10 +1103,11 @@ export default function App() {
     if (selectedFolderPath && culture) {
       saveFolderCache({
         folderPath: selectedFolderPath,
+        selectedIndex: selectedStoryIndex >= 0 ? selectedStoryIndex : undefined,
         culture: culture
       });
     }
-  }, [culture, selectedFolderPath]);
+  }, [culture, selectedFolderPath, selectedStoryIndex]);
 
   // Keyboard shortcut: Cmd+S / Ctrl+S to save JSON
   useEffect(() => {

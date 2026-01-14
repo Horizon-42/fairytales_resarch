@@ -315,15 +315,37 @@ app.post('/api/save-cache', (req, res) => {
     
     // Create cache file in the parent folder
     const cachePath = path.join(fullFolderPath, '.annotation_cache.json');
+    
+    // If selectedIndex is undefined, try to preserve existing value from cache
+    let selectedIndexToSave = selectedIndex;
+    if (selectedIndexToSave === undefined) {
+      try {
+        if (fs.existsSync(cachePath)) {
+          const existingCache = JSON.parse(fs.readFileSync(cachePath, 'utf8'));
+          if (existingCache.selectedIndex !== undefined && existingCache.selectedIndex >= 0) {
+            selectedIndexToSave = existingCache.selectedIndex;
+            console.log(`[CACHE] Preserving existing selectedIndex: ${selectedIndexToSave}`);
+          }
+        }
+      } catch (err) {
+        console.warn(`[CACHE] Could not read existing cache to preserve selectedIndex:`, err);
+      }
+    }
+    
+    // Only use -1 as fallback if we still don't have a valid index
+    if (selectedIndexToSave === undefined || selectedIndexToSave < 0) {
+      selectedIndexToSave = -1;
+    }
+    
     const cacheData = {
-      selectedIndex: selectedIndex !== undefined ? selectedIndex : -1,
+      selectedIndex: selectedIndexToSave,
       culture: culture || null,
       timestamp: Date.now()
     };
     
     try {
       fs.writeFileSync(cachePath, JSON.stringify(cacheData, null, 2));
-      console.log(`[CACHE] Saved cache to: ${cachePath}`);
+      console.log(`[CACHE] Saved cache to: ${cachePath}, selectedIndex: ${selectedIndexToSave}`);
       return res.json({ success: true, path: cachePath });
     } catch (err) {
       console.error(`Failed to write cache file:`, err);

@@ -4,11 +4,30 @@ const CACHE_KEY = 'annotation_tool_folder_cache'; // Fallback for localStorage
 
 // Save cache to backend (stored in parent folder as .annotation_cache.json)
 export async function saveFolderCache(data) {
+  // If selectedIndex is undefined, try to preserve existing value from cache
+  let selectedIndexToSave = data.selectedIndex;
+  if (selectedIndexToSave === undefined && data.folderPath) {
+    try {
+      const existingCache = await loadFolderCache(data.folderPath);
+      if (existingCache && existingCache.selectedIndex !== undefined && existingCache.selectedIndex >= 0) {
+        selectedIndexToSave = existingCache.selectedIndex;
+        console.log(`[CACHE] Preserving existing selectedIndex: ${selectedIndexToSave}`);
+      }
+    } catch (error) {
+      console.warn('[CACHE] Could not load existing cache to preserve selectedIndex:', error);
+    }
+  }
+  
+  // Only use -1 as fallback if we still don't have a valid index
+  if (selectedIndexToSave === undefined || selectedIndexToSave < 0) {
+    selectedIndexToSave = -1;
+  }
+  
   if (!data.folderPath) {
     // Fallback to localStorage if no folderPath
     try {
       localStorage.setItem(CACHE_KEY, JSON.stringify({
-        selectedIndex: data.selectedIndex !== undefined ? data.selectedIndex : -1,
+        selectedIndex: selectedIndexToSave,
         culture: data.culture || null,
         timestamp: Date.now()
       }));
@@ -25,14 +44,14 @@ export async function saveFolderCache(data) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         folderPath: data.folderPath,
-        selectedIndex: data.selectedIndex !== undefined ? data.selectedIndex : -1,
+        selectedIndex: selectedIndexToSave,
         culture: data.culture || null
       })
     });
     
     if (response.ok) {
       const result = await response.json();
-      console.log(`[CACHE] Saved cache to folder: ${data.folderPath}`);
+      console.log(`[CACHE] Saved cache to folder: ${data.folderPath}, selectedIndex: ${selectedIndexToSave}`);
       return true;
     } else {
       const error = await response.json();
