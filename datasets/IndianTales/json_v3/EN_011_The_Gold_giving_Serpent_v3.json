@@ -1,0 +1,368 @@
+{
+  "version": "3.0",
+  "metadata": {
+    "id": "EN_011_The_Gold_giving_Serpent",
+    "title": "",
+    "culture": "Indian",
+    "annotator": "Deb",
+    "date_annotated": "2026-01-14",
+    "confidence": 0.8
+  },
+  "source_info": {
+    "language": "",
+    "type": "",
+    "reference_uri": "datasets/texts/EN_011_The_Gold_giving_Serpent.txt",
+    "text_content": "Now in a certain place there lived a Brahman named Haridatta. He was a farmer, but poor was the return his labour brought him. One day, at the end of the hot hours, the Brahman, overcome by the heat, lay down under the shadow of a tree to have a doze. Suddenly he saw a great hooded snake creeping out of an ant-hill near at hand. So he thought to himself, \"Sure this is the guardian deity of the field, and I have not ever worshipped it. That's why my farming is in vain. I will at once go and pay my respects to it.\"\nWhen he had made up his mind, he got some milk, poured it into a bowl, and went to the ant-hill, and said aloud: \"O Guardian of this Field! all this while I did not know that you dwelt here. That is why I have not yet paid my respects to you; pray forgive me.\" And he laid the milk down and went to his house. Next morning he came and looked, and he saw a gold denar in the bowl, and from that time onward every day the same thing occurred: he gave milk to the serpent and found a gold denar.\nOne day the Brahman had to go to the village, and so he ordered his son to take the milk to the ant-hill. The son brought the milk, put it down, and went back home. Next day he went again and found a denar, so he thought to himself: \"This ant-hill is surely full of golden denars; I'll kill the serpent, and take them all for myself.\" So next day, while he was giving the milk to the serpent, the Brahman's son struck it on the head with a cudgel. But the serpent escaped death by the will of fate, and in a rage bit the Brahman's son with its sharp fangs, and he fell down dead at once. His people raised him a funeral pyre not far from the field and burnt him to ashes.\nTwo days afterwards his father came back, and when he learnt his son's fate he grieved and mourned. But after a time, he took the bowl of milk, went to the ant-hill, and praised the serpent with a loud voice. After a long, long time the serpent appeared, but only with its head out of the opening of the ant-hill, and spoke to the Brahman: \"'Tis greed that brings you here, and makes you even forget the loss of your son. From this time forward friendship between us is impossible. Your son struck me in youthful ignorance, and I have bitten him to death. How can I forget the blow with the cudgel? And how can you forget the pain and grief at the loss of your son?\" So speaking, it gave the Brahman a costly pearl and disappeared. But before it went away it said: \"Come back no more.\" The Brahman took the pearl, and went back home, cursing the folly of his son.\n"
+  },
+  "characters": [
+    {
+      "name": "Haridatta",
+      "alias": "The Brahman",
+      "archetype": "Hero"
+    },
+    {
+      "name": "The Serpent",
+      "alias": "Guardian Deity of the Field",
+      "archetype": "Other"
+    },
+    {
+      "name": "Brahman's Son",
+      "alias": "",
+      "archetype": "Villain"
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "8afcde0a-66f7-4903-a0db-19e294722a5f",
+      "event_type": "Initial Situation",
+      "description": "Haridatta discovers the snake, assumes it is a deity, and offers milk to appease it for his farming failures.",
+      "agents": [
+        "Haridatta"
+      ],
+      "targets": [
+        "The Serpent"
+      ],
+      "text_span": {
+        "start": 252,
+        "end": 779,
+        "text": "Suddenly he saw a great hooded snake creeping out of an ant-hill near at hand. So he thought to himself, \"Sure this is the guardian deity of the field, and I have not ever worshipped it. That's why my farming is in vain. I will at once go and pay my respects to it.\"\nWhen he had made up his mind, he got some milk, poured it into a bowl, and went to the ant-hill, and said aloud: \"O Guardian of this Field! all this while I did not know that you dwelt here. That is why I have not yet paid my respects to you; pray forgive me.\""
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [
+        {
+          "agent": "Haridatta",
+          "target": "The Serpent",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "fearful"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "sacrifice",
+        "context": "",
+        "status": "success",
+        "function": "trigger"
+      }
+    },
+    {
+      "id": "81a09ad1-16e3-489b-80c6-866b31112c62",
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "The Serpent reciprocates the offering with a gold coin daily.",
+      "agents": [
+        "The Serpent"
+      ],
+      "targets": [
+        "Haridatta"
+      ],
+      "text_span": {
+        "start": 829,
+        "end": 1011,
+        "text": "Next morning he came and looked, and he saw a gold denar in the bowl, and from that time onward every day the same thing occurred: he gave milk to the serpent and found a gold denar."
+      },
+      "target_type": "object",
+      "object_type": "normal_object",
+      "instrument": "",
+      "time_order": 2,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": "setup"
+      }
+    },
+    {
+      "id": "959273b7-4917-4525-93ef-1b8e2cf331ca",
+      "event_type": "VILLAINY",
+      "description": "The son greedily assumes the hoard is inside the hill and plots to kill the snake.",
+      "agents": [
+        "Brahman's Son"
+      ],
+      "targets": [
+        "The Serpent"
+      ],
+      "text_span": {
+        "start": 1177,
+        "end": 1346,
+        "text": "Next day he went again and found a denar, so he thought to himself: \"This ant-hill is surely full of golden denars; I'll kill the serpent, and take them all for myself.\""
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationships": [
+        {
+          "agent": "Brahman's Son",
+          "target": "The Serpent",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "plot",
+        "context": "",
+        "status": "success",
+        "function": "trigger"
+      }
+    },
+    {
+      "id": "93c820a5-9699-4e91-936f-9225bafd9a7c",
+      "event_type": "PUNISHMENT",
+      "description": "The son attacks the snake; the snake survives and bites him in self-defense, killing him.",
+      "agents": [
+        "Brahman's Son",
+        "The Serpent"
+      ],
+      "targets": [
+        "The Serpent",
+        "Brahman's Son"
+      ],
+      "text_span": {
+        "start": 1348,
+        "end": 1600,
+        "text": "o next day, while he was giving the milk to the serpent, the Brahman's son struck it on the head with a cudgel. But the serpent escaped death by the will of fate, and in a rage bit the Brahman's son with its sharp fangs, and he fell down dead at once. "
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationships": [
+        {
+          "agent": "Brahman's Son",
+          "target": "The Serpent",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "",
+        "status": "success",
+        "function": "climax"
+      }
+    },
+    {
+      "id": "e5d664e6-b292-4261-89ec-c72d215e11de",
+      "event_type": "RETURN",
+      "description": "Haridatta tries to resume the relationship despite his son's death; the Serpent rejects him, citing the broken trust and mutual pain.",
+      "agents": [
+        "Haridatta"
+      ],
+      "targets": [
+        "The Serpent"
+      ],
+      "text_span": {
+        "start": 1784,
+        "end": 2165,
+        "text": "But after a time, he took the bowl of milk, went to the ant-hill, and praised the serpent with a loud voice. After a long, long time the serpent appeared, but only with its head out of the opening of the ant-hill, and spoke to the Brahman: \"'Tis greed that brings you here, and makes you even forget the loss of your son. From this time forward friendship between us is impossible."
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationships": [
+        {
+          "agent": "Haridatta",
+          "target": "The Serpent",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "ally",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "reconcile",
+        "context": "",
+        "status": "failure",
+        "function": "resolution"
+      }
+    },
+    {
+      "id": "dac25c33-27e2-44b7-85e3-4a9a33e92675",
+      "event_type": "DEPARTURE",
+      "description": "The Serpent gives a final parting gift (pearl) and banishes the Brahman forever.",
+      "agents": [
+        "The Serpent"
+      ],
+      "targets": [
+        "Haridatta"
+      ],
+      "text_span": {
+        "start": 2351,
+        "end": 2547,
+        "text": "So speaking, it gave the Brahman a costly pearl and disappeared. But before it went away it said: \"Come back no more.\" The Brahman took the pearl, and went back home, cursing the folly of his son."
+      },
+      "target_type": "object",
+      "object_type": "normal_object",
+      "instrument": "",
+      "time_order": 6,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": "resolution"
+      }
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "TRAGIC",
+    "key_values": [
+      "JUSTICE",
+      "OTHER (Greed)",
+      "OTHER (Irreparable harm)"
+    ],
+    "motif_type": [],
+    "atu_categories": [],
+    "obstacle_thrower": [
+      "Brahman's Son"
+    ],
+    "helper_type": [],
+    "thinking_process": "",
+    "atu_evidence": {},
+    "motif_evidence": {}
+  },
+  "analysis": {
+    "propp_functions": [
+      {
+        "id": "519bc3e5-f536-4ca9-9d13-c00b5515c567",
+        "fn": "Initial Situation",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 252,
+          "end": 779,
+          "text": "Suddenly he saw a great hooded snake creeping out of an ant-hill near at hand. So he thought to himself, \"Sure this is the guardian deity of the field, and I have not ever worshipped it. That's why my farming is in vain. I will at once go and pay my respects to it.\"\nWhen he had made up his mind, he got some milk, poured it into a bowl, and went to the ant-hill, and said aloud: \"O Guardian of this Field! all this while I did not know that you dwelt here. That is why I have not yet paid my respects to you; pray forgive me.\""
+        },
+        "evidence": "Haridatta discovers the snake, assumes it is a deity, and offers milk to appease it for his farming failures.",
+        "narrative_event_id": "8afcde0a-66f7-4903-a0db-19e294722a5f"
+      },
+      {
+        "id": "d3d21b9d-4c9b-4b2c-8126-e697472596db",
+        "fn": "RECEIPT_OF_AGENT",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 829,
+          "end": 1011,
+          "text": "Next morning he came and looked, and he saw a gold denar in the bowl, and from that time onward every day the same thing occurred: he gave milk to the serpent and found a gold denar."
+        },
+        "evidence": "The Serpent reciprocates the offering with a gold coin daily.",
+        "narrative_event_id": "81a09ad1-16e3-489b-80c6-866b31112c62"
+      },
+      {
+        "id": "4461cfc7-f8b8-47ef-9318-d2dbc625d883",
+        "fn": "VILLAINY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1177,
+          "end": 1346,
+          "text": "Next day he went again and found a denar, so he thought to himself: \"This ant-hill is surely full of golden denars; I'll kill the serpent, and take them all for myself.\""
+        },
+        "evidence": "The son greedily assumes the hoard is inside the hill and plots to kill the snake.",
+        "narrative_event_id": "959273b7-4917-4525-93ef-1b8e2cf331ca"
+      },
+      {
+        "id": "ea4d9a5a-2bad-444f-a3cc-1f3557868969",
+        "fn": "PUNISHMENT",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1348,
+          "end": 1600,
+          "text": "o next day, while he was giving the milk to the serpent, the Brahman's son struck it on the head with a cudgel. But the serpent escaped death by the will of fate, and in a rage bit the Brahman's son with its sharp fangs, and he fell down dead at once. "
+        },
+        "evidence": "The son attacks the snake; the snake survives and bites him in self-defense, killing him.",
+        "narrative_event_id": "93c820a5-9699-4e91-936f-9225bafd9a7c"
+      },
+      {
+        "id": "b6e62230-8514-4c44-b483-7a6543590873",
+        "fn": "RETURN",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1784,
+          "end": 2165,
+          "text": "But after a time, he took the bowl of milk, went to the ant-hill, and praised the serpent with a loud voice. After a long, long time the serpent appeared, but only with its head out of the opening of the ant-hill, and spoke to the Brahman: \"'Tis greed that brings you here, and makes you even forget the loss of your son. From this time forward friendship between us is impossible."
+        },
+        "evidence": "Haridatta tries to resume the relationship despite his son's death; the Serpent rejects him, citing the broken trust and mutual pain.",
+        "narrative_event_id": "e5d664e6-b292-4261-89ec-c72d215e11de"
+      },
+      {
+        "id": "1daccb6a-9dcc-420f-ab3e-5fd272b4ec64",
+        "fn": "DEPARTURE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 2351,
+          "end": 2547,
+          "text": "So speaking, it gave the Brahman a costly pearl and disappeared. But before it went away it said: \"Come back no more.\" The Brahman took the pearl, and went back home, cursing the folly of his son."
+        },
+        "evidence": "The Serpent gives a final parting gift (pearl) and banishes the Brahman forever.",
+        "narrative_event_id": "dac25c33-27e2-44b7-85e3-4a9a33e92675"
+      }
+    ],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}
