@@ -12,6 +12,7 @@ export default function StoryBrowser({
 }) {
   const [lastFolderPath, setLastFolderPath] = useState(null);
   const fileInputRef = useRef(null);
+  const isPickingDirectoryRef = useRef(false);
 
   useEffect(() => {
     const cache = loadFolderCache();
@@ -85,10 +86,17 @@ export default function StoryBrowser({
   };
 
   const handleOpenFolderClick = async (e) => {
+    // Prevent multiple simultaneous directory picker calls
+    if (isPickingDirectoryRef.current) {
+      return;
+    }
+
     // Prefer the modern directory picker on Linux Chrome when available.
     if (supportsDirectoryPicker && typeof onPickDirectory === "function") {
       e.preventDefault();
       e.stopPropagation();
+      
+      isPickingDirectoryRef.current = true;
       try {
         const dirHandle = await window.showDirectoryPicker();
         
@@ -111,9 +119,15 @@ export default function StoryBrowser({
         onPickDirectory(files, dirHandle.name || "selected_folder");
       } catch (err) {
         // User cancelled
-        if (err && err.name === "AbortError") return;
+        if (err && err.name === "AbortError") {
+          // User cancelled, just return
+          return;
+        }
         console.error("Failed to pick directory:", err);
         alert(`选择文件夹失败: ${err.message}`);
+      } finally {
+        // Always reset the flag, even if there was an error
+        isPickingDirectoryRef.current = false;
       }
       return;
     }

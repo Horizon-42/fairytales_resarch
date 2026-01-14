@@ -225,7 +225,7 @@ app.post('/api/load', (req, res) => {
     
     // Find texts folder in the path
     const textsIndex = pathParts.findIndex(part => 
-      part.toLowerCase() === 'texts' || part.toLowerCase() === 'traditional_texts'
+      part.toLowerCase() === 'texts'
     );
     
     if (textsIndex > 0) {

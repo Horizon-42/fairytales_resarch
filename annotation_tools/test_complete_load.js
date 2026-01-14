@@ -33,17 +33,9 @@ const findParentFolderForTextsFile = (searchDir, fileName) => {
         if (entry.name.startsWith('.') || entry.name.startsWith('json')) continue;
         
         const textsDir = path.join(searchDir, entry.name, 'texts');
-        const traditionalTextsDir = path.join(searchDir, entry.name, 'traditional_texts');
         
         if (fs.existsSync(textsDir)) {
           const txtFile = path.join(textsDir, `${fileName}.txt`);
-          if (fs.existsSync(txtFile)) {
-            return entry.name;
-          }
-        }
-        
-        if (fs.existsSync(traditionalTextsDir)) {
-          const txtFile = path.join(traditionalTextsDir, `${fileName}.txt`);
           if (fs.existsSync(txtFile)) {
             return entry.name;
           }
@@ -72,7 +64,7 @@ const fileName1 = path.basename(path1, path.extname(path1));
 let baseFolderPath1 = parts1.slice(0, -1).join('/');
 const lastPart1 = parts1.length >= 2 ? parts1[parts1.length - 2] : null;
 
-if (lastPart1 === 'texts' || lastPart1 === 'traditional_texts') {
+if (lastPart1 === 'texts') {
   if (parts1.length > 2) {
     baseFolderPath1 = parts1.slice(0, -2).join('/');
   } else {
@@ -96,7 +88,7 @@ const fileName2 = path.basename(path2, path.extname(path2));
 let baseFolderPath2 = parts2.slice(0, -1).join('/');
 const lastPart2 = parts2.length >= 2 ? parts2[parts2.length - 2] : null;
 
-if (lastPart2 === 'texts' || lastPart2 === 'traditional_texts') {
+if (lastPart2 === 'texts') {
   if (parts2.length > 2) {
     baseFolderPath2 = parts2.slice(0, -2).join('/');
   } else {

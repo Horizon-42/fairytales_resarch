@@ -31,7 +31,7 @@ const folderPathParts1 = folderPath1.split('/');
 const lastPart1 = folderPathParts1[folderPathParts1.length - 1];
 
 let fullPath1 = resolveFolderPath(folderPath1);
-if (lastPart1 === 'texts' || lastPart1 === 'traditional_texts') {
+if (lastPart1 === 'texts') {
   if (folderPathParts1.length > 1) {
     const parentPath = folderPathParts1.slice(0, -1).join('/');
     fullPath1 = resolveFolderPath(parentPath);
@@ -50,7 +50,7 @@ const folderPathParts2 = folderPath2.split('/');
 const lastPart2 = folderPathParts2[folderPathParts2.length - 1];
 
 let fullPath2 = resolveFolderPath(folderPath2);
-if (lastPart2 === 'texts' || lastPart2 === 'traditional_texts') {
+if (lastPart2 === 'texts') {
   if (folderPathParts2.length > 1) {
     const parentPath = folderPathParts2.slice(0, -1).join('/');
     fullPath2 = resolveFolderPath(parentPath);
@@ -70,7 +70,7 @@ const fileName3 = path.basename(originalPath3, path.extname(originalPath3));
 let baseFolderPath3 = pathParts3.slice(0, -1).join('/');
 const lastPart3 = pathParts3.length >= 2 ? pathParts3[pathParts3.length - 2] : null;
 
-if (lastPart3 === 'texts' || lastPart3 === 'traditional_texts') {
+if (lastPart3 === 'texts') {
   if (pathParts3.length > 2) {
     baseFolderPath3 = pathParts3.slice(0, -2).join('/');
   }

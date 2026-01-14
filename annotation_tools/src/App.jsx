@@ -3,6 +3,7 @@ import { organizeFiles, mapV1ToState, mapV2ToState, mapV3ToState, generateUUID }
 import { downloadJson, relPathToDatasetHint, HIGHLIGHT_COLORS, emptyProppFn, extractEnglishFromRelationship, buildActionLayer } from "./utils/helpers.js";
 import { saveFolderCache, loadFolderCache, extractFolderPath } from "./utils/folderCache.js";
 import { getBackendUrl, clearBackendCache } from "./utils/backendConfig.js";
+import { getAnnotationServerUrl, getAnnotationServerUrlSync, clearAnnotationServerCache } from "./utils/annotationServerConfig.js";
 import { deriveTextSectionsFromNarratives } from "./utils/summarySections.js";
 import { VERSION } from "./version.js";
 
@@ -1044,7 +1045,9 @@ export default function App() {
     const folderPathToUse = selectedFolderPath;
 
     try {
-      const response = await fetch("http://localhost:3001/api/save", {
+      const serverUrl = getAnnotationServerUrl();
+      console.log(`[SAVE] Attempting to save ${version} to: ${serverUrl}/api/save`);
+      const response = await fetch(`${serverUrl}/api/save`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -1054,6 +1057,8 @@ export default function App() {
           version: version
         })
       });
+      
+      console.log(`[SAVE] Response status: ${response.status}`);
 
       const result = await response.json();
       if (response.ok) {
@@ -1096,6 +1101,8 @@ export default function App() {
     getBackendUrl().catch(err => {
       console.warn("Backend port discovery failed, will use default port:", err);
     });
+    
+    // Annotation server URL is now fixed (3001 or from env var), no discovery needed
   }, []); // Run once on mount
 
   // Save culture to cache when it changes (only if folder is selected)
@@ -1173,12 +1180,14 @@ export default function App() {
 
       // Use sendBeacon as primary method (designed for page unload)
       // Modern browsers block synchronous XHR during page dismissal
+      // Use sync version since sendBeacon is synchronous
+      const serverUrl = getAnnotationServerUrlSync();
       if (navigator.sendBeacon) {
         try {
           // sendBeacon requires Blob or FormData, not string
           // Create a Blob with text/plain type so server can parse it
           const blob = new Blob([payload], { type: 'text/plain' });
-          const sent = navigator.sendBeacon("http://localhost:3001/api/save", blob);
+          const sent = navigator.sendBeacon(`${serverUrl}/api/save`, blob);
           if (sent) {
             setLastAutoSave(new Date());
           } else {
@@ -1190,7 +1199,7 @@ export default function App() {
       } else {
         // Fallback: Try fetch with keepalive (if sendBeacon not available)
         try {
-          fetch("http://localhost:3001/api/save", {
+          fetch(`${serverUrl}/api/save`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: payload,
@@ -1604,7 +1613,9 @@ export default function App() {
     
     if (folderPathToUse && folderPathToUse.trim() !== '') {
       try {
-        const response = await fetch("http://localhost:3001/api/load", {
+        const serverUrl = getAnnotationServerUrl();
+        console.log(`[LOAD] Attempting to load from: ${serverUrl}/api/load`);
+        const response = await fetch(`${serverUrl}/api/load`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ 
@@ -1629,7 +1640,8 @@ export default function App() {
     // Fallback: try with originalPath
     // This is mainly for backward compatibility
     try {
-      const response = await fetch("http://localhost:3001/api/load", {
+      const serverUrl = getAnnotationServerUrl();
+      const response = await fetch(`${serverUrl}/api/load`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ originalPath: story.path })
