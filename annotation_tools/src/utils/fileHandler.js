@@ -295,6 +295,152 @@ export function mapV2ToState(data) {
   };
 }
 
+// Merge two state objects, taking union of data (v3 takes priority for conflicts)
+export function mergeV2V3States(v2State, v3State) {
+  if (!v2State && !v3State) return null;
+  if (!v2State) return v3State;
+  if (!v3State) return v2State;
+
+  // Helper to merge arrays by id (union)
+  const mergeArraysById = (arr1, arr2) => {
+    const map = new Map();
+    // Add all items from arr1
+    (arr1 || []).forEach(item => {
+      if (item && item.id) {
+        map.set(item.id, item);
+      }
+    });
+    // Add/override with items from arr2 (v3 takes priority)
+    (arr2 || []).forEach(item => {
+      if (item && item.id) {
+        map.set(item.id, item);
+      }
+    });
+    return Array.from(map.values());
+  };
+
+  // Helper to merge arrays without id (simple union, dedupe by content)
+  const mergeArraysSimple = (arr1, arr2) => {
+    const combined = [...(arr1 || []), ...(arr2 || [])];
+    // Simple deduplication for arrays without id
+    const seen = new Set();
+    return combined.filter(item => {
+      const key = JSON.stringify(item);
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+  };
+
+  return {
+    // Basic fields: v3 takes priority, fallback to v2
+    id: v3State.id || v2State.id || "",
+    culture: v3State.culture || v2State.culture || "",
+    title: v3State.title || v2State.title || "",
+    annotationLevel: v3State.annotationLevel || v2State.annotationLevel || "story",
+
+    // Meta: merge objects, v3 takes priority
+    meta: {
+      ...v2State.meta,
+      ...v3State.meta,
+      // For arrays in meta, merge them
+      key_values: mergeArraysSimple(v2State.meta?.key_values || [], v3State.meta?.key_values || [])
+    },
+
+    // Motif: merge objects, v3 takes priority
+    motif: {
+      ...v2State.motif,
+      ...v3State.motif,
+      // Merge arrays in motif
+      character_archetypes: mergeArraysSimple(
+        v2State.motif?.character_archetypes || [],
+        v3State.motif?.character_archetypes || []
+      ),
+      motif_type: mergeArraysSimple(
+        v2State.motif?.motif_type || [],
+        v3State.motif?.motif_type || []
+      ),
+      atu_categories: mergeArraysSimple(
+        v2State.motif?.atu_categories || [],
+        v3State.motif?.atu_categories || []
+      ),
+      obstacle_thrower: mergeArraysSimple(
+        v2State.motif?.obstacle_thrower || [],
+        v3State.motif?.obstacle_thrower || []
+      ),
+      helper_type: mergeArraysSimple(
+        v2State.motif?.helper_type || [],
+        v3State.motif?.helper_type || []
+      ),
+      // Merge evidence maps
+      atu_evidence: {
+        ...(v2State.motif?.atu_evidence || {}),
+        ...(v3State.motif?.atu_evidence || {})
+      },
+      motif_evidence: {
+        ...(v2State.motif?.motif_evidence || {}),
+        ...(v3State.motif?.motif_evidence || {})
+      }
+    },
+
+    // Narrative Structure: merge by id (v3 takes priority for same id)
+    narrativeStructure: mergeArraysById(
+      v2State.narrativeStructure || [],
+      v3State.narrativeStructure || []
+    ),
+
+    // Propp Functions: merge by id (v3 takes priority for same id)
+    proppFns: mergeArraysById(
+      v2State.proppFns || [],
+      v3State.proppFns || []
+    ),
+
+    // Paragraph Summaries: merge objects, v3 takes priority
+    paragraphSummaries: {
+      perSection: {
+        ...(v2State.paragraphSummaries?.perSection || {}),
+        ...(v3State.paragraphSummaries?.perSection || {})
+      },
+      combined: mergeArraysById(
+        v2State.paragraphSummaries?.combined || [],
+        v3State.paragraphSummaries?.combined || []
+      ),
+      whole: v3State.paragraphSummaries?.whole || v2State.paragraphSummaries?.whole || ""
+    },
+
+    // Cross Validation: merge objects, v3 takes priority
+    crossValidation: {
+      ...v2State.crossValidation,
+      ...v3State.crossValidation,
+      bias_reflection: {
+        ...(v2State.crossValidation?.bias_reflection || {}),
+        ...(v3State.crossValidation?.bias_reflection || {}),
+        ambiguous_motifs: mergeArraysSimple(
+          v2State.crossValidation?.bias_reflection?.ambiguous_motifs || [],
+          v3State.crossValidation?.bias_reflection?.ambiguous_motifs || []
+        )
+      }
+    },
+
+    // QA: v3 takes priority
+    qa: {
+      ...v2State.qa,
+      ...v3State.qa
+    },
+
+    // Source Text: v3 takes priority
+    sourceText: v3State.sourceText || v2State.sourceText || {
+      text: "",
+      language: "",
+      type: "",
+      reference_uri: ""
+    },
+
+    // Propp Notes: v3 takes priority
+    proppNotes: v3State.proppNotes || v2State.proppNotes || ""
+  };
+}
+
 // Helper to map V3 JSON to App State
 export function mapV3ToState(data) {
   const meta = data.metadata || {};

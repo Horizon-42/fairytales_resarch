@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useEffect, useRef } from "react";
-import { organizeFiles, mapV1ToState, mapV2ToState, mapV3ToState, generateUUID } from "./utils/fileHandler.js";
+import { organizeFiles, mapV1ToState, mapV2ToState, mapV3ToState, mergeV2V3States, generateUUID } from "./utils/fileHandler.js";
 import { downloadJson, relPathToDatasetHint, HIGHLIGHT_COLORS, emptyProppFn, buildActionLayer } from "./utils/helpers.js";
 import { saveFolderCache, loadFolderCache, extractFolderPath } from "./utils/folderCache.js";
 import { getBackendUrl, clearBackendCache } from "./utils/backendConfig.js";
@@ -1046,7 +1046,6 @@ export default function App() {
 
     try {
       const serverUrl = getAnnotationServerUrl();
-      console.log(`[SAVE] Attempting to save ${version} to: ${serverUrl}/api/save`);
       const response = await fetch(`${serverUrl}/api/save`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -1057,8 +1056,6 @@ export default function App() {
           version: version
         })
       });
-      
-      console.log(`[SAVE] Response status: ${response.status}`);
 
       const result = await response.json();
       if (response.ok) {
@@ -1080,9 +1077,9 @@ export default function App() {
       if (!silent) alert("No story selected to save.");
       return;
     }
-    await handleSave("v1", true);
-    await handleSave("v2", true);
+    // Save v3 first (default), then v2 (backward compatibility), skip v1
     await handleSave("v3", true);
+    await handleSave("v2", true);
     if (!silent) setLastAutoSave(new Date());
   };
 
@@ -1123,11 +1120,10 @@ export default function App() {
       if ((e.metaKey || e.ctrlKey) && e.key === 's') {
         e.preventDefault(); // Prevent default browser save behavior
 
-        // Save v1 + v2 + v3
+        // Save v3 first (default), then v2 (backward compatibility), skip v1
         if (selectedStoryIndex >= 0 && storyFiles[selectedStoryIndex]) {
-          handleSave("v1", true);
-          handleSave("v2", true);
           handleSave("v3", true);
+          handleSave("v2", true);
         } else {
           alert("No story selected to save.");
         }
@@ -1143,9 +1139,9 @@ export default function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       if (selectedStoryIndex !== -1) {
-        saveRef.current("v1", true);
-        saveRef.current("v2", true);
+        // Auto-save: v3 first (default), then v2 (backward compatibility), skip v1
         saveRef.current("v3", true);
+        saveRef.current("v2", true);
       }
     }, 5 * 60 * 1000);
 
@@ -1190,8 +1186,6 @@ export default function App() {
           const sent = navigator.sendBeacon(`${serverUrl}/api/save`, blob);
           if (sent) {
             setLastAutoSave(new Date());
-          } else {
-            console.warn(`Auto-save ${version} failed: sendBeacon returned false`);
           }
         } catch (beaconErr) {
           console.error(`Auto-save ${version} error:`, beaconErr);
@@ -1215,10 +1209,9 @@ export default function App() {
       }
     };
 
-    // Save all versions
-    saveData("v1");
-    saveData("v2");
+    // Save v3 first (default), then v2 (backward compatibility), skip v1
     saveData("v3");
+    saveData("v2");
   }, [selectedStoryIndex, storyFiles, jsonV1, jsonV2, jsonV3, selectedFolderPath]);
 
   // Save before page unload/refresh
@@ -1491,9 +1484,9 @@ export default function App() {
     // If there's already loaded data, save it before loading new folder
     if (selectedStoryIndex >= 0 && storyFiles[selectedStoryIndex]) {
       try {
-        await handleSave("v1", true);
-        await handleSave("v2", true);
+        // Save v3 first (default), then v2 (backward compatibility), skip v1
         await handleSave("v3", true);
+        await handleSave("v2", true);
       } catch (err) {
         console.error("Failed to save before opening new folder:", err);
         // Continue loading new folder even if save fails
@@ -1615,6 +1608,56 @@ export default function App() {
       try {
         const serverUrl = getAnnotationServerUrl();
         console.log(`[LOAD] Attempting to load from: ${serverUrl}/api/load`);
+        
+        // Try to load both v3 and v2, then merge them
+        const [v3Response, v2Response] = await Promise.allSettled([
+          fetch(`${serverUrl}/api/load`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ 
+              folderPath: folderPathToUse,
+              fileName: idGuess,
+              version: 3
+            })
+          }),
+          fetch(`${serverUrl}/api/load`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ 
+              folderPath: folderPathToUse,
+              fileName: idGuess,
+              version: 2
+            })
+          })
+        ]);
+
+        let v3State = null;
+        let v2State = null;
+
+        // Process v3 response
+        if (v3Response.status === 'fulfilled' && v3Response.value.ok) {
+          const v3Result = await v3Response.value.json();
+          if (v3Result.found && v3Result.content && v3Result.version === 3) {
+            v3State = mapV3ToState(v3Result.content);
+          }
+        }
+
+        // Process v2 response
+        if (v2Response.status === 'fulfilled' && v2Response.value.ok) {
+          const v2Result = await v2Response.value.json();
+          if (v2Result.found && v2Result.content && v2Result.version === 2) {
+            v2State = mapV2ToState(v2Result.content);
+          }
+        }
+
+        // Merge v2 and v3 states (union)
+        const mergedState = mergeV2V3States(v2State, v3State);
+        if (mergedState) {
+          loadState(mergedState);
+          return;
+        }
+
+        // Fallback: try single version load (backward compatibility)
         const response = await fetch(`${serverUrl}/api/load`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -1626,11 +1669,14 @@ export default function App() {
         
         const result = await response.json();
         if (result.found && result.content) {
+          // Load v3 first (default), fallback to v2 if v3 doesn't exist, never load v1
           const mappedState = result.version === 3
             ? mapV3ToState(result.content)
-            : (result.version === 2 ? mapV2ToState(result.content) : mapV1ToState(result.content));
-          loadState(mappedState);
-          return;
+            : (result.version === 2 ? mapV2ToState(result.content) : null);
+          if (mappedState) {
+            loadState(mappedState);
+            return;
+          }
         }
       } catch (err) {
         console.warn("Server load failed with selectedFolderPath, trying originalPath", err);
@@ -1641,6 +1687,48 @@ export default function App() {
     // This is mainly for backward compatibility
     try {
       const serverUrl = getAnnotationServerUrl();
+      
+      // Try to load both v3 and v2, then merge them
+      const [v3Response, v2Response] = await Promise.allSettled([
+        fetch(`${serverUrl}/api/load`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ originalPath: story.path, version: 3 })
+        }),
+        fetch(`${serverUrl}/api/load`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ originalPath: story.path, version: 2 })
+        })
+      ]);
+
+      let v3State = null;
+      let v2State = null;
+
+      // Process v3 response
+      if (v3Response.status === 'fulfilled' && v3Response.value.ok) {
+        const v3Result = await v3Response.value.json();
+        if (v3Result.found && v3Result.content && v3Result.version === 3) {
+          v3State = mapV3ToState(v3Result.content);
+        }
+      }
+
+      // Process v2 response
+      if (v2Response.status === 'fulfilled' && v2Response.value.ok) {
+        const v2Result = await v2Response.value.json();
+        if (v2Result.found && v2Result.content && v2Result.version === 2) {
+          v2State = mapV2ToState(v2Result.content);
+        }
+      }
+
+      // Merge v2 and v3 states (union)
+      const mergedState = mergeV2V3States(v2State, v3State);
+      if (mergedState) {
+        loadState(mergedState);
+        return;
+      }
+
+      // Fallback: try single version load (backward compatibility)
       const response = await fetch(`${serverUrl}/api/load`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -1649,33 +1737,47 @@ export default function App() {
       
       const result = await response.json();
       if (result.found && result.content) {
+        // Load v3 first (default), fallback to v2 if v3 doesn't exist, never load v1
         const mappedState = result.version === 3
           ? mapV3ToState(result.content)
-          : (result.version === 2 ? mapV2ToState(result.content) : mapV1ToState(result.content));
-        loadState(mappedState);
-        return;
+          : (result.version === 2 ? mapV2ToState(result.content) : null);
+        if (mappedState) {
+          loadState(mappedState);
+          return;
+        }
       }
     } catch (err) {
       console.warn("Server load failed, falling back to browser memory files", err);
     }
 
-    let jsonFile = (v3Map && v3Map[idGuess]) ? v3Map[idGuess] : v2Map[idGuess];
-    let version = (v3Map && v3Map[idGuess]) ? 3 : 2;
-    
-    if (!jsonFile) {
-      jsonFile = v1Map[idGuess];
-      version = 1;
+    // Load both v3 and v2 from browser memory, then merge them (union)
+    let v3State = null;
+    let v2State = null;
+
+    if (v3Map && v3Map[idGuess]) {
+      try {
+        const content = await v3Map[idGuess].text();
+        const data = JSON.parse(content);
+        v3State = mapV3ToState(data);
+      } catch (err) {
+        console.error("Failed to load v3 JSON from memory", err);
+      }
     }
 
-    if (jsonFile) {
+    if (v2Map && v2Map[idGuess]) {
       try {
-        const content = await jsonFile.text();
+        const content = await v2Map[idGuess].text();
         const data = JSON.parse(content);
-        const mappedState = version === 3 ? mapV3ToState(data) : (version === 2 ? mapV2ToState(data) : mapV1ToState(data));
-        loadState(mappedState);
+        v2State = mapV2ToState(data);
       } catch (err) {
-        console.error("Failed to load JSON annotation from memory", err);
+        console.error("Failed to load v2 JSON from memory", err);
       }
+    }
+
+    // Merge v2 and v3 states (union)
+    const mergedState = mergeV2V3States(v2State, v3State);
+    if (mergedState) {
+      loadState(mergedState);
     }
   };
 

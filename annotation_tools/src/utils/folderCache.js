@@ -13,10 +13,9 @@ export async function saveFolderCache(data) {
       const existingCache = await loadFolderCache(data.folderPath);
       if (existingCache && existingCache.selectedIndex !== undefined && existingCache.selectedIndex >= 0) {
         selectedIndexToSave = existingCache.selectedIndex;
-        console.log(`[CACHE] Preserving existing selectedIndex: ${selectedIndexToSave}`);
       }
     } catch (error) {
-      console.warn('[CACHE] Could not load existing cache to preserve selectedIndex:', error);
+      // Silently ignore cache load errors
     }
   }
   
@@ -54,7 +53,6 @@ export async function saveFolderCache(data) {
     
     if (response.ok) {
       const result = await response.json();
-      console.log(`[CACHE] Saved cache to folder: ${data.folderPath}, selectedIndex: ${selectedIndexToSave}`);
       return true;
     } else {
       const error = await response.json();
@@ -81,7 +79,6 @@ export async function loadFolderCache(folderPath = null) {
       if (response.ok) {
         const result = await response.json();
         if (result.found && result.data) {
-          console.log(`[CACHE] Loaded cache from folder: ${folderPath}`);
           return {
             selectedIndex: result.data.selectedIndex !== undefined ? result.data.selectedIndex : -1,
             culture: result.data.culture || null,
