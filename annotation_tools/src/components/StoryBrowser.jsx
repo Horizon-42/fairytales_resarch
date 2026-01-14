@@ -47,24 +47,30 @@ export default function StoryBrowser({
         if (entryHandle.kind === "directory") {
           const dirNameLower = entryName.toLowerCase();
           
-          // Check if this is a texts folder (case insensitive)
+          // Only walk into exactly "texts" folder (case insensitive)
+          // Skip all other directories including "texts copy", "traditional_texts", etc.
           if (dirNameLower === 'texts') {
             hasTextsFolder = true;
-            // Only walk into texts folder, not traditional_texts
-            await walk(entryHandle, `${prefix}/${entryName}`);
-          } else if (dirNameLower === 'traditional_texts') {
-            // Skip traditional_texts folder - don't walk into it
-            continue;
-          } else {
-            // Walk into other directories
+            // Only walk into texts folder
             await walk(entryHandle, `${prefix}/${entryName}`);
           }
+          // Skip all other directories (texts copy, traditional_texts, json folders, etc.)
         } else if (entryHandle.kind === "file") {
-          // Only collect files that are in the texts folder (not traditional_texts)
-          // Check if the path contains traditional_texts
+          // Only collect files that are directly in the texts folder or its subdirectories
+          // Check if the path contains unwanted folders
           const fullPath = `${prefix}/${entryName}`;
-          if (fullPath.toLowerCase().includes('/traditional_texts/')) {
-            continue; // Skip files in traditional_texts folder
+          const fullPathLower = fullPath.toLowerCase();
+          
+          // Skip files in traditional_texts, texts copy, or other unwanted folders
+          if (fullPathLower.includes('/traditional_texts/') || 
+              fullPathLower.includes('/texts copy/') ||
+              fullPathLower.includes('/texts_copy/')) {
+            continue;
+          }
+          
+          // Only collect files from texts folder (prefix should contain /texts/ or end with /texts)
+          if (!fullPathLower.includes('/texts/') && !fullPathLower.endsWith('/texts')) {
+            continue; // Skip files not in texts folder
           }
           
           const lower = entryName.toLowerCase();

@@ -8,10 +8,20 @@ export function organizeFiles(fileList) {
 
   Array.from(fileList).forEach((file) => {
     const path = file.webkitRelativePath || file.name;
+    const pathLower = path.toLowerCase();
     
-    // Skip files in traditional_texts folder - only read from texts folder
-    if (path.toLowerCase().includes('/traditional_texts/')) {
+    // Skip files in unwanted folders - only read from texts folder
+    // Skip traditional_texts, texts copy, texts_copy, etc.
+    if (pathLower.includes('/traditional_texts/') || 
+        pathLower.includes('/texts copy/') ||
+        pathLower.includes('/texts_copy/')) {
       return;
+    }
+    
+    // Only process files from texts folder
+    // Check if path contains /texts/ or ends with /texts (for files directly in texts root)
+    if (!pathLower.includes('/texts/') && !pathLower.startsWith('texts/')) {
+      return; // Skip files not in texts folder
     }
     
     const parts = path.split('/');
