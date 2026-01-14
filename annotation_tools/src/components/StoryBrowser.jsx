@@ -105,12 +105,12 @@ export default function StoryBrowser({
         
         // Validate: folder must contain a texts subfolder
         if (!hasTextsFolder) {
-          alert(`错误：选择的文件夹必须包含 "texts" 子文件夹。\n\n请选择包含 texts 文件夹的父文件夹（例如：Japanese_test2）。`);
+          alert(`Error: The selected folder must contain a 'texts' subfolder.\n\nPlease select the parent folder that contains the 'texts' folder (e.g., Japanese_test2).`);
           return;
         }
         
         if (files.length === 0) {
-          alert("错误：选择的文件夹中没有找到任何 .txt 文件。");
+          alert("Error: No .txt files found in the selected folder.");
           return;
         }
         
@@ -124,7 +124,7 @@ export default function StoryBrowser({
           return;
         }
         console.error("Failed to pick directory:", err);
-        alert(`选择文件夹失败: ${err.message}`);
+        alert(`Failed to select folder: ${err.message}`);
       } finally {
         // Always reset the flag, even if there was an error
         isPickingDirectoryRef.current = false;

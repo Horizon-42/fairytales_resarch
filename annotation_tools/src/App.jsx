@@ -1530,7 +1530,7 @@ export default function App() {
     
     if (!folderPath) {
       console.error(`[EXTRACT] Could not determine parent folder path`);
-      alert("错误：无法确定父文件夹路径。请确保选择的文件夹包含 texts 子文件夹。");
+      alert("Error: Unable to determine parent folder path. Please ensure the selected folder contains a 'texts' subfolder.");
       return;
     }
     
