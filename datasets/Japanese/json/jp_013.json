@@ -1,0 +1,478 @@
+{
+  "id": "jp_013",
+  "culture": "Japanese",
+  "title": "",
+  "source_text": {
+    "text": "　むかしむかし、あるところに、びんぼうだけど心優しいおじいさんとおばあさんがいました。\n　ある年の大晦日(おおみそか)のことです。\n　おじいさんとおばあさんは二人でかさを作りました。\n　それを町へ持って行って売り、お正月のおもちを買うつもりです。\n「かさは五つもあるから、もちぐらい買えるだろう」\n「おねがいしますね。それから、今夜は雪になりますから、気をつけて下さいよ」\n　おじいさんは五つのかさを持って出かけました。\n　家を出てまもなく、雪が降ってきました。\n　雪はだんだん激しくなったので、おじいさんはせっせと道を急ぎました。\n　村はずれまで来ると、お地蔵様(おじぞう(→詳細)さま)が六つならんで立っています。\n　お地蔵様の頭にも肩にも、雪が積もっています。\n　これを見たおじいさんは、そのまま通り過ぎることが出来ませんでした。\n「お地蔵様。雪が降って寒かろうな。せめて、このかさをかぶってください」\n　おじいさんはお地蔵様に、売るつもりのかさをかぶせてやりました。\n　でも、お地蔵様は六つなのにかさは五つしかありません。\n　そこでおじいさんは、自分のかさを脱いで、最後のお地蔵様にかぶせてやりました。\n　家へ帰ると、おばあさんがビックリして言いました。\n「まあまあ、ずいぶん早かったですねぇ。それに、おじいさんのかさはどうしました？」\n　おじいさんは、お地蔵様のことを話してやりました。\n「まあまあ、それはよいことをしましたねえ。おもちなんてなくてもいいですよ」\n　おばあさんはニコニコして言いました。\n　その夜、夜中だと言うのに、ふしぎな歌が聞こえてきました。\n♪じいさんの家はどこだ。\n♪かさのお礼を届けに来たぞ。\n♪じいさんの家はどこだ。\n♪かさのお礼を届けに来たぞ。\n　歌声はどんどん近づいて、とうとうおじいさんの家の前まで来ると、ズシーン！　と、何かをおく音がして、そのまま消えてしまいました。\n　おじいさんがそっと戸を開けてみると、おじいさんのあげたかさをかぶったお地蔵様の後ろ姿が見えました。\n　そして家の前には、お正月用のおもちやごちそうが、山のようにおいてありました",
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "datasets/Japanese/texts/jp_013.txt"
+  },
+  "metadata": {
+    "main_motif": "",
+    "atu_type": "",
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [],
+    "target_motif": true
+  },
+  "thinking_process": "",
+  "annotation": {
+    "motif": {
+      "atu_type": "",
+      "atu_categories": [],
+      "motif_type": [],
+      "character_archetypes": [
+        {
+          "name": "おじいさん",
+          "alias": "",
+          "archetype": "Hero"
+        },
+        {
+          "name": "おばあさん",
+          "alias": "",
+          "archetype": "Sidekick/Helper"
+        },
+        {
+          "name": "お地蔵様",
+          "alias": "",
+          "archetype": "Guardian"
+        }
+      ],
+      "obstacle_pattern": "",
+      "obstacle_thrower": [],
+      "helper_type": [],
+      "thinking_process": "",
+      "atu_evidence": {},
+      "motif_evidence": {}
+    },
+    "deep": {
+      "paragraph_summaries": {
+        "per_section": {},
+        "combined": [],
+        "whole": ""
+      },
+      "propp_functions": [
+        {
+          "id": "770de95f-4c17-49fc-bc2a-c19e652bf113",
+          "fn": "Initial Situation",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 1,
+            "end": 43,
+            "text": "むかしむかし、あるところに、びんぼうだけど心優しいおじいさんとおばあさんがいました。"
+          },
+          "evidence": "むかしむかし、あるところに、びんぼうだけど心優しいおじいさんとおばあさんがいました。",
+          "narrative_event_id": "a118cc3f-6dc1-479d-a27c-153d67e1d1a8"
+        },
+        {
+          "id": "96c69814-e2b9-4747-9913-7a3a6c513cec",
+          "fn": "DEPARTURE",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 188,
+            "end": 210,
+            "text": "おじいさんは五つのかさを持って出かけました。"
+          },
+          "evidence": "おじいさんは五つのかさを持って出かけました。",
+          "narrative_event_id": "5760b819-0d5b-4e66-a608-e15d8ac80458"
+        },
+        {
+          "id": "ac289ae8-abf6-4ff6-b1ac-a4170e5a9b30",
+          "fn": "FIRST_FUNCTION_DONOR",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 311,
+            "end": 333,
+            "text": "お地蔵様の頭にも肩にも、雪が積もっています。"
+          },
+          "evidence": "お地蔵様の頭にも肩にも、雪が積もっています。",
+          "narrative_event_id": "70779b57-9d78-46ab-b5b8-bd590316ba02"
+        },
+        {
+          "id": "489f06e0-1569-48e8-a002-00054a552388",
+          "fn": "HERO_REACTION",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 406,
+            "end": 437,
+            "text": "おじいさんはお地蔵様に、売るつもりのかさをかぶせてやりました。"
+          },
+          "evidence": "おじいさんはお地蔵様に、売るつもりのかさをかぶせてやりました。",
+          "narrative_event_id": "ea7ff5e5-3e3b-4dec-a483-286c9c825ffb"
+        },
+        {
+          "id": "472a1e67-f5ef-4f92-92d3-e9c4d8e38e25",
+          "fn": "HERO_REACTION",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 439,
+            "end": 505,
+            "text": "でも、お地蔵様は六つなのにかさは五つしかありません。\n　そこでおじいさんは、自分のかさを脱いで、最後のお地蔵様にかぶせてやりました。"
+          },
+          "evidence": "でも、お地蔵様は六つなのにかさは五つしかありません。\n　そこでおじいさんは、自分のかさを脱いで、最後のお地蔵様にかぶせてやりました。",
+          "narrative_event_id": "c35bcfb8-b888-474e-8cc7-609a067ac57b"
+        },
+        {
+          "id": "6a187cff-0e04-4c3d-b0b6-a2a448e9614c",
+          "fn": "RETURN",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 507,
+            "end": 531,
+            "text": "家へ帰ると、おばあさんがビックリして言いました。"
+          },
+          "evidence": "家へ帰ると、おばあさんがビックリして言いました。",
+          "narrative_event_id": "a30dd765-0755-4ee3-8962-07aa382d1dba"
+        },
+        {
+          "id": "0d89d0dd-1c1b-45f8-ba24-1e03d74d8a60",
+          "fn": "RECEIPT_OF_AGENT",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 687,
+            "end": 897,
+            "text": "♪じいさんの家はどこだ。\n♪かさのお礼を届けに来たぞ。\n♪じいさんの家はどこだ。\n♪かさのお礼を届けに来たぞ。\n　歌声はどんどん近づいて、とうとうおじいさんの家の前まで来ると、ズシーン！　と、何かをおく音がして、そのまま消えてしまいました。\n　おじいさんがそっと戸を開けてみると、おじいさんのあげたかさをかぶったお地蔵様の後ろ姿が見えました。\n　そして家の前には、お正月用のおもちやごちそうが、山のようにおいてありました"
+          },
+          "evidence": "♪じいさんの家はどこだ。\n♪かさのお礼を届けに来たぞ。\n♪じいさんの家はどこだ。\n♪かさのお礼を届けに来たぞ。\n　歌声はどんどん近づいて、とうとうおじいさんの家の前まで来ると、ズシーン！　と、何かをお",
+          "narrative_event_id": "a35d51ed-fb75-41ac-9ba2-507a31864054"
+        }
+      ],
+      "propp_notes": ""
+    }
+  },
+  "narrative_structure": [
+    {
+      "event_type": "OTHER",
+      "description": "",
+      "id": "446eb08e-6102-4a2b-a3d0-82e6aec09f76",
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "",
+      "narrative_function": ""
+    },
+    {
+      "id": "a118cc3f-6dc1-479d-a27c-153d67e1d1a8",
+      "event_type": "Initial Situation",
+      "description": "むかしむかし、あるところに、びんぼうだけど心優しいおじいさんとおばあさんがいました。",
+      "agents": [
+        "おじいさん",
+        "おばあさん"
+      ],
+      "targets": [],
+      "text_span": {
+        "start": 1,
+        "end": 43,
+        "text": "むかしむかし、あるところに、びんぼうだけど心優しいおじいさんとおばあさんがいました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "action_category": "existential",
+      "action_type": "",
+      "action_context": "",
+      "relationship_multi": [
+        {
+          "agent": "おじいさん",
+          "target": "おじいさん",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "spouse",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_status": "success",
+      "narrative_function": ""
+    },
+    {
+      "id": "5760b819-0d5b-4e66-a608-e15d8ac80458",
+      "event_type": "DEPARTURE",
+      "description": "おじいさんは五つのかさを持って出かけました。",
+      "agents": [
+        "おじいさん"
+      ],
+      "targets": [],
+      "text_span": {
+        "start": 188,
+        "end": 210,
+        "text": "おじいさんは五つのかさを持って出かけました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "neutral",
+      "action_layer": {
+        "category": "physical",
+        "type": "travel",
+        "status": "success"
+      },
+      "relationship_multi": [],
+      "narrative_function": "",
+      "action_category": "physical",
+      "action_type": "travel",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "70779b57-9d78-46ab-b5b8-bd590316ba02",
+      "event_type": "FIRST_FUNCTION_DONOR",
+      "description": "お地蔵様の頭にも肩にも、雪が積もっています。",
+      "agents": [
+        "おじいさん"
+      ],
+      "targets": [
+        "お地蔵様"
+      ],
+      "text_span": {
+        "start": 311,
+        "end": 333,
+        "text": "お地蔵様の頭にも肩にも、雪が積もっています。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "sentiment": "neutral",
+      "action_layer": {
+        "category": "mental",
+        "type": "observe",
+        "status": "success"
+      },
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "narrative_function": "",
+      "action_category": "mental",
+      "action_type": "observe",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "ea7ff5e5-3e3b-4dec-a483-286c9c825ffb",
+      "event_type": "HERO_REACTION",
+      "description": "おじいさんはお地蔵様に、売るつもりのかさをかぶせてやりました。",
+      "agents": [
+        "おじいさん"
+      ],
+      "targets": [
+        "お地蔵様"
+      ],
+      "text_span": {
+        "start": 406,
+        "end": 437,
+        "text": "おじいさんはお地蔵様に、売るつもりのかさをかぶせてやりました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "sentiment": "positive",
+      "action_layer": {
+        "category": "transaction",
+        "type": "give",
+        "status": "success"
+      },
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "narrative_function": "",
+      "action_category": "transaction",
+      "action_type": "give",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "c35bcfb8-b888-474e-8cc7-609a067ac57b",
+      "event_type": "HERO_REACTION",
+      "description": "でも、お地蔵様は六つなのにかさは五つしかありません。\n　そこでおじいさんは、自分のかさを脱いで、最後のお地蔵様にかぶせてやりました。",
+      "agents": [
+        "おじいさん"
+      ],
+      "targets": [
+        "お地蔵様"
+      ],
+      "text_span": {
+        "start": 439,
+        "end": 505,
+        "text": "でも、お地蔵様は六つなのにかさは五つしかありません。\n　そこでおじいさんは、自分のかさを脱いで、最後のお地蔵様にかぶせてやりました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "sentiment": "positive",
+      "action_layer": {
+        "category": "transaction",
+        "type": "give",
+        "status": "success"
+      },
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "narrative_function": "",
+      "action_category": "transaction",
+      "action_type": "give",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "a30dd765-0755-4ee3-8962-07aa382d1dba",
+      "event_type": "RETURN",
+      "description": "家へ帰ると、おばあさんがビックリして言いました。",
+      "agents": [
+        "おじいさん"
+      ],
+      "targets": [
+        "おばあさん"
+      ],
+      "text_span": {
+        "start": 507,
+        "end": 531,
+        "text": "家へ帰ると、おばあさんがビックリして言いました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6,
+      "relationship_level1": "Family & Kinship",
+      "relationship_level2": "spouse",
+      "sentiment": "neutral",
+      "action_layer": {
+        "category": "physical",
+        "type": "travel",
+        "status": "success"
+      },
+      "relationship_multi": [],
+      "narrative_function": "",
+      "action_category": "physical",
+      "action_type": "travel",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "c9c5fa74-4a5b-4178-a305-e185fb29d978",
+      "event_type": "OTHER",
+      "description": "おじいさんは、お地蔵様のことを話してやりました。",
+      "agents": [
+        "おじいさん"
+      ],
+      "targets": [
+        "おばあさん"
+      ],
+      "text_span": {
+        "start": 574,
+        "end": 598,
+        "text": "おじいさんは、お地蔵様のことを話してやりました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 7,
+      "relationship_level1": "Family & Kinship",
+      "relationship_level2": "spouse",
+      "sentiment": "neutral",
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "status": "success"
+      },
+      "relationship_multi": [],
+      "narrative_function": "",
+      "action_category": "communicative",
+      "action_type": "inform",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "a35d51ed-fb75-41ac-9ba2-507a31864054",
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "♪じいさんの家はどこだ。\n♪かさのお礼を届けに来たぞ。\n♪じいさんの家はどこだ。\n♪かさのお礼を届けに来たぞ。\n　歌声はどんどん近づいて、とうとうおじいさんの家の前まで来ると、ズシーン！　と、何かをお",
+      "agents": [
+        "お地蔵様"
+      ],
+      "targets": [
+        "おじいさん"
+      ],
+      "text_span": {
+        "start": 687,
+        "end": 897,
+        "text": "♪じいさんの家はどこだ。\n♪かさのお礼を届けに来たぞ。\n♪じいさんの家はどこだ。\n♪かさのお礼を届けに来たぞ。\n　歌声はどんどん近づいて、とうとうおじいさんの家の前まで来ると、ズシーン！　と、何かをおく音がして、そのまま消えてしまいました。\n　おじいさんがそっと戸を開けてみると、おじいさんのあげたかさをかぶったお地蔵様の後ろ姿が見えました。\n　そして家の前には、お正月用のおもちやごちそうが、山のようにおいてありました"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 8,
+      "sentiment": "positive",
+      "action_layer": {
+        "category": "transaction",
+        "type": "reward",
+        "status": "success"
+      },
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "narrative_function": "",
+      "action_category": "transaction",
+      "action_type": "reward",
+      "action_context": "",
+      "action_status": "success"
+    }
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    }
+  },
+  "qa": {
+    "annotator": "",
+    "date_annotated": "2026-01-11",
+    "confidence": 0.8,
+    "notes": ""
+  }
+}

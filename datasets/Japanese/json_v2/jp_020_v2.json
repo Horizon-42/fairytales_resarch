@@ -1,0 +1,469 @@
+{
+  "version": "2.0",
+  "metadata": {
+    "id": "jp_020",
+    "title": "",
+    "culture": "Japanese",
+    "annotator": "",
+    "date_annotated": "2026-01-14",
+    "confidence": 0.8
+  },
+  "source_info": {
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "datasets/Japanese/texts/jp_020.txt",
+    "text_content": "　むかしむかし、ある村に、貧乏な男がいました。\n　ある日の晩、その男のところへ、白いひげのおじいさんがやってきました。\n「道に迷ったので、一晩泊めてくだされ」\n「ああ、それはお困りでしょう。いいですとも。さあどうぞ」\n　男は親切に、おじいさんを泊めてやりました。\n　次の日、おじいさんは男に小さな石うすをくれました。\n「泊めてもらったお礼じゃよ。これは不思議な石うすでな、右へ回せば欲しい物が出て、左へ回せば止まるんじゃ。止めるまで出続けるから、気をつけるんじゃぞ」\n　おじいさんはそう言って、出て行きました。\n　男はためしに、石うすを回してみました。\n「米出ろ、米出ろ」\n　すると石うすから、まっ白い米がザクザクと出てきました。\n　あわてて左へ回すと、米はピタリと止まります。\n「へー、こいつはすごいや！」\n　男は米や魚をたくさん出して、まわりの家にも分けてあげました。\n　さて男のとなりに、欲張りな兄さんが住んでいました。\n　兄さんは弟が急にお金持ちになったのを不思議に思い、こっそりのぞきにきました。\n「そうか、なるほど。全ては、あの石うすのおかげだな。しめしめ」\n　兄さんは夜になると弟の家に忍び込んで、石うすを盗みました。\n　そして舟にのって、海へ逃げました。\n「よしよし、ここまで来れば大丈夫だろう」\n　兄さんは一生懸命に舟をこいだので、おなかがペコペコになりました。\n　そこで、持ってきたおにぎりを取り出すと、\n「そうだ、塩をつけて食べると、きっとうまいだろう。よーし、塩出ろ、塩出ろ」\nと、石うすを回すと、石うすからは塩がザラザラとあふれ出して、たちまち舟いっぱいになりました。\n「わっ、わっ、もう止まれ！　止まれ！　止まってくれー！」\n　欲張り兄さんは、石うすから物を出す方法は見ていたのですが、止め方は見ていなかったのです。\n　ついに舟は塩の重さに耐えられなくなり、そのまま海に沈んでしまいました。\n　ところであの石うすは、今でもグルグルと回って、塩を出しています。\n　海の水がしょっぱいのは、こういうわけなのです。"
+  },
+  "characters": [
+    {
+      "name": "男",
+      "alias": "",
+      "archetype": "Everyman"
+    },
+    {
+      "name": "白いひげのおじいさん",
+      "alias": "",
+      "archetype": "Mentor"
+    },
+    {
+      "name": "兄さん",
+      "alias": "",
+      "archetype": "Villain"
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "b33b0418-874d-4c58-8786-4de5e9504d58",
+      "event_type": "Initial Situation",
+      "description": "むかしむかし、ある村に、貧乏な男がいました。",
+      "agents": [
+        "男"
+      ],
+      "targets": [],
+      "text_span": {
+        "start": 1,
+        "end": 23,
+        "text": "むかしむかし、ある村に、貧乏な男がいました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "action_category": "existential",
+      "action_type": "",
+      "action_context": "",
+      "narrative_function": "setup"
+    },
+    {
+      "id": "d859938f-d881-4076-b86e-343993286552",
+      "event_type": "FIRST_FUNCTION_DONOR",
+      "description": "ある日の晩、その男のところへ、白いひげのおじいさんがやってきました。\n「道に迷ったので、一晩泊めてくだされ」",
+      "agents": [
+        "白いひげのおじいさん"
+      ],
+      "targets": [
+        "男"
+      ],
+      "text_span": {
+        "start": 25,
+        "end": 79,
+        "text": "ある日の晩、その男のところへ、白いひげのおじいさんがやってきました。\n「道に迷ったので、一晩泊めてくだされ」"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "action_category": "transaction",
+      "action_type": "request",
+      "action_context": "",
+      "action_status": "success",
+      "sentiment": "neutral"
+    },
+    {
+      "id": "62583473-1355-4708-97d4-7cf26f3fe6d4",
+      "event_type": "HERO_REACTION",
+      "description": "「ああ、それはお困りでしょう。いいですとも。さあどうぞ」\n　男は親切に、おじいさんを泊めてやりました。",
+      "agents": [
+        "男"
+      ],
+      "targets": [
+        "白いひげのおじいさん"
+      ],
+      "text_span": {
+        "start": 80,
+        "end": 131,
+        "text": "「ああ、それはお困りでしょう。いいですとも。さあどうぞ」\n　男は親切に、おじいさんを泊めてやりました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "action_category": "transaction",
+      "action_type": "give",
+      "action_context": "",
+      "action_status": "success",
+      "sentiment": "positive"
+    },
+    {
+      "id": "c7f0e593-4e73-45ba-b120-693c41d90862",
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "次の日、おじいさんは男に小さな石うすをくれました。",
+      "agents": [
+        "白いひげのおじいさん"
+      ],
+      "targets": [
+        "男"
+      ],
+      "text_span": {
+        "start": 133,
+        "end": 158,
+        "text": "次の日、おじいさんは男に小さな石うすをくれました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "action_category": "transaction",
+      "action_type": "give",
+      "action_context": "",
+      "action_status": "success",
+      "sentiment": "positive"
+    },
+    {
+      "id": "7cfce8f3-1118-4c63-94a1-8312ec3c1ae8",
+      "event_type": "GUIDANCE",
+      "description": "これは不思議な石うすでな、右へ回せば欲しい物が出て、左へ回せば止まるんじゃ。止めるまで出続けるから、気をつけるんじゃぞ」",
+      "agents": [
+        "白いひげのおじいさん"
+      ],
+      "targets": [
+        "男"
+      ],
+      "text_span": {
+        "start": 173,
+        "end": 233,
+        "text": "これは不思議な石うすでな、右へ回せば欲しい物が出て、左へ回せば止まるんじゃ。止めるまで出続けるから、気をつけるんじゃぞ」"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "action_category": "communicative",
+      "action_type": "inform",
+      "action_context": "",
+      "action_status": "success",
+      "sentiment": "neutral"
+    },
+    {
+      "id": "6b3e0274-3e80-4f4c-9602-389518096d43",
+      "event_type": "LIQUIDATION",
+      "description": "男はためしに、石うすを回してみました。\n「米出ろ、米出ろ」\n　すると石うすから、まっ白い米がザクザクと出てきました。",
+      "agents": [
+        "男"
+      ],
+      "targets": [],
+      "text_span": {
+        "start": 257,
+        "end": 315,
+        "text": "男はためしに、石うすを回してみました。\n「米出ろ、米出ろ」\n　すると石うすから、まっ白い米がザクザクと出てきました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6,
+      "action_category": "existential",
+      "action_type": "cast",
+      "action_context": "",
+      "sentiment": "neutral",
+      "action_status": "success"
+    },
+    {
+      "id": "99d07167-3332-4094-b9b6-58512d0c8f95",
+      "event_type": "RECONNAISSANCE",
+      "description": "こっそりのぞきにきました。\n「そうか、なるほど。全ては、あの石うすのおかげだな。しめしめ」",
+      "agents": [
+        "兄さん"
+      ],
+      "targets": [
+        "男"
+      ],
+      "text_span": {
+        "start": 440,
+        "end": 485,
+        "text": "こっそりのぞきにきました。\n「そうか、なるほど。全ては、あの石うすのおかげだな。しめしめ」"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 7,
+      "action_category": "mental",
+      "action_type": "plot",
+      "action_context": "",
+      "action_status": "success",
+      "sentiment": "neutral",
+      "narrative_function": "trigger"
+    },
+    {
+      "id": "1c1c3750-44f2-4463-9cee-6391ee77a989",
+      "event_type": "VILLAINY",
+      "description": "兄さんは夜になると弟の家に忍び込んで、石うすを盗みました。",
+      "agents": [
+        "兄さん"
+      ],
+      "targets": [
+        "男"
+      ],
+      "text_span": {
+        "start": 487,
+        "end": 516,
+        "text": "兄さんは夜になると弟の家に忍び込んで、石うすを盗みました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 8,
+      "narrative_function": "climax",
+      "action_category": "physical",
+      "action_type": "steal",
+      "action_context": "",
+      "action_status": "success",
+      "sentiment": "negative"
+    },
+    {
+      "id": "8a38ab87-ed97-4a76-aa96-6b8d7472eccc",
+      "event_type": "VIOLATION",
+      "description": "よーし、塩出ろ、塩出ろ」\nと、石うすを回すと、石うすからは塩がザラザラとあふれ出して、たちまち舟いっぱいになりました。",
+      "agents": [
+        "兄さん"
+      ],
+      "targets": [
+        "石うす"
+      ],
+      "text_span": {
+        "start": 638,
+        "end": 697,
+        "text": "よーし、塩出ろ、塩出ろ」\nと、石うすを回すと、石うすからは塩がザラザラとあふれ出して、たちまち舟いっぱいになりました。"
+      },
+      "target_type": "object",
+      "object_type": "magical_agent",
+      "instrument": "",
+      "time_order": 9,
+      "action_category": "existential",
+      "action_type": "cast",
+      "action_context": "",
+      "action_status": "success",
+      "sentiment": "negative"
+    },
+    {
+      "id": "d201427c-c973-4366-9646-3dea9100f9a0",
+      "event_type": "PUNISHMENT",
+      "description": "舟は塩の重さに耐えられなくなり、そのまま海に沈んでしまいました。",
+      "agents": [],
+      "targets": [
+        "男"
+      ],
+      "text_span": {
+        "start": 777,
+        "end": 809,
+        "text": "舟は塩の重さに耐えられなくなり、そのまま海に沈んでしまいました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 10,
+      "action_status": "success",
+      "sentiment": "negative",
+      "action_category": "transaction",
+      "action_type": "punish",
+      "action_context": ""
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [],
+    "motif_type": [],
+    "atu_categories": [],
+    "obstacle_thrower": [],
+    "helper_type": [],
+    "thinking_process": "",
+    "atu_evidence": {},
+    "motif_evidence": {}
+  },
+  "analysis": {
+    "propp_functions": [
+      {
+        "id": "e1072a4e-2682-4c05-876f-37db80bb999a",
+        "fn": "Initial Situation",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1,
+          "end": 23,
+          "text": "むかしむかし、ある村に、貧乏な男がいました。"
+        },
+        "evidence": "むかしむかし、ある村に、貧乏な男がいました。",
+        "narrative_event_id": "b33b0418-874d-4c58-8786-4de5e9504d58"
+      },
+      {
+        "id": "9be2d3ec-6d95-4b53-b786-d6678cb37ab5",
+        "fn": "FIRST_FUNCTION_DONOR",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 25,
+          "end": 79,
+          "text": "ある日の晩、その男のところへ、白いひげのおじいさんがやってきました。\n「道に迷ったので、一晩泊めてくだされ」"
+        },
+        "evidence": "ある日の晩、その男のところへ、白いひげのおじいさんがやってきました。\n「道に迷ったので、一晩泊めてくだされ」",
+        "narrative_event_id": "d859938f-d881-4076-b86e-343993286552"
+      },
+      {
+        "id": "c0c7e0cb-4292-4d94-aee2-41274a64c360",
+        "fn": "HERO_REACTION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 80,
+          "end": 131,
+          "text": "「ああ、それはお困りでしょう。いいですとも。さあどうぞ」\n　男は親切に、おじいさんを泊めてやりました。"
+        },
+        "evidence": "「ああ、それはお困りでしょう。いいですとも。さあどうぞ」\n　男は親切に、おじいさんを泊めてやりました。",
+        "narrative_event_id": "62583473-1355-4708-97d4-7cf26f3fe6d4"
+      },
+      {
+        "id": "a3d4b22e-6f85-4398-a0d2-a33c357919c4",
+        "fn": "RECEIPT_OF_AGENT",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 133,
+          "end": 158,
+          "text": "次の日、おじいさんは男に小さな石うすをくれました。"
+        },
+        "evidence": "次の日、おじいさんは男に小さな石うすをくれました。",
+        "narrative_event_id": "c7f0e593-4e73-45ba-b120-693c41d90862"
+      },
+      {
+        "id": "9883dd85-5bcc-41bd-b2b7-e68a7a659f23",
+        "fn": "GUIDANCE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 173,
+          "end": 233,
+          "text": "これは不思議な石うすでな、右へ回せば欲しい物が出て、左へ回せば止まるんじゃ。止めるまで出続けるから、気をつけるんじゃぞ」"
+        },
+        "evidence": "これは不思議な石うすでな、右へ回せば欲しい物が出て、左へ回せば止まるんじゃ。止めるまで出続けるから、気をつけるんじゃぞ」",
+        "narrative_event_id": "7cfce8f3-1118-4c63-94a1-8312ec3c1ae8"
+      },
+      {
+        "id": "5bef0af5-2d67-4a08-9239-e8ea5bcf0ad3",
+        "fn": "LIQUIDATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 257,
+          "end": 315,
+          "text": "男はためしに、石うすを回してみました。\n「米出ろ、米出ろ」\n　すると石うすから、まっ白い米がザクザクと出てきました。"
+        },
+        "evidence": "男はためしに、石うすを回してみました。\n「米出ろ、米出ろ」\n　すると石うすから、まっ白い米がザクザクと出てきました。",
+        "narrative_event_id": "6b3e0274-3e80-4f4c-9602-389518096d43"
+      },
+      {
+        "id": "5faf73e7-6a40-48b2-a47b-3f8e50113e21",
+        "fn": "RECONNAISSANCE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 440,
+          "end": 485,
+          "text": "こっそりのぞきにきました。\n「そうか、なるほど。全ては、あの石うすのおかげだな。しめしめ」"
+        },
+        "evidence": "こっそりのぞきにきました。\n「そうか、なるほど。全ては、あの石うすのおかげだな。しめしめ」",
+        "narrative_event_id": "99d07167-3332-4094-b9b6-58512d0c8f95"
+      },
+      {
+        "id": "950ae699-a162-4244-b309-9940d6f73cbd",
+        "fn": "VILLAINY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 487,
+          "end": 516,
+          "text": "兄さんは夜になると弟の家に忍び込んで、石うすを盗みました。"
+        },
+        "evidence": "兄さんは夜になると弟の家に忍び込んで、石うすを盗みました。",
+        "narrative_event_id": "1c1c3750-44f2-4463-9cee-6391ee77a989"
+      },
+      {
+        "id": "38fbc45a-33e4-49de-9b15-1f1af1abe122",
+        "fn": "VIOLATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 638,
+          "end": 697,
+          "text": "よーし、塩出ろ、塩出ろ」\nと、石うすを回すと、石うすからは塩がザラザラとあふれ出して、たちまち舟いっぱいになりました。"
+        },
+        "evidence": "よーし、塩出ろ、塩出ろ」\nと、石うすを回すと、石うすからは塩がザラザラとあふれ出して、たちまち舟いっぱいになりました。",
+        "narrative_event_id": "8a38ab87-ed97-4a76-aa96-6b8d7472eccc"
+      },
+      {
+        "id": "2c087eec-5abb-4794-8a3f-eaf4e51d826a",
+        "fn": "PUNISHMENT",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 777,
+          "end": 809,
+          "text": "舟は塩の重さに耐えられなくなり、そのまま海に沈んでしまいました。"
+        },
+        "evidence": "舟は塩の重さに耐えられなくなり、そのまま海に沈んでしまいました。",
+        "narrative_event_id": "d201427c-c973-4366-9646-3dea9100f9a0"
+      }
+    ],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

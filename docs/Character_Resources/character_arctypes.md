@@ -103,3 +103,8 @@ The ruler is a natural leader in a position of power, such as a monarchy, a gove
 While every one of us has the capacity to lead in times of conflict, not everyone handles being in a position of authority very well. Power corrupts, and even good people can find their values tested if they’re given too much power too quickly. This is why many ruler archetypes find themselves embroiled in conflict with those around them.
 
 Some ruler archetypes in literature are King Uther from the Arthurian legends and Miranda Priestly in The Devil Wears Prada.
+
+17. Dispatcher 
+The Dispatcher is a character who initiates the hero's quest by revealing a problem or misfortune (often caused by a villain) and sending the hero off to resolve it.
+
+18. Victim

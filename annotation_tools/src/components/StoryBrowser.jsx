@@ -39,25 +39,49 @@ export default function StoryBrowser({
 
   const collectFilesFromDirHandle = async (dirHandle, rootName) => {
     const collected = [];
-    const allowed = [".txt", ".md", ".json"];
+    let hasTextsFolder = false;
 
     const walk = async (handle, prefix) => {
       for await (const [entryName, entryHandle] of handle.entries()) {
-        if (entryHandle.kind === "file") {
+        if (entryHandle.kind === "directory") {
+          const dirNameLower = entryName.toLowerCase();
+          
+          // Walk into "texts" folder to collect story files (.txt)
+          if (dirNameLower === 'texts') {
+            hasTextsFolder = true;
+            await walk(entryHandle, `${prefix}/${entryName}`);
+          }
+          // Also walk into json folders to collect annotation files (for fallback)
+          else if (dirNameLower === 'json' || dirNameLower === 'json_v2' || dirNameLower === 'json_v3') {
+            await walk(entryHandle, `${prefix}/${entryName}`);
+          }
+          // Skip all other directories
+        } else if (entryHandle.kind === "file") {
+          const fullPath = `${prefix}/${entryName}`;
+          const fullPathLower = fullPath.toLowerCase();
           const lower = entryName.toLowerCase();
-          if (!allowed.some((ext) => lower.endsWith(ext))) continue;
-
-          const f = await entryHandle.getFile();
-          const rel = `${prefix}/${entryName}`;
-          collected.push(wrapFileWithRelativePath(f, rel));
-        } else if (entryHandle.kind === "directory") {
-          await walk(entryHandle, `${prefix}/${entryName}`);
+          
+          // Collect .txt and .md files from texts folder
+          if ((lower.endsWith('.txt') || lower.endsWith('.md')) && 
+              (fullPathLower.includes('/texts/') || fullPathLower.endsWith('/texts'))) {
+            const f = await entryHandle.getFile();
+            const rel = `${prefix}/${entryName}`;
+            collected.push(wrapFileWithRelativePath(f, rel));
+          }
+          // Collect .json files from json/json_v2/json_v3 folders (for fallback loading)
+          else if (lower.endsWith('.json') && 
+                   (fullPathLower.includes('/json/') || fullPathLower.includes('/json_v2/') || fullPathLower.includes('/json_v3/'))) {
+            const f = await entryHandle.getFile();
+            const rel = `${prefix}/${entryName}`;
+            collected.push(wrapFileWithRelativePath(f, rel));
+          }
         }
       }
     };
 
     await walk(dirHandle, rootName);
-    return collected;
+    
+    return { files: collected, hasTextsFolder };
   };
 
   const handleOpenFolderClick = async (e) => {
@@ -67,12 +91,29 @@ export default function StoryBrowser({
       e.stopPropagation();
       try {
         const dirHandle = await window.showDirectoryPicker();
-        const files = await collectFilesFromDirHandle(dirHandle, dirHandle.name || "selected_folder");
-        onPickDirectory(files, dirHandle.name || null);
+        
+        // Collect files and check if folder contains texts subfolder
+        const { files, hasTextsFolder } = await collectFilesFromDirHandle(dirHandle, dirHandle.name || "selected_folder");
+        
+        // Validate: folder must contain a texts subfolder
+        if (!hasTextsFolder) {
+          alert(`错误：选择的文件夹必须包含 "texts" 子文件夹。\n\n请选择包含 texts 文件夹的父文件夹（例如：Japanese_test2）。`);
+          return;
+        }
+        
+        if (files.length === 0) {
+          alert("错误：选择的文件夹中没有找到任何 .txt 文件。");
+          return;
+        }
+        
+        // Use the folder name as the parent folder path
+        // This is the folder the user selected (which contains texts subfolder)
+        onPickDirectory(files, dirHandle.name || "selected_folder");
       } catch (err) {
         // User cancelled
         if (err && err.name === "AbortError") return;
         console.error("Failed to pick directory:", err);
+        alert(`选择文件夹失败: ${err.message}`);
       }
       return;
     }

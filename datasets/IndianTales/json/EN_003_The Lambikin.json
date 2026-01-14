@@ -1,0 +1,521 @@
+{
+  "id": "EN_003_The Lambikin",
+  "culture": "Indian",
+  "title": "",
+  "source_text": {
+    "text": "Once upon a time there was a wee wee Lambikin, who frolicked about on his little tottery legs, and enjoyed himself amazingly.\nNow one day he set off to visit his Granny, and was jumping with joy to think of all the good things he should get from her, when who should he meet but a Jackal, who looked at the tender young morsel and said: \"Lambikin! Lambikin! I'll eat YOU!\"\nBut Lambikin only gave a little frisk and said:\n\"To Granny's house I go,\nWhere I shall fatter grow,\nThen you can eat me so.\"\n\nThe Jackal thought this reasonable, and let Lambikin pass.\nBy-and-by he met a Vulture, and the Vulture, looking hungrily at the tender morsel before him, said: \"Lambikin! Lambikin! I'll eat YOU!\"\nBut Lambikin only gave a little frisk, and said:\n\"To Granny's house I go,\nWhere I shall fatter grow,\nThen you can eat me so.\"\nThe Vulture thought this reasonable, and let Lambikin pass.\nAnd by-and-by he met a Tiger, and then a Wolf, and a Dog, and an Eagle, and all these, when they saw the tender little morsel, said: \"Lambikin! Lambikin! I'll eat YOU!\"\nBut to all of them Lambikin replied, with a little frisk:\n\"To Granny's house I go,\nWhere I shall fatter grow,\nThen you can eat me so.\"\nAt last he reached his Granny's house, and said, all in a great hurry, \"Granny, dear, I've promised to get very fat; so, as people ought to keep their promises, please put me into the corn-bin at once.\"\nSo his Granny said he was a good boy, and put him into the corn-bin, and there the greedy little Lambikin stayed for seven days, and ate, and ate, and ate, until he could scarcely waddle, and his Granny said he was fat enough for anything, and must go home. But cunning little Lambikin said that would never do, for some animal would be sure to eat him on the way back, he was so plump and tender.\n\n\"I'll tell you what you must do,\" said Master Lambikin, \"you must make a little drumikin out of the skin of my little brother who died, and then I can sit inside and trundle along nicely, for I'm as tight as a drum myself.\"\nSo his Granny made a nice little drumikin out of his brother's skin, with the wool inside, and Lambikin curled himself up snug and warm in the middle, and trundled away gaily. Soon he met with the Eagle, who called out:\n\"Drumikin! Drumikin!\nHave you seen Lambikin?\"\nAnd Mr. Lambikin, curled up in his soft warm nest, replied:\n\"Fallen into the fire, and so will you\nOn little Drumikin. Tum-pa, tum-too!\"\n\"How very annoying!\" sighed the Eagle, thinking regretfully of the tender morsel he had let slip.\nMeanwhile Lambikin trundled along, laughing to himself, and singing:\n\"Tum-pa, tum-too;\nTum-pa, tum-too!\"\nEvery animal and bird he met asked him the same question:\n\"Drumikin! Drumikin!\nHave you seen Lambikin?\"\nAnd to each of them the little slyboots replied:\n\"Fallen into the fire, and so will you\nOn little Drumikin. Tum-pa, tum too;\nTum-pa, tum-too; Tum-pa, tum-too!\"\n\nThen they all sighed to think of the tender little morsel they had let slip.\nAt last the Jackal came limping along, for all his sorry looks as sharp as a needle, and he too called out—\n\"Drumikin! Drumikin!\nHave you seen Lambikin?\"\nAnd Lambikin, curled up in his snug little nest, replied gaily:\n\"Fallen into the fire, and so will you\nOn little Drumikin! Tum-pa——\"\nBut he never got any further, for the Jackal recognised his voice at once, and cried: \"Hullo! you've turned yourself inside out, have you? Just you come out of that!\"\nWhereupon he tore open Drumikin and gobbled up Lambikin.\n",
+    "language": "",
+    "type": "",
+    "reference_uri": "datasets/IndianTales/texts/EN_003_The Lambikin.txt"
+  },
+  "metadata": {
+    "main_motif": "",
+    "atu_type": "",
+    "ending_type": "TRAGIC",
+    "key_values": [
+      "CUNNING",
+      "LUCK",
+      "OTHER"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "",
+  "annotation": {
+    "motif": {
+      "atu_type": "",
+      "atu_categories": [],
+      "motif_type": [],
+      "character_archetypes": [
+        {
+          "name": "Lambikin",
+          "alias": "Wee wee Lambikin",
+          "archetype": "Hero"
+        },
+        {
+          "name": "Granny",
+          "alias": "",
+          "archetype": "Other"
+        },
+        {
+          "name": "Jackal",
+          "alias": "",
+          "archetype": "Villain"
+        },
+        {
+          "name": "Vulture",
+          "alias": "",
+          "archetype": "Villain"
+        },
+        {
+          "name": "Predator",
+          "alias": "Tiger",
+          "archetype": "Villain"
+        },
+        {
+          "name": "Predator",
+          "alias": "Wolf",
+          "archetype": "Villain"
+        },
+        {
+          "name": "Predator",
+          "alias": "Dog",
+          "archetype": "Villain"
+        },
+        {
+          "name": "Predator",
+          "alias": "Eagle",
+          "archetype": "Villain"
+        },
+        {
+          "name": "self",
+          "alias": "Lambikin",
+          "archetype": "Hero"
+        }
+      ],
+      "obstacle_pattern": [],
+      "obstacle_thrower": [],
+      "helper_type": [],
+      "thinking_process": "",
+      "atu_evidence": {},
+      "motif_evidence": {}
+    },
+    "deep": {
+      "paragraph_summaries": {
+        "per_section": {},
+        "combined": [],
+        "whole": ""
+      },
+      "propp_functions": [
+        {
+          "id": "c447a8af-a984-4dce-80ce-65081a30e004",
+          "fn": "ABSENTATION",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 126,
+            "end": 250,
+            "text": "Now one day he set off to visit his Granny, and was jumping with joy to think of all the good things he should get from her,"
+          },
+          "evidence": "Lambikin leaves the safety of his home to visit Granny.",
+          "narrative_event_id": "d738a01d-9009-405f-a22d-9363bc37818c"
+        },
+        {
+          "id": "9729577c-36b5-47d2-b54b-15dc554b4eee",
+          "fn": "INTERDICTION",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 251,
+            "end": 372,
+            "text": "when who should he meet but a Jackal, who looked at the tender young morsel and said: \"Lambikin! Lambikin! I'll eat YOU!\""
+          },
+          "evidence": "The Jackal stops Lambikin and threatens to eat him.",
+          "narrative_event_id": "da9926ab-61f2-47e4-ab9a-10166f01393b"
+        },
+        {
+          "id": "b30fcb04-022a-4e34-aac2-c6ce25c078c1",
+          "fn": "BRANDING",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 1185,
+            "end": 1645,
+            "text": "At last he reached his Granny's house, and said, all in a great hurry, \"Granny, dear, I've promised to get very fat; so, as people ought to keep their promises, please put me into the corn-bin at once.\"\nSo his Granny said he was a good boy, and put him into the corn-bin, and there the greedy little Lambikin stayed for seven days, and ate, and ate, and ate, until he could scarcely waddle, and his Granny said he was fat enough for anything, and must go home."
+          },
+          "evidence": "Lambikin achieves his goal of getting fat in the corn-bin.",
+          "narrative_event_id": "265e0a0b-49cf-4345-8b76-b677aa7b16ff"
+        },
+        {
+          "id": "b64f77f5-30dc-4125-bff7-d25e82f8059b",
+          "fn": "RECEIPT_OF_AGENT",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 1787,
+            "end": 2185,
+            "text": "\"I'll tell you what you must do,\" said Master Lambikin, \"you must make a little drumikin out of the skin of my little brother who died, and then I can sit inside and trundle along nicely, for I'm as tight as a drum myself.\"\nSo his Granny made a nice little drumikin out of his brother's skin, with the wool inside, and Lambikin curled himself up snug and warm in the middle, and trundled away gaily"
+          },
+          "evidence": "Granny constructs a drum for Lambikin to hide in for the return journey.",
+          "narrative_event_id": "918889bd-0ddc-46d1-8261-6586bb83f192"
+        },
+        {
+          "id": "e2a8d7ab-301b-4cfb-8936-bb77b8feec46",
+          "fn": "RETURN",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 2187,
+            "end": 2958,
+            "text": "Soon he met with the Eagle, who called out:\n\"Drumikin! Drumikin!\nHave you seen Lambikin?\"\nAnd Mr. Lambikin, curled up in his soft warm nest, replied:\n\"Fallen into the fire, and so will you\nOn little Drumikin. Tum-pa, tum-too!\"\n\"How very annoying!\" sighed the Eagle, thinking regretfully of the tender morsel he had let slip.\nMeanwhile Lambikin trundled along, laughing to himself, and singing:\n\"Tum-pa, tum-too;\nTum-pa, tum-too!\"\nEvery animal and bird he met asked him the same question:\n\"Drumikin! Drumikin!\nHave you seen Lambikin?\"\nAnd to each of them the little slyboots replied:\n\"Fallen into the fire, and so will you\nOn little Drumikin. Tum-pa, tum too;\nTum-pa, tum-too; Tum-pa, tum-too!\"\n\nThen they all sighed to think of the tender little morsel they had let slip."
+          },
+          "evidence": "Lambikin travels back inside the drum, deceiving the animals who ask for him.",
+          "narrative_event_id": "f5ce4945-8042-4ed3-ad6f-b92cb744a274"
+        },
+        {
+          "id": "15f4b1c5-05e3-4668-a835-b89b94048b39",
+          "fn": "EXPOSURE",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 2959,
+            "end": 3412,
+            "text": "At last the Jackal came limping along, for all his sorry looks as sharp as a needle, and he too called out—\n\"Drumikin! Drumikin!\nHave you seen Lambikin?\"\nAnd Lambikin, curled up in his snug little nest, replied gaily:\n\"Fallen into the fire, and so will you\nOn little Drumikin! Tum-pa——\"\nBut he never got any further, for the Jackal recognised his voice at once, and cried: \"Hullo! you've turned yourself inside out, have you? Just you come out of that!\""
+          },
+          "evidence": "The Jackal is not fooled by the disguise and recognizes Lambikin's voice.",
+          "narrative_event_id": "a774a6c9-a4f8-41d5-9034-a2d065c3e676"
+        },
+        {
+          "id": "b432c42d-092a-4028-a4f5-b6a1896bd9bd",
+          "fn": "PUNISHMENT",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 2959,
+            "end": 3412,
+            "text": "At last the Jackal came limping along, for all his sorry looks as sharp as a needle, and he too called out—\n\"Drumikin! Drumikin!\nHave you seen Lambikin?\"\nAnd Lambikin, curled up in his snug little nest, replied gaily:\n\"Fallen into the fire, and so will you\nOn little Drumikin! Tum-pa——\"\nBut he never got any further, for the Jackal recognised his voice at once, and cried: \"Hullo! you've turned yourself inside out, have you? Just you come out of that!\""
+          },
+          "evidence": "The Jackal destroys the disguise and eats the protagonist.",
+          "narrative_event_id": "b23afbaf-2658-4ccf-84a8-ec73db3c7638"
+        }
+      ],
+      "propp_notes": ""
+    }
+  },
+  "narrative_structure": [
+    {
+      "id": "d738a01d-9009-405f-a22d-9363bc37818c",
+      "event_type": "ABSENTATION",
+      "description": "Lambikin leaves the safety of his home to visit Granny.",
+      "narrative_function": "trigger",
+      "agents": [
+        "Lambikin"
+      ],
+      "targets": [
+        "self"
+      ],
+      "text_span": {
+        "start": 126,
+        "end": 250,
+        "text": "Now one day he set off to visit his Granny, and was jumping with joy to think of all the good things he should get from her,"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationship_level1": "Family & Kinship",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "positive",
+      "action_category": "physical",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "da9926ab-61f2-47e4-ab9a-10166f01393b",
+      "event_type": "INTERDICTION",
+      "description": "The Jackal stops Lambikin and threatens to eat him.",
+      "agents": [
+        "Jackal"
+      ],
+      "targets": [
+        "Lambikin"
+      ],
+      "text_span": {
+        "start": 251,
+        "end": 372,
+        "text": "when who should he meet but a Jackal, who looked at the tender young morsel and said: \"Lambikin! Lambikin! I'll eat YOU!\""
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "hostile",
+      "narrative_function": "setup",
+      "action_category": "communicative",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "attempt"
+    },
+    {
+      "id": "b545da4f-02b3-4c06-973c-3c990af77c54",
+      "event_type": "OTHER",
+      "description": "Lambikin convinces the Jackal to wait until he is fatter; the Jackal agrees.",
+      "agents": [
+        "Lambikin"
+      ],
+      "targets": [
+        "Jackal"
+      ],
+      "text_span": {
+        "start": 421,
+        "end": 557,
+        "text": "\"To Granny's house I go,\nWhere I shall fatter grow,\nThen you can eat me so.\"\n\nThe Jackal thought this reasonable, and let Lambikin pass."
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "neutral",
+      "narrative_function": "setup",
+      "action_category": "communicative",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "57f9abdc-d501-45a4-a5de-8745ae41b440",
+      "event_type": "OTHER",
+      "description": "Lambikin convinces the Vulture to wait until he is fatter; the Jackal agrees.",
+      "agents": [
+        "Lambikin"
+      ],
+      "targets": [
+        "Vulture"
+      ],
+      "text_span": {
+        "start": 558,
+        "end": 880,
+        "text": "By-and-by he met a Vulture, and the Vulture, looking hungrily at the tender morsel before him, said: \"Lambikin! Lambikin! I'll eat YOU!\"\nBut Lambikin only gave a little frisk, and said:\n\"To Granny's house I go,\nWhere I shall fatter grow,\nThen you can eat me so.\"\nThe Vulture thought this reasonable, and let Lambikin pass."
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "neutral",
+      "narrative_function": "setup",
+      "action_category": "communicative",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "92eb9811-b93e-4f7e-9f9c-061967446455",
+      "event_type": "OTHER",
+      "description": "Lambikin uses the same trick on all other predators he meets.",
+      "agents": [
+        "Lambikin"
+      ],
+      "targets": [
+        "Predator"
+      ],
+      "text_span": {
+        "start": 881,
+        "end": 1184,
+        "text": "And by-and-by he met a Tiger, and then a Wolf, and a Dog, and an Eagle, and all these, when they saw the tender little morsel, said: \"Lambikin! Lambikin! I'll eat YOU!\"\nBut to all of them Lambikin replied, with a little frisk:\n\"To Granny's house I go,\nWhere I shall fatter grow,\nThen you can eat me so.\""
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "neutral",
+      "narrative_function": "setup",
+      "action_category": "communicative",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "265e0a0b-49cf-4345-8b76-b677aa7b16ff",
+      "event_type": "BRANDING",
+      "description": "Lambikin achieves his goal of getting fat in the corn-bin.",
+      "agents": [
+        "Granny"
+      ],
+      "targets": [
+        "Lambikin"
+      ],
+      "text_span": {
+        "start": 1185,
+        "end": 1645,
+        "text": "At last he reached his Granny's house, and said, all in a great hurry, \"Granny, dear, I've promised to get very fat; so, as people ought to keep their promises, please put me into the corn-bin at once.\"\nSo his Granny said he was a good boy, and put him into the corn-bin, and there the greedy little Lambikin stayed for seven days, and ate, and ate, and ate, until he could scarcely waddle, and his Granny said he was fat enough for anything, and must go home."
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6,
+      "relationship_level1": "Family & Kinship",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "positive",
+      "narrative_function": "character_arc",
+      "action_category": "physical",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "918889bd-0ddc-46d1-8261-6586bb83f192",
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "Granny constructs a drum for Lambikin to hide in for the return journey.",
+      "agents": [
+        "Granny"
+      ],
+      "targets": [
+        "Lambikin"
+      ],
+      "text_span": {
+        "start": 1787,
+        "end": 2185,
+        "text": "\"I'll tell you what you must do,\" said Master Lambikin, \"you must make a little drumikin out of the skin of my little brother who died, and then I can sit inside and trundle along nicely, for I'm as tight as a drum myself.\"\nSo his Granny made a nice little drumikin out of his brother's skin, with the wool inside, and Lambikin curled himself up snug and warm in the middle, and trundled away gaily"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 7,
+      "relationship_level1": "Family & Kinship",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "positive",
+      "narrative_function": "setup",
+      "action_category": "transaction",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "f5ce4945-8042-4ed3-ad6f-b92cb744a274",
+      "event_type": "RETURN",
+      "description": "Lambikin travels back inside the drum, deceiving the animals who ask for him.",
+      "agents": [
+        "Lambikin"
+      ],
+      "targets": [
+        "Predator",
+        "Vulture"
+      ],
+      "text_span": {
+        "start": 2187,
+        "end": 2958,
+        "text": "Soon he met with the Eagle, who called out:\n\"Drumikin! Drumikin!\nHave you seen Lambikin?\"\nAnd Mr. Lambikin, curled up in his soft warm nest, replied:\n\"Fallen into the fire, and so will you\nOn little Drumikin. Tum-pa, tum-too!\"\n\"How very annoying!\" sighed the Eagle, thinking regretfully of the tender morsel he had let slip.\nMeanwhile Lambikin trundled along, laughing to himself, and singing:\n\"Tum-pa, tum-too;\nTum-pa, tum-too!\"\nEvery animal and bird he met asked him the same question:\n\"Drumikin! Drumikin!\nHave you seen Lambikin?\"\nAnd to each of them the little slyboots replied:\n\"Fallen into the fire, and so will you\nOn little Drumikin. Tum-pa, tum too;\nTum-pa, tum-too; Tum-pa, tum-too!\"\n\nThen they all sighed to think of the tender little morsel they had let slip."
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 8,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [
+        {
+          "agent": "Lambikin",
+          "target": "Predator",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "negative"
+        }
+      ],
+      "sentiment": "",
+      "narrative_function": "climax",
+      "action_category": "communicative",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "a774a6c9-a4f8-41d5-9034-a2d065c3e676",
+      "event_type": "EXPOSURE",
+      "description": "The Jackal is not fooled by the disguise and recognizes Lambikin's voice.",
+      "agents": [
+        "Jackal"
+      ],
+      "targets": [
+        "Lambikin"
+      ],
+      "text_span": {
+        "start": 2959,
+        "end": 3412,
+        "text": "At last the Jackal came limping along, for all his sorry looks as sharp as a needle, and he too called out—\n\"Drumikin! Drumikin!\nHave you seen Lambikin?\"\nAnd Lambikin, curled up in his snug little nest, replied gaily:\n\"Fallen into the fire, and so will you\nOn little Drumikin! Tum-pa——\"\nBut he never got any further, for the Jackal recognised his voice at once, and cried: \"Hullo! you've turned yourself inside out, have you? Just you come out of that!\""
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 9,
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "romantic",
+      "narrative_function": "climax",
+      "action_category": "mental",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "b23afbaf-2658-4ccf-84a8-ec73db3c7638",
+      "event_type": "PUNISHMENT",
+      "description": "The Jackal destroys the disguise and eats the protagonist.",
+      "agents": [
+        "Jackal"
+      ],
+      "targets": [
+        "lalb"
+      ],
+      "text_span": {
+        "start": 2959,
+        "end": 3412,
+        "text": "At last the Jackal came limping along, for all his sorry looks as sharp as a needle, and he too called out—\n\"Drumikin! Drumikin!\nHave you seen Lambikin?\"\nAnd Lambikin, curled up in his snug little nest, replied gaily:\n\"Fallen into the fire, and so will you\nOn little Drumikin! Tum-pa——\"\nBut he never got any further, for the Jackal recognised his voice at once, and cried: \"Hullo! you've turned yourself inside out, have you? Just you come out of that!\""
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 10,
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "hostile",
+      "narrative_function": "resolution",
+      "action_category": "physical",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "success"
+    }
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    }
+  },
+  "qa": {
+    "annotator": "Deb",
+    "date_annotated": "2026-01-12",
+    "confidence": 0.9,
+    "notes": ""
+  }
+}

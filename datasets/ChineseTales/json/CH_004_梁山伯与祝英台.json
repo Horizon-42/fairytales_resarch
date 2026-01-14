@@ -74,11 +74,13 @@
       "obstacle_pattern": "",
       "obstacle_thrower": [],
       "helper_type": [],
-      "thinking_process": ""
+      "thinking_process": "",
+      "atu_evidence": {},
+      "motif_evidence": {}
     },
     "deep": {
       "paragraph_summaries": {
-        "per_paragraph": {},
+        "per_section": {},
         "combined": [],
         "whole": ""
       },
@@ -249,21 +251,14 @@
   },
   "narrative_structure": [
     {
-      "event_type": "BEGINNING_COUNTERACTION",
-      "description": "女儿和她的丫鬟助手用聪明才智获取了家长的肯定; 祝英台和丫鬟银心用智慧获取了祝员外的同意",
       "id": "e18c50b8-22bc-4336-994d-4732117cbaea",
-      "target_type": "character",
-      "object_type": "",
-      "instrument": "",
-      "time_order": 2,
-      "relationship_level1": "Family & Kinship",
-      "relationship_level2": "parent_child",
-      "sentiment": "positive",
       "text_span": {
         "start": 229,
         "end": 850,
         "text": "祝英台很失望，闷闷不乐地回到房间。丫环银心见小姐不高兴，关切地问：“小姐，什么事惹您不高兴了？”英台把自己的心思告诉了银心，银心跟着发起愁来。她们在房间里叽叽咕咕了半天，终于想到一个好办法。\n过了几天，银心向祝员外禀报：“老爷，您不让小姐去杭州，小姐茶饭不思生起病来了。”祝员外听了很着急，忙说：“那还不赶紧去请大夫。”\n银心见祝员外担心，又说：“老爷，外头来了位算命先生，不如我们请先生为小姐占一卦如何？”祝员外点点头答应了。\n过了一会儿，银心领着那位算命先生走了进来，只见他眉清目秀，俊俏异常。祝员外一边吩咐银心摆设香案，一边对算命先生说：“小女前几日闹着要去杭州读书，老夫不曾答应，这几日她竟生起病来，请先生给算上一算。”\n先生掐指一算，皱起眉头，他看看祝员外，再看看银心，欲言又止。\n祝员外忙问：“先生，结果如何？”\n先生回答：“小姐待在家中恐怕凶多吉少。”\n祝员外一惊，来回踱着步说：“哎呀，这可如何是好？”\n先生笑了笑，不慌不忙地说：“要是能去外面躲上三五年，自然就会化解，员外不该阻止小姐去杭州啊。”\n祝员外听了，悬起的心放了下来，长长嘘出一口气。\n这时，银心忽然“噗嗤”一声笑了出来。再看那位先生，脱去衣帽，竟变成了美丽的少女，这不是祝英台是谁？\n祝员外很生气，责备英台、银心不该戏弄自己。祝英台借机再次恳求父亲：“爹爹，您说女孩不能抛头露面，如果我扮成男装不就可以了吗？”祝员外拗不过她，只得答应。英台、银心兴奋得又叫又跳。"
       },
+      "event_type": "BEGINNING_COUNTERACTION",
+      "description": "女儿和她的丫鬟助手用聪明才智获取了家长的肯定; 祝英台和丫鬟银心用智慧获取了祝员外的同意",
       "agents": [
         "祝英台",
         "丫环银心"
@@ -271,15 +266,26 @@
       "targets": [
         "祝员外"
       ],
-      "action_layer": {
-        "category": "communicative",
-        "type": "persuade",
-        "status": "success",
-        "context": "beg"
-      }
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationship_level1": "Family & Kinship",
+      "relationship_level2": "parent_child",
+      "sentiment": "positive",
+      "action_category": "communicative",
+      "action_type": "persuade",
+      "action_context": "beg",
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "f67c55cf-3b7c-40fd-8140-01bdcffe65bd",
+      "text_span": {
+        "start": 0,
+        "end": 228,
+        "text": "一千多年前，浙江上虞有户祝姓人家，府上的祝员外有个女儿叫祝英台。祝英台刚刚十九岁，聪明又漂亮，是祝老爷的掌上明珠。只是祝府的家教非常严，不准女眷随意外出，生性活泼的祝英台只能待在家读书习字。\n这天，祝英台独自一人趴在窗前发呆，忽然被一阵嬉笑打闹的声音吸引，原来不远处有一群书生，正准备坐船去杭州读书。他们无忧无虑、自由自在的样子，让祝英台非常羡慕。她赶紧跑去对父亲说：“爹爹，我要去杭州读书。”\n父亲听了很吃惊：“荒唐，哪有女孩儿家到外面抛头露面的道理？”"
+      },
       "event_type": "INTERDICTION",
       "description": "父亲限制女儿自由",
       "agents": [
@@ -288,11 +294,6 @@
       "targets": [
         "祝英台"
       ],
-      "text_span": {
-        "start": 0,
-        "end": 228,
-        "text": "一千多年前，浙江上虞有户祝姓人家，府上的祝员外有个女儿叫祝英台。祝英台刚刚十九岁，聪明又漂亮，是祝老爷的掌上明珠。只是祝府的家教非常严，不准女眷随意外出，生性活泼的祝英台只能待在家读书习字。\n这天，祝英台独自一人趴在窗前发呆，忽然被一阵嬉笑打闹的声音吸引，原来不远处有一群书生，正准备坐船去杭州读书。他们无忧无虑、自由自在的样子，让祝英台非常羡慕。她赶紧跑去对父亲说：“爹爹，我要去杭州读书。”\n父亲听了很吃惊：“荒唐，哪有女孩儿家到外面抛头露面的道理？”"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -300,15 +301,19 @@
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "parent_child",
       "sentiment": "negative",
-      "action_layer": {
-        "category": "physical",
-        "type": "restrain",
-        "status": "success",
-        "context": "restrict in home"
-      }
+      "action_category": "physical",
+      "action_type": "restrain",
+      "action_context": "restrict in home",
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "391c105f-39f0-4b10-b54f-8f63e370f1ca",
+      "text_span": {
+        "start": 851,
+        "end": 958,
+        "text": "第二天，祝英台、银心就带着行李出发了。她们一个扮成翩翩书生，一个扮成可爱书童，像飞出笼子的鸟儿一样快活。一路上，桃花香、杏花红，柳枝绕着轻风，蝴蝶、小蜜蜂相互追逐，她们两个人头一次出门，觉得什么都那么新奇那么好玩。"
+      },
       "event_type": "UNRECOGNIZED_ARRIVAL",
       "description": "女英雄和她的同伴隐姓埋名出发",
       "agents": [
@@ -316,11 +321,6 @@
         "丫环银心"
       ],
       "targets": [],
-      "text_span": {
-        "start": 851,
-        "end": 958,
-        "text": "第二天，祝英台、银心就带着行李出发了。她们一个扮成翩翩书生，一个扮成可爱书童，像飞出笼子的鸟儿一样快活。一路上，桃花香、杏花红，柳枝绕着轻风，蝴蝶、小蜜蜂相互追逐，她们两个人头一次出门，觉得什么都那么新奇那么好玩。"
-      },
       "target_type": "object",
       "object_type": "",
       "instrument": "",
@@ -331,10 +331,16 @@
       "action_category": "",
       "action_type": "",
       "action_context": "",
-      "action_status": ""
+      "action_status": "",
+      "narrative_function": ""
     },
     {
       "id": "2921cd56-7c39-4060-8aa4-0dca66520421",
+      "text_span": {
+        "start": 959,
+        "end": 1163,
+        "text": "不久，她们来到一个叫“草桥亭”的地方，就坐在亭子里休息。这时，一位书生带着书童也走了进来。英台上下打量着书生，见他英俊潇洒，气宇不凡，好像也是外地求学的，便上去打了个招呼：“你好，我叫祝英台，您贵姓？”\n书生连忙回答：“我姓梁名山伯。”\n“我自上虞而来，要去杭州读书，公子去往何处啊？”\n“真巧，我和公子同路，不过我来自绍兴。”\n就这样，他们你一言我一语聊得甚是投机。银心和梁山伯的书童四九也很快打成了一片。"
+      },
       "event_type": "FIRST_FUNCTION_DONOR",
       "description": "男女英雄相遇, 通过了各自的社交考验; 梁山伯与祝英台一见如故",
       "agents": [
@@ -343,11 +349,6 @@
       "targets": [
         "祝英台"
       ],
-      "text_span": {
-        "start": 959,
-        "end": 1163,
-        "text": "不久，她们来到一个叫“草桥亭”的地方，就坐在亭子里休息。这时，一位书生带着书童也走了进来。英台上下打量着书生，见他英俊潇洒，气宇不凡，好像也是外地求学的，便上去打了个招呼：“你好，我叫祝英台，您贵姓？”\n书生连忙回答：“我姓梁名山伯。”\n“我自上虞而来，要去杭州读书，公子去往何处啊？”\n“真巧，我和公子同路，不过我来自绍兴。”\n就这样，他们你一言我一语聊得甚是投机。银心和梁山伯的书童四九也很快打成了一片。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -355,14 +356,19 @@
       "relationship_level1": "Social & Alliance",
       "relationship_level2": "friend",
       "sentiment": "positive",
-      "action_layer": {
-        "category": "communicative",
-        "type": "inform",
-        "status": "success"
-      }
+      "action_category": "communicative",
+      "action_type": "inform",
+      "action_context": "",
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "5915a20d-f495-45cc-a337-a60db959599f",
+      "text_span": {
+        "start": 1157,
+        "end": 1344,
+        "text": "打成了一片。这时，梁山伯提出要和祝英台义结金兰，祝英台爽快地答应下来。但是，结拜得上香，没有香可怎么办呢？\n银心灵机一动：“用泥巴撮成香，不就行了。”梁山伯、祝英台一致同意，很快他们举行了结拜仪式。梁山伯比祝英台大一岁，成为兄长，祝英台做了小弟。\n他们一行四人，结伴而行，很快来到杭州。之后，梁祝二人又一起进入“崇绮书院”，拜师入学。他们朝夕相处，互敬互爱，友情越来越深厚。"
+      },
       "event_type": "RECEIPT_OF_AGENT",
       "description": "男女主人公结为义兄弟; 梁山伯祝英台义结金兰",
       "agents": [
@@ -371,11 +377,6 @@
       "targets": [
         "祝英台"
       ],
-      "text_span": {
-        "start": 1157,
-        "end": 1344,
-        "text": "打成了一片。这时，梁山伯提出要和祝英台义结金兰，祝英台爽快地答应下来。但是，结拜得上香，没有香可怎么办呢？\n银心灵机一动：“用泥巴撮成香，不就行了。”梁山伯、祝英台一致同意，很快他们举行了结拜仪式。梁山伯比祝英台大一岁，成为兄长，祝英台做了小弟。\n他们一行四人，结伴而行，很快来到杭州。之后，梁祝二人又一起进入“崇绮书院”，拜师入学。他们朝夕相处，互敬互爱，友情越来越深厚。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -383,15 +384,19 @@
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "extended_family",
       "sentiment": "positive",
-      "action_layer": {
-        "category": "communicative",
-        "type": "promise",
-        "status": "success",
-        "context": "oath"
-      }
+      "action_category": "communicative",
+      "action_type": "promise",
+      "action_context": "oath",
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "0200683e-56e8-45a7-979f-5cadb5eb2157",
+      "text_span": {
+        "start": 1345,
+        "end": 1574,
+        "text": "转眼，三年过去了。一天，祝英台收到一封家书，说母亲得了重病，要她赶快回家。祝英台想到回去之后可能再也见不着梁山伯了，心里十分难过。她告诉银心，自己已经悄悄爱上了梁山伯，不想就这样离开他。银心劝她去和师娘商量一下。\n祝英台找到师娘，鼓足勇气说：“师娘，其实我不是男子，因为想读书，才女扮男装来到杭州。”\n师娘笑着说：“我早就看出来了，你找我有什么事呢？”\n祝英台低下头，难为情地说：“我收到家书，过两天就得回去看望母亲，可我喜欢上了梁山伯，不想就这样离开他。”"
+      },
       "event_type": "RECOGNITION",
       "description": "女英雄迫于无奈, 坦白隐秘之爱; 祝英台必须归家, 不得已承认女儿身以及对梁山伯的爱意",
       "agents": [
@@ -400,11 +405,6 @@
       "targets": [
         "师娘"
       ],
-      "text_span": {
-        "start": 1345,
-        "end": 1574,
-        "text": "转眼，三年过去了。一天，祝英台收到一封家书，说母亲得了重病，要她赶快回家。祝英台想到回去之后可能再也见不着梁山伯了，心里十分难过。她告诉银心，自己已经悄悄爱上了梁山伯，不想就这样离开他。银心劝她去和师娘商量一下。\n祝英台找到师娘，鼓足勇气说：“师娘，其实我不是男子，因为想读书，才女扮男装来到杭州。”\n师娘笑着说：“我早就看出来了，你找我有什么事呢？”\n祝英台低下头，难为情地说：“我收到家书，过两天就得回去看望母亲，可我喜欢上了梁山伯，不想就这样离开他。”"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -412,15 +412,19 @@
       "relationship_level1": "Hierarchy",
       "relationship_level2": "mentor_student",
       "sentiment": "positive",
-      "action_layer": {
-        "category": "communicative",
-        "type": "inform",
-        "status": "success",
-        "context": "confess"
-      }
+      "action_category": "communicative",
+      "action_type": "inform",
+      "action_context": "confess",
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "c84faeef-5c89-412c-829e-40476994e3e2",
+      "text_span": {
+        "start": 2872,
+        "end": 3211,
+        "text": "祝英台走后，梁山伯非常寂寞，他不停地抚摸着祝英台送他扇坠，想起了她临行时说的话。于是，他便急忙去找师娘问个明白。\n师娘从怀里取出另一只扇坠说：“这是英台临走时交给我的，她托我为她做媒，如果谁有同样的扇坠，就能和她结为夫妻。”\n梁山伯拿出自己的扇坠一比，刚好是一对，可是他还是大惑不解，便问：“师娘的话，山伯不明白，英台临走时只说愿意为我和她的妹妹做媒。”\n师娘笑着说：“你这个糊涂孩子，英台其实不是男人，她说的妹妹，就是她自己。”\n梁山伯又惊又喜，简直不敢相信自己的耳朵，他想起祝英台临走时一次又一次的暗示，懊悔不已，直骂自己愚钝。\n师母笑着：“既然你已经知道了事情的来龙去脉，就赶快去祝府提亲去吧，不要误了大好姻缘。”梁山伯谢过师娘，连忙和四九收拾行李，马不停蹄地向祝府赶去。"
+      },
       "event_type": "TRANSFIGURATION",
       "description": "男英雄意识到女英雄的真实身份以及她的爱意; 梁山伯得知祝英台是女儿身以及她的爱意",
       "agents": [
@@ -429,11 +433,6 @@
       "targets": [
         "祝英台"
       ],
-      "text_span": {
-        "start": 2872,
-        "end": 3211,
-        "text": "祝英台走后，梁山伯非常寂寞，他不停地抚摸着祝英台送他扇坠，想起了她临行时说的话。于是，他便急忙去找师娘问个明白。\n师娘从怀里取出另一只扇坠说：“这是英台临走时交给我的，她托我为她做媒，如果谁有同样的扇坠，就能和她结为夫妻。”\n梁山伯拿出自己的扇坠一比，刚好是一对，可是他还是大惑不解，便问：“师娘的话，山伯不明白，英台临走时只说愿意为我和她的妹妹做媒。”\n师娘笑着说：“你这个糊涂孩子，英台其实不是男人，她说的妹妹，就是她自己。”\n梁山伯又惊又喜，简直不敢相信自己的耳朵，他想起祝英台临走时一次又一次的暗示，懊悔不已，直骂自己愚钝。\n师母笑着：“既然你已经知道了事情的来龙去脉，就赶快去祝府提亲去吧，不要误了大好姻缘。”梁山伯谢过师娘，连忙和四九收拾行李，马不停蹄地向祝府赶去。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -441,15 +440,19 @@
       "relationship_level1": "Romance",
       "relationship_level2": "lover",
       "sentiment": "romantic",
-      "action_layer": {
-        "category": "mental",
-        "type": "realize",
-        "status": "success",
-        "context": "discovery"
-      }
+      "action_category": "mental",
+      "action_type": "realize",
+      "action_context": "discovery",
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "9ef4ad7b-319c-4778-bdb2-76aeee3ec7f7",
+      "text_span": {
+        "start": 3501,
+        "end": 3814,
+        "text": "祝员外气得浑身发抖，大声喝道：“大胆，婚姻大事乃父母之命，怎么可以自己决定？”\n祝英台倔强地回答：“我的婚姻当然我自己做主，除了梁山伯我谁也不嫁。”\n“这个由不得你，你母亲与我已经将你许配给了马太守的公子马文才，你嫁也得嫁，不嫁也得嫁。”祝员外冷冷地说。\n“那个马文才整天游手好闲，不学无术，我才不要嫁给他那样的人。”祝英台不甘示弱。\n“马家有权有势，又跟我们门当户对，这么好的姻缘上哪里找去？梁山伯寒门小户，根本不配高攀我们。”\n“反正我就是喜欢梁山伯，不管他是穷还是富。”\n“放肆，这由不得你。马家的聘礼我们都收下了。”\n祝英台见父亲执意要将自己许配给马文才，非常气愤，三天三夜不吃也不喝。眼看婚期就快到了，祝员外很着急。"
+      },
       "event_type": "STRUGGLE",
       "description": "女英雄不惜绝食向家人表达抗议; 祝员外想要祝英台嫁给马文才, 祝英台不惜绝食抗议",
       "agents": [
@@ -458,11 +461,6 @@
       "targets": [
         "祝英台"
       ],
-      "text_span": {
-        "start": 3501,
-        "end": 3814,
-        "text": "祝员外气得浑身发抖，大声喝道：“大胆，婚姻大事乃父母之命，怎么可以自己决定？”\n祝英台倔强地回答：“我的婚姻当然我自己做主，除了梁山伯我谁也不嫁。”\n“这个由不得你，你母亲与我已经将你许配给了马太守的公子马文才，你嫁也得嫁，不嫁也得嫁。”祝员外冷冷地说。\n“那个马文才整天游手好闲，不学无术，我才不要嫁给他那样的人。”祝英台不甘示弱。\n“马家有权有势，又跟我们门当户对，这么好的姻缘上哪里找去？梁山伯寒门小户，根本不配高攀我们。”\n“反正我就是喜欢梁山伯，不管他是穷还是富。”\n“放肆，这由不得你。马家的聘礼我们都收下了。”\n祝英台见父亲执意要将自己许配给马文才，非常气愤，三天三夜不吃也不喝。眼看婚期就快到了，祝员外很着急。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -470,15 +468,19 @@
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "parent_child",
       "sentiment": "negative",
-      "action_layer": {
-        "category": "communicative",
-        "type": "command",
-        "status": "attempt",
-        "context": "task_assignment"
-      }
+      "action_category": "communicative",
+      "action_type": "command",
+      "action_context": "task_assignment",
+      "action_status": "attempt",
+      "narrative_function": ""
     },
     {
       "id": "533714b4-4c49-482e-9dfa-9cf0e5b09012",
+      "text_span": {
+        "start": 4888,
+        "end": 5130,
+        "text": "梁山伯回到家就病倒了，他不时昏迷，嚷着要见祝英台。母亲见他如此痛苦，爱子心切，便亲自到祝府去找祝英台。这时，祝英台却被家人关了起来，无奈之下，她只好写了一封信让银心交给梁母。梁山伯看到祝英台写的书信，十分难过。这时，四九冒冒失失地跑了进来，说：“不好了，不好了，祝小姐要嫁人了。”梁山伯的父母想要阻止四九，却已经来不及了。梁山伯听了这个消息，双目微微一颤，落下两行泪来。他放下书信，对父母说：“我死了以后，你们一定要把我葬在邵家渡的山坡上，我想亲眼看着英台的喜船经过。”说完便咽了气。"
+      },
       "event_type": "LACK",
       "description": "男主思念成疾而死, 殉情; 梁山伯听说祝英台结婚, 伤心而死",
       "agents": [
@@ -487,11 +489,6 @@
       "targets": [
         "祝英台"
       ],
-      "text_span": {
-        "start": 4888,
-        "end": 5130,
-        "text": "梁山伯回到家就病倒了，他不时昏迷，嚷着要见祝英台。母亲见他如此痛苦，爱子心切，便亲自到祝府去找祝英台。这时，祝英台却被家人关了起来，无奈之下，她只好写了一封信让银心交给梁母。梁山伯看到祝英台写的书信，十分难过。这时，四九冒冒失失地跑了进来，说：“不好了，不好了，祝小姐要嫁人了。”梁山伯的父母想要阻止四九，却已经来不及了。梁山伯听了这个消息，双目微微一颤，落下两行泪来。他放下书信，对父母说：“我死了以后，你们一定要把我葬在邵家渡的山坡上，我想亲眼看着英台的喜船经过。”说完便咽了气。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -499,15 +496,19 @@
       "relationship_level1": "Romance",
       "relationship_level2": "lover",
       "sentiment": "romantic",
-      "action_layer": {
-        "category": "transaction",
-        "type": "sacrifice",
-        "status": "success",
-        "context": "self_sacrifice"
-      }
+      "action_category": "transaction",
+      "action_type": "sacrifice",
+      "action_context": "self_sacrifice",
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "e3ebab93-60f9-4c6f-a815-22442c528d88",
+      "text_span": {
+        "start": 5131,
+        "end": 5245,
+        "text": "祝英台听到梁山伯的死讯，悲痛欲绝，她请求父亲让她去梁山伯灵前祭奠，但是父亲始终不同意。她心一横就往旁边的柱子上使劲撞去，银心见情况不妙，急忙拉住她。祝英台绝望地说：“要是你们不让我去，我就撞死在这里。”祝员外吓了一跳，只好答应。"
+      },
       "event_type": "BEGINNING_COUNTERACTION",
       "description": "女主以死相逼, 以换取祭奠男主的机会; 祝英台以死相逼, 换得祭奠梁山伯的机会",
       "agents": [
@@ -516,11 +517,6 @@
       "targets": [
         "祝员外"
       ],
-      "text_span": {
-        "start": 5131,
-        "end": 5245,
-        "text": "祝英台听到梁山伯的死讯，悲痛欲绝，她请求父亲让她去梁山伯灵前祭奠，但是父亲始终不同意。她心一横就往旁边的柱子上使劲撞去，银心见情况不妙，急忙拉住她。祝英台绝望地说：“要是你们不让我去，我就撞死在这里。”祝员外吓了一跳，只好答应。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -528,15 +524,19 @@
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "parent_child",
       "sentiment": "hostile",
-      "action_layer": {
-        "category": "transaction",
-        "type": "request",
-        "status": "success",
-        "context": "demand"
-      }
+      "action_category": "transaction",
+      "action_type": "request",
+      "action_context": "demand",
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "f41eda5c-826f-4710-8d9e-71d1f4505ff8",
+      "text_span": {
+        "start": 5246,
+        "end": 5361,
+        "text": "祝英台急急忙忙赶到梁家，一进门就扑在梁山伯身上大哭起来：“梁兄，我来迟了，是我害了你呀，我们活着不能做夫妻，那就死了待在一起。”她哭得肝肠寸断，忽然家人来报：“小姐，老爷请你赶快回去。”他们见祝英台始终不肯离去，就强行将她拖走了。"
+      },
       "event_type": "BEGINNING_COUNTERACTION",
       "description": "女主许诺与男主同死; 祝英台许诺殉情",
       "agents": [
@@ -545,11 +545,6 @@
       "targets": [
         "梁山伯"
       ],
-      "text_span": {
-        "start": 5246,
-        "end": 5361,
-        "text": "祝英台急急忙忙赶到梁家，一进门就扑在梁山伯身上大哭起来：“梁兄，我来迟了，是我害了你呀，我们活着不能做夫妻，那就死了待在一起。”她哭得肝肠寸断，忽然家人来报：“小姐，老爷请你赶快回去。”他们见祝英台始终不肯离去，就强行将她拖走了。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -557,15 +552,19 @@
       "relationship_level1": "Romance",
       "relationship_level2": "lover",
       "sentiment": "romantic",
-      "action_layer": {
-        "category": "communicative",
-        "type": "promise",
-        "status": "success",
-        "context": "oath"
-      }
+      "action_category": "communicative",
+      "action_type": "promise",
+      "action_context": "oath",
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "ddff7ac7-b7f4-45e6-9505-d7420476d800",
+      "text_span": {
+        "start": 5362,
+        "end": 5492,
+        "text": "自从祭奠梁山伯回来，祝英台就整天精神恍惚，一言不发。这时，马府暗中听到一些风声，就提前了婚期，早早过来迎娶。成亲这天，祝府上下，热闹异常，前来道喜的人络绎不绝。可是，祝英台却独自一个人躲在房里哭泣，她偷偷在嫁衣下穿了件白色的孝服。随后，祝英台被簇拥着上了喜船。"
+      },
       "event_type": "STRUGGLE",
       "description": "女主佯装嫁给男主的情敌; 祝英台在丧服上面穿上婚服, 佯装出嫁",
       "agents": [
@@ -574,11 +573,6 @@
       "targets": [
         "马文才"
       ],
-      "text_span": {
-        "start": 5362,
-        "end": 5492,
-        "text": "自从祭奠梁山伯回来，祝英台就整天精神恍惚，一言不发。这时，马府暗中听到一些风声，就提前了婚期，早早过来迎娶。成亲这天，祝府上下，热闹异常，前来道喜的人络绎不绝。可是，祝英台却独自一个人躲在房里哭泣，她偷偷在嫁衣下穿了件白色的孝服。随后，祝英台被簇拥着上了喜船。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -586,15 +580,19 @@
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "spouse",
       "sentiment": "negative",
-      "action_layer": {
-        "category": "communicative",
-        "type": "deceive",
-        "status": "success",
-        "context": "feign"
-      }
+      "action_category": "communicative",
+      "action_type": "deceive",
+      "action_context": "feign",
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "b3a24f4d-54a8-40e6-a6e2-844dfe3c5026",
+      "text_span": {
+        "start": 5492,
+        "end": 5599,
+        "text": "当喜船经过邵家渡时，她远远地看见了梁山伯的坟墓，便提出要去坟上祭拜。可是，马家迎亲的人不但没有同意，反而故意将船开得很快。这时，忽然狂风大作，波浪汹涌，喜船无法前行，只得靠在岸边躲避风浪。于是，祝英台从容地上了岸。"
+      },
       "event_type": "RECEIPT_OF_AGENT",
       "description": "在自然/命运的帮助下, 女主逃离控制, 到了男主坟墓之前;\n祝英台在风浪的帮助下, 上岸到了梁山伯墓前",
       "agents": [
@@ -603,11 +601,6 @@
       "targets": [
         "马文才"
       ],
-      "text_span": {
-        "start": 5492,
-        "end": 5599,
-        "text": "当喜船经过邵家渡时，她远远地看见了梁山伯的坟墓，便提出要去坟上祭拜。可是，马家迎亲的人不但没有同意，反而故意将船开得很快。这时，忽然狂风大作，波浪汹涌，喜船无法前行，只得靠在岸边躲避风浪。于是，祝英台从容地上了岸。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -615,14 +608,19 @@
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "spouse",
       "sentiment": "negative",
-      "action_layer": {
-        "category": "physical",
-        "type": "flee",
-        "status": "success"
-      }
+      "action_category": "physical",
+      "action_type": "flee",
+      "action_context": "",
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "8f441622-589c-4e85-a527-039b5f773deb",
+      "text_span": {
+        "start": 5600,
+        "end": 5788,
+        "text": "祝英台越走越快，边走边脱去红色的嫁衣，露出雪白的孝服。她扑在坟头上，喊着梁山伯的名字，号啕大哭。霎时，只见地动山摇，飞沙走石，晴朗的天空也变得一片阴翳。梁山伯的坟墓忽然裂开一条长长的缝隙，祝英台毫不犹豫地跳了进去。而那坟墓顷刻间又合拢在一起，如同没有裂开过一样。\n转眼间，一切都风平浪静，恢复了正常。一对翩翩起舞的蝴蝶，从坟墓里飞了出来。据说黄色的是祝英台，褐色的就是梁山伯。"
+      },
       "event_type": "WEDDING",
       "description": "女主在男主墓前自杀;祝英台投入梁山伯墓中",
       "agents": [
@@ -631,11 +629,6 @@
       "targets": [
         "梁山伯"
       ],
-      "text_span": {
-        "start": 5600,
-        "end": 5788,
-        "text": "祝英台越走越快，边走边脱去红色的嫁衣，露出雪白的孝服。她扑在坟头上，喊着梁山伯的名字，号啕大哭。霎时，只见地动山摇，飞沙走石，晴朗的天空也变得一片阴翳。梁山伯的坟墓忽然裂开一条长长的缝隙，祝英台毫不犹豫地跳了进去。而那坟墓顷刻间又合拢在一起，如同没有裂开过一样。\n转眼间，一切都风平浪静，恢复了正常。一对翩翩起舞的蝴蝶，从坟墓里飞了出来。据说黄色的是祝英台，褐色的就是梁山伯。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -643,12 +636,11 @@
       "relationship_level1": "Romance",
       "relationship_level2": "lover",
       "sentiment": "romantic",
-      "action_layer": {
-        "category": "existential",
-        "type": "die",
-        "status": "success",
-        "context": "suicide"
-      }
+      "action_category": "existential",
+      "action_type": "die",
+      "action_context": "suicide",
+      "action_status": "success",
+      "narrative_function": ""
     }
   ],
   "cross_validation": {

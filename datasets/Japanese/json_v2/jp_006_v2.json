@@ -39,7 +39,21 @@
   "narrative_events": [
     {
       "event_type": "OTHER",
-      "description": ""
+      "description": "",
+      "id": "f6fe8c53-a8c1-4b0a-902b-ad7bc361ac96",
+      "narrative_function": "",
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "b38d5e6a-31c5-4b28-9884-0e1a93670e72",
@@ -67,7 +81,13 @@
         "category": "physical",
         "type": "attack",
         "status": "success"
-      }
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "action_category": "physical",
+      "action_type": "attack",
+      "action_context": "",
+      "action_status": "success"
     },
     {
       "id": "03ba684b-4620-4a58-ab54-e593c2c974ae",
@@ -95,7 +115,13 @@
         "category": "physical",
         "type": "restrain",
         "status": "success"
-      }
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "action_category": "physical",
+      "action_type": "restrain",
+      "action_context": "",
+      "action_status": "success"
     },
     {
       "id": "3e217e60-ed41-41c3-aff7-f6af1cfc0f2b",
@@ -123,7 +149,13 @@
         "category": "communicative",
         "type": "deceive",
         "status": "success"
-      }
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "action_category": "communicative",
+      "action_type": "deceive",
+      "action_context": "",
+      "action_status": "success"
     },
     {
       "id": "275be13a-787f-4888-a772-6166ee9b1a2e",
@@ -151,7 +183,13 @@
         "category": "physical",
         "type": "attack",
         "status": "success"
-      }
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "action_category": "physical",
+      "action_type": "attack",
+      "action_context": "",
+      "action_status": "success"
     },
     {
       "id": "d4735a5a-52bd-44c6-ac8c-30379fa174c2",
@@ -179,7 +217,13 @@
         "category": "communicative",
         "type": "slander",
         "status": "success"
-      }
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "action_category": "communicative",
+      "action_type": "slander",
+      "action_context": "",
+      "action_status": "success"
     },
     {
       "id": "85c8d56b-93f8-40d1-8f55-9d13553eb9b2",
@@ -207,7 +251,13 @@
         "category": "communicative",
         "type": "promise",
         "status": "success"
-      }
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "action_category": "communicative",
+      "action_type": "promise",
+      "action_context": "",
+      "action_status": "success"
     },
     {
       "id": "01fbf3b6-e98c-41e8-92b2-728c0d4385a7",
@@ -235,7 +285,13 @@
         "category": "physical",
         "type": "attack",
         "status": "success"
-      }
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "action_category": "physical",
+      "action_type": "attack",
+      "action_context": "",
+      "action_status": "success"
     },
     {
       "id": "eabbb367-81bf-4cfb-b475-5a577e47ad38",
@@ -263,7 +319,13 @@
         "category": "physical",
         "type": "attack",
         "status": "success"
-      }
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "action_category": "physical",
+      "action_type": "attack",
+      "action_context": "",
+      "action_status": "success"
     }
   ],
   "themes_and_motifs": {
@@ -285,7 +347,9 @@
     "helper_type": [
       "ANIMAL"
     ],
-    "thinking_process": "本作は、欺瞞と殺害という重い悪行に対し、動物の知恵と罠によって段階的な報復が行われ、最終的に完全な制裁が下される「報復正義型動物譚」である。"
+    "thinking_process": "本作は、欺瞞と殺害という重い悪行に対し、動物の知恵と罠によって段階的な報復が行われ、最終的に完全な制裁が下される「報復正義型動物譚」である。",
+    "atu_evidence": {},
+    "motif_evidence": {}
   },
   "analysis": {
     "propp_functions": [
@@ -420,7 +484,7 @@
     ],
     "propp_notes": "",
     "paragraph_summaries": {
-      "per_paragraph": {},
+      "per_section": {},
       "combined": [],
       "whole": ""
     },

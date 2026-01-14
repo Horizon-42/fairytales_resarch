@@ -8,27 +8,31 @@ export function organizeFiles(fileList) {
 
   Array.from(fileList).forEach((file) => {
     const path = file.webkitRelativePath || file.name;
+    const pathLower = path.toLowerCase();
     const parts = path.split('/');
     const fileName = parts.pop();
     const dir = parts.join('/');
 
-    if (fileName.endsWith('.txt')) {
+    // Process .txt files from texts folder
+    if (fileName.endsWith('.txt') && 
+        (pathLower.includes('/texts/') || pathLower.startsWith('texts/'))) {
       const id = fileName.replace('.txt', '');
       texts.push({ file, id, path });
-    } else if (fileName.endsWith('.json')) {
+    }
+    // Process .json files from json/json_v2/json_v3 folders (for fallback loading)
+    else if (fileName.endsWith('.json')) {
+      // Skip JSON files in texts folder
+      if (pathLower.includes('/texts/') || pathLower.startsWith('texts/')) {
+        return;
+      }
+      
       const id = fileName.replace(/_v[123]\.json$/, '').replace('.json', '');
       
-      // Heuristic: check directory or filename suffix
-      // Users might name v2/v3 files as *_v2.json / *_v3.json or put them in json_v2/json_v3 folder
+      // Determine version from folder or filename
       const isV2Folder = dir.endsWith('json_v2') || dir.includes('/json_v2/');
       const isV2File = fileName.endsWith('_v2.json');
-
       const isV3Folder = dir.endsWith('json_v3') || dir.includes('/json_v3/');
       const isV3File = fileName.endsWith('_v3.json');
-      
-      // Also check content version if we could read it, but we can't here easily.
-      // We rely on folder structure or naming conventions for now.
-      // The user prompt said: "open or create 2 json folders... json and json_v2"
       
       if (isV3Folder || isV3File) {
         v3Jsons[id] = file;
@@ -363,10 +367,26 @@ export function mapV3ToState(data) {
 
       const agents = Array.isArray(evt.agents) ? evt.agents.filter(Boolean) : [];
       const targets = Array.isArray(evt.targets) ? evt.targets.filter(Boolean) : [];
-      const isMultiRelationship = (evt.target_type || "character") === "character" && (agents.length > 1 || targets.length > 1 || relList.length > 1);
+      
+      // If relationships array is empty but legacy fields exist, reconstruct relationship_multi from legacy fields
+      let finalRelList = relList;
+      if (relList.length === 0 && (evt.target_type || "character") === "character" && agents.length > 0 && targets.length > 0) {
+        // Check if legacy fields exist (they might still be present in some v3 files before deletion)
+        if (evt.relationship_level1 || evt.relationship_level2 || evt.sentiment) {
+          finalRelList = [{
+            agent: agents[0] || "",
+            target: targets[0] || "",
+            relationship_level1: evt.relationship_level1 || "",
+            relationship_level2: evt.relationship_level2 || "",
+            sentiment: evt.sentiment || ""
+          }];
+        }
+      }
+      
+      const isMultiRelationship = (evt.target_type || "character") === "character" && (agents.length > 1 || targets.length > 1 || finalRelList.length > 1);
 
       // Backfill legacy single-relationship fields from relationship list when unambiguous
-      const firstRel = relList[0] || {};
+      const firstRel = finalRelList[0] || {};
       const legacyRelationshipLevel1 = isMultiRelationship ? "" : (evt.relationship_level1 || firstRel.relationship_level1 || "");
       const legacyRelationshipLevel2 = isMultiRelationship ? "" : (evt.relationship_level2 || firstRel.relationship_level2 || "");
       const legacySentiment = isMultiRelationship ? "" : (evt.sentiment || firstRel.sentiment || "");
@@ -379,7 +399,7 @@ export function mapV3ToState(data) {
         instrument: evt.instrument || "",
         time_order: evt.time_order ?? (index + 1),
         narrative_function: narrativeFunction,
-        relationship_multi: relList,
+        relationship_multi: finalRelList,
         relationship_level1: legacyRelationshipLevel1,
         relationship_level2: legacyRelationshipLevel2,
         sentiment: legacySentiment,

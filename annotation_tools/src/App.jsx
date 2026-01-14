@@ -4,6 +4,7 @@ import { downloadJson, relPathToDatasetHint, HIGHLIGHT_COLORS, emptyProppFn, ext
 import { saveFolderCache, loadFolderCache, extractFolderPath } from "./utils/folderCache.js";
 import { getBackendUrl, clearBackendCache } from "./utils/backendConfig.js";
 import { deriveTextSectionsFromNarratives } from "./utils/summarySections.js";
+import { VERSION } from "./version.js";
 
 // Import components
 import {
@@ -27,6 +28,7 @@ export default function App() {
   const [v3JsonFiles, setV3JsonFiles] = useState({});
   const [selectedStoryIndex, setSelectedStoryIndex] = useState(-1);
   const [currentSelection, setCurrentSelection] = useState(null);
+  const [selectedFolderPath, setSelectedFolderPath] = useState(null); // Store the selected folder path
 
   const [jsonSaveHint, setJsonSaveHint] = useState(
     "datasets/iron/persian/persian/json/FA_XXX.json"
@@ -35,11 +37,8 @@ export default function App() {
   const [previewVersion, setPreviewVersion] = useState("v3");
 
   const [id, setId] = useState("FA_XXX");
-  // Initialize culture from cache if available
-  const [culture, setCulture] = useState(() => {
-    const cache = loadFolderCache();
-    return cache?.culture || "Persian";
-  });
+  // Initialize culture - will be loaded from folder cache when folder is selected
+  const [culture, setCulture] = useState("Persian");
   const [title, setTitle] = useState("");
 
   // Extract title from ID (everything after the second underscore)
@@ -715,64 +714,34 @@ export default function App() {
         .map((n) => {
           if (typeof n !== "object") return n;
 
-          const result = { ...n };
+          // v1 format: only flat fields, no relationship_multi or action_layer
+          const result = {
+            id: n.id,
+            text_span: n.text_span,
+            event_type: n.event_type || "",
+            description: n.description || "",
+            agents: Array.isArray(n.agents) ? n.agents.filter(Boolean) : [],
+            targets: Array.isArray(n.targets) ? n.targets.filter(Boolean) : [],
+            target_type: n.target_type || "",
+            object_type: n.object_type || "",
+            instrument: n.instrument || "",
+            time_order: n.time_order,
+            // v1 only uses flat relationship fields
+            relationship_level1: n.relationship_level1 ? extractEnglishFromRelationship(n.relationship_level1) : "",
+            relationship_level2: n.relationship_level2 || "",
+            sentiment: n.sentiment || "",
+            // v1 only uses flat action fields
+            action_category: n.action_category || "",
+            action_type: n.action_type || "",
+            action_context: n.action_context || "",
+            action_status: n.action_status || "",
+            narrative_function: n.narrative_function || ""
+          };
 
-          const agents = Array.isArray(result.agents) ? result.agents.filter(Boolean) : [];
-          const targets = Array.isArray(result.targets) ? result.targets.filter(Boolean) : [];
-          const isMultiRelationship = result.target_type === "character" && (agents.length > 1 || targets.length > 1);
-
-          const existingMultiList = Array.isArray(result.relationship_multi)
-            ? result.relationship_multi
-            : ((result.relationship_multi && typeof result.relationship_multi === "object") ? [result.relationship_multi] : []);
-
-          if (isMultiRelationship) {
-            const listSource = (existingMultiList.length > 0)
-              ? existingMultiList
-              : [{
-                  agent: agents.length === 1 ? agents[0] : (agents[0] || ""),
-                  target: targets.length === 1 ? targets[0] : (targets[0] || ""),
-                  relationship_level1: result.relationship_level1 || "",
-                  relationship_level2: result.relationship_level2 || "",
-                  sentiment: result.sentiment || ""
-                }];
-
-            result.relationship_multi = listSource.map((r) => {
-              const rel = (r && typeof r === "object") ? r : {};
-              const level1 = rel.relationship_level1 || "";
-              return {
-                agent: rel.agent || "",
-                target: rel.target || "",
-                relationship_level1: level1 ? extractEnglishFromRelationship(level1) : "",
-                relationship_level2: rel.relationship_level2 || "",
-                sentiment: rel.sentiment || ""
-              };
-            });
-
-            // In multi-person cases, keep legacy fields empty to avoid ambiguity
-            result.relationship_level1 = "";
-            result.relationship_level2 = "";
-            // Sentiment becomes per-relationship in multi-person case
-            result.sentiment = "";
-          } else {
-            // Ensure relationship_level1 only contains English
-            if (result.relationship_level1) {
-              result.relationship_level1 = extractEnglishFromRelationship(result.relationship_level1);
-            } else if (existingMultiList[0]?.relationship_level1) {
-              // Backward-compat fallback if only relationship_multi exists
-              result.relationship_level1 = extractEnglishFromRelationship(existingMultiList[0].relationship_level1);
-            }
-
-            if (!result.relationship_level2 && existingMultiList[0]?.relationship_level2) {
-              result.relationship_level2 = existingMultiList[0].relationship_level2;
-            }
-
-            if (!result.sentiment && existingMultiList[0]?.sentiment) {
-              result.sentiment = existingMultiList[0].sentiment;
-            }
-          }
-
-          // Preserve existing annotation structure: keep action_* fields as-is.
-          // (We still support reading legacy action_layer via fileHandler.js.)
+          // Remove v3-specific fields if they exist
+          delete result.relationship_multi;
+          delete result.relationships;
+          delete result.action_layer;
 
           return result;
         }),
@@ -811,61 +780,34 @@ export default function App() {
           return { event_type: "OTHER", description: n, narrative_function: "" };
         }
 
-        const result = { ...n };
+        // v2 format: only flat fields, no relationship_multi or action_layer
+        const result = {
+          id: n.id,
+          text_span: n.text_span,
+          event_type: n.event_type || "",
+          description: n.description || "",
+          agents: Array.isArray(n.agents) ? n.agents.filter(Boolean) : [],
+          targets: Array.isArray(n.targets) ? n.targets.filter(Boolean) : [],
+          target_type: n.target_type || "",
+          object_type: n.object_type || "",
+          instrument: n.instrument || "",
+          time_order: n.time_order,
+          // v2 only uses flat relationship fields
+          relationship_level1: n.relationship_level1 ? extractEnglishFromRelationship(n.relationship_level1) : "",
+          relationship_level2: n.relationship_level2 || "",
+          sentiment: n.sentiment || "",
+          // v2 only uses flat action fields
+          action_category: n.action_category || "",
+          action_type: n.action_type || "",
+          action_context: n.action_context || "",
+          action_status: n.action_status || "",
+          narrative_function: n.narrative_function || ""
+        };
 
-        const agents = Array.isArray(result.agents) ? result.agents.filter(Boolean) : [];
-        const targets = Array.isArray(result.targets) ? result.targets.filter(Boolean) : [];
-        const isMultiRelationship = result.target_type === "character" && (agents.length > 1 || targets.length > 1);
-
-        const existingMultiList = Array.isArray(result.relationship_multi)
-          ? result.relationship_multi
-          : ((result.relationship_multi && typeof result.relationship_multi === "object") ? [result.relationship_multi] : []);
-
-        if (isMultiRelationship) {
-          const listSource = (existingMultiList.length > 0)
-            ? existingMultiList
-            : [{
-                agent: agents.length === 1 ? agents[0] : (agents[0] || ""),
-                target: targets.length === 1 ? targets[0] : (targets[0] || ""),
-                relationship_level1: result.relationship_level1 || "",
-                relationship_level2: result.relationship_level2 || "",
-                sentiment: result.sentiment || ""
-              }];
-
-          result.relationship_multi = listSource.map((r) => {
-            const rel = (r && typeof r === "object") ? r : {};
-            const level1 = rel.relationship_level1 || "";
-            return {
-              agent: rel.agent || "",
-              target: rel.target || "",
-              relationship_level1: level1 ? extractEnglishFromRelationship(level1) : "",
-              relationship_level2: rel.relationship_level2 || "",
-              sentiment: rel.sentiment || ""
-            };
-          });
-
-          result.relationship_level1 = "";
-          result.relationship_level2 = "";
-          result.sentiment = "";
-        } else {
-          // Ensure relationship_level1 only contains English
-          if (result.relationship_level1) {
-            result.relationship_level1 = extractEnglishFromRelationship(result.relationship_level1);
-          } else if (existingMultiList[0]?.relationship_level1) {
-            result.relationship_level1 = extractEnglishFromRelationship(existingMultiList[0].relationship_level1);
-          }
-
-          if (!result.relationship_level2 && existingMultiList[0]?.relationship_level2) {
-            result.relationship_level2 = existingMultiList[0].relationship_level2;
-          }
-
-          if (!result.sentiment && existingMultiList[0]?.sentiment) {
-            result.sentiment = existingMultiList[0].sentiment;
-          }
-        }
-
-        // Preserve existing annotation structure: keep action_* fields as-is.
-        // (We still support reading legacy action_layer via fileHandler.js.)
+        // Remove v3-specific fields if they exist
+        delete result.relationship_multi;
+        delete result.relationships;
+        delete result.action_layer;
 
         return result;
       }),
@@ -1013,47 +955,47 @@ export default function App() {
           };
         }
 
-        const result = { ...n };
+        // v3 format: extract from UI state (which may have relationship_multi or flat fields)
+        // Only access v3-specific fields here, not in v1/v2
+        const agents = Array.isArray(n.agents) ? n.agents.filter(Boolean) : [];
+        const targets = Array.isArray(n.targets) ? n.targets.filter(Boolean) : [];
 
-        const agents = Array.isArray(result.agents) ? result.agents.filter(Boolean) : [];
-        const targets = Array.isArray(result.targets) ? result.targets.filter(Boolean) : [];
-
-        const existingMultiList = Array.isArray(result.relationship_multi)
-          ? result.relationship_multi
-          : ((result.relationship_multi && typeof result.relationship_multi === "object") ? [result.relationship_multi] : []);
+        // v3: extract relationships from relationship_multi (UI state) or flat fields
+        const existingMultiList = Array.isArray(n.relationship_multi)
+          ? n.relationship_multi
+          : ((n.relationship_multi && typeof n.relationship_multi === "object") ? [n.relationship_multi] : []);
 
         let relList = [];
         if (existingMultiList.length > 0) {
           relList = existingMultiList.map(normalizeRelEntry);
-        } else if (result.relationship_level1 || result.relationship_level2 || result.sentiment) {
+        } else if (n.relationship_level1 || n.relationship_level2 || n.sentiment) {
           relList = [normalizeRelEntry({
             agent: agents[0] || "",
             target: targets[0] || "",
-            relationship_level1: result.relationship_level1 || "",
-            relationship_level2: result.relationship_level2 || "",
-            sentiment: result.sentiment || ""
+            relationship_level1: n.relationship_level1 || "",
+            relationship_level2: n.relationship_level2 || "",
+            sentiment: n.sentiment || ""
           })];
         }
 
-        const actionLayer = buildActionLayerV3(result);
+        const actionLayer = buildActionLayerV3(n);
 
-        // v3 schema: store nested structures and keep core fields; do not emit legacy relationship/action flat fields.
-        result.relationships = relList;
-        result.action_layer = actionLayer;
-        delete result.relationship_level1;
-        delete result.relationship_level2;
-        delete result.relationship_multi;
-        delete result.sentiment;
-        delete result.action_category;
-        delete result.action_type;
-        delete result.action_context;
-        delete result.action_status;
-        delete result.narrative_function;
-
-        // Remove any legacy v3 wrapper field if present
-        delete result.relationship;
-
-        return result;
+        // v3 schema: only include v3-specific fields, explicitly construct the object
+        return {
+          id: n.id,
+          text_span: n.text_span,
+          event_type: n.event_type || "",
+          description: n.description || "",
+          agents: agents,
+          targets: targets,
+          target_type: n.target_type || "",
+          object_type: n.object_type || "",
+          instrument: n.instrument || "",
+          time_order: n.time_order,
+          // v3 only uses nested structures
+          relationships: relList,
+          action_layer: actionLayer
+        };
       }),
       themes_and_motifs: {
         ending_type: meta.ending_type,
@@ -1083,7 +1025,7 @@ export default function App() {
   }, [id, culture, title, sourceText, meta, motif, paragraphSummaries, proppFns, proppNotes, narrativeStructure, crossValidation, qa]);
 
   // ========== Save/Load Functions ==========
-  const handleSave = async (version, silent = false) => {
+  const handleSave = React.useCallback(async (version, silent = false) => {
     const data = version === "v3" ? jsonV3 : (version === "v2" ? jsonV2 : jsonV1);
     const currentStory = storyFiles[selectedStoryIndex];
     
@@ -1092,12 +1034,22 @@ export default function App() {
       return;
     }
 
+    if (!selectedFolderPath) {
+      if (!silent) alert("No folder selected. Please select a folder first.");
+      return;
+    }
+
+    // selectedFolderPath is the parent folder that contains texts subfolder
+    // Use it directly without any modification
+    const folderPathToUse = selectedFolderPath;
+
     try {
       const response = await fetch("http://localhost:3001/api/save", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          originalPath: currentStory.path,
+          folderPath: folderPathToUse,
+          fileName: currentStory.id,
           content: data,
           version: version
         })
@@ -1109,14 +1061,14 @@ export default function App() {
       } else {
         if (!silent) alert(`Failed to save: ${result.error}`);
         console.error(`Save (${version}) failed: ${result.error}`);
-        if (!silent) downloadJson(`${id}_${version}.json`, data);
+        if (!silent) downloadJson(`${currentStory.id}_${version}.json`, data);
       }
     } catch (err) {
       console.error("Save failed, falling back to download", err);
       const suffix = version === "v3" ? "_v3" : (version === "v2" ? "_v2" : "_v1");
-      if (!silent) downloadJson(`${id}${suffix}.json`, data);
+      if (!silent) downloadJson(`${currentStory.id}${suffix}.json`, data);
     }
-  };
+  }, [selectedStoryIndex, storyFiles, selectedFolderPath, jsonV1, jsonV2, jsonV3]);
 
   const handleSaveAll = async (silent = false) => {
     if (selectedStoryIndex < 0 || !storyFiles[selectedStoryIndex]) {
@@ -1146,16 +1098,16 @@ export default function App() {
     });
   }, []); // Run once on mount
 
-  // Save culture to cache when it changes
+  // Save culture to cache when it changes (only if folder is selected)
   useEffect(() => {
-    const cache = loadFolderCache();
-    if (cache) {
+    if (selectedFolderPath && culture) {
       saveFolderCache({
-        ...cache,
+        folderPath: selectedFolderPath,
+        selectedIndex: selectedStoryIndex >= 0 ? selectedStoryIndex : undefined,
         culture: culture
       });
     }
-  }, [culture]);
+  }, [culture, selectedFolderPath, selectedStoryIndex]);
 
   // Keyboard shortcut: Cmd+S / Ctrl+S to save JSON
   useEffect(() => {
@@ -1166,9 +1118,9 @@ export default function App() {
 
         // Save v1 + v2 + v3
         if (selectedStoryIndex >= 0 && storyFiles[selectedStoryIndex]) {
-          saveRef.current("v1", true);
-          saveRef.current("v2", true);
-          saveRef.current("v3", true);
+          handleSave("v1", true);
+          handleSave("v2", true);
+          handleSave("v3", true);
         } else {
           alert("No story selected to save.");
         }
@@ -1179,7 +1131,7 @@ export default function App() {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [selectedStoryIndex, storyFiles]);
+  }, [selectedStoryIndex, storyFiles, handleSave]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -1204,10 +1156,17 @@ export default function App() {
       return;
     }
 
-    const saveData = (version) => {
+      const saveData = (version) => {
       const data = version === "v3" ? jsonV3 : (version === "v2" ? jsonV2 : jsonV1);
+      if (!selectedFolderPath) return;
+      
+      // selectedFolderPath is the parent folder that contains texts subfolder
+      // Use it directly
+      const folderPathToUse = selectedFolderPath;
+      
       const payload = JSON.stringify({
-        originalPath: currentStory.path,
+        folderPath: folderPathToUse,
+        fileName: currentStory.id,
         content: data,
         version: version
       });
@@ -1216,9 +1175,10 @@ export default function App() {
       // Modern browsers block synchronous XHR during page dismissal
       if (navigator.sendBeacon) {
         try {
-          // Send as plain text to avoid CORS preflight (simple request)
-          // Server will parse it as JSON
-          const sent = navigator.sendBeacon("http://localhost:3001/api/save", payload);
+          // sendBeacon requires Blob or FormData, not string
+          // Create a Blob with text/plain type so server can parse it
+          const blob = new Blob([payload], { type: 'text/plain' });
+          const sent = navigator.sendBeacon("http://localhost:3001/api/save", blob);
           if (sent) {
             setLastAutoSave(new Date());
           } else {
@@ -1250,7 +1210,7 @@ export default function App() {
     saveData("v1");
     saveData("v2");
     saveData("v3");
-  }, [selectedStoryIndex, storyFiles, jsonV1, jsonV2, jsonV3]);
+  }, [selectedStoryIndex, storyFiles, jsonV1, jsonV2, jsonV3, selectedFolderPath]);
 
   // Save before page unload/refresh
   useEffect(() => {
@@ -1547,19 +1507,47 @@ export default function App() {
     setV2JsonFiles(v2Jsons);
     setV3JsonFiles(v3Jsons);
 
-    // Extract folder path and save to cache
-    const folderPath = extractFolderPath(files, folderPathHint);
-    const cache = loadFolderCache();
-    const targetIndex = (cache && cache.folderPath === folderPath && cache.selectedIndex >= 0 && cache.selectedIndex < withContent.length)
+    // Extract parent folder path (the folder that contains texts subfolder)
+    // User must select the parent folder that contains "texts" subfolder
+    // folderPathHint is the folder name the user selected (should be the parent folder)
+    // extractFolderPath extracts from file paths (e.g., "Japanese_test2/texts/file.txt" -> "Japanese_test2")
+    let folderPath = extractFolderPath(files, folderPathHint);
+    
+    // If extraction from file paths failed, use folderPathHint (the folder name user selected)
+    if (!folderPath && folderPathHint) {
+      folderPath = folderPathHint;
+      console.log(`[EXTRACT] Using folderPathHint as parent folder: ${folderPath}`);
+    }
+    
+    if (!folderPath) {
+      console.error(`[EXTRACT] Could not determine parent folder path`);
+      alert("错误：无法确定父文件夹路径。请确保选择的文件夹包含 texts 子文件夹。");
+      return;
+    }
+    
+    console.log(`[EXTRACT] Parent folder path: ${folderPath}`);
+    
+    // Load cache from the folder
+    const cache = await loadFolderCache(folderPath);
+    const targetIndex = (cache && cache.selectedIndex >= 0 && cache.selectedIndex < withContent.length)
       ? cache.selectedIndex
       : 0;
+    
+    // Set culture from cache if available
+    if (cache && cache.culture) {
+      setCulture(cache.culture);
+    }
 
-    // Save folder cache
-    saveFolderCache({
+    // Save folder cache with initial selection
+    await saveFolderCache({
       folderPath: folderPath,
       selectedIndex: targetIndex,
       culture: culture
     });
+
+    // Store the selected folder path - this is the folder containing txt files
+    // JSON folders (json_v3, json_v2, json) will be created/accessed at the same level
+    setSelectedFolderPath(folderPath);
 
     if (withContent.length > 0) {
       selectStoryWithData(targetIndex, withContent, v1Jsons, v2Jsons, v3Jsons);
@@ -1610,6 +1598,36 @@ export default function App() {
     setHighlightedRanges({});
     setHighlightedChars({});
 
+    // selectedFolderPath is the parent folder that contains texts subfolder
+    // Use it directly to load JSON files from json_v3/json_v2/json folders
+    const folderPathToUse = selectedFolderPath;
+    
+    if (folderPathToUse && folderPathToUse.trim() !== '') {
+      try {
+        const response = await fetch("http://localhost:3001/api/load", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ 
+            folderPath: folderPathToUse,
+            fileName: idGuess
+          })
+        });
+        
+        const result = await response.json();
+        if (result.found && result.content) {
+          const mappedState = result.version === 3
+            ? mapV3ToState(result.content)
+            : (result.version === 2 ? mapV2ToState(result.content) : mapV1ToState(result.content));
+          loadState(mappedState);
+          return;
+        }
+      } catch (err) {
+        console.warn("Server load failed with selectedFolderPath, trying originalPath", err);
+      }
+    }
+    
+    // Fallback: try with originalPath
+    // This is mainly for backward compatibility
     try {
       const response = await fetch("http://localhost:3001/api/load", {
         method: "POST",
@@ -1649,14 +1667,19 @@ export default function App() {
     }
   };
 
-  const handleSelectStory = (index) => {
+  const handleSelectStory = async (index) => {
+    // Save current story before switching
+    if (selectedStoryIndex >= 0 && selectedStoryIndex !== index && selectedFolderPath) {
+      performAutoSave();
+    }
+    
     selectStoryWithData(index, storyFiles, v1JsonFiles, v2JsonFiles, v3JsonFiles);
     // Update cache with new selected index
-    const cache = loadFolderCache();
-    if (cache) {
-      saveFolderCache({
-        ...cache,
-        selectedIndex: index
+    if (selectedFolderPath) {
+      await saveFolderCache({
+        folderPath: selectedFolderPath,
+        selectedIndex: index,
+        culture: culture
       });
     }
   };
@@ -2018,7 +2041,7 @@ export default function App() {
         <div className="header-left">
           <span className="logo-icon">✨</span>
           <div>
-            <h1>Fairy Tale Annotation Tool</h1>
+            <h1>Fairy Tale Annotation Tool <span style={{ fontSize: "0.6em", fontWeight: "normal", color: "#64748b", marginLeft: "0.5rem" }}>v{VERSION}</span></h1>
             <p>
               Aligns with the Persian JSON schema in{" "}
               <code>datasets/iron/persian/persian/json</code>.

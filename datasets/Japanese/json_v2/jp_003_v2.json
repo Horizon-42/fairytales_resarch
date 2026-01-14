@@ -61,7 +61,24 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 1
+      "time_order": 1,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [
+        {
+          "agent": "巳之吉",
+          "target": "渡し守の小屋",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": ""
+        }
+      ],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "d251b5da-195a-4da1-ab66-3edeb30a7ef4",
@@ -81,7 +98,16 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 2
+      "time_order": 2,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "1c4c54ba-11ac-45c0-848a-fbe4ea72b167",
@@ -93,7 +119,16 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 3
+      "time_order": 3,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "d5ae6242-17dd-469b-9d91-06081280930c",
@@ -113,7 +148,16 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 4
+      "time_order": 4,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "02453c5d-1731-447a-803e-0af32c2bc949",
@@ -131,7 +175,16 @@
       "target_type": "object",
       "object_type": "",
       "instrument": "",
-      "time_order": 5
+      "time_order": 5,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "8cd003ad-513f-442c-bbcc-e5c5d3eca68d",
@@ -152,7 +205,16 @@
       "target_type": "object",
       "object_type": "",
       "instrument": "",
-      "time_order": 6
+      "time_order": 6,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "28e5ceee-b5f7-49d3-8271-558f17f41abb",
@@ -172,7 +234,16 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 7
+      "time_order": 7,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "3e87ded9-de0d-4614-bb6a-6aaf166fe260",
@@ -192,7 +263,16 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 8
+      "time_order": 8,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "33da1f51-9e68-4c9c-9571-f36894a288c9",
@@ -212,7 +292,16 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 9
+      "time_order": 9,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     }
   ],
   "themes_and_motifs": {
@@ -227,7 +316,9 @@
     ],
     "obstacle_thrower": [],
     "helper_type": [],
-    "thinking_process": "本作は雪女による明確な禁忌の提示と、その破りによって引き起こされる\n不可逆的な別離を中心構造としている。\n結婚や異類関係よりも、禁忌遵守の条件性と違反の結果が物語の核であるため、\n「禁忌違反と処罰」のモチーフに該当すると判断した。\n"
+    "thinking_process": "本作は雪女による明確な禁忌の提示と、その破りによって引き起こされる\n不可逆的な別離を中心構造としている。\n結婚や異類関係よりも、禁忌遵守の条件性と違反の結果が物語の核であるため、\n「禁忌違反と処罰」のモチーフに該当すると判断した。\n",
+    "atu_evidence": {},
+    "motif_evidence": {}
   },
   "analysis": {
     "propp_functions": [
@@ -362,7 +453,7 @@
     ],
     "propp_notes": "",
     "paragraph_summaries": {
-      "per_paragraph": {},
+      "per_section": {},
       "combined": [],
       "whole": ""
     },

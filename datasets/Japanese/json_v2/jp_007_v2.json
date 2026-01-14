@@ -49,7 +49,21 @@
   "narrative_events": [
     {
       "event_type": "OTHER",
-      "description": ""
+      "description": "",
+      "id": "2e7c032a-f76a-4da6-a11a-8e77e7766e96",
+      "narrative_function": "",
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "5ce2cb20-448e-47b9-a1ff-2bb99e7e056a",
@@ -77,7 +91,13 @@
         "category": "communicative",
         "type": "inform",
         "status": "success"
-      }
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "action_category": "communicative",
+      "action_type": "inform",
+      "action_context": "",
+      "action_status": "success"
     },
     {
       "id": "bb913cbd-fdd4-483d-b373-ef3f97e85ce1",
@@ -104,7 +124,9 @@
       "action_category": "physical",
       "action_type": "",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "",
+      "relationship_multi": []
     },
     {
       "id": "4175e2cb-21f0-452e-a715-471ff2fd5e0a",
@@ -132,7 +154,13 @@
         "category": "transaction",
         "type": "request",
         "status": "success"
-      }
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "action_category": "transaction",
+      "action_type": "request",
+      "action_context": "",
+      "action_status": "success"
     },
     {
       "id": "3a864774-e086-40ef-9b45-4a612dfa21ab",
@@ -160,7 +188,13 @@
         "category": "physical",
         "type": "attack",
         "status": "success"
-      }
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "action_category": "physical",
+      "action_type": "attack",
+      "action_context": "",
+      "action_status": "success"
     },
     {
       "id": "91853f32-2d62-47cc-b08a-73b41cfb889a",
@@ -188,7 +222,13 @@
         "category": "existential",
         "type": "cast_spell",
         "status": "success"
-      }
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "action_category": "existential",
+      "action_type": "cast_spell",
+      "action_context": "",
+      "action_status": "success"
     },
     {
       "id": "e7b34565-beb4-408d-a866-a1afb31bbba7",
@@ -208,7 +248,16 @@
       "target_type": "object",
       "object_type": "normal_object",
       "instrument": "",
-      "time_order": 6
+      "time_order": 6,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "f90b710f-7b83-45ce-90e8-238099f3aece",
@@ -228,7 +277,16 @@
       "target_type": "object",
       "object_type": "magical_agent",
       "instrument": "",
-      "time_order": 7
+      "time_order": 7,
+      "narrative_function": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "f1ea29cc-639c-4ce2-8aef-138a003a7132",
@@ -256,7 +314,13 @@
         "category": "transaction",
         "type": "reward",
         "status": "success"
-      }
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "action_category": "transaction",
+      "action_type": "reward",
+      "action_context": "",
+      "action_status": "success"
     },
     {
       "id": "51339fbc-b2f4-4691-91d6-75a8e44af18b",
@@ -284,7 +348,13 @@
         "category": "transaction",
         "type": "punish",
         "status": "success"
-      }
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "action_category": "transaction",
+      "action_type": "punish",
+      "action_context": "",
+      "action_status": "success"
     }
   ],
   "themes_and_motifs": {
@@ -310,7 +380,9 @@
       "ANIMAL",
       "DEAD"
     ],
-    "thinking_process": "本作は「動物（白）による超自然的援助」と「正直／欲深さ」の対比で進み、正直者が報酬を得て欲張りが罰を受ける「報酬と罰（Justice）」の構造が中心。"
+    "thinking_process": "本作は「動物（白）による超自然的援助」と「正直／欲深さ」の対比で進み、正直者が報酬を得て欲張りが罰を受ける「報酬と罰（Justice）」の構造が中心。",
+    "atu_evidence": {},
+    "motif_evidence": {}
   },
   "analysis": {
     "propp_functions": [
@@ -461,7 +533,7 @@
     ],
     "propp_notes": "",
     "paragraph_summaries": {
-      "per_paragraph": {},
+      "per_section": {},
       "combined": [],
       "whole": ""
     },
