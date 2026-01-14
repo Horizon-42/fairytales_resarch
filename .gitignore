@@ -12,3 +12,5 @@ __pycache__
 
 Japanese_test
 Japanese_test2
+
+.annotation_cache.json
