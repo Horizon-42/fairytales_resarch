@@ -946,11 +946,19 @@ export default function App() {
         text_content: sourceText.text
       },
       characters: characters,
-      narrative_events: narrativeStructure.map((n) => {
+      narrative_events: narrativeStructure.map((n, index) => {
         if (typeof n === "string") {
           return {
+            id: generateUUID(),
+            text_span: null,
             event_type: "OTHER",
             description: n,
+            agents: [],
+            targets: [],
+            target_type: "character",
+            object_type: "",
+            instrument: "",
+            time_order: index + 1,
             relationships: [],
             action_layer: buildActionLayerV3({})
           };
@@ -982,17 +990,20 @@ export default function App() {
         const actionLayer = buildActionLayerV3(n);
 
         // v3 schema: only include v3-specific fields, explicitly construct the object
+        // Ensure id exists, generate if missing
+        const eventId = n.id || generateUUID();
+        
         return {
-          id: n.id,
-          text_span: n.text_span,
+          id: eventId,
+          text_span: n.text_span || null,
           event_type: n.event_type || "",
           description: n.description || "",
           agents: agents,
           targets: targets,
-          target_type: n.target_type || "",
+          target_type: n.target_type || "character",
           object_type: n.object_type || "",
           instrument: n.instrument || "",
-          time_order: n.time_order,
+          time_order: n.time_order ?? (index + 1),
           // v3 only uses nested structures
           relationships: relList,
           action_layer: actionLayer

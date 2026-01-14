@@ -539,7 +539,19 @@ export function mapV3ToState(data) {
 
       // Build the normalized event object
       // Note: We explicitly exclude 'relationships' field as it's been converted to 'relationship_multi'
-      const { relationships, ...evtWithoutRelationships } = evt;
+      // Also exclude legacy flat fields from v3 JSON (they shouldn't exist, but clean them up if they do)
+      const { 
+        relationships, 
+        relationship_level1: _rel1, 
+        relationship_level2: _rel2, 
+        sentiment: _sent,
+        action_category: _actCat,
+        action_type: _actType,
+        action_context: _actCtx,
+        action_status: _actStatus,
+        narrative_function: _narrFn,
+        ...evtWithoutRelationships 
+      } = evt;
       
       return {
         ...evtWithoutRelationships,
@@ -549,10 +561,15 @@ export function mapV3ToState(data) {
         instrument: evt.instrument || "",
         time_order: evt.time_order ?? (index + 1),
         narrative_function: narrativeFunction,
+        // Ensure agents and targets are always arrays
+        agents: agents,
+        targets: targets,
         relationship_multi: finalRelList,
+        // Only set legacy fields if not multi-relationship (for UI compatibility)
         relationship_level1: legacyRelationshipLevel1,
         relationship_level2: legacyRelationshipLevel2,
         sentiment: legacySentiment,
+        // Action fields are extracted from action_layer, but keep them for UI compatibility
         action_category: actionFields.action_category || "",
         action_type: actionFields.action_type || "",
         action_context: actionFields.action_context || "",
