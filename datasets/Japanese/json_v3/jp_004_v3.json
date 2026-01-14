@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "3.0",
   "metadata": {
     "id": "jp_004",
     "title": "",
@@ -36,19 +36,18 @@
       "event_type": "OTHER",
       "description": "",
       "id": "91e1a303-20c4-4cb3-bd9b-0c3344614233",
-      "narrative_function": "",
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "74e605ca-4268-4480-b2b6-8881808ca5e7",
@@ -67,20 +66,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "relationship_level1": "Neutral",
-      "relationship_level2": "stranger",
-      "sentiment": "negative",
       "action_layer": {
         "category": "physical",
         "type": "restrain",
-        "status": "interrupted"
+        "context": "",
+        "status": "interrupted",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_multi": [],
-      "action_category": "physical",
-      "action_type": "restrain",
-      "action_context": "",
-      "action_status": "interrupted"
+      "relationships": [
+        {
+          "agent": "",
+          "target": "ツル",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "stranger",
+          "sentiment": "negative"
+        }
+      ]
     },
     {
       "id": "2fab2acf-f7ce-427e-9a27-29f3522785de",
@@ -101,20 +102,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 2,
-      "relationship_level1": "Neutral",
-      "relationship_level2": "stranger",
-      "sentiment": "positive",
       "action_layer": {
         "category": "physical",
         "type": "defend",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_multi": [],
-      "action_category": "physical",
-      "action_type": "defend",
-      "action_context": "",
-      "action_status": "success"
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "ツル",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "stranger",
+          "sentiment": "positive"
+        }
+      ]
     },
     {
       "id": "8ae4f860-1386-4daf-9e4d-cfbd1abab073",
@@ -133,20 +136,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "relationship_level1": "Neutral",
-      "sentiment": "positive",
       "action_layer": {
         "category": "physical",
         "type": "travel",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "action_category": "physical",
-      "action_type": "travel",
-      "action_context": "",
-      "action_status": "success"
+      "relationships": [
+        {
+          "agent": "ツル",
+          "target": "",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ]
     },
     {
       "id": "65328f95-cc9a-489e-a2c3-3b53faff2413",
@@ -168,16 +173,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 4,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "",
       "action_layer": {
         "category": "communicative",
         "type": "inform",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_multi": [
+      "relationships": [
         {
           "agent": "ツル",
           "target": "おばあさん",
@@ -185,11 +188,7 @@
           "relationship_level2": "",
           "sentiment": "positive"
         }
-      ],
-      "action_category": "communicative",
-      "action_type": "inform",
-      "action_context": "",
-      "action_status": "success"
+      ]
     },
     {
       "id": "202fdacf-c4f4-4f22-b57a-829e268e299e",
@@ -211,13 +210,7 @@
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "",
-      "action_category": "communicative",
-      "action_status": "success",
-      "narrative_function": "",
-      "relationship_multi": [
+      "relationships": [
         {
           "agent": "おじいさん",
           "target": "ツル",
@@ -226,8 +219,13 @@
           "sentiment": "positive"
         }
       ],
-      "action_type": "",
-      "action_context": ""
+      "action_layer": {
+        "category": "communicative",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "a7c9a0a9-5cdf-409f-8188-4ca42e784fc1",
@@ -248,20 +246,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 6,
-      "relationship_level1": "Social & Alliance",
-      "sentiment": "positive",
       "action_layer": {
         "category": "transaction",
         "type": "request",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "action_category": "transaction",
-      "action_type": "request",
-      "action_context": "",
-      "action_status": "success"
+      "relationships": [
+        {
+          "agent": "ツル",
+          "target": "おじいさん",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ]
     },
     {
       "id": "14d8281f-972c-4745-bfd5-9d14ec6b66f1",
@@ -283,16 +283,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 7,
-      "relationship_level1": "",
-      "sentiment": "",
       "action_layer": {
         "category": "communicative",
         "type": "promise",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_level2": "",
-      "relationship_multi": [
+      "relationships": [
         {
           "agent": "ツル",
           "target": "おじいさん",
@@ -300,11 +298,7 @@
           "relationship_level2": "",
           "sentiment": "positive"
         }
-      ],
-      "action_category": "communicative",
-      "action_type": "promise",
-      "action_context": "",
-      "action_status": "success"
+      ]
     },
     {
       "id": "f0f86deb-e99d-4c2f-8faf-edae01f09cbd",
@@ -323,20 +317,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 8,
-      "relationship_level1": "Family & Kinship",
-      "sentiment": "positive",
       "action_layer": {
         "category": "transaction",
         "type": "exchange",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "action_category": "transaction",
-      "action_type": "exchange",
-      "action_context": "",
-      "action_status": "success"
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ]
     },
     {
       "id": "7e7a0948-512a-4e5c-b0f7-536aec7f13ee",
@@ -358,17 +354,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 9,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "",
       "action_layer": {
         "category": "mental",
         "type": "investigate",
+        "context": "Violating the promise",
         "status": "success",
-        "context": "Violating the promise"
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_multi": [
+      "relationships": [
         {
           "agent": "おじいさん",
           "target": "ツル",
@@ -376,11 +369,7 @@
           "relationship_level2": "ally",
           "sentiment": "negative"
         }
-      ],
-      "action_category": "mental",
-      "action_type": "investigate",
-      "action_context": "Violating the promise",
-      "action_status": "success"
+      ]
     },
     {
       "id": "46645a40-f98f-4e7b-919e-77084e802c10",
@@ -399,20 +388,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 10,
-      "relationship_level1": "Neutral",
-      "sentiment": "",
       "action_layer": {
         "category": "mental",
         "type": "realize",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "action_category": "mental",
-      "action_type": "realize",
-      "action_context": "",
-      "action_status": "success"
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": ""
+        }
+      ]
     },
     {
       "id": "31c4a0b2-7c7c-4d99-97c2-a7cacf716775",
@@ -434,16 +425,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 11,
-      "relationship_level1": "",
-      "sentiment": "",
       "action_layer": {
         "category": "physical",
         "type": "flee",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_level2": "",
-      "relationship_multi": [
+      "relationships": [
         {
           "agent": "ツル",
           "target": "おじいさん",
@@ -451,11 +440,7 @@
           "relationship_level2": "",
           "sentiment": "negative"
         }
-      ],
-      "action_category": "physical",
-      "action_type": "flee",
-      "action_context": "",
-      "action_status": "success"
+      ]
     },
     {
       "id": "4821875c-638e-493e-b857-14bb4e18b72c",
@@ -474,20 +459,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 12,
-      "relationship_level1": "Neutral",
-      "sentiment": "negative",
       "action_layer": {
         "category": "physical",
         "type": "travel",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "action_category": "physical",
-      "action_type": "travel",
-      "action_context": "",
-      "action_status": "success"
+      "relationships": [
+        {
+          "agent": "ツル",
+          "target": "",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ]
     }
   ],
   "themes_and_motifs": {

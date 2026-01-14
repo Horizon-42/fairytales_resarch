@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "3.0",
   "metadata": {
     "id": "jp_003",
     "title": "",
@@ -62,23 +62,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [
-        {
-          "agent": "巳之吉",
-          "target": "渡し守の小屋",
-          "relationship_level1": "",
-          "relationship_level2": "",
-          "sentiment": ""
-        }
-      ],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "d251b5da-195a-4da1-ab66-3edeb30a7ef4",
@@ -99,15 +90,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 2,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "1c4c54ba-11ac-45c0-848a-fbe4ea72b167",
@@ -120,15 +110,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "d5ae6242-17dd-469b-9d91-06081280930c",
@@ -149,15 +138,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 4,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "02453c5d-1731-447a-803e-0af32c2bc949",
@@ -176,15 +164,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "8cd003ad-513f-442c-bbcc-e5c5d3eca68d",
@@ -206,15 +193,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 6,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "28e5ceee-b5f7-49d3-8271-558f17f41abb",
@@ -235,15 +221,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 7,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "3e87ded9-de0d-4614-bb6a-6aaf166fe260",
@@ -264,15 +249,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 8,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "33da1f51-9e68-4c9c-9571-f36894a288c9",
@@ -293,15 +277,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 9,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     }
   ],
   "themes_and_motifs": {

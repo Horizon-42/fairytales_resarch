@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "3.0",
   "metadata": {
     "id": "jp_005",
     "title": "",
@@ -71,19 +71,18 @@
       "event_type": "OTHER",
       "description": "",
       "id": "9ac7526f-2afc-45af-9741-730d97f8153f",
-      "narrative_function": "",
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "ca34caee-b1a4-4690-b92c-18b54bd2a5fb",
@@ -105,14 +104,7 @@
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "action_category": "mental",
-      "action_type": "",
-      "action_context": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "action_status": "success",
-      "narrative_function": "",
-      "relationship_multi": [
+      "relationships": [
         {
           "agent": "竹取の翁",
           "target": "竹取の翁",
@@ -121,7 +113,13 @@
           "sentiment": ""
         }
       ],
-      "sentiment": ""
+      "action_layer": {
+        "category": "mental",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "fe57eb27-8e22-44d4-9a92-ad9ef04537c1",
@@ -142,20 +140,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 2,
-      "sentiment": "positive",
-      "relationship_level1": "Neutral",
-      "relationship_level2": "",
       "action_layer": {
         "category": "physical",
         "type": "defend",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_multi": [],
-      "action_category": "physical",
-      "action_type": "defend",
-      "action_context": "",
-      "action_status": "success"
+      "relationships": [
+        {
+          "agent": "竹取の翁",
+          "target": "赫映姫",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ]
     },
     {
       "id": "5b3105e0-2b69-4fa1-84a8-0b3864f4ec95",
@@ -174,15 +174,22 @@
       "object_type": "magical_agent",
       "instrument": "",
       "time_order": 3,
-      "relationship_level1": "Neutral",
-      "relationship_level2": "",
-      "action_category": "existential",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "success",
-      "narrative_function": "",
-      "relationship_multi": [],
-      "sentiment": ""
+      "relationships": [
+        {
+          "agent": "",
+          "target": "竹取の翁（家）",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": ""
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "dc7fc83a-4955-46cb-afb0-0e59105a95ef",
@@ -204,16 +211,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 4,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "",
       "action_layer": {
         "category": "communicative",
         "type": "command",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_multi": [
+      "relationships": [
         {
           "agent": "竹取の翁",
           "target": "赫映姫",
@@ -221,11 +226,7 @@
           "relationship_level2": "parent_child",
           "sentiment": "positive"
         }
-      ],
-      "action_category": "communicative",
-      "action_type": "command",
-      "action_context": "",
-      "action_status": "success"
+      ]
     },
     {
       "id": "1e759a67-5e48-47f3-84e6-a0be4452b3c5",
@@ -244,20 +245,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "relationship_level1": "Neutral",
-      "relationship_level2": "",
-      "sentiment": "neutral",
       "action_layer": {
         "category": "communicative",
         "type": "persuade",
-        "status": "failure"
+        "context": "",
+        "status": "failure",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_multi": [],
-      "action_category": "communicative",
-      "action_type": "persuade",
-      "action_context": "",
-      "action_status": "failure"
+      "relationships": [
+        {
+          "agent": "",
+          "target": "赫映姫",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ]
     },
     {
       "id": "e89a8ea2-da94-4afe-92b7-bb5130136f22",
@@ -274,20 +277,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 6,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "",
-      "sentiment": "neutral",
       "action_layer": {
         "category": "communicative",
         "type": "command",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_multi": [],
-      "action_category": "communicative",
-      "action_type": "command",
-      "action_context": "",
-      "action_status": "success"
+      "relationships": [
+        {
+          "agent": "",
+          "target": "",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ]
     },
     {
       "id": "ec9ae5e4-8400-4f59-a255-6ac056686dbe",
@@ -308,20 +313,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 7,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "",
       "action_layer": {
         "category": "communicative",
         "type": "deceive",
-        "status": "failure"
+        "context": "",
+        "status": "failure",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "communicative",
-      "action_type": "deceive",
-      "action_context": "",
-      "action_status": "failure"
+      "relationships": [
+        {
+          "agent": "石造皇子",
+          "target": "赫映姫",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": ""
+        }
+      ]
     },
     {
       "id": "62f53edd-7939-4030-b2e1-6b77aa6d253d",
@@ -342,20 +349,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 8,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "",
       "action_layer": {
         "category": "mental",
         "type": "realize",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "mental",
-      "action_type": "realize",
-      "action_context": "",
-      "action_status": "success"
+      "relationships": [
+        {
+          "agent": "赫映姫",
+          "target": "石造皇子",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": ""
+        }
+      ]
     },
     {
       "id": "4c11b211-5390-4caf-bd3e-7a483b84eeab",
@@ -376,20 +385,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 9,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "",
       "action_layer": {
         "category": "communicative",
         "type": "deceive",
-        "status": "failure"
+        "context": "",
+        "status": "failure",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "communicative",
-      "action_type": "deceive",
-      "action_context": "",
-      "action_status": "failure"
+      "relationships": [
+        {
+          "agent": "車持皇子",
+          "target": "赫映姫",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": ""
+        }
+      ]
     },
     {
       "id": "c63c8141-3f65-48f3-9b3c-d78a4af80c45",
@@ -410,20 +421,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 10,
-      "relationship_level1": "Neutral",
-      "relationship_level2": "",
       "action_layer": {
         "category": "physical",
         "type": "travel",
-        "status": "failure"
+        "context": "",
+        "status": "failure",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "physical",
-      "action_type": "travel",
-      "action_context": "",
-      "action_status": "failure"
+      "relationships": [
+        {
+          "agent": "中納言",
+          "target": "中納言",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": ""
+        }
+      ]
     },
     {
       "id": "c3e8596c-c958-4fea-8f04-9a76061db85d",
@@ -444,20 +457,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 11,
-      "relationship_level1": "Hierarchy",
-      "relationship_level2": "",
-      "sentiment": "neutral",
       "action_layer": {
         "category": "physical",
         "type": "restrain",
-        "status": "failure"
+        "context": "",
+        "status": "failure",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_multi": [],
-      "action_category": "physical",
-      "action_type": "restrain",
-      "action_context": "",
-      "action_status": "failure"
+      "relationships": [
+        {
+          "agent": "帝",
+          "target": "赫映姫",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ]
     },
     {
       "id": "3b0af4b1-a3fa-4fb7-80f2-d1b386e98d9b",
@@ -478,20 +493,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 12,
-      "relationship_level1": "Hierarchy",
-      "relationship_level2": "",
       "action_layer": {
         "category": "physical",
         "type": "travel",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "physical",
-      "action_type": "travel",
-      "action_context": "",
-      "action_status": "success"
+      "relationships": [
+        {
+          "agent": "迎むかへの者",
+          "target": "赫映姫",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "",
+          "sentiment": ""
+        }
+      ]
     },
     {
       "id": "a338dc9e-0532-47b4-91e2-cf1bc1c77900",
@@ -512,15 +529,14 @@
       "object_type": "magical_agent",
       "instrument": "",
       "time_order": 13,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     }
   ],
   "themes_and_motifs": {

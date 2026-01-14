@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "3.0",
   "metadata": {
     "id": "jp_007",
     "title": "",
@@ -51,19 +51,18 @@
       "event_type": "OTHER",
       "description": "",
       "id": "2e7c032a-f76a-4da6-a11a-8e77e7766e96",
-      "narrative_function": "",
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "5ce2cb20-448e-47b9-a1ff-2bb99e7e056a",
@@ -84,20 +83,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "ally",
-      "sentiment": "positive",
       "action_layer": {
         "category": "communicative",
         "type": "inform",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_multi": [],
-      "action_category": "communicative",
-      "action_type": "inform",
-      "action_context": "",
-      "action_status": "success"
+      "relationships": [
+        {
+          "agent": "白",
+          "target": "正直おじいさん",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "ally",
+          "sentiment": "positive"
+        }
+      ]
     },
     {
       "id": "bb913cbd-fdd4-483d-b373-ef3f97e85ce1",
@@ -118,15 +119,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 2,
-      "relationship_level1": "Neutral",
-      "relationship_level2": "",
-      "sentiment": "positive",
-      "action_category": "physical",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "success",
-      "narrative_function": "",
-      "relationship_multi": []
+      "relationships": [
+        {
+          "agent": "正直おじいさん",
+          "target": "正直おじいさん",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "4175e2cb-21f0-452e-a715-471ff2fd5e0a",
@@ -147,20 +155,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "",
-      "sentiment": "neutral",
       "action_layer": {
         "category": "transaction",
         "type": "request",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_multi": [],
-      "action_category": "transaction",
-      "action_type": "request",
-      "action_context": "",
-      "action_status": "success"
+      "relationships": [
+        {
+          "agent": "欲（よく）ばりのおじいさん",
+          "target": "白",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ]
     },
     {
       "id": "3a864774-e086-40ef-9b45-4a612dfa21ab",
@@ -181,20 +191,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 4,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "",
-      "sentiment": "negative",
       "action_layer": {
         "category": "physical",
         "type": "attack",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_multi": [],
-      "action_category": "physical",
-      "action_type": "attack",
-      "action_context": "",
-      "action_status": "success"
+      "relationships": [
+        {
+          "agent": "欲（よく）ばりのおじいさん",
+          "target": "白",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ]
     },
     {
       "id": "91853f32-2d62-47cc-b08a-73b41cfb889a",
@@ -215,20 +227,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "",
-      "sentiment": "positive",
       "action_layer": {
         "category": "existential",
         "type": "cast_spell",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_multi": [],
-      "action_category": "existential",
-      "action_type": "cast_spell",
-      "action_context": "",
-      "action_status": "success"
+      "relationships": [
+        {
+          "agent": "白",
+          "target": "正直おじいさん",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ]
     },
     {
       "id": "e7b34565-beb4-408d-a866-a1afb31bbba7",
@@ -249,15 +263,14 @@
       "object_type": "normal_object",
       "instrument": "",
       "time_order": 6,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "f90b710f-7b83-45ce-90e8-238099f3aece",
@@ -278,15 +291,14 @@
       "object_type": "magical_agent",
       "instrument": "",
       "time_order": 7,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "f1ea29cc-639c-4ce2-8aef-138a003a7132",
@@ -307,20 +319,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 8,
-      "relationship_level1": "Hierarchy",
-      "relationship_level2": "",
-      "sentiment": "positive",
       "action_layer": {
         "category": "transaction",
         "type": "reward",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_multi": [],
-      "action_category": "transaction",
-      "action_type": "reward",
-      "action_context": "",
-      "action_status": "success"
+      "relationships": [
+        {
+          "agent": "殿さま",
+          "target": "正直おじいさん",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ]
     },
     {
       "id": "51339fbc-b2f4-4691-91d6-75a8e44af18b",
@@ -341,20 +355,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 9,
-      "relationship_level1": "Hierarchy",
-      "relationship_level2": "",
-      "sentiment": "negative",
       "action_layer": {
         "category": "transaction",
         "type": "punish",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "narrative_function": "",
-      "relationship_multi": [],
-      "action_category": "transaction",
-      "action_type": "punish",
-      "action_context": "",
-      "action_status": "success"
+      "relationships": [
+        {
+          "agent": "殿さま",
+          "target": "欲（よく）ばりの おばあさん",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ]
     }
   ],
   "themes_and_motifs": {

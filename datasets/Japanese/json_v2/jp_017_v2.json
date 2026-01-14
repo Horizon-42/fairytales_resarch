@@ -1,0 +1,912 @@
+{
+  "version": "2.0",
+  "metadata": {
+    "id": "jp_017",
+    "title": "",
+    "culture": "Japanese",
+    "annotator": "",
+    "date_annotated": "2026-01-13",
+    "confidence": 0.8
+  },
+  "source_info": {
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "datasets/Japanese/texts/jp_017.txt",
+    "text_content": "むかしむかし、あるところに、貧乏な古道具屋がいました。\n　ある日の事、古道具屋は一匹のタヌキが、ワナにかかっているのを見つけました。\n　古道具屋はかわいそうに思って、そのタヌキをワナから助けてやりました。\n　次の日の朝、昨日のタヌキが古道具屋の所へやってきて言いました。\n「昨日は、本当にありがとうございました。お礼に良い事をお教えしましょう。隣村の和尚(おしょう)さんが茶がまを欲しがっていますから、茶がまを持って行けば喜びますよ。わたしが茶がまに化けますから、持って行って売って下さい」\n　そういうとタヌキは、くるりと宙返りをして、すばらしい金の茶がまに化けました。\n　さっそく古道具屋が茶がまを持って行くと、\n「うーん、これは見事」\nと、和尚さんはタヌキの化けた茶がまを大変気に入った様子で、とても高い値で買い取ってくれました。\n　さて、新しい茶がまを手に入れた和尚さんは、小坊主に、\n「この茶がまを、洗ってきなさい」\nと、言いました。\n「はい」\n　小坊主はさっそく、裏の川へ行って茶がまをゴシゴシと洗いました。\n　すると茶がまは、\n「おい小坊主、もっとやさしく洗ってくれ、尻が痛くてたまらん」\nと、しゃべったのです。\n「うひゃー、茶がまがしゃべった！！」\n　びっくりした小坊主は、あわてて和尚さんにこの事を話しましたが、和尚さんは信じてくれません。\n「なにを馬鹿な。茶がまがしゃべるはずなかろう」\n「でも、本当なんです」\n「まあ良い。それより、次はお湯をわかしておくれ」\n　そこで小坊主は言われるままに、タヌキの化けた茶がまに水を入れて火にかけました。\n　すると茶がまに化けたタヌキは、びっくりです。\n「あちちちち！　お尻に火がついた！」\n　タヌキは一目散に、山へ逃げていきました。\n　その夜、タヌキはまた、古道具屋の家にやってきて言いました。\n「二人で町へ行きましょう。私がつなわたりをしますから、人を集めて下さいな」\n　次の日、古道具屋とタヌキは町へ出かけて、芝居屋を貸し切りました。\n「さあさあ、世にも珍しい、タヌキのつなわたりだよ」\n　入り口で古道具屋が大声で言うと、タヌキはつなの上を器用に渡りながら、腹づつみを打ったり歌ったりします。\n「これはめずらしい。なんて面白いんだろう」\n　タヌキのつなわたりは大評判となり、毎日押すな押すなの大にぎわいです。\n　こうして古道具屋は、タヌキのお陰で大金持ちになったという事です。"
+  },
+  "characters": [
+    {
+      "name": "古道具屋",
+      "alias": "",
+      "archetype": "Everyman"
+    },
+    {
+      "name": "タヌキ",
+      "alias": "",
+      "archetype": "Trickster"
+    },
+    {
+      "name": "和尚さん",
+      "alias": "",
+      "archetype": "Ruler"
+    },
+    {
+      "name": "小坊主",
+      "alias": "",
+      "archetype": "Everyman"
+    }
+  ],
+  "narrative_events": [
+    {
+      "event_type": "OTHER",
+      "description": "",
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      },
+      "id": "8e0144e1-7f4a-4e10-b772-1c4451e2913f",
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "narrative_function": "",
+      "relationship_multi": [],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
+    },
+    {
+      "id": "f97d8a08-3533-40ca-9dd9-a25e242b8f24",
+      "event_type": "Initial Situation",
+      "description": "むかしむかし、あるところに、貧乏な古道具屋がいました。",
+      "agents": [
+        "古道具屋"
+      ],
+      "targets": [],
+      "text_span": {
+        "start": 0,
+        "end": 27,
+        "text": "むかしむかし、あるところに、貧乏な古道具屋がいました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [
+        {
+          "agent": "古道具屋",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": "setup"
+      },
+      "narrative_function": "setup",
+      "relationship_multi": [
+        {
+          "agent": "古道具屋",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "neutral",
+      "action_category": "existential",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "5489ddda-2e08-4bc9-9854-93de6d3e4f8b",
+      "event_type": "RECONNAISSANCE",
+      "description": "ある日の事、古道具屋は一匹のタヌキが、ワナにかかっているのを見つけました",
+      "agents": [
+        "古道具屋"
+      ],
+      "targets": [
+        "タヌキ"
+      ],
+      "text_span": {
+        "start": 29,
+        "end": 65,
+        "text": "ある日の事、古道具屋は一匹のタヌキが、ワナにかかっているのを見つけました"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationships": [
+        {
+          "agent": "古道具屋",
+          "target": "タヌキ",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "observe",
+        "context": "",
+        "status": "success",
+        "function": "setup"
+      },
+      "narrative_function": "setup",
+      "relationship_multi": [
+        {
+          "agent": "古道具屋",
+          "target": "タヌキ",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "neutral",
+      "action_category": "mental",
+      "action_type": "observe",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "7b7532a6-76de-49a2-81a4-5b005c1e52a5",
+      "event_type": "LIQUIDATION",
+      "description": "古道具屋はかわいそうに思って、そのタヌキをワナから助けてやりました。",
+      "agents": [
+        "古道具屋"
+      ],
+      "targets": [
+        "タヌキ"
+      ],
+      "text_span": {
+        "start": 68,
+        "end": 102,
+        "text": "古道具屋はかわいそうに思って、そのタヌキをワナから助けてやりました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationships": [
+        {
+          "agent": "古道具屋",
+          "target": "タヌキ",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "interact",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      },
+      "narrative_function": "resolution",
+      "relationship_multi": [
+        {
+          "agent": "古道具屋",
+          "target": "タヌキ",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "positive",
+      "action_category": "physical",
+      "action_type": "interact",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "c96cc851-23ed-40bb-9373-5d8295ce3471",
+      "event_type": "RETURN",
+      "description": "次の日の朝、昨日のタヌキが古道具屋の所へやってきて言いました。",
+      "agents": [
+        "タヌキ"
+      ],
+      "targets": [
+        "古道具屋"
+      ],
+      "text_span": {
+        "start": 104,
+        "end": 135,
+        "text": "次の日の朝、昨日のタヌキが古道具屋の所へやってきて言いました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationships": [],
+      "action_layer": {
+        "category": "physical",
+        "type": "travel",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "physical",
+      "action_type": "travel",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "ccf30cbd-9463-4dfb-9ac8-18e2f1664aef",
+      "event_type": "TRICKERY",
+      "description": "わたしが茶がまに化けますから、持って行って売って下さい」",
+      "agents": [
+        "タヌキ"
+      ],
+      "targets": [
+        "古道具屋"
+      ],
+      "text_span": {
+        "start": 217,
+        "end": 245,
+        "text": "わたしが茶がまに化けますから、持って行って売って下さい」"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationships": [
+        {
+          "agent": "タヌキ",
+          "target": "古道具屋",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "persuade",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "タヌキ",
+          "target": "古道具屋",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "positive",
+      "action_category": "communicative",
+      "action_type": "persuade",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "2df12173-572b-465a-b4ec-221808563bba",
+      "event_type": "LIQUIDATION",
+      "description": "和尚さんはタヌキの化けた茶がまを大変気に入った様子で、とても高い値で買い取ってくれました。",
+      "agents": [
+        "和尚さん"
+      ],
+      "targets": [
+        "古道具屋"
+      ],
+      "text_span": {
+        "start": 322,
+        "end": 367,
+        "text": "和尚さんはタヌキの化けた茶がまを大変気に入った様子で、とても高い値で買い取ってくれました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6,
+      "relationships": [
+        {
+          "agent": "和尚さん",
+          "target": "古道具屋",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "exchange",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "和尚さん",
+          "target": "古道具屋",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "sentiment": "positive",
+      "action_category": "transaction",
+      "action_type": "exchange",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "aafad5a0-c565-47d7-a002-35d4584fcc0b",
+      "event_type": "GUIDANCE",
+      "description": "新しい茶がまを手に入れた和尚さんは、小坊主に、\n「この茶がまを、洗ってきなさい」\nと、言いました。",
+      "agents": [],
+      "targets": [],
+      "text_span": {
+        "start": 372,
+        "end": 421,
+        "text": "新しい茶がまを手に入れた和尚さんは、小坊主に、\n「この茶がまを、洗ってきなさい」\nと、言いました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 7,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
+    },
+    {
+      "id": "fdf583c5-6d23-4451-8f0b-2035a9cab5c2",
+      "event_type": "EXPOSURE",
+      "description": "すると茶がまは、\n「おい小坊主、もっとやさしく洗ってくれ、尻が痛くてたまらん」\nと、しゃべったのです。\n「うひゃー、茶がまがしゃべった！！」",
+      "agents": [],
+      "targets": [],
+      "text_span": {
+        "start": 461,
+        "end": 531,
+        "text": "すると茶がまは、\n「おい小坊主、もっとやさしく洗ってくれ、尻が痛くてたまらん」\nと、しゃべったのです。\n「うひゃー、茶がまがしゃべった！！」"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 8,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": "exposition"
+      },
+      "narrative_function": "exposition",
+      "relationship_multi": [],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
+    },
+    {
+      "id": "227c00b8-f04d-44e9-9827-58274dfc35e6",
+      "event_type": "DIFFICULT_TASK",
+      "description": "タヌキの化けた茶がまに水を入れて火にかけました。",
+      "agents": [
+        "小坊主"
+      ],
+      "targets": [
+        "タヌキ"
+      ],
+      "text_span": {
+        "start": 656,
+        "end": 680,
+        "text": "タヌキの化けた茶がまに水を入れて火にかけました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 9,
+      "relationships": [
+        {
+          "agent": "小坊主",
+          "target": "タヌキ",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "interact",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "小坊主",
+          "target": "タヌキ",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "negative",
+      "action_category": "physical",
+      "action_type": "interact",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "0e161b6a-16ab-4653-9bb5-9e37dc537435",
+      "event_type": "DEPARTURE",
+      "description": "タヌキは一目散に、山へ逃げていきました。",
+      "agents": [
+        "タヌキ"
+      ],
+      "targets": [
+        "小坊主"
+      ],
+      "text_span": {
+        "start": 725,
+        "end": 745,
+        "text": "タヌキは一目散に、山へ逃げていきました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 10,
+      "relationships": [
+        {
+          "agent": "タヌキ",
+          "target": "小坊主",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "flee",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "タヌキ",
+          "target": "小坊主",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "negative",
+      "action_category": "physical",
+      "action_type": "flee",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "fe61fb43-674d-4547-a5ef-cb8d41a68b9c",
+      "event_type": "TRICKERY",
+      "description": "その夜、タヌキはまた、古道具屋の家にやってきて言いました。\n「二人で町へ行きましょう。私がつなわたりをしますから、人を集めて下さいな」",
+      "agents": [
+        "タヌキ"
+      ],
+      "targets": [
+        "古道具屋"
+      ],
+      "text_span": {
+        "start": 747,
+        "end": 814,
+        "text": "その夜、タヌキはまた、古道具屋の家にやってきて言いました。\n「二人で町へ行きましょう。私がつなわたりをしますから、人を集めて下さいな」"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 11,
+      "relationships": [
+        {
+          "agent": "タヌキ",
+          "target": "古道具屋",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "persuade",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "タヌキ",
+          "target": "古道具屋",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "positive",
+      "action_category": "communicative",
+      "action_type": "persuade",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "e6c1cfc5-4440-433d-865b-5e9fbc833f09",
+      "event_type": "STRUGGLE",
+      "description": "さあさあ、世にも珍しい、タヌキのつなわたりだよ」\n　入り口で古道具屋が大声で言うと、タヌキはつなの上を器用に渡りながら、腹づつみを打ったり歌ったりします。\n「これはめずらしい。なんて面白いんだろう」\n",
+      "agents": [
+        "タヌキ"
+      ],
+      "targets": [],
+      "text_span": {
+        "start": 850,
+        "end": 985,
+        "text": "さあさあ、世にも珍しい、タヌキのつなわたりだよ」\n　入り口で古道具屋が大声で言うと、タヌキはつなの上を器用に渡りながら、腹づつみを打ったり歌ったりします。\n「これはめずらしい。なんて面白いんだろう」\n　タヌキのつなわたりは大評判となり、毎日押すな押すなの大にぎわいです。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 12,
+      "relationships": [
+        {
+          "agent": "タヌキ",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "interact",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "タヌキ",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "positive",
+      "action_category": "physical",
+      "action_type": "interact",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "13b66752-7007-48bb-8330-9e7bab52a42a",
+      "event_type": "LIQUIDATION",
+      "description": "こうして古道具屋は、タヌキのお陰で大金持ちになったという事です。",
+      "agents": [],
+      "targets": [],
+      "text_span": {
+        "start": 987,
+        "end": 1019,
+        "text": "こうして古道具屋は、タヌキのお陰で大金持ちになったという事です。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 13,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [],
+    "motif_type": [],
+    "atu_categories": [],
+    "obstacle_thrower": [],
+    "helper_type": [],
+    "thinking_process": "",
+    "atu_evidence": {},
+    "motif_evidence": {}
+  },
+  "analysis": {
+    "propp_functions": [
+      {
+        "id": "45d19edf-7744-4394-b7f9-3d8ae3866c0f",
+        "fn": "Initial Situation",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 0,
+          "end": 27,
+          "text": "むかしむかし、あるところに、貧乏な古道具屋がいました。"
+        },
+        "evidence": "むかしむかし、あるところに、貧乏な古道具屋がいました。",
+        "narrative_event_id": "f97d8a08-3533-40ca-9dd9-a25e242b8f24"
+      },
+      {
+        "id": "9ae5620f-3b70-4736-9677-67d0e015e2da",
+        "fn": "RECONNAISSANCE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 29,
+          "end": 65,
+          "text": "ある日の事、古道具屋は一匹のタヌキが、ワナにかかっているのを見つけました"
+        },
+        "evidence": "ある日の事、古道具屋は一匹のタヌキが、ワナにかかっているのを見つけました",
+        "narrative_event_id": "5489ddda-2e08-4bc9-9854-93de6d3e4f8b"
+      },
+      {
+        "id": "5a7dd14f-c54f-42d1-a952-b1c53d88fb9a",
+        "fn": "LIQUIDATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 68,
+          "end": 102,
+          "text": "古道具屋はかわいそうに思って、そのタヌキをワナから助けてやりました。"
+        },
+        "evidence": "古道具屋はかわいそうに思って、そのタヌキをワナから助けてやりました。",
+        "narrative_event_id": "7b7532a6-76de-49a2-81a4-5b005c1e52a5"
+      },
+      {
+        "id": "34a987df-67fb-4ba0-803f-574076e59d85",
+        "fn": "RETURN",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 104,
+          "end": 135,
+          "text": "次の日の朝、昨日のタヌキが古道具屋の所へやってきて言いました。"
+        },
+        "evidence": "次の日の朝、昨日のタヌキが古道具屋の所へやってきて言いました。",
+        "narrative_event_id": "c96cc851-23ed-40bb-9373-5d8295ce3471"
+      },
+      {
+        "id": "c23d9318-6702-4750-8c12-98b4fc82dd5f",
+        "fn": "TRICKERY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 217,
+          "end": 245,
+          "text": "わたしが茶がまに化けますから、持って行って売って下さい」"
+        },
+        "evidence": "わたしが茶がまに化けますから、持って行って売って下さい」",
+        "narrative_event_id": "ccf30cbd-9463-4dfb-9ac8-18e2f1664aef"
+      },
+      {
+        "id": "5ed1d0d0-0456-4c43-a9a2-daaca2a0595f",
+        "fn": "LIQUIDATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 322,
+          "end": 367,
+          "text": "和尚さんはタヌキの化けた茶がまを大変気に入った様子で、とても高い値で買い取ってくれました。"
+        },
+        "evidence": "和尚さんはタヌキの化けた茶がまを大変気に入った様子で、とても高い値で買い取ってくれました。",
+        "narrative_event_id": "2df12173-572b-465a-b4ec-221808563bba"
+      },
+      {
+        "id": "ddb890f9-7e1d-4c51-8869-732812eb5286",
+        "fn": "GUIDANCE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 372,
+          "end": 421,
+          "text": "新しい茶がまを手に入れた和尚さんは、小坊主に、\n「この茶がまを、洗ってきなさい」\nと、言いました。"
+        },
+        "evidence": "新しい茶がまを手に入れた和尚さんは、小坊主に、\n「この茶がまを、洗ってきなさい」\nと、言いました。",
+        "narrative_event_id": "aafad5a0-c565-47d7-a002-35d4584fcc0b"
+      },
+      {
+        "id": "9ac1faab-1f26-44da-9443-a5d75b1b4df8",
+        "fn": "EXPOSURE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 461,
+          "end": 531,
+          "text": "すると茶がまは、\n「おい小坊主、もっとやさしく洗ってくれ、尻が痛くてたまらん」\nと、しゃべったのです。\n「うひゃー、茶がまがしゃべった！！」"
+        },
+        "evidence": "すると茶がまは、\n「おい小坊主、もっとやさしく洗ってくれ、尻が痛くてたまらん」\nと、しゃべったのです。\n「うひゃー、茶がまがしゃべった！！」",
+        "narrative_event_id": "fdf583c5-6d23-4451-8f0b-2035a9cab5c2"
+      },
+      {
+        "id": "34c0921e-bc07-48dc-af59-a0c98ef68878",
+        "fn": "DIFFICULT_TASK",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 656,
+          "end": 680,
+          "text": "タヌキの化けた茶がまに水を入れて火にかけました。"
+        },
+        "evidence": "タヌキの化けた茶がまに水を入れて火にかけました。",
+        "narrative_event_id": "227c00b8-f04d-44e9-9827-58274dfc35e6"
+      },
+      {
+        "id": "e9b3da87-29ec-40e8-98ac-bfaa20f52992",
+        "fn": "DEPARTURE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 725,
+          "end": 745,
+          "text": "タヌキは一目散に、山へ逃げていきました。"
+        },
+        "evidence": "タヌキは一目散に、山へ逃げていきました。",
+        "narrative_event_id": "0e161b6a-16ab-4653-9bb5-9e37dc537435"
+      },
+      {
+        "id": "c2ac2db0-b7db-4ea8-b2c0-d9e2ebf9d89d",
+        "fn": "TRICKERY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 747,
+          "end": 814,
+          "text": "その夜、タヌキはまた、古道具屋の家にやってきて言いました。\n「二人で町へ行きましょう。私がつなわたりをしますから、人を集めて下さいな」"
+        },
+        "evidence": "その夜、タヌキはまた、古道具屋の家にやってきて言いました。\n「二人で町へ行きましょう。私がつなわたりをしますから、人を集めて下さいな」",
+        "narrative_event_id": "fe61fb43-674d-4547-a5ef-cb8d41a68b9c"
+      },
+      {
+        "id": "8f6f87c1-c3d2-41e1-9915-1067edf391bb",
+        "fn": "STRUGGLE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 850,
+          "end": 985,
+          "text": "さあさあ、世にも珍しい、タヌキのつなわたりだよ」\n　入り口で古道具屋が大声で言うと、タヌキはつなの上を器用に渡りながら、腹づつみを打ったり歌ったりします。\n「これはめずらしい。なんて面白いんだろう」\n　タヌキのつなわたりは大評判となり、毎日押すな押すなの大にぎわいです。"
+        },
+        "evidence": "さあさあ、世にも珍しい、タヌキのつなわたりだよ」\n　入り口で古道具屋が大声で言うと、タヌキはつなの上を器用に渡りながら、腹づつみを打ったり歌ったりします。\n「これはめずらしい。なんて面白いんだろう」\n",
+        "narrative_event_id": "e6c1cfc5-4440-433d-865b-5e9fbc833f09"
+      },
+      {
+        "id": "70741c6c-c085-490c-ba47-bdcbbf3087a0",
+        "fn": "LIQUIDATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 987,
+          "end": 1019,
+          "text": "こうして古道具屋は、タヌキのお陰で大金持ちになったという事です。"
+        },
+        "evidence": "こうして古道具屋は、タヌキのお陰で大金持ちになったという事です。",
+        "narrative_event_id": "13b66752-7007-48bb-8330-9e7bab52a42a"
+      }
+    ],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

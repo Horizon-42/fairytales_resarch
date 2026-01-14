@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "3.0",
   "metadata": {
     "id": "jp_002",
     "title": "",
@@ -41,19 +41,18 @@
       "event_type": "OTHER",
       "description": "",
       "id": "9c044ad9-030d-46f2-a1e5-162d5f2d2206",
-      "narrative_function": "",
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "afb9eb75-914b-47c9-8cb5-a76a8599a588",
@@ -74,15 +73,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "dd3c87eb-76af-4dc5-b6f9-7e392e27c449",
@@ -103,15 +101,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 2,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "ac3a5515-3b07-4d48-857e-af5330c7e9f7",
@@ -132,15 +129,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "9e08d3dd-f787-4b15-ab8d-d1bd7187c30f",
@@ -161,15 +157,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 4,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "cc52e33e-609e-4e8e-b0d0-3b6692ffc768",
@@ -190,15 +185,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "073430b2-729a-42aa-83ef-5fcad96b5979",
@@ -219,15 +213,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 6,
-      "narrative_function": "",
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     }
   ],
   "themes_and_motifs": {

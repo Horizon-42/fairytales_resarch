@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "3.0",
   "metadata": {
     "id": "jp_001",
     "title": "",
@@ -76,23 +76,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "relationships": [],
+      "relationships": [
+        {
+          "agent": "大きな桃",
+          "target": "おばあさん",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
       "action_layer": {
-        "category": "",
+        "category": "existential",
         "type": "",
         "context": "",
-        "status": "",
+        "status": "success",
         "function": ""
-      },
-      "narrative_function": "",
-      "relationship_multi": [],
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "neutral",
-      "action_category": "existential",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "success"
+      }
     },
     {
       "id": "4a2077ea-33d9-47e7-9746-37d528db151e",
@@ -111,12 +110,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 2,
-      "action_category": "existential",
-      "action_type": "transform",
-      "action_context": "",
-      "action_status": "success",
-      "sentiment": "positive",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "桃太郎",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "transform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "67a4a2c7-0d78-46a8-a6f1-a8338d1e9c5f",
@@ -135,11 +144,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "action_category": "existential",
-      "action_type": "transform",
-      "action_context": "",
-      "action_status": "success",
-      "sentiment": "positive"
+      "relationships": [
+        {
+          "agent": "桃太郎",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "transform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "3ad0017f-f239-4989-b018-3698833b2978",
@@ -160,12 +180,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 4,
-      "action_category": "communicative",
-      "action_type": "inform",
-      "action_context": "",
-      "action_status": "success",
-      "sentiment": "negative",
-      "narrative_function": "trigger"
+      "relationships": [
+        {
+          "agent": "外国から帰ってきた人",
+          "target": "桃太郎",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "success",
+        "function": "trigger"
+      }
     },
     {
       "id": "bd4da365-fe01-4fb0-9423-28e20b7ab2a9",
@@ -184,12 +214,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "narrative_function": "character_arc",
-      "action_category": "mental",
-      "action_type": "resolve",
-      "action_context": "",
-      "action_status": "success",
-      "sentiment": "positive"
+      "relationships": [
+        {
+          "agent": "桃太郎",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "resolve",
+        "context": "",
+        "status": "success",
+        "function": "character_arc"
+      }
     },
     {
       "id": "8e6d10f5-6871-4574-889a-e408b6ad9497",
@@ -211,12 +251,7 @@
       "object_type": "",
       "instrument": "",
       "time_order": 6,
-      "action_category": "physical",
-      "action_type": "travel",
-      "action_context": "",
-      "action_status": "success",
-      "sentiment": "",
-      "relationship_multi": [
+      "relationships": [
         {
           "agent": "桃太郎",
           "target": "おじいさん",
@@ -225,8 +260,13 @@
           "sentiment": "positive"
         }
       ],
-      "relationship_level1": "",
-      "relationship_level2": ""
+      "action_layer": {
+        "category": "physical",
+        "type": "travel",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "7a8eadab-53fe-4e8e-908b-409ebf7aebae",
@@ -247,11 +287,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 7,
-      "action_category": "transaction",
-      "action_type": "exchange",
-      "action_context": "",
-      "action_status": "success",
-      "sentiment": "positive"
+      "relationships": [
+        {
+          "agent": "犬いぬ",
+          "target": "桃太郎",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "exchange",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "856d84ac-c870-439a-9251-2f1f56241e46",
@@ -272,11 +323,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 8,
-      "action_category": "transaction",
-      "action_type": "exchange",
-      "action_context": "",
-      "action_status": "success",
-      "sentiment": "positive"
+      "relationships": [
+        {
+          "agent": "猿さる",
+          "target": "桃太郎",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "exchange",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "94816b6e-2bf5-4524-9be3-acaac1f08043",
@@ -297,11 +359,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 9,
-      "action_category": "transaction",
-      "action_type": "exchange",
-      "action_context": "",
-      "action_status": "success",
-      "sentiment": "positive"
+      "relationships": [
+        {
+          "agent": "きじ",
+          "target": "桃太郎",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "exchange",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "f99a8f6e-7814-4e2c-a8f6-4cbde154f5c2",
@@ -323,11 +396,7 @@
       "object_type": "",
       "instrument": "",
       "time_order": 10,
-      "action_category": "physical",
-      "action_type": "travel",
-      "action_context": "",
-      "action_status": "success",
-      "relationship_multi": [
+      "relationships": [
         {
           "agent": "桃太郎",
           "target": "",
@@ -336,10 +405,13 @@
           "sentiment": "positive"
         }
       ],
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "",
-      "narrative_function": "resolution"
+      "action_layer": {
+        "category": "physical",
+        "type": "travel",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      }
     },
     {
       "id": "3bc4de5c-2a9a-461f-8c56-6bab0e548325",
@@ -364,11 +436,7 @@
       "object_type": "",
       "instrument": "",
       "time_order": 11,
-      "action_category": "physical",
-      "action_type": "attack",
-      "action_context": "",
-      "action_status": "success",
-      "relationship_multi": [
+      "relationships": [
         {
           "agent": "桃太郎",
           "target": "鬼の大将",
@@ -377,10 +445,13 @@
           "sentiment": "hostile"
         }
       ],
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "",
-      "narrative_function": "climax"
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "",
+        "status": "success",
+        "function": "climax"
+      }
     },
     {
       "id": "9101b92c-d21b-4a30-a962-f92423980fdb",
@@ -402,11 +473,7 @@
       "object_type": "",
       "instrument": "",
       "time_order": 12,
-      "action_category": "physical",
-      "action_type": "restrain",
-      "action_context": "",
-      "action_status": "success",
-      "relationship_multi": [
+      "relationships": [
         {
           "agent": "桃太郎",
           "target": "鬼の大将",
@@ -415,9 +482,13 @@
           "sentiment": "positive"
         }
       ],
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": ""
+      "action_layer": {
+        "category": "physical",
+        "type": "restrain",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "732597ae-fc6e-438c-9bcc-e3bdd40b1eab",
@@ -438,11 +509,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 13,
-      "action_category": "transaction",
-      "action_type": "reward",
-      "action_context": "",
-      "action_status": "success",
-      "sentiment": "positive"
+      "relationships": [
+        {
+          "agent": "鬼の大将",
+          "target": "桃太郎",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "reward",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "7e098052-5410-4081-8680-5271ac9a1a35",
@@ -467,11 +549,7 @@
       "object_type": "",
       "instrument": "",
       "time_order": 14,
-      "action_category": "physical",
-      "action_type": "travel",
-      "action_context": "",
-      "action_status": "success",
-      "relationship_multi": [
+      "relationships": [
         {
           "agent": "桃太郎",
           "target": "おじいさん",
@@ -480,9 +558,13 @@
           "sentiment": "positive"
         }
       ],
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": ""
+      "action_layer": {
+        "category": "physical",
+        "type": "travel",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "81c8adca-0905-42f2-b596-fe7fed805c3f",
@@ -503,11 +585,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 15,
-      "action_category": "communicative",
-      "action_type": "inform",
-      "action_context": "",
-      "action_status": "success",
-      "sentiment": "positive"
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "桃太郎",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     }
   ],
   "themes_and_motifs": {

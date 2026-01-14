@@ -1,0 +1,630 @@
+{
+  "version": "3.0",
+  "metadata": {
+    "id": "jp_019",
+    "title": "",
+    "culture": "Japanese",
+    "annotator": "",
+    "date_annotated": "2026-01-13",
+    "confidence": 0.8
+  },
+  "source_info": {
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "datasets/Japanese/texts/jp_019.txt",
+    "text_content": "むかしむかし、あるところに、まずしいけれど、心のやさしいおじいさんとおばあさんがいました。\n　ある日のこと、おじいさんがいつものように山へ行くと、\n「ハッケヨイ！　ノコッタ、ノコッタ」\nと、いう声がきこえてきます。\n「はて、なんの声だろう？」\n　おじいさんがのぞいてみると、二匹のネズミがすもうをとっていました。\n「あれは、うちのやせネズミと、金もちの家のふとっちょネズミだ」\n　おじいさんの家にすんでいるやせネズミは、力がないため、なんどやっても、ふとっちょネズミにまけてしまいます。\n　おじいさんは家にかえると、おばあさんにネズミのすもう話をしました。\n「あれじゃあ、かわいそうだ。なんとかして、うちのやせネズミに、かたせてやりたいねえ」\n　するとおばあさんが、\n「それじゃあ、うちのやせネズミに、おもちを食べさせてやりましょうよ。きっと、力がつきますよ」\n「そうじゃ、それがええ」\n　おじいさんとおばあさんは、さっそくおもちをついて、やせネズミのすんでいる穴に、ころがしてやりました。\n　さて次の日、やせネズミとふとっちょネズミは、またすもうをとりました。\n　でも、今日はおじいさんの家のやせネズミが、なんどやっても、すもうにかつのです。\n　ふしぎに思ったふとっちょネズミが、やせネズミにたずねました。\n「やせネズミくん、どうしてきゅうに、つよくなったんだい？」\n　やせネズミは、とくいそうにいいました。\n「えへへへっ、じつはね。きのう、おじいさんとおばあさんがおもちをくれたんだ。だから力がつよくなったんだよ」\n「いいなあ、ぼくの家はお金持ちだけど、ケチだから、おもちをついてくれないんだ」\n「それなら家へおいでよ。おじいさんはきっと、こんやもおもちをついてくれるから、きみにもはんぶん、わけてあげるよ」\n「ほんとうに！　うれしいなあ」\n　それをきいたおじいさんは、二匹分のおもちをネズミの穴に入れてやり、おばあさんは二匹のネズミに小さなまわしをぬってあげました。\n　家にかえった二匹のネズミは、おもちとまわしを見つけて大よろこびです。\n　よろこんだふとっちょネズミは、おみやげにもってきた小判を、おじいさんとおばあさんにあげたので、おじいさんとおばあさんはお金もちになりました。\n　まずしくても、やさしい心をもって、人にしんせつにしてあげれば、いつか、きっと、しあわせがやってきます。"
+  },
+  "characters": [
+    {
+      "name": "おじいさん",
+      "alias": "",
+      "archetype": "Everyman"
+    },
+    {
+      "name": "おばあさん",
+      "alias": "",
+      "archetype": "Mother"
+    },
+    {
+      "name": "やせネズミ",
+      "alias": "",
+      "archetype": "Damsel"
+    },
+    {
+      "name": "ふとっちょネズミ",
+      "alias": "",
+      "archetype": "Shadow"
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "0aeb70fa-2e94-474f-8f38-971967e84812",
+      "event_type": "Initial Situation",
+      "description": "むかしむかし、あるところに、まずしいけれど、心のやさしいおじいさんとおばあさんがいました。",
+      "agents": [
+        "おじいさん",
+        "おばあさん"
+      ],
+      "targets": [],
+      "text_span": {
+        "start": 0,
+        "end": 45,
+        "text": "むかしむかし、あるところに、まずしいけれど、心のやさしいおじいさんとおばあさんがいました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": "setup"
+      }
+    },
+    {
+      "id": "42bceb1d-e84b-44c3-bdbf-e93bfeac7a27",
+      "event_type": "RECONNAISSANCE",
+      "description": "「ハッケヨイ！　ノコッタ、ノコッタ」\nと、いう声がきこえてきます。\n「はて、なんの声だろう？」\n　おじいさんがのぞいてみると、二匹のネズミがすもうをとっていました。",
+      "agents": [
+        "おじいさん"
+      ],
+      "targets": [],
+      "text_span": {
+        "start": 74,
+        "end": 156,
+        "text": "「ハッケヨイ！　ノコッタ、ノコッタ」\nと、いう声がきこえてきます。\n「はて、なんの声だろう？」\n　おじいさんがのぞいてみると、二匹のネズミがすもうをとっていました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "observe",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "dd079b18-e39b-4bce-bc7a-09b3b994aed5",
+      "event_type": "LACK",
+      "description": "やせネズミは、力がないため、なんどやっても、ふとっちょネズミにまけてしまいます。",
+      "agents": [
+        "やせネズミ"
+      ],
+      "targets": [],
+      "text_span": {
+        "start": 203,
+        "end": 243,
+        "text": "やせネズミは、力がないため、なんどやっても、ふとっちょネズミにまけてしまいます。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationships": [
+        {
+          "agent": "やせネズミ",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": "setup"
+      }
+    },
+    {
+      "id": "3e6eb197-e034-469c-a96d-378f1267b8f5",
+      "event_type": "MEDIATION",
+      "description": "おじいさんは家にかえると、おばあさんにネズミのすもう話をしました。\n「あれじゃあ、かわいそうだ。なんとかして、うちのやせネズミに、かたせてやりたいねえ」",
+      "agents": [
+        "おじいさん"
+      ],
+      "targets": [
+        "おばあさん"
+      ],
+      "text_span": {
+        "start": 245,
+        "end": 321,
+        "text": "おじいさんは家にかえると、おばあさんにネズミのすもう話をしました。\n「あれじゃあ、かわいそうだ。なんとかして、うちのやせネズミに、かたせてやりたいねえ」"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "おばあさん",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "7f837a6e-c5d4-4b5f-bb51-340ac5c8643f",
+      "event_type": "BEGINNING_COUNTERACTION",
+      "description": "おばあさんが、\n「それじゃあ、うちのやせネズミに、おもちを食べさせてやりましょうよ。きっと、力がつきますよ」\n「そうじゃ、それがええ」",
+      "agents": [
+        "おばあさん"
+      ],
+      "targets": [
+        "おじいさん"
+      ],
+      "text_span": {
+        "start": 326,
+        "end": 393,
+        "text": "おばあさんが、\n「それじゃあ、うちのやせネズミに、おもちを食べさせてやりましょうよ。きっと、力がつきますよ」\n「そうじゃ、それがええ」"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationships": [
+        {
+          "agent": "おばあさん",
+          "target": "おじいさん",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "persuade",
+        "context": "",
+        "status": "success",
+        "function": "trigger"
+      }
+    },
+    {
+      "id": "2e712fc8-0335-49ad-9b1a-372a76463a55",
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "おじいさんとおばあさんは、さっそくおもちをついて、やせネズミのすんでいる穴に、ころがしてやりました。",
+      "agents": [
+        "おじいさん",
+        "おばあさん"
+      ],
+      "targets": [
+        "やせネズミ"
+      ],
+      "text_span": {
+        "start": 395,
+        "end": 445,
+        "text": "おじいさんとおばあさんは、さっそくおもちをついて、やせネズミのすんでいる穴に、ころがしてやりました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6,
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "やせネズミ",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "give",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      }
+    },
+    {
+      "id": "360d5e76-af11-48d2-b060-b1ae546a809b",
+      "event_type": "STRUGGLE",
+      "description": "さて次の日、やせネズミとふとっちょネズミは、またすもうをとりました。",
+      "agents": [
+        "やせネズミ"
+      ],
+      "targets": [
+        "ふとっちょネズミ"
+      ],
+      "text_span": {
+        "start": 447,
+        "end": 481,
+        "text": "さて次の日、やせネズミとふとっちょネズミは、またすもうをとりました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 7,
+      "relationships": [
+        {
+          "agent": "やせネズミ",
+          "target": "ふとっちょネズミ",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "challenge",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "55595a2a-c896-4264-98d8-66029ac05675",
+      "event_type": "VICTORY",
+      "description": "、今日はおじいさんの家のやせネズミが、なんどやっても、すもうにかつのです。",
+      "agents": [
+        "やせネズミ"
+      ],
+      "targets": [
+        "ふとっちょネズミ"
+      ],
+      "text_span": {
+        "start": 485,
+        "end": 522,
+        "text": "、今日はおじいさんの家のやせネズミが、なんどやっても、すもうにかつのです。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 8,
+      "relationships": [
+        {
+          "agent": "やせネズミ",
+          "target": "ふとっちょネズミ",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "transform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "a0882a78-2655-4df6-a183-4cbff7b3fc73",
+      "event_type": "DELIVERY",
+      "description": "ふしぎに思ったふとっちょネズミが、やせネズミにたずねました。\n「やせネズミくん、どうしてきゅうに、つよくなったんだい？」\n　やせネズミは、とくいそうにいいました。\n「えへへへっ、じつはね。きのう、おじ",
+      "agents": [],
+      "targets": [],
+      "text_span": {
+        "start": 524,
+        "end": 659,
+        "text": "ふしぎに思ったふとっちょネズミが、やせネズミにたずねました。\n「やせネズミくん、どうしてきゅうに、つよくなったんだい？」\n　やせネズミは、とくいそうにいいました。\n「えへへへっ、じつはね。きのう、おじいさんとおばあさんがおもちをくれたんだ。だから力がつよくなったんだよ」"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 9,
+      "relationships": [
+        {
+          "agent": "",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "25a0c774-874f-4715-a3ea-7bff8dc542ee",
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "おじいさんは、二匹分のおもちをネズミの穴に入れてやり、おばあさんは二匹のネズミに小さなまわしをぬってあげました。",
+      "agents": [],
+      "targets": [],
+      "text_span": {
+        "start": 780,
+        "end": 836,
+        "text": "おじいさんは、二匹分のおもちをネズミの穴に入れてやり、おばあさんは二匹のネズミに小さなまわしをぬってあげました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 10,
+      "relationships": [
+        {
+          "agent": "",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "give",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "0561cd1b-7d7c-4744-ad64-9b74f8b717ac",
+      "event_type": "LIQUIDATION",
+      "description": "よろこんだふとっちょネズミは、おみやげにもってきた小判を、おじいさんとおばあさんにあげたので、おじいさんとおばあさんはお金もちになりました。",
+      "agents": [
+        "ふとっちょネズミ"
+      ],
+      "targets": [
+        "おじいさん",
+        "おばあさん"
+      ],
+      "text_span": {
+        "start": 874,
+        "end": 944,
+        "text": "よろこんだふとっちょネズミは、おみやげにもってきた小判を、おじいさんとおばあさんにあげたので、おじいさんとおばあさんはお金もちになりました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 11,
+      "relationships": [
+        {
+          "agent": "ふとっちょネズミ",
+          "target": "おじいさん",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "exchange",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [],
+    "motif_type": [],
+    "atu_categories": [],
+    "obstacle_thrower": [],
+    "helper_type": [],
+    "thinking_process": "",
+    "atu_evidence": {},
+    "motif_evidence": {}
+  },
+  "analysis": {
+    "propp_functions": [
+      {
+        "id": "463f45d6-74f5-4655-b9eb-2465097f04d5",
+        "fn": "Initial Situation",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 0,
+          "end": 45,
+          "text": "むかしむかし、あるところに、まずしいけれど、心のやさしいおじいさんとおばあさんがいました。"
+        },
+        "evidence": "むかしむかし、あるところに、まずしいけれど、心のやさしいおじいさんとおばあさんがいました。",
+        "narrative_event_id": "0aeb70fa-2e94-474f-8f38-971967e84812"
+      },
+      {
+        "id": "967f50c2-28b8-4606-b768-1d9efbacaadc",
+        "fn": "RECONNAISSANCE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 74,
+          "end": 156,
+          "text": "「ハッケヨイ！　ノコッタ、ノコッタ」\nと、いう声がきこえてきます。\n「はて、なんの声だろう？」\n　おじいさんがのぞいてみると、二匹のネズミがすもうをとっていました。"
+        },
+        "evidence": "「ハッケヨイ！　ノコッタ、ノコッタ」\nと、いう声がきこえてきます。\n「はて、なんの声だろう？」\n　おじいさんがのぞいてみると、二匹のネズミがすもうをとっていました。",
+        "narrative_event_id": "42bceb1d-e84b-44c3-bdbf-e93bfeac7a27"
+      },
+      {
+        "id": "49974807-0298-41ed-aec8-25914f9a36e3",
+        "fn": "LACK",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 203,
+          "end": 243,
+          "text": "やせネズミは、力がないため、なんどやっても、ふとっちょネズミにまけてしまいます。"
+        },
+        "evidence": "やせネズミは、力がないため、なんどやっても、ふとっちょネズミにまけてしまいます。",
+        "narrative_event_id": "dd079b18-e39b-4bce-bc7a-09b3b994aed5"
+      },
+      {
+        "id": "07a36a61-7fd5-43a7-ab4d-33ec115256dd",
+        "fn": "MEDIATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 245,
+          "end": 321,
+          "text": "おじいさんは家にかえると、おばあさんにネズミのすもう話をしました。\n「あれじゃあ、かわいそうだ。なんとかして、うちのやせネズミに、かたせてやりたいねえ」"
+        },
+        "evidence": "おじいさんは家にかえると、おばあさんにネズミのすもう話をしました。\n「あれじゃあ、かわいそうだ。なんとかして、うちのやせネズミに、かたせてやりたいねえ」",
+        "narrative_event_id": "3e6eb197-e034-469c-a96d-378f1267b8f5"
+      },
+      {
+        "id": "7c1def35-14ad-43cf-9694-d24db66d6487",
+        "fn": "BEGINNING_COUNTERACTION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 326,
+          "end": 393,
+          "text": "おばあさんが、\n「それじゃあ、うちのやせネズミに、おもちを食べさせてやりましょうよ。きっと、力がつきますよ」\n「そうじゃ、それがええ」"
+        },
+        "evidence": "おばあさんが、\n「それじゃあ、うちのやせネズミに、おもちを食べさせてやりましょうよ。きっと、力がつきますよ」\n「そうじゃ、それがええ」",
+        "narrative_event_id": "7f837a6e-c5d4-4b5f-bb51-340ac5c8643f"
+      },
+      {
+        "id": "df3e3f97-6843-4367-89ca-8a2605b584b6",
+        "fn": "RECEIPT_OF_AGENT",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 395,
+          "end": 445,
+          "text": "おじいさんとおばあさんは、さっそくおもちをついて、やせネズミのすんでいる穴に、ころがしてやりました。"
+        },
+        "evidence": "おじいさんとおばあさんは、さっそくおもちをついて、やせネズミのすんでいる穴に、ころがしてやりました。",
+        "narrative_event_id": "2e712fc8-0335-49ad-9b1a-372a76463a55"
+      },
+      {
+        "id": "d6ff1c2f-8e19-46e8-978a-a8e74dfff2a2",
+        "fn": "STRUGGLE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 447,
+          "end": 481,
+          "text": "さて次の日、やせネズミとふとっちょネズミは、またすもうをとりました。"
+        },
+        "evidence": "さて次の日、やせネズミとふとっちょネズミは、またすもうをとりました。",
+        "narrative_event_id": "360d5e76-af11-48d2-b060-b1ae546a809b"
+      },
+      {
+        "id": "44019c28-c5f1-4371-876f-828b97464667",
+        "fn": "VICTORY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 485,
+          "end": 522,
+          "text": "、今日はおじいさんの家のやせネズミが、なんどやっても、すもうにかつのです。"
+        },
+        "evidence": "、今日はおじいさんの家のやせネズミが、なんどやっても、すもうにかつのです。",
+        "narrative_event_id": "55595a2a-c896-4264-98d8-66029ac05675"
+      },
+      {
+        "id": "6fd835f0-6a89-44c7-84b1-3a9c0160ddb8",
+        "fn": "DELIVERY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 524,
+          "end": 659,
+          "text": "ふしぎに思ったふとっちょネズミが、やせネズミにたずねました。\n「やせネズミくん、どうしてきゅうに、つよくなったんだい？」\n　やせネズミは、とくいそうにいいました。\n「えへへへっ、じつはね。きのう、おじいさんとおばあさんがおもちをくれたんだ。だから力がつよくなったんだよ」"
+        },
+        "evidence": "ふしぎに思ったふとっちょネズミが、やせネズミにたずねました。\n「やせネズミくん、どうしてきゅうに、つよくなったんだい？」\n　やせネズミは、とくいそうにいいました。\n「えへへへっ、じつはね。きのう、おじ",
+        "narrative_event_id": "a0882a78-2655-4df6-a183-4cbff7b3fc73"
+      },
+      {
+        "id": "f968c9d8-2a96-4b55-85e2-8c0858c0ce00",
+        "fn": "RECEIPT_OF_AGENT",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 780,
+          "end": 836,
+          "text": "おじいさんは、二匹分のおもちをネズミの穴に入れてやり、おばあさんは二匹のネズミに小さなまわしをぬってあげました。"
+        },
+        "evidence": "おじいさんは、二匹分のおもちをネズミの穴に入れてやり、おばあさんは二匹のネズミに小さなまわしをぬってあげました。",
+        "narrative_event_id": "25a0c774-874f-4715-a3ea-7bff8dc542ee"
+      },
+      {
+        "id": "f3e99527-8518-4e78-9861-ccd274f84367",
+        "fn": "LIQUIDATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 874,
+          "end": 944,
+          "text": "よろこんだふとっちょネズミは、おみやげにもってきた小判を、おじいさんとおばあさんにあげたので、おじいさんとおばあさんはお金もちになりました。"
+        },
+        "evidence": "よろこんだふとっちょネズミは、おみやげにもってきた小判を、おじいさんとおばあさんにあげたので、おじいさんとおばあさんはお金もちになりました。",
+        "narrative_event_id": "0561cd1b-7d7c-4744-ad64-9b74f8b717ac"
+      }
+    ],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}
