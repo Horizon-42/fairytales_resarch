@@ -61,8 +61,7 @@ const resolveFolderPath = (folderPath) => {
 // Validate that folder path contains a texts subfolder
 const validateFolderHasTexts = (fullFolderPath) => {
   const textsPath = path.join(fullFolderPath, 'texts');
-  const traditionalTextsPath = path.join(fullFolderPath, 'traditional_texts');
-  return fs.existsSync(textsPath) || fs.existsSync(traditionalTextsPath);
+  return fs.existsSync(textsPath);
 };
 
 // Handle CORS preflight requests

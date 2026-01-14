@@ -8,6 +8,12 @@ export function organizeFiles(fileList) {
 
   Array.from(fileList).forEach((file) => {
     const path = file.webkitRelativePath || file.name;
+    
+    // Skip files in traditional_texts folder - only read from texts folder
+    if (path.toLowerCase().includes('/traditional_texts/')) {
+      return;
+    }
+    
     const parts = path.split('/');
     const fileName = parts.pop();
     const dir = parts.join('/');

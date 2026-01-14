@@ -45,12 +45,28 @@ export default function StoryBrowser({
     const walk = async (handle, prefix) => {
       for await (const [entryName, entryHandle] of handle.entries()) {
         if (entryHandle.kind === "directory") {
+          const dirNameLower = entryName.toLowerCase();
+          
           // Check if this is a texts folder (case insensitive)
-          if (entryName.toLowerCase() === 'texts' || entryName.toLowerCase() === 'traditional_texts') {
+          if (dirNameLower === 'texts') {
             hasTextsFolder = true;
+            // Only walk into texts folder, not traditional_texts
+            await walk(entryHandle, `${prefix}/${entryName}`);
+          } else if (dirNameLower === 'traditional_texts') {
+            // Skip traditional_texts folder - don't walk into it
+            continue;
+          } else {
+            // Walk into other directories
+            await walk(entryHandle, `${prefix}/${entryName}`);
           }
-          await walk(entryHandle, `${prefix}/${entryName}`);
         } else if (entryHandle.kind === "file") {
+          // Only collect files that are in the texts folder (not traditional_texts)
+          // Check if the path contains traditional_texts
+          const fullPath = `${prefix}/${entryName}`;
+          if (fullPath.toLowerCase().includes('/traditional_texts/')) {
+            continue; // Skip files in traditional_texts folder
+          }
+          
           const lower = entryName.toLowerCase();
           if (!allowed.some((ext) => lower.endsWith(ext))) continue;
 
@@ -77,9 +93,9 @@ export default function StoryBrowser({
         // Collect files and check if folder contains texts subfolder
         const { files, hasTextsFolder } = await collectFilesFromDirHandle(dirHandle, dirHandle.name || "selected_folder");
         
-        // Validate: folder must contain a texts or traditional_texts subfolder
+        // Validate: folder must contain a texts subfolder
         if (!hasTextsFolder) {
-          alert(`错误：选择的文件夹必须包含 "texts" 或 "traditional_texts" 子文件夹。\n\n请选择包含 texts 文件夹的父文件夹（例如：Japanese_test2）。`);
+          alert(`错误：选择的文件夹必须包含 "texts" 子文件夹。\n\n请选择包含 texts 文件夹的父文件夹（例如：Japanese_test2）。`);
           return;
         }
         

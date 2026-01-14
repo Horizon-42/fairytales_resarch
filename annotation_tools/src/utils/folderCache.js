@@ -123,9 +123,9 @@ export function extractFolderPath(fileList, fallbackFolderPath = null) {
   // Remove filename (last part)
   pathParts.pop();
   
-  // Find texts folder in the path
+  // Find texts folder in the path (only texts, not traditional_texts)
   const textsIndex = pathParts.findIndex(part => 
-    part.toLowerCase() === 'texts' || part.toLowerCase() === 'traditional_texts'
+    part.toLowerCase() === 'texts'
   );
   
   if (textsIndex > 0) {
