@@ -2,16 +2,16 @@
 // Generated from Character_Resources/relationship.csv
 
 export const RELATIONSHIP_LEVEL1 = [
-  "家庭与亲缘(Family & Kinship)",
-  "浪漫与激情(Romance)",
-  "权威与阶级(Hierarchy)",
-  "社交与结盟(Social & Alliance)",
-  "对抗与敌对(Adversarial)",
-  "中立(Neutral)"
+  "Family & Kinship",
+  "Romance",
+  "Hierarchy",
+  "Social & Alliance",
+  "Adversarial",
+  "Neutral"
 ];
 
 export const RELATIONSHIP_LEVEL2 = {
-  "家庭与亲缘(Family & Kinship)": [
+  "Family & Kinship": [
     {
       "tag": "parent_child",
       "definition": "父母子女垂直的抚养与权威关系（含养父母）。",
@@ -33,14 +33,14 @@ export const RELATIONSHIP_LEVEL2 = {
       "context": "舅舅作为监护人或反派、祖母给予指引。"
     }
   ],
-  "浪漫与激情(Romance)": [
+  "Romance": [
     {
       "tag": "lover",
       "definition": "恋人/情人基于激情或追求的非婚姻关系（含婚外情）。",
       "context": "罗密欧与朱丽叶、骑士追求贵妇、初恋。"
     }
   ],
-  "权威与阶级(Hierarchy)": [
+  "Hierarchy": [
     {
       "tag": "ruler_subject",
       "definition": "君臣/领主基于国家、领土或法律的政治统治权。",
@@ -62,7 +62,7 @@ export const RELATIONSHIP_LEVEL2 = {
       "context": "将军命令士兵、强盗头子指挥喽啰。"
     }
   ],
-  "社交与结盟(Social & Alliance)": [
+  "Social & Alliance": [
     {
       "tag": "friend",
       "definition": "朋友/挚友基于私人情感的亲密连接，无直接功利性。",
@@ -79,7 +79,7 @@ export const RELATIONSHIP_LEVEL2 = {
       "context": "一起站岗的卫兵、同一门派的竞争师兄。"
     }
   ],
-  "对抗与敌对(Adversarial)": [
+  "Adversarial": [
     {
       "tag": "enemy",
       "definition": "死敌/仇人核心是毁灭或仇恨，目的是消灭对方。",
@@ -91,7 +91,7 @@ export const RELATIONSHIP_LEVEL2 = {
       "context": "吹牛比赛对手、追求同一人的两个骑士。"
     }
   ],
-  "中立(Neutral)": [
+  "Neutral": [
     {
       "tag": "stranger",
       "definition": "陌生人此前无任何社会交集。",

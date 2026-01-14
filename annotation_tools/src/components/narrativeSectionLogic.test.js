@@ -22,7 +22,6 @@ import {
   removeRelationshipMultiRow,
   deriveRelationshipUiState,
   buildSetRelationshipMultiUpdates,
-  formatRelationshipLevel1Label
 } from "./narrativeSectionLogic.js";
 
 describe("narrativeSectionLogic", () => {
@@ -434,8 +433,4 @@ describe("narrativeSectionLogic", () => {
     expect(updates.sentiment).toBe("");
   });
 
-  it("formatRelationshipLevel1Label() extracts English in parentheses", () => {
-    expect(formatRelationshipLevel1Label("亲属关系(Family)")).toBe("Family");
-    expect(formatRelationshipLevel1Label("NoParens")).toBe("NoParens");
-  });
 });

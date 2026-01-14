@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useEffect, useRef } from "react";
 import { organizeFiles, mapV1ToState, mapV2ToState, mapV3ToState, generateUUID } from "./utils/fileHandler.js";
-import { downloadJson, relPathToDatasetHint, HIGHLIGHT_COLORS, emptyProppFn, extractEnglishFromRelationship, buildActionLayer } from "./utils/helpers.js";
+import { downloadJson, relPathToDatasetHint, HIGHLIGHT_COLORS, emptyProppFn, buildActionLayer } from "./utils/helpers.js";
 import { saveFolderCache, loadFolderCache, extractFolderPath } from "./utils/folderCache.js";
 import { getBackendUrl, clearBackendCache } from "./utils/backendConfig.js";
 import { getAnnotationServerUrl, getAnnotationServerUrlSync, clearAnnotationServerCache } from "./utils/annotationServerConfig.js";
@@ -293,7 +293,7 @@ export default function App() {
             .map((r) => ({
               agent: r.agent || "",
               target: r.target || "",
-              relationship_level1: r.relationship_level1 ? extractEnglishFromRelationship(r.relationship_level1) : "",
+              relationship_level1: r.relationship_level1 || "",
               relationship_level2: r.relationship_level2 || "",
               sentiment: r.sentiment || ""
             }));
@@ -728,7 +728,7 @@ export default function App() {
             instrument: n.instrument || "",
             time_order: n.time_order,
             // v1 only uses flat relationship fields
-            relationship_level1: n.relationship_level1 ? extractEnglishFromRelationship(n.relationship_level1) : "",
+            relationship_level1: n.relationship_level1 || "",
             relationship_level2: n.relationship_level2 || "",
             sentiment: n.sentiment || "",
             // v1 only uses flat action fields
@@ -794,7 +794,7 @@ export default function App() {
           instrument: n.instrument || "",
           time_order: n.time_order,
           // v2 only uses flat relationship fields
-          relationship_level1: n.relationship_level1 ? extractEnglishFromRelationship(n.relationship_level1) : "",
+          relationship_level1: n.relationship_level1 || "",
           relationship_level2: n.relationship_level2 || "",
           sentiment: n.sentiment || "",
           // v2 only uses flat action fields
@@ -912,7 +912,7 @@ export default function App() {
       return {
         agent: rel.agent || "",
         target: rel.target || "",
-        relationship_level1: level1 ? extractEnglishFromRelationship(level1) : "",
+        relationship_level1: level1 || "",
         relationship_level2: rel.relationship_level2 || "",
         sentiment: rel.sentiment || ""
       };

@@ -391,8 +391,12 @@ export function mapV3ToState(data) {
       const legacyRelationshipLevel2 = isMultiRelationship ? "" : (evt.relationship_level2 || firstRel.relationship_level2 || "");
       const legacySentiment = isMultiRelationship ? "" : (evt.sentiment || firstRel.sentiment || "");
 
+      // Build the normalized event object
+      // Note: We explicitly exclude 'relationships' field as it's been converted to 'relationship_multi'
+      const { relationships, ...evtWithoutRelationships } = evt;
+      
       return {
-        ...evt,
+        ...evtWithoutRelationships,
         id: evt.id || generateUUID(),
         target_type: evt.target_type || "character",
         object_type: evt.object_type || "",

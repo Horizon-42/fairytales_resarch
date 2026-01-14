@@ -25,7 +25,6 @@ import {
   addRelationshipMultiRow,
   removeRelationshipMultiRow,
   buildSetRelationshipMultiUpdates,
-  formatRelationshipLevel1Label
 } from "./narrativeSectionLogic.js";
 
 // Map Propp function codes to full display names from CSV
@@ -238,7 +237,7 @@ export default function NarrativeSection({
   const renderRelationshipLevel1Options = () =>
     RELATIONSHIP_LEVEL1.map((level1) => (
       <option key={level1} value={level1}>
-        {formatRelationshipLevel1Label(level1)}
+        {level1}
       </option>
     ));
 
