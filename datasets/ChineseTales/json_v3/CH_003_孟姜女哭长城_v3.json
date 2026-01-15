@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "3.0",
   "metadata": {
     "id": "CH_003_孟姜女哭长城",
     "title": "孟姜女哭长城",
@@ -91,14 +91,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 4,
-      "relationship_level1": "Romance",
-      "relationship_level2": "lover",
-      "sentiment": "positive",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "万喜良",
+          "target": "孟姜女",
+          "relationship_level1": "Romance",
+          "relationship_level2": "lover",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "24e03b97-5899-4997-b8cb-93d9339ea99c",
@@ -119,14 +127,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "relationship_level1": "Romance",
-      "relationship_level2": "lover",
-      "sentiment": "romantic",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "万喜良",
+          "target": "孟姜女",
+          "relationship_level1": "Romance",
+          "relationship_level2": "lover",
+          "sentiment": "romantic"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "428f4443-29ff-4369-bf5c-f4db0c30c76c",
@@ -149,14 +165,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 6,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "enemy",
-      "sentiment": "hostile",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "秦始皇",
+          "target": "万喜良",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "00623686-66b6-45e6-824f-0fa8a8bf7889",
@@ -177,14 +201,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 8,
-      "relationship_level1": "Romance",
-      "relationship_level2": "lover",
-      "sentiment": "positive",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "孟姜女",
+          "target": "万喜良",
+          "relationship_level1": "Romance",
+          "relationship_level2": "lover",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "ef4e8f0b-1b02-4bc0-8024-f55b931b5730",
@@ -203,14 +235,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 9,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "8ad82eb9-12aa-4a72-8007-fdd48c5cd4bf",
@@ -231,14 +263,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 10,
-      "relationship_level1": "Neutral",
-      "relationship_level2": "stranger",
-      "sentiment": "positive",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "乌鸦",
+          "target": "孟姜女",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "stranger",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "0eace64f-3fcf-4f61-b167-6c67a777d956",
@@ -257,14 +297,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 11,
-      "relationship_level1": "Neutral",
-      "relationship_level2": "stranger",
-      "sentiment": "positive",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "老翁",
+          "target": "",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "stranger",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "735d048e-504f-47c8-9060-a0c335fa59c4",
@@ -285,14 +333,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 12,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "enemy",
-      "sentiment": "hostile",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "秦始皇",
+          "target": "万喜良",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "15f5c6c3-ed52-4047-ab8b-b98c2d7a616f",
@@ -313,14 +369,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 13,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "enemy",
-      "sentiment": "hostile",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "孟姜女",
+          "target": "秦始皇",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "f7d6957a-a672-4706-b314-340bace74377",
@@ -341,14 +405,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 14,
-      "relationship_level1": "Romance",
-      "relationship_level2": "lover",
-      "sentiment": "negative",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "万喜良",
+          "target": "孟姜女",
+          "relationship_level1": "Romance",
+          "relationship_level2": "lover",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "613041ee-1096-4ec1-bdc8-adf4e716cbc6",
@@ -369,14 +441,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 15,
-      "relationship_level1": "Hierarchy",
-      "relationship_level2": "ruler_subject",
-      "sentiment": "negative",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "秦始皇",
+          "target": "孟姜女",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "aa9df0a0-0181-4edf-a2d4-5a987f837a6a",
@@ -397,14 +477,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 16,
-      "relationship_level1": "Hierarchy",
-      "relationship_level2": "ruler_subject",
-      "sentiment": "romantic",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "秦始皇",
+          "target": "孟姜女",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "romantic"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "cc0309f6-f040-43a3-8468-f05eaea5105f",
@@ -425,14 +513,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 17,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "enemy",
-      "sentiment": "hostile",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "孟姜女",
+          "target": "秦始皇",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "37a7d01c-85e8-45cb-b7cf-6b984eb4dffb",
@@ -453,14 +549,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 18,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "enemy",
-      "sentiment": "hostile",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "孟姜女",
+          "target": "秦始皇",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "947e61be-73b5-40d5-bffa-6e65556a0b69",
@@ -481,14 +585,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 19,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "enemy",
-      "sentiment": "hostile",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "孟姜女",
+          "target": "秦始皇",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "b6f08e5d-859e-4309-abba-60a07484cc3f",
@@ -507,14 +619,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 20,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "9b86472e-3e87-4555-a0f1-58540deb9edf",
@@ -535,14 +647,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "relationship_level1": "Neutral",
-      "relationship_level2": "stranger",
-      "sentiment": "neutral",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "秦始皇",
+          "target": "万喜良",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "stranger",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "7af49b50-2903-40cc-a2db-fd59b6854722",
@@ -563,14 +683,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 7,
-      "relationship_level1": "Family & Kinship",
-      "relationship_level2": "spouse",
-      "sentiment": "romantic",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "孟姜女",
+          "target": "万喜良",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "spouse",
+          "sentiment": "romantic"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "55384b2a-47e9-4ebe-bc08-87d847c9f9ed",
@@ -591,14 +719,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 2,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "enemy",
-      "sentiment": "negative",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "秦始皇",
+          "target": "万喜良",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "5a7bbfef-984e-4ee6-86c2-08e2e670203a",
@@ -617,14 +753,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     }
   ],
   "themes_and_motifs": {
