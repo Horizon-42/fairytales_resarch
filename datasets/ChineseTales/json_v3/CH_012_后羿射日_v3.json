@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "3.0",
   "metadata": {
     "id": "CH_012_后羿射日",
     "title": "后羿射日",
@@ -61,14 +61,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "86681bf5-c31f-45a2-b224-ac8213bd7af9",
@@ -89,14 +89,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 2,
-      "relationship_level1": "对抗与敌对(Adversarial)",
-      "relationship_level2": "enemy",
-      "sentiment": "negative",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "后羿",
+          "target": "十个太阳",
+          "relationship_level1": "对抗与敌对(Adversarial)",
+          "relationship_level2": "enemy",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "792c918d-74db-47e3-8e4e-8186ad585bed",
@@ -115,14 +123,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "2ca1846d-db3a-402b-bc54-aa3bd2dd7d63",
@@ -143,14 +151,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 4,
-      "relationship_level1": "权威与阶级(Hierarchy)",
-      "relationship_level2": "ruler_subject",
-      "sentiment": "neutral",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "天帝",
+          "target": "太阳",
+          "relationship_level1": "权威与阶级(Hierarchy)",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "10ff17b3-a13c-4807-a4e8-b39dd3594d66",
@@ -171,14 +187,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "relationship_level1": "权威与阶级(Hierarchy)",
-      "relationship_level2": "ruler_subject",
-      "sentiment": "positive",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "天帝",
+          "target": "后羿",
+          "relationship_level1": "权威与阶级(Hierarchy)",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     }
   ],
   "themes_and_motifs": {

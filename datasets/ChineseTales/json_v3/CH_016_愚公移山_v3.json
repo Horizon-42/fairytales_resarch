@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "3.0",
   "metadata": {
     "id": "CH_016_愚公移山",
     "title": "愚公移山",
@@ -44,6 +44,7 @@
   "narrative_events": [
     {
       "id": "3dddec8e-5321-4b2d-8f4f-872981b11cab",
+      "text_span": null,
       "event_type": "OTHER",
       "description": "",
       "agents": [],
@@ -52,14 +53,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     }
   ],
   "themes_and_motifs": {

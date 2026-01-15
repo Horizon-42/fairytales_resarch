@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "3.0",
   "metadata": {
     "id": "CH_017_田螺姑娘",
     "title": "田螺姑娘",
@@ -29,6 +29,7 @@
   "narrative_events": [
     {
       "id": "426a586a-8986-451b-a536-39b86893248f",
+      "text_span": null,
       "event_type": "OTHER",
       "description": "",
       "agents": [],
@@ -37,14 +38,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     }
   ],
   "themes_and_motifs": {

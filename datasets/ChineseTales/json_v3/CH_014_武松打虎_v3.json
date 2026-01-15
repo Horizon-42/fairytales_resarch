@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "3.0",
   "metadata": {
     "id": "CH_014_武松打虎",
     "title": "武松打虎",
@@ -51,14 +51,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "relationship_level1": "stranger",
-      "relationship_level2": "neutral",
-      "sentiment": "neutral",
-      "action_category": "communicative",
-      "action_type": "inform",
-      "action_context": "warning",
-      "action_status": "success",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "武松",
+          "target": "酒倌",
+          "relationship_level1": "stranger",
+          "relationship_level2": "neutral",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "warning",
+        "status": "success",
+        "function": ""
+      }
     }
   ],
   "themes_and_motifs": {
