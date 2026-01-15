@@ -31,9 +31,6 @@ export default function App() {
   const [currentSelection, setCurrentSelection] = useState(null);
   const [selectedFolderPath, setSelectedFolderPath] = useState(null); // Store the selected folder path
 
-  const [jsonSaveHint, setJsonSaveHint] = useState(
-    "datasets/iron/persian/persian/json/FA_XXX.json"
-  );
   const [showPreview, setShowPreview] = useState(false);
   const [previewVersion, setPreviewVersion] = useState("v3");
 
@@ -2168,18 +2165,78 @@ export default function App() {
   // ========== Render ==========
   return (
     <div className="app-root">
-      <header className="app-header">
-        <div className="header-left">
+      <header className="app-header" style={{ position: 'relative' }}>
+        <div className="header-left" style={{ flexShrink: 0, minWidth: 0 }}>
           <span className="logo-icon">✨</span>
-          <div>
-            <h1>Fairy Tale Annotation Tool <span style={{ fontSize: "0.6em", fontWeight: "normal", color: "#64748b", marginLeft: "0.5rem" }}>v{VERSION}</span></h1>
-            <p>
-              Aligns with the Persian JSON schema in{" "}
-              <code>datasets/iron/persian/persian/json</code>.
-            </p>
+          <div style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            <h1 style={{ whiteSpace: 'nowrap' }}>Fairy Tale Annotation Tool <span style={{ fontSize: "0.6em", fontWeight: "normal", color: "#64748b", marginLeft: "0.5rem" }}>v{VERSION}</span></h1>
           </div>
         </div>
-        <div className="header-actions">
+
+        <div className="save-hint" style={{
+          position: 'absolute',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.5rem'
+        }}>
+          <span className="save-hint-label">LLM:</span>
+          <select
+            className="save-hint-input"
+            style={{ width: "160px" }}
+            value={llmProvider}
+            onChange={(e) => setLlmProvider(e.target.value)}
+            title="Choose LLM provider"
+          >
+            <option value="ollama">Ollama (local)</option>
+            <option value="gemini">Gemini</option>
+          </select>
+
+          {llmProvider === "gemini" ? (
+            <select
+              className="save-hint-input"
+              style={{ width: "240px" }}
+              value={geminiModel}
+              onChange={(e) => setGeminiModel(e.target.value)}
+              title={geminiModelsError ? `Gemini models load failed: ${geminiModelsError}` : "Gemini model (loaded from backend)"}
+              disabled={geminiModelsLoading || geminiModels.length === 0}
+            >
+              {geminiModelsLoading ? (
+                <option value="">Loading Gemini models…</option>
+              ) : geminiModels.length === 0 ? (
+                <option value="">No models (check GEMINI_API_KEY)</option>
+              ) : (
+                geminiModels.map((m) => (
+                  <option key={m.id} value={m.id}>
+                    {m.display_name ? `${m.display_name} (${m.id})` : m.id}
+                  </option>
+                ))
+              )}
+            </select>
+          ) : (
+            <input
+              className="save-hint-input"
+              style={{ width: "240px" }}
+              value={ollamaModel}
+              onChange={(e) => setOllamaModel(e.target.value)}
+              placeholder="Ollama model (e.g. qwen3:8b)"
+              title="Ollama model name"
+            />
+          )}
+
+          <label style={{ display: "flex", alignItems: "center", gap: "0.25rem", fontSize: "0.75rem", color: "#64748b", lineHeight: "1" }}>
+            <input
+              type="checkbox"
+              checked={llmThinking}
+              onChange={(e) => setLlmThinking(e.target.checked)}
+              style={{ margin: 0, verticalAlign: "middle" }}
+            />
+            thinking
+          </label>
+        </div>
+
+        <div className="header-actions" style={{ display: 'flex', gap: '0.5rem', alignItems: "center", flexShrink: 0 }}>
           <button
             type="button"
             className="ghost-btn"
@@ -2187,79 +2244,14 @@ export default function App() {
           >
             {showPreview ? "Hide JSON" : "Show JSON"}
           </button>
-
-          <div className="save-hint">
-            <span className="save-hint-label">LLM:</span>
-            <select
-              className="save-hint-input"
-              style={{ width: "160px" }}
-              value={llmProvider}
-              onChange={(e) => setLlmProvider(e.target.value)}
-              title="Choose LLM provider"
-            >
-              <option value="ollama">Ollama (local)</option>
-              <option value="gemini">Gemini</option>
-            </select>
-
-            {llmProvider === "gemini" ? (
-              <select
-                className="save-hint-input"
-                style={{ width: "240px" }}
-                value={geminiModel}
-                onChange={(e) => setGeminiModel(e.target.value)}
-                title={geminiModelsError ? `Gemini models load failed: ${geminiModelsError}` : "Gemini model (loaded from backend)"}
-                disabled={geminiModelsLoading || geminiModels.length === 0}
-              >
-                {geminiModelsLoading ? (
-                  <option value="">Loading Gemini models…</option>
-                ) : geminiModels.length === 0 ? (
-                  <option value="">No models (check GEMINI_API_KEY)</option>
-                ) : (
-                  geminiModels.map((m) => (
-                    <option key={m.id} value={m.id}>
-                      {m.display_name ? `${m.display_name} (${m.id})` : m.id}
-                    </option>
-                  ))
-                )}
-              </select>
-            ) : (
-              <input
-                className="save-hint-input"
-                style={{ width: "240px" }}
-                value={ollamaModel}
-                onChange={(e) => setOllamaModel(e.target.value)}
-                placeholder="Ollama model (e.g. qwen3:8b)"
-                title="Ollama model name"
-              />
-            )}
-
-            <label style={{ display: "flex", alignItems: "center", gap: "0.25rem", fontSize: "0.75rem", color: "#64748b" }}>
-              <input
-                type="checkbox"
-                checked={llmThinking}
-                onChange={(e) => setLlmThinking(e.target.checked)}
-              />
-              thinking
-            </label>
-          </div>
-          <div className="save-hint">
-            <span className="save-hint-label">Intended JSON path:</span>
-            <input
-              className="save-hint-input"
-              value={jsonSaveHint}
-              onChange={(e) => setJsonSaveHint(e.target.value)}
-            />
-          </div>
-          <div style={{ display: 'flex', gap: '0.5rem', alignItems: "center" }}>
-            {lastAutoSave && (
-              <span style={{ fontSize: "0.75rem", color: "#6b7280", marginRight: "0.5rem" }}>
-                Saved: {lastAutoSave.toLocaleTimeString()}
-              </span>
-            )}
-            <button className="primary-btn" onClick={() => handleSaveAll(false)}>
-              Save JSON
-            </button>
-          </div>
+          <button className="primary-btn" onClick={() => handleSaveAll(false)}>
+            Save JSON
+          </button>
+          {lastAutoSave && (
+            <span style={{ fontSize: "0.75rem", color: "#6b7280" }}>
+              Saved: {lastAutoSave.toLocaleTimeString()}
+            </span>
+          )}
         </div>
       </header>
 
