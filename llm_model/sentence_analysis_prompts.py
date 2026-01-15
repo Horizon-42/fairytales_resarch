@@ -7,17 +7,6 @@ Your task is to analyze a single sentence within the context of a complete story
 You must output STRICT JSON only (no markdown, no commentary).
 """
 
-NARRATIVE_FUNCTION_TYPES = """
-### Narrative Function Types (for important events)
-If the event is important to the story structure, classify it as one of:
-- `trigger`: An event that initiates a new plot line or conflict.
-- `climax`: The highest point of tension or conflict.
-- `resolution`: The action that resolves a conflict.
-- `character_arc`: An action defining a shift in personality or belief.
-- `setup`: Preparation for future events.
-- `exposition`: Action serving primarily to reveal background info.
-"""
-
 SENTIMENT_AND_EMOTION_GUIDE = """
 ### Sentiment and Emotion
 - **Sentiment**: The emotional attitude of the doer toward the receiver in this specific event.
@@ -32,29 +21,46 @@ SENTIMENT_AND_EMOTION_GUIDE = """
 
 def build_sentence_analysis_prompt(
     *,
-    story_context: str,
     sentence: str,
+    story_context: str | None = None,
+    use_context: bool = True,
 ) -> str:
     """Build the user prompt for sentence-level event analysis.
     
     Args:
-        story_context: The full story text providing context.
         sentence: The specific sentence to analyze.
+        story_context: The full story text providing context (optional if use_context is False).
+        use_context: Whether to use story context in the analysis.
     """
     
+    if use_context and story_context:
+        task_description = (
+            "# TASK\n"
+            "Analyze a single sentence within the context of a complete story. "
+            "Determine if it contains an event, and if so, extract detailed information about it.\n\n"
+
+            "# INPUT\n"
+            f"**Story Context (Full Story)**:\n"
+            f"---\n"
+            f"{story_context}\n"
+            f"---\n\n"
+
+            f"**Sentence to Analyze**:\n"
+            f"\"{sentence}\"\n\n"
+        )
+    else:
+        task_description = (
+            "# TASK\n"
+            "Analyze a single sentence. "
+            "Determine if it contains an event, and if so, extract detailed information about it.\n\n"
+
+            "# INPUT\n"
+            f"**Sentence to Analyze**:\n"
+            f"\"{sentence}\"\n\n"
+        )
+
     return (
-        "# TASK\n"
-        "Analyze a single sentence within the context of a complete story. "
-        "Determine if it contains an event, and if so, extract detailed information about it.\n\n"
-        
-        "# INPUT\n"
-        f"**Story Context (Full Story)**:\n"
-        f"---\n"
-        f"{story_context}\n"
-        f"---\n\n"
-        
-        f"**Sentence to Analyze**:\n"
-        f"\"{sentence}\"\n\n"
+        task_description +
         
         "# ANALYSIS REQUIREMENTS\n\n"
         
@@ -66,24 +72,21 @@ def build_sentence_analysis_prompt(
         "- Scene/landscape description (environmental description)\n"
         "- Other non-event content\n\n"
         
-        "## 2. Event Information (if event detected)\n"
+        "## 2. Location Extraction\n"
+        "Extract any location information mentioned in the sentence:\n"
+        "- **location**: The place or location mentioned in the sentence (e.g., \"forest\", \"palace\", \"village\", etc.)\n"
+        "  - If the sentence describes a location or mentions a specific place, extract it explicitly\n"
+        "  - If no location is mentioned, use empty string \"\"\n"
+        "  - Include both explicit location names and descriptive location phrases\n\n"
+
+        "## 3. Event Information (if event detected)\n"
         "If the sentence contains an event, extract:\n"
         "- **doer**: The agent/character who performs the action (empty string if no clear doer)\n"
         "- **receiver**: The target/recipient of the action (empty string if no clear receiver)\n"
         "- **sentiment**: The emotional attitude of the doer toward the receiver "
         "(one of: `romantic`, `positive`, `neutral`, `negative`, `fearful`, `hostile`, or empty string if not applicable)\n"
         "- **emotion**: The emotional state of the doer (e.g., `joy`, `sadness`, `anger`, `fear`, etc., or empty string if not clear)\n\n"
-        
-        "## 3. Importance Assessment\n"
-        "Evaluate the importance of this event within the entire story:\n"
-        "- **importance_score**: A number from 0 to 10, where:\n"
-        "  - 0-3: Minor event, not crucial to plot\n"
-        "  - 4-6: Moderate importance, contributes to plot development\n"
-        "  - 7-10: Highly important, critical to story structure\n"
-        "- **narrative_function**: If importance_score >= 6, classify the event's narrative function. "
-        "  If importance_score < 6, use empty string \"\".\n\n"
-        
-        f"{NARRATIVE_FUNCTION_TYPES}\n"
+
         f"{SENTIMENT_AND_EMOTION_GUIDE}\n"
         
         "# OUTPUT FORMAT\n"
@@ -92,19 +95,17 @@ def build_sentence_analysis_prompt(
         "{\n"
         "  \"is_event\": boolean,\n"
         "  \"content_type\": string (\"event\" | \"location\" | \"background\" | \"scene_description\" | \"other\"),\n"
+        "  \"location\": string (location name or description, empty string if no location mentioned),\n"
         "  \"doer\": string (character name or empty string),\n"
         "  \"receiver\": string (character/object name or empty string),\n"
         "  \"sentiment\": string (sentiment code or empty string),\n"
         "  \"emotion\": string (emotion name or empty string),\n"
-        "  \"importance_score\": integer (0-10),\n"
-        "  \"narrative_function\": string (narrative function code or empty string),\n"
         "  \"explanation\": string (brief explanation of the analysis)\n"
         "}\n\n"
         
         "**Rules**:\n"
-        "- If `is_event` is false, set `doer`, `receiver`, `sentiment`, `emotion`, and `narrative_function` to empty strings \"\", "
-        "and set `importance_score` to 0.\n"
+        "- If `is_event` is false, set `doer`, `receiver`, `sentiment`, and `emotion` to empty strings \"\".\n"
         "- If `is_event` is true but no clear doer/receiver, use empty strings.\n"
-        "- Be precise with importance_score: only assign 6+ to events that significantly impact the story structure.\n"
-        "- Only set `narrative_function` if `importance_score >= 6`.\n"
+        "- Always extract `location` if any location is mentioned in the sentence, regardless of whether it's an event or not.\n"
+        "- If no location is mentioned, set `location` to empty string \"\".\n"
     )

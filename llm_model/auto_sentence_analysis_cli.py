@@ -53,7 +53,7 @@ def main() -> int:
     )
     parser.add_argument(
         "--model",
-        default="llama3.1",
+        default="qwen3:8b",
         help="Model name (Ollama model or Gemini model, depends on --provider)",
     )
     parser.add_argument(
@@ -64,14 +64,19 @@ def main() -> int:
     parser.add_argument(
         "--story-file",
         type=Path,
-        required=True,
-        help="Path to the story text file (UTF-8)",
+        default=None,
+        help="Path to the text file (UTF-8). Required for context mode or batch processing. In no-context mode, can be used for batch sentence splitting.",
     )
     parser.add_argument(
         "--sentence",
         type=str,
         default=None,
-        help="Optional: analyze only this specific sentence. If not provided, auto-split and analyze all sentences.",
+        help="Optional: analyze only this specific sentence. If not provided, auto-split and analyze all sentences from --story-file.",
+    )
+    parser.add_argument(
+        "--no-context",
+        action="store_true",
+        help="Analyze sentences without story context. In this mode, --story-file can still be used for batch processing (sentence splitting), but won't be used as context.",
     )
     parser.add_argument(
         "--output",
@@ -81,11 +86,29 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    if not args.story_file.exists():
-        print(f"Error: Story file not found: {args.story_file}", file=sys.stderr)
-        return 1
+    use_context = not args.no_context
 
-    story_context = args.story_file.read_text(encoding="utf-8")
+    # Validate arguments based on mode
+    file_content = None
+    if use_context:
+        # Context mode: story_file is required
+        if not args.story_file:
+            print("Error: --story-file is required when using context mode", file=sys.stderr)
+            return 1
+        if not args.story_file.exists():
+            print(f"Error: Story file not found: {args.story_file}", file=sys.stderr)
+            return 1
+        file_content = args.story_file.read_text(encoding="utf-8")
+        story_context = file_content  # Use as context
+    else:
+        # No-context mode: story_file is optional
+        # If provided, it will be used for batch processing (sentence splitting) but not as context
+        if args.story_file:
+            if not args.story_file.exists():
+                print(f"Error: Story file not found: {args.story_file}", file=sys.stderr)
+                return 1
+            file_content = args.story_file.read_text(encoding="utf-8")
+        story_context = None  # Never use as context in no-context mode
 
     provider = (args.provider or os.getenv("LLM_PROVIDER", "ollama")).strip().lower()
 
@@ -117,15 +140,21 @@ def main() -> int:
                 return 1
             
             result = analyze_sentence(
-                story_context=story_context,
                 sentence=sentence,
+                story_context=story_context,
+                use_context=use_context,
                 config=config,
             )
             output_data = result
         else:
             # Auto-split and analyze all sentences
-            print("Splitting story into sentences...", file=sys.stderr)
-            sentences = split_sentences_advanced(story_context)
+            # Need file_content for sentence splitting (can be from story_file in both modes)
+            if not file_content:
+                print("Error: --story-file is required for batch processing", file=sys.stderr)
+                return 1
+            
+            print("Splitting text into sentences...", file=sys.stderr)
+            sentences = split_sentences_advanced(file_content)
             print(f"Found {len(sentences)} sentences. Analyzing...", file=sys.stderr)
             
             results = []
@@ -133,8 +162,9 @@ def main() -> int:
                 print(f"Analyzing sentence {idx}/{len(sentences)}: {sentence[:50]}...", file=sys.stderr)
                 try:
                     analysis = analyze_sentence(
-                        story_context=story_context,
                         sentence=sentence,
+                        story_context=story_context if use_context else None,
+                        use_context=use_context,
                         config=config,
                     )
                     results.append({
@@ -152,7 +182,8 @@ def main() -> int:
                     })
             
             output_data = {
-                "story_file": str(args.story_file),
+                "story_file": str(args.story_file) if args.story_file else None,
+                "use_context": use_context,
                 "total_sentences": len(sentences),
                 "analyzed_sentences": len(results),
                 "sentences": results,
