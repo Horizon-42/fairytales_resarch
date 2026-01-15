@@ -43,16 +43,66 @@
   ],
   "narrative_events": [
     {
-      "id": "c428c79a-f298-4ea0-a90f-e1a00027647e",
-      "event_type": "DEPARTURE",
+      "id": "568ca314-799b-4871-83e8-b04ce99224e8",
+      "event_type": "Initial Situation",
+      "description": "武蔵の国のある村に茂作、巳之吉と云う二人の木こりがいた。この話のあった時分には、茂作は老人であった。そして、彼の年季奉公人であった巳之吉は、十八の少年であった。",
+      "agents": [
+        "巳之吉",
+        "茂作"
+      ],
+      "targets": [],
+      "text_span": {
+        "start": 0,
+        "end": 80,
+        "text": "武蔵の国のある村に茂作、巳之吉と云う二人の木こりがいた。この話のあった時分には、茂作は老人であった。そして、彼の年季奉公人であった巳之吉は、十八の少年であった。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [
+        {
+          "agent": "巳之吉",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "巳之吉",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "existential",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
+    },
+    {
+      "id": "590846a7-efda-4584-b344-edd3b294ecdd",
+      "event_type": "OTHER",
       "description": "茂作と巳之吉はある大層寒い晩、帰り途で大吹雪に遇った。渡し場に着いた、渡し守は船を河の向う側に残したままで、帰った事が分った。泳がれるような日ではなかった。それで木こりは渡し守の小屋に避難した",
       "agents": [
         "巳之吉",
         "茂作"
       ],
-      "targets": [
-        "渡し守の小屋"
-      ],
+      "targets": [],
       "text_span": {
         "start": 213,
         "end": 310,
@@ -61,12 +111,82 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 1
+      "time_order": 2,
+      "relationships": [
+        {
+          "agent": "巳之吉",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "flee",
+        "context": "",
+        "status": "success",
+        "function": "setup"
+      },
+      "narrative_function": "setup",
+      "relationship_multi": [
+        {
+          "agent": "巳之吉",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "physical",
+      "action_type": "flee",
+      "action_context": "",
+      "action_status": "success"
     },
     {
-      "id": "d251b5da-195a-4da1-ab66-3edeb30a7ef4",
+      "id": "2b86e21d-08a2-4cc8-b425-04b9ed3ef0be",
+      "event_type": "RECONNAISSANCE",
+      "description": "そして雪明かりで、部屋のうちに女、――全く白装束の女、――を見た。",
+      "agents": [
+        "巳之吉"
+      ],
+      "targets": [
+        "雪女"
+      ],
+      "text_span": {
+        "start": 660,
+        "end": 693,
+        "text": "そして雪明かりで、部屋のうちに女、――全く白装束の女、――を見た。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationships": [],
+      "action_layer": {
+        "category": "mental",
+        "type": "observe",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "mental",
+      "action_type": "observe",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "f5591854-6d29-4e43-830d-be4a260e0e6d",
       "event_type": "VILLAINY",
-      "description": "その女は茂作の上に屈んで、彼に彼女の息をふきかけていた、――そして彼女の息はあかるい白い煙のようであった。ほとんど同時に巳之吉の方へ振り向いて、彼の上に屈んだ。彼は叫ぼうとしたが何の音も発する事ができ",
+      "description": "彼に彼女の息をふきかけていた、――そして彼女の息はあかるい白い煙のようであった。",
       "agents": [
         "雪女"
       ],
@@ -74,31 +194,52 @@
         "茂作"
       ],
       "text_span": {
-        "start": 693,
-        "end": 1405,
-        "text": "その女は茂作の上に屈んで、彼に彼女の息をふきかけていた、――そして彼女の息はあかるい白い煙のようであった。ほとんど同時に巳之吉の方へ振り向いて、彼の上に屈んだ。彼は叫ぼうとしたが何の音も発する事ができなかった。白衣の女は、彼の上に段々低く屈んで、しまいに彼女の顔はほとんど彼にふれるようになった、そして彼は――彼女の眼は恐ろしかったが――彼女が大層綺麗である事を見た。しばらく彼女は彼を見続けていた、――それから彼女は微笑した、そしてささやいた、――『私は今ひとりの人のように、あなたをしようかと思った。しかし、あなたを気の毒だと思わずにはいられない、――あなたは若いのだから。……あなたは美少年ね、巳之吉さん、もう私はあなたを害しはしません。しかし、もしあなたが今夜見た事を誰かに――あなたの母さんにでも――云ったら、私に分ります、そして私、あなたを殺します。……覚えていらっしゃい、私の云う事を』\n　そう云って、向き直って、彼女は戸口から出て行った。その時、彼は自分の動ける事を知って、飛び起きて、外を見た。しかし、女はどこにも見えなかった。そして、雪は小屋の中へ烈しく吹きつけていた。巳之吉は戸をしめて、それに木の棒をいくつか立てかけてそれを支えた。彼は風が戸を吹きとばしたのかと思ってみた、――彼はただ夢を見ていたかもしれないと思った。それで入口の雪あかりの閃きを、白い女の形と思い違いしたのかもしれないと思った。しかもそれもたしかではなかった。彼は茂作を呼んでみた。そして、老人が返事をしなかったので驚いた。彼は暗がりへ手をやって茂作の顔にさわってみた。そして、それが氷である事が分った。茂作は固くなって死んでいた"
+        "start": 706,
+        "end": 746,
+        "text": "彼に彼女の息をふきかけていた、――そして彼女の息はあかるい白い煙のようであった。"
       },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 2
+      "time_order": 4,
+      "relationships": [
+        {
+          "agent": "雪女",
+          "target": "茂作",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "雪女",
+          "target": "茂作",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "negative",
+      "action_category": "physical",
+      "action_type": "attack",
+      "action_context": "",
+      "action_status": "success"
     },
     {
-      "id": "1c4c54ba-11ac-45c0-848a-fbe4ea72b167",
-      "event_type": "PUNISHMENT",
-      "description": "",
-      "agents": [],
-      "targets": [],
-      "text_span": null,
-      "target_type": "character",
-      "object_type": "",
-      "instrument": "",
-      "time_order": 3
-    },
-    {
-      "id": "d5ae6242-17dd-469b-9d91-06081280930c",
+      "id": "0c083061-6081-487c-8734-0474aa8d766a",
       "event_type": "INTERDICTION",
-      "description": "もしあなたが今夜見た事を誰かに――あなたの母さんにでも――云ったら、私に分ります、そして私、あなたを殺します。……覚えていらっしゃい、私の云う事を』",
+      "description": "巳之吉さん、もう私はあなたを害しはしません。しかし、もしあなたが今夜見た事を誰かに――あなたの母さんにでも――云ったら、私に分ります、そして私、あなたを殺します。……覚えていらっしゃい、私の云う事を』",
       "agents": [
         "雪女"
       ],
@@ -106,58 +247,248 @@
         "巳之吉"
       ],
       "text_span": {
-        "start": 1019,
+        "start": 993,
         "end": 1093,
-        "text": "もしあなたが今夜見た事を誰かに――あなたの母さんにでも――云ったら、私に分ります、そして私、あなたを殺します。……覚えていらっしゃい、私の云う事を』"
+        "text": "巳之吉さん、もう私はあなたを害しはしません。しかし、もしあなたが今夜見た事を誰かに――あなたの母さんにでも――云ったら、私に分ります、そして私、あなたを殺します。……覚えていらっしゃい、私の云う事を』"
       },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 4
+      "time_order": 5,
+      "relationships": [
+        {
+          "agent": "雪女",
+          "target": "巳之吉",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "promise",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "雪女",
+          "target": "巳之吉",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "negative",
+      "action_category": "communicative",
+      "action_type": "promise",
+      "action_context": "",
+      "action_status": "success"
     },
     {
-      "id": "02453c5d-1731-447a-803e-0af32c2bc949",
-      "event_type": "HERO_REACTION",
-      "description": "しかし、彼は白衣の女の現れた事については何も云わなかった。",
+      "id": "05a683db-c42d-4faf-870d-444b52a7aa1f",
+      "event_type": "RECOGNITION",
+      "description": "彼は暗がりへ手をやって茂作の顔にさわってみた。そして、それが氷である事が分った。茂作は固くなって死んでいた。…",
       "agents": [
         "巳之吉"
       ],
-      "targets": [],
+      "targets": [
+        "茂作"
+      ],
       "text_span": {
-        "start": 1567,
-        "end": 1596,
-        "text": "しかし、彼は白衣の女の現れた事については何も云わなかった。"
+        "start": 1352,
+        "end": 1407,
+        "text": "彼は暗がりへ手をやって茂作の顔にさわってみた。そして、それが氷である事が分った。茂作は固くなって死んでいた。…"
       },
-      "target_type": "object",
+      "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 5
+      "time_order": 6,
+      "relationships": [
+        {
+          "agent": "巳之吉",
+          "target": "茂作",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "realize",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "巳之吉",
+          "target": "茂作",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "negative",
+      "action_category": "mental",
+      "action_type": "realize",
+      "action_context": "",
+      "action_status": "success"
     },
     {
-      "id": "8cd003ad-513f-442c-bbcc-e5c5d3eca68d",
-      "event_type": "WEDDING",
-      "description": "彼女は「お嫁」としてその家にとどまった。\n\n　お雪は大層よい嫁である事が分った",
+      "id": "5a35a6b4-a909-4348-ad53-327849fcd6aa",
+      "event_type": "UNRECOGNIZED_ARRIVAL",
+      "description": "翌年の冬のある晩、家に帰る途中、偶然同じ途を旅している一人の若い女に追いついた。彼女は背の高い、ほっそりした少女で、大層綺麗であった。",
       "agents": [
-        "巳之吉",
-        "雪女"
+        "巳之吉"
       ],
       "targets": [
-        "その家"
+        "雪女"
+      ],
+      "text_span": {
+        "start": 1663,
+        "end": 1731,
+        "text": "　翌年の冬のある晩、家に帰る途中、偶然同じ途を旅している一人の若い女に追いついた。彼女は背の高い、ほっそりした少女で、大層綺麗であった。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 7,
+      "relationships": [
+        {
+          "agent": "巳之吉",
+          "target": "雪女",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "interact",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "巳之吉",
+          "target": "雪女",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "positive",
+      "action_category": "physical",
+      "action_type": "interact",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "f4464e79-43ed-434d-b5ca-6b781775050c",
+      "event_type": "WEDDING",
+      "description": "彼女は「お嫁」としてその家にとどまった。",
+      "agents": [
+        "巳之吉"
+      ],
+      "targets": [
+        "雪女"
       ],
       "text_span": {
         "start": 2343,
-        "end": 2382,
-        "text": "彼女は「お嫁」としてその家にとどまった。\n\n　お雪は大層よい嫁である事が分った"
+        "end": 2363,
+        "text": "彼女は「お嫁」としてその家にとどまった。"
       },
-      "target_type": "object",
+      "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 6
+      "time_order": 8,
+      "relationships": [
+        {
+          "agent": "巳之吉",
+          "target": "雪女",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "巳之吉",
+          "target": "雪女",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "positive",
+      "action_category": "existential",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "success"
     },
     {
-      "id": "28e5ceee-b5f7-49d3-8271-558f17f41abb",
+      "id": "8762bc21-9f44-4a80-b351-f875e0d5403b",
+      "event_type": "OTHER",
+      "description": "そしてお雪は巳之吉に男女十人の子供を生んだ、――皆綺麗な子供で色が非常に白かった。",
+      "agents": [
+        "雪女"
+      ],
+      "targets": [
+        "巳之吉"
+      ],
+      "text_span": {
+        "start": 2442,
+        "end": 2483,
+        "text": "そしてお雪は巳之吉に男女十人の子供を生んだ、――皆綺麗な子供で色が非常に白かった。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 9,
+      "relationships": [],
+      "action_layer": {
+        "category": "existential",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "existential",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "7778df91-4e62-47bc-8ecd-fff2498faee2",
       "event_type": "VIOLATION",
-      "description": "『お前がそうして顔にあかりを受けて、針仕事をしているのを見ると、わしが十八の少年の時遇った不思議な事が思い出される。わしはその時、今のお前のように綺麗なそして色白な人を見た。全く、その女はお前にそっく",
+      "description": "そこで巳之吉は渡し守の小屋で過ごした恐ろしい夜の事を彼女に話した、――そして、にこにこしてささやきながら、自分の上に屈んだ白い女の事、――それから、茂作老人の物も云わずに死んだ事。そして彼は云った",
       "agents": [
         "巳之吉"
       ],
@@ -165,19 +496,52 @@
         "雪女"
       ],
       "text_span": {
-        "start": 2636,
-        "end": 2889,
-        "text": "『お前がそうして顔にあかりを受けて、針仕事をしているのを見ると、わしが十八の少年の時遇った不思議な事が思い出される。わしはその時、今のお前のように綺麗なそして色白な人を見た。全く、その女はお前にそっくりだったよ』……\n　仕事から眼を上げないで、お雪は答えた、――\n『その人の話をしてちょうだい。……どこでおあいになったの』\n　そこで巳之吉は渡し守の小屋で過ごした恐ろしい夜の事を彼女に話した、――そして、にこにこしてささやきながら、自分の上に屈んだ白い女の事、――それから、茂作老人の物も云わずに死んだ事。"
+        "start": 2799,
+        "end": 2897,
+        "text": "そこで巳之吉は渡し守の小屋で過ごした恐ろしい夜の事を彼女に話した、――そして、にこにこしてささやきながら、自分の上に屈んだ白い女の事、――それから、茂作老人の物も云わずに死んだ事。そして彼は云った"
       },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 7
+      "time_order": 10,
+      "relationships": [
+        {
+          "agent": "巳之吉",
+          "target": "雪女",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "betray",
+        "context": "",
+        "status": "success",
+        "function": "trigger"
+      },
+      "narrative_function": "trigger",
+      "relationship_multi": [
+        {
+          "agent": "巳之吉",
+          "target": "雪女",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "negative",
+      "action_category": "communicative",
+      "action_type": "betray",
+      "action_context": "",
+      "action_status": "success"
     },
     {
-      "id": "3e87ded9-de0d-4614-bb6a-6aaf166fe260",
+      "id": "48f953f3-5dc8-417f-a018-0d901f457021",
       "event_type": "EXPOSURE",
-      "description": "『それは私、私、私でした。……それは雪でした。そしてその時あなたが、その事を一言でも云ったら、私はあなたを殺すと云いました。",
+      "description": "『それは私、私、私でした。……それは雪でした。",
       "agents": [
         "雪女"
       ],
@@ -186,18 +550,51 @@
       ],
       "text_span": {
         "start": 3092,
-        "end": 3154,
-        "text": "『それは私、私、私でした。……それは雪でした。そしてその時あなたが、その事を一言でも云ったら、私はあなたを殺すと云いました。"
+        "end": 3115,
+        "text": "『それは私、私、私でした。……それは雪でした。"
       },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 8
+      "time_order": 11,
+      "relationships": [
+        {
+          "agent": "雪女",
+          "target": "巳之吉",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "success",
+        "function": "exposition"
+      },
+      "narrative_function": "exposition",
+      "relationship_multi": [
+        {
+          "agent": "雪女",
+          "target": "巳之吉",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "negative",
+      "action_category": "communicative",
+      "action_type": "inform",
+      "action_context": "",
+      "action_status": "success"
     },
     {
-      "id": "33da1f51-9e68-4c9c-9571-f36894a288c9",
-      "event_type": "PUNISHMENT",
-      "description": "それから彼女は輝いた白い霞となって屋根の棟木の方へ上って、それから煙出しの穴を通ってふるえながら出て行った。……もう再び彼女は見られなかった。",
+      "id": "b82683d9-5547-4352-b662-0907e0edb149",
+      "event_type": "OTHER",
+      "description": "彼女が叫んでいる最中、彼女の声は細くなって行った、風の叫びのように、――それから彼女は輝いた白い霞となって屋根の棟木の方へ上って、それから煙出しの穴を通ってふるえながら出て行った。",
       "agents": [
         "雪女"
       ],
@@ -205,21 +602,55 @@
         "巳之吉"
       ],
       "text_span": {
-        "start": 3300,
-        "end": 3371,
-        "text": "それから彼女は輝いた白い霞となって屋根の棟木の方へ上って、それから煙出しの穴を通ってふるえながら出て行った。……もう再び彼女は見られなかった。"
+        "start": 3264,
+        "end": 3354,
+        "text": "彼女が叫んでいる最中、彼女の声は細くなって行った、風の叫びのように、――それから彼女は輝いた白い霞となって屋根の棟木の方へ上って、それから煙出しの穴を通ってふるえながら出て行った。"
       },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 9
+      "time_order": 12,
+      "relationships": [
+        {
+          "agent": "雪女",
+          "target": "巳之吉",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "雪女",
+          "target": "巳之吉",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "negative",
+      "action_category": "physical",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "success"
     }
   ],
   "themes_and_motifs": {
-    "ending_type": "TRAGIC",
+    "ending_type": "BITTERSWEET",
     "key_values": [
-      "LOYALTY",
-      "SACRIFICE"
+      "SACRIFICE",
+      "TRUE_LOVE",
+      "OBEDIENCE"
     ],
     "motif_type": [],
     "atu_categories": [
@@ -227,28 +658,46 @@
     ],
     "obstacle_thrower": [],
     "helper_type": [],
-    "thinking_process": "本作は雪女による明確な禁忌の提示と、その破りによって引き起こされる\n不可逆的な別離を中心構造としている。\n結婚や異類関係よりも、禁忌遵守の条件性と違反の結果が物語の核であるため、\n「禁忌違反と処罰」のモチーフに該当すると判断した。\n"
+    "thinking_process": "本作は雪女による明確な禁忌の提示と、その破りによって引き起こされる\n不可逆的な別離を中心構造としている。\n結婚や異類関係よりも、禁忌遵守の条件性と違反の結果が物語の核であるため、\n「禁忌違反と処罰」のモチーフに該当すると判断した。\n",
+    "atu_evidence": {},
+    "motif_evidence": {}
   },
   "analysis": {
     "propp_functions": [
       {
-        "id": "99820c08-42ee-4266-a0e5-b44c13147db1",
-        "fn": "DEPARTURE",
+        "id": "f6dce716-1e7d-490f-a505-95b607e28b9b",
+        "fn": "Initial Situation",
         "spanType": "text",
         "span": {
           "start": 0,
           "end": 0
         },
         "textSpan": {
-          "start": 213,
-          "end": 310,
-          "text": "　茂作と巳之吉はある大層寒い晩、帰り途で大吹雪に遇った。渡し場に着いた、渡し守は船を河の向う側に残したままで、帰った事が分った。泳がれるような日ではなかった。それで木こりは渡し守の小屋に避難した"
+          "start": 0,
+          "end": 80,
+          "text": "武蔵の国のある村に茂作、巳之吉と云う二人の木こりがいた。この話のあった時分には、茂作は老人であった。そして、彼の年季奉公人であった巳之吉は、十八の少年であった。"
         },
-        "evidence": "茂作と巳之吉はある大層寒い晩、帰り途で大吹雪に遇った。渡し場に着いた、渡し守は船を河の向う側に残したままで、帰った事が分った。泳がれるような日ではなかった。それで木こりは渡し守の小屋に避難した",
-        "narrative_event_id": "c428c79a-f298-4ea0-a90f-e1a00027647e"
+        "evidence": "武蔵の国のある村に茂作、巳之吉と云う二人の木こりがいた。この話のあった時分には、茂作は老人であった。そして、彼の年季奉公人であった巳之吉は、十八の少年であった。",
+        "narrative_event_id": "568ca314-799b-4871-83e8-b04ce99224e8"
       },
       {
-        "id": "692ec444-efa6-46bb-afab-2fa9f7d276fc",
+        "id": "b7e535e5-6b6f-4705-839d-4cb2ee20a1f4",
+        "fn": "RECONNAISSANCE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 660,
+          "end": 693,
+          "text": "そして雪明かりで、部屋のうちに女、――全く白装束の女、――を見た。"
+        },
+        "evidence": "そして雪明かりで、部屋のうちに女、――全く白装束の女、――を見た。",
+        "narrative_event_id": "2b86e21d-08a2-4cc8-b425-04b9ed3ef0be"
+      },
+      {
+        "id": "6cfc97fe-9ca9-4e1a-829b-cf2386e64641",
         "fn": "VILLAINY",
         "spanType": "text",
         "span": {
@@ -256,15 +705,15 @@
           "end": 0
         },
         "textSpan": {
-          "start": 693,
-          "end": 1405,
-          "text": "その女は茂作の上に屈んで、彼に彼女の息をふきかけていた、――そして彼女の息はあかるい白い煙のようであった。ほとんど同時に巳之吉の方へ振り向いて、彼の上に屈んだ。彼は叫ぼうとしたが何の音も発する事ができなかった。白衣の女は、彼の上に段々低く屈んで、しまいに彼女の顔はほとんど彼にふれるようになった、そして彼は――彼女の眼は恐ろしかったが――彼女が大層綺麗である事を見た。しばらく彼女は彼を見続けていた、――それから彼女は微笑した、そしてささやいた、――『私は今ひとりの人のように、あなたをしようかと思った。しかし、あなたを気の毒だと思わずにはいられない、――あなたは若いのだから。……あなたは美少年ね、巳之吉さん、もう私はあなたを害しはしません。しかし、もしあなたが今夜見た事を誰かに――あなたの母さんにでも――云ったら、私に分ります、そして私、あなたを殺します。……覚えていらっしゃい、私の云う事を』\n　そう云って、向き直って、彼女は戸口から出て行った。その時、彼は自分の動ける事を知って、飛び起きて、外を見た。しかし、女はどこにも見えなかった。そして、雪は小屋の中へ烈しく吹きつけていた。巳之吉は戸をしめて、それに木の棒をいくつか立てかけてそれを支えた。彼は風が戸を吹きとばしたのかと思ってみた、――彼はただ夢を見ていたかもしれないと思った。それで入口の雪あかりの閃きを、白い女の形と思い違いしたのかもしれないと思った。しかもそれもたしかではなかった。彼は茂作を呼んでみた。そして、老人が返事をしなかったので驚いた。彼は暗がりへ手をやって茂作の顔にさわってみた。そして、それが氷である事が分った。茂作は固くなって死んでいた"
+          "start": 706,
+          "end": 746,
+          "text": "彼に彼女の息をふきかけていた、――そして彼女の息はあかるい白い煙のようであった。"
         },
-        "evidence": "その女は茂作の上に屈んで、彼に彼女の息をふきかけていた、――そして彼女の息はあかるい白い煙のようであった。ほとんど同時に巳之吉の方へ振り向いて、彼の上に屈んだ。彼は叫ぼうとしたが何の音も発する事ができ",
-        "narrative_event_id": "d251b5da-195a-4da1-ab66-3edeb30a7ef4"
+        "evidence": "彼に彼女の息をふきかけていた、――そして彼女の息はあかるい白い煙のようであった。",
+        "narrative_event_id": "f5591854-6d29-4e43-830d-be4a260e0e6d"
       },
       {
-        "id": "b3b5c0d1-6706-44c6-b194-c45889b1fc96",
+        "id": "198b3f58-e93a-45c6-8446-e4eeb9391b7b",
         "fn": "INTERDICTION",
         "spanType": "text",
         "span": {
@@ -272,31 +721,47 @@
           "end": 0
         },
         "textSpan": {
-          "start": 1019,
+          "start": 993,
           "end": 1093,
-          "text": "もしあなたが今夜見た事を誰かに――あなたの母さんにでも――云ったら、私に分ります、そして私、あなたを殺します。……覚えていらっしゃい、私の云う事を』"
+          "text": "巳之吉さん、もう私はあなたを害しはしません。しかし、もしあなたが今夜見た事を誰かに――あなたの母さんにでも――云ったら、私に分ります、そして私、あなたを殺します。……覚えていらっしゃい、私の云う事を』"
         },
-        "evidence": "雪女は「今夜見たことを誰にも言うな」と明確な命令を与えている。",
-        "narrative_event_id": "d5ae6242-17dd-469b-9d91-06081280930c"
+        "evidence": "巳之吉さん、もう私はあなたを害しはしません。しかし、もしあなたが今夜見た事を誰かに――あなたの母さんにでも――云ったら、私に分ります、そして私、あなたを殺します。……覚えていらっしゃい、私の云う事を』",
+        "narrative_event_id": "0c083061-6081-487c-8734-0474aa8d766a"
       },
       {
-        "id": "a0586416-a069-4d9a-bf9e-4eee361322d6",
-        "fn": "HERO_REACTION",
+        "id": "a8b179db-76a1-44e8-8891-019f33cd16d4",
+        "fn": "RECOGNITION",
         "spanType": "text",
         "span": {
           "start": 0,
           "end": 0
         },
         "textSpan": {
-          "start": 1567,
-          "end": 1596,
-          "text": "しかし、彼は白衣の女の現れた事については何も云わなかった。"
+          "start": 1352,
+          "end": 1407,
+          "text": "彼は暗がりへ手をやって茂作の顔にさわってみた。そして、それが氷である事が分った。茂作は固くなって死んでいた。…"
         },
-        "evidence": "しかし、彼は白衣の女の現れた事については何も云わなかった。",
-        "narrative_event_id": "02453c5d-1731-447a-803e-0af32c2bc949"
+        "evidence": "彼は暗がりへ手をやって茂作の顔にさわってみた。そして、それが氷である事が分った。茂作は固くなって死んでいた。…",
+        "narrative_event_id": "05a683db-c42d-4faf-870d-444b52a7aa1f"
       },
       {
-        "id": "39f5b777-8c3c-42b2-9260-df145b499973",
+        "id": "ddd0656a-1a17-4388-94b9-d0d49ba33934",
+        "fn": "UNRECOGNIZED_ARRIVAL",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1663,
+          "end": 1731,
+          "text": "　翌年の冬のある晩、家に帰る途中、偶然同じ途を旅している一人の若い女に追いついた。彼女は背の高い、ほっそりした少女で、大層綺麗であった。"
+        },
+        "evidence": "翌年の冬のある晩、家に帰る途中、偶然同じ途を旅している一人の若い女に追いついた。彼女は背の高い、ほっそりした少女で、大層綺麗であった。",
+        "narrative_event_id": "5a35a6b4-a909-4348-ad53-327849fcd6aa"
+      },
+      {
+        "id": "23e714ee-d18a-442e-8fb2-5cd2d1c972a1",
         "fn": "WEDDING",
         "spanType": "text",
         "span": {
@@ -305,14 +770,14 @@
         },
         "textSpan": {
           "start": 2343,
-          "end": 2382,
-          "text": "彼女は「お嫁」としてその家にとどまった。\n\n　お雪は大層よい嫁である事が分った"
+          "end": 2363,
+          "text": "彼女は「お嫁」としてその家にとどまった。"
         },
-        "evidence": "彼女は「お嫁」としてその家にとどまった。\n\n　お雪は大層よい嫁である事が分った",
-        "narrative_event_id": "8cd003ad-513f-442c-bbcc-e5c5d3eca68d"
+        "evidence": "彼女は「お嫁」としてその家にとどまった。",
+        "narrative_event_id": "f4464e79-43ed-434d-b5ca-6b781775050c"
       },
       {
-        "id": "cee69b0c-fbba-4199-94cd-e8d09d3d2ae9",
+        "id": "742eb74e-b5ab-4385-93e8-c43e998bfdc8",
         "fn": "VIOLATION",
         "spanType": "text",
         "span": {
@@ -320,15 +785,15 @@
           "end": 0
         },
         "textSpan": {
-          "start": 2636,
-          "end": 2889,
-          "text": "『お前がそうして顔にあかりを受けて、針仕事をしているのを見ると、わしが十八の少年の時遇った不思議な事が思い出される。わしはその時、今のお前のように綺麗なそして色白な人を見た。全く、その女はお前にそっくりだったよ』……\n　仕事から眼を上げないで、お雪は答えた、――\n『その人の話をしてちょうだい。……どこでおあいになったの』\n　そこで巳之吉は渡し守の小屋で過ごした恐ろしい夜の事を彼女に話した、――そして、にこにこしてささやきながら、自分の上に屈んだ白い女の事、――それから、茂作老人の物も云わずに死んだ事。"
+          "start": 2799,
+          "end": 2897,
+          "text": "そこで巳之吉は渡し守の小屋で過ごした恐ろしい夜の事を彼女に話した、――そして、にこにこしてささやきながら、自分の上に屈んだ白い女の事、――それから、茂作老人の物も云わずに死んだ事。そして彼は云った"
         },
-        "evidence": "巳之吉自身の意思で過去の出来事を語り、禁忌を破っている。",
-        "narrative_event_id": "28e5ceee-b5f7-49d3-8271-558f17f41abb"
+        "evidence": "そこで巳之吉は渡し守の小屋で過ごした恐ろしい夜の事を彼女に話した、――そして、にこにこしてささやきながら、自分の上に屈んだ白い女の事、――それから、茂作老人の物も云わずに死んだ事。そして彼は云った",
+        "narrative_event_id": "7778df91-4e62-47bc-8ecd-fff2498faee2"
       },
       {
-        "id": "c96bd49f-2cf8-4ff5-9567-10dd4d4a1492",
+        "id": "07dffb1c-bb78-46bd-9c13-0ab6ba2ae500",
         "fn": "EXPOSURE",
         "spanType": "text",
         "span": {
@@ -337,32 +802,19 @@
         },
         "textSpan": {
           "start": 3092,
-          "end": 3154,
-          "text": "『それは私、私、私でした。……それは雪でした。そしてその時あなたが、その事を一言でも云ったら、私はあなたを殺すと云いました。"
+          "end": 3115,
+          "text": "『それは私、私、私でした。……それは雪でした。"
         },
-        "evidence": "『それは私、私、私でした。……それは雪でした。そしてその時あなたが、その事を一言でも云ったら、私はあなたを殺すと云いました。",
-        "narrative_event_id": "3e87ded9-de0d-4614-bb6a-6aaf166fe260"
-      },
-      {
-        "id": "fb9f4561-9896-4432-8ac7-fa806cf37147",
-        "fn": "PUNISHMENT",
-        "spanType": "text",
-        "span": {
-          "start": 0,
-          "end": 0
-        },
-        "textSpan": {
-          "start": 3300,
-          "end": 3371,
-          "text": "それから彼女は輝いた白い霞となって屋根の棟木の方へ上って、それから煙出しの穴を通ってふるえながら出て行った。……もう再び彼女は見られなかった。"
-        },
-        "evidence": "本来は死が罰として予定されていたが、子供の存在により回避され、代わりに別離が生じる。",
-        "narrative_event_id": "33da1f51-9e68-4c9c-9571-f36894a288c9"
+        "evidence": "『それは私、私、私でした。……それは雪でした。",
+        "narrative_event_id": "48f953f3-5dc8-417f-a018-0d901f457021"
       }
     ],
     "propp_notes": "",
     "paragraph_summaries": {
-      "per_paragraph": {},
+      "per_section": {
+        "S487-516": "The older brother sneaked into his younger brother's house at night to steal stone powder.",
+        "S1-23": "Long ago, in a certain village, there was a poor man."
+      },
       "combined": [],
       "whole": ""
     },

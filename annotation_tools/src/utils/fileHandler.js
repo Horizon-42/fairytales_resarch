@@ -8,27 +8,31 @@ export function organizeFiles(fileList) {
 
   Array.from(fileList).forEach((file) => {
     const path = file.webkitRelativePath || file.name;
+    const pathLower = path.toLowerCase();
     const parts = path.split('/');
     const fileName = parts.pop();
     const dir = parts.join('/');
 
-    if (fileName.endsWith('.txt')) {
+    // Process .txt files from texts folder
+    if (fileName.endsWith('.txt') && 
+        (pathLower.includes('/texts/') || pathLower.startsWith('texts/'))) {
       const id = fileName.replace('.txt', '');
       texts.push({ file, id, path });
-    } else if (fileName.endsWith('.json')) {
+    }
+    // Process .json files from json/json_v2/json_v3 folders (for fallback loading)
+    else if (fileName.endsWith('.json')) {
+      // Skip JSON files in texts folder
+      if (pathLower.includes('/texts/') || pathLower.startsWith('texts/')) {
+        return;
+      }
+      
       const id = fileName.replace(/_v[123]\.json$/, '').replace('.json', '');
       
-      // Heuristic: check directory or filename suffix
-      // Users might name v2/v3 files as *_v2.json / *_v3.json or put them in json_v2/json_v3 folder
+      // Determine version from folder or filename
       const isV2Folder = dir.endsWith('json_v2') || dir.includes('/json_v2/');
       const isV2File = fileName.endsWith('_v2.json');
-
       const isV3Folder = dir.endsWith('json_v3') || dir.includes('/json_v3/');
       const isV3File = fileName.endsWith('_v3.json');
-      
-      // Also check content version if we could read it, but we can't here easily.
-      // We rely on folder structure or naming conventions for now.
-      // The user prompt said: "open or create 2 json folders... json and json_v2"
       
       if (isV3Folder || isV3File) {
         v3Jsons[id] = file;
@@ -291,6 +295,152 @@ export function mapV2ToState(data) {
   };
 }
 
+// Merge two state objects, taking union of data (v3 takes priority for conflicts)
+export function mergeV2V3States(v2State, v3State) {
+  if (!v2State && !v3State) return null;
+  if (!v2State) return v3State;
+  if (!v3State) return v2State;
+
+  // Helper to merge arrays by id (union)
+  const mergeArraysById = (arr1, arr2) => {
+    const map = new Map();
+    // Add all items from arr1
+    (arr1 || []).forEach(item => {
+      if (item && item.id) {
+        map.set(item.id, item);
+      }
+    });
+    // Add/override with items from arr2 (v3 takes priority)
+    (arr2 || []).forEach(item => {
+      if (item && item.id) {
+        map.set(item.id, item);
+      }
+    });
+    return Array.from(map.values());
+  };
+
+  // Helper to merge arrays without id (simple union, dedupe by content)
+  const mergeArraysSimple = (arr1, arr2) => {
+    const combined = [...(arr1 || []), ...(arr2 || [])];
+    // Simple deduplication for arrays without id
+    const seen = new Set();
+    return combined.filter(item => {
+      const key = JSON.stringify(item);
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+  };
+
+  return {
+    // Basic fields: v3 takes priority, fallback to v2
+    id: v3State.id || v2State.id || "",
+    culture: v3State.culture || v2State.culture || "",
+    title: v3State.title || v2State.title || "",
+    annotationLevel: v3State.annotationLevel || v2State.annotationLevel || "story",
+
+    // Meta: merge objects, v3 takes priority
+    meta: {
+      ...v2State.meta,
+      ...v3State.meta,
+      // For arrays in meta, merge them
+      key_values: mergeArraysSimple(v2State.meta?.key_values || [], v3State.meta?.key_values || [])
+    },
+
+    // Motif: merge objects, v3 takes priority
+    motif: {
+      ...v2State.motif,
+      ...v3State.motif,
+      // Merge arrays in motif
+      character_archetypes: mergeArraysSimple(
+        v2State.motif?.character_archetypes || [],
+        v3State.motif?.character_archetypes || []
+      ),
+      motif_type: mergeArraysSimple(
+        v2State.motif?.motif_type || [],
+        v3State.motif?.motif_type || []
+      ),
+      atu_categories: mergeArraysSimple(
+        v2State.motif?.atu_categories || [],
+        v3State.motif?.atu_categories || []
+      ),
+      obstacle_thrower: mergeArraysSimple(
+        v2State.motif?.obstacle_thrower || [],
+        v3State.motif?.obstacle_thrower || []
+      ),
+      helper_type: mergeArraysSimple(
+        v2State.motif?.helper_type || [],
+        v3State.motif?.helper_type || []
+      ),
+      // Merge evidence maps
+      atu_evidence: {
+        ...(v2State.motif?.atu_evidence || {}),
+        ...(v3State.motif?.atu_evidence || {})
+      },
+      motif_evidence: {
+        ...(v2State.motif?.motif_evidence || {}),
+        ...(v3State.motif?.motif_evidence || {})
+      }
+    },
+
+    // Narrative Structure: merge by id (v3 takes priority for same id)
+    narrativeStructure: mergeArraysById(
+      v2State.narrativeStructure || [],
+      v3State.narrativeStructure || []
+    ),
+
+    // Propp Functions: merge by id (v3 takes priority for same id)
+    proppFns: mergeArraysById(
+      v2State.proppFns || [],
+      v3State.proppFns || []
+    ),
+
+    // Paragraph Summaries: merge objects, v3 takes priority
+    paragraphSummaries: {
+      perSection: {
+        ...(v2State.paragraphSummaries?.perSection || {}),
+        ...(v3State.paragraphSummaries?.perSection || {})
+      },
+      combined: mergeArraysById(
+        v2State.paragraphSummaries?.combined || [],
+        v3State.paragraphSummaries?.combined || []
+      ),
+      whole: v3State.paragraphSummaries?.whole || v2State.paragraphSummaries?.whole || ""
+    },
+
+    // Cross Validation: merge objects, v3 takes priority
+    crossValidation: {
+      ...v2State.crossValidation,
+      ...v3State.crossValidation,
+      bias_reflection: {
+        ...(v2State.crossValidation?.bias_reflection || {}),
+        ...(v3State.crossValidation?.bias_reflection || {}),
+        ambiguous_motifs: mergeArraysSimple(
+          v2State.crossValidation?.bias_reflection?.ambiguous_motifs || [],
+          v3State.crossValidation?.bias_reflection?.ambiguous_motifs || []
+        )
+      }
+    },
+
+    // QA: v3 takes priority
+    qa: {
+      ...v2State.qa,
+      ...v3State.qa
+    },
+
+    // Source Text: v3 takes priority
+    sourceText: v3State.sourceText || v2State.sourceText || {
+      text: "",
+      language: "",
+      type: "",
+      reference_uri: ""
+    },
+
+    // Propp Notes: v3 takes priority
+    proppNotes: v3State.proppNotes || v2State.proppNotes || ""
+  };
+}
+
 // Helper to map V3 JSON to App State
 export function mapV3ToState(data) {
   const meta = data.metadata || {};
@@ -363,26 +513,63 @@ export function mapV3ToState(data) {
 
       const agents = Array.isArray(evt.agents) ? evt.agents.filter(Boolean) : [];
       const targets = Array.isArray(evt.targets) ? evt.targets.filter(Boolean) : [];
-      const isMultiRelationship = (evt.target_type || "character") === "character" && (agents.length > 1 || targets.length > 1 || relList.length > 1);
+      
+      // If relationships array is empty but legacy fields exist, reconstruct relationship_multi from legacy fields
+      let finalRelList = relList;
+      if (relList.length === 0 && (evt.target_type || "character") === "character" && agents.length > 0 && targets.length > 0) {
+        // Check if legacy fields exist (they might still be present in some v3 files before deletion)
+        if (evt.relationship_level1 || evt.relationship_level2 || evt.sentiment) {
+          finalRelList = [{
+            agent: agents[0] || "",
+            target: targets[0] || "",
+            relationship_level1: evt.relationship_level1 || "",
+            relationship_level2: evt.relationship_level2 || "",
+            sentiment: evt.sentiment || ""
+          }];
+        }
+      }
+      
+      const isMultiRelationship = (evt.target_type || "character") === "character" && (agents.length > 1 || targets.length > 1 || finalRelList.length > 1);
 
       // Backfill legacy single-relationship fields from relationship list when unambiguous
-      const firstRel = relList[0] || {};
+      const firstRel = finalRelList[0] || {};
       const legacyRelationshipLevel1 = isMultiRelationship ? "" : (evt.relationship_level1 || firstRel.relationship_level1 || "");
       const legacyRelationshipLevel2 = isMultiRelationship ? "" : (evt.relationship_level2 || firstRel.relationship_level2 || "");
       const legacySentiment = isMultiRelationship ? "" : (evt.sentiment || firstRel.sentiment || "");
 
+      // Build the normalized event object
+      // Note: We explicitly exclude 'relationships' field as it's been converted to 'relationship_multi'
+      // Also exclude legacy flat fields from v3 JSON (they shouldn't exist, but clean them up if they do)
+      const { 
+        relationships, 
+        relationship_level1: _rel1, 
+        relationship_level2: _rel2, 
+        sentiment: _sent,
+        action_category: _actCat,
+        action_type: _actType,
+        action_context: _actCtx,
+        action_status: _actStatus,
+        narrative_function: _narrFn,
+        ...evtWithoutRelationships 
+      } = evt;
+      
       return {
-        ...evt,
+        ...evtWithoutRelationships,
         id: evt.id || generateUUID(),
         target_type: evt.target_type || "character",
         object_type: evt.object_type || "",
         instrument: evt.instrument || "",
         time_order: evt.time_order ?? (index + 1),
         narrative_function: narrativeFunction,
-        relationship_multi: relList,
+        // Ensure agents and targets are always arrays
+        agents: agents,
+        targets: targets,
+        relationship_multi: finalRelList,
+        // Only set legacy fields if not multi-relationship (for UI compatibility)
         relationship_level1: legacyRelationshipLevel1,
         relationship_level2: legacyRelationshipLevel2,
         sentiment: legacySentiment,
+        // Action fields are extracted from action_layer, but keep them for UI compatibility
         action_category: actionFields.action_category || "",
         action_type: actionFields.action_type || "",
         action_context: actionFields.action_context || "",

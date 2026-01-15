@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { organizeFiles, mapV2ToState } from "./fileHandler.js";
+import { organizeFiles, mapV2ToState } from "../../utils/fileHandler.js";
 
 // Mock File object
 class MockFile {

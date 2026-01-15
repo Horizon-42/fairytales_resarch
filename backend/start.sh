@@ -164,9 +164,16 @@ run_server() {
   # Write port to file for frontend to discover
   echo "${PORT}" > "${ROOT_DIR}/.backend-port"
 
-  RELOAD_FLAG=()
+  # Build uvicorn command with optional --reload flag
+  UVICORN_ARGS=(
+    --app-dir "${ROOT_DIR}"
+    --host "${HOST}"
+    --port "${PORT}"
+    --log-level "${LOG_LEVEL}"
+    --access-log
+  )
   if [[ "${RELOAD}" == "1" ]]; then
-    RELOAD_FLAG=(--reload)
+    UVICORN_ARGS+=(--reload)
   fi
 
   echo "[run] Starting backend on http://${HOST}:${PORT} (env=${ENV_NAME})"
@@ -180,12 +187,7 @@ run_server() {
     OLLAMA_MODEL="${OLLAMA_MODEL}" \
     OLLAMA_EMBEDDING_MODEL="${OLLAMA_EMBEDDING_MODEL}" \
     python -m uvicorn backend.main:app \
-      --app-dir "${ROOT_DIR}" \
-      --host "${HOST}" \
-      --port "${PORT}" \
-      --log-level "${LOG_LEVEL}" \
-      --access-log \
-      # "${RELOAD_FLAG[@]}"
+      "${UVICORN_ARGS[@]}"
 }
 
 cmd="${1:-run}"

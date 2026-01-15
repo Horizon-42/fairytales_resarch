@@ -39,7 +39,29 @@
   "narrative_events": [
     {
       "event_type": "OTHER",
-      "description": ""
+      "description": "",
+      "id": "f6fe8c53-a8c1-4b0a-902b-ad7bc361ac96",
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
     },
     {
       "id": "b38d5e6a-31c5-4b28-9884-0e1a93670e72",
@@ -60,14 +82,39 @@
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "enemy",
-      "sentiment": "negative",
       "action_layer": {
         "category": "physical",
         "type": "attack",
-        "status": "success"
-      }
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "relationships": [
+        {
+          "agent": "たぬき",
+          "target": "おじいさん",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "negative"
+        }
+      ],
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "たぬき",
+          "target": "おじいさん",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "enemy",
+      "sentiment": "negative",
+      "action_category": "physical",
+      "action_type": "attack",
+      "action_context": "",
+      "action_status": "success"
     },
     {
       "id": "03ba684b-4620-4a58-ab54-e593c2c974ae",
@@ -88,14 +135,39 @@
       "object_type": "",
       "instrument": "",
       "time_order": 2,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "enemy",
-      "sentiment": "positive",
       "action_layer": {
         "category": "physical",
         "type": "restrain",
-        "status": "success"
-      }
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "たぬき",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "positive"
+        }
+      ],
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "おじいさん",
+          "target": "たぬき",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "enemy",
+      "sentiment": "positive",
+      "action_category": "physical",
+      "action_type": "restrain",
+      "action_context": "",
+      "action_status": "success"
     },
     {
       "id": "3e217e60-ed41-41c3-aff7-f6af1cfc0f2b",
@@ -116,14 +188,39 @@
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "relationship_level1": "Neutral",
-      "relationship_level2": "stranger",
-      "sentiment": "negative",
       "action_layer": {
         "category": "communicative",
         "type": "deceive",
-        "status": "success"
-      }
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "relationships": [
+        {
+          "agent": "たぬき",
+          "target": "おばあさん",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "stranger",
+          "sentiment": "negative"
+        }
+      ],
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "たぬき",
+          "target": "おばあさん",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "stranger",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "Neutral",
+      "relationship_level2": "stranger",
+      "sentiment": "negative",
+      "action_category": "communicative",
+      "action_type": "deceive",
+      "action_context": "",
+      "action_status": "success"
     },
     {
       "id": "275be13a-787f-4888-a772-6166ee9b1a2e",
@@ -144,14 +241,39 @@
       "object_type": "",
       "instrument": "きね",
       "time_order": 4,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "enemy",
-      "sentiment": "negative",
       "action_layer": {
         "category": "physical",
         "type": "attack",
-        "status": "success"
-      }
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "relationships": [
+        {
+          "agent": "たぬき",
+          "target": "おばあさん",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "negative"
+        }
+      ],
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "たぬき",
+          "target": "おばあさん",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "enemy",
+      "sentiment": "negative",
+      "action_category": "physical",
+      "action_type": "attack",
+      "action_context": "",
+      "action_status": "success"
     },
     {
       "id": "d4735a5a-52bd-44c6-ac8c-30379fa174c2",
@@ -172,14 +294,39 @@
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "enemy",
-      "sentiment": "hostile",
       "action_layer": {
         "category": "communicative",
         "type": "slander",
-        "status": "success"
-      }
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "relationships": [
+        {
+          "agent": "たぬき",
+          "target": "おじいさん",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "hostile"
+        }
+      ],
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "たぬき",
+          "target": "おじいさん",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "hostile"
+        }
+      ],
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "enemy",
+      "sentiment": "hostile",
+      "action_category": "communicative",
+      "action_type": "slander",
+      "action_context": "",
+      "action_status": "success"
     },
     {
       "id": "85c8d56b-93f8-40d1-8f55-9d13553eb9b2",
@@ -200,14 +347,39 @@
       "object_type": "",
       "instrument": "",
       "time_order": 6,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "ally",
-      "sentiment": "positive",
       "action_layer": {
         "category": "communicative",
         "type": "promise",
-        "status": "success"
-      }
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "relationships": [
+        {
+          "agent": "うさぎ",
+          "target": "おじいさん",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "ally",
+          "sentiment": "positive"
+        }
+      ],
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "うさぎ",
+          "target": "おじいさん",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "ally",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "ally",
+      "sentiment": "positive",
+      "action_category": "communicative",
+      "action_type": "promise",
+      "action_context": "",
+      "action_status": "success"
     },
     {
       "id": "01fbf3b6-e98c-41e8-92b2-728c0d4385a7",
@@ -228,14 +400,39 @@
       "object_type": "",
       "instrument": "",
       "time_order": 7,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "enemy",
-      "sentiment": "negative",
       "action_layer": {
         "category": "physical",
         "type": "attack",
-        "status": "success"
-      }
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "relationships": [
+        {
+          "agent": "うさぎ",
+          "target": "たぬき",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "negative"
+        }
+      ],
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "うさぎ",
+          "target": "たぬき",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "enemy",
+      "sentiment": "negative",
+      "action_category": "physical",
+      "action_type": "attack",
+      "action_context": "",
+      "action_status": "success"
     },
     {
       "id": "eabbb367-81bf-4cfb-b475-5a577e47ad38",
@@ -256,14 +453,39 @@
       "object_type": "",
       "instrument": "",
       "time_order": 8,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "enemy",
-      "sentiment": "negative",
       "action_layer": {
         "category": "physical",
         "type": "attack",
-        "status": "success"
-      }
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "relationships": [
+        {
+          "agent": "うさぎ",
+          "target": "たぬき",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "negative"
+        }
+      ],
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "うさぎ",
+          "target": "たぬき",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "enemy",
+      "sentiment": "negative",
+      "action_category": "physical",
+      "action_type": "attack",
+      "action_context": "",
+      "action_status": "success"
     }
   ],
   "themes_and_motifs": {
@@ -285,7 +507,9 @@
     "helper_type": [
       "ANIMAL"
     ],
-    "thinking_process": "本作は、欺瞞と殺害という重い悪行に対し、動物の知恵と罠によって段階的な報復が行われ、最終的に完全な制裁が下される「報復正義型動物譚」である。"
+    "thinking_process": "本作は、欺瞞と殺害という重い悪行に対し、動物の知恵と罠によって段階的な報復が行われ、最終的に完全な制裁が下される「報復正義型動物譚」である。",
+    "atu_evidence": {},
+    "motif_evidence": {}
   },
   "analysis": {
     "propp_functions": [
@@ -420,9 +644,11 @@
     ],
     "propp_notes": "",
     "paragraph_summaries": {
-      "per_paragraph": {},
+      "per_section": {
+        "S777-809": "The boat could not withstand the weight of salt and sank into the sea."
+      },
       "combined": [],
-      "whole": ""
+      "whole": "A poor man in a village welcomed a lost old man with a white beard, who gifted him a magical stone. The stone could grant desires when turned right but needed to be stopped to prevent endless output. The man used it to obtain rice, then salt, which filled a boat until it sank under the weight. Meanwhile, his older brother stole stone powder, leading to the tragedy, while a curious visitor witnessed the stone's power."
     },
     "bias_reflection": {
       "cultural_reading": "",

@@ -8,7 +8,12 @@
     "start": "concurrently \"npm run server\" \"npm run dev\"",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:unit": "vitest run",
+    "test:integration": "node tests/integration/test_save_load.js",
+    "test:save-load": "node tests/integration/test_save_load.js",
+    "test:api": "node tests/integration/test_api.js",
+    "test:all": "npm run test:unit && npm run test:integration"
   },
   "dependencies": {
     "body-parser": "^2.2.1",

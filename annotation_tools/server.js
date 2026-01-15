@@ -4,6 +4,7 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import fs from 'fs';
 import path from 'path';
+import os from 'os';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -43,47 +44,35 @@ const PROJECT_ROOT = path.resolve(__dirname, '..');
 
 console.log(`Server running. Project root: ${PROJECT_ROOT}`);
 
-// Helper to find file recursively in datasets if not found directly
-const findFileInDatasets = (targetName, searchDir) => {
-  if (!fs.existsSync(searchDir)) return null;
-  const entries = fs.readdirSync(searchDir, { withFileTypes: true });
-  
-  for (const entry of entries) {
-    const fullPath = path.join(searchDir, entry.name);
-    if (entry.isDirectory()) {
-      // Skip node_modules or .git or json folders to optimize
-      if (entry.name === 'node_modules' || entry.name.startsWith('.')) continue;
-      
-      const res = findFileInDatasets(targetName, fullPath);
-      if (res) return res;
-    } else if (entry.isFile() && entry.name === targetName) {
-      return fullPath;
-    }
+// Helper to resolve folder path
+// Simple logic: assume user-selected folders are in PROJECT_ROOT/datasets/
+// If absolute path is provided, use it directly
+// Otherwise, resolve as PROJECT_ROOT/datasets/{folderPath}
+const resolveFolderPath = (folderPath) => {
+  if (!folderPath || folderPath.trim() === '') {
+    throw new Error('Folder path is empty');
   }
-  return null;
+  
+  // If it's an absolute path, use it directly
+  if (path.isAbsolute(folderPath)) {
+    return folderPath;
+  }
+  
+  // Otherwise, assume it's in datasets/ folder
+  const resolvedPath = path.join(PROJECT_ROOT, 'datasets', folderPath);
+  
+  // Check if the folder exists
+  if (!fs.existsSync(resolvedPath)) {
+    throw new Error(`Folder not found in datasets/: ${folderPath} -> ${resolvedPath}`);
+  }
+  
+  return resolvedPath;
 };
 
-// Helper to resolve the correct file path
-const resolveFilePath = (originalPath) => {
-  // Strategy A: PROJECT_ROOT + /originalPath (Exact relative match)
-  let fullPath = path.join(PROJECT_ROOT, originalPath);
-  if (fs.existsSync(fullPath)) return fullPath;
-
-  // Strategy B: PROJECT_ROOT + /datasets/ + originalPath
-  const inDatasets = path.join(PROJECT_ROOT, 'datasets', originalPath);
-  if (fs.existsSync(inDatasets)) return inDatasets;
-
-  // Strategy C: Recursive search in datasets for the filename
-  const fileName = path.basename(originalPath);
-  const foundPath = findFileInDatasets(fileName, path.join(PROJECT_ROOT, 'datasets'));
-  
-  if (foundPath) {
-    console.log(`Resolved ${originalPath} to ${foundPath}`);
-    return foundPath;
-  }
-
-  // Fallback: Return Strategy A path even if it doesn't exist (to create new structure)
-  return fullPath;
+// Validate that folder path contains a texts subfolder
+const validateFolderHasTexts = (fullFolderPath) => {
+  const textsPath = path.join(fullFolderPath, 'texts');
+  return fs.existsSync(textsPath);
 };
 
 // Handle CORS preflight requests
@@ -128,46 +117,67 @@ app.post('/api/save', (req, res) => {
       return res.status(400).json({ error: 'Invalid request body format' });
     }
 
-    const { originalPath, content, version } = body;
+    const { folderPath, fileName, content, version } = body;
     
-    if (!originalPath || !content) {
-      return res.status(400).json({ error: 'Missing originalPath or content' });
+    if (!folderPath || !fileName || !content) {
+      return res.status(400).json({ error: 'Missing folderPath, fileName, or content' });
     }
 
-    const fullOriginalPath = resolveFilePath(originalPath);
-  const fileDir = path.dirname(fullOriginalPath);
-  const fileName = path.basename(fullOriginalPath, path.extname(fullOriginalPath));
+    // folderPath is the parent folder that contains texts subfolder
+    // Resolve it to absolute path (assumes folder is in datasets/)
+    let fullFolderPath;
+    try {
+      fullFolderPath = resolveFolderPath(folderPath);
+    } catch (err) {
+      console.error(`[SAVE] Failed to resolve folder path: ${err.message}`);
+      return res.status(400).json({ error: err.message });
+    }
+    
+    console.log(`[SAVE] folderPath: ${folderPath}, fileName: ${fileName}, version: ${version}`);
+    console.log(`[SAVE] Resolved fullFolderPath: ${fullFolderPath}`);
+    
+    // Validate: folder must contain texts subfolder
+    if (!validateFolderHasTexts(fullFolderPath)) {
+      return res.status(400).json({ 
+        error: `Folder does not contain "texts" subfolder: ${fullFolderPath}` 
+      });
+    }
+    
+    // Create json folder name based on version
+    const targetDirName = version === 'v3' ? 'json_v3' : (version === 'v2' ? 'json_v2' : 'json');
+    
+    // Create target directory: json folders are in the parent folder (same level as texts)
+    const targetDir = path.join(fullFolderPath, targetDirName);
+    
+    console.log(`[SAVE] Target directory: ${targetDir}`);
+    console.log(`[SAVE] Parent folder exists: ${fs.existsSync(fullFolderPath)}`);
+    console.log(`[SAVE] Texts folder exists: ${fs.existsSync(path.join(fullFolderPath, 'texts'))}`);
 
-  let targetDirName = version === 'v3' ? 'json_v3' : (version === 'v2' ? 'json_v2' : 'json');
-  let targetDir;
+    // Ensure target directory exists
+    try {
+      fs.mkdirSync(targetDir, { recursive: true });
+      console.log(`[SAVE] Directory created/verified: ${targetDir}`);
+    } catch (err) {
+      console.error(`[SAVE] Failed to create directory ${targetDir}:`, err);
+      return res.status(500).json({ error: 'Failed to create directory: ' + err.message });
+    }
 
-  const parentDir = path.dirname(fileDir);
-  const currentDirName = path.basename(fileDir);
-
-  if (currentDirName === 'texts' || currentDirName === 'traditional_texts') {
-    // Standard structure: Category/texts -> Category/json
-    targetDir = path.join(parentDir, targetDirName);
-  } else {
-     targetDir = path.join(fileDir, targetDirName);
-  }
-
-  // Ensure target directory exists
-  try {
-    fs.mkdirSync(targetDir, { recursive: true });
-  } catch (err) {
-    console.error(`Failed to create directory ${targetDir}:`, err);
-    return res.status(500).json({ error: 'Failed to create directory' });
-  }
-
+    // Create file name with suffix
     const suffix = version === 'v3' ? '_v3' : (version === 'v2' ? '_v2' : '');
     const targetFileName = `${fileName}${suffix}.json`;
     const targetPath = path.join(targetDir, targetFileName);
+    
+    console.log(`[SAVE] Target file path: ${targetPath}`);
+    console.log(`[SAVE] Content size: ${JSON.stringify(content).length} bytes`);
 
     try {
       fs.writeFileSync(targetPath, JSON.stringify(content, null, 2));
+      console.log(`[SAVE] Successfully saved to: ${targetPath}`);
+      const stats = fs.statSync(targetPath);
+      console.log(`[SAVE] File written, size: ${stats.size} bytes`);
       res.json({ success: true, path: targetPath });
     } catch (err) {
-      console.error(`Error writing file ${targetPath}:`, err);
+      console.error(`[SAVE] Error writing file ${targetPath}:`, err);
       res.status(500).json({ error: 'Failed to write file: ' + err.message });
     }
   } catch (err) {
@@ -177,36 +187,111 @@ app.post('/api/save', (req, res) => {
 });
 
 app.post('/api/load', (req, res) => {
-  const { originalPath } = req.body;
+  const { folderPath, fileName, originalPath, version } = req.body;
   
-  if (!originalPath) {
-    return res.status(400).json({ error: 'Missing originalPath' });
-  }
-
-  const fullOriginalPath = resolveFilePath(originalPath);
+  let fullFolderPath = null;
+  let targetFileName = null;
   
-  const fileDir = path.dirname(fullOriginalPath);
-  const fileName = path.basename(fullOriginalPath, path.extname(fullOriginalPath));
-  const parentDir = path.dirname(fileDir);
-  const currentDirName = path.basename(fileDir);
-
-  const candidates = [];
-  
-  // Sibling folder strategy (datasets/Category/texts -> datasets/Category/json_v2)
-  if (currentDirName === 'texts' || currentDirName === 'traditional_texts') {
-    candidates.push({ path: path.join(parentDir, 'json_v3', `${fileName}_v3.json`), version: 3 });
-    candidates.push({ path: path.join(parentDir, 'json_v3', `${fileName}.json`), version: 3 });
-    candidates.push({ path: path.join(parentDir, 'json_v2', `${fileName}_v2.json`), version: 2 });
-    candidates.push({ path: path.join(parentDir, 'json_v2', `${fileName}.json`), version: 2 });
-    candidates.push({ path: path.join(parentDir, 'json', `${fileName}.json`), version: 1 });
-    candidates.push({ path: path.join(parentDir, 'json', `${fileName}_v1.json`), version: 1 });
+  // Use folderPath and fileName directly
+  if (folderPath && fileName) {
+    // folderPath is the parent folder that contains texts subfolder
+    // Resolve it to absolute path (assumes folder is in datasets/)
+    try {
+      fullFolderPath = resolveFolderPath(folderPath);
+    } catch (err) {
+      console.error(`[LOAD] Failed to resolve folder path: ${err.message}`);
+      return res.status(400).json({ error: err.message });
+    }
+    targetFileName = fileName;
+    
+    console.log(`[LOAD] folderPath: ${folderPath}, fileName: ${fileName}`);
+    console.log(`[LOAD] Resolved fullFolderPath: ${fullFolderPath}`);
+    
+    // Validate: folder must contain texts subfolder
+    if (!validateFolderHasTexts(fullFolderPath)) {
+      return res.status(400).json({ 
+        error: `Folder does not contain "texts" subfolder: ${fullFolderPath}` 
+      });
+    }
+  } 
+  // Fallback: extract from originalPath (for backward compatibility)
+  else if (originalPath) {
+    const pathParts = originalPath.split('/');
+    targetFileName = path.basename(originalPath, path.extname(originalPath));
+    
+    // Extract parent folder from originalPath
+    // Example: originalPath="Japanese_test2/texts/file.txt" -> extract "Japanese_test2"
+    let baseFolderPath = pathParts.slice(0, -1).join('/');
+    
+    // Find texts folder in the path
+    const textsIndex = pathParts.findIndex(part => 
+      part.toLowerCase() === 'texts'
+    );
+    
+    if (textsIndex > 0) {
+      // Extract parent folder before texts
+      baseFolderPath = pathParts.slice(0, textsIndex).join('/');
+    }
+    
+    try {
+      fullFolderPath = resolveFolderPath(baseFolderPath);
+    } catch (err) {
+      console.error(`[LOAD] Failed to resolve folder path from originalPath: ${err.message}`);
+      return res.json({ found: false, error: err.message });
+    }
+    
+    // Validate
+    if (!validateFolderHasTexts(fullFolderPath)) {
+      return res.json({ found: false, error: 'Invalid folder structure' });
+    }
   } else {
-    // Nested strategy (MyStory/texts -> MyStory/json_v2)
-    candidates.push({ path: path.join(fileDir, 'json_v3', `${fileName}_v3.json`), version: 3 });
-    candidates.push({ path: path.join(fileDir, 'json_v3', `${fileName}.json`), version: 3 });
-    candidates.push({ path: path.join(fileDir, 'json_v2', `${fileName}_v2.json`), version: 2 });
-    candidates.push({ path: path.join(fileDir, 'json_v2', `${fileName}.json`), version: 2 });
-    candidates.push({ path: path.join(fileDir, 'json', `${fileName}.json`), version: 1 });
+    return res.status(400).json({ error: 'Missing folderPath+fileName or originalPath' });
+  }
+  
+  // If version is specified, only load that version
+  if (version === 3 || version === 2) {
+    const jsonFolder = version === 3 ? 'json_v3' : 'json_v2';
+    const jsonDir = path.join(fullFolderPath, jsonFolder);
+    
+    if (fs.existsSync(jsonDir)) {
+      // Try with suffix first (e.g., jp_003_v3.json)
+      const candidates = [
+        path.join(jsonDir, `${targetFileName}_v${version}.json`),
+        path.join(jsonDir, `${targetFileName}.json`)
+      ];
+      
+      for (const candidatePath of candidates) {
+        if (fs.existsSync(candidatePath)) {
+          try {
+            const content = JSON.parse(fs.readFileSync(candidatePath, 'utf8'));
+            return res.json({ found: true, content, version, path: candidatePath });
+          } catch (err) {
+            console.error(`Error reading/parsing ${candidatePath}:`, err);
+          }
+        }
+      }
+    }
+    return res.json({ found: false });
+  }
+  
+  // If no version specified, try to find JSON files in json_v3, json_v2 folders (skip json/v1)
+  // These folders are in the parent folder (same level as texts)
+  // Load v3 first (default), fallback to v2 if v3 doesn't exist, never load v1
+  const candidates = [];
+  const jsonFolders = ['json_v3', 'json_v2'];
+  const versions = [3, 2];
+  
+  for (let i = 0; i < jsonFolders.length; i++) {
+    const jsonFolder = jsonFolders[i];
+    const v = versions[i];
+    const jsonDir = path.join(fullFolderPath, jsonFolder);
+    
+    if (fs.existsSync(jsonDir)) {
+      // Try with suffix first (e.g., jp_003_v3.json)
+      candidates.push({ path: path.join(jsonDir, `${targetFileName}_v${v}.json`), version: v });
+      // Then without suffix (e.g., jp_003.json)
+      candidates.push({ path: path.join(jsonDir, `${targetFileName}.json`), version: v });
+    }
   }
   
   // Try to find first existing candidate
@@ -223,6 +308,129 @@ app.post('/api/load', (req, res) => {
   }
 
   return res.json({ found: false });
+});
+
+// API endpoint to save cache (last processed position, etc.)
+app.post('/api/save-cache', (req, res) => {
+  try {
+    const origin = req.headers.origin;
+    if (origin && origin.match(/^http:\/\/localhost:\d+$/)) {
+      res.header('Access-Control-Allow-Origin', origin);
+    }
+    
+    const { folderPath, selectedIndex, culture } = req.body;
+    
+    if (!folderPath) {
+      return res.status(400).json({ error: 'Missing folderPath' });
+    }
+    
+    // Resolve the folder path (assumes folder is in datasets/)
+    let fullFolderPath;
+    try {
+      fullFolderPath = resolveFolderPath(folderPath);
+    } catch (err) {
+      console.error(`[SAVE-CACHE] Failed to resolve folder path: ${err.message}`);
+      return res.status(400).json({ error: err.message });
+    }
+    
+    // Validate: folder must contain texts subfolder
+    if (!validateFolderHasTexts(fullFolderPath)) {
+      return res.status(400).json({ 
+        error: `Folder does not contain "texts" subfolder: ${fullFolderPath}` 
+      });
+    }
+    
+    // Create cache file in the parent folder
+    const cachePath = path.join(fullFolderPath, '.annotation_cache.json');
+    
+    // If selectedIndex is undefined, try to preserve existing value from cache
+    let selectedIndexToSave = selectedIndex;
+    if (selectedIndexToSave === undefined) {
+      try {
+        if (fs.existsSync(cachePath)) {
+          const existingCache = JSON.parse(fs.readFileSync(cachePath, 'utf8'));
+          if (existingCache.selectedIndex !== undefined && existingCache.selectedIndex >= 0) {
+            selectedIndexToSave = existingCache.selectedIndex;
+            console.log(`[CACHE] Preserving existing selectedIndex: ${selectedIndexToSave}`);
+          }
+        }
+      } catch (err) {
+        console.warn(`[CACHE] Could not read existing cache to preserve selectedIndex:`, err);
+      }
+    }
+    
+    // Only use -1 as fallback if we still don't have a valid index
+    if (selectedIndexToSave === undefined || selectedIndexToSave < 0) {
+      selectedIndexToSave = -1;
+    }
+    
+    const cacheData = {
+      selectedIndex: selectedIndexToSave,
+      culture: culture || null,
+      timestamp: Date.now()
+    };
+    
+    try {
+      fs.writeFileSync(cachePath, JSON.stringify(cacheData, null, 2));
+      console.log(`[CACHE] Saved cache to: ${cachePath}, selectedIndex: ${selectedIndexToSave}`);
+      return res.json({ success: true, path: cachePath });
+    } catch (err) {
+      console.error(`Failed to write cache file:`, err);
+      return res.status(500).json({ error: 'Failed to write cache file: ' + err.message });
+    }
+  } catch (err) {
+    console.error('Error in /api/save-cache:', err);
+    return res.status(500).json({ error: 'Internal server error: ' + err.message });
+  }
+});
+
+// API endpoint to load cache
+app.post('/api/load-cache', (req, res) => {
+  try {
+    const origin = req.headers.origin;
+    if (origin && origin.match(/^http:\/\/localhost:\d+$/)) {
+      res.header('Access-Control-Allow-Origin', origin);
+    }
+    
+    const { folderPath } = req.body;
+    
+    if (!folderPath) {
+      return res.status(400).json({ error: 'Missing folderPath' });
+    }
+    
+    // Resolve the folder path (assumes folder is in datasets/)
+    let fullFolderPath;
+    try {
+      fullFolderPath = resolveFolderPath(folderPath);
+    } catch (err) {
+      console.error(`[LOAD-CACHE] Failed to resolve folder path: ${err.message}`);
+      return res.json({ found: false, error: err.message });
+    }
+    
+    // Validate: folder must contain texts subfolder
+    if (!validateFolderHasTexts(fullFolderPath)) {
+      return res.json({ found: false, error: 'Invalid folder structure' });
+    }
+    
+    // Try to load cache file from the parent folder
+    const cachePath = path.join(fullFolderPath, '.annotation_cache.json');
+    
+    if (!fs.existsSync(cachePath)) {
+      return res.json({ found: false });
+    }
+    
+    try {
+      const cacheData = JSON.parse(fs.readFileSync(cachePath, 'utf8'));
+      console.log(`[CACHE] Loaded cache from: ${cachePath}`);
+      return res.json({ found: true, data: cacheData });
+    } catch (err) {
+      console.error(`Failed to read/parse cache file:`, err);
+      return res.json({ found: false, error: 'Failed to read cache file' });
+    }
+  } catch (err) {
+    console.error('Error in /api/load-cache:', err);
+    return res.status(500).json({ error: 'Internal server error: ' + err.message });
+  }
 });
 
 app.listen(PORT, () => {

@@ -12,6 +12,7 @@ export default function StoryBrowser({
 }) {
   const [lastFolderPath, setLastFolderPath] = useState(null);
   const fileInputRef = useRef(null);
+  const isPickingDirectoryRef = useRef(false);
 
   useEffect(() => {
     const cache = loadFolderCache();
@@ -39,40 +40,94 @@ export default function StoryBrowser({
 
   const collectFilesFromDirHandle = async (dirHandle, rootName) => {
     const collected = [];
-    const allowed = [".txt", ".md", ".json"];
+    let hasTextsFolder = false;
 
     const walk = async (handle, prefix) => {
       for await (const [entryName, entryHandle] of handle.entries()) {
-        if (entryHandle.kind === "file") {
+        if (entryHandle.kind === "directory") {
+          const dirNameLower = entryName.toLowerCase();
+          
+          // Walk into "texts" folder to collect story files (.txt)
+          if (dirNameLower === 'texts') {
+            hasTextsFolder = true;
+            await walk(entryHandle, `${prefix}/${entryName}`);
+          }
+          // Also walk into json folders to collect annotation files (for fallback)
+          else if (dirNameLower === 'json' || dirNameLower === 'json_v2' || dirNameLower === 'json_v3') {
+            await walk(entryHandle, `${prefix}/${entryName}`);
+          }
+          // Skip all other directories
+        } else if (entryHandle.kind === "file") {
+          const fullPath = `${prefix}/${entryName}`;
+          const fullPathLower = fullPath.toLowerCase();
           const lower = entryName.toLowerCase();
-          if (!allowed.some((ext) => lower.endsWith(ext))) continue;
-
-          const f = await entryHandle.getFile();
-          const rel = `${prefix}/${entryName}`;
-          collected.push(wrapFileWithRelativePath(f, rel));
-        } else if (entryHandle.kind === "directory") {
-          await walk(entryHandle, `${prefix}/${entryName}`);
+          
+          // Collect .txt and .md files from texts folder
+          if ((lower.endsWith('.txt') || lower.endsWith('.md')) && 
+              (fullPathLower.includes('/texts/') || fullPathLower.endsWith('/texts'))) {
+            const f = await entryHandle.getFile();
+            const rel = `${prefix}/${entryName}`;
+            collected.push(wrapFileWithRelativePath(f, rel));
+          }
+          // Collect .json files from json/json_v2/json_v3 folders (for fallback loading)
+          else if (lower.endsWith('.json') && 
+                   (fullPathLower.includes('/json/') || fullPathLower.includes('/json_v2/') || fullPathLower.includes('/json_v3/'))) {
+            const f = await entryHandle.getFile();
+            const rel = `${prefix}/${entryName}`;
+            collected.push(wrapFileWithRelativePath(f, rel));
+          }
         }
       }
     };
 
     await walk(dirHandle, rootName);
-    return collected;
+    
+    return { files: collected, hasTextsFolder };
   };
 
   const handleOpenFolderClick = async (e) => {
+    // Prevent multiple simultaneous directory picker calls
+    if (isPickingDirectoryRef.current) {
+      return;
+    }
+
     // Prefer the modern directory picker on Linux Chrome when available.
     if (supportsDirectoryPicker && typeof onPickDirectory === "function") {
       e.preventDefault();
       e.stopPropagation();
+      
+      isPickingDirectoryRef.current = true;
       try {
         const dirHandle = await window.showDirectoryPicker();
-        const files = await collectFilesFromDirHandle(dirHandle, dirHandle.name || "selected_folder");
-        onPickDirectory(files, dirHandle.name || null);
+        
+        // Collect files and check if folder contains texts subfolder
+        const { files, hasTextsFolder } = await collectFilesFromDirHandle(dirHandle, dirHandle.name || "selected_folder");
+        
+        // Validate: folder must contain a texts subfolder
+        if (!hasTextsFolder) {
+          alert(`Error: The selected folder must contain a 'texts' subfolder.\n\nPlease select the parent folder that contains the 'texts' folder (e.g., Japanese_test2).`);
+          return;
+        }
+        
+        if (files.length === 0) {
+          alert("Error: No .txt files found in the selected folder.");
+          return;
+        }
+        
+        // Use the folder name as the parent folder path
+        // This is the folder the user selected (which contains texts subfolder)
+        onPickDirectory(files, dirHandle.name || "selected_folder");
       } catch (err) {
         // User cancelled
-        if (err && err.name === "AbortError") return;
+        if (err && err.name === "AbortError") {
+          // User cancelled, just return
+          return;
+        }
         console.error("Failed to pick directory:", err);
+        alert(`Failed to select folder: ${err.message}`);
+      } finally {
+        // Always reset the flag, even if there was an error
+        isPickingDirectoryRef.current = false;
       }
       return;
     }

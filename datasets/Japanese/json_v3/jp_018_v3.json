@@ -1,0 +1,969 @@
+{
+  "version": "3.0",
+  "metadata": {
+    "id": "jp_018",
+    "title": "",
+    "culture": "Japanese",
+    "annotator": "",
+    "date_annotated": "2026-01-12",
+    "confidence": 0.8
+  },
+  "source_info": {
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "datasets/Japanese/texts/jp_018.txt",
+    "text_content": "　むかしむかし、ある山寺の小坊主が、クリひろいに行きたくなりました。\n「和尚(おしょう)さん、山へクリひろいに行ってもいいですか？」\n　小坊主が聞くと、和尚さんは答えました。\n「クリひろいか。しかし、山には鬼ババが出るぞ」\n「でも・・・」\n　小坊主が、どうしても行きたいとだだをこねるので、和尚さんは三枚のお札を渡して、\n「困った事があったら、このお札に願いをかけなさい。きっと、お前を助けてくれるじゃろう」\nと、小坊主を送り出しました。\n\n　小坊主は山に入ると、あるわあるわ、大きなクリがたくさん落ちています。\n　小坊主が夢中でクリひろいをしていると、突然目の前に鬼ババが現れました。\n「うまそうな坊主じゃ。家に帰って食ってやろう」\n　小坊主は身がすくんでしまい、叫ぶ事も逃げ出す事も出来ません。\n　そしてそのまま鬼ババの家へ、連れていかれました。\n　恐ろしさのあまり小坊主が小さくなっていると、鬼ババはキバをむいて大きな口を開けました。\n(たっ、大変だ。食われてしまうぞ！)\n　小坊主はそう思うと、とっさに、\n「ウンチがしたい！」\nと、言いました。\n「なに、ウンチだと。・・・うむ、あれはくさくてまずいからな。仕方ない、はやく行って出してこい」\n　鬼ババは小坊主の腰になわをつけて、便所に行かせてくれました。\n　中に入ると小坊主はさっそくなわをほどき、それを柱に結びつけると、お札をはりつけて、\n「お札さん。おれの代わりに、返事をしておくれ」\nと、言いつけると、窓から逃げ出しました。\n「坊主、ウンチはまだか？」\n　すると、お札が答えました。\n「もう少し、もう少し」\n　しばらくして、鬼ババがまた聞きました。\n「坊主、ウンチはまだか？」\n「もう少し、もう少し」\n　またしばらくして、鬼ババが聞きましたが、\n「もう少し、もう少し」\nと、同じ事を言うので、\n「もうガマン出来ん！　早く出ろ！」\nと、言って、便所のとびらを開けてみると、中は空っぽです。\n「ぬぬっ！　よくもいっぱい食わせたな。待てえ！」\n　鬼ババは叫びながら、夜道を走る小坊主を追いかけて行きました。\n　それを知った小坊主は、二枚目の札を取り出すと、\n「川になれ！」\nと、言って、後ろに投げました。\n　すると後ろに川が現れて、鬼ババは流されそうになりました。\n　けれど鬼ババは大口を開けると川の水をガブガブと飲み干して、また追いかけてきます。\n　小坊主は、三枚目の札を出すと、\n「山火事になれ！」\nと、言って、後ろに投げました。\n　すると後ろで山火事がおきて鬼ババを通せんぼうしましたが、鬼ババはさっき飲んだ川の水を吐き出すと、またたく間に山火事を消してしまいました。\n　鬼ババは、また追いかけてきます。\n　小坊主は命からがらお寺にたどりつくと、和尚さんに助けを求めました。\n「和尚さん！　助けてください！　鬼ババです！」\n「だから、やめておけといったのじゃ。まあ、まかせておけ」\n　和尚さんは小坊主を後ろにかくすと、追いかけてきた鬼ババに言いました。\n「鬼ババよ。わしの頼みを一つきいてくれたら坊主をお前にやるが、どうだ？」\nと、持ちかけました。\n「いいだろう。何がのぞみだ」\n「聞くところによると、お前は山のように大きくなる事も、豆粒のように小さくなる事も出来るそうだな」\n「ああ、そうだ」\n「よし、では豆粒のように小さくなってくれや」\n「お安いご用」\n　鬼ババは答えて体を小さくすると、豆粒のように小さくなりました。\n　和尚さんはその時、すかさず鬼ババをもちの中に丸め込むと一口で飲み込んでしまいました。\n「おっほほほっ。ざっと、こんなもんじゃい。・・・うん、腹が痛いな。ちと便所に」\n　和尚さんが便所でウンチをすると、ウンチの中からたくさんのハエが飛び出してきました。\n\n　ハエは鬼ババが生まれ変わって、日本中にふえていったものだそうです。"
+  },
+  "characters": [
+    {
+      "name": "小坊主",
+      "alias": "",
+      "archetype": "Hero"
+    },
+    {
+      "name": "和尚",
+      "alias": "",
+      "archetype": "Mentor"
+    },
+    {
+      "name": "鬼ババ",
+      "alias": "",
+      "archetype": "Villain"
+    }
+  ],
+  "narrative_events": [
+    {
+      "event_type": "OTHER",
+      "description": "",
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      },
+      "id": "63fe70a8-42fa-41e0-8690-bfe9a36e2220",
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1
+    },
+    {
+      "id": "27697fd9-7daf-4af7-8df6-07e69136e41d",
+      "event_type": "Initial Situation",
+      "description": "むかしむかし、ある山寺の小坊主が、クリひろいに行きたくなりました。",
+      "agents": [
+        "小坊主"
+      ],
+      "targets": [],
+      "text_span": {
+        "start": 1,
+        "end": 34,
+        "text": "むかしむかし、ある山寺の小坊主が、クリひろいに行きたくなりました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [
+        {
+          "agent": "小坊主",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "realize",
+        "context": "",
+        "status": "attempt",
+        "function": "setup"
+      }
+    },
+    {
+      "id": "6cf94414-b323-44a4-b17b-d9d9769de299",
+      "event_type": "INTERDICTION",
+      "description": "「クリひろいか。しかし、山には鬼ババが出るぞ」",
+      "agents": [
+        "和尚"
+      ],
+      "targets": [
+        "小坊主"
+      ],
+      "text_span": {
+        "start": 88,
+        "end": 111,
+        "text": "「クリひろいか。しかし、山には鬼ババが出るぞ」"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationships": [
+        {
+          "agent": "和尚",
+          "target": "小坊主",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "success",
+        "function": "exposition"
+      }
+    },
+    {
+      "id": "98f2e82d-b838-449c-bf8e-ebf5a40e5405",
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "和尚さんは三枚のお札を渡して、\n「困った事があったら、このお札に願いをかけなさい。きっと、お前を助けてくれるじゃろう」",
+      "agents": [
+        "和尚"
+      ],
+      "targets": [
+        "小坊主"
+      ],
+      "text_span": {
+        "start": 145,
+        "end": 204,
+        "text": "和尚さんは三枚のお札を渡して、\n「困った事があったら、このお札に願いをかけなさい。きっと、お前を助けてくれるじゃろう」"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationships": [
+        {
+          "agent": "和尚",
+          "target": "小坊主",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "mentor_student",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "give",
+        "context": "",
+        "status": "success",
+        "function": "setup"
+      }
+    },
+    {
+      "id": "6026adb7-fa0d-4197-9cc1-63224a75c876",
+      "event_type": "VILLAINY",
+      "description": "小坊主が夢中でクリひろいをしていると、突然目の前に鬼ババが現れました。\n「うまそうな坊主じゃ。家に帰って食ってやろう」\n　小坊主は身がすくんでしまい、叫ぶ事も逃げ出す事も出来ません。",
+      "agents": [
+        "鬼ババ"
+      ],
+      "targets": [
+        "小坊主"
+      ],
+      "text_span": {
+        "start": 258,
+        "end": 349,
+        "text": "小坊主が夢中でクリひろいをしていると、突然目の前に鬼ババが現れました。\n「うまそうな坊主じゃ。家に帰って食ってやろう」\n　小坊主は身がすくんでしまい、叫ぶ事も逃げ出す事も出来ません。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationships": [
+        {
+          "agent": "鬼ババ",
+          "target": "小坊主",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "",
+        "status": "success",
+        "function": "climax"
+      }
+    },
+    {
+      "id": "e0683688-9b5a-458c-9a82-f5eb160ae4ed",
+      "event_type": "VILLAINY",
+      "description": "そしてそのまま鬼ババの家へ、連れていかれました。",
+      "agents": [
+        "鬼ババ"
+      ],
+      "targets": [
+        "小坊主"
+      ],
+      "text_span": {
+        "start": 351,
+        "end": 375,
+        "text": "そしてそのまま鬼ババの家へ、連れていかれました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationships": [
+        {
+          "agent": "鬼ババ",
+          "target": "小坊主",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "restrain",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "0dc885dc-0ced-4a39-a5d1-ff7d396af6c2",
+      "event_type": "TRICKERY",
+      "description": "(たっ、大変だ。食われてしまうぞ！)\n　小坊主はそう思うと、とっさに、\n「ウンチがしたい！」\nと、言いました。",
+      "agents": [
+        "小坊主"
+      ],
+      "targets": [
+        "鬼ババ"
+      ],
+      "text_span": {
+        "start": 421,
+        "end": 476,
+        "text": "(たっ、大変だ。食われてしまうぞ！)\n　小坊主はそう思うと、とっさに、\n「ウンチがしたい！」\nと、言いました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6,
+      "relationships": [
+        {
+          "agent": "小坊主",
+          "target": "鬼ババ",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "rival",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "deceive",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      }
+    },
+    {
+      "id": "3de5fc51-d672-46db-8b0c-f1f3889211c0",
+      "event_type": "COMPLICITY",
+      "description": "鬼ババは小坊主の腰になわをつけて、便所に行かせてくれました。",
+      "agents": [
+        "小坊主"
+      ],
+      "targets": [
+        "鬼ババ"
+      ],
+      "text_span": {
+        "start": 525,
+        "end": 556,
+        "text": "　鬼ババは小坊主の腰になわをつけて、便所に行かせてくれました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 7,
+      "relationships": [
+        {
+          "agent": "小坊主",
+          "target": "鬼ババ",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "command",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      }
+    },
+    {
+      "id": "6eec6cd4-418f-42f4-9327-00d7f5c829e8",
+      "event_type": "HERO_REACTION",
+      "description": "お札をはりつけて、\n「お札さん。おれの代わりに、返事をしておくれ」\nと、言いつけると、窓から逃げ出しました。",
+      "agents": [
+        "小坊主"
+      ],
+      "targets": [
+        "お札"
+      ],
+      "text_span": {
+        "start": 590,
+        "end": 644,
+        "text": "お札をはりつけて、\n「お札さん。おれの代わりに、返事をしておくれ」\nと、言いつけると、窓から逃げ出しました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 8,
+      "relationships": [
+        {
+          "agent": "小坊主",
+          "target": "お札",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "command",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      }
+    },
+    {
+      "id": "21d8db64-abf2-4c1b-80bb-db92e877e3aa",
+      "event_type": "VILLAINY",
+      "description": "鬼ババは叫びながら、夜道を走る小坊主を追いかけて行きました。",
+      "agents": [
+        "鬼ババ"
+      ],
+      "targets": [
+        "小坊主"
+      ],
+      "text_span": {
+        "start": 852,
+        "end": 882,
+        "text": "鬼ババは叫びながら、夜道を走る小坊主を追いかけて行きました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 10,
+      "relationships": [
+        {
+          "agent": "鬼ババ",
+          "target": "小坊主",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "",
+        "status": "success",
+        "function": "trigger"
+      }
+    },
+    {
+      "id": "ad6b8cf5-20bb-4aee-84cc-93b7a55a0d32",
+      "event_type": "HERO_REACTION",
+      "description": "それを知った小坊主は、二枚目の札を取り出すと、\n「川になれ！」\nと、言って、後ろに投げました。",
+      "agents": [
+        "小坊主"
+      ],
+      "targets": [
+        "お札"
+      ],
+      "text_span": {
+        "start": 884,
+        "end": 931,
+        "text": "それを知った小坊主は、二枚目の札を取り出すと、\n「川になれ！」\nと、言って、後ろに投げました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 11,
+      "relationships": [
+        {
+          "agent": "小坊主",
+          "target": "お札",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "command",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      }
+    },
+    {
+      "id": "2b705f4e-8fda-4c57-9da6-a6a2c6b85e53",
+      "event_type": "BEGINNING_COUNTERACTION",
+      "description": "すると後ろに川が現れて、鬼ババは流されそうになりました。",
+      "agents": [
+        "小坊主"
+      ],
+      "targets": [
+        "鬼ババ"
+      ],
+      "text_span": {
+        "start": 933,
+        "end": 961,
+        "text": "すると後ろに川が現れて、鬼ババは流されそうになりました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 12,
+      "relationships": [
+        {
+          "agent": "小坊主",
+          "target": "鬼ババ",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      }
+    },
+    {
+      "id": "90433e9f-4326-4087-bec2-76efc4260569",
+      "event_type": "BEGINNING_COUNTERACTION",
+      "description": "小坊主は、三枚目の札を出すと、\n「山火事になれ！」\nと、言って、後ろに投げました。\n　すると後ろで山火事がおきて鬼ババを通せんぼうしましたが、鬼ババはさっき飲んだ川の水を吐き出すと、またたく間に山火事",
+      "agents": [
+        "小坊主"
+      ],
+      "targets": [
+        "鬼ババ"
+      ],
+      "text_span": {
+        "start": 1005,
+        "end": 1116,
+        "text": "小坊主は、三枚目の札を出すと、\n「山火事になれ！」\nと、言って、後ろに投げました。\n　すると後ろで山火事がおきて鬼ババを通せんぼうしましたが、鬼ババはさっき飲んだ川の水を吐き出すと、またたく間に山火事を消してしまいました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 13,
+      "relationships": [
+        {
+          "agent": "小坊主",
+          "target": "鬼ババ",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "fearful"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "",
+        "status": "failure",
+        "function": "resolution"
+      }
+    },
+    {
+      "id": "50aea03b-6295-4665-b6b2-6e59896f36a8",
+      "event_type": "RESCUE",
+      "description": "小坊主は命からがらお寺にたどりつくと、和尚さんに助けを求めました。\n「和尚さん！　助けてください！　鬼ババです！」",
+      "agents": [
+        "和尚"
+      ],
+      "targets": [
+        "和尚"
+      ],
+      "text_span": {
+        "start": 1136,
+        "end": 1193,
+        "text": "小坊主は命からがらお寺にたどりつくと、和尚さんに助けを求めました。\n「和尚さん！　助けてください！　鬼ババです！」"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 14,
+      "relationships": [
+        {
+          "agent": "和尚",
+          "target": "和尚",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "mentor_student",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "request",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      }
+    },
+    {
+      "id": "63f9e4b6-494c-4c57-a905-71c167ac9d22",
+      "event_type": "TRICKERY",
+      "description": "「鬼ババよ。わしの頼みを一つきいてくれたら坊主をお前にやるが、どうだ？」\nと、持ちかけました。",
+      "agents": [
+        "和尚"
+      ],
+      "targets": [
+        "鬼ババ"
+      ],
+      "text_span": {
+        "start": 1259,
+        "end": 1306,
+        "text": "「鬼ババよ。わしの頼みを一つきいてくれたら坊主をお前にやるが、どうだ？」\nと、持ちかけました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 15,
+      "relationships": [
+        {
+          "agent": "和尚",
+          "target": "鬼ババ",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "request",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      }
+    },
+    {
+      "id": "0055701d-34dc-4017-a2a0-487292f0d3fc",
+      "event_type": "COMPLICITY",
+      "description": "鬼ババは答えて体を小さくすると、豆粒のように小さくなりました。",
+      "agents": [
+        "鬼ババ"
+      ],
+      "targets": [
+        "和尚"
+      ],
+      "text_span": {
+        "start": 1411,
+        "end": 1443,
+        "text": "　鬼ババは答えて体を小さくすると、豆粒のように小さくなりました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 16,
+      "relationships": [
+        {
+          "agent": "鬼ババ",
+          "target": "和尚",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "transform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "0af1510f-61e9-4b19-842a-92fba77f9907",
+      "event_type": "VICTORY",
+      "description": "和尚さんはその時、すかさず鬼ババをもちの中に丸め込むと一口で飲み込んでしまいました。",
+      "agents": [
+        "和尚"
+      ],
+      "targets": [
+        "鬼ババ"
+      ],
+      "text_span": {
+        "start": 1445,
+        "end": 1487,
+        "text": "和尚さんはその時、すかさず鬼ババをもちの中に丸め込むと一口で飲み込んでしまいました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 17,
+      "relationships": [
+        {
+          "agent": "和尚",
+          "target": "鬼ババ",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "restrain",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      }
+    },
+    {
+      "id": "d0382500-0544-47e7-8f45-23740d3b91db",
+      "event_type": "TRANSFIGURATION",
+      "description": "和尚さんが便所でウンチをすると、ウンチの中からたくさんのハエが飛び出してきました。\n\n　ハエは鬼ババが生まれ変わって、日本中にふえていったものだそうです",
+      "agents": [
+        "和尚"
+      ],
+      "targets": [
+        "鬼ババ"
+      ],
+      "text_span": {
+        "start": 1529,
+        "end": 1605,
+        "text": "和尚さんが便所でウンチをすると、ウンチの中からたくさんのハエが飛び出してきました。\n\n　ハエは鬼ババが生まれ変わって、日本中にふえていったものだそうです"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 18,
+      "relationships": [
+        {
+          "agent": "和尚",
+          "target": "鬼ババ",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "transform",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      }
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "HAPPY_ENDING",
+    "key_values": [
+      "OBEDIENCE"
+    ],
+    "motif_type": [],
+    "atu_categories": [],
+    "obstacle_thrower": [
+      "鬼ババ"
+    ],
+    "helper_type": [
+      "HUMAN"
+    ],
+    "thinking_process": "",
+    "atu_evidence": {},
+    "motif_evidence": {}
+  },
+  "analysis": {
+    "propp_functions": [
+      {
+        "id": "d595700f-d988-4caf-8fdd-98c3a0c5b5d9",
+        "fn": "LACK",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1,
+          "end": 34,
+          "text": "むかしむかし、ある山寺の小坊主が、クリひろいに行きたくなりました。"
+        },
+        "evidence": "むかしむかし、ある山寺の小坊主が、クリひろいに行きたくなりました。",
+        "narrative_event_id": "27697fd9-7daf-4af7-8df6-07e69136e41d"
+      },
+      {
+        "id": "da8ea4f4-55dd-489a-9eda-c8fa406a27de",
+        "fn": "INTERDICTION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 88,
+          "end": 111,
+          "text": "「クリひろいか。しかし、山には鬼ババが出るぞ」"
+        },
+        "evidence": "「クリひろいか。しかし、山には鬼ババが出るぞ」",
+        "narrative_event_id": "6cf94414-b323-44a4-b17b-d9d9769de299"
+      },
+      {
+        "id": "e740b74f-ff2b-4123-bf6c-0fc73cbeaccd",
+        "fn": "RECEIPT_OF_AGENT",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 145,
+          "end": 204,
+          "text": "和尚さんは三枚のお札を渡して、\n「困った事があったら、このお札に願いをかけなさい。きっと、お前を助けてくれるじゃろう」"
+        },
+        "evidence": "和尚さんは三枚のお札を渡して、\n「困った事があったら、このお札に願いをかけなさい。きっと、お前を助けてくれるじゃろう」",
+        "narrative_event_id": "98f2e82d-b838-449c-bf8e-ebf5a40e5405"
+      },
+      {
+        "id": "0e9dda82-b209-41a9-9bfa-e108a3fb75d2",
+        "fn": "VILLAINY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 258,
+          "end": 349,
+          "text": "小坊主が夢中でクリひろいをしていると、突然目の前に鬼ババが現れました。\n「うまそうな坊主じゃ。家に帰って食ってやろう」\n　小坊主は身がすくんでしまい、叫ぶ事も逃げ出す事も出来ません。"
+        },
+        "evidence": "小坊主が夢中でクリひろいをしていると、突然目の前に鬼ババが現れました。\n「うまそうな坊主じゃ。家に帰って食ってやろう」\n　小坊主は身がすくんでしまい、叫ぶ事も逃げ出す事も出来ません。",
+        "narrative_event_id": "6026adb7-fa0d-4197-9cc1-63224a75c876"
+      },
+      {
+        "id": "23fed70d-4b5b-4a2f-ba5b-7d92032f8eda",
+        "fn": "VILLAINY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 351,
+          "end": 375,
+          "text": "そしてそのまま鬼ババの家へ、連れていかれました。"
+        },
+        "evidence": "そしてそのまま鬼ババの家へ、連れていかれました。",
+        "narrative_event_id": "e0683688-9b5a-458c-9a82-f5eb160ae4ed"
+      },
+      {
+        "id": "6549e5cc-ba0d-4a33-afda-83679bb4a280",
+        "fn": "TRICKERY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 421,
+          "end": 476,
+          "text": "(たっ、大変だ。食われてしまうぞ！)\n　小坊主はそう思うと、とっさに、\n「ウンチがしたい！」\nと、言いました。"
+        },
+        "evidence": "(たっ、大変だ。食われてしまうぞ！)\n　小坊主はそう思うと、とっさに、\n「ウンチがしたい！」\nと、言いました。",
+        "narrative_event_id": "0dc885dc-0ced-4a39-a5d1-ff7d396af6c2"
+      },
+      {
+        "id": "ad24aff9-1759-413d-82b0-8ce2138e672a",
+        "fn": "COMPLICITY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 525,
+          "end": 556,
+          "text": "　鬼ババは小坊主の腰になわをつけて、便所に行かせてくれました。"
+        },
+        "evidence": "鬼ババは小坊主の腰になわをつけて、便所に行かせてくれました。",
+        "narrative_event_id": "3de5fc51-d672-46db-8b0c-f1f3889211c0"
+      },
+      {
+        "id": "75464d89-bbe4-4470-92eb-ca878baec7d3",
+        "fn": "HERO_REACTION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 590,
+          "end": 644,
+          "text": "お札をはりつけて、\n「お札さん。おれの代わりに、返事をしておくれ」\nと、言いつけると、窓から逃げ出しました。"
+        },
+        "evidence": "お札をはりつけて、\n「お札さん。おれの代わりに、返事をしておくれ」\nと、言いつけると、窓から逃げ出しました。",
+        "narrative_event_id": "6eec6cd4-418f-42f4-9327-00d7f5c829e8"
+      },
+      {
+        "id": "f474a9e0-800d-4293-8203-e86a8f2826cf",
+        "fn": "VILLAINY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 852,
+          "end": 882,
+          "text": "鬼ババは叫びながら、夜道を走る小坊主を追いかけて行きました。"
+        },
+        "evidence": "鬼ババは叫びながら、夜道を走る小坊主を追いかけて行きました。",
+        "narrative_event_id": "21d8db64-abf2-4c1b-80bb-db92e877e3aa"
+      },
+      {
+        "id": "6162f080-d40c-4d97-8f70-f955ec62ead9",
+        "fn": "HERO_REACTION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 884,
+          "end": 931,
+          "text": "それを知った小坊主は、二枚目の札を取り出すと、\n「川になれ！」\nと、言って、後ろに投げました。"
+        },
+        "evidence": "それを知った小坊主は、二枚目の札を取り出すと、\n「川になれ！」\nと、言って、後ろに投げました。",
+        "narrative_event_id": "ad6b8cf5-20bb-4aee-84cc-93b7a55a0d32"
+      },
+      {
+        "id": "205baba1-3988-44e3-9870-667d820a379e",
+        "fn": "BEGINNING_COUNTERACTION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 933,
+          "end": 961,
+          "text": "すると後ろに川が現れて、鬼ババは流されそうになりました。"
+        },
+        "evidence": "すると後ろに川が現れて、鬼ババは流されそうになりました。",
+        "narrative_event_id": "2b705f4e-8fda-4c57-9da6-a6a2c6b85e53"
+      },
+      {
+        "id": "ef494a96-338d-4d82-8091-9c083b91f859",
+        "fn": "BEGINNING_COUNTERACTION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1005,
+          "end": 1116,
+          "text": "小坊主は、三枚目の札を出すと、\n「山火事になれ！」\nと、言って、後ろに投げました。\n　すると後ろで山火事がおきて鬼ババを通せんぼうしましたが、鬼ババはさっき飲んだ川の水を吐き出すと、またたく間に山火事を消してしまいました。"
+        },
+        "evidence": "小坊主は、三枚目の札を出すと、\n「山火事になれ！」\nと、言って、後ろに投げました。\n　すると後ろで山火事がおきて鬼ババを通せんぼうしましたが、鬼ババはさっき飲んだ川の水を吐き出すと、またたく間に山火事",
+        "narrative_event_id": "90433e9f-4326-4087-bec2-76efc4260569"
+      },
+      {
+        "id": "fef5bb45-c738-4624-956b-083b58af0fc6",
+        "fn": "RESCUE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1136,
+          "end": 1193,
+          "text": "小坊主は命からがらお寺にたどりつくと、和尚さんに助けを求めました。\n「和尚さん！　助けてください！　鬼ババです！」"
+        },
+        "evidence": "小坊主は命からがらお寺にたどりつくと、和尚さんに助けを求めました。\n「和尚さん！　助けてください！　鬼ババです！」",
+        "narrative_event_id": "50aea03b-6295-4665-b6b2-6e59896f36a8"
+      },
+      {
+        "id": "3fc9bd33-d420-483e-9482-d6f03b4371d7",
+        "fn": "TRICKERY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1259,
+          "end": 1306,
+          "text": "「鬼ババよ。わしの頼みを一つきいてくれたら坊主をお前にやるが、どうだ？」\nと、持ちかけました。"
+        },
+        "evidence": "「鬼ババよ。わしの頼みを一つきいてくれたら坊主をお前にやるが、どうだ？」\nと、持ちかけました。",
+        "narrative_event_id": "63f9e4b6-494c-4c57-a905-71c167ac9d22"
+      },
+      {
+        "id": "07400ac5-60d8-41d5-a90f-3ecc7dc995bd",
+        "fn": "COMPLICITY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1411,
+          "end": 1443,
+          "text": "　鬼ババは答えて体を小さくすると、豆粒のように小さくなりました。"
+        },
+        "evidence": "鬼ババは答えて体を小さくすると、豆粒のように小さくなりました。",
+        "narrative_event_id": "0055701d-34dc-4017-a2a0-487292f0d3fc"
+      },
+      {
+        "id": "8ecc3868-2e99-4600-b9f6-b376ab4559ad",
+        "fn": "VICTORY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1445,
+          "end": 1487,
+          "text": "和尚さんはその時、すかさず鬼ババをもちの中に丸め込むと一口で飲み込んでしまいました。"
+        },
+        "evidence": "和尚さんはその時、すかさず鬼ババをもちの中に丸め込むと一口で飲み込んでしまいました。",
+        "narrative_event_id": "0af1510f-61e9-4b19-842a-92fba77f9907"
+      },
+      {
+        "id": "64135698-47b8-4394-a9d7-1b4e76f0bba9",
+        "fn": "TRANSFIGURATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1529,
+          "end": 1605,
+          "text": "和尚さんが便所でウンチをすると、ウンチの中からたくさんのハエが飛び出してきました。\n\n　ハエは鬼ババが生まれ変わって、日本中にふえていったものだそうです"
+        },
+        "evidence": "和尚さんが便所でウンチをすると、ウンチの中からたくさんのハエが飛び出してきました。\n\n　ハエは鬼ババが生まれ変わって、日本中にふえていったものだそうです",
+        "narrative_event_id": "d0382500-0544-47e7-8f45-23740d3b91db"
+      }
+    ],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

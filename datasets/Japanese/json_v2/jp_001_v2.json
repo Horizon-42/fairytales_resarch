@@ -6,8 +6,7 @@
     "culture": "Japanese",
     "annotator": "",
     "date_annotated": "2025-12-18",
-    "confidence": 0.8,
-    "annotation_level": "Deep"
+    "confidence": 0.8
   },
   "source_info": {
     "language": "en",
@@ -19,7 +18,7 @@
     {
       "name": "おじいさん",
       "alias": "",
-      "archetype": "Other"
+      "archetype": "Everyman"
     },
     {
       "name": "おばあさん",
@@ -34,22 +33,27 @@
     {
       "name": "犬いぬ",
       "alias": "",
-      "archetype": "Sidekick"
+      "archetype": "Sidekick/Helper"
     },
     {
       "name": "猿さる",
       "alias": "",
-      "archetype": "Sidekick"
+      "archetype": "Sidekick/Helper"
     },
     {
       "name": "きじ",
       "alias": "",
-      "archetype": "Sidekick"
+      "archetype": "Sidekick/Helper"
     },
     {
-      "name": "鬼おに",
+      "name": "鬼の大将",
       "alias": "",
       "archetype": "Villain"
+    },
+    {
+      "name": "鬼たち",
+      "alias": "",
+      "archetype": "Shadow"
     }
   ],
   "narrative_events": [
@@ -71,11 +75,517 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 1
+      "time_order": 1,
+      "relationships": [
+        {
+          "agent": "大きな桃",
+          "target": "おばあさん",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "大きな桃",
+          "target": "おばあさん",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "neutral",
+      "action_category": "existential",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "success"
     },
     {
-      "id": "d47b893c-0cc3-4962-a84d-bae761886b57",
+      "id": "4a2077ea-33d9-47e7-9746-37d528db151e",
+      "event_type": "TRANSFIGURATION",
+      "description": "桃ももはぽんと中から二つに割われて、\n「おぎゃあ、おぎゃあ。」\n　と勇いさましいうぶ声こえを上あげながら、かわいらしい赤あかさんが元気げんきよくとび出だしました。",
+      "agents": [
+        "桃太郎"
+      ],
+      "targets": [],
+      "text_span": {
+        "start": 1007,
+        "end": 1088,
+        "text": "桃ももはぽんと中から二つに割われて、\n「おぎゃあ、おぎゃあ。」\n　と勇いさましいうぶ声こえを上あげながら、かわいらしい赤あかさんが元気げんきよくとび出だしました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationships": [
+        {
+          "agent": "桃太郎",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "transform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "桃太郎",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "positive",
+      "action_category": "existential",
+      "action_type": "transform",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "67a4a2c7-0d78-46a8-a6f1-a8338d1e9c5f",
+      "event_type": "BRANDING",
+      "description": "桃太郎ももたろうは十五になりました。\n　もうそのじぶんには、日本にほんの国中くにじゅうで、桃太郎ももたろうほど強つよいものはないようになりました。",
+      "agents": [
+        "桃太郎"
+      ],
+      "targets": [],
+      "text_span": {
+        "start": 1740,
+        "end": 1813,
+        "text": "桃太郎ももたろうは十五になりました。\n　もうそのじぶんには、日本にほんの国中くにじゅうで、桃太郎ももたろうほど強つよいものはないようになりました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationships": [
+        {
+          "agent": "桃太郎",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "transform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "桃太郎",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "positive",
+      "action_category": "existential",
+      "action_type": "transform",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "3ad0017f-f239-4989-b018-3698833b2978",
+      "event_type": "MEDIATION",
+      "description": "ほうぼう外国がいこくの島々しまじまをめぐって帰かえって来きた人があって、いろいろめずらしい、ふしぎなお話はなしをした末すえに、\n「もう何年なんねんも何年なんねんも船ふねをこいで行くと、遠とおい遠とおい海うみのはてに、鬼おにが島しまという所ところがある。悪わるい鬼おにどもが、いかめしいくろがねのお城しろの中に住すんで、ほうぼうの国くにからかすめ取とった貴とうとい宝物たからものを守まもっている。」\n　と言いいました。\n　桃太郎ももたろうはこの話はなしをきく",
+      "agents": [
+        "外国から帰ってきた人"
+      ],
+      "targets": [
+        "桃太郎"
+      ],
+      "text_span": {
+        "start": 1874,
+        "end": 2102,
+        "text": "ほうぼう外国がいこくの島々しまじまをめぐって帰かえって来きた人があって、いろいろめずらしい、ふしぎなお話はなしをした末すえに、\n「もう何年なんねんも何年なんねんも船ふねをこいで行くと、遠とおい遠とおい海うみのはてに、鬼おにが島しまという所ところがある。悪わるい鬼おにどもが、いかめしいくろがねのお城しろの中に住すんで、ほうぼうの国くにからかすめ取とった貴とうとい宝物たからものを守まもっている。」\n　と言いいました。\n　桃太郎ももたろうはこの話はなしをきく"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationships": [
+        {
+          "agent": "外国から帰ってきた人",
+          "target": "桃太郎",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "success",
+        "function": "trigger"
+      },
+      "narrative_function": "trigger",
+      "relationship_multi": [
+        {
+          "agent": "外国から帰ってきた人",
+          "target": "桃太郎",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "negative",
+      "action_category": "communicative",
+      "action_type": "inform",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "bd4da365-fe01-4fb0-9423-28e20b7ab2a9",
       "event_type": "BEGINNING_COUNTERACTION",
+      "description": "「鬼おにが島しまへ鬼おにせいばつに行こうと思おもいます。」\n　と桃太郎ももたろうはこたえました。",
+      "agents": [
+        "桃太郎"
+      ],
+      "targets": [],
+      "text_span": {
+        "start": 2251,
+        "end": 2299,
+        "text": "「鬼おにが島しまへ鬼おにせいばつに行こうと思おもいます。」\n　と桃太郎ももたろうはこたえました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationships": [
+        {
+          "agent": "桃太郎",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "resolve",
+        "context": "",
+        "status": "success",
+        "function": "character_arc"
+      },
+      "narrative_function": "character_arc",
+      "relationship_multi": [
+        {
+          "agent": "桃太郎",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "positive",
+      "action_category": "mental",
+      "action_type": "resolve",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "8e6d10f5-6871-4574-889a-e408b6ad9497",
+      "event_type": "DEPARTURE",
+      "description": "と桃太郎ももたろうは言いって、\n「では、ごきげんよう。」\n　と元気げんきな声こえをのこして、出でていきました。",
+      "agents": [
+        "桃太郎"
+      ],
+      "targets": [
+        "おじいさん",
+        "おばあさん"
+      ],
+      "text_span": {
+        "start": 2884,
+        "end": 2939,
+        "text": "と桃太郎ももたろうは言いって、\n「では、ごきげんよう。」\n　と元気げんきな声こえをのこして、出でていきました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6,
+      "relationships": [
+        {
+          "agent": "桃太郎",
+          "target": "おじいさん",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "travel",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "桃太郎",
+          "target": "おじいさん",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "physical",
+      "action_type": "travel",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "7a8eadab-53fe-4e8e-908b-409ebf7aebae",
+      "event_type": "FIRST_FUNCTION_DONOR",
+      "description": "犬いぬはきびだんごを一つもらって、桃太郎ももたろうのあとから、ついて行きました。",
+      "agents": [
+        "犬いぬ"
+      ],
+      "targets": [
+        "桃太郎"
+      ],
+      "text_span": {
+        "start": 3271,
+        "end": 3311,
+        "text": "犬いぬはきびだんごを一つもらって、桃太郎ももたろうのあとから、ついて行きました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 7,
+      "relationships": [
+        {
+          "agent": "犬いぬ",
+          "target": "桃太郎",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "exchange",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "犬いぬ",
+          "target": "桃太郎",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "positive",
+      "action_category": "transaction",
+      "action_type": "exchange",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "856d84ac-c870-439a-9251-2f1f56241e46",
+      "event_type": "FIRST_FUNCTION_DONOR",
+      "description": "猿さるもきびだんごを一つもらって、あとからついて行きました。",
+      "agents": [
+        "猿さる"
+      ],
+      "targets": [
+        "桃太郎"
+      ],
+      "text_span": {
+        "start": 3588,
+        "end": 3618,
+        "text": "猿さるもきびだんごを一つもらって、あとからついて行きました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 8,
+      "relationships": [
+        {
+          "agent": "猿さる",
+          "target": "桃太郎",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "exchange",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "猿さる",
+          "target": "桃太郎",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "positive",
+      "action_category": "transaction",
+      "action_type": "exchange",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "94816b6e-2bf5-4524-9be3-acaac1f08043",
+      "event_type": "FIRST_FUNCTION_DONOR",
+      "description": "きじもきびだんごを一つもらって、桃太郎ももたろうのあとからついて行きました。",
+      "agents": [
+        "きじ"
+      ],
+      "targets": [
+        "桃太郎"
+      ],
+      "text_span": {
+        "start": 3894,
+        "end": 3932,
+        "text": "きじもきびだんごを一つもらって、桃太郎ももたろうのあとからついて行きました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 9,
+      "relationships": [
+        {
+          "agent": "きじ",
+          "target": "桃太郎",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "exchange",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "きじ",
+          "target": "桃太郎",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "positive",
+      "action_category": "transaction",
+      "action_type": "exchange",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "f99a8f6e-7814-4e2c-a8f6-4cbde154f5c2",
+      "event_type": "OTHER",
+      "description": "雲くものように見みえていたものが、だんだんはっきりと島しまの形かたちになって、あらわれてきました。\n「ああ、見みえる、見みえる、鬼おにが島しまが見みえる。」",
+      "agents": [
+        "桃太郎",
+        "犬いぬ",
+        "猿さる",
+        "きじ"
+      ],
+      "targets": [],
+      "text_span": {
+        "start": 4582,
+        "end": 4660,
+        "text": "雲くものように見みえていたものが、だんだんはっきりと島しまの形かたちになって、あらわれてきました。\n「ああ、見みえる、見みえる、鬼おにが島しまが見みえる。」"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 10,
+      "relationships": [
+        {
+          "agent": "桃太郎",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "travel",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      },
+      "narrative_function": "resolution",
+      "relationship_multi": [
+        {
+          "agent": "桃太郎",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "physical",
+      "action_type": "travel",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "3bc4de5c-2a9a-461f-8c56-6bab0e548325",
+      "event_type": "STRUGGLE",
       "description": "桃太郎ももたろうの主従しゅじゅうが、いさましくお城しろの中に攻せめ込こんでいきますと、鬼おにの大将たいしょうも大おおぜいの家来けらいを引ひき連つれて、一人一人ひとりひとり、太ふとい鉄てつの棒ぼうをふり",
       "agents": [
         "桃太郎",
@@ -84,7 +594,8 @@
         "きじ"
       ],
       "targets": [
-        "鬼おに"
+        "鬼の大将",
+        "鬼たち"
       ],
       "text_span": {
         "start": 5385,
@@ -94,98 +605,412 @@
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 2
+      "time_order": 11,
+      "relationships": [
+        {
+          "agent": "桃太郎",
+          "target": "鬼の大将",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "",
+        "status": "success",
+        "function": "climax"
+      },
+      "narrative_function": "climax",
+      "relationship_multi": [
+        {
+          "agent": "桃太郎",
+          "target": "鬼の大将",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "hostile"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "physical",
+      "action_type": "attack",
+      "action_context": "",
+      "action_status": "success"
     },
     {
-      "id": "9279d0f7-6dd3-45a6-8f88-12189d7e673f",
+      "id": "9101b92c-d21b-4a30-a962-f92423980fdb",
       "event_type": "VICTORY",
       "description": "鬼おにの大将たいしょうは、桃太郎ももたろうの大力だいりきで首くびをしめられて、もう苦くるしくってたまりませんから、大おおつぶの涙なみだをぼろぼろこぼしながら、\n「降参こうさんします、降参こうさんします",
       "agents": [
         "桃太郎"
       ],
       "targets": [
-        "鬼おに"
+        "鬼の大将",
+        "鬼たち"
       ],
       "text_span": {
-        "start": 5831,
-        "end": 5979,
-        "text": "　鬼おにの大将たいしょうは、桃太郎ももたろうの大力だいりきで首くびをしめられて、もう苦くるしくってたまりませんから、大おおつぶの涙なみだをぼろぼろこぼしながら、\n「降参こうさんします、降参こうさんします。命いのちだけはお助たすけ下ください。その代かわりに宝物たからものをのこらずさし上あげます。」"
+        "start": 5832,
+        "end": 5951,
+        "text": "鬼おにの大将たいしょうは、桃太郎ももたろうの大力だいりきで首くびをしめられて、もう苦くるしくってたまりませんから、大おおつぶの涙なみだをぼろぼろこぼしながら、\n「降参こうさんします、降参こうさんします。命いのちだけはお助たすけ下ください。"
       },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 1
+      "time_order": 12,
+      "relationships": [
+        {
+          "agent": "桃太郎",
+          "target": "鬼の大将",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "restrain",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "桃太郎",
+          "target": "鬼の大将",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "physical",
+      "action_type": "restrain",
+      "action_context": "",
+      "action_status": "success"
     },
     {
-      "id": "01d83429-37e6-4010-921a-8356bb5fa6c8",
-      "event_type": "RETURN",
-      "description": "桃太郎ももたろうはたくさんの宝物たからものをのこらず積つんで、三にんの家来けらいといっしょに、また船ふねに乗のりました。帰かえりは行きよりもまた一そう船ふねの走はしるのが速はやくって、間まもなく日本に",
+      "id": "732597ae-fc6e-438c-9bcc-e3bdd40b1eab",
+      "event_type": "LIQUIDATION",
+      "description": "鬼おにの大将たいしょうは約束やくそくのとおり、お城しろから、かくれみのに、かくれ笠がさ、うちでの小こづちに如意宝珠にょいほうじゅ、そのほかさんごだの、たいまいだの、るりだの、世界せかいでいちばん貴とうとい宝物たからものを山のように車くるまに積つんで出だしました。",
       "agents": [
-        "桃太郎"
+        "鬼の大将"
       ],
       "targets": [
-        "日本"
-      ],
-      "text_span": {
-        "start": 6134,
-        "end": 6249,
-        "text": "桃太郎ももたろうはたくさんの宝物たからものをのこらず積つんで、三にんの家来けらいといっしょに、また船ふねに乗のりました。帰かえりは行きよりもまた一そう船ふねの走はしるのが速はやくって、間まもなく日本にほんの国くにに着つきました。\n"
-      },
-      "target_type": "object",
-      "object_type": "prize",
-      "instrument": "",
-      "time_order": 3
-    },
-    {
-      "id": "4ccba62f-21ef-4d50-89cb-e9ca8f252c93",
-      "event_type": "DEPARTURE",
-      "description": "桃太郎ももたろうはお侍さむらいの着きるような陣羽織じんばおりを着きて、刀かたなを腰こしにさして、きびだんごの袋ふくろをぶら下さげました。そして桃ももの絵えのかいてある軍扇ぐんせんを手に持もって、\n「で",
-      "agents": [
         "桃太郎"
       ],
-      "targets": [],
       "text_span": {
-        "start": 2609,
-        "end": 2939,
-        "text": "　桃太郎ももたろうはお侍さむらいの着きるような陣羽織じんばおりを着きて、刀かたなを腰こしにさして、きびだんごの袋ふくろをぶら下さげました。そして桃ももの絵えのかいてある軍扇ぐんせんを手に持もって、\n「ではおとうさん、おかあさん、行ってまいります。」\n　と言いって、ていねいに頭あたまを下さげました。\n「じゃあ、りっぱに鬼おにを退治たいじしてくるがいい。」\n　とおじいさんは言いいました。\n「気きをつけて、けがをしないようにおしよ。」\n　とおばあさんも言いいました。\n「なに、大丈夫だいじょうぶです、日本一にっぽんいちのきびだんごを持もっているから。」と桃太郎ももたろうは言いって、\n「では、ごきげんよう。」\n　と元気げんきな声こえをのこして、出でていきました。"
+        "start": 6001,
+        "end": 6132,
+        "text": "鬼おにの大将たいしょうは約束やくそくのとおり、お城しろから、かくれみのに、かくれ笠がさ、うちでの小こづちに如意宝珠にょいほうじゅ、そのほかさんごだの、たいまいだの、るりだの、世界せかいでいちばん貴とうとい宝物たからものを山のように車くるまに積つんで出だしました。"
       },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": null
+      "time_order": 13,
+      "relationships": [
+        {
+          "agent": "鬼の大将",
+          "target": "桃太郎",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "reward",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "鬼の大将",
+          "target": "桃太郎",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "positive",
+      "action_category": "transaction",
+      "action_type": "reward",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "7e098052-5410-4081-8680-5271ac9a1a35",
+      "event_type": "RETURN",
+      "description": "桃太郎ももたろうが三にんのりっぱな家来けらいに、ぶんどりの宝物たからものを引ひかせて、さもとくいらしい様子ようすをして帰かえって来きましたので",
+      "agents": [
+        "桃太郎",
+        "犬いぬ",
+        "猿さる",
+        "きじ"
+      ],
+      "targets": [
+        "おじいさん",
+        "桃太郎"
+      ],
+      "text_span": {
+        "start": 6467,
+        "end": 6538,
+        "text": "桃太郎ももたろうが三にんのりっぱな家来けらいに、ぶんどりの宝物たからものを引ひかせて、さもとくいらしい様子ようすをして帰かえって来きましたので"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 14,
+      "relationships": [
+        {
+          "agent": "桃太郎",
+          "target": "おじいさん",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "travel",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "桃太郎",
+          "target": "おじいさん",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "physical",
+      "action_type": "travel",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "81c8adca-0905-42f2-b596-fe7fed805c3f",
+      "event_type": "OTHER",
+      "description": "「えらいぞ、えらいぞ、それこそ日本一にっぽんいちだ。」\n　とおじいさんは言いいました。",
+      "agents": [
+        "おじいさん"
+      ],
+      "targets": [
+        "桃太郎"
+      ],
+      "text_span": {
+        "start": 6572,
+        "end": 6615,
+        "text": "「えらいぞ、えらいぞ、それこそ日本一にっぽんいちだ。」\n　とおじいさんは言いいました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 15,
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "桃太郎",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "おじいさん",
+          "target": "桃太郎",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "positive",
+      "action_category": "communicative",
+      "action_type": "inform",
+      "action_context": "",
+      "action_status": "success"
     }
   ],
   "themes_and_motifs": {
-    "atu_type": "",
-    "atu_description": "",
-    "ending_type": "HAPPY_REUNION",
-    "key_values": [],
-    "obstacle_pattern": [],
-    "obstacle_thrower": "",
-    "helper_type": "",
-    "thinking_process": "村人に害を与えていた鬼を退治することで、人々を救う。\n"
+    "ending_type": "HAPPY_ENDING",
+    "key_values": [
+      "COURAGE",
+      "JUSTICE",
+      "LOYALTY"
+    ],
+    "motif_type": [],
+    "atu_categories": [],
+    "obstacle_thrower": [
+      "鬼の大将",
+      "鬼たち"
+    ],
+    "helper_type": [
+      "ANIMAL"
+    ],
+    "thinking_process": "村人に害を与えていた鬼を退治することで、人々を救う。\n",
+    "atu_evidence": {},
+    "motif_evidence": {}
   },
   "analysis": {
     "propp_functions": [
       {
-        "id": "3f464494-11a8-4d61-815a-c4cd2de3a646",
-        "fn": "VILLAINY",
+        "id": "0c1e10e4-cb51-4739-86a1-8bb6cb6e1497",
+        "fn": "TRANSFIGURATION",
         "spanType": "text",
         "span": {
           "start": 0,
           "end": 0
         },
         "textSpan": {
-          "start": 1938,
-          "end": 2072,
-          "text": "「もう何年なんねんも何年なんねんも船ふねをこいで行くと、遠とおい遠とおい海うみのはてに、鬼おにが島しまという所ところがある。悪わるい鬼おにどもが、いかめしいくろがねのお城しろの中に住すんで、ほうぼうの国くにからかすめ取とった貴とうとい宝物たからものを守まもっている。」"
+          "start": 1007,
+          "end": 1088,
+          "text": "桃ももはぽんと中から二つに割われて、\n「おぎゃあ、おぎゃあ。」\n　と勇いさましいうぶ声こえを上あげながら、かわいらしい赤あかさんが元気げんきよくとび出だしました。"
         },
-        "evidence": "「もう何年なんねんも何年なんねんも船ふねをこいで行くと、遠とおい遠とおい海うみのはてに、鬼おにが島しまという所ところがある。悪わるい鬼おにどもが、いかめしいくろがねのお城しろの中に住すんで、ほうぼうの",
-        "narrative_event_id": null
+        "evidence": "桃ももはぽんと中から二つに割われて、\n「おぎゃあ、おぎゃあ。」\n　と勇いさましいうぶ声こえを上あげながら、かわいらしい赤あかさんが元気げんきよくとび出だしました。",
+        "narrative_event_id": "4a2077ea-33d9-47e7-9746-37d528db151e"
       },
       {
-        "id": "3fb8cf42-03f1-479e-871e-a9b82cc9dee3",
+        "id": "dce6aa8a-5d42-4ac9-bc57-cb7d5f1036e9",
+        "fn": "BRANDING",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1740,
+          "end": 1813,
+          "text": "桃太郎ももたろうは十五になりました。\n　もうそのじぶんには、日本にほんの国中くにじゅうで、桃太郎ももたろうほど強つよいものはないようになりました。"
+        },
+        "evidence": "桃太郎ももたろうは十五になりました。\n　もうそのじぶんには、日本にほんの国中くにじゅうで、桃太郎ももたろうほど強つよいものはないようになりました。",
+        "narrative_event_id": "67a4a2c7-0d78-46a8-a6f1-a8338d1e9c5f"
+      },
+      {
+        "id": "6db827b4-0ee8-4de3-9d55-f180f9962066",
+        "fn": "MEDIATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1874,
+          "end": 2102,
+          "text": "ほうぼう外国がいこくの島々しまじまをめぐって帰かえって来きた人があって、いろいろめずらしい、ふしぎなお話はなしをした末すえに、\n「もう何年なんねんも何年なんねんも船ふねをこいで行くと、遠とおい遠とおい海うみのはてに、鬼おにが島しまという所ところがある。悪わるい鬼おにどもが、いかめしいくろがねのお城しろの中に住すんで、ほうぼうの国くにからかすめ取とった貴とうとい宝物たからものを守まもっている。」\n　と言いいました。\n　桃太郎ももたろうはこの話はなしをきく"
+        },
+        "evidence": "ほうぼう外国がいこくの島々しまじまをめぐって帰かえって来きた人があって、いろいろめずらしい、ふしぎなお話はなしをした末すえに、\n「もう何年なんねんも何年なんねんも船ふねをこいで行くと、遠とおい遠とおい海うみのはてに、鬼おにが島しまという所ところがある。悪わるい鬼おにどもが、いかめしいくろがねのお城しろの中に住すんで、ほうぼうの国くにからかすめ取とった貴とうとい宝物たからものを守まもっている。」\n　と言いいました。\n　桃太郎ももたろうはこの話はなしをきく",
+        "narrative_event_id": "3ad0017f-f239-4989-b018-3698833b2978"
+      },
+      {
+        "id": "7bb1a3f6-53dd-4a8e-9499-aae68dd451cb",
         "fn": "BEGINNING_COUNTERACTION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 2251,
+          "end": 2299,
+          "text": "「鬼おにが島しまへ鬼おにせいばつに行こうと思おもいます。」\n　と桃太郎ももたろうはこたえました。"
+        },
+        "evidence": "「鬼おにが島しまへ鬼おにせいばつに行こうと思おもいます。」\n　と桃太郎ももたろうはこたえました。",
+        "narrative_event_id": "bd4da365-fe01-4fb0-9423-28e20b7ab2a9"
+      },
+      {
+        "id": "c7f346d1-04b6-4751-a92e-1d39b8353923",
+        "fn": "DEPARTURE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 2884,
+          "end": 2939,
+          "text": "と桃太郎ももたろうは言いって、\n「では、ごきげんよう。」\n　と元気げんきな声こえをのこして、出でていきました。"
+        },
+        "evidence": "と桃太郎ももたろうは言いって、\n「では、ごきげんよう。」\n　と元気げんきな声こえをのこして、出でていきました。",
+        "narrative_event_id": "8e6d10f5-6871-4574-889a-e408b6ad9497"
+      },
+      {
+        "id": "b391af45-4afe-4050-b66b-8f98ccbc7367",
+        "fn": "FIRST_FUNCTION_DONOR",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 3271,
+          "end": 3311,
+          "text": "犬いぬはきびだんごを一つもらって、桃太郎ももたろうのあとから、ついて行きました。"
+        },
+        "evidence": "犬いぬはきびだんごを一つもらって、桃太郎ももたろうのあとから、ついて行きました。",
+        "narrative_event_id": "7a8eadab-53fe-4e8e-908b-409ebf7aebae"
+      },
+      {
+        "id": "d836b486-6cf9-4ed1-8e90-1e53c2e0377d",
+        "fn": "FIRST_FUNCTION_DONOR",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 3588,
+          "end": 3618,
+          "text": "猿さるもきびだんごを一つもらって、あとからついて行きました。"
+        },
+        "evidence": "猿さるもきびだんごを一つもらって、あとからついて行きました。",
+        "narrative_event_id": "856d84ac-c870-439a-9251-2f1f56241e46"
+      },
+      {
+        "id": "9cf021a7-f914-4e45-894c-b3b1ec85b35c",
+        "fn": "FIRST_FUNCTION_DONOR",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 3894,
+          "end": 3932,
+          "text": "きじもきびだんごを一つもらって、桃太郎ももたろうのあとからついて行きました。"
+        },
+        "evidence": "きじもきびだんごを一つもらって、桃太郎ももたろうのあとからついて行きました。",
+        "narrative_event_id": "94816b6e-2bf5-4524-9be3-acaac1f08043"
+      },
+      {
+        "id": "a5978262-63cd-4d3b-b9be-af3592124ccd",
+        "fn": "STRUGGLE",
         "spanType": "text",
         "span": {
           "start": 0,
@@ -197,26 +1022,10 @@
           "text": "桃太郎ももたろうの主従しゅじゅうが、いさましくお城しろの中に攻せめ込こんでいきますと、鬼おにの大将たいしょうも大おおぜいの家来けらいを引ひき連つれて、一人一人ひとりひとり、太ふとい鉄てつの棒ぼうをふりまわしながら、「おう、おう。」とさけんで、向むかってきました。"
         },
         "evidence": "桃太郎ももたろうの主従しゅじゅうが、いさましくお城しろの中に攻せめ込こんでいきますと、鬼おにの大将たいしょうも大おおぜいの家来けらいを引ひき連つれて、一人一人ひとりひとり、太ふとい鉄てつの棒ぼうをふり",
-        "narrative_event_id": "d47b893c-0cc3-4962-a84d-bae761886b57"
+        "narrative_event_id": "3bc4de5c-2a9a-461f-8c56-6bab0e548325"
       },
       {
-        "id": "54bba273-bfbf-4828-a573-5880bd12424f",
-        "fn": "RETURN",
-        "spanType": "text",
-        "span": {
-          "start": 0,
-          "end": 0
-        },
-        "textSpan": {
-          "start": 6134,
-          "end": 6249,
-          "text": "桃太郎ももたろうはたくさんの宝物たからものをのこらず積つんで、三にんの家来けらいといっしょに、また船ふねに乗のりました。帰かえりは行きよりもまた一そう船ふねの走はしるのが速はやくって、間まもなく日本にほんの国くにに着つきました。\n"
-        },
-        "evidence": "桃太郎ももたろうはたくさんの宝物たからものをのこらず積つんで、三にんの家来けらいといっしょに、また船ふねに乗のりました。帰かえりは行きよりもまた一そう船ふねの走はしるのが速はやくって、間まもなく日本に",
-        "narrative_event_id": "01d83429-37e6-4010-921a-8356bb5fa6c8"
-      },
-      {
-        "id": "3d53cc8b-efab-4a7c-b102-89254acaaa41",
+        "id": "76dcfdda-eebc-4978-ac6c-946c775cac20",
         "fn": "VICTORY",
         "spanType": "text",
         "span": {
@@ -224,33 +1033,51 @@
           "end": 0
         },
         "textSpan": {
-          "start": 5831,
-          "end": 5979,
-          "text": "　鬼おにの大将たいしょうは、桃太郎ももたろうの大力だいりきで首くびをしめられて、もう苦くるしくってたまりませんから、大おおつぶの涙なみだをぼろぼろこぼしながら、\n「降参こうさんします、降参こうさんします。命いのちだけはお助たすけ下ください。その代かわりに宝物たからものをのこらずさし上あげます。」"
+          "start": 5832,
+          "end": 5951,
+          "text": "鬼おにの大将たいしょうは、桃太郎ももたろうの大力だいりきで首くびをしめられて、もう苦くるしくってたまりませんから、大おおつぶの涙なみだをぼろぼろこぼしながら、\n「降参こうさんします、降参こうさんします。命いのちだけはお助たすけ下ください。"
         },
         "evidence": "鬼おにの大将たいしょうは、桃太郎ももたろうの大力だいりきで首くびをしめられて、もう苦くるしくってたまりませんから、大おおつぶの涙なみだをぼろぼろこぼしながら、\n「降参こうさんします、降参こうさんします",
-        "narrative_event_id": "9279d0f7-6dd3-45a6-8f88-12189d7e673f"
+        "narrative_event_id": "9101b92c-d21b-4a30-a962-f92423980fdb"
       },
       {
-        "id": "d4a33d22-d16a-4904-9b79-3f37c1641adc",
-        "fn": "DEPARTURE",
+        "id": "3a3719eb-881b-4c3d-97e9-5ac62224b69e",
+        "fn": "LIQUIDATION",
         "spanType": "text",
         "span": {
           "start": 0,
           "end": 0
         },
         "textSpan": {
-          "start": 2609,
-          "end": 2939,
-          "text": "　桃太郎ももたろうはお侍さむらいの着きるような陣羽織じんばおりを着きて、刀かたなを腰こしにさして、きびだんごの袋ふくろをぶら下さげました。そして桃ももの絵えのかいてある軍扇ぐんせんを手に持もって、\n「ではおとうさん、おかあさん、行ってまいります。」\n　と言いって、ていねいに頭あたまを下さげました。\n「じゃあ、りっぱに鬼おにを退治たいじしてくるがいい。」\n　とおじいさんは言いいました。\n「気きをつけて、けがをしないようにおしよ。」\n　とおばあさんも言いいました。\n「なに、大丈夫だいじょうぶです、日本一にっぽんいちのきびだんごを持もっているから。」と桃太郎ももたろうは言いって、\n「では、ごきげんよう。」\n　と元気げんきな声こえをのこして、出でていきました。"
+          "start": 6001,
+          "end": 6132,
+          "text": "鬼おにの大将たいしょうは約束やくそくのとおり、お城しろから、かくれみのに、かくれ笠がさ、うちでの小こづちに如意宝珠にょいほうじゅ、そのほかさんごだの、たいまいだの、るりだの、世界せかいでいちばん貴とうとい宝物たからものを山のように車くるまに積つんで出だしました。"
         },
-        "evidence": "桃太郎ももたろうはお侍さむらいの着きるような陣羽織じんばおりを着きて、刀かたなを腰こしにさして、きびだんごの袋ふくろをぶら下さげました。そして桃ももの絵えのかいてある軍扇ぐんせんを手に持もって、\n「で",
-        "narrative_event_id": "4ccba62f-21ef-4d50-89cb-e9ca8f252c93"
+        "evidence": "鬼おにの大将たいしょうは約束やくそくのとおり、お城しろから、かくれみのに、かくれ笠がさ、うちでの小こづちに如意宝珠にょいほうじゅ、そのほかさんごだの、たいまいだの、るりだの、世界せかいでいちばん貴とうとい宝物たからものを山のように車くるまに積つんで出だしました。",
+        "narrative_event_id": "732597ae-fc6e-438c-9bcc-e3bdd40b1eab"
+      },
+      {
+        "id": "5e41e70f-3e53-4fc1-a679-90d8f4f9497d",
+        "fn": "RETURN",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 6467,
+          "end": 6538,
+          "text": "桃太郎ももたろうが三にんのりっぱな家来けらいに、ぶんどりの宝物たからものを引ひかせて、さもとくいらしい様子ようすをして帰かえって来きましたので"
+        },
+        "evidence": "桃太郎ももたろうが三にんのりっぱな家来けらいに、ぶんどりの宝物たからものを引ひかせて、さもとくいらしい様子ようすをして帰かえって来きましたので",
+        "narrative_event_id": "7e098052-5410-4081-8680-5271ac9a1a35"
       }
     ],
     "propp_notes": "",
     "paragraph_summaries": {
-      "per_paragraph": {},
+      "per_section": {
+        "S133-158": "The grandfather gave a small stone to the man the next day."
+      },
       "combined": [],
       "whole": ""
     },
