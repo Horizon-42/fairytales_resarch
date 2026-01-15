@@ -965,11 +965,13 @@ export default function App() {
         }
 
         // v3 format: extract from UI state (which may have relationship_multi or flat fields)
+        // NOTE: relationship_multi is ONLY for UI state management, NOT saved to v3 JSON
         // Only access v3-specific fields here, not in v1/v2
         const agents = Array.isArray(n.agents) ? n.agents.filter(Boolean) : [];
         const targets = Array.isArray(n.targets) ? n.targets.filter(Boolean) : [];
 
         // v3: extract relationships from relationship_multi (UI state) or flat fields
+        // relationship_multi is used in UI but converted to relationships array for v3 JSON
         const existingMultiList = Array.isArray(n.relationship_multi)
           ? n.relationship_multi
           : ((n.relationship_multi && typeof n.relationship_multi === "object") ? [n.relationship_multi] : []);
@@ -990,9 +992,12 @@ export default function App() {
         const actionLayer = buildActionLayerV3(n);
 
         // v3 schema: only include v3-specific fields, explicitly construct the object
+        // IMPORTANT: Do NOT include relationship_multi, relationship_level1, relationship_level2, sentiment
+        // These are UI-only fields. Only save the relationships array.
         // Ensure id exists, generate if missing
         const eventId = n.id || generateUUID();
         
+        // Explicitly construct object to ensure no UI-only fields leak into JSON
         return {
           id: eventId,
           text_span: n.text_span || null,
@@ -1004,9 +1009,10 @@ export default function App() {
           object_type: n.object_type || "",
           instrument: n.instrument || "",
           time_order: n.time_order ?? (index + 1),
-          // v3 only uses nested structures
+          // v3 only uses nested structures - relationships array, NOT relationship_multi
           relationships: relList,
           action_layer: actionLayer
+          // Explicitly NOT including: relationship_multi, relationship_level1, relationship_level2, sentiment
         };
       }),
       themes_and_motifs: {
