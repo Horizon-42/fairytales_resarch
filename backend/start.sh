@@ -185,7 +185,7 @@ run_server() {
       --port "${PORT}" \
       --log-level "${LOG_LEVEL}" \
       --access-log \
-      "${RELOAD_FLAG[@]}"
+      # "${RELOAD_FLAG[@]}"
 }
 
 cmd="${1:-run}"

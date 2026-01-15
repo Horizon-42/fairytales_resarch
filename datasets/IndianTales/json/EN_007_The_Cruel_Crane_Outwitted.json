@@ -1,7 +1,7 @@
 {
   "id": "EN_007_The_Cruel_Crane_Outwitted",
   "culture": "Indian",
-  "title": "",
+  "title": "The_Cruel_Crane_Outwitted",
   "source_text": {
     "text": "Long ago the Bodisat was born to a forest life as the Genius of a tree standing near a certain lotus pond.\nNow at that time the water used to run short at the dry season in a certain pond, not over large, in which there were a good many fish. And a crane thought on seeing the fish:\n\"I must outwit these fish somehow or other and make a prey of them.\"\nAnd he went and sat down at the edge of the water, thinking how he should do it.\nWhen the fish saw him, they asked him, \"What are you sitting there for, lost in thought?\"\n\"I am sitting thinking about you,\" said he.\n\"Oh, sir! what are you thinking about us?\" said they.\n\"Why,\" he replied; \"there is very little water in this pond, and but little for you to eat; and the heat is so great! So I was thinking, 'What in the world will these fish do now?'\"\n\"Yes, indeed, sir! what are we to do?\" said they.\n\"If you will only do as I bid you, I will take you in my beak to a fine large pond, covered with all the kinds of lotuses, and put you into it,\" answered the crane.\n\"That a crane should take thought for the fishes is a thing unheard of, sir, since the world began. It's eating us, one after the other, that you're aiming at.\"\n\"Not I! So long as you trust me, I won't eat you. But if you don't believe me that there is such a pond, send one of you with me to go and see it.\"\nThen they trusted him, and handed over to him one of their number—a big fellow, blind of one eye, whom they thought sharp enough in any emergency, afloat or ashore.\nHim the crane took with him, let him go in the pond, showed him the whole of it, brought him back, and let him go again close to the other fish. And he told them all the glories of the pond.\nAnd when they heard what he said, they exclaimed, \"All right, sir! You may take us with you.\"\nThen the crane took the old purblind fish first to the bank of the other pond, and alighted in a Varana-tree growing on the bank there. But he threw it into a fork of the tree, struck it with his beak, and killed it; and then ate its flesh, and threw its bones away at the foot of the tree. Then he went back and called out:\n\"I've thrown that fish in; let another one come.\"\nAnd in that manner he took all the fish, one by one, and ate them, till he came back and found no more!\nBut there was still a crab left behind there; and the crane thought he would eat him too, and called out:\n\"I say, good crab, I've taken all the fish away, and put them into a fine large pond. Come along. I'll take you too!\"\n\"But how will you take hold of me to carry me along?\"\n\"I'll bite hold of you with my beak.\"\n\"You'll let me fall if you carry me like that. I won't go with you!\"\n\"Don't be afraid! I'll hold you quite tight all the way.\"\nThen said the crab to himself, \"If this fellow once got hold of fish, he would never let them go in a pond! Now if he should really put me into the pond, it would be capital; but if he doesn't—then I'll cut his throat, and kill him!\" So he said to him:\n\"Look here, friend, you won't be able to hold me tight enough; but we crabs have a famous grip. If you let me catch hold of you round the neck with my claws, I shall be glad to go with you.\"\nAnd the other did not see that he was trying to outwit him, and agreed. So the crab caught hold of his neck with his claws as securely as with a pair of blacksmith's pincers, and called out, \"Off with you, now!\"\nAnd the crane took him and showed him the pond, and then turned off towards the Varana-tree.\n\"Uncle!\" cried the crab, \"the pond lies that way, but you are taking me this way!\"\n\"Oh, that's it, is it?\" answered the crane. \"Your dear little uncle, your very sweet nephew, you call me! You mean me to understand, I suppose, that I am your slave, who has to lift you up and carry you about with him! Now cast your eye upon the heap of fish-bones lying at the root of yonder Varana-tree. Just as I have eaten those fish, every one of them, just so I will devour you as well!\"\n\"Ah! those fishes got eaten through their own stupidity,\" answered the crab; \"but I'm not going to let you eat me. On the contrary, is it you that I am going to destroy. For you in your folly have not seen that I was outwitting you. If we die, we die both together; for I will cut off this head of yours, and cast it to the ground!\" And so saying, he gave the crane's neck a grip with his claws, as with a vice.\nThen gasping, and with tears trickling from his eyes, and trembling with the fear of death, the crane beseeched him, saying, \"O my Lord! Indeed I did not intend to eat you. Grant me my life!\"\n\"Well, well! step down into the pond, and put me in there.\"\nAnd he turned round and stepped down into the pond, and placed the crab on the mud at its edge. But the crab cut through its neck as clean as one would cut a lotus-stalk with a hunting-knife, and then only entered the water!\nWhen the Genius who lived in the Varana-tree saw this strange affair, he made the wood resound with his plaudits, uttering in a pleasant voice the verse:\n\"The villain, though exceeding clever,\nShall prosper not by his villainy.\nHe may win indeed, sharp-witted in deceit,\nBut only as the Crane here from the Crab!\"\n",
     "language": "",
@@ -52,7 +52,7 @@
           "archetype": "Other"
         }
       ],
-      "obstacle_pattern": [],
+      "obstacle_pattern": "",
       "obstacle_thrower": [
         "The Crane"
       ],
@@ -173,9 +173,9 @@
       "id": "c7d4f2c9-a0a0-4163-81e4-7e78b949ecdb",
       "event_type": "Initial Situation",
       "description": "The setting and the narrator's presence are established.",
-      "narrative_function": "exposition",
       "agents": [
-        "The Bodisat"
+        "The Bodisat",
+        "The Crab"
       ],
       "targets": [
         "Audience"
@@ -189,10 +189,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "relationship_level1": "Neutral",
+      "relationships": [
+        {
+          "agent": "The Bodisat",
+          "target": "Audience",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": "exposition"
+      },
+      "narrative_function": "exposition",
+      "relationship_multi": [
+        {
+          "agent": "The Bodisat",
+          "target": "Audience",
+          "relationship_level1": "Romance",
+          "relationship_level2": "lover",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "",
       "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "neutral",
+      "sentiment": "",
       "action_category": "existential",
       "action_type": "",
       "action_context": "",
@@ -217,11 +242,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 2,
+      "relationships": [
+        {
+          "agent": "The Crane",
+          "target": "The Fish",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "",
+        "context": "",
+        "status": "attempt",
+        "function": "trigger"
+      },
+      "narrative_function": "trigger",
+      "relationship_multi": [
+        {
+          "agent": "The Crane",
+          "target": "The Fish",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "hostile"
+        }
+      ],
       "relationship_level1": "Adversarial",
       "relationship_level2": "",
-      "relationship_multi": [],
       "sentiment": "hostile",
-      "narrative_function": "trigger",
       "action_category": "communicative",
       "action_type": "",
       "action_context": "",
@@ -246,11 +295,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 3,
+      "relationships": [
+        {
+          "agent": "The Fish",
+          "target": "The Crane",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": "setup"
+      },
+      "narrative_function": "setup",
+      "relationship_multi": [
+        {
+          "agent": "The Fish",
+          "target": "The Crane",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
       "relationship_level1": "Neutral",
       "relationship_level2": "",
-      "relationship_multi": [],
       "sentiment": "neutral",
-      "narrative_function": "setup",
       "action_category": "mental",
       "action_type": "",
       "action_context": "",
@@ -275,11 +348,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 4,
+      "relationships": [
+        {
+          "agent": "The Crane",
+          "target": "The Fish",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": "setup"
+      },
+      "narrative_function": "setup",
+      "relationship_multi": [
+        {
+          "agent": "The Crane",
+          "target": "The Fish",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
       "relationship_level1": "Adversarial",
       "relationship_level2": "",
-      "relationship_multi": [],
       "sentiment": "positive",
-      "narrative_function": "setup",
       "action_category": "communicative",
       "action_type": "",
       "action_context": "",
@@ -304,11 +401,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 5,
+      "relationships": [
+        {
+          "agent": "The Crane",
+          "target": "The Fish",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": "climax"
+      },
+      "narrative_function": "climax",
+      "relationship_multi": [
+        {
+          "agent": "The Crane",
+          "target": "The Fish",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
       "relationship_level1": "Adversarial",
       "relationship_level2": "",
-      "relationship_multi": [],
       "sentiment": "negative",
-      "narrative_function": "climax",
       "action_category": "physical",
       "action_type": "",
       "action_context": "",
@@ -333,11 +454,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 6,
+      "relationships": [
+        {
+          "agent": "The Crab",
+          "target": "The Crane",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": "character_arc"
+      },
+      "narrative_function": "character_arc",
+      "relationship_multi": [
+        {
+          "agent": "The Crab",
+          "target": "The Crane",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
       "relationship_level1": "Adversarial",
       "relationship_level2": "",
-      "relationship_multi": [],
       "sentiment": "neutral",
-      "narrative_function": "character_arc",
       "action_category": "communicative",
       "action_type": "",
       "action_context": "",
@@ -362,11 +507,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 7,
+      "relationships": [
+        {
+          "agent": "The Crab",
+          "target": "The Crane",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "",
+        "context": "",
+        "status": "attempt",
+        "function": "climax"
+      },
+      "narrative_function": "climax",
+      "relationship_multi": [
+        {
+          "agent": "The Crab",
+          "target": "The Crane",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "hostile"
+        }
+      ],
       "relationship_level1": "Adversarial",
       "relationship_level2": "",
-      "relationship_multi": [],
       "sentiment": "hostile",
-      "narrative_function": "climax",
       "action_category": "physical",
       "action_type": "",
       "action_context": "",
@@ -391,11 +560,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 8,
+      "relationships": [
+        {
+          "agent": "The Crab",
+          "target": "The Crane",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      },
+      "narrative_function": "resolution",
+      "relationship_multi": [
+        {
+          "agent": "The Crab",
+          "target": "The Crane",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "hostile"
+        }
+      ],
       "relationship_level1": "Adversarial",
       "relationship_level2": "",
-      "relationship_multi": [],
       "sentiment": "hostile",
-      "narrative_function": "resolution",
       "action_category": "physical",
       "action_type": "",
       "action_context": "",
@@ -420,11 +613,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 9,
+      "relationships": [
+        {
+          "agent": "The Bodisat",
+          "target": "Audience",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      },
+      "narrative_function": "resolution",
+      "relationship_multi": [
+        {
+          "agent": "The Bodisat",
+          "target": "Audience",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
       "relationship_level1": "Neutral",
       "relationship_level2": "",
-      "relationship_multi": [],
       "sentiment": "positive",
-      "narrative_function": "resolution",
       "action_category": "communicative",
       "action_type": "",
       "action_context": "",

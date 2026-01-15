@@ -2,7 +2,7 @@
   "version": "3.0",
   "metadata": {
     "id": "EN_007_The_Cruel_Crane_Outwitted",
-    "title": "",
+    "title": "The_Cruel_Crane_Outwitted",
     "culture": "Indian",
     "annotator": "Deb",
     "date_annotated": "2026-01-14",
@@ -47,7 +47,8 @@
       "event_type": "Initial Situation",
       "description": "The setting and the narrator's presence are established.",
       "agents": [
-        "The Bodisat"
+        "The Bodisat",
+        "The Crab"
       ],
       "targets": [
         "Audience"
@@ -65,9 +66,9 @@
         {
           "agent": "The Bodisat",
           "target": "Audience",
-          "relationship_level1": "Neutral",
-          "relationship_level2": "",
-          "sentiment": "neutral"
+          "relationship_level1": "Romance",
+          "relationship_level2": "lover",
+          "sentiment": "negative"
         }
       ],
       "action_layer": {
