@@ -1,0 +1,85 @@
+.visualization-container {
+  width: 100%;
+  margin: 20px 0;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.visualization-svg-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.visualization-svg-container svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.visualization-placeholder {
+  padding: 40px;
+  text-align: center;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* Grid styling */
+.grid line {
+  stroke: #e2e8f0;
+  stroke-width: 1;
+  opacity: 0.3;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+/* Axis styling */
+.x-axis line,
+.y-axis line {
+  stroke: #94a3b8;
+  stroke-width: 1;
+}
+
+.x-axis path,
+.y-axis path {
+  stroke: #94a3b8;
+  stroke-width: 1;
+}
+
+.x-axis text,
+.y-axis text {
+  fill: #64748b;
+  font-size: 11px;
+}
+
+.legend-axis line,
+.legend-axis path {
+  stroke: #94a3b8;
+  stroke-width: 1;
+}
+
+.legend-axis text {
+  fill: #64748b;
+  font-size: 10px;
+}
+
+/* Boundary lines */
+.gt-boundary,
+.pred-boundary,
+.predicted-boundary {
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .visualization-container {
+    padding: 10px;
+  }
+  
+  .visualization-svg-container {
+    overflow-x: scroll;
+  }
+}

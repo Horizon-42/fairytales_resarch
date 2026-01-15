@@ -128,6 +128,28 @@
 /* Parameters Section */
 .parameters-section,
 .ground-truth-section {
+  margin-top: 1.5rem;
+}
+
+.gt-info {
+  padding: 1rem;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 6px;
+}
+
+.gt-summary {
+  color: #0369a1;
+  font-size: 0.9rem;
+}
+
+.gt-summary small {
+  display: block;
+  margin-top: 0.5rem;
+  color: #64748b;
+}
+
+.ground-truth-section {
   margin-bottom: 1.5rem;
   padding: 1rem;
   background: #f8f9fa;
@@ -294,6 +316,96 @@
 }
 
 /* Comparison Section */
+/* Visualization Section */
+.visualization-section {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #e2e8f0;
+}
+
+.visualization-section h3 {
+  margin-bottom: 20px;
+  color: #1e293b;
+  font-size: 1.3rem;
+}
+
+.viz-item {
+  margin-bottom: 40px;
+}
+
+.viz-item h4 {
+  margin-bottom: 15px;
+  color: #475569;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Ground Truth Text Display */
+.text-display-with-segments {
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.gt-segments-legend {
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.gt-segments-legend strong {
+  margin-right: 0.5rem;
+  color: #475569;
+}
+
+.legend-item {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.text-with-highlights {
+  padding: 1rem;
+  min-height: 200px;
+  max-height: 500px;
+  overflow-y: auto;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #1e293b;
+  background: #ffffff;
+}
+
+.gt-text-segment {
+  padding: 2px 4px;
+  border-radius: 3px;
+  cursor: help;
+  transition: opacity 0.2s, box-shadow 0.2s;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.gt-text-segment:hover {
+  opacity: 0.85;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  position: relative;
+}
+
+.annotation-hint {
+  color: #64748b;
+  font-style: italic;
+}
+
 .comparison-section {
   padding: 1rem;
   background: #f8f9fa;

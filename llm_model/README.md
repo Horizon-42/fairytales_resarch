@@ -51,7 +51,7 @@ Analyze sentences to determine:
 
 ```bash
 cd /home/supercomputing/studys/fairytales_resarch
-python -m llm_model.auto_sentence_analysis_cli \
+python -m llm_model.sentence_analysis.cli \
   --story-file datasets/ChineseTales/texts/孟姜女哭长城.md \
   --sentence "The hero defeated the dragon."
 ```
@@ -59,7 +59,7 @@ python -m llm_model.auto_sentence_analysis_cli \
 ### Analyze a single sentence (no context):
 
 ```bash
-python -m llm_model.auto_sentence_analysis_cli \
+python -m llm_model.sentence_analysis.cli \
   --no-context \
   --sentence "The hero defeated the dragon."
 ```
@@ -72,12 +72,12 @@ The tool can automatically split the text file into sentences and analyze each o
 
 ```bash
 # With context (default) - uses story context for each sentence analysis
-python -m llm_model.auto_sentence_analysis_cli \
+python -m llm_model.sentence_analysis.cli \
   --story-file datasets/ChineseTales/texts/孟姜女哭长城.md \
   --output result.json
 
 # Without context - analyzes each sentence independently, no story context
-python -m llm_model.auto_sentence_analysis_cli \
+python -m llm_model.sentence_analysis.cli \
   --no-context \
   --story-file datasets/ChineseTales/texts/孟姜女哭长城.md \
   --output result.json
@@ -117,7 +117,7 @@ With Gemini:
 ```bash
 # With context
 LLM_PROVIDER=gemini \
-python -m llm_model.auto_sentence_analysis_cli \
+python -m llm_model.sentence_analysis.cli \
   --provider gemini \
   --model "$GEMINI_MODEL" \
   --story-file datasets/ChineseTales/texts/孟姜女哭长城.md \
@@ -125,7 +125,7 @@ python -m llm_model.auto_sentence_analysis_cli \
 
 # Without context
 LLM_PROVIDER=gemini \
-python -m llm_model.auto_sentence_analysis_cli \
+python -m llm_model.sentence_analysis.cli \
   --provider gemini \
   --model "$GEMINI_MODEL" \
   --no-context \

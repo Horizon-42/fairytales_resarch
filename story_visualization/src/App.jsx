@@ -94,8 +94,24 @@ function App() {
     const story = texts[index]
     if (!story) return
 
-    // Update selected story
-    setSelectedStory(story)
+    // Try to load json_v3 annotation if available
+    let annotationData = null
+    if (v3Map && v3Map[story.id]) {
+      try {
+        const jsonFile = v3Map[story.id]
+        const jsonText = await jsonFile.text()
+        annotationData = JSON.parse(jsonText)
+        console.log(`Loaded annotation for ${story.id} from json_v3`)
+      } catch (err) {
+        console.warn(`Failed to load annotation for ${story.id}:`, err)
+      }
+    }
+
+    // Update selected story with annotation data
+    setSelectedStory({
+      ...story,
+      annotation: annotationData
+    })
 
     // Save cache
     saveFolderCache({

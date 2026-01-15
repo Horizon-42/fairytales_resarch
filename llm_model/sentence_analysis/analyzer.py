@@ -10,9 +10,9 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any, Dict, Literal, Optional
 
-from .json_utils import loads_strict_json
-from .llm_router import LLMConfig, LLMRouterError, chat
-from .sentence_analysis_prompts import (
+from ..json_utils import loads_strict_json
+from ..llm_router import LLMConfig, LLMRouterError, chat
+from .prompts import (
     SYSTEM_PROMPT_SENTENCE_ANALYSIS,
     build_sentence_analysis_prompt,
 )

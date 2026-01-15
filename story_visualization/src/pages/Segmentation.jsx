@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import './Segmentation.css'
+import SimilarityMatrixHeatmap from '../components/SimilarityMatrixHeatmap'
+import MagneticSignalChart from '../components/MagneticSignalChart'
+import SegmentationComparison from '../components/SegmentationComparison'
+import { extractGroundTruthFromAnnotation } from '../utils/textSpanUtils'
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000'
 
@@ -22,6 +26,28 @@ export default function Segmentation({ story }) {
   // Ground truth boundaries
   const [referenceBoundaries, setReferenceBoundaries] = useState([])
   const [referenceInput, setReferenceInput] = useState('')
+  
+  // Ground truth segments from annotation
+  const [gtSegments, setGtSegments] = useState([])
+
+  // Extract ground truth from annotation when text and sentences are ready
+  useEffect(() => {
+    if (text && sentences.length > 0 && story?.annotation) {
+      try {
+        const gtData = extractGroundTruthFromAnnotation(story.annotation, text, sentences)
+        setGtSegments(gtData.segments)
+        setReferenceBoundaries(gtData.boundaries)
+        if (gtData.boundaries.length > 0) {
+          setReferenceInput(gtData.boundaries.join(', '))
+        }
+        console.log(`Extracted ${gtData.boundaries.length} ground truth boundaries from annotation`)
+      } catch (err) {
+        console.error('Failed to extract ground truth from annotation:', err)
+      }
+    } else {
+      setGtSegments([])
+    }
+  }, [text, sentences, story?.annotation])
 
   useEffect(() => {
     if (story) {
@@ -31,6 +57,7 @@ export default function Segmentation({ story }) {
       setText('')
       setSentences([])
       setResult(null)
+      setGtSegments([])
     }
   }, [story])
 
@@ -146,6 +173,67 @@ export default function Segmentation({ story }) {
     return colors[index % colors.length]
   }
 
+  // Render text with ground truth segment highlighting
+  const renderTextWithSegments = () => {
+    if (!text || gtSegments.length === 0) {
+      return text
+    }
+
+    // Create segments sorted by character position
+    const sortedSegments = [...gtSegments].sort((a, b) => a.startChar - b.startChar)
+    
+    // Build rendering parts
+    const parts = []
+    let currentPos = 0
+    
+    sortedSegments.forEach((segment, idx) => {
+      // Text before this segment
+      if (segment.startChar > currentPos) {
+        parts.push({
+          text: text.substring(currentPos, segment.startChar),
+          type: 'normal',
+          segmentId: null
+        })
+      }
+      
+      // This segment
+      parts.push({
+        text: text.substring(segment.startChar, segment.endChar),
+        type: 'gt-segment',
+        segmentId: segment.segmentId,
+        segment: segment
+      })
+      
+      currentPos = segment.endChar
+    })
+    
+    // Remaining text
+    if (currentPos < text.length) {
+      parts.push({
+        text: text.substring(currentPos),
+        type: 'normal',
+        segmentId: null
+      })
+    }
+    
+    return parts.map((part, idx) => {
+      if (part.type === 'gt-segment') {
+        const bgColor = getSegmentColor(part.segmentId - 1)
+        return (
+          <span
+            key={idx}
+            className="gt-text-segment"
+            style={{ backgroundColor: bgColor }}
+            title={`Segment ${part.segmentId}: ${part.segment.description || part.segment.eventType}`}
+          >
+            {part.text}
+          </span>
+        )
+      }
+      return <span key={idx}>{part.text}</span>
+    })
+  }
+
   return (
     <div className="segmentation-page">
       <div className="segmentation-header">
@@ -195,20 +283,48 @@ export default function Segmentation({ story }) {
           <div className="input-section">
             <div className="input-group">
               <label htmlFor="text-input">Story Text:</label>
-              <textarea
-                id="text-input"
-                value={text}
-                onChange={handleTextChange}
-                placeholder={loading ? "Loading story text..." : story ? "Select a story to load text..." : "Please select a story from the dropdown above"}
-                rows={12}
-                readOnly={false}
-              />
-              <div className="text-info">
-                {sentences.length} sentences detected
-                {text && (
-                  <span className="text-edit-hint">(Text can be edited if needed)</span>
-                )}
-              </div>
+              {gtSegments.length > 0 ? (
+                <div className="text-display-with-segments">
+                  <div className="gt-segments-legend">
+                    <strong>Ground Truth Segments (from annotation):</strong>
+                    {gtSegments.map((seg) => (
+                      <span 
+                        key={seg.segmentId} 
+                        className="legend-item"
+                        style={{ backgroundColor: getSegmentColor(seg.segmentId - 1) }}
+                      >
+                        Seg {seg.segmentId} (Sentences {seg.startSentenceIdx}-{seg.endSentenceIdx})
+                      </span>
+                    ))}
+                  </div>
+                  <div className="text-with-highlights" id="story-text-display">
+                    {renderTextWithSegments()}
+                  </div>
+                  <div className="text-info">
+                    {sentences.length} sentences detected • {gtSegments.length} ground truth segments loaded from annotation
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <textarea
+                    id="text-input"
+                    value={text}
+                    onChange={handleTextChange}
+                    placeholder={loading ? "Loading story text..." : story ? "Select a story to load text..." : "Please select a story from the dropdown above"}
+                    rows={12}
+                    readOnly={false}
+                  />
+                  <div className="text-info">
+                    {sentences.length} sentences detected
+                    {story?.annotation && (
+                      <span className="annotation-hint"> • Annotation loaded but no narrative events found</span>
+                    )}
+                    {text && !story?.annotation && (
+                      <span className="text-edit-hint">(Text can be edited if needed)</span>
+                    )}
+                  </div>
+                </>
+              )}
             </div>
 
           {/* Algorithm Parameters */}
@@ -290,17 +406,29 @@ export default function Segmentation({ story }) {
 
           {/* Ground Truth Section */}
           <div className="ground-truth-section">
-            <h3>Ground Truth (Optional)</h3>
-            <div className="param-group">
-              <label>Reference Boundaries (comma-separated):</label>
-              <input
-                type="text"
-                value={referenceInput}
-                onChange={handleReferenceInputChange}
-                placeholder="e.g., 2, 5, 8"
-              />
-              <small>Boundary indices: each index i means a boundary between sentence i and i+1</small>
-            </div>
+            <h3>Ground Truth</h3>
+            {gtSegments.length > 0 ? (
+              <div className="gt-info">
+                <div className="gt-summary">
+                  <strong>Loaded from annotation:</strong> {gtSegments.length} segments, {referenceBoundaries.length} boundaries
+                  <br />
+                  <small>Segments are highlighted in the text above. Boundaries: {referenceBoundaries.join(', ') || 'None'}</small>
+                </div>
+              </div>
+            ) : (
+              <div className="param-group">
+                <label>Reference Boundaries (comma-separated, optional):</label>
+                <input
+                  type="text"
+                  value={referenceInput}
+                  onChange={handleReferenceInputChange}
+                  placeholder="e.g., 2, 5, 8"
+                />
+                <small>Boundary indices: each index i means a boundary between sentence i and i+1. 
+                  {story?.annotation ? ' (No narrative events found in annotation)' : ' (No annotation loaded)'}
+                </small>
+              </div>
+            )}
           </div>
 
           {error && !loading && (
@@ -376,6 +504,53 @@ export default function Segmentation({ story }) {
                     <span className="score-value">{result.meta.evaluation_score.toFixed(4)}</span>
                   </div>
                 </div>
+              </div>
+            )}
+
+            {/* Visualization Section */}
+            {result.visualization && (
+              <div className="visualization-section">
+                <h3>Visualization</h3>
+                
+                {/* Similarity Matrix Heatmap */}
+                {result.visualization.similarity_matrix && (
+                  <div className="viz-item">
+                    <h4>Similarity Matrix</h4>
+                    <SimilarityMatrixHeatmap
+                      similarityMatrix={result.visualization.similarity_matrix}
+                      groundTruthBoundaries={referenceBoundaries}
+                      title="Cosine Similarity Matrix"
+                    />
+                  </div>
+                )}
+
+                {/* Magnetic Signal Chart (for Magnetic Clustering) */}
+                {result.meta.algorithm === 'magnetic' && 
+                 result.visualization.raw_forces && (
+                  <div className="viz-item">
+                    <h4>Magnetic Signal Analysis</h4>
+                    <MagneticSignalChart
+                      rawForces={result.visualization.raw_forces}
+                      smoothedForces={result.visualization.smoothed_forces}
+                      predictedBoundaries={result.boundaries}
+                      title="Magnetic Clustering Signal Analysis"
+                    />
+                  </div>
+                )}
+
+                {/* Segmentation Comparison */}
+                {referenceBoundaries.length > 0 && result.segments.length > 0 && (
+                  <div className="viz-item">
+                    <h4>Segmentation Comparison</h4>
+                    <SegmentationComparison
+                      docLen={result.segments[result.segments.length - 1].end_sentence_idx + 1}
+                      trueBoundaries={referenceBoundaries}
+                      predBoundaries={result.boundaries}
+                      metricScore={result.meta.evaluation_score}
+                      title="Segmentation Comparison"
+                    />
+                  </div>
+                )}
               </div>
             )}
           </div>

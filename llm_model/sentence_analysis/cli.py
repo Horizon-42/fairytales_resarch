@@ -2,23 +2,23 @@
 
 Example:
   # Analyze a single sentence
-  python -m llm_model.auto_sentence_analysis_cli \
+  python -m llm_model.sentence_analysis.cli \
     --story-file /path/to/story.txt \
     --sentence "The hero defeated the dragon."
   
   # Auto-split and analyze all sentences
-  python -m llm_model.auto_sentence_analysis_cli \
+  python -m llm_model.sentence_analysis.cli \
     --story-file /path/to/story.txt \
     --output result.json
   
   # Use neighboring sentences as auxiliary context
-  python -m llm_model.auto_sentence_analysis_cli \
+  python -m llm_model.sentence_analysis.cli \
     --story-file /path/to/story.txt \
     --use-neighboring-sentences \
     --output result.json
   
   # Single sentence with neighboring sentences
-  python -m llm_model.auto_sentence_analysis_cli \
+  python -m llm_model.sentence_analysis.cli \
     --sentence "The hero defeated the dragon." \
     --use-neighboring-sentences \
     --previous-sentence "The dragon roared fiercely." \
@@ -39,13 +39,13 @@ import sys
 from pathlib import Path
 
 # Add parent directory to path to import sentence_splitter
-sys.path.insert(0, str(Path(__file__).parent.parent))
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from llm_model.env import load_repo_dotenv
 from llm_model.gemini_client import GeminiConfig
 from llm_model.llm_router import LLMConfig
 from llm_model.ollama_client import OllamaConfig
-from llm_model.sentence_analyzer import SentenceAnalyzerConfig, analyze_sentence
+from llm_model.sentence_analysis import SentenceAnalyzerConfig, analyze_sentence
 from pre_data_process.sentence_splitter import split_sentences_advanced
 
 

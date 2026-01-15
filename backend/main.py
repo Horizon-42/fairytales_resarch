@@ -47,7 +47,7 @@ from llm_model.summaries_annotator import (
     annotate_single_paragraph_summary,
     annotate_whole_summary_from_per_paragraph,
 )
-from llm_model.text_segmentation import TextSegmenter
+from llm_model.text_segmentation import TextSegmenter, VisualizableTextSegmenter
 from llm_model.ollama_client import embed as ollama_embed
 from llm_model.ollama_client import OllamaConfig, OllamaError, list_local_models
 from llm_model.vector_database import FairyVectorDB, VectorDBPaths
@@ -405,6 +405,7 @@ class TextSegmentationResponse(BaseModel):
     segments: List[Dict[str, Any]]
     boundaries: List[int]
     meta: Dict[str, Any]
+    visualization: Optional[Dict[str, Any]] = None  # Visualization data
 
 
 app = FastAPI(title="Fairytales Auto-Annotation API", version="0.1.0")
@@ -796,8 +797,8 @@ def segment_text(req: TextSegmentationRequest) -> TextSegmentationResponse:
         )
     
     try:
-        # Create segmenter
-        segmenter = TextSegmenter(
+        # Create visualizable segmenter to collect visualization data
+        segmenter = VisualizableTextSegmenter(
             embedding_func=embedding_func,
             algorithm=req.algorithm,
             embedding_model=embedding_model,
@@ -816,12 +817,45 @@ def segment_text(req: TextSegmentationRequest) -> TextSegmentationResponse:
             reference_boundaries=req.reference_boundaries,
         )
         
+        # Get visualization data
+        viz_data = segmenter.get_visualization_data()
+        
+        # Convert numpy arrays and networkx graphs to JSON-serializable format
+        import numpy as np
+        
+        visualization = {}
+        if "similarity_matrix" in viz_data:
+            sim_matrix = viz_data["similarity_matrix"]
+            if isinstance(sim_matrix, np.ndarray):
+                visualization["similarity_matrix"] = sim_matrix.tolist()
+            else:
+                visualization["similarity_matrix"] = sim_matrix
+        
+        if req.algorithm == "magnetic":
+            if "raw_forces" in viz_data:
+                raw_forces = viz_data["raw_forces"]
+                if isinstance(raw_forces, np.ndarray):
+                    visualization["raw_forces"] = raw_forces.tolist()
+                else:
+                    visualization["raw_forces"] = raw_forces
+            if "smoothed_forces" in viz_data:
+                smoothed_forces = viz_data["smoothed_forces"]
+                if isinstance(smoothed_forces, np.ndarray):
+                    visualization["smoothed_forces"] = smoothed_forces.tolist()
+                else:
+                    visualization["smoothed_forces"] = smoothed_forces
+        elif req.algorithm == "graph":
+            visualization["threshold"] = viz_data.get("threshold", req.threshold)
+            # Graph structure is too complex to serialize, skip for now
+            # Can add simplified version later if needed
+        
         return TextSegmentationResponse(
             ok=True,
             document_id=result.document_id,
             segments=result.segments,
             boundaries=result.boundaries,
             meta=result.meta,
+            visualization=visualization if visualization else None,
         )
     except Exception as exc:
         logger.exception("Text segmentation failed")
