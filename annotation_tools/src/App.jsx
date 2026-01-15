@@ -1,8 +1,9 @@
 import React, { useMemo, useState, useEffect, useRef } from "react";
-import { organizeFiles, mapV1ToState, mapV2ToState, mapV3ToState, generateUUID } from "./utils/fileHandler.js";
-import { downloadJson, relPathToDatasetHint, HIGHLIGHT_COLORS, emptyProppFn, extractEnglishFromRelationship, buildActionLayer } from "./utils/helpers.js";
+import { organizeFiles, mapV1ToState, mapV2ToState, mapV3ToState, mergeV2V3States, generateUUID } from "./utils/fileHandler.js";
+import { downloadJson, relPathToDatasetHint, HIGHLIGHT_COLORS, emptyProppFn, buildActionLayer } from "./utils/helpers.js";
 import { saveFolderCache, loadFolderCache, extractFolderPath } from "./utils/folderCache.js";
 import { getBackendUrl, clearBackendCache } from "./utils/backendConfig.js";
+import { getAnnotationServerUrl, getAnnotationServerUrlSync, clearAnnotationServerCache } from "./utils/annotationServerConfig.js";
 import { deriveTextSectionsFromNarratives } from "./utils/summarySections.js";
 import { VERSION } from "./version.js";
 
@@ -30,9 +31,6 @@ export default function App() {
   const [currentSelection, setCurrentSelection] = useState(null);
   const [selectedFolderPath, setSelectedFolderPath] = useState(null); // Store the selected folder path
 
-  const [jsonSaveHint, setJsonSaveHint] = useState(
-    "datasets/iron/persian/persian/json/FA_XXX.json"
-  );
   const [showPreview, setShowPreview] = useState(false);
   const [previewVersion, setPreviewVersion] = useState("v3");
 
@@ -292,7 +290,7 @@ export default function App() {
             .map((r) => ({
               agent: r.agent || "",
               target: r.target || "",
-              relationship_level1: r.relationship_level1 ? extractEnglishFromRelationship(r.relationship_level1) : "",
+              relationship_level1: r.relationship_level1 || "",
               relationship_level2: r.relationship_level2 || "",
               sentiment: r.sentiment || ""
             }));
@@ -507,8 +505,8 @@ export default function App() {
     try {
       const backendUrl = await getBackendUrl();
 
-      const per = paragraphSummaries?.perSection || {};
       const sections = deriveTextSectionsFromNarratives(narrativeStructure, sourceText.text);
+      const per = paragraphSummaries?.perSection || {};
       const whole = (paragraphSummaries?.whole || "").trim();
 
       const detectOnce = async (text) => {
@@ -529,13 +527,19 @@ export default function App() {
         return data;
       };
 
+      // For each section: use summary if available, otherwise use original section text
       const sectionCandidates = sections
         .map((s) => {
           const key = String(s.text_section);
           const summary = per[key];
-          return { key, summary };
+          const sectionText = typeof s.text === "string" ? s.text.trim() : "";
+          // Use summary if available and not empty, otherwise use original section text
+          const textToUse = (typeof summary === "string" && summary.trim()) 
+            ? summary.trim() 
+            : sectionText;
+          return { key, text: textToUse };
         })
-        .filter((x) => typeof x.summary === "string" && x.summary.trim());
+        .filter((x) => x.text && x.text.length > 0);
 
       const WHOLE_SUMMARY_KEY = "__WHOLE_SUMMARY__";
 
@@ -557,12 +561,12 @@ export default function App() {
         const MAX_SECTION_DETECT = 30;
         const picked = sectionCandidates
           .slice()
-          .sort((a, b) => (b.summary.length || 0) - (a.summary.length || 0))
+          .sort((a, b) => (b.text.length || 0) - (a.text.length || 0))
           .slice(0, MAX_SECTION_DETECT);
 
         const results = await Promise.all(
-          picked.map(async ({ key, summary }) => {
-            const data = await detectOnce(summary);
+          picked.map(async ({ key, text }) => {
+            const data = await detectOnce(text);
             return { key, data };
           })
         );
@@ -579,8 +583,9 @@ export default function App() {
 
       // Also run once on whole summary (if available) to recover global labels.
       // Evidence will still prefer a best section match; otherwise it falls back to whole.
+      // Only use whole summary if it exists and is not empty
       let wholeData = null;
-      if (whole) {
+      if (whole && whole.length > 0) {
         wholeData = await detectOnce(whole);
       }
 
@@ -605,7 +610,7 @@ export default function App() {
       const evidenceKeyForLabel = (bestMap, label) => {
         const best = bestMap[label];
         if (best?.sectionKey) return best.sectionKey;
-        if (whole) return WHOLE_SUMMARY_KEY;
+        if (whole && whole.length > 0) return WHOLE_SUMMARY_KEY;
         const firstSectionKey = sections && sections.length > 0 ? String(sections[0].text_section) : "";
         return firstSectionKey || "";
       };
@@ -727,7 +732,7 @@ export default function App() {
             instrument: n.instrument || "",
             time_order: n.time_order,
             // v1 only uses flat relationship fields
-            relationship_level1: n.relationship_level1 ? extractEnglishFromRelationship(n.relationship_level1) : "",
+            relationship_level1: n.relationship_level1 || "",
             relationship_level2: n.relationship_level2 || "",
             sentiment: n.sentiment || "",
             // v1 only uses flat action fields
@@ -793,7 +798,7 @@ export default function App() {
           instrument: n.instrument || "",
           time_order: n.time_order,
           // v2 only uses flat relationship fields
-          relationship_level1: n.relationship_level1 ? extractEnglishFromRelationship(n.relationship_level1) : "",
+          relationship_level1: n.relationship_level1 || "",
           relationship_level2: n.relationship_level2 || "",
           sentiment: n.sentiment || "",
           // v2 only uses flat action fields
@@ -911,7 +916,7 @@ export default function App() {
       return {
         agent: rel.agent || "",
         target: rel.target || "",
-        relationship_level1: level1 ? extractEnglishFromRelationship(level1) : "",
+        relationship_level1: level1 || "",
         relationship_level2: rel.relationship_level2 || "",
         sentiment: rel.sentiment || ""
       };
@@ -945,22 +950,32 @@ export default function App() {
         text_content: sourceText.text
       },
       characters: characters,
-      narrative_events: narrativeStructure.map((n) => {
+      narrative_events: narrativeStructure.map((n, index) => {
         if (typeof n === "string") {
           return {
+            id: generateUUID(),
+            text_span: null,
             event_type: "OTHER",
             description: n,
+            agents: [],
+            targets: [],
+            target_type: "character",
+            object_type: "",
+            instrument: "",
+            time_order: index + 1,
             relationships: [],
             action_layer: buildActionLayerV3({})
           };
         }
 
         // v3 format: extract from UI state (which may have relationship_multi or flat fields)
+        // NOTE: relationship_multi is ONLY for UI state management, NOT saved to v3 JSON
         // Only access v3-specific fields here, not in v1/v2
         const agents = Array.isArray(n.agents) ? n.agents.filter(Boolean) : [];
         const targets = Array.isArray(n.targets) ? n.targets.filter(Boolean) : [];
 
         // v3: extract relationships from relationship_multi (UI state) or flat fields
+        // relationship_multi is used in UI but converted to relationships array for v3 JSON
         const existingMultiList = Array.isArray(n.relationship_multi)
           ? n.relationship_multi
           : ((n.relationship_multi && typeof n.relationship_multi === "object") ? [n.relationship_multi] : []);
@@ -981,20 +996,27 @@ export default function App() {
         const actionLayer = buildActionLayerV3(n);
 
         // v3 schema: only include v3-specific fields, explicitly construct the object
+        // IMPORTANT: Do NOT include relationship_multi, relationship_level1, relationship_level2, sentiment
+        // These are UI-only fields. Only save the relationships array.
+        // Ensure id exists, generate if missing
+        const eventId = n.id || generateUUID();
+        
+        // Explicitly construct object to ensure no UI-only fields leak into JSON
         return {
-          id: n.id,
-          text_span: n.text_span,
+          id: eventId,
+          text_span: n.text_span || null,
           event_type: n.event_type || "",
           description: n.description || "",
           agents: agents,
           targets: targets,
-          target_type: n.target_type || "",
+          target_type: n.target_type || "character",
           object_type: n.object_type || "",
           instrument: n.instrument || "",
-          time_order: n.time_order,
-          // v3 only uses nested structures
+          time_order: n.time_order ?? (index + 1),
+          // v3 only uses nested structures - relationships array, NOT relationship_multi
           relationships: relList,
           action_layer: actionLayer
+          // Explicitly NOT including: relationship_multi, relationship_level1, relationship_level2, sentiment
         };
       }),
       themes_and_motifs: {
@@ -1044,7 +1066,8 @@ export default function App() {
     const folderPathToUse = selectedFolderPath;
 
     try {
-      const response = await fetch("http://localhost:3001/api/save", {
+      const serverUrl = getAnnotationServerUrl();
+      const response = await fetch(`${serverUrl}/api/save`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -1075,9 +1098,9 @@ export default function App() {
       if (!silent) alert("No story selected to save.");
       return;
     }
-    await handleSave("v1", true);
-    await handleSave("v2", true);
+    // Save v3 first (default), then v2 (backward compatibility), skip v1
     await handleSave("v3", true);
+    await handleSave("v2", true);
     if (!silent) setLastAutoSave(new Date());
   };
 
@@ -1096,6 +1119,8 @@ export default function App() {
     getBackendUrl().catch(err => {
       console.warn("Backend port discovery failed, will use default port:", err);
     });
+    
+    // Annotation server URL is now fixed (3001 or from env var), no discovery needed
   }, []); // Run once on mount
 
   // Save culture to cache when it changes (only if folder is selected)
@@ -1116,11 +1141,10 @@ export default function App() {
       if ((e.metaKey || e.ctrlKey) && e.key === 's') {
         e.preventDefault(); // Prevent default browser save behavior
 
-        // Save v1 + v2 + v3
+        // Save v3 first (default), then v2 (backward compatibility), skip v1
         if (selectedStoryIndex >= 0 && storyFiles[selectedStoryIndex]) {
-          handleSave("v1", true);
-          handleSave("v2", true);
           handleSave("v3", true);
+          handleSave("v2", true);
         } else {
           alert("No story selected to save.");
         }
@@ -1136,9 +1160,9 @@ export default function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       if (selectedStoryIndex !== -1) {
-        saveRef.current("v1", true);
-        saveRef.current("v2", true);
+        // Auto-save: v3 first (default), then v2 (backward compatibility), skip v1
         saveRef.current("v3", true);
+        saveRef.current("v2", true);
       }
     }, 5 * 60 * 1000);
 
@@ -1173,16 +1197,16 @@ export default function App() {
 
       // Use sendBeacon as primary method (designed for page unload)
       // Modern browsers block synchronous XHR during page dismissal
+      // Use sync version since sendBeacon is synchronous
+      const serverUrl = getAnnotationServerUrlSync();
       if (navigator.sendBeacon) {
         try {
           // sendBeacon requires Blob or FormData, not string
           // Create a Blob with text/plain type so server can parse it
           const blob = new Blob([payload], { type: 'text/plain' });
-          const sent = navigator.sendBeacon("http://localhost:3001/api/save", blob);
+          const sent = navigator.sendBeacon(`${serverUrl}/api/save`, blob);
           if (sent) {
             setLastAutoSave(new Date());
-          } else {
-            console.warn(`Auto-save ${version} failed: sendBeacon returned false`);
           }
         } catch (beaconErr) {
           console.error(`Auto-save ${version} error:`, beaconErr);
@@ -1190,7 +1214,7 @@ export default function App() {
       } else {
         // Fallback: Try fetch with keepalive (if sendBeacon not available)
         try {
-          fetch("http://localhost:3001/api/save", {
+          fetch(`${serverUrl}/api/save`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: payload,
@@ -1206,10 +1230,9 @@ export default function App() {
       }
     };
 
-    // Save all versions
-    saveData("v1");
-    saveData("v2");
+    // Save v3 first (default), then v2 (backward compatibility), skip v1
     saveData("v3");
+    saveData("v2");
   }, [selectedStoryIndex, storyFiles, jsonV1, jsonV2, jsonV3, selectedFolderPath]);
 
   // Save before page unload/refresh
@@ -1482,9 +1505,9 @@ export default function App() {
     // If there's already loaded data, save it before loading new folder
     if (selectedStoryIndex >= 0 && storyFiles[selectedStoryIndex]) {
       try {
-        await handleSave("v1", true);
-        await handleSave("v2", true);
+        // Save v3 first (default), then v2 (backward compatibility), skip v1
         await handleSave("v3", true);
+        await handleSave("v2", true);
       } catch (err) {
         console.error("Failed to save before opening new folder:", err);
         // Continue loading new folder even if save fails
@@ -1521,7 +1544,7 @@ export default function App() {
     
     if (!folderPath) {
       console.error(`[EXTRACT] Could not determine parent folder path`);
-      alert("错误：无法确定父文件夹路径。请确保选择的文件夹包含 texts 子文件夹。");
+      alert("Error: Unable to determine parent folder path. Please ensure the selected folder contains a 'texts' subfolder.");
       return;
     }
     
@@ -1604,7 +1627,59 @@ export default function App() {
     
     if (folderPathToUse && folderPathToUse.trim() !== '') {
       try {
-        const response = await fetch("http://localhost:3001/api/load", {
+        const serverUrl = getAnnotationServerUrl();
+        console.log(`[LOAD] Attempting to load from: ${serverUrl}/api/load`);
+        
+        // Try to load both v3 and v2, then merge them
+        const [v3Response, v2Response] = await Promise.allSettled([
+          fetch(`${serverUrl}/api/load`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ 
+              folderPath: folderPathToUse,
+              fileName: idGuess,
+              version: 3
+            })
+          }),
+          fetch(`${serverUrl}/api/load`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ 
+              folderPath: folderPathToUse,
+              fileName: idGuess,
+              version: 2
+            })
+          })
+        ]);
+
+        let v3State = null;
+        let v2State = null;
+
+        // Process v3 response
+        if (v3Response.status === 'fulfilled' && v3Response.value.ok) {
+          const v3Result = await v3Response.value.json();
+          if (v3Result.found && v3Result.content && v3Result.version === 3) {
+            v3State = mapV3ToState(v3Result.content);
+          }
+        }
+
+        // Process v2 response
+        if (v2Response.status === 'fulfilled' && v2Response.value.ok) {
+          const v2Result = await v2Response.value.json();
+          if (v2Result.found && v2Result.content && v2Result.version === 2) {
+            v2State = mapV2ToState(v2Result.content);
+          }
+        }
+
+        // Merge v2 and v3 states (union)
+        const mergedState = mergeV2V3States(v2State, v3State);
+        if (mergedState) {
+          loadState(mergedState);
+          return;
+        }
+
+        // Fallback: try single version load (backward compatibility)
+        const response = await fetch(`${serverUrl}/api/load`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ 
@@ -1615,11 +1690,14 @@ export default function App() {
         
         const result = await response.json();
         if (result.found && result.content) {
+          // Load v3 first (default), fallback to v2 if v3 doesn't exist, never load v1
           const mappedState = result.version === 3
             ? mapV3ToState(result.content)
-            : (result.version === 2 ? mapV2ToState(result.content) : mapV1ToState(result.content));
-          loadState(mappedState);
-          return;
+            : (result.version === 2 ? mapV2ToState(result.content) : null);
+          if (mappedState) {
+            loadState(mappedState);
+            return;
+          }
         }
       } catch (err) {
         console.warn("Server load failed with selectedFolderPath, trying originalPath", err);
@@ -1629,7 +1707,50 @@ export default function App() {
     // Fallback: try with originalPath
     // This is mainly for backward compatibility
     try {
-      const response = await fetch("http://localhost:3001/api/load", {
+      const serverUrl = getAnnotationServerUrl();
+      
+      // Try to load both v3 and v2, then merge them
+      const [v3Response, v2Response] = await Promise.allSettled([
+        fetch(`${serverUrl}/api/load`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ originalPath: story.path, version: 3 })
+        }),
+        fetch(`${serverUrl}/api/load`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ originalPath: story.path, version: 2 })
+        })
+      ]);
+
+      let v3State = null;
+      let v2State = null;
+
+      // Process v3 response
+      if (v3Response.status === 'fulfilled' && v3Response.value.ok) {
+        const v3Result = await v3Response.value.json();
+        if (v3Result.found && v3Result.content && v3Result.version === 3) {
+          v3State = mapV3ToState(v3Result.content);
+        }
+      }
+
+      // Process v2 response
+      if (v2Response.status === 'fulfilled' && v2Response.value.ok) {
+        const v2Result = await v2Response.value.json();
+        if (v2Result.found && v2Result.content && v2Result.version === 2) {
+          v2State = mapV2ToState(v2Result.content);
+        }
+      }
+
+      // Merge v2 and v3 states (union)
+      const mergedState = mergeV2V3States(v2State, v3State);
+      if (mergedState) {
+        loadState(mergedState);
+        return;
+      }
+
+      // Fallback: try single version load (backward compatibility)
+      const response = await fetch(`${serverUrl}/api/load`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ originalPath: story.path })
@@ -1637,33 +1758,47 @@ export default function App() {
       
       const result = await response.json();
       if (result.found && result.content) {
+        // Load v3 first (default), fallback to v2 if v3 doesn't exist, never load v1
         const mappedState = result.version === 3
           ? mapV3ToState(result.content)
-          : (result.version === 2 ? mapV2ToState(result.content) : mapV1ToState(result.content));
-        loadState(mappedState);
-        return;
+          : (result.version === 2 ? mapV2ToState(result.content) : null);
+        if (mappedState) {
+          loadState(mappedState);
+          return;
+        }
       }
     } catch (err) {
       console.warn("Server load failed, falling back to browser memory files", err);
     }
 
-    let jsonFile = (v3Map && v3Map[idGuess]) ? v3Map[idGuess] : v2Map[idGuess];
-    let version = (v3Map && v3Map[idGuess]) ? 3 : 2;
-    
-    if (!jsonFile) {
-      jsonFile = v1Map[idGuess];
-      version = 1;
+    // Load both v3 and v2 from browser memory, then merge them (union)
+    let v3State = null;
+    let v2State = null;
+
+    if (v3Map && v3Map[idGuess]) {
+      try {
+        const content = await v3Map[idGuess].text();
+        const data = JSON.parse(content);
+        v3State = mapV3ToState(data);
+      } catch (err) {
+        console.error("Failed to load v3 JSON from memory", err);
+      }
     }
 
-    if (jsonFile) {
+    if (v2Map && v2Map[idGuess]) {
       try {
-        const content = await jsonFile.text();
+        const content = await v2Map[idGuess].text();
         const data = JSON.parse(content);
-        const mappedState = version === 3 ? mapV3ToState(data) : (version === 2 ? mapV2ToState(data) : mapV1ToState(data));
-        loadState(mappedState);
+        v2State = mapV2ToState(data);
       } catch (err) {
-        console.error("Failed to load JSON annotation from memory", err);
+        console.error("Failed to load v2 JSON from memory", err);
       }
+    }
+
+    // Merge v2 and v3 states (union)
+    const mergedState = mergeV2V3States(v2State, v3State);
+    if (mergedState) {
+      loadState(mergedState);
     }
   };
 
@@ -2037,18 +2172,78 @@ export default function App() {
   // ========== Render ==========
   return (
     <div className="app-root">
-      <header className="app-header">
-        <div className="header-left">
+      <header className="app-header" style={{ position: 'relative' }}>
+        <div className="header-left" style={{ flexShrink: 0, minWidth: 0 }}>
           <span className="logo-icon">✨</span>
-          <div>
-            <h1>Fairy Tale Annotation Tool <span style={{ fontSize: "0.6em", fontWeight: "normal", color: "#64748b", marginLeft: "0.5rem" }}>v{VERSION}</span></h1>
-            <p>
-              Aligns with the Persian JSON schema in{" "}
-              <code>datasets/iron/persian/persian/json</code>.
-            </p>
+          <div style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            <h1 style={{ whiteSpace: 'nowrap' }}>Fairy Tale Annotation Tool <span style={{ fontSize: "0.6em", fontWeight: "normal", color: "#64748b", marginLeft: "0.5rem" }}>v{VERSION}</span></h1>
           </div>
         </div>
-        <div className="header-actions">
+
+        <div className="save-hint" style={{
+          position: 'absolute',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.5rem'
+        }}>
+          <span className="save-hint-label">LLM:</span>
+          <select
+            className="save-hint-input"
+            style={{ width: "160px" }}
+            value={llmProvider}
+            onChange={(e) => setLlmProvider(e.target.value)}
+            title="Choose LLM provider"
+          >
+            <option value="ollama">Ollama (local)</option>
+            <option value="gemini">Gemini</option>
+          </select>
+
+          {llmProvider === "gemini" ? (
+            <select
+              className="save-hint-input"
+              style={{ width: "240px" }}
+              value={geminiModel}
+              onChange={(e) => setGeminiModel(e.target.value)}
+              title={geminiModelsError ? `Gemini models load failed: ${geminiModelsError}` : "Gemini model (loaded from backend)"}
+              disabled={geminiModelsLoading || geminiModels.length === 0}
+            >
+              {geminiModelsLoading ? (
+                <option value="">Loading Gemini models…</option>
+              ) : geminiModels.length === 0 ? (
+                <option value="">No models (check GEMINI_API_KEY)</option>
+              ) : (
+                geminiModels.map((m) => (
+                  <option key={m.id} value={m.id}>
+                    {m.display_name ? `${m.display_name} (${m.id})` : m.id}
+                  </option>
+                ))
+              )}
+            </select>
+          ) : (
+            <input
+              className="save-hint-input"
+              style={{ width: "240px" }}
+              value={ollamaModel}
+              onChange={(e) => setOllamaModel(e.target.value)}
+              placeholder="Ollama model (e.g. qwen3:8b)"
+              title="Ollama model name"
+            />
+          )}
+
+          <label style={{ display: "flex", alignItems: "center", gap: "0.25rem", fontSize: "0.75rem", color: "#64748b", lineHeight: "1" }}>
+            <input
+              type="checkbox"
+              checked={llmThinking}
+              onChange={(e) => setLlmThinking(e.target.checked)}
+              style={{ margin: 0, verticalAlign: "middle" }}
+            />
+            thinking
+          </label>
+        </div>
+
+        <div className="header-actions" style={{ display: 'flex', gap: '0.5rem', alignItems: "center", flexShrink: 0 }}>
           <button
             type="button"
             className="ghost-btn"
@@ -2056,79 +2251,14 @@ export default function App() {
           >
             {showPreview ? "Hide JSON" : "Show JSON"}
           </button>
-
-          <div className="save-hint">
-            <span className="save-hint-label">LLM:</span>
-            <select
-              className="save-hint-input"
-              style={{ width: "160px" }}
-              value={llmProvider}
-              onChange={(e) => setLlmProvider(e.target.value)}
-              title="Choose LLM provider"
-            >
-              <option value="ollama">Ollama (local)</option>
-              <option value="gemini">Gemini</option>
-            </select>
-
-            {llmProvider === "gemini" ? (
-              <select
-                className="save-hint-input"
-                style={{ width: "240px" }}
-                value={geminiModel}
-                onChange={(e) => setGeminiModel(e.target.value)}
-                title={geminiModelsError ? `Gemini models load failed: ${geminiModelsError}` : "Gemini model (loaded from backend)"}
-                disabled={geminiModelsLoading || geminiModels.length === 0}
-              >
-                {geminiModelsLoading ? (
-                  <option value="">Loading Gemini models…</option>
-                ) : geminiModels.length === 0 ? (
-                  <option value="">No models (check GEMINI_API_KEY)</option>
-                ) : (
-                  geminiModels.map((m) => (
-                    <option key={m.id} value={m.id}>
-                      {m.display_name ? `${m.display_name} (${m.id})` : m.id}
-                    </option>
-                  ))
-                )}
-              </select>
-            ) : (
-              <input
-                className="save-hint-input"
-                style={{ width: "240px" }}
-                value={ollamaModel}
-                onChange={(e) => setOllamaModel(e.target.value)}
-                placeholder="Ollama model (e.g. qwen3:8b)"
-                title="Ollama model name"
-              />
-            )}
-
-            <label style={{ display: "flex", alignItems: "center", gap: "0.25rem", fontSize: "0.75rem", color: "#64748b" }}>
-              <input
-                type="checkbox"
-                checked={llmThinking}
-                onChange={(e) => setLlmThinking(e.target.checked)}
-              />
-              thinking
-            </label>
-          </div>
-          <div className="save-hint">
-            <span className="save-hint-label">Intended JSON path:</span>
-            <input
-              className="save-hint-input"
-              value={jsonSaveHint}
-              onChange={(e) => setJsonSaveHint(e.target.value)}
-            />
-          </div>
-          <div style={{ display: 'flex', gap: '0.5rem', alignItems: "center" }}>
-            {lastAutoSave && (
-              <span style={{ fontSize: "0.75rem", color: "#6b7280", marginRight: "0.5rem" }}>
-                Saved: {lastAutoSave.toLocaleTimeString()}
-              </span>
-            )}
-            <button className="primary-btn" onClick={() => handleSaveAll(false)}>
-              Save JSON
-            </button>
-          </div>
+          <button className="primary-btn" onClick={() => handleSaveAll(false)}>
+            Save JSON
+          </button>
+          {lastAutoSave && (
+            <span style={{ fontSize: "0.75rem", color: "#6b7280" }}>
+              Saved: {lastAutoSave.toLocaleTimeString()}
+            </span>
+          )}
         </div>
       </header>
 
@@ -2275,8 +2405,9 @@ export default function App() {
                 setMotif={setMotif}
                 onAutoDetectMotifAtu={handleAutoDetectMotifAtu}
                 autoDetectMotifLoading={autoDetectMotifLoading}
-                  textSections={deriveTextSectionsFromNarratives(narrativeStructure, sourceText.text)}
-                  wholeSummary={paragraphSummaries.whole || ""}
+                textSections={deriveTextSectionsFromNarratives(narrativeStructure, sourceText.text)}
+                wholeSummary={paragraphSummaries.whole || ""}
+                paragraphSummaries={paragraphSummaries}
               />
             )}
 

@@ -148,11 +148,6 @@ export function buildSetRelationshipMultiUpdates(nextList) {
   };
 }
 
-export function formatRelationshipLevel1Label(level1) {
-  if (!level1) return level1;
-  const match = String(level1).match(/\(([^)]+)\)/);
-  return match ? match[1] : level1;
-}
 
 /**
  * Build an updates object for a change to `agents` or `targets`.

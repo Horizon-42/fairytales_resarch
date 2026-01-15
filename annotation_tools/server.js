@@ -187,7 +187,7 @@ app.post('/api/save', (req, res) => {
 });
 
 app.post('/api/load', (req, res) => {
-  const { folderPath, fileName, originalPath } = req.body;
+  const { folderPath, fileName, originalPath, version } = req.body;
   
   let fullFolderPath = null;
   let targetFileName = null;
@@ -225,7 +225,7 @@ app.post('/api/load', (req, res) => {
     
     // Find texts folder in the path
     const textsIndex = pathParts.findIndex(part => 
-      part.toLowerCase() === 'texts' || part.toLowerCase() === 'traditional_texts'
+      part.toLowerCase() === 'texts'
     );
     
     if (textsIndex > 0) {
@@ -248,22 +248,49 @@ app.post('/api/load', (req, res) => {
     return res.status(400).json({ error: 'Missing folderPath+fileName or originalPath' });
   }
   
-  // Try to find JSON files in json_v3, json_v2, json folders
-  // These folders are in the parent folder (same level as texts)
-  const candidates = [];
-  const jsonFolders = ['json_v3', 'json_v2', 'json'];
-  const versions = [3, 2, 1];
-  
-  for (let i = 0; i < jsonFolders.length; i++) {
-    const jsonFolder = jsonFolders[i];
-    const version = versions[i];
+  // If version is specified, only load that version
+  if (version === 3 || version === 2) {
+    const jsonFolder = version === 3 ? 'json_v3' : 'json_v2';
     const jsonDir = path.join(fullFolderPath, jsonFolder);
     
     if (fs.existsSync(jsonDir)) {
       // Try with suffix first (e.g., jp_003_v3.json)
-      candidates.push({ path: path.join(jsonDir, `${targetFileName}_v${version}.json`), version });
+      const candidates = [
+        path.join(jsonDir, `${targetFileName}_v${version}.json`),
+        path.join(jsonDir, `${targetFileName}.json`)
+      ];
+      
+      for (const candidatePath of candidates) {
+        if (fs.existsSync(candidatePath)) {
+          try {
+            const content = JSON.parse(fs.readFileSync(candidatePath, 'utf8'));
+            return res.json({ found: true, content, version, path: candidatePath });
+          } catch (err) {
+            console.error(`Error reading/parsing ${candidatePath}:`, err);
+          }
+        }
+      }
+    }
+    return res.json({ found: false });
+  }
+  
+  // If no version specified, try to find JSON files in json_v3, json_v2 folders (skip json/v1)
+  // These folders are in the parent folder (same level as texts)
+  // Load v3 first (default), fallback to v2 if v3 doesn't exist, never load v1
+  const candidates = [];
+  const jsonFolders = ['json_v3', 'json_v2'];
+  const versions = [3, 2];
+  
+  for (let i = 0; i < jsonFolders.length; i++) {
+    const jsonFolder = jsonFolders[i];
+    const v = versions[i];
+    const jsonDir = path.join(fullFolderPath, jsonFolder);
+    
+    if (fs.existsSync(jsonDir)) {
+      // Try with suffix first (e.g., jp_003_v3.json)
+      candidates.push({ path: path.join(jsonDir, `${targetFileName}_v${v}.json`), version: v });
       // Then without suffix (e.g., jp_003.json)
-      candidates.push({ path: path.join(jsonDir, `${targetFileName}.json`), version });
+      candidates.push({ path: path.join(jsonDir, `${targetFileName}.json`), version: v });
     }
   }
   

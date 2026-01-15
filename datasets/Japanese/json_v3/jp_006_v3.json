@@ -499,9 +499,11 @@
     ],
     "propp_notes": "",
     "paragraph_summaries": {
-      "per_section": {},
+      "per_section": {
+        "S777-809": "The boat could not withstand the weight of salt and sank into the sea."
+      },
       "combined": [],
-      "whole": ""
+      "whole": "A poor man in a village welcomed a lost old man with a white beard, who gifted him a magical stone. The stone could grant desires when turned right but needed to be stopped to prevent endless output. The man used it to obtain rice, then salt, which filled a boat until it sank under the weight. Meanwhile, his older brother stole stone powder, leading to the tragedy, while a curious visitor witnessed the stone's power."
     },
     "bias_reflection": {
       "cultural_reading": "",

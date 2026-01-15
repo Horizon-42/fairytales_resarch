@@ -700,8 +700,11 @@
     }
   ],
   "themes_and_motifs": {
-    "ending_type": "HAPPY_REUNION",
-    "key_values": [],
+    "ending_type": "BITTERSWEET",
+    "key_values": [
+      "LOYALTY",
+      "OBEDIENCE"
+    ],
     "motif_type": [],
     "atu_categories": [],
     "obstacle_thrower": [],

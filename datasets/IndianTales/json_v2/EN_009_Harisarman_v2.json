@@ -1,0 +1,343 @@
+{
+  "version": "2.0",
+  "metadata": {
+    "id": "EN_009_Harisarman",
+    "title": "Harisarman",
+    "culture": "Indian",
+    "annotator": "Deb",
+    "date_annotated": "2026-01-14",
+    "confidence": 0.85
+  },
+  "source_info": {
+    "language": "",
+    "type": "",
+    "reference_uri": "datasets/texts/EN_009_Harisarman.txt",
+    "text_content": "There was a certain Brahman in a certain village, named Harisarman. He was poor and foolish and in evil case for want of employment, and he had very many children, that he might reap the fruit of his misdeeds in a former life. He wandered about begging with his family, and at last he reached a certain city, and entered the service of a rich householder called Sthuladatta. His sons became keepers of Sthuladatta's cows and other property, and his wife a servant to him, and he himself lived near his house, performing the duty of an attendant. One day there was a feast on account of the marriage of the daughter of Sthuladatta, largely attended by many friends of the bridegroom, and merry-makers. Harisarman hoped that he would be able to fill himself up to the throat with ghee and flesh and other dainties, and get the same for his family, in the house of his patron. While he was anxiously expecting to be fed, no one thought of him.\nThen he was distressed at getting nothing to eat, and he said to his wife at night, \"It is owing to my poverty and stupidity that I am treated with such disrespect here; so I will pretend by means of an artifice to possess a knowledge of magic, so that I may become an object of respect to this Sthuladatta; so, when you get an opportunity, tell him that I possess magical knowledge.\" He said this to her, and after turning the matter over in his mind, while people were asleep he took away from the house of Sthuladatta a horse on which his master's son-in-law rode. He placed it in concealment at some distance, and in the morning the friends of the bridegroom could not find the horse, though they searched in every direction. Then, while Sthuladatta was distressed at the evil omen, and searching for the thieves who had carried off the horse, the wife of Harisarman came and said to him, \"My husband is a wise man, skilled in astrology and magical sciences; he can get the horse back for you; why do you not ask him?\" \nWhen Sthuladatta heard that, he called Harisarman, who said, \"Yesterday I was forgotten, but to-day, now the horse is stolen, I am called to mind,\" and Sthuladatta then propitiated the Brahman with these words—\"I forgot you, forgive me\"—and asked him to tell him who had taken away their horse. Then Harisarman drew all kinds of pretended diagrams, and said: \"The horse has been placed by thieves on the boundary line south from this place. It is concealed there, and before it is carried off to a distance, as it will be at close of day, go quickly and bring it.\" When they heard that, many men ran and brought the horse quickly, praising the discernment of Harisarman. Then Harisarman was honoured by all men as a sage, and dwelt there in happiness, honoured by Sthuladatta.\nNow, as days went on, much treasure, both of gold and jewels, had been stolen by a thief from the palace of the king. As the thief was not known, the king quickly summoned Harisarman on account of his reputation for knowledge of magic. And he, when summoned, tried to gain time, and said, \"I will tell you to-morrow,\" and then he was placed in a chamber by the king, and carefully guarded. And he was sad because he had pretended to have knowledge. Now in that palace there was a maid named Jihva (which means Tongue), who, with the assistance of her brother, had stolen that treasure from the interior of the palace. She, being alarmed at Harisarman's knowledge, went at night and applied her ear to the door of that chamber in order to find out what he was about. And Harisarman, who was alone inside, was at that very moment blaming his own tongue, that had made a vain assumption of knowledge. He said: \"O Tongue, what is this that you have done through your greediness? Wicked one, you will soon receive punishment in full.\" When Jihva heard this, she thought, in her terror, that she had been discovered by this wise man, and she managed to get in where he was, and falling at his feet, she said to the supposed wizard: \"Brahman, here I am, that Jihva whom you have discovered to be the thief of the treasure, and after I took it I buried it in the earth in a garden behind the palace, under a pomegranate tree. So spare me, and receive the small quantity of gold which is in my possession.\"\nWhen Harisarman heard that, he said to her proudly: \"Depart, I know all this; I know the past, present and future; but I will not denounce you, being a miserable creature that has implored my protection. But whatever gold is in your possession you must give back to me.\" When he said this to the maid, she consented, and departed quickly. But Harisarman reflected in his astonishment: \"Fate brings about, as if in sport, things impossible, for when calamity was so near, who would have thought chance would have brought us success? While I was blaming my jihva, the thief Jihva suddenly flung herself at my feet. Secret crimes manifest themselves by means of fear.\" Thus thinking, he passed the night happily in the chamber. And in the morning he brought the king, by some skilful parade of pretended knowledge into the garden, and led him up to the treasure, which was buried under the pomegranate tree, and said that the thief had escaped with a part of it. Then the king was pleased, and gave him the revenue of many villages.\nBut the minister, named Devajnanin, whispered in the king's ear: \"How can a man possess such knowledge unattainable by men, without having studied the books of magic; you may be certain that this is a specimen of the way he makes a dishonest livelihood, by having a secret intelligence with thieves. It will be much better to test him by some new artifice.\" Then the king of his own accord brought a covered pitcher into which he had thrown a frog, and said to Harisarman, \"Brahman, if you can guess what there is in this pitcher, I will do you great honour to-day.\" When the Brahman Harisarman heard that, he thought that his last hour had come, and he called to mind the pet name of \"Froggie\" which his father had given him in his childhood in sport, and, impelled by luck, he called to himself by his pet name, lamenting his hard fate, and suddenly called out: \"This is a fine pitcher for you, Froggie; it will soon become the swift destroyer of your helpless self.\" The people there, when they heard him say that, raised a shout of applause, because his speech chimed in so well with the object presented to him, and murmured, \"Ah! a great sage, he knows even about the frog!\" Then the king, thinking that this was all due to knowledge of divination, was highly delighted, and gave Harisarman the revenue of more villages, with gold, an umbrella, and state carriages of all kinds. So Harisarman prospered in the world.\n"
+  },
+  "characters": [
+    {
+      "name": "Harisarman",
+      "alias": "Froggie",
+      "archetype": "Hero"
+    },
+    {
+      "name": "Sthuladatta",
+      "alias": "Rich householder",
+      "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "Harisarman's Wife",
+      "alias": "",
+      "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "Jihva",
+      "alias": "Tongue",
+      "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "The King",
+      "alias": "",
+      "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "Devajnanin",
+      "alias": "The Minister",
+      "archetype": "Rebel"
+    },
+    {
+      "name": "self",
+      "alias": "Harisarman",
+      "archetype": "Hero"
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "c78d1216-2a3b-4f08-be02-a1d3de949f5c",
+      "text_span": {
+        "start": 0,
+        "end": 940,
+        "text": "There was a certain Brahman in a certain village, named Harisarman. He was poor and foolish and in evil case for want of employment, and he had very many children, that he might reap the fruit of his misdeeds in a former life. He wandered about begging with his family, and at last he reached a certain city, and entered the service of a rich householder called Sthuladatta. His sons became keepers of Sthuladatta's cows and other property, and his wife a servant to him, and he himself lived near his house, performing the duty of an attendant. One day there was a feast on account of the marriage of the daughter of Sthuladatta, largely attended by many friends of the bridegroom, and merry-makers. Harisarman hoped that he would be able to fill himself up to the throat with ghee and flesh and other dainties, and get the same for his family, in the house of his patron. While he was anxiously expecting to be fed, no one thought of him."
+      },
+      "event_type": "LACK",
+      "description": "Harisarman is ignored at a feast, feeling the sting of his poverty and disrespect.",
+      "agents": [
+        "Sthuladatta"
+      ],
+      "targets": [
+        "Harisarman"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationship_level1": "Hierarchy",
+      "relationship_level2": "master_servant",
+      "sentiment": "negative",
+      "action_category": "communicative",
+      "action_type": "inform",
+      "action_context": "",
+      "action_status": "failure",
+      "narrative_function": "trigger"
+    },
+    {
+      "id": "88af4eb2-e9ef-4b51-be99-56df278ef7aa",
+      "text_span": {
+        "start": 941,
+        "end": 1670,
+        "text": "Then he was distressed at getting nothing to eat, and he said to his wife at night, \"It is owing to my poverty and stupidity that I am treated with such disrespect here; so I will pretend by means of an artifice to possess a knowledge of magic, so that I may become an object of respect to this Sthuladatta; so, when you get an opportunity, tell him that I possess magical knowledge.\" He said this to her, and after turning the matter over in his mind, while people were asleep he took away from the house of Sthuladatta a horse on which his master's son-in-law rode. He placed it in concealment at some distance, and in the morning the friends of the bridegroom could not find the horse, though they searched in every direction."
+      },
+      "event_type": "OTHER",
+      "description": "To gain respect, Harisarman steals his master's horse to later \"find\" it using fake magic.",
+      "agents": [
+        "Harisarman"
+      ],
+      "targets": [
+        "Sthuladatta"
+      ],
+      "target_type": "object",
+      "object_type": "magical_agent",
+      "instrument": "",
+      "time_order": 2,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "",
+      "narrative_function": "setup"
+    },
+    {
+      "id": "6a1d5dde-6933-451f-9115-3054307be512",
+      "text_span": {
+        "start": 1671,
+        "end": 2529,
+        "text": "Then, while Sthuladatta was distressed at the evil omen, and searching for the thieves who had carried off the horse, the wife of Harisarman came and said to him, \"My husband is a wise man, skilled in astrology and magical sciences; he can get the horse back for you; why do you not ask him?\" \nWhen Sthuladatta heard that, he called Harisarman, who said, \"Yesterday I was forgotten, but to-day, now the horse is stolen, I am called to mind,\" and Sthuladatta then propitiated the Brahman with these words—\"I forgot you, forgive me\"—and asked him to tell him who had taken away their horse. Then Harisarman drew all kinds of pretended diagrams, and said: \"The horse has been placed by thieves on the boundary line south from this place. It is concealed there, and before it is carried off to a distance, as it will be at close of day, go quickly and bring it.\""
+      },
+      "event_type": "TRICKERY",
+      "description": "Harisarman \"divines\" the location of the horse he stole, gaining fame as a sage.",
+      "agents": [
+        "Harisarman"
+      ],
+      "targets": [
+        "Sthuladatta"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationship_level1": "Hierarchy",
+      "relationship_level2": "commander_subordinate",
+      "sentiment": "positive",
+      "action_category": "communicative",
+      "action_type": "inform",
+      "action_context": "",
+      "action_status": "success",
+      "narrative_function": "climax"
+    },
+    {
+      "id": "bb57f070-098c-4c47-841d-7d5d357fcb86",
+      "text_span": {
+        "start": 2742,
+        "end": 3132,
+        "text": "Now, as days went on, much treasure, both of gold and jewels, had been stolen by a thief from the palace of the king. As the thief was not known, the king quickly summoned Harisarman on account of his reputation for knowledge of magic. And he, when summoned, tried to gain time, and said, \"I will tell you to-morrow,\" and then he was placed in a chamber by the king, and carefully guarded. "
+      },
+      "event_type": "DIFFICULT_TASK",
+      "description": "The King demands Harisarman use his magic to find stolen royal treasure; Harisarman is trapped by his own lie.",
+      "agents": [
+        "The King"
+      ],
+      "targets": [
+        "Harisarman"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationship_level1": "Hierarchy",
+      "relationship_level2": "ruler_subject",
+      "sentiment": "fearful",
+      "action_category": "communicative",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "attempt",
+      "narrative_function": "climax"
+    },
+    {
+      "id": "0ccee174-484d-4677-b954-da1a6145b38d",
+      "text_span": {
+        "start": 3508,
+        "end": 3868,
+        "text": "And Harisarman, who was alone inside, was at that very moment blaming his own tongue, that had made a vain assumption of knowledge. He said: \"O Tongue, what is this that you have done through your greediness? Wicked one, you will soon receive punishment in full.\" When Jihva heard this, she thought, in her terror, that she had been discovered by this wise man"
+      },
+      "event_type": "RECOGNITION",
+      "description": "Harisarman blames his \"tongue\" (Jihva) for his trouble; the thief named Jihva (Tongue) overhears and confesses, thinking he knows her crime.",
+      "agents": [
+        "Harisarman"
+      ],
+      "targets": [
+        "Jihva"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationship_level1": "Neutral",
+      "relationship_level2": "stranger",
+      "sentiment": "fearful",
+      "action_category": "communicative",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "success",
+      "narrative_function": "resolution"
+    },
+    {
+      "id": "3d88f817-c24d-475d-8bac-dd4c54010ab5",
+      "text_span": {
+        "start": 3508,
+        "end": 3868,
+        "text": "And Harisarman, who was alone inside, was at that very moment blaming his own tongue, that had made a vain assumption of knowledge. He said: \"O Tongue, what is this that you have done through your greediness? Wicked one, you will soon receive punishment in full.\" When Jihva heard this, she thought, in her terror, that she had been discovered by this wise man"
+      },
+      "event_type": "LIQUIDATION",
+      "description": "Harisarman reveals the treasure's location (keeping the thief's secret) and is rewarded.",
+      "agents": [
+        "Harisarman"
+      ],
+      "targets": [
+        "The King"
+      ],
+      "target_type": "object",
+      "object_type": "normal_object",
+      "instrument": "",
+      "time_order": 6,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "",
+      "narrative_function": "resolution"
+    },
+    {
+      "id": "3af645f7-06f3-4b9e-9b02-aef8248886b2",
+      "text_span": {
+        "start": 5270,
+        "end": 5836,
+        "text": "But the minister, named Devajnanin, whispered in the king's ear: \"How can a man possess such knowledge unattainable by men, without having studied the books of magic; you may be certain that this is a specimen of the way he makes a dishonest livelihood, by having a secret intelligence with thieves. It will be much better to test him by some new artifice.\" Then the king of his own accord brought a covered pitcher into which he had thrown a frog, and said to Harisarman, \"Brahman, if you can guess what there is in this pitcher, I will do you great honour to-day.\""
+      },
+      "event_type": "DIFFICULT_TASK",
+      "description": "Skeptical minister prompts a final test; the King asks Harisarman to guess the contents of a pitcher.",
+      "agents": [
+        "The King"
+      ],
+      "targets": [
+        "Harisarman"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 7,
+      "relationship_level1": "Hierarchy",
+      "relationship_level2": "ruler_subject",
+      "sentiment": "fearful",
+      "action_category": "mental",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "attempt",
+      "narrative_function": "climax"
+    },
+    {
+      "id": "eaca967c-2f6e-49c2-bd54-9a10407d12e7",
+      "text_span": {
+        "start": 5837,
+        "end": 6239,
+        "text": "When the Brahman Harisarman heard that, he thought that his last hour had come, and he called to mind the pet name of \"Froggie\" which his father had given him in his childhood in sport, and, impelled by luck, he called to himself by his pet name, lamenting his hard fate, and suddenly called out: \"This is a fine pitcher for you, Froggie; it will soon become the swift destroyer of your helpless self.\""
+      },
+      "event_type": "SOLUTION",
+      "description": "Harisarman laments his own fate using his childhood nickname \"Froggie,\" which coincidentally matches the frog in the pitcher.",
+      "agents": [
+        "Harisarman"
+      ],
+      "targets": [
+        "self"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 8,
+      "relationship_level1": "Neutral",
+      "relationship_level2": "stranger",
+      "sentiment": "positive",
+      "action_category": "communicative",
+      "action_type": "inform",
+      "action_context": "",
+      "action_status": "success",
+      "narrative_function": "resolution"
+    },
+    {
+      "id": "3c9cb032-e9c6-441b-904c-72a06e1f7d11",
+      "text_span": {
+        "start": 6451,
+        "end": 6692,
+        "text": "Then the king, thinking that this was all due to knowledge of divination, was highly delighted, and gave Harisarman the revenue of more villages, with gold, an umbrella, and state carriages of all kinds. So Harisarman prospered in the world."
+      },
+      "event_type": "TRANSFIGURATION",
+      "description": "Harisarman is permanently honored and enriched.",
+      "agents": [
+        "The King"
+      ],
+      "targets": [
+        "Harisarman"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 9,
+      "relationship_level1": "Hierarchy",
+      "relationship_level2": "ruler_subject",
+      "sentiment": "positive",
+      "action_category": "transaction",
+      "action_type": "reward",
+      "action_context": "",
+      "action_status": "success",
+      "narrative_function": "resolution"
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "HAPPY_ENDING",
+    "key_values": [
+      "LUCK",
+      "CUNNING",
+      "OTHER (Fate/Destiny)"
+    ],
+    "motif_type": [],
+    "atu_categories": [],
+    "obstacle_thrower": [
+      "Jihva",
+      "The King",
+      "Devajnanin"
+    ],
+    "helper_type": [],
+    "thinking_process": "",
+    "atu_evidence": {},
+    "motif_evidence": {}
+  },
+  "analysis": {
+    "propp_functions": [],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

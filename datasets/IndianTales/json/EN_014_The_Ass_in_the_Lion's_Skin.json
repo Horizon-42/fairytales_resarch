@@ -1,0 +1,357 @@
+{
+  "id": "EN_014_The_Ass_in_the_Lion's_Skin",
+  "culture": "Indian",
+  "title": "",
+  "source_text": {
+    "text": "At the same time, when Brahma-datta was reigning in Benares, the future Buddha was born one of a peasant family; and when he grew up, he gained his living by tilling the ground.\nAt that time a hawker used to go from place to place, trafficking in goods carried by an ass. Now at each place he came to, when he took the pack down from the ass's back, he used to clothe him in a lion's skin, and turn him loose in the rice and barley fields. And when the watchmen in the fields saw the ass, they dared not go near him, taking him for a lion.\nSo one day the hawker stopped in a village; and whilst he was getting his own breakfast cooked, he dressed the ass in a lion's skin, and turned him loose in a barley-field. The watchmen in the field dared not go up to him; but going home, they published the news. Then all the villagers came out with weapons in their hands; and blowing chanks, and beating drums, they went near the field and shouted. Terrified with the fear of death, the ass uttered a cry—the bray of an ass!\nAnd when he knew him then to be an ass, the future Buddha pronounced the First Verse:\n\"This is not a lion's roaring,\nNor a tiger's, nor a panther's;\nDressed in a lion's skin,\n'Tis a wretched ass that roars!\"\nBut when the villagers knew the creature to be an ass, they beat him till his bones broke; and, carrying off the lion's skin, went away. Then the hawker came; and seeing the ass fallen into so bad a plight, pronounced the Second Verse:\n\"Long might the ass,\nClad in a lion's skin,\nHave fed on the barley green.\nBut he brayed!\nAnd that moment he came to ruin.\"\nAnd even whilst he was yet speaking the ass died on the spot!",
+    "language": "",
+    "type": "",
+    "reference_uri": "datasets/texts/EN_014_The_Ass_in_the_Lion's_Skin.txt"
+  },
+  "metadata": {
+    "main_motif": "",
+    "atu_type": "",
+    "ending_type": "OTHER",
+    "key_values": [
+      "JUSTICE",
+      "OTHER (Truth vs Appearance)",
+      "OTHER (Silence)"
+    ],
+    "target_motif": true
+  },
+  "thinking_process": "",
+  "annotation": {
+    "motif": {
+      "atu_type": "",
+      "atu_categories": [],
+      "motif_type": [],
+      "character_archetypes": [
+        {
+          "name": "The Future Buddha",
+          "alias": "Peasant; Wise Man",
+          "archetype": "Mentor"
+        },
+        {
+          "name": "The Ass",
+          "alias": "",
+          "archetype": "Other"
+        },
+        {
+          "name": "The Hawker",
+          "alias": "",
+          "archetype": "Sidekick/Helper"
+        },
+        {
+          "name": "The Villagers",
+          "alias": "Watchmen",
+          "archetype": "Villain"
+        }
+      ],
+      "obstacle_pattern": [],
+      "obstacle_thrower": [
+        "The Villagers"
+      ],
+      "helper_type": [],
+      "thinking_process": "",
+      "atu_evidence": {},
+      "motif_evidence": {}
+    },
+    "deep": {
+      "paragraph_summaries": {
+        "per_section": {},
+        "combined": [],
+        "whole": ""
+      },
+      "propp_functions": [
+        {
+          "id": "da7ac2f6-b6f9-4e2e-8231-c6dc43c31cde",
+          "fn": "TRICKERY",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 272,
+            "end": 539,
+            "text": "Now at each place he came to, when he took the pack down from the ass's back, he used to clothe him in a lion's skin, and turn him loose in the rice and barley fields. And when the watchmen in the fields saw the ass, they dared not go near him, taking him for a lion."
+          },
+          "evidence": "The hawker uses a lion's skin to disguise the ass, allowing it to graze freely by scaring off guards.",
+          "narrative_event_id": "f8a6d6b0-48c9-40ff-bbe3-2301243e524f"
+        },
+        {
+          "id": "bf892f28-eb9b-4c14-9108-7dcac47eaa23",
+          "fn": "STRUGGLE",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 804,
+            "end": 941,
+            "text": "Then all the villagers came out with weapons in their hands; and blowing chanks, and beating drums, they went near the field and shouted."
+          },
+          "evidence": "The villagers gather courage and create a loud noise to scare away the beast.",
+          "narrative_event_id": "1797a8f9-3f60-43e1-abe9-04a20eecba0b"
+        },
+        {
+          "id": "13ec5bee-ebc2-40bc-9710-ecbdba52410b",
+          "fn": "EXPOSURE",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 942,
+            "end": 1017,
+            "text": "Terrified with the fear of death, the ass uttered a cry—the bray of an ass!"
+          },
+          "evidence": "Overcome by fear, the ass breaks character and reveals its true identity by braying.",
+          "narrative_event_id": "f964e833-d35a-49f2-b1c6-5595f58afe30"
+        },
+        {
+          "id": "d77bf566-9d67-4d3f-b64e-1cd5dc99f64c",
+          "fn": "RECOGNITION",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 1018,
+            "end": 1225,
+            "text": "And when he knew him then to be an ass, the future Buddha pronounced the First Verse:\n\"This is not a lion's roaring,\nNor a tiger's, nor a panther's;\nDressed in a lion's skin,\n'Tis a wretched ass that roars!\""
+          },
+          "evidence": "The Bodhisatta confirms the creature's identity to the crowd.",
+          "narrative_event_id": "1f9a626f-95f7-4b37-a1af-e58bc69b1f4a"
+        },
+        {
+          "id": "96f38c3f-a8a6-45cd-9a44-f189b8d21606",
+          "fn": "PUNISHMENT",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 1226,
+            "end": 1362,
+            "text": "But when the villagers knew the creature to be an ass, they beat him till his bones broke; and, carrying off the lion's skin, went away."
+          },
+          "evidence": "The villagers beat the ass for the deception and reclaim the skin.",
+          "narrative_event_id": "f5f7da49-803c-4103-9b2b-e82c902804ec"
+        },
+        {
+          "id": "0a57e7d5-f6c1-4abf-84a2-e2fd0137f474",
+          "fn": "TRANSFIGURATION",
+          "spanType": "text",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "textSpan": {
+            "start": 1363,
+            "end": 1646,
+            "text": "Then the hawker came; and seeing the ass fallen into so bad a plight, pronounced the Second Verse:\n\"Long might the ass,\nClad in a lion's skin,\nHave fed on the barley green.\nBut he brayed!\nAnd that moment he came to ruin.\"\nAnd even whilst he was yet speaking the ass died on the spot!"
+          },
+          "evidence": "The Ass dies from the beating; the Hawker laments that the Ass's own noise caused its ruin.",
+          "narrative_event_id": "10028978-bfe9-49b2-a32f-fbb786ca5cb7"
+        }
+      ],
+      "propp_notes": ""
+    }
+  },
+  "narrative_structure": [
+    {
+      "id": "f8a6d6b0-48c9-40ff-bbe3-2301243e524f",
+      "event_type": "TRICKERY",
+      "description": "The hawker uses a lion's skin to disguise the ass, allowing it to graze freely by scaring off guards.",
+      "narrative_function": "setup",
+      "agents": [
+        "The Hawker"
+      ],
+      "targets": [
+        "The Villagers"
+      ],
+      "text_span": {
+        "start": 272,
+        "end": 539,
+        "text": "Now at each place he came to, when he took the pack down from the ass's back, he used to clothe him in a lion's skin, and turn him loose in the rice and barley fields. And when the watchmen in the fields saw the ass, they dared not go near him, taking him for a lion."
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationship_level1": "Neutral",
+      "relationship_level2": "stranger",
+      "relationship_multi": [],
+      "sentiment": "neutral",
+      "action_category": "communicative",
+      "action_type": "deceive",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "1797a8f9-3f60-43e1-abe9-04a20eecba0b",
+      "event_type": "STRUGGLE",
+      "description": "The villagers gather courage and create a loud noise to scare away the beast.",
+      "agents": [
+        "The Villagers"
+      ],
+      "targets": [
+        "The Ass"
+      ],
+      "text_span": {
+        "start": 804,
+        "end": 941,
+        "text": "Then all the villagers came out with weapons in their hands; and blowing chanks, and beating drums, they went near the field and shouted."
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "enemy",
+      "relationship_multi": [],
+      "sentiment": "hostile",
+      "narrative_function": "climax",
+      "action_category": "communicative",
+      "action_type": "challenge",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "f964e833-d35a-49f2-b1c6-5595f58afe30",
+      "event_type": "EXPOSURE",
+      "description": "Overcome by fear, the ass breaks character and reveals its true identity by braying.",
+      "agents": [
+        "The Ass"
+      ],
+      "targets": [
+        "The Villagers"
+      ],
+      "text_span": {
+        "start": 942,
+        "end": 1017,
+        "text": "Terrified with the fear of death, the ass uttered a cry—the bray of an ass!"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "fearful",
+      "narrative_function": "climax",
+      "action_category": "communicative",
+      "action_type": "inform",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "1f9a626f-95f7-4b37-a1af-e58bc69b1f4a",
+      "event_type": "RECOGNITION",
+      "description": "The Bodhisatta confirms the creature's identity to the crowd.",
+      "agents": [
+        "The Future Buddha"
+      ],
+      "targets": [
+        "The Villagers"
+      ],
+      "text_span": {
+        "start": 1018,
+        "end": 1225,
+        "text": "And when he knew him then to be an ass, the future Buddha pronounced the First Verse:\n\"This is not a lion's roaring,\nNor a tiger's, nor a panther's;\nDressed in a lion's skin,\n'Tis a wretched ass that roars!\""
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "ally",
+      "relationship_multi": [],
+      "sentiment": "positive",
+      "narrative_function": "resolution",
+      "action_category": "communicative",
+      "action_type": "inform",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "f5f7da49-803c-4103-9b2b-e82c902804ec",
+      "event_type": "PUNISHMENT",
+      "description": "The villagers beat the ass for the deception and reclaim the skin.",
+      "agents": [
+        "The Villagers"
+      ],
+      "targets": [
+        "The Ass"
+      ],
+      "text_span": {
+        "start": 1226,
+        "end": 1362,
+        "text": "But when the villagers knew the creature to be an ass, they beat him till his bones broke; and, carrying off the lion's skin, went away."
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "enemy",
+      "relationship_multi": [],
+      "sentiment": "hostile",
+      "narrative_function": "resolution",
+      "action_category": "physical",
+      "action_type": "attack",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "10028978-bfe9-49b2-a32f-fbb786ca5cb7",
+      "event_type": "TRANSFIGURATION",
+      "description": "The Ass dies from the beating; the Hawker laments that the Ass's own noise caused its ruin.",
+      "agents": [
+        "The Hawker"
+      ],
+      "targets": [
+        "The Ass"
+      ],
+      "text_span": {
+        "start": 1363,
+        "end": 1646,
+        "text": "Then the hawker came; and seeing the ass fallen into so bad a plight, pronounced the Second Verse:\n\"Long might the ass,\nClad in a lion's skin,\nHave fed on the barley green.\nBut he brayed!\nAnd that moment he came to ruin.\"\nAnd even whilst he was yet speaking the ass died on the spot!"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6,
+      "relationship_level1": "Hierarchy",
+      "relationship_level2": "master_servant",
+      "relationship_multi": [],
+      "sentiment": "negative",
+      "narrative_function": "resolution",
+      "action_category": "existential",
+      "action_type": "die",
+      "action_context": "",
+      "action_status": "success"
+    }
+  ],
+  "cross_validation": {
+    "shared_story": null,
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    }
+  },
+  "qa": {
+    "annotator": "Deb",
+    "date_annotated": "2026-01-14",
+    "confidence": 0.89,
+    "notes": ""
+  }
+}

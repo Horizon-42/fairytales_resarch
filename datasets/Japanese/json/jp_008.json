@@ -14,8 +14,7 @@
     "ending_type": "HAPPY_ENDING",
     "key_values": [
       "OBEDIENCE",
-      "JUSTICE",
-      "MODERATION"
+      "JUSTICE"
     ],
     "target_motif": true
   },
@@ -271,15 +270,39 @@
       "object_type": "",
       "instrument": "",
       "time_order": 1,
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "すずめ",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "おじいさん",
+          "target": "すずめ",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
       "relationship_level1": "Social & Alliance",
       "relationship_level2": "",
       "sentiment": "positive",
       "action_category": "",
       "action_type": "",
       "action_context": "",
-      "action_status": "",
-      "narrative_function": "",
-      "relationship_multi": []
+      "action_status": ""
     },
     {
       "id": "db726690-5e44-42fe-81d3-d3c94e70cdf0",
@@ -300,16 +323,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 2,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "",
-      "sentiment": "negative",
       "action_layer": {
         "category": "physical",
         "type": "attack",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "おばあさん",
+          "target": "すずめ",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "おばあさん",
+          "target": "すずめ",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "",
+      "sentiment": "negative",
       "action_category": "physical",
       "action_type": "attack",
       "action_context": "",
@@ -332,16 +374,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "relationship_level1": "Neutral",
-      "relationship_level2": "",
-      "sentiment": "negative",
       "action_layer": {
         "category": "physical",
         "type": "flee",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "すずめ",
+          "target": "",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "すずめ",
+          "target": "",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "Neutral",
+      "relationship_level2": "",
+      "sentiment": "negative",
       "action_category": "physical",
       "action_type": "flee",
       "action_context": "",
@@ -366,16 +427,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 4,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "",
-      "sentiment": "negative",
       "action_layer": {
         "category": "mental",
         "type": "investigate",
-        "status": "attempt"
+        "context": "",
+        "status": "attempt",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "すずめ",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "おじいさん",
+          "target": "すずめ",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "sentiment": "negative",
       "action_category": "mental",
       "action_type": "investigate",
       "action_context": "",
@@ -400,16 +480,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "",
-      "sentiment": "positive",
       "action_layer": {
         "category": "physical",
         "type": "travel",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "すずめ",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "おじいさん",
+          "target": "すずめ",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "sentiment": "positive",
       "action_category": "physical",
       "action_type": "travel",
       "action_context": "",
@@ -434,16 +533,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 6,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "",
-      "sentiment": "positive",
       "action_layer": {
         "category": "communicative",
         "type": "inform",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "すずめ",
+          "target": "おじいさん",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "すずめ",
+          "target": "おじいさん",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "sentiment": "positive",
       "action_category": "communicative",
       "action_type": "inform",
       "action_context": "",
@@ -468,16 +586,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 7,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "",
-      "sentiment": "positive",
       "action_layer": {
         "category": "transaction",
         "type": "exchange",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "すずめ",
+          "target": "おじいさん",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "すずめ",
+          "target": "おじいさん",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "sentiment": "positive",
       "action_category": "transaction",
       "action_type": "exchange",
       "action_context": "",
@@ -502,16 +639,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 8,
-      "relationship_level1": "Neutral",
-      "relationship_level2": "",
-      "sentiment": "positive",
       "action_layer": {
         "category": "transaction",
         "type": "reward",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "おじいさん",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "おじいさん",
+          "target": "おじいさん",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Neutral",
+      "relationship_level2": "",
+      "sentiment": "positive",
       "action_category": "transaction",
       "action_type": "reward",
       "action_context": "",
@@ -536,16 +692,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 9,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "",
-      "sentiment": "negative",
       "action_layer": {
         "category": "communicative",
         "type": "deceive",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "おばあさん",
+          "target": "すずめ",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "おばあさん",
+          "target": "すずめ",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "",
+      "sentiment": "negative",
       "action_category": "communicative",
       "action_type": "deceive",
       "action_context": "",
@@ -570,15 +745,39 @@
       "object_type": "",
       "instrument": "",
       "time_order": 10,
+      "relationships": [
+        {
+          "agent": "お化ばけ",
+          "target": "おばあさん",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "お化ばけ",
+          "target": "おばあさん",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
       "relationship_level1": "Adversarial",
       "relationship_level2": "",
       "sentiment": "negative",
       "action_category": "existential",
       "action_type": "",
       "action_context": "",
-      "action_status": "success",
-      "narrative_function": "",
-      "relationship_multi": []
+      "action_status": "success"
     },
     {
       "id": "63f02c88-3c50-42cd-8acb-cd5e28539966",
@@ -599,16 +798,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 11,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "",
-      "sentiment": "neutral",
       "action_layer": {
         "category": "communicative",
         "type": "inform",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "おばあさん",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "おじいさん",
+          "target": "おばあさん",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "sentiment": "neutral",
       "action_category": "communicative",
       "action_type": "inform",
       "action_context": "",

@@ -2,7 +2,7 @@
   "version": "2.0",
   "metadata": {
     "id": "CH_198_董永与七仙女",
-    "title": "",
+    "title": "董永与七仙女",
     "culture": "Chinese",
     "annotator": "",
     "date_annotated": "2025-12-17",
@@ -17,8 +17,24 @@
   "characters": [],
   "narrative_events": [
     {
+      "id": "1e52614a-63bb-4a4d-8192-7526a0c8e1c6",
+      "text_span": null,
       "event_type": "OTHER",
-      "description": ""
+      "description": "",
+      "agents": [],
+      "targets": [],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "",
+      "narrative_function": ""
     }
   ],
   "themes_and_motifs": {
@@ -28,13 +44,15 @@
     "atu_categories": [],
     "obstacle_thrower": [],
     "helper_type": [],
-    "thinking_process": ""
+    "thinking_process": "",
+    "atu_evidence": {},
+    "motif_evidence": {}
   },
   "analysis": {
     "propp_functions": [],
     "propp_notes": "",
     "paragraph_summaries": {
-      "per_paragraph": {},
+      "per_section": {},
       "combined": [],
       "whole": ""
     },

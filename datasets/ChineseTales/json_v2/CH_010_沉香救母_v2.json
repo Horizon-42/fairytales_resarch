@@ -2,7 +2,7 @@
   "version": "2.0",
   "metadata": {
     "id": "CH_010_沉香救母",
-    "title": "",
+    "title": "沉香救母",
     "culture": "Chinese",
     "annotator": "",
     "date_annotated": "2025-12-21",
@@ -73,8 +73,23 @@
   ],
   "narrative_events": [
     {
+      "id": "9378c458-1994-4f26-9162-3867253ba101",
       "event_type": "OTHER",
-      "description": ""
+      "description": "",
+      "agents": [],
+      "targets": [],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "",
+      "narrative_function": ""
     }
   ],
   "themes_and_motifs": {
@@ -88,13 +103,15 @@
     "helper_type": [
       "SUPERNATURAL"
     ],
-    "thinking_process": ""
+    "thinking_process": "",
+    "atu_evidence": {},
+    "motif_evidence": {}
   },
   "analysis": {
     "propp_functions": [],
     "propp_notes": "",
     "paragraph_summaries": {
-      "per_paragraph": {},
+      "per_section": {},
       "combined": [],
       "whole": ""
     },

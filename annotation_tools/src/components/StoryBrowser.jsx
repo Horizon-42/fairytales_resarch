@@ -12,6 +12,7 @@ export default function StoryBrowser({
 }) {
   const [lastFolderPath, setLastFolderPath] = useState(null);
   const fileInputRef = useRef(null);
+  const isPickingDirectoryRef = useRef(false);
 
   useEffect(() => {
     const cache = loadFolderCache();
@@ -85,10 +86,17 @@ export default function StoryBrowser({
   };
 
   const handleOpenFolderClick = async (e) => {
+    // Prevent multiple simultaneous directory picker calls
+    if (isPickingDirectoryRef.current) {
+      return;
+    }
+
     // Prefer the modern directory picker on Linux Chrome when available.
     if (supportsDirectoryPicker && typeof onPickDirectory === "function") {
       e.preventDefault();
       e.stopPropagation();
+      
+      isPickingDirectoryRef.current = true;
       try {
         const dirHandle = await window.showDirectoryPicker();
         
@@ -97,12 +105,12 @@ export default function StoryBrowser({
         
         // Validate: folder must contain a texts subfolder
         if (!hasTextsFolder) {
-          alert(`错误：选择的文件夹必须包含 "texts" 子文件夹。\n\n请选择包含 texts 文件夹的父文件夹（例如：Japanese_test2）。`);
+          alert(`Error: The selected folder must contain a 'texts' subfolder.\n\nPlease select the parent folder that contains the 'texts' folder (e.g., Japanese_test2).`);
           return;
         }
         
         if (files.length === 0) {
-          alert("错误：选择的文件夹中没有找到任何 .txt 文件。");
+          alert("Error: No .txt files found in the selected folder.");
           return;
         }
         
@@ -111,9 +119,15 @@ export default function StoryBrowser({
         onPickDirectory(files, dirHandle.name || "selected_folder");
       } catch (err) {
         // User cancelled
-        if (err && err.name === "AbortError") return;
+        if (err && err.name === "AbortError") {
+          // User cancelled, just return
+          return;
+        }
         console.error("Failed to pick directory:", err);
-        alert(`选择文件夹失败: ${err.message}`);
+        alert(`Failed to select folder: ${err.message}`);
+      } finally {
+        // Always reset the flag, even if there was an error
+        isPickingDirectoryRef.current = false;
       }
       return;
     }

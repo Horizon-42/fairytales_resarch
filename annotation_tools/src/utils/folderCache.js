@@ -1,5 +1,7 @@
 // Cache utility for storing last used folder and file selection
 // Cache is now stored in the parent folder as .annotation_cache.json file
+import { getAnnotationServerUrl } from './annotationServerConfig.js';
+
 const CACHE_KEY = 'annotation_tool_folder_cache'; // Fallback for localStorage
 
 // Save cache to backend (stored in parent folder as .annotation_cache.json)
@@ -11,10 +13,9 @@ export async function saveFolderCache(data) {
       const existingCache = await loadFolderCache(data.folderPath);
       if (existingCache && existingCache.selectedIndex !== undefined && existingCache.selectedIndex >= 0) {
         selectedIndexToSave = existingCache.selectedIndex;
-        console.log(`[CACHE] Preserving existing selectedIndex: ${selectedIndexToSave}`);
       }
     } catch (error) {
-      console.warn('[CACHE] Could not load existing cache to preserve selectedIndex:', error);
+      // Silently ignore cache load errors
     }
   }
   
@@ -39,7 +40,8 @@ export async function saveFolderCache(data) {
   }
   
   try {
-    const response = await fetch("http://localhost:3001/api/save-cache", {
+    const serverUrl = getAnnotationServerUrl();
+    const response = await fetch(`${serverUrl}/api/save-cache`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -51,7 +53,6 @@ export async function saveFolderCache(data) {
     
     if (response.ok) {
       const result = await response.json();
-      console.log(`[CACHE] Saved cache to folder: ${data.folderPath}, selectedIndex: ${selectedIndexToSave}`);
       return true;
     } else {
       const error = await response.json();
@@ -68,7 +69,8 @@ export async function saveFolderCache(data) {
 export async function loadFolderCache(folderPath = null) {
   if (folderPath) {
     try {
-      const response = await fetch("http://localhost:3001/api/load-cache", {
+      const serverUrl = getAnnotationServerUrl();
+      const response = await fetch(`${serverUrl}/api/load-cache`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ folderPath })
@@ -77,7 +79,6 @@ export async function loadFolderCache(folderPath = null) {
       if (response.ok) {
         const result = await response.json();
         if (result.found && result.data) {
-          console.log(`[CACHE] Loaded cache from folder: ${folderPath}`);
           return {
             selectedIndex: result.data.selectedIndex !== undefined ? result.data.selectedIndex : -1,
             culture: result.data.culture || null,
@@ -142,7 +143,7 @@ export function extractFolderPath(fileList, fallbackFolderPath = null) {
   // Remove filename (last part)
   pathParts.pop();
   
-  // Find texts folder in the path (only texts, not traditional_texts)
+  // Find texts folder in the path
   const textsIndex = pathParts.findIndex(part => 
     part.toLowerCase() === 'texts'
   );

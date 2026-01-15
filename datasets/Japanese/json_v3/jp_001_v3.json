@@ -604,12 +604,21 @@
     }
   ],
   "themes_and_motifs": {
-    "ending_type": "HAPPY_REUNION",
-    "key_values": [],
+    "ending_type": "HAPPY_ENDING",
+    "key_values": [
+      "COURAGE",
+      "JUSTICE",
+      "LOYALTY"
+    ],
     "motif_type": [],
     "atu_categories": [],
-    "obstacle_thrower": [],
-    "helper_type": [],
+    "obstacle_thrower": [
+      "鬼の大将",
+      "鬼たち"
+    ],
+    "helper_type": [
+      "ANIMAL"
+    ],
     "thinking_process": "村人に害を与えていた鬼を退治することで、人々を救う。\n",
     "atu_evidence": {},
     "motif_evidence": {}
@@ -811,7 +820,9 @@
     ],
     "propp_notes": "",
     "paragraph_summaries": {
-      "per_section": {},
+      "per_section": {
+        "S133-158": "The grandfather gave a small stone to the man the next day."
+      },
       "combined": [],
       "whole": ""
     },

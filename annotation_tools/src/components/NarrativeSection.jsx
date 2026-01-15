@@ -25,7 +25,6 @@ import {
   addRelationshipMultiRow,
   removeRelationshipMultiRow,
   buildSetRelationshipMultiUpdates,
-  formatRelationshipLevel1Label
 } from "./narrativeSectionLogic.js";
 
 // Map Propp function codes to full display names from CSV
@@ -238,7 +237,7 @@ export default function NarrativeSection({
   const renderRelationshipLevel1Options = () =>
     RELATIONSHIP_LEVEL1.map((level1) => (
       <option key={level1} value={level1}>
-        {formatRelationshipLevel1Label(level1)}
+        {level1}
       </option>
     ));
 
@@ -427,9 +426,13 @@ export default function NarrativeSection({
                 value={effectiveRelationshipLevel1}
                 onChange={(e) => {
                   // Update level1 and reset level2 in a single update
+                  // Also sync relationship_multi for single-relationship case
+                  const newLevel1 = e.target.value;
                   updateItem(idx, {
-                    relationship_level1: e.target.value,
-                    relationship_level2: ""
+                    relationship_level1: newLevel1,
+                    relationship_level2: "",
+                    // Clear relationship_multi so save logic uses legacy fields
+                    relationship_multi: []
                   });
                 }}
               >
@@ -441,7 +444,14 @@ export default function NarrativeSection({
               Relationship L2
               <select
                 value={effectiveRelationshipLevel2}
-                onChange={(e) => updateItem(idx, "relationship_level2", e.target.value)}
+                onChange={(e) => {
+                  // Sync relationship_multi when updating level2
+                  updateItem(idx, {
+                    relationship_level2: e.target.value,
+                    // Clear relationship_multi so save logic uses legacy fields
+                    relationship_multi: []
+                  });
+                }}
                 disabled={!effectiveRelationshipLevel1}
               >
                 <option value="">– Select –</option>
@@ -452,7 +462,14 @@ export default function NarrativeSection({
               Sentiment
               <select
                 value={item.sentiment || ""}
-                onChange={(e) => updateItem(idx, "sentiment", e.target.value)}
+                onChange={(e) => {
+                  // Sync relationship_multi when updating sentiment
+                  updateItem(idx, {
+                    sentiment: e.target.value,
+                    // Clear relationship_multi so save logic uses legacy fields
+                    relationship_multi: []
+                  });
+                }}
               >
                 <option value="">– Select –</option>
                 {SENTIMENT_TAGS.map((tag) => (

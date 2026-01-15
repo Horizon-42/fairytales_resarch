@@ -49,6 +49,11 @@
   "narrative_events": [
     {
       "id": "72f286a5-d13a-4764-ac01-65cbafa03f72",
+      "text_span": {
+        "start": 102,
+        "end": 285,
+        "text": "He had collected a quantity of rice by begging, and after having dined off it, he filled a pot with what was left over. He hung the pot on a peg on the wall, placed his couch beneath,"
+      },
       "event_type": "Initial Situation",
       "description": "The Brahman secures his surplus rice, setting the stage for his wealth fantasy.",
       "agents": [
@@ -57,35 +62,26 @@
       "targets": [
         "pot"
       ],
-      "text_span": {
-        "start": 102,
-        "end": 285,
-        "text": "He had collected a quantity of rice by begging, and after having dined off it, he filled a pot with what was left over. He hung the pot on a peg on the wall, placed his couch beneath,"
-      },
       "target_type": "object",
       "object_type": "normal_object",
       "instrument": "",
       "time_order": 1,
-      "relationships": [],
-      "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": "exposition"
-      },
-      "narrative_function": "exposition",
-      "relationship_multi": [],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "",
       "action_type": "",
       "action_context": "",
-      "action_status": ""
+      "action_status": "",
+      "narrative_function": "exposition"
     },
     {
       "id": "e83b2704-ad16-4535-9f1b-8bf5ea77a9ed",
+      "text_span": {
+        "start": 290,
+        "end": 857,
+        "text": "looking intently at it all the night, he thought, \"Ah, that pot is indeed brimful of rice. Now, if there should be a famine, I should certainly make a hundred rupees by it. With this I shall buy a couple of goats. They will have young ones every six months, and thus I shall have a whole herd of goats. Then, with the goats, I shall buy cows. As soon as they have calved, I shall sell the calves. Then, with the calves, I shall buy buffaloes; with the buffaloes, mares. When the mares have foaled, I shall have plenty of horses; and when I sell them, plenty of gold. "
+      },
       "event_type": "MEDIATION",
       "description": "He constructs an elaborate mental chain of events where the rice converts into vast wealth.",
       "agents": [
@@ -94,51 +90,26 @@
       "targets": [
         "self"
       ],
-      "text_span": {
-        "start": 290,
-        "end": 857,
-        "text": "looking intently at it all the night, he thought, \"Ah, that pot is indeed brimful of rice. Now, if there should be a famine, I should certainly make a hundred rupees by it. With this I shall buy a couple of goats. They will have young ones every six months, and thus I shall have a whole herd of goats. Then, with the goats, I shall buy cows. As soon as they have calved, I shall sell the calves. Then, with the calves, I shall buy buffaloes; with the buffaloes, mares. When the mares have foaled, I shall have plenty of horses; and when I sell them, plenty of gold. "
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 2,
-      "relationships": [
-        {
-          "agent": "Svabhavakripana",
-          "target": "self",
-          "relationship_level1": "Neutral",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
-      "action_layer": {
-        "category": "mental",
-        "type": "",
-        "context": "",
-        "status": "success",
-        "function": "setup"
-      },
-      "narrative_function": "setup",
-      "relationship_multi": [
-        {
-          "agent": "Svabhavakripana",
-          "target": "self",
-          "relationship_level1": "Neutral",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "Neutral",
-      "relationship_level2": "",
+      "relationship_level2": "stranger",
       "sentiment": "positive",
       "action_category": "mental",
-      "action_type": "",
+      "action_type": "plan",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "setup"
     },
     {
       "id": "48d612d8-794f-484e-a16f-2b4801c39ef4",
+      "text_span": {
+        "start": 909,
+        "end": 1464,
+        "text": "And then a Brahman will come to my house, and will give me his beautiful daughter, with a large dowry. She will have a son, and I shall call him Somasarman.\nWhen he is old enough to be danced on his father's knee, I shall sit with a book at the back of the stable, and while I am reading, the boy will see me, jump from his mother's lap, and run towards me to be danced on my knee. He will come too near the horse's hoof, and, full of anger, I shall call to my wife, 'Take the baby; take him!' But she, distracted by some domestic work, does not hear me. "
+      },
       "event_type": "UNFOUNDED_CLAIMS",
       "description": "The fantasy escalates to marriage, fatherhood, and domestic conflict.",
       "agents": [
@@ -147,51 +118,26 @@
       "targets": [
         "beautiful daughter"
       ],
-      "text_span": {
-        "start": 909,
-        "end": 1464,
-        "text": "And then a Brahman will come to my house, and will give me his beautiful daughter, with a large dowry. She will have a son, and I shall call him Somasarman.\nWhen he is old enough to be danced on his father's knee, I shall sit with a book at the back of the stable, and while I am reading, the boy will see me, jump from his mother's lap, and run towards me to be danced on my knee. He will come too near the horse's hoof, and, full of anger, I shall call to my wife, 'Take the baby; take him!' But she, distracted by some domestic work, does not hear me. "
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "relationships": [
-        {
-          "agent": "Svabhavakripana",
-          "target": "beautiful daughter",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
-      "action_layer": {
-        "category": "mental",
-        "type": "",
-        "context": "",
-        "status": "success",
-        "function": "character_arc"
-      },
-      "narrative_function": "character_arc",
-      "relationship_multi": [
-        {
-          "agent": "Svabhavakripana",
-          "target": "beautiful daughter",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
       "relationship_level1": "Family & Kinship",
-      "relationship_level2": "",
+      "relationship_level2": "parent_child",
       "sentiment": "negative",
       "action_category": "mental",
       "action_type": "",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "character_arc"
     },
     {
       "id": "94ff8d1b-e89c-48d2-94b3-d3cc3e1451b6",
+      "text_span": {
+        "start": 1519,
+        "end": 1644,
+        "text": "While he thought this, he gave a kick with his foot, and broke the pot. All the rice fell over him, and made him quite white."
+      },
       "event_type": "OTHER",
       "description": "Acting out his dream physically, he kicks the pot, destroying his only real asset.",
       "agents": [
@@ -200,35 +146,26 @@
       "targets": [
         "pot"
       ],
-      "text_span": {
-        "start": 1519,
-        "end": 1644,
-        "text": "While he thought this, he gave a kick with his foot, and broke the pot. All the rice fell over him, and made him quite white."
-      },
       "target_type": "object",
       "object_type": "normal_object",
-      "instrument": "",
+      "instrument": "Pot",
       "time_order": 4,
-      "relationships": [],
-      "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": "climax"
-      },
-      "narrative_function": "climax",
-      "relationship_multi": [],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "",
       "action_type": "",
       "action_context": "",
-      "action_status": ""
+      "action_status": "",
+      "narrative_function": "climax"
     },
     {
       "id": "58eff05d-bc76-4b86-aa0f-3f61af4b958b",
+      "text_span": {
+        "start": 1645,
+        "end": 1761,
+        "text": "Therefore, I say, \"He who makes foolish plans for the future will be white all over, like the father of Somasarman.\""
+      },
       "event_type": "OTHER",
       "description": "The narrator delivers the lesson on the foolishness of counting chickens before they hatch",
       "agents": [
@@ -237,48 +174,18 @@
       "targets": [
         "He"
       ],
-      "text_span": {
-        "start": 1645,
-        "end": 1761,
-        "text": "Therefore, I say, \"He who makes foolish plans for the future will be white all over, like the father of Somasarman.\""
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "relationships": [
-        {
-          "agent": "I",
-          "target": "He",
-          "relationship_level1": "Neutral",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
-      "action_layer": {
-        "category": "communicative",
-        "type": "",
-        "context": "",
-        "status": "success",
-        "function": "resolution"
-      },
-      "narrative_function": "resolution",
-      "relationship_multi": [
-        {
-          "agent": "I",
-          "target": "He",
-          "relationship_level1": "Neutral",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
       "relationship_level1": "Neutral",
-      "relationship_level2": "",
+      "relationship_level2": "stranger",
       "sentiment": "negative",
       "action_category": "communicative",
-      "action_type": "",
+      "action_type": "challenge",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "resolution"
     }
   ],
   "themes_and_motifs": {
