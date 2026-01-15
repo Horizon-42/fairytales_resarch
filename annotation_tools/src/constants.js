@@ -110,6 +110,8 @@ export const CHARACTER_ARCHETYPES = [
   "Outlaw",
   "Rebel",
   "Ruler",
+  "Dispatcher",
+  "Victim",
   "Other"
 ];
 

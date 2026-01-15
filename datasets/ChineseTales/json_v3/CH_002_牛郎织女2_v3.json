@@ -322,14 +322,14 @@
     "motif_type": [
       "Motif A705.1.2: A705.1.2. Clouds as tapa beaten out by woman in moon. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens.)",
       "Motif A1133.2: A1133.2. Origin of clouds: creator ornaments the sky with clouds so that the mountains are sometimes shaded. (A. Mythological motifs. > A1100–A1199. Establishment of natural order.)",
-      "Motif A702.8: A702.8. Sky is black because once raised by means of dirty stick. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens.)",
-      "Motif A189.10: A189.10. Goddesses come down to earth by a silken thread, are offended by raja and produce drought. (A. Mythological motifs. > A100–A499. Gods. > A100–A199. The gods in general.)",
       "Motif A625.2.3: A625.2.3. Raising the sky: striking with broom. Old woman's hump strikes clouds as she sweeps. She strikes at sky with broom and thus raises it. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A600–A699. The universe. > A600–A649. Creation of the universe.)",
+      "Motif A189.10: A189.10. Goddesses come down to earth by a silken thread, are offended by raja and produce drought. (A. Mythological motifs. > A100–A499. Gods. > A100–A199. The gods in general.)",
+      "Motif A702.8: A702.8. Sky is black because once raised by means of dirty stick. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens.)",
       "Motif A21.1: A21.1. Woman who fell from the sky. – Daughter of the sky-chief falls from the sky, is caught by birds, and lowered to the surface of the water. She becomes the creator. (A. Mythological motifs. > A0–A99. Creator.)",
       "Motif A705.1.1: A705.1.1. Creator makes clouds from own vitals. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens.)",
-      "Motif A791.3: A791.3. Rainbow made as bridge by the gods. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens. > A790–A799. The heavenly lights.)",
-      "Motif A941.5.6: A941.5.6. Cloth from goddess, when spread by holy man over a spot, causes water to spring from earth. (A. Mythological motifs. > A900–A999. Topographical features of the earth. > A910–A949. Water features.)",
-      "Motif A705.2: A705.2. Nature of clouds (covered with skin). (Cf. A702.9.) (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens.)"
+      "Motif A705.2: A705.2. Nature of clouds (covered with skin). (Cf. A702.9.) (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens.)",
+      "Motif A451.3.1: A451.3.1. Goddess of weaving and spinning. (A. Mythological motifs. > A100–A499. Gods. > A400–A499. Gods of the earth.)",
+      "Motif A941.5.6: A941.5.6. Cloth from goddess, when spread by holy man over a spot, causes water to spring from earth. (A. Mythological motifs. > A900–A999. Topographical features of the earth. > A910–A949. Water features.)"
     ],
     "atu_categories": [
       "ATU 501: The Three Spinners (TALES OF MAGIC > Supernatural Helpers (500-559))"
@@ -349,59 +349,59 @@
     "atu_evidence": {
       "ATU 501: The Three Spinners (TALES OF MAGIC > Supernatural Helpers (500-559))": {
         "evidence_keys": [
-          "S0-119"
+          "__WHOLE_SUMMARY__"
         ]
       }
     },
     "motif_evidence": {
       "Motif A705.1.2: A705.1.2. Clouds as tapa beaten out by woman in moon. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens.)": {
         "evidence_keys": [
-          "S0-119"
+          "__WHOLE_SUMMARY__"
         ]
       },
       "Motif A1133.2: A1133.2. Origin of clouds: creator ornaments the sky with clouds so that the mountains are sometimes shaded. (A. Mythological motifs. > A1100–A1199. Establishment of natural order.)": {
         "evidence_keys": [
-          "S0-119"
-        ]
-      },
-      "Motif A702.8: A702.8. Sky is black because once raised by means of dirty stick. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens.)": {
-        "evidence_keys": [
-          "S0-119"
-        ]
-      },
-      "Motif A189.10: A189.10. Goddesses come down to earth by a silken thread, are offended by raja and produce drought. (A. Mythological motifs. > A100–A499. Gods. > A100–A199. The gods in general.)": {
-        "evidence_keys": [
-          "S0-119"
+          "__WHOLE_SUMMARY__"
         ]
       },
       "Motif A625.2.3: A625.2.3. Raising the sky: striking with broom. Old woman's hump strikes clouds as she sweeps. She strikes at sky with broom and thus raises it. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A600–A699. The universe. > A600–A649. Creation of the universe.)": {
         "evidence_keys": [
-          "S0-119"
+          "__WHOLE_SUMMARY__"
+        ]
+      },
+      "Motif A189.10: A189.10. Goddesses come down to earth by a silken thread, are offended by raja and produce drought. (A. Mythological motifs. > A100–A499. Gods. > A100–A199. The gods in general.)": {
+        "evidence_keys": [
+          "__WHOLE_SUMMARY__"
+        ]
+      },
+      "Motif A702.8: A702.8. Sky is black because once raised by means of dirty stick. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens.)": {
+        "evidence_keys": [
+          "__WHOLE_SUMMARY__"
         ]
       },
       "Motif A21.1: A21.1. Woman who fell from the sky. – Daughter of the sky-chief falls from the sky, is caught by birds, and lowered to the surface of the water. She becomes the creator. (A. Mythological motifs. > A0–A99. Creator.)": {
         "evidence_keys": [
-          "S0-119"
+          "__WHOLE_SUMMARY__"
         ]
       },
       "Motif A705.1.1: A705.1.1. Creator makes clouds from own vitals. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens.)": {
         "evidence_keys": [
-          "S0-119"
-        ]
-      },
-      "Motif A791.3: A791.3. Rainbow made as bridge by the gods. (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens. > A790–A799. The heavenly lights.)": {
-        "evidence_keys": [
-          "S0-119"
-        ]
-      },
-      "Motif A941.5.6: A941.5.6. Cloth from goddess, when spread by holy man over a spot, causes water to spring from earth. (A. Mythological motifs. > A900–A999. Topographical features of the earth. > A910–A949. Water features.)": {
-        "evidence_keys": [
-          "S0-119"
+          "__WHOLE_SUMMARY__"
         ]
       },
       "Motif A705.2: A705.2. Nature of clouds (covered with skin). (Cf. A702.9.) (A. Mythological motifs. > A600–A899. Cosmogony and cosmology. > A700–A799. The heavens.)": {
         "evidence_keys": [
-          "S0-119"
+          "__WHOLE_SUMMARY__"
+        ]
+      },
+      "Motif A451.3.1: A451.3.1. Goddess of weaving and spinning. (A. Mythological motifs. > A100–A499. Gods. > A400–A499. Gods of the earth.)": {
+        "evidence_keys": [
+          "__WHOLE_SUMMARY__"
+        ]
+      },
+      "Motif A941.5.6: A941.5.6. Cloth from goddess, when spread by holy man over a spot, causes water to spring from earth. (A. Mythological motifs. > A900–A999. Topographical features of the earth. > A910–A949. Water features.)": {
+        "evidence_keys": [
+          "__WHOLE_SUMMARY__"
         ]
       }
     }

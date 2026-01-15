@@ -8,7 +8,8 @@ export default function MotifSection({
   onAutoDetectMotifAtu,
   autoDetectMotifLoading,
   textSections = [],
-  wholeSummary = ""
+  wholeSummary = "",
+  paragraphSummaries = { perSection: {}, whole: "" }
 }) {
   const WHOLE_SUMMARY_KEY = "__WHOLE_SUMMARY__";
   const PREVIEW_CHARS = 300;
@@ -603,7 +604,7 @@ export default function MotifSection({
             className="ghost-btn"
             onClick={() => onAutoDetectMotifAtu && onAutoDetectMotifAtu()}
             disabled={!onAutoDetectMotifAtu || autoDetectMotifLoading}
-            title="Auto-detect ATU + Motifs using the local vector database"
+            title="Auto-detect ATU + Motifs using the local vector database. For each section, uses summary if available, otherwise uses original text."
           >
             {autoDetectMotifLoading ? "Auto Detect..." : "Auto Detect"}
           </button>
