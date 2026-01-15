@@ -233,27 +233,9 @@
   },
   "narrative_structure": [
     {
-      "event_type": "OTHER",
-      "description": "",
-      "id": "2e7c032a-f76a-4da6-a11a-8e77e7766e96",
-      "narrative_function": "",
-      "target_type": "character",
-      "object_type": "",
-      "instrument": "",
-      "time_order": 1,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "relationship_multi": [],
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
-    },
-    {
       "id": "5ce2cb20-448e-47b9-a1ff-2bb99e7e056a",
       "event_type": "FIRST_FUNCTION_DONOR",
-      "description": "白も一緒（いっしょ）についてきて、そこらをくんくんかぎまわっていましたが、ふと、おじいさんのすそを",
+      "description": "　ある日、正直おじいさんが、いつものようにくわをかついで、畑をほりかえしていますと、白も一緒（いっしょ）についてきて、そこらをくんくんかぎまわっていましたが、ふと、おじいさんのすそをくわえて、畑のすみの、大きなえのきの木の下までつれて行って、前足で土をかき立てながら、\n　　　「ここほれ、ワン、ワン。\n　　　　ここほれ、ワン、ワン」\nとなきました。",
       "agents": [
         "白"
       ],
@@ -262,23 +244,42 @@
       ],
       "text_span": {
         "start": 266,
-        "end": 448,
-        "text": "ある日、正直おじいさんが、いつものようにくわ［＃「くわ」に傍点］をかついで、畑をほりかえしていますと、白も一緒（いっしょ）についてきて、そこらをくんくんかぎまわっていましたが、ふと、おじいさんのすそをくわえて、畑のすみの、大きなえのきの木の下までつれて行って、前足で土をかき立てながら、\n　　　「ここほれ、ワン、ワン。\n　　　　ここほれ、ワン、ワン」\nとなきました"
+        "end": 440,
+        "text": "　ある日、正直おじいさんが、いつものようにくわをかついで、畑をほりかえしていますと、白も一緒（いっしょ）についてきて、そこらをくんくんかぎまわっていましたが、ふと、おじいさんのすそをくわえて、畑のすみの、大きなえのきの木の下までつれて行って、前足で土をかき立てながら、\n　　　「ここほれ、ワン、ワン。\n　　　　ここほれ、ワン、ワン」\nとなきました。"
       },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "ally",
-      "sentiment": "positive",
       "action_layer": {
         "category": "communicative",
         "type": "inform",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "白",
+          "target": "正直おじいさん",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "ally",
+          "sentiment": "positive"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "白",
+          "target": "正直おじいさん",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "ally",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "ally",
+      "sentiment": "positive",
       "action_category": "communicative",
       "action_type": "inform",
       "action_context": "",
@@ -287,7 +288,7 @@
     {
       "id": "bb913cbd-fdd4-483d-b373-ef3f97e85ce1",
       "event_type": "RECEIPT_OF_AGENT",
-      "description": "くわ［＃「くわ」に傍点］を入れてみますと、かちりと音がして、穴のそこできらきら光るものがありました。ずんずんほって行くと、小判（こばん）がたくさん、出てきました。",
+      "description": "くわを入れてみますと、かちりと音がして、穴のそこできらきら光るものがありました。ずんずんほって行くと、小判（こばん）がたくさん、出てきました。",
       "agents": [
         "正直おじいさん"
       ],
@@ -295,23 +296,47 @@
         "正直おじいさん"
       ],
       "text_span": {
-        "start": 476,
-        "end": 557,
-        "text": "くわ［＃「くわ」に傍点］を入れてみますと、かちりと音がして、穴のそこできらきら光るものがありました。ずんずんほって行くと、小判（こばん）がたくさん、出てきました。"
+        "start": 467,
+        "end": 538,
+        "text": "くわを入れてみますと、かちりと音がして、穴のそこできらきら光るものがありました。ずんずんほって行くと、小判（こばん）がたくさん、出てきました。"
       },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 2,
+      "relationships": [
+        {
+          "agent": "正直おじいさん",
+          "target": "正直おじいさん",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "正直おじいさん",
+          "target": "正直おじいさん",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
       "relationship_level1": "Neutral",
       "relationship_level2": "",
       "sentiment": "positive",
       "action_category": "physical",
       "action_type": "",
       "action_context": "",
-      "action_status": "success",
-      "narrative_function": "",
-      "relationship_multi": []
+      "action_status": "success"
     },
     {
       "id": "4175e2cb-21f0-452e-a715-471ff2fd5e0a",
@@ -324,24 +349,43 @@
         "白"
       ],
       "text_span": {
-        "start": 660,
-        "end": 720,
+        "start": 642,
+        "end": 702,
         "text": "すると、おとなりの欲（よく）ばりおじいさんが、それをきいてたいへんうらやましがって、さっそく白（しろ）をかりにきました。"
       },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "",
-      "sentiment": "neutral",
       "action_layer": {
         "category": "transaction",
         "type": "request",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "欲（よく）ばりのおじいさん",
+          "target": "白",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "欲（よく）ばりのおじいさん",
+          "target": "白",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "",
+      "sentiment": "neutral",
       "action_category": "transaction",
       "action_type": "request",
       "action_context": "",
@@ -350,7 +394,7 @@
     {
       "id": "3a864774-e086-40ef-9b45-4a612dfa21ab",
       "event_type": "VILLAINY",
-      "description": "腹立（はらだ）ちまぎれに、いきなりくわ［＃「くわ」に傍点］をふり上げて、白（しろ）のあたまから打ちおろしますと、かわいそうに、白はひと声（こえ）、「きゃん」とないたなり、死んでしまいました。",
+      "description": "腹立（はらだ）ちまぎれに、いきなりくわをふり上げて、白（しろ）のあたまから打ちおろしますと、かわいそうに、白はひと声（こえ）、「きゃん」とないたなり、死んでしまいました。",
       "agents": [
         "欲（よく）ばりのおじいさん"
       ],
@@ -358,24 +402,43 @@
         "白"
       ],
       "text_span": {
-        "start": 1068,
-        "end": 1163,
-        "text": "腹立（はらだ）ちまぎれに、いきなりくわ［＃「くわ」に傍点］をふり上げて、白（しろ）のあたまから打ちおろしますと、かわいそうに、白はひと声（こえ）、「きゃん」とないたなり、死んでしまいました。"
+        "start": 1050,
+        "end": 1135,
+        "text": "腹立（はらだ）ちまぎれに、いきなりくわをふり上げて、白（しろ）のあたまから打ちおろしますと、かわいそうに、白はひと声（こえ）、「きゃん」とないたなり、死んでしまいました。"
       },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 4,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "",
-      "sentiment": "negative",
       "action_layer": {
         "category": "physical",
         "type": "attack",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": "trigger"
       },
-      "narrative_function": "",
-      "relationship_multi": [],
+      "relationships": [
+        {
+          "agent": "欲（よく）ばりのおじいさん",
+          "target": "白",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "narrative_function": "trigger",
+      "relationship_multi": [
+        {
+          "agent": "欲（よく）ばりのおじいさん",
+          "target": "白",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "",
+      "sentiment": "negative",
       "action_category": "physical",
       "action_type": "attack",
       "action_context": "",
@@ -384,7 +447,7 @@
     {
       "id": "91853f32-2d62-47cc-b08a-73b41cfb889a",
       "event_type": "RECEIPT_OF_AGENT",
-      "description": "いくらついてもついても、あとからあとから、お米がふえて、みるみるうす［＃「うす」に傍点］にあふれて、そとにこぼれ出して、やがて、台所（だいどころ）いっぱいお米になってしまいました。",
+      "description": "いくらついてもついても、あとからあとから、お米がふえて、みるみるうすにあふれて、そとにこぼれ出して、やがて、台所（だいどころ）いっぱいお米になってしまいました。",
       "agents": [
         "白"
       ],
@@ -392,24 +455,43 @@
         "正直おじいさん"
       ],
       "text_span": {
-        "start": 1529,
-        "end": 1619,
-        "text": "いくらついてもついても、あとからあとから、お米がふえて、みるみるうす［＃「うす」に傍点］にあふれて、そとにこぼれ出して、やがて、台所（だいどころ）いっぱいお米になってしまいました。"
+        "start": 1481,
+        "end": 1561,
+        "text": "いくらついてもついても、あとからあとから、お米がふえて、みるみるうすにあふれて、そとにこぼれ出して、やがて、台所（だいどころ）いっぱいお米になってしまいました。"
       },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "",
-      "sentiment": "positive",
       "action_layer": {
         "category": "existential",
         "type": "cast_spell",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "白",
+          "target": "正直おじいさん",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "白",
+          "target": "正直おじいさん",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "sentiment": "positive",
       "action_category": "existential",
       "action_type": "cast_spell",
       "action_context": "",
@@ -418,7 +500,7 @@
     {
       "id": "e7b34565-beb4-408d-a866-a1afb31bbba7",
       "event_type": "VIOLATION",
-      "description": "欲（よく）ばりおじいさんは、またかんしゃくをおこして、うす［＃「うす」に傍点］をたたきこわして、薪（まき）にしてもしてしまいました。",
+      "description": "欲（よく）ばりおじいさんは、またかんしゃくをおこして、うすをたたきこわして、薪（まき）にしてもしてしまいました。",
       "agents": [
         "欲（よく）ばりのおじいさん"
       ],
@@ -426,18 +508,26 @@
         "臼"
       ],
       "text_span": {
-        "start": 1965,
-        "end": 2031,
-        "text": "欲（よく）ばりおじいさんは、またかんしゃくをおこして、うす［＃「うす」に傍点］をたたきこわして、薪（まき）にしてもしてしまいました。"
+        "start": 1858,
+        "end": 1914,
+        "text": "欲（よく）ばりおじいさんは、またかんしゃくをおこして、うすをたたきこわして、薪（まき）にしてもしてしまいました。"
       },
       "target_type": "object",
       "object_type": "normal_object",
       "instrument": "",
       "time_order": 6,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      },
       "narrative_function": "",
+      "relationship_multi": [],
       "relationship_level1": "",
       "relationship_level2": "",
-      "relationship_multi": [],
       "sentiment": "",
       "action_category": "",
       "action_type": "",
@@ -447,7 +537,7 @@
     {
       "id": "f90b710f-7b83-45ce-90e8-238099f3aece",
       "event_type": "RECEIPT_OF_AGENT",
-      "description": "灰をかぶると、みるみるそれが花になって、よそはまだ冬のさなかなのに、おじいさんのお庭ばかりは、すっかり春げしきになってしまいました。",
+      "description": "こういっておじいさんは、お庭のすみの白のお墓（はか）のところまで、灰をかかえて行ってまきますと、どこからか、すうすうあたたかい風が吹いてきて、ぱっと、灰をお庭いっぱいに吹きちらしました。するとどうでしょう、そこらに枯れ木のまま立っていたうめの木や、さくらの木が、灰をかぶると、みるみるそれが花になって、よそはまだ冬のさなかなのに、おじいさんのお庭ばかりは、すっかり春げしきになってしまいました。",
       "agents": [
         "正直おじいさん"
       ],
@@ -455,18 +545,26 @@
         "枯れ木"
       ],
       "text_span": {
-        "start": 2327,
-        "end": 2393,
-        "text": "灰をかぶると、みるみるそれが花になって、よそはまだ冬のさなかなのに、おじいさんのお庭ばかりは、すっかり春げしきになってしまいました。"
+        "start": 2069,
+        "end": 2266,
+        "text": "こういっておじいさんは、お庭のすみの白のお墓（はか）のところまで、灰をかかえて行ってまきますと、どこからか、すうすうあたたかい風が吹いてきて、ぱっと、灰をお庭いっぱいに吹きちらしました。するとどうでしょう、そこらに枯れ木のまま立っていたうめの木や、さくらの木が、灰をかぶると、みるみるそれが花になって、よそはまだ冬のさなかなのに、おじいさんのお庭ばかりは、すっかり春げしきになってしまいました。"
       },
       "target_type": "object",
       "object_type": "magical_agent",
       "instrument": "",
       "time_order": 7,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      },
       "narrative_function": "",
+      "relationship_multi": [],
       "relationship_level1": "",
       "relationship_level2": "",
-      "relationship_multi": [],
       "sentiment": "",
       "action_category": "",
       "action_type": "",
@@ -484,60 +582,313 @@
         "正直おじいさん"
       ],
       "text_span": {
-        "start": 2788,
-        "end": 2851,
+        "start": 2661,
+        "end": 2724,
         "text": "殿さまはびっくりして、\n「これはみごとだ。これはふしぎだ」\nといって、おじいさんをほめて、たくさんにごほうびをくださいました。"
       },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 8,
+      "time_order": 10,
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "relationships": [
+        {
+          "agent": "殿さま",
+          "target": "正直おじいさん",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "殿さま",
+          "target": "正直おじいさん",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
       "relationship_level1": "Hierarchy",
       "relationship_level2": "",
       "sentiment": "positive",
-      "action_layer": {
-        "category": "transaction",
-        "type": "reward",
-        "status": "success"
-      },
-      "narrative_function": "",
-      "relationship_multi": [],
-      "action_category": "transaction",
-      "action_type": "reward",
+      "action_category": "communicative",
+      "action_type": "inform",
       "action_context": "",
       "action_status": "success"
     },
     {
-      "id": "51339fbc-b2f4-4691-91d6-75a8e44af18b",
-      "event_type": "PUNISHMENT",
-      "description": "「にせものの花咲かじじいにちがいない。ふとどきなやつだ」\nといって、欲ばりおじいさんを、しばらせてしまいました。",
+      "id": "6ba3b2fe-3c2e-443a-b43e-7e7c00ffd6c3",
+      "event_type": "DIFFICULT_TASK",
+      "description": "殿さまは、おじいさんをよんで、\n「ほう、めずらしいじじいだ。ではそこのさくらの枯れ木に、花を咲かせて見せよ」\nといいつけました。",
       "agents": [
         "殿さま"
       ],
       "targets": [
-        "欲（よく）ばりの おばあさん"
+        "正直おじいさん"
       ],
       "text_span": {
-        "start": 3359,
-        "end": 3415,
-        "text": "「にせものの花咲かじじいにちがいない。ふとどきなやつだ」\nといって、欲ばりおじいさんを、しばらせてしまいました。"
+        "start": 2478,
+        "end": 2542,
+        "text": "殿さまは、おじいさんをよんで、\n「ほう、めずらしいじじいだ。ではそこのさくらの枯れ木に、花を咲かせて見せよ」\nといいつけました。"
       },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "time_order": 9,
-      "relationship_level1": "Hierarchy",
-      "relationship_level2": "",
-      "sentiment": "negative",
+      "time_order": 8,
+      "relationships": [
+        {
+          "agent": "殿さま",
+          "target": "正直おじいさん",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
       "action_layer": {
         "category": "transaction",
-        "type": "punish",
-        "status": "success"
+        "type": "request",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "殿さま",
+          "target": "正直おじいさん",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "neutral",
+      "action_category": "transaction",
+      "action_type": "request",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "5220e126-d62d-4dd8-89d6-baeffa052fc6",
+      "event_type": "SOLUTION",
+      "description": "おじいさんは、さっそくざるをかかえて、さくらの木に上がって、\n　　　「金のさくら、さらさら。\n　　　　銀のさくら、さらさら」\nといいながら、灰をつかんでふりまきますと、みるみる花が咲き出して、やがてい",
+      "agents": [],
+      "targets": [
+        "さくらの木"
+      ],
+      "text_span": {
+        "start": 2542,
+        "end": 2661,
+        "text": "おじいさんは、さっそくざるをかかえて、さくらの木に上がって、\n　　　「金のさくら、さらさら。\n　　　　銀のさくら、さらさら」\nといいながら、灰をつかんでふりまきますと、みるみる花が咲き出して、やがていちめん、さくらの花ざかりになりました。"
+      },
+      "target_type": "object",
+      "object_type": "magical_agent",
+      "instrument": "灰",
+      "time_order": 9,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
       },
       "narrative_function": "",
       "relationship_multi": [],
-      "action_category": "transaction",
-      "action_type": "punish",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
+    },
+    {
+      "id": "7a83f57f-18c6-4d2f-98df-851dbe4595be",
+      "event_type": "VILLAINY",
+      "description": "するとまた、おとなりの欲（よく）ばりおじいさんが、それをきいて、うらやましがって、のこっている灰をかきあつめてざるに入れて、正直（しょうじき）おじいさんのまねをして、\n「花咲かじじい、花咲かじじい、日本一の花咲かじじい、枯れ木に花を咲かせましょう」\nと、往来（おうらい）をどなってあるきました。",
+      "agents": [
+        "欲（よく）ばりのおじいさん"
+      ],
+      "targets": [
+        "殿さま"
+      ],
+      "text_span": {
+        "start": 2726,
+        "end": 2873,
+        "text": "するとまた、おとなりの欲（よく）ばりおじいさんが、それをきいて、うらやましがって、のこっている灰をかきあつめてざるに入れて、正直（しょうじき）おじいさんのまねをして、\n「花咲かじじい、花咲かじじい、日本一の花咲かじじい、枯れ木に花を咲かせましょう」\nと、往来（おうらい）をどなってあるきました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 11,
+      "relationships": [
+        {
+          "agent": "欲（よく）ばりのおじいさん",
+          "target": "殿さま",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "deceive",
+        "context": "",
+        "status": "failure",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "欲（よく）ばりのおじいさん",
+          "target": "殿さま",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "negative",
+      "action_category": "communicative",
+      "action_type": "deceive",
+      "action_context": "",
+      "action_status": "failure"
+    },
+    {
+      "id": "a586687c-1fdf-4fa8-94a7-d26d289476bd",
+      "event_type": "VIOLATION",
+      "description": "欲（よく）ばりおじいさんは、とくいらしい顔をしながら、灰を入れたざるをかかえて、さくらの木に上がって、おなじように、\n　　　「金のさくら、さらさら。\n　　　　銀のさくら、さらさら」\nととなえながら、やたらに灰をふりまきました",
+      "agents": [
+        "欲（よく）ばりのおじいさん"
+      ],
+      "targets": [
+        "さくらの木"
+      ],
+      "text_span": {
+        "start": 2937,
+        "end": 3049,
+        "text": "欲（よく）ばりおじいさんは、とくいらしい顔をしながら、灰を入れたざるをかかえて、さくらの木に上がって、おなじように、\n　　　「金のさくら、さらさら。\n　　　　銀のさくら、さらさら」\nととなえながら、やたらに灰をふりまきました"
+      },
+      "target_type": "object",
+      "object_type": "magical_agent",
+      "instrument": "灰は",
+      "time_order": 12,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": "trigger"
+      },
+      "narrative_function": "trigger",
+      "relationship_multi": [],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": ""
+    },
+    {
+      "id": "5ce3bfc0-28f8-406e-b597-4395c57f574f",
+      "event_type": "VILLAINY",
+      "description": "するうち、どっとひどい風が吹いてきて、灰は遠慮（えんりょ）なしに四方八方（しほうはっぽう）へ、ばらばら、ばらばらちって、殿さまやご家来（けらい）の目や鼻（はな）のなかへはいりました。そこでもここでも、",
+      "agents": [
+        "欲（よく）ばりのおじいさん"
+      ],
+      "targets": [
+        "殿さま"
+      ],
+      "text_span": {
+        "start": 3064,
+        "end": 3209,
+        "text": "するうち、どっとひどい風が吹いてきて、灰は遠慮（えんりょ）なしに四方八方（しほうはっぽう）へ、ばらばら、ばらばらちって、殿さまやご家来（けらい）の目や鼻（はな）のなかへはいりました。そこでもここでも、目をこするやら、くしゃみをするやら、あたまの毛をはらうやら、たいへんなさわぎになりました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 13,
+      "relationships": [
+        {
+          "agent": "欲（よく）ばりのおじいさん",
+          "target": "殿さま",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "",
+        "context": "",
+        "status": "failure",
+        "function": ""
+      },
+      "narrative_function": "trigger",
+      "relationship_multi": [
+        {
+          "agent": "欲（よく）ばりのおじいさん",
+          "target": "殿さま",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "negative",
+      "action_category": "physical",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "failure"
+    },
+    {
+      "id": "45bbf77e-3392-4bf0-98dc-6a187bf6a248",
+      "event_type": "PUNISHMENT",
+      "description": "殿さまはたいそうお腹立（はらだ）ちになって、\n「にせものの花咲かじじいにちがいない。ふとどきなやつだ」\nといって、欲ばりおじいさんを、しばらせてしまいました。",
+      "agents": [
+        "殿さま"
+      ],
+      "targets": [
+        "欲（よく）ばりのおじいさん"
+      ],
+      "text_span": {
+        "start": 3209,
+        "end": 3288,
+        "text": "殿さまはたいそうお腹立（はらだ）ちになって、\n「にせものの花咲かじじいにちがいない。ふとどきなやつだ」\nといって、欲ばりおじいさんを、しばらせてしまいました。"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 14,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "negative",
+      "action_category": "communicative",
+      "action_type": "command",
       "action_context": "",
       "action_status": "success"
     }

@@ -488,9 +488,11 @@
     "atu_categories": [
       "ATU Category: TALES OF MAGIC"
     ],
-    "obstacle_thrower": [],
+    "obstacle_thrower": [
+      "curiosity"
+    ],
     "helper_type": [
-      "HUMAN"
+      "ANIMAL"
     ],
     "thinking_process": "本作は「助けられた動物が人間の妻となり恩を返す」という変身譚であり、\n明確な禁忌（覗いてはならない）の提示と、その違反による不可逆的な別離を中心構造としている。\n鶴は欺く存在ではなく、条件付きで家を守る守護的存在として描かれる。",
     "atu_evidence": {},

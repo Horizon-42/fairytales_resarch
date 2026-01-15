@@ -99,16 +99,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "sentiment": "negative",
-      "relationship_level1": "Neutral",
-      "relationship_level2": "",
       "action_layer": {
         "category": "mental",
         "type": "realize",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "若者",
+          "target": "",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "若者",
+          "target": "",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "Neutral",
+      "relationship_level2": "",
+      "sentiment": "negative",
       "action_category": "mental",
       "action_type": "realize",
       "action_context": "",
@@ -133,16 +152,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 2,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "",
-      "sentiment": "negative",
       "action_layer": {
         "category": "communicative",
         "type": "inform",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "若者",
+          "target": "観音",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "若者",
+          "target": "観音",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "sentiment": "negative",
       "action_category": "communicative",
       "action_type": "inform",
       "action_context": "",
@@ -167,16 +205,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "",
-      "sentiment": "neutral",
       "action_layer": {
         "category": "communicative",
         "type": "inform",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "若者",
+          "target": "観音",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "若者",
+          "target": "観音",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "sentiment": "neutral",
       "action_category": "communicative",
       "action_type": "inform",
       "action_context": "",
@@ -201,16 +258,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 4,
-      "relationship_level1": "Hierarchy",
-      "relationship_level2": "ruler_subject",
-      "sentiment": "neutral",
       "action_layer": {
         "category": "mental",
         "type": "investigate",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "坊さんたち",
+          "target": "若者",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "neutral"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "坊さんたち",
+          "target": "若者",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "Hierarchy",
+      "relationship_level2": "ruler_subject",
+      "sentiment": "neutral",
       "action_category": "mental",
       "action_type": "investigate",
       "action_context": "",
@@ -231,16 +307,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "relationship_level1": "Hierarchy",
-      "relationship_level2": "ruler_subject",
-      "sentiment": "negative",
       "action_layer": {
         "category": "communicative",
         "type": "inform",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "",
+          "target": "",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "negative"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "",
+          "target": "",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "Hierarchy",
+      "relationship_level2": "ruler_subject",
+      "sentiment": "negative",
       "action_category": "communicative",
       "action_type": "inform",
       "action_context": "",
@@ -265,16 +360,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 6,
-      "relationship_level1": "Hierarchy",
-      "relationship_level2": "ruler_subject",
-      "sentiment": "positive",
       "action_layer": {
         "category": "transaction",
         "type": "give",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "坊さんたち",
+          "target": "若者",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "positive"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "坊さんたち",
+          "target": "若者",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Hierarchy",
+      "relationship_level2": "ruler_subject",
+      "sentiment": "positive",
       "action_category": "transaction",
       "action_type": "give",
       "action_context": "",
@@ -299,16 +413,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 7,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "",
-      "sentiment": "neutral",
       "action_layer": {
         "category": "communicative",
         "type": "command",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "夢の中の「おじいさん」",
+          "target": "若者",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "夢の中の「おじいさん」",
+          "target": "若者",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "sentiment": "neutral",
       "action_category": "communicative",
       "action_type": "command",
       "action_context": "",
@@ -333,16 +466,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 8,
-      "relationship_level1": "Neutral",
-      "relationship_level2": "stranger",
-      "sentiment": "neutral",
       "action_layer": {
         "category": "physical",
         "type": "travel",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "若者",
+          "target": "長谷寺",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "stranger",
+          "sentiment": "neutral"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "若者",
+          "target": "長谷寺",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "stranger",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "Neutral",
+      "relationship_level2": "stranger",
+      "sentiment": "neutral",
       "action_category": "physical",
       "action_type": "travel",
       "action_context": "",
@@ -367,10 +519,18 @@
       "object_type": "",
       "instrument": "",
       "time_order": 9,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      },
       "narrative_function": "",
+      "relationship_multi": [],
       "relationship_level1": "",
       "relationship_level2": "",
-      "relationship_multi": [],
       "sentiment": "",
       "action_category": "",
       "action_type": "",
@@ -394,16 +554,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 10,
-      "relationship_level1": "Neutral",
-      "relationship_level2": "stranger",
-      "sentiment": "positive",
       "action_layer": {
         "category": "mental",
         "type": "realize",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "若者",
+          "target": "",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "stranger",
+          "sentiment": "positive"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "若者",
+          "target": "",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "stranger",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Neutral",
+      "relationship_level2": "stranger",
+      "sentiment": "positive",
       "action_category": "mental",
       "action_type": "realize",
       "action_context": "",
@@ -428,16 +607,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 11,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "enemy",
-      "sentiment": "neutral",
       "action_layer": {
         "category": "physical",
         "type": "restrain",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "若者",
+          "target": "あぶ",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "neutral"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "若者",
+          "target": "あぶ",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "enemy",
+      "sentiment": "neutral",
       "action_category": "physical",
       "action_type": "restrain",
       "action_context": "",
@@ -462,16 +660,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 12,
-      "relationship_level1": "Hierarchy",
-      "relationship_level2": "ruler_subject",
-      "sentiment": "neutral",
       "action_layer": {
         "category": "transaction",
         "type": "request",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "侍",
+          "target": "若者",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "neutral"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "侍",
+          "target": "若者",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "Hierarchy",
+      "relationship_level2": "ruler_subject",
+      "sentiment": "neutral",
       "action_category": "transaction",
       "action_type": "request",
       "action_context": "",
@@ -496,16 +713,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 13,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "",
-      "sentiment": "positive",
       "action_layer": {
         "category": "transaction",
         "type": "give",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "若者",
+          "target": "侍",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "若者",
+          "target": "侍",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "sentiment": "positive",
       "action_category": "transaction",
       "action_type": "give",
       "action_context": "",
@@ -530,16 +766,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 14,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "",
-      "sentiment": "positive",
       "action_layer": {
         "category": "transaction",
         "type": "give",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "牛車の女の人",
+          "target": "若者",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "牛車の女の人",
+          "target": "若者",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "sentiment": "positive",
       "action_category": "transaction",
       "action_type": "give",
       "action_context": "",
@@ -564,16 +819,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 15,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "",
-      "sentiment": "positive",
       "action_layer": {
         "category": "transaction",
         "type": "give",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "若者",
+          "target": "お供ともの女の一人",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "若者",
+          "target": "お供ともの女の一人",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "sentiment": "positive",
       "action_category": "transaction",
       "action_type": "give",
       "action_context": "",
@@ -596,16 +870,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 16,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "",
-      "sentiment": "positive",
       "action_layer": {
         "category": "transaction",
         "type": "give",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "牛車の女の人",
+          "target": "",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "牛車の女の人",
+          "target": "",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "sentiment": "positive",
       "action_category": "transaction",
       "action_type": "give",
       "action_context": "",
@@ -630,16 +923,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 17,
-      "relationship_level1": "Neutral",
-      "relationship_level2": "",
-      "sentiment": "negative",
       "action_layer": {
         "category": "existential",
         "type": "die",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "馬",
+          "target": "馬の主人",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "馬",
+          "target": "馬の主人",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "Neutral",
+      "relationship_level2": "",
+      "sentiment": "negative",
       "action_category": "existential",
       "action_type": "die",
       "action_context": "",
@@ -664,16 +976,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 18,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "",
-      "sentiment": "neutral",
       "action_layer": {
         "category": "transaction",
         "type": "exchange",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "若者",
+          "target": "下男",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "若者",
+          "target": "下男",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "sentiment": "neutral",
       "action_category": "transaction",
       "action_type": "exchange",
       "action_context": "",
@@ -698,16 +1029,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 19,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "",
-      "sentiment": "positive",
       "action_layer": {
         "category": "transaction",
         "type": "request",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "若者",
+          "target": "観音",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "若者",
+          "target": "観音",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "sentiment": "positive",
       "action_category": "transaction",
       "action_type": "request",
       "action_context": "",
@@ -732,16 +1082,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 20,
-      "relationship_level1": "Hierarchy",
-      "relationship_level2": "mentor_student",
-      "sentiment": "positive",
       "action_layer": {
         "category": "existential",
         "type": "revive",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "観音",
+          "target": "馬",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "mentor_student",
+          "sentiment": "positive"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "観音",
+          "target": "馬",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "mentor_student",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Hierarchy",
+      "relationship_level2": "mentor_student",
+      "sentiment": "positive",
       "action_category": "existential",
       "action_type": "revive",
       "action_context": "",
@@ -766,16 +1135,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 21,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "",
-      "sentiment": "neutral",
       "action_layer": {
         "category": "transaction",
         "type": "request",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "若者",
+          "target": "鳥羽の家の人たち",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "若者",
+          "target": "鳥羽の家の人たち",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "sentiment": "neutral",
       "action_category": "transaction",
       "action_type": "request",
       "action_context": "",
@@ -800,16 +1188,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 22,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "",
-      "sentiment": "positive",
       "action_layer": {
         "category": "transaction",
         "type": "exchange",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "鳥羽の家の人たち",
+          "target": "若者",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "鳥羽の家の人たち",
+          "target": "若者",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "",
+      "sentiment": "positive",
       "action_category": "transaction",
       "action_type": "exchange",
       "action_context": "",
@@ -834,16 +1241,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 23,
-      "relationship_level1": "Neutral",
-      "relationship_level2": "",
-      "sentiment": "positive",
       "action_layer": {
         "category": "existential",
         "type": "transform",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "若者",
+          "target": "若者",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "若者",
+          "target": "若者",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Neutral",
+      "relationship_level2": "",
+      "sentiment": "positive",
       "action_category": "existential",
       "action_type": "transform",
       "action_context": "",
@@ -868,16 +1294,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 24,
-      "relationship_level1": "Family & Kinship",
-      "relationship_level2": "spouse",
-      "sentiment": "positive",
       "action_layer": {
         "category": "existential",
         "type": "transform",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "若者",
+          "target": "お嫁",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "spouse",
+          "sentiment": "positive"
+        }
+      ],
       "narrative_function": "",
-      "relationship_multi": [],
+      "relationship_multi": [
+        {
+          "agent": "若者",
+          "target": "お嫁",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "spouse",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Family & Kinship",
+      "relationship_level2": "spouse",
+      "sentiment": "positive",
       "action_category": "existential",
       "action_type": "transform",
       "action_context": "",
@@ -887,8 +1332,7 @@
   "themes_and_motifs": {
     "ending_type": "HAPPY_ENDING",
     "key_values": [
-      "LUCK",
-      "OBEDIENCE"
+      "LUCK"
     ],
     "motif_type": [
       "Motif Q10-Q80: Rewards and Punishments > Deeds rewarded > Deeds rewarded",

@@ -224,8 +224,11 @@
     }
   ],
   "themes_and_motifs": {
-    "ending_type": "HAPPY_REUNION",
-    "key_values": [],
+    "ending_type": "OTHER",
+    "key_values": [
+      "DISOBEDIENCE",
+      "LOYALTY"
+    ],
     "motif_type": [],
     "atu_categories": [],
     "obstacle_thrower": [],
@@ -319,7 +322,10 @@
     ],
     "propp_notes": "",
     "paragraph_summaries": {
-      "per_section": {},
+      "per_section": {
+        "S173-233": "これは不思議な石うすでな、右へ回せば欲しい物が出て、左へ回せば止まるんじゃ。止めるまで出続けるから、気をつけるんじゃぞ",
+        "S257-315": "The man tried turning the stone mill, and white rice came out in a crunching sound."
+      },
       "combined": [],
       "whole": ""
     },

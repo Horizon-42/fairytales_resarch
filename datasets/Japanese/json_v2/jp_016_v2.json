@@ -772,7 +772,10 @@
   ],
   "themes_and_motifs": {
     "ending_type": "HAPPY_REUNION",
-    "key_values": [],
+    "key_values": [
+      "LUCK",
+      "JUSTICE"
+    ],
     "motif_type": [],
     "atu_categories": [],
     "obstacle_thrower": [],
