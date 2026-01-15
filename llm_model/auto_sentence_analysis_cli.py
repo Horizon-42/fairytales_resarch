@@ -1,11 +1,19 @@
 """CLI runner for sentence-level event analysis.
 
 Example:
+  # Analyze a single sentence
   python -m llm_model.auto_sentence_analysis_cli \
     --story-file /path/to/story.txt \
     --sentence "The hero defeated the dragon."
+  
+  # Auto-split and analyze all sentences
+  python -m llm_model.auto_sentence_analysis_cli \
+    --story-file /path/to/story.txt \
+    --output result.json
 
-This tool analyzes a single sentence within the context of a complete story.
+This tool analyzes sentences within the context of a complete story.
+If --sentence is provided, it analyzes only that sentence.
+Otherwise, it automatically splits the story into sentences and analyzes each one.
 """
 
 from __future__ import annotations
@@ -13,20 +21,25 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import sys
 from pathlib import Path
+
+# Add parent directory to path to import sentence_splitter
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from llm_model.env import load_repo_dotenv
 from llm_model.gemini_client import GeminiConfig
 from llm_model.llm_router import LLMConfig
 from llm_model.ollama_client import OllamaConfig
 from llm_model.sentence_analyzer import SentenceAnalyzerConfig, analyze_sentence
+from pre_data_process.sentence_splitter import split_sentences_advanced
 
 
 def main() -> int:
     load_repo_dotenv()
 
     parser = argparse.ArgumentParser(
-        description="Analyze a single sentence within the context of a story."
+        description="Analyze sentences within the context of a story."
     )
     parser.add_argument(
         "--provider",
@@ -57,21 +70,22 @@ def main() -> int:
     parser.add_argument(
         "--sentence",
         type=str,
-        required=True,
-        help="The sentence to analyze",
+        default=None,
+        help="Optional: analyze only this specific sentence. If not provided, auto-split and analyze all sentences.",
+    )
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=None,
+        help="Optional: output JSON file path. If not provided, output to stdout.",
     )
     args = parser.parse_args()
 
     if not args.story_file.exists():
-        print(f"Error: Story file not found: {args.story_file}", file=__import__("sys").stderr)
+        print(f"Error: Story file not found: {args.story_file}", file=sys.stderr)
         return 1
 
     story_context = args.story_file.read_text(encoding="utf-8")
-    sentence = args.sentence.strip()
-
-    if not sentence:
-        print("Error: Sentence cannot be empty", file=__import__("sys").stderr)
-        return 1
 
     provider = (args.provider or os.getenv("LLM_PROVIDER", "ollama")).strip().lower()
 
@@ -95,15 +109,69 @@ def main() -> int:
     config = SentenceAnalyzerConfig(llm=llm)
 
     try:
-        result = analyze_sentence(
-            story_context=story_context,
-            sentence=sentence,
-            config=config,
-        )
-        print(json.dumps(result, ensure_ascii=False, indent=2))
+        # If a specific sentence is provided, analyze only that sentence
+        if args.sentence:
+            sentence = args.sentence.strip()
+            if not sentence:
+                print("Error: Sentence cannot be empty", file=sys.stderr)
+                return 1
+            
+            result = analyze_sentence(
+                story_context=story_context,
+                sentence=sentence,
+                config=config,
+            )
+            output_data = result
+        else:
+            # Auto-split and analyze all sentences
+            print("Splitting story into sentences...", file=sys.stderr)
+            sentences = split_sentences_advanced(story_context)
+            print(f"Found {len(sentences)} sentences. Analyzing...", file=sys.stderr)
+            
+            results = []
+            for idx, sentence in enumerate(sentences, start=1):
+                print(f"Analyzing sentence {idx}/{len(sentences)}: {sentence[:50]}...", file=sys.stderr)
+                try:
+                    analysis = analyze_sentence(
+                        story_context=story_context,
+                        sentence=sentence,
+                        config=config,
+                    )
+                    results.append({
+                        "sentence_index": idx,
+                        "sentence": sentence,
+                        "analysis": analysis,
+                    })
+                except Exception as e:
+                    print(f"Warning: Failed to analyze sentence {idx}: {e}", file=sys.stderr)
+                    results.append({
+                        "sentence_index": idx,
+                        "sentence": sentence,
+                        "analysis": None,
+                        "error": str(e),
+                    })
+            
+            output_data = {
+                "story_file": str(args.story_file),
+                "total_sentences": len(sentences),
+                "analyzed_sentences": len(results),
+                "sentences": results,
+            }
+        
+        # Output results
+        output_json = json.dumps(output_data, ensure_ascii=False, indent=2)
+        
+        if args.output:
+            args.output.write_text(output_json, encoding="utf-8")
+            print(f"Results written to: {args.output}", file=sys.stderr)
+        else:
+            print(output_json)
+        
         return 0
     except Exception as e:
-        print(f"Error: {e}", file=__import__("sys").stderr)
+        print(f"Error: {e}", file=sys.stderr)
+        import traceback
+        traceback.print_exc()
         return 1
 
 

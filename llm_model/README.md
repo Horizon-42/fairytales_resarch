@@ -37,10 +37,12 @@ python -m llm_model.auto_characters_cli --model qwen3:8b --text-file datasets/Ch
 
 ## Sentence-level Event Analysis CLI
 
-Analyze a single sentence within the context of a complete story to determine:
+Analyze sentences within the context of a complete story to determine:
 - Whether it contains an event or is just description (location, background, scene)
 - If it's an event: extract doer, receiver, sentiment, and emotion
 - Assess the event's importance and classify its narrative function (if important)
+
+### Analyze a single sentence:
 
 ```bash
 cd /home/supercomputing/studys/fairytales_resarch
@@ -48,6 +50,44 @@ python -m llm_model.auto_sentence_analysis_cli \
   --story-file datasets/ChineseTales/texts/孟姜女哭长城.md \
   --sentence "The hero defeated the dragon." \
   --model llama3.1
+```
+
+### Auto-split and analyze all sentences:
+
+The tool can automatically split the story into sentences and analyze each one, outputting results as JSON with sentence indices:
+
+```bash
+python -m llm_model.auto_sentence_analysis_cli \
+  --story-file datasets/ChineseTales/texts/孟姜女哭长城.md \
+  --output result.json \
+  --model llama3.1
+```
+
+The output JSON will have this structure:
+```json
+{
+  "story_file": "path/to/story.txt",
+  "total_sentences": 10,
+  "analyzed_sentences": 10,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "First sentence...",
+      "analysis": {
+        "is_event": true,
+        "content_type": "event",
+        "doer": "...",
+        "receiver": "...",
+        "sentiment": "...",
+        "emotion": "...",
+        "importance_score": 7,
+        "narrative_function": "trigger",
+        "explanation": "..."
+      }
+    },
+    ...
+  ]
+}
 ```
 
 With Gemini:
@@ -58,5 +98,5 @@ python -m llm_model.auto_sentence_analysis_cli \
   --provider gemini \
   --model "$GEMINI_MODEL" \
   --story-file datasets/ChineseTales/texts/孟姜女哭长城.md \
-  --sentence "The hero defeated the dragon."
+  --output result.json
 ```
