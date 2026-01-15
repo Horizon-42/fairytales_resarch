@@ -84,18 +84,23 @@ def split_sentences(text: str) -> List[str]:
 
 def split_sentences_with_quotes(text: str) -> List[str]:
     """
-    智能句子切分，正确处理引号内的对话
+    智能句子切分，正确处理引号内的对话和破折号
     
     引号类型：
     - 中文双引号：「」『』
     - 中文单引号：''
     - 英文双引号：""
     - 英文单引号：''
+    
+    破折号处理：
+    - 中文破折号（——）和英文破折号（—、–、--）与其之前的句子视为一个句子
+    - 如果句子结束标点后跟着破折号，不在此处切分，继续收集字符
     """
     if not text:
         return []
     
     # 定义引号对（开引号 -> 闭引号）
+    # 注意：某些引号字符既作为开引号也作为闭引号（如 " 和 '）
     quote_pairs = {
         '「': '」',  # 中文双引号
         '『': '』',  # 中文双引号（另一种）
@@ -105,24 +110,77 @@ def split_sentences_with_quotes(text: str) -> List[str]:
         "'": "'",   # 直单引号
     }
     
+    # 定义既作为开引号也作为闭引号的字符（通过上下文判断）
+    ambiguous_quotes = {'"', "'"}  # 标准英文引号
+
     sentences = []
     i = 0
     current_sentence = []
     quote_stack = []  # 跟踪当前打开的引号类型（闭引号列表）
     sentence_end_chars = ['。', '！', '？', '.', '!', '?', '؟']
     closing_chars = ['」', '』', '"', "'", '"', "'", ')', '）']
+    # 破折号：中文破折号（——）和英文破折号（—、--）
+    dash_chars = ['—', '–']  # em dash 和 en dash
+    dash_pattern = '——'  # 中文破折号（两个连续的破折号）
     
     while i < len(text):
         char = text[i]
         
-        # 检查是否是引号开始
+        # 检查是否是引号（开引号或闭引号）
+        # 如果是模糊引号（既可作为开引号也可作为闭引号），根据引号栈状态判断
+        if char in ambiguous_quotes:
+            if quote_stack and quote_stack[-1] == char:
+                # 引号栈不为空且栈顶是相同字符，说明是闭引号
+                quote_stack.pop()
+                current_sentence.append(char)
+
+                # 引号闭合后，检查引号内的最后一个字符是否是句子结束标点
+                quote_content_ends_with_sentence = False
+                if len(current_sentence) >= 2:
+                    prev_char = current_sentence[-2]
+                    if prev_char in sentence_end_chars:
+                        quote_content_ends_with_sentence = True
+
+                # 如果引号内以句子结束标点结尾，且后面还有更多内容，应该切分
+                if quote_content_ends_with_sentence:
+                    j = i + 1
+                    # 跳过可能的闭合标点
+                    while j < len(text) and text[j] in closing_chars:
+                        current_sentence.append(text[j])
+                        j += 1
+
+                    # 跳过空白字符
+                    while j < len(text) and text[j] in ' \t\n':
+                        j += 1
+
+                    # 如果后面还有非空白字符，说明还有更多内容，应该切分当前句子
+                    if j < len(text):
+                        # 完成当前句子
+                        sentence = ''.join(current_sentence).strip()
+                        if sentence:
+                            sentences.append(sentence)
+
+                        current_sentence = []
+                        i = j
+                        continue
+
+                i += 1
+                continue
+            else:
+                # 引号栈为空或栈顶不是相同字符，说明是开引号
+                quote_stack.append(char)
+                current_sentence.append(char)
+                i += 1
+                continue
+
+        # 检查是否是明确的引号开始
         if char in quote_pairs:
             quote_stack.append(quote_pairs[char])
             current_sentence.append(char)
             i += 1
             continue
         
-        # 检查是否是引号结束
+        # 检查是否是明确的引号结束
         if quote_stack and char == quote_stack[-1]:
             quote_stack.pop()
             current_sentence.append(char)
@@ -181,6 +239,34 @@ def split_sentences_with_quotes(text: str) -> List[str]:
                 while j < len(text) and text[j] in ' \t\n':
                     j += 1
                 
+                # 检查后面是否有破折号
+                # 如果后面有破折号，不应该在这里切分，继续收集字符
+                has_dash_after = False
+                dash_length = 0
+                if j < len(text):
+                    # 检查是否是中文破折号（——）
+                    if j + 1 < len(text) and text[j:j+2] == dash_pattern:
+                        has_dash_after = True
+                        dash_length = 2
+                    # 检查是否是英文破折号（—、–）
+                    elif text[j] in dash_chars:
+                        has_dash_after = True
+                        dash_length = 1
+                    # 检查是否是两个连字符（--）
+                    elif j + 1 < len(text) and text[j:j+2] == '--':
+                        has_dash_after = True
+                        dash_length = 2
+
+                # 如果有破折号，将破折号添加到当前句子，然后继续收集字符，不切分
+                if has_dash_after:
+                    # 将破折号添加到当前句子
+                    for k in range(dash_length):
+                        if j + k < len(text):
+                            current_sentence.append(text[j + k])
+                    # 跳过破折号，继续处理后面的内容
+                    i = j + dash_length
+                    continue
+
                 # 完成当前句子
                 sentence = ''.join(current_sentence).strip()
                 if sentence:
