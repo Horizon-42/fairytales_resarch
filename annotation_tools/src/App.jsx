@@ -501,25 +501,13 @@ export default function App() {
       return;
     }
 
-    // Check if summaries are empty
-    const per = paragraphSummaries?.perSection || {};
-    const whole = (paragraphSummaries?.whole || "").trim();
-    const hasPerSectionSummaries = Object.keys(per).some(key => {
-      const summary = per[key];
-      return typeof summary === "string" && summary.trim().length > 0;
-    });
-    const hasWholeSummary = whole.length > 0;
-
-    if (!hasPerSectionSummaries && !hasWholeSummary) {
-      alert("请先进行summarize（在Summaries标签页中点击Auto Summary按钮）后再使用Auto Detect功能。\n\nPlease summarize first (click Auto Summary button in Summaries tab) before using Auto Detect.");
-      return;
-    }
-
     setAutoDetectMotifLoading(true);
     try {
       const backendUrl = await getBackendUrl();
 
       const sections = deriveTextSectionsFromNarratives(narrativeStructure, sourceText.text);
+      const per = paragraphSummaries?.perSection || {};
+      const whole = (paragraphSummaries?.whole || "").trim();
 
       const detectOnce = async (text) => {
         const resp = await fetch(`${backendUrl}/api/detect/motif_atu`, {
@@ -539,13 +527,19 @@ export default function App() {
         return data;
       };
 
+      // For each section: use summary if available, otherwise use original section text
       const sectionCandidates = sections
         .map((s) => {
           const key = String(s.text_section);
           const summary = per[key];
-          return { key, summary };
+          const sectionText = typeof s.text === "string" ? s.text.trim() : "";
+          // Use summary if available and not empty, otherwise use original section text
+          const textToUse = (typeof summary === "string" && summary.trim()) 
+            ? summary.trim() 
+            : sectionText;
+          return { key, text: textToUse };
         })
-        .filter((x) => typeof x.summary === "string" && x.summary.trim());
+        .filter((x) => x.text && x.text.length > 0);
 
       const WHOLE_SUMMARY_KEY = "__WHOLE_SUMMARY__";
 
@@ -567,12 +561,12 @@ export default function App() {
         const MAX_SECTION_DETECT = 30;
         const picked = sectionCandidates
           .slice()
-          .sort((a, b) => (b.summary.length || 0) - (a.summary.length || 0))
+          .sort((a, b) => (b.text.length || 0) - (a.text.length || 0))
           .slice(0, MAX_SECTION_DETECT);
 
         const results = await Promise.all(
-          picked.map(async ({ key, summary }) => {
-            const data = await detectOnce(summary);
+          picked.map(async ({ key, text }) => {
+            const data = await detectOnce(text);
             return { key, data };
           })
         );
@@ -589,8 +583,9 @@ export default function App() {
 
       // Also run once on whole summary (if available) to recover global labels.
       // Evidence will still prefer a best section match; otherwise it falls back to whole.
+      // Only use whole summary if it exists and is not empty
       let wholeData = null;
-      if (whole) {
+      if (whole && whole.length > 0) {
         wholeData = await detectOnce(whole);
       }
 
@@ -615,7 +610,7 @@ export default function App() {
       const evidenceKeyForLabel = (bestMap, label) => {
         const best = bestMap[label];
         if (best?.sectionKey) return best.sectionKey;
-        if (whole) return WHOLE_SUMMARY_KEY;
+        if (whole && whole.length > 0) return WHOLE_SUMMARY_KEY;
         const firstSectionKey = sections && sections.length > 0 ? String(sections[0].text_section) : "";
         return firstSectionKey || "";
       };
