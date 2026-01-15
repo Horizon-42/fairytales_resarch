@@ -8,7 +8,8 @@ export default function MotifSection({
   onAutoDetectMotifAtu,
   autoDetectMotifLoading,
   textSections = [],
-  wholeSummary = ""
+  wholeSummary = "",
+  paragraphSummaries = { perSection: {}, whole: "" }
 }) {
   const WHOLE_SUMMARY_KEY = "__WHOLE_SUMMARY__";
   const PREVIEW_CHARS = 300;
@@ -593,6 +594,16 @@ export default function MotifSection({
     setMotif({ ...motif, motif_type: updatedTypes, motif_evidence: nextEvidence });
   };
 
+  // Check if summaries are empty
+  const per = paragraphSummaries?.perSection || {};
+  const whole = (paragraphSummaries?.whole || wholeSummary || "").trim();
+  const hasPerSectionSummaries = Object.keys(per).some(key => {
+    const summary = per[key];
+    return typeof summary === "string" && summary.trim().length > 0;
+  });
+  const hasWholeSummary = whole.length > 0;
+  const hasSummaries = hasPerSectionSummaries || hasWholeSummary;
+
   return (
     <section className="card">
       <div className="section-header-row" style={{ alignItems: "center" }}>
@@ -603,7 +614,9 @@ export default function MotifSection({
             className="ghost-btn"
             onClick={() => onAutoDetectMotifAtu && onAutoDetectMotifAtu()}
             disabled={!onAutoDetectMotifAtu || autoDetectMotifLoading}
-            title="Auto-detect ATU + Motifs using the local vector database"
+            title={hasSummaries
+              ? "Auto-detect ATU + Motifs using the local vector database"
+              : "Please summarize first (click Auto Summary button in Summaries tab) before using Auto Detect."}
           >
             {autoDetectMotifLoading ? "Auto Detect..." : "Auto Detect"}
           </button>
@@ -627,6 +640,19 @@ export default function MotifSection({
           </button>
         </div>
       </div>
+      {!hasSummaries && (
+        <div style={{
+          marginTop: "0.75rem",
+          padding: "0.75rem",
+          background: "#fff3cd",
+          border: "1px solid #ffc107",
+          borderRadius: "4px",
+          color: "#856404",
+          fontSize: "0.875rem"
+        }}>
+          <strong>Tip:</strong> Please click the <strong>Auto Summary</strong> button in the <strong>Summaries</strong> tab before using Auto Detect.
+        </div>
+      )}
       {/* ATU hierarchical category selector (multi-select) - based on CSV */}
       <div style={{ marginTop: "0.75rem" }}>
         <div className="section-header-row">

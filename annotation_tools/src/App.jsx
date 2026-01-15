@@ -501,13 +501,25 @@ export default function App() {
       return;
     }
 
+    // Check if summaries are empty
+    const per = paragraphSummaries?.perSection || {};
+    const whole = (paragraphSummaries?.whole || "").trim();
+    const hasPerSectionSummaries = Object.keys(per).some(key => {
+      const summary = per[key];
+      return typeof summary === "string" && summary.trim().length > 0;
+    });
+    const hasWholeSummary = whole.length > 0;
+
+    if (!hasPerSectionSummaries && !hasWholeSummary) {
+      alert("请先进行summarize（在Summaries标签页中点击Auto Summary按钮）后再使用Auto Detect功能。\n\nPlease summarize first (click Auto Summary button in Summaries tab) before using Auto Detect.");
+      return;
+    }
+
     setAutoDetectMotifLoading(true);
     try {
       const backendUrl = await getBackendUrl();
 
-      const per = paragraphSummaries?.perSection || {};
       const sections = deriveTextSectionsFromNarratives(narrativeStructure, sourceText.text);
-      const whole = (paragraphSummaries?.whole || "").trim();
 
       const detectOnce = async (text) => {
         const resp = await fetch(`${backendUrl}/api/detect/motif_atu`, {
@@ -2398,8 +2410,9 @@ export default function App() {
                 setMotif={setMotif}
                 onAutoDetectMotifAtu={handleAutoDetectMotifAtu}
                 autoDetectMotifLoading={autoDetectMotifLoading}
-                  textSections={deriveTextSectionsFromNarratives(narrativeStructure, sourceText.text)}
-                  wholeSummary={paragraphSummaries.whole || ""}
+                textSections={deriveTextSectionsFromNarratives(narrativeStructure, sourceText.text)}
+                wholeSummary={paragraphSummaries.whole || ""}
+                paragraphSummaries={paragraphSummaries}
               />
             )}
 
