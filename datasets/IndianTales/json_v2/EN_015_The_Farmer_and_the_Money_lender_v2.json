@@ -38,23 +38,24 @@
   ],
   "narrative_events": [
     {
+      "id": "8808ecc7-0380-4d52-b1f6-374f0dc05d63",
+      "text_span": {
+        "start": 0,
+        "end": 373,
+        "text": "There was once a farmer who suffered much at the hands of a money-lender. Good harvests, or bad, the farmer was always poor, the money-lender rich. At the last, when he hadn't a farthing left, farmer went to the money-lender's house, and said, \"You can't squeeze water from a stone, and as you have nothing to get by me now, you might tell me the secret of becoming rich.\"\n"
+      },
       "event_type": "LACK",
       "description": "The impoverished farmer asks the rich money-lender for the secret to wealth.",
-      "relationships": [],
-      "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": ""
-      },
-      "id": "8808ecc7-0380-4d52-b1f6-374f0dc05d63",
+      "agents": [
+        "The Farmer"
+      ],
+      "targets": [
+        "The Money-lender"
+      ],
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "narrative_function": "trigger",
-      "relationship_multi": [],
       "relationship_level1": "Social & Alliance",
       "relationship_level2": "colleague",
       "sentiment": "negative",
@@ -62,20 +63,15 @@
       "action_type": "",
       "action_context": "",
       "action_status": "success",
-      "text_span": {
-        "start": 0,
-        "end": 373,
-        "text": "There was once a farmer who suffered much at the hands of a money-lender. Good harvests, or bad, the farmer was always poor, the money-lender rich. At the last, when he hadn't a farthing left, farmer went to the money-lender's house, and said, \"You can't squeeze water from a stone, and as you have nothing to get by me now, you might tell me the secret of becoming rich.\"\n"
-      },
-      "agents": [
-        "The Farmer"
-      ],
-      "targets": [
-        "The Money-lender"
-      ]
+      "narrative_function": "trigger"
     },
     {
       "id": "70c2747d-b80f-419e-a926-b424ad4c3c98",
+      "text_span": {
+        "start": 373,
+        "end": 588,
+        "text": "\"My friend,\" returned the money-lender, piously, \"riches come from Ram—ask him.\"\n\"Thank you, I will!\" replied the simple farmer; so he prepared three girdle-cakes to last him on the journey, and set out to find Ram."
+      },
       "event_type": "DEPARTURE",
       "description": "The farmer takes the sarcastic advice literally and leaves to find God (Ram).",
       "agents": [
@@ -84,27 +80,26 @@
       "targets": [
         "self"
       ],
-      "text_span": {
-        "start": 373,
-        "end": 588,
-        "text": "\"My friend,\" returned the money-lender, piously, \"riches come from Ram—ask him.\"\n\"Thank you, I will!\" replied the simple farmer; so he prepared three girdle-cakes to last him on the journey, and set out to find Ram."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 2,
       "relationship_level1": "Neutral",
       "relationship_level2": "stranger",
-      "relationship_multi": [],
       "sentiment": "positive",
-      "narrative_function": "setup",
       "action_category": "physical",
       "action_type": "travel",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "setup"
     },
     {
       "id": "cd2a576a-09a9-440e-90bd-53c4dfa128f6",
+      "text_span": {
+        "start": 856,
+        "end": 1331,
+        "text": "At last, he came upon a poor man sitting under a tree, and finding out he was hungry, the kindly farmer gave him his last cake, and sitting down to rest beside him, entered into conversation.\n\"And where are you going?\" asked the poor man, at length.\n\"Oh, I have a long journey before me, for I am going to find Ram!\" replied the farmer. \"I don't suppose you could tell me which way to go?\"\n\"Perhaps I can,\" said the poor man, smiling, \"for I am Ram! What do you want of me?\"\n"
+      },
       "event_type": "FIRST_FUNCTION_DONOR",
       "description": "",
       "agents": [
@@ -113,18 +108,12 @@
       "targets": [
         "Ram "
       ],
-      "text_span": {
-        "start": 856,
-        "end": 1331,
-        "text": "At last, he came upon a poor man sitting under a tree, and finding out he was hungry, the kindly farmer gave him his last cake, and sitting down to rest beside him, entered into conversation.\n\"And where are you going?\" asked the poor man, at length.\n\"Oh, I have a long journey before me, for I am going to find Ram!\" replied the farmer. \"I don't suppose you could tell me which way to go?\"\n\"Perhaps I can,\" said the poor man, smiling, \"for I am Ram! What do you want of me?\"\n"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 3,
       "relationship_level1": "Hierarchy",
       "relationship_level2": "ruler_subject",
-      "relationship_multi": [],
       "sentiment": "positive",
       "action_category": "transaction",
       "action_type": "give",
@@ -134,6 +123,11 @@
     },
     {
       "id": "635c76ce-a029-4e1b-b2ca-786f8f96e452",
+      "text_span": {
+        "start": 1331,
+        "end": 1590,
+        "text": "Then the farmer told the whole story, and Ram, taking pity on him, gave him a conch shell, and showed him how to blow it in a particular way, saying, \"Remember! whatever you wish for, you have only to blow the conch that way, and your wish will be fulfilled. "
+      },
       "event_type": "RECEIPT_OF_AGENT",
       "description": "Ram rewards the farmer with a magic wishing conch.",
       "agents": [
@@ -142,23 +136,26 @@
       "targets": [
         "The Farmer"
       ],
-      "text_span": {
-        "start": 1331,
-        "end": 1590,
-        "text": "Then the farmer told the whole story, and Ram, taking pity on him, gave him a conch shell, and showed him how to blow it in a particular way, saying, \"Remember! whatever you wish for, you have only to blow the conch that way, and your wish will be fulfilled. "
-      },
       "target_type": "object",
       "object_type": "normal_object",
       "instrument": "",
       "time_order": 4,
       "relationship_level1": "Hierarchy",
       "relationship_level2": "ruler_subject",
-      "relationship_multi": [],
       "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "",
       "narrative_function": "setup"
     },
     {
       "id": "87c57c53-469c-4fa6-b25b-4b9243b1a25a",
+      "text_span": {
+        "start": 1903,
+        "end": 2449,
+        "text": "Therefore he went over to the simple farmer's house, and congratulated him on his good fortune, in such cunning words, pretending to have heard all about it, that before long the farmer found himself telling the whole story—all except the secret of blowing the conch, for, with all his simplicity, the farmer was not quite such a fool as to tell that.\nNevertheless, the money-lender determined to have the conch by hook or by crook, and as he was villain enough not to stick at trifles, he waited for a favourable opportunity and stole the conch."
+      },
       "event_type": "TRICKERY",
       "description": "The Money-lender tricks the farmer into revealing the source of his luck, then steals the conch.",
       "agents": [
@@ -167,27 +164,26 @@
       "targets": [
         "The Farmer"
       ],
-      "text_span": {
-        "start": 1903,
-        "end": 2449,
-        "text": "Therefore he went over to the simple farmer's house, and congratulated him on his good fortune, in such cunning words, pretending to have heard all about it, that before long the farmer found himself telling the whole story—all except the secret of blowing the conch, for, with all his simplicity, the farmer was not quite such a fool as to tell that.\nNevertheless, the money-lender determined to have the conch by hook or by crook, and as he was villain enough not to stick at trifles, he waited for a favourable opportunity and stole the conch."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 5,
       "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
-      "relationship_multi": [],
       "sentiment": "",
-      "narrative_function": "climax",
       "action_category": "physical",
       "action_type": "steal",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "climax"
     },
     {
       "id": "68fba474-711a-47cf-9395-5c6eb447edca",
+      "text_span": {
+        "start": 2780,
+        "end": 3487,
+        "text": "Business is at a stand-still unless we make a bargain. Now, I promise to give you back your conch, and never to interfere with your using it, on one condition, which is this,—whatever you get from it, I am to get double.\"\n\"Never!\" cried the farmer; \"that would be the old business all over again!\"\n\"Not at all!\" replied the wily money-lender; \"you will have your share! Now, don't be a dog in the manger, for if you get all you want, what can it matter to you if I am rich or poor?\"\nAt last, though it went sorely against the grain to be of any benefit to a money-lender, the farmer was forced to yield, and from that time, no matter what he gained by the power of the conch, the money-lender gained double."
+      },
       "event_type": "STRUGGLE",
       "description": "Unable to use the conch himself, the Money-lender forces the farmer into a deal where he gets double whatever the farmer wishes for.",
       "agents": [
@@ -196,27 +192,26 @@
       "targets": [
         "The Farmer"
       ],
-      "text_span": {
-        "start": 2780,
-        "end": 3487,
-        "text": "Business is at a stand-still unless we make a bargain. Now, I promise to give you back your conch, and never to interfere with your using it, on one condition, which is this,—whatever you get from it, I am to get double.\"\n\"Never!\" cried the farmer; \"that would be the old business all over again!\"\n\"Not at all!\" replied the wily money-lender; \"you will have your share! Now, don't be a dog in the manger, for if you get all you want, what can it matter to you if I am rich or poor?\"\nAt last, though it went sorely against the grain to be of any benefit to a money-lender, the farmer was forced to yield, and from that time, no matter what he gained by the power of the conch, the money-lender gained double."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 6,
       "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
-      "relationship_multi": [],
       "sentiment": "negative",
-      "narrative_function": "climax",
       "action_category": "communicative",
       "action_type": "command",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "climax"
     },
     {
       "id": "f0f35fb7-01c1-4ea7-a372-904e1c5c7b2c",
+      "text_span": {
+        "start": 4000,
+        "end": 4092,
+        "text": "He seized the conch, blew it loudly, and cried out, \"Oh, Ram! I wish to be blind of one eye!"
+      },
       "event_type": "VICTORY",
       "description": "The farmer wishes to lose one eye, knowing the Money-lender will lose both (double).",
       "agents": [
@@ -225,27 +220,26 @@
       "targets": [
         "self"
       ],
-      "text_span": {
-        "start": 4000,
-        "end": 4092,
-        "text": "He seized the conch, blew it loudly, and cried out, \"Oh, Ram! I wish to be blind of one eye!"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 7,
       "relationship_level1": "Neutral",
       "relationship_level2": "stranger",
-      "relationship_multi": [],
       "sentiment": "negative",
-      "narrative_function": "climax",
       "action_category": "transaction",
       "action_type": "sacrifice",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "climax"
     },
     {
       "id": "d16b94fa-f773-45b8-b71f-adaebaf1e00c",
+      "text_span": {
+        "start": 4094,
+        "end": 4267,
+        "text": "And so he was, in a twinkling, but the money-lender of course was blind of both, and in trying to steer his way between the two new wells, he fell into one, and was drowned."
+      },
       "event_type": "PUNISHMENT",
       "description": "The Money-lender is blinded and accidentally dies as a direct result of his own greed and the farmer's wish.",
       "agents": [
@@ -254,24 +248,18 @@
       "targets": [
         "self"
       ],
-      "text_span": {
-        "start": 4094,
-        "end": 4267,
-        "text": "And so he was, in a twinkling, but the money-lender of course was blind of both, and in trying to steer his way between the two new wells, he fell into one, and was drowned."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 8,
       "relationship_level1": "Neutral",
       "relationship_level2": "stranger",
-      "relationship_multi": [],
       "sentiment": "negative",
-      "narrative_function": "resolution",
       "action_category": "existential",
       "action_type": "die",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "resolution"
     }
   ],
   "themes_and_motifs": {

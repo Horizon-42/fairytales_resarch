@@ -44,6 +44,11 @@
   "narrative_events": [
     {
       "id": "c7d4f2c9-a0a0-4163-81e4-7e78b949ecdb",
+      "text_span": {
+        "start": 0,
+        "end": 106,
+        "text": "Long ago the Bodisat was born to a forest life as the Genius of a tree standing near a certain lotus pond."
+      },
       "event_type": "Initial Situation",
       "description": "The setting and the narrator's presence are established.",
       "agents": [
@@ -53,11 +58,6 @@
       "targets": [
         "Audience"
       ],
-      "text_span": {
-        "start": 0,
-        "end": 106,
-        "text": "Long ago the Bodisat was born to a forest life as the Genius of a tree standing near a certain lotus pond."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -81,6 +81,11 @@
     },
     {
       "id": "118dc25e-234b-4373-9e94-afe5339b0a4f",
+      "text_span": {
+        "start": 283,
+        "end": 1017,
+        "text": "\"I must outwit these fish somehow or other and make a prey of them.\"\nAnd he went and sat down at the edge of the water, thinking how he should do it.\nWhen the fish saw him, they asked him, \"What are you sitting there for, lost in thought?\"\n\"I am sitting thinking about you,\" said he.\n\"Oh, sir! what are you thinking about us?\" said they.\n\"Why,\" he replied; \"there is very little water in this pond, and but little for you to eat; and the heat is so great! So I was thinking, 'What in the world will these fish do now?'\"\n\"Yes, indeed, sir! what are we to do?\" said they.\n\"If you will only do as I bid you, I will take you in my beak to a fine large pond, covered with all the kinds of lotuses, and put you into it,\" answered the crane."
+      },
       "event_type": "OTHER",
       "description": "The Crane plots to eat the fish and tricks them by offering to move them to a better pond.",
       "agents": [
@@ -89,11 +94,6 @@
       "targets": [
         "The Fish"
       ],
-      "text_span": {
-        "start": 283,
-        "end": 1017,
-        "text": "\"I must outwit these fish somehow or other and make a prey of them.\"\nAnd he went and sat down at the edge of the water, thinking how he should do it.\nWhen the fish saw him, they asked him, \"What are you sitting there for, lost in thought?\"\n\"I am sitting thinking about you,\" said he.\n\"Oh, sir! what are you thinking about us?\" said they.\n\"Why,\" he replied; \"there is very little water in this pond, and but little for you to eat; and the heat is so great! So I was thinking, 'What in the world will these fish do now?'\"\n\"Yes, indeed, sir! what are we to do?\" said they.\n\"If you will only do as I bid you, I will take you in my beak to a fine large pond, covered with all the kinds of lotuses, and put you into it,\" answered the crane."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -103,13 +103,13 @@
           "agent": "The Crane",
           "target": "The Fish",
           "relationship_level1": "Adversarial",
-          "relationship_level2": "",
+          "relationship_level2": "enemy",
           "sentiment": "hostile"
         }
       ],
       "action_layer": {
         "category": "communicative",
-        "type": "",
+        "type": "persuade",
         "context": "",
         "status": "attempt",
         "function": "trigger"
@@ -117,6 +117,11 @@
     },
     {
       "id": "ee5bf66e-dc14-4b29-9c16-4410389339c1",
+      "text_span": {
+        "start": 1180,
+        "end": 1491,
+        "text": "Not I! So long as you trust me, I won't eat you. But if you don't believe me that there is such a pond, send one of you with me to go and see it.\"\nThen they trusted him, and handed over to him one of their number—a big fellow, blind of one eye, whom they thought sharp enough in any emergency, afloat or ashore."
+      },
       "event_type": "RECONNAISSANCE",
       "description": "The fish send a scout to verify the Crane's claims.",
       "agents": [
@@ -125,11 +130,6 @@
       "targets": [
         "The Crane"
       ],
-      "text_span": {
-        "start": 1180,
-        "end": 1491,
-        "text": "Not I! So long as you trust me, I won't eat you. But if you don't believe me that there is such a pond, send one of you with me to go and see it.\"\nThen they trusted him, and handed over to him one of their number—a big fellow, blind of one eye, whom they thought sharp enough in any emergency, afloat or ashore."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -139,13 +139,13 @@
           "agent": "The Fish",
           "target": "The Crane",
           "relationship_level1": "Neutral",
-          "relationship_level2": "",
+          "relationship_level2": "stranger",
           "sentiment": "neutral"
         }
       ],
       "action_layer": {
         "category": "mental",
-        "type": "",
+        "type": "investigate",
         "context": "",
         "status": "success",
         "function": "setup"
@@ -153,6 +153,11 @@
     },
     {
       "id": "fdf7fec7-171c-4ccf-968a-80d6f94bded5",
+      "text_span": {
+        "start": 1492,
+        "end": 1495,
+        "text": "Him"
+      },
       "event_type": "OTHER",
       "description": "The Crane builds trust by honestly showing the pond to the scout, ensuring the others will follow.",
       "agents": [
@@ -161,11 +166,6 @@
       "targets": [
         "The Fish"
       ],
-      "text_span": {
-        "start": 1492,
-        "end": 1495,
-        "text": "Him"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -175,13 +175,13 @@
           "agent": "The Crane",
           "target": "The Fish",
           "relationship_level1": "Adversarial",
-          "relationship_level2": "",
+          "relationship_level2": "enemy",
           "sentiment": "positive"
         }
       ],
       "action_layer": {
         "category": "communicative",
-        "type": "",
+        "type": "inform",
         "context": "",
         "status": "success",
         "function": "setup"
@@ -189,6 +189,11 @@
     },
     {
       "id": "6278b2b2-b993-4509-a859-d6a87fe290f4",
+      "text_span": {
+        "start": 1913,
+        "end": 2256,
+        "text": "But he threw it into a fork of the tree, struck it with his beak, and killed it; and then ate its flesh, and threw its bones away at the foot of the tree. Then he went back and called out:\n\"I've thrown that fish in; let another one come.\"\nAnd in that manner he took all the fish, one by one, and ate them, till he came back and found no more!\n"
+      },
       "event_type": "VILLAINY",
       "description": "The Crane systematically kills and eats every single fish.",
       "agents": [
@@ -197,11 +202,6 @@
       "targets": [
         "The Fish"
       ],
-      "text_span": {
-        "start": 1913,
-        "end": 2256,
-        "text": "But he threw it into a fork of the tree, struck it with his beak, and killed it; and then ate its flesh, and threw its bones away at the foot of the tree. Then he went back and called out:\n\"I've thrown that fish in; let another one come.\"\nAnd in that manner he took all the fish, one by one, and ate them, till he came back and found no more!\n"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -211,13 +211,13 @@
           "agent": "The Crane",
           "target": "The Fish",
           "relationship_level1": "Adversarial",
-          "relationship_level2": "",
+          "relationship_level2": "enemy",
           "sentiment": "negative"
         }
       ],
       "action_layer": {
         "category": "physical",
-        "type": "",
+        "type": "attack",
         "context": "",
         "status": "success",
         "function": "climax"
@@ -225,6 +225,11 @@
     },
     {
       "id": "f14cf668-d92e-4a51-abc7-2297eeaf6a5c",
+      "text_span": {
+        "start": 2256,
+        "end": 3214,
+        "text": "But there was still a crab left behind there; and the crane thought he would eat him too, and called out:\n\"I say, good crab, I've taken all the fish away, and put them into a fine large pond. Come along. I'll take you too!\"\n\"But how will you take hold of me to carry me along?\"\n\"I'll bite hold of you with my beak.\"\n\"You'll let me fall if you carry me like that. I won't go with you!\"\n\"Don't be afraid! I'll hold you quite tight all the way.\"\nThen said the crab to himself, \"If this fellow once got hold of fish, he would never let them go in a pond! Now if he should really put me into the pond, it would be capital; but if he doesn't—then I'll cut his throat, and kill him!\" So he said to him:\n\"Look here, friend, you won't be able to hold me tight enough; but we crabs have a famous grip. If you let me catch hold of you round the neck with my claws, I shall be glad to go with you.\"\nAnd the other did not see that he was trying to outwit him, and agreed."
+      },
       "event_type": "OTHER",
       "description": "The Crab suspects the Crane and insists on a safe hold (claws on neck) which the Crane foolishly accepts.",
       "agents": [
@@ -233,11 +238,6 @@
       "targets": [
         "The Crane"
       ],
-      "text_span": {
-        "start": 2256,
-        "end": 3214,
-        "text": "But there was still a crab left behind there; and the crane thought he would eat him too, and called out:\n\"I say, good crab, I've taken all the fish away, and put them into a fine large pond. Come along. I'll take you too!\"\n\"But how will you take hold of me to carry me along?\"\n\"I'll bite hold of you with my beak.\"\n\"You'll let me fall if you carry me like that. I won't go with you!\"\n\"Don't be afraid! I'll hold you quite tight all the way.\"\nThen said the crab to himself, \"If this fellow once got hold of fish, he would never let them go in a pond! Now if he should really put me into the pond, it would be capital; but if he doesn't—then I'll cut his throat, and kill him!\" So he said to him:\n\"Look here, friend, you won't be able to hold me tight enough; but we crabs have a famous grip. If you let me catch hold of you round the neck with my claws, I shall be glad to go with you.\"\nAnd the other did not see that he was trying to outwit him, and agreed."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -247,13 +247,13 @@
           "agent": "The Crab",
           "target": "The Crane",
           "relationship_level1": "Adversarial",
-          "relationship_level2": "",
+          "relationship_level2": "enemy",
           "sentiment": "neutral"
         }
       ],
       "action_layer": {
         "category": "communicative",
-        "type": "",
+        "type": "persuade",
         "context": "",
         "status": "success",
         "function": "character_arc"
@@ -261,6 +261,11 @@
     },
     {
       "id": "8d9c6475-02be-4bba-a1c4-3435fc96c741",
+      "text_span": {
+        "start": 3750,
+        "end": 4337,
+        "text": "Now cast your eye upon the heap of fish-bones lying at the root of yonder Varana-tree. Just as I have eaten those fish, every one of them, just so I will devour you as well!\"\n\"Ah! those fishes got eaten through their own stupidity,\" answered the crab; \"but I'm not going to let you eat me. On the contrary, is it you that I am going to destroy. For you in your folly have not seen that I was outwitting you. If we die, we die both together; for I will cut off this head of yours, and cast it to the ground!\" And so saying, he gave the crane's neck a grip with his claws, as with a vice.\n"
+      },
       "event_type": "STRUGGLE",
       "description": "The Crane reveals his villainy; the Crab counters with a death threat, tightening his grip.",
       "agents": [
@@ -269,11 +274,6 @@
       "targets": [
         "The Crane"
       ],
-      "text_span": {
-        "start": 3750,
-        "end": 4337,
-        "text": "Now cast your eye upon the heap of fish-bones lying at the root of yonder Varana-tree. Just as I have eaten those fish, every one of them, just so I will devour you as well!\"\n\"Ah! those fishes got eaten through their own stupidity,\" answered the crab; \"but I'm not going to let you eat me. On the contrary, is it you that I am going to destroy. For you in your folly have not seen that I was outwitting you. If we die, we die both together; for I will cut off this head of yours, and cast it to the ground!\" And so saying, he gave the crane's neck a grip with his claws, as with a vice.\n"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -283,13 +283,13 @@
           "agent": "The Crab",
           "target": "The Crane",
           "relationship_level1": "Adversarial",
-          "relationship_level2": "",
+          "relationship_level2": "enemy",
           "sentiment": "hostile"
         }
       ],
       "action_layer": {
         "category": "physical",
-        "type": "",
+        "type": "attack",
         "context": "",
         "status": "attempt",
         "function": "climax"
@@ -297,6 +297,11 @@
     },
     {
       "id": "f4608408-90bd-41b3-91d3-4a91d775889d",
+      "text_span": {
+        "start": 4337,
+        "end": 4813,
+        "text": "Then gasping, and with tears trickling from his eyes, and trembling with the fear of death, the crane beseeched him, saying, \"O my Lord! Indeed I did not intend to eat you. Grant me my life!\"\n\"Well, well! step down into the pond, and put me in there.\"\nAnd he turned round and stepped down into the pond, and placed the crab on the mud at its edge. But the crab cut through its neck as clean as one would cut a lotus-stalk with a hunting-knife, and then only entered the water!"
+      },
       "event_type": "PUNISHMENT",
       "description": "The Crane submits and returns the Crab to water; the Crab executes the Crane.",
       "agents": [
@@ -305,11 +310,6 @@
       "targets": [
         "The Crane"
       ],
-      "text_span": {
-        "start": 4337,
-        "end": 4813,
-        "text": "Then gasping, and with tears trickling from his eyes, and trembling with the fear of death, the crane beseeched him, saying, \"O my Lord! Indeed I did not intend to eat you. Grant me my life!\"\n\"Well, well! step down into the pond, and put me in there.\"\nAnd he turned round and stepped down into the pond, and placed the crab on the mud at its edge. But the crab cut through its neck as clean as one would cut a lotus-stalk with a hunting-knife, and then only entered the water!"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -319,13 +319,13 @@
           "agent": "The Crab",
           "target": "The Crane",
           "relationship_level1": "Adversarial",
-          "relationship_level2": "",
+          "relationship_level2": "enemy",
           "sentiment": "hostile"
         }
       ],
       "action_layer": {
         "category": "physical",
-        "type": "",
+        "type": "defend",
         "context": "",
         "status": "success",
         "function": "resolution"
@@ -333,6 +333,11 @@
     },
     {
       "id": "8c5843dd-c531-44ca-9a72-985a67c7bddb",
+      "text_span": {
+        "start": 4968,
+        "end": 5127,
+        "text": "\"The villain, though exceeding clever,\nShall prosper not by his villainy.\nHe may win indeed, sharp-witted in deceit,\nBut only as the Crane here from the Crab!\""
+      },
       "event_type": "TRANSFIGURATION",
       "description": "The Bodisat celebrates the victory of the Crab and the failure of deceit.",
       "agents": [
@@ -341,11 +346,6 @@
       "targets": [
         "Audience"
       ],
-      "text_span": {
-        "start": 4968,
-        "end": 5127,
-        "text": "\"The villain, though exceeding clever,\nShall prosper not by his villainy.\nHe may win indeed, sharp-witted in deceit,\nBut only as the Crane here from the Crab!\""
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -355,13 +355,13 @@
           "agent": "The Bodisat",
           "target": "Audience",
           "relationship_level1": "Neutral",
-          "relationship_level2": "",
+          "relationship_level2": "stranger",
           "sentiment": "positive"
         }
       ],
       "action_layer": {
         "category": "communicative",
-        "type": "",
+        "type": "inform",
         "context": "",
         "status": "success",
         "function": "resolution"

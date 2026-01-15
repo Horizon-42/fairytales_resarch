@@ -2,7 +2,7 @@
   "version": "2.0",
   "metadata": {
     "id": "EN_014_The_Ass_in_the_Lion's_Skin",
-    "title": "",
+    "title": "The_Ass_in_the_Lion's_Skin",
     "culture": "Indian",
     "annotator": "Deb",
     "date_annotated": "2026-01-14",
@@ -39,35 +39,39 @@
   "narrative_events": [
     {
       "id": "f8a6d6b0-48c9-40ff-bbe3-2301243e524f",
+      "text_span": {
+        "start": 272,
+        "end": 539,
+        "text": "Now at each place he came to, when he took the pack down from the ass's back, he used to clothe him in a lion's skin, and turn him loose in the rice and barley fields. And when the watchmen in the fields saw the ass, they dared not go near him, taking him for a lion."
+      },
       "event_type": "TRICKERY",
       "description": "The hawker uses a lion's skin to disguise the ass, allowing it to graze freely by scaring off guards.",
-      "narrative_function": "setup",
       "agents": [
         "The Hawker"
       ],
       "targets": [
         "The Villagers"
       ],
-      "text_span": {
-        "start": 272,
-        "end": 539,
-        "text": "Now at each place he came to, when he took the pack down from the ass's back, he used to clothe him in a lion's skin, and turn him loose in the rice and barley fields. And when the watchmen in the fields saw the ass, they dared not go near him, taking him for a lion."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 1,
       "relationship_level1": "Neutral",
       "relationship_level2": "stranger",
-      "relationship_multi": [],
       "sentiment": "neutral",
       "action_category": "communicative",
       "action_type": "deceive",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "setup"
     },
     {
       "id": "1797a8f9-3f60-43e1-abe9-04a20eecba0b",
+      "text_span": {
+        "start": 804,
+        "end": 941,
+        "text": "Then all the villagers came out with weapons in their hands; and blowing chanks, and beating drums, they went near the field and shouted."
+      },
       "event_type": "STRUGGLE",
       "description": "The villagers gather courage and create a loud noise to scare away the beast.",
       "agents": [
@@ -76,27 +80,26 @@
       "targets": [
         "The Ass"
       ],
-      "text_span": {
-        "start": 804,
-        "end": 941,
-        "text": "Then all the villagers came out with weapons in their hands; and blowing chanks, and beating drums, they went near the field and shouted."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 2,
       "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
-      "relationship_multi": [],
       "sentiment": "hostile",
-      "narrative_function": "climax",
       "action_category": "communicative",
       "action_type": "challenge",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "climax"
     },
     {
       "id": "f964e833-d35a-49f2-b1c6-5595f58afe30",
+      "text_span": {
+        "start": 942,
+        "end": 1017,
+        "text": "Terrified with the fear of death, the ass uttered a cry—the bray of an ass!"
+      },
       "event_type": "EXPOSURE",
       "description": "Overcome by fear, the ass breaks character and reveals its true identity by braying.",
       "agents": [
@@ -105,27 +108,26 @@
       "targets": [
         "The Villagers"
       ],
-      "text_span": {
-        "start": 942,
-        "end": 1017,
-        "text": "Terrified with the fear of death, the ass uttered a cry—the bray of an ass!"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 3,
       "relationship_level1": "Adversarial",
-      "relationship_level2": "",
-      "relationship_multi": [],
+      "relationship_level2": "enemy",
       "sentiment": "fearful",
-      "narrative_function": "climax",
       "action_category": "communicative",
       "action_type": "inform",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "climax"
     },
     {
       "id": "1f9a626f-95f7-4b37-a1af-e58bc69b1f4a",
+      "text_span": {
+        "start": 1018,
+        "end": 1225,
+        "text": "And when he knew him then to be an ass, the future Buddha pronounced the First Verse:\n\"This is not a lion's roaring,\nNor a tiger's, nor a panther's;\nDressed in a lion's skin,\n'Tis a wretched ass that roars!\""
+      },
       "event_type": "RECOGNITION",
       "description": "The Bodhisatta confirms the creature's identity to the crowd.",
       "agents": [
@@ -134,27 +136,26 @@
       "targets": [
         "The Villagers"
       ],
-      "text_span": {
-        "start": 1018,
-        "end": 1225,
-        "text": "And when he knew him then to be an ass, the future Buddha pronounced the First Verse:\n\"This is not a lion's roaring,\nNor a tiger's, nor a panther's;\nDressed in a lion's skin,\n'Tis a wretched ass that roars!\""
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 4,
       "relationship_level1": "Social & Alliance",
       "relationship_level2": "ally",
-      "relationship_multi": [],
       "sentiment": "positive",
-      "narrative_function": "resolution",
       "action_category": "communicative",
       "action_type": "inform",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "resolution"
     },
     {
       "id": "f5f7da49-803c-4103-9b2b-e82c902804ec",
+      "text_span": {
+        "start": 1226,
+        "end": 1362,
+        "text": "But when the villagers knew the creature to be an ass, they beat him till his bones broke; and, carrying off the lion's skin, went away."
+      },
       "event_type": "PUNISHMENT",
       "description": "The villagers beat the ass for the deception and reclaim the skin.",
       "agents": [
@@ -163,27 +164,26 @@
       "targets": [
         "The Ass"
       ],
-      "text_span": {
-        "start": 1226,
-        "end": 1362,
-        "text": "But when the villagers knew the creature to be an ass, they beat him till his bones broke; and, carrying off the lion's skin, went away."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 5,
       "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
-      "relationship_multi": [],
       "sentiment": "hostile",
-      "narrative_function": "resolution",
       "action_category": "physical",
       "action_type": "attack",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "resolution"
     },
     {
       "id": "10028978-bfe9-49b2-a32f-fbb786ca5cb7",
+      "text_span": {
+        "start": 1363,
+        "end": 1646,
+        "text": "Then the hawker came; and seeing the ass fallen into so bad a plight, pronounced the Second Verse:\n\"Long might the ass,\nClad in a lion's skin,\nHave fed on the barley green.\nBut he brayed!\nAnd that moment he came to ruin.\"\nAnd even whilst he was yet speaking the ass died on the spot!"
+      },
       "event_type": "TRANSFIGURATION",
       "description": "The Ass dies from the beating; the Hawker laments that the Ass's own noise caused its ruin.",
       "agents": [
@@ -192,24 +192,18 @@
       "targets": [
         "The Ass"
       ],
-      "text_span": {
-        "start": 1363,
-        "end": 1646,
-        "text": "Then the hawker came; and seeing the ass fallen into so bad a plight, pronounced the Second Verse:\n\"Long might the ass,\nClad in a lion's skin,\nHave fed on the barley green.\nBut he brayed!\nAnd that moment he came to ruin.\"\nAnd even whilst he was yet speaking the ass died on the spot!"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 6,
       "relationship_level1": "Hierarchy",
       "relationship_level2": "master_servant",
-      "relationship_multi": [],
       "sentiment": "negative",
-      "narrative_function": "resolution",
       "action_category": "existential",
       "action_type": "die",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "resolution"
     }
   ],
   "themes_and_motifs": {
