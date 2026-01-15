@@ -1,0 +1,14 @@
+# Core dependencies for llm_model package
+# These are required for basic functionality including STAC analysis, sentence analysis, and LLM routing
+
+# HTTP client for Ollama and Gemini API calls
+requests>=2.32.0
+
+# Environment variable loading (optional but recommended)
+# Note: env.py handles missing python-dotenv gracefully, but it's recommended for .env file support
+python-dotenv>=1.0.0
+
+# Note: Additional optional dependencies:
+# - For text_segmentation: see llm_model/text_segmentation/requirements.txt
+# - For vector_database: see llm_model/vector_database/requirements.txt
+# - For backend: see backend/requirements.txt
