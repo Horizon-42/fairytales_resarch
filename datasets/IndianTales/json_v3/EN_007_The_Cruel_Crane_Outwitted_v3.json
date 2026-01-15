@@ -375,15 +375,43 @@
       "JUSTICE",
       "OTHER"
     ],
-    "motif_type": [],
-    "atu_categories": [],
+    "motif_type": [
+      "Motif J657.3: J657.3. Crane persuades fish to let him change him from one lake into another: he eats fish. (J. The wise and the foolish. > J200–J1099. Wise and unwise conduct. > J600–J799. Forethought. > J610–J679. Forethought in conflicts with others.)",
+      "Motif K815.14: K815.14. Fish tricked by crane into letting selves be carried from one pond to another. The crane eats them when they are in his power. (Cf. K713.1.2.) (K. Deceptions. > K800–K999. Killing or maiming by deception.)",
+      "Motif J1762.3: J1762.3. Crab caught on tiger's tail thought to be pursuing man. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J1750–J1849. Absurd misunderstandings. > J1750–J1809. One thing mistaken for another.)"
+    ],
+    "atu_categories": [
+      "ATU 231: The Heron (Crane) Transports the Fish (ANIMAL TALES > Other Animals and Objects (220-299))"
+    ],
     "obstacle_thrower": [
       "The Crane"
     ],
     "helper_type": [],
     "thinking_process": "",
-    "atu_evidence": {},
-    "motif_evidence": {}
+    "atu_evidence": {
+      "ATU 231: The Heron (Crane) Transports the Fish (ANIMAL TALES > Other Animals and Objects (220-299))": {
+        "evidence_keys": [
+          "S3750-4337"
+        ]
+      }
+    },
+    "motif_evidence": {
+      "Motif J657.3: J657.3. Crane persuades fish to let him change him from one lake into another: he eats fish. (J. The wise and the foolish. > J200–J1099. Wise and unwise conduct. > J600–J799. Forethought. > J610–J679. Forethought in conflicts with others.)": {
+        "evidence_keys": [
+          "S283-1017"
+        ]
+      },
+      "Motif K815.14: K815.14. Fish tricked by crane into letting selves be carried from one pond to another. The crane eats them when they are in his power. (Cf. K713.1.2.) (K. Deceptions. > K800–K999. Killing or maiming by deception.)": {
+        "evidence_keys": [
+          "S2256-3214"
+        ]
+      },
+      "Motif J1762.3: J1762.3. Crab caught on tiger's tail thought to be pursuing man. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J1750–J1849. Absurd misunderstandings. > J1750–J1809. One thing mistaken for another.)": {
+        "evidence_keys": [
+          "S4968-5127"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

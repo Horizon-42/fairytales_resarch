@@ -342,7 +342,10 @@
       "JUSTICE",
       "OTHER (Non-violence)"
     ],
-    "motif_type": [],
+    "motif_type": [
+      "Motif J811.3: J811.3. King honors poet and critic: the first so that he will honor the king; the second, so that he will not dishonor him. (J. The wise and the foolish. > J200–J1099. Wise and unwise conduct. > J800–J849. Adaptability.)",
+      "Motif J817.2.1: J817.2.1. King makes absurd statement about flowers. Flatterer agrees: it is the king he serves, not the wretched flowers. (J. The wise and the foolish. > J200–J1099. Wise and unwise conduct. > J800–J849. Adaptability.)"
+    ],
     "atu_categories": [],
     "obstacle_thrower": [
       "Mallika",
@@ -351,7 +354,18 @@
     "helper_type": [],
     "thinking_process": "",
     "atu_evidence": {},
-    "motif_evidence": {}
+    "motif_evidence": {
+      "Motif J811.3: J811.3. King honors poet and critic: the first so that he will honor the king; the second, so that he will not dishonor him. (J. The wise and the foolish. > J200–J1099. Wise and unwise conduct. > J800–J849. Adaptability.)": {
+        "evidence_keys": [
+          "S4063-4389"
+        ]
+      },
+      "Motif J817.2.1: J817.2.1. King makes absurd statement about flowers. Flatterer agrees: it is the king he serves, not the wretched flowers. (J. The wise and the foolish. > J200–J1099. Wise and unwise conduct. > J800–J849. Adaptability.)": {
+        "evidence_keys": [
+          "S4063-4389"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

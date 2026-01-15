@@ -172,15 +172,37 @@
       "CUNNING",
       "JUSTICE"
     ],
-    "motif_type": [],
-    "atu_categories": [],
+    "motif_type": [
+      "Motif P236.1: P236.1. Folly of father's giving all property to children before his death. They abandon him. (P. Society. > P200–P299. The family.)",
+      "Motif P236.2: P236.2. Supposed chest of gold induces children to care for aged father. They think that the chest of stones contains the inheritance. (P. Society. > P200–P299. The family.)"
+    ],
+    "atu_categories": [
+      "ATU 982: Ungrateful Heirs (REALISTIC TALES > Other Realistic Tales (970-999))"
+    ],
     "obstacle_thrower": [
       "The Sons"
     ],
     "helper_type": [],
     "thinking_process": "",
-    "atu_evidence": {},
-    "motif_evidence": {}
+    "atu_evidence": {
+      "ATU 982: Ungrateful Heirs (REALISTIC TALES > Other Realistic Tales (970-999))": {
+        "evidence_keys": [
+          "S0-666"
+        ]
+      }
+    },
+    "motif_evidence": {
+      "Motif P236.1: P236.1. Folly of father's giving all property to children before his death. They abandon him. (P. Society. > P200–P299. The family.)": {
+        "evidence_keys": [
+          "S0-666"
+        ]
+      },
+      "Motif P236.2: P236.2. Supposed chest of gold induces children to care for aged father. They think that the chest of stones contains the inheritance. (P. Society. > P200–P299. The family.)": {
+        "evidence_keys": [
+          "S0-666"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

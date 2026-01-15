@@ -261,15 +261,61 @@
       "OTHER (Truth vs Appearance)",
       "OTHER (Silence)"
     ],
-    "motif_type": [],
-    "atu_categories": [],
+    "motif_type": [
+      "Motif K402.3: K402.3. The ass without a heart. The ass as toll-gatherer is killed by the lion for asking for toll. The fox eats the ass's heart. When the lion asks for it, the fox replies that the ass could have had no heart since he was such a fool as to ask the lion for toll. (K. Deceptions. > K300–K499. Thefts and cheats. > K310–K439. Thefts.)",
+      "Motif J952.2: J952.2. Ass follows after lion and is punished. Ass and cock are surprised by lion. Cock crows and scares lion, who runs. Ass thinks that he has scared lion and pursues. (J. The wise and the foolish. > J200–J1099. Wise and unwise conduct. > J900–J999. Humility.)",
+      "Motif J2137.6: J2137.6. Camel and ass together captured because of ass's singing. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J2050–J2199. Absurd short-sightedness.)",
+      "Motif B259.1: B259.1. Ass insists upon payment of tithes. When stolen by thieves, the ass refuses to eat for three days because the thieves' provender has not been tithed. (B. Animals. > B200–B299. Animals with human traits.)"
+    ],
+    "atu_categories": [
+      "ATU 52: The Ass without a Heart (ANIMAL TALES > Wild Animals > The Clever Fox (Other Animal) (1-69))",
+      "ATU 51: The Lion's share (ANIMAL TALES > Wild Animals > The Clever Fox (Other Animal) (1-69))",
+      "ATU 207: Rebellion of the Work Animals (ANIMAL TALES > Domestic Animals (200-219))"
+    ],
     "obstacle_thrower": [
       "The Villagers"
     ],
     "helper_type": [],
     "thinking_process": "",
-    "atu_evidence": {},
-    "motif_evidence": {}
+    "atu_evidence": {
+      "ATU 52: The Ass without a Heart (ANIMAL TALES > Wild Animals > The Clever Fox (Other Animal) (1-69))": {
+        "evidence_keys": [
+          "S1363-1646"
+        ]
+      },
+      "ATU 51: The Lion's share (ANIMAL TALES > Wild Animals > The Clever Fox (Other Animal) (1-69))": {
+        "evidence_keys": [
+          "S1363-1646"
+        ]
+      },
+      "ATU 207: Rebellion of the Work Animals (ANIMAL TALES > Domestic Animals (200-219))": {
+        "evidence_keys": [
+          "S1363-1646"
+        ]
+      }
+    },
+    "motif_evidence": {
+      "Motif K402.3: K402.3. The ass without a heart. The ass as toll-gatherer is killed by the lion for asking for toll. The fox eats the ass's heart. When the lion asks for it, the fox replies that the ass could have had no heart since he was such a fool as to ask the lion for toll. (K. Deceptions. > K300–K499. Thefts and cheats. > K310–K439. Thefts.)": {
+        "evidence_keys": [
+          "S1363-1646"
+        ]
+      },
+      "Motif J952.2: J952.2. Ass follows after lion and is punished. Ass and cock are surprised by lion. Cock crows and scares lion, who runs. Ass thinks that he has scared lion and pursues. (J. The wise and the foolish. > J200–J1099. Wise and unwise conduct. > J900–J999. Humility.)": {
+        "evidence_keys": [
+          "S1363-1646"
+        ]
+      },
+      "Motif J2137.6: J2137.6. Camel and ass together captured because of ass's singing. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J2050–J2199. Absurd short-sightedness.)": {
+        "evidence_keys": [
+          "S1363-1646"
+        ]
+      },
+      "Motif B259.1: B259.1. Ass insists upon payment of tithes. When stolen by thieves, the ass refuses to eat for three days because the thieves' provender has not been tithed. (B. Animals. > B200–B299. Animals with human traits.)": {
+        "evidence_keys": [
+          "S1363-1646"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

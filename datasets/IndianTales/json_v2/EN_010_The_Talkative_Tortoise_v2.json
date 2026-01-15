@@ -278,15 +278,31 @@
       "CUNNING",
       "OTHER (Self-control)"
     ],
-    "motif_type": [],
-    "atu_categories": [],
+    "motif_type": [
+      "Motif J2357: J2357. Tortoise speaks and loses his hold on the stick. He is being carried through the air by a bird. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J2350–J2369. Talkative fools.)"
+    ],
+    "atu_categories": [
+      "ATU 225: The Tortoise That Wanted to Fly (ANIMAL TALES > Other Animals and Objects (220-299))"
+    ],
     "obstacle_thrower": [],
     "helper_type": [
       "ANIMAL"
     ],
     "thinking_process": "",
-    "atu_evidence": {},
-    "motif_evidence": {}
+    "atu_evidence": {
+      "ATU 225: The Tortoise That Wanted to Fly (ANIMAL TALES > Other Animals and Objects (220-299))": {
+        "evidence_keys": [
+          "S1225-1638"
+        ]
+      }
+    },
+    "motif_evidence": {
+      "Motif J2357: J2357. Tortoise speaks and loses his hold on the stick. He is being carried through the air by a bird. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J2350–J2369. Talkative fools.)": {
+        "evidence_keys": [
+          "S1225-1638"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [
