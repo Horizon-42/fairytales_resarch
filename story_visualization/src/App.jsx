@@ -2,33 +2,107 @@ import React, { useState, useEffect } from 'react'
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import CharacterGraph from './pages/CharacterGraph'
 import StoryRibbons from './pages/StoryRibbons'
+import Segmentation from './pages/Segmentation'
+import StoryBrowser from './components/StoryBrowser'
+import { organizeFiles } from './utils/fileHandler'
+import { saveFolderCache, loadFolderCache, extractFolderPath } from './utils/folderCache'
 import './styles/App.css'
 
 function App() {
-  const [stories, setStories] = useState([])
+  const [storyFiles, setStoryFiles] = useState([])
+  const [selectedStoryIndex, setSelectedStoryIndex] = useState(-1)
   const [selectedStory, setSelectedStory] = useState(null)
-  const [loading, setLoading] = useState(true)
+  const [selectedFolderPath, setSelectedFolderPath] = useState(null)
+  const [culture, setCulture] = useState("Chinese")
+  const [v2JsonFiles, setV2JsonFiles] = useState({})
+  const [v3JsonFiles, setV3JsonFiles] = useState({})
   const location = useLocation()
 
+  // Load cached folder selection on mount
   useEffect(() => {
-    fetch('/data/stories_index.json')
-      .then(res => res.json())
-      .then(data => {
-        setStories(data.stories || [])
-        if (data.stories && data.stories.length > 0) {
-          setSelectedStory(data.stories[0])
-        }
-        setLoading(false)
-      })
-      .catch(err => {
-        console.error('Failed to load stories index:', err)
-        setLoading(false)
-      })
+    const cache = loadFolderCache()
+    if (cache && cache.culture) {
+      setCulture(cache.culture)
+    }
   }, [])
 
-  const handleStorySelect = (e) => {
-    const story = stories.find(s => s.id === e.target.value)
+  const loadFilesFromFolderSelection = async (files, folderPathHint = null) => {
+    const { texts, v2Jsons, v3Jsons } = organizeFiles(files)
+    texts.sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true, sensitivity: 'base' }))
+
+    // Read text content from files
+    const withContent = await Promise.all(
+      texts.map(async (t) => {
+        const textRaw = await t.file.text()
+        const text = textRaw.replace(/\r\n/g, '\n')
+        return { ...t, name: t.file.name, text, id: t.id, path: t.path }
+      })
+    )
+
+    setStoryFiles(withContent)
+    setV2JsonFiles(v2Jsons)
+    setV3JsonFiles(v3Jsons)
+
+    // Extract parent folder path
+    let folderPath = extractFolderPath(files, folderPathHint)
+    if (!folderPath && folderPathHint) {
+      folderPath = folderPathHint
+    }
+
+    if (!folderPath) {
+      alert("Error: Unable to determine parent folder path. Please ensure the selected folder contains a 'texts' subfolder.")
+      return
+    }
+
+    // Load cache from the folder
+    const cache = loadFolderCache()
+    const targetIndex = (cache && cache.selectedIndex >= 0 && cache.selectedIndex < withContent.length)
+      ? cache.selectedIndex
+      : 0
+
+    // Set culture from cache if available
+    if (cache && cache.culture) {
+      setCulture(cache.culture)
+    }
+
+    // Save folder cache
+    saveFolderCache({
+      folderPath: folderPath,
+      selectedIndex: targetIndex,
+      culture: culture
+    })
+
+    setSelectedFolderPath(folderPath)
+
+    if (withContent.length > 0) {
+      handleSelectStory(targetIndex, withContent, v2Jsons, v3Jsons)
+    }
+  }
+
+  const handleStoryFilesChange = async (event) => {
+    const files = event.target.files
+    if (!files) return
+    await loadFilesFromFolderSelection(files)
+  }
+
+  const handlePickDirectory = async (files, folderName) => {
+    await loadFilesFromFolderSelection(files, folderName)
+  }
+
+  const handleSelectStory = async (index, texts = storyFiles, v2Map = v2JsonFiles, v3Map = v3JsonFiles) => {
+    setSelectedStoryIndex(index)
+    const story = texts[index]
+    if (!story) return
+
+    // Update selected story
     setSelectedStory(story)
+
+    // Save cache
+    saveFolderCache({
+      folderPath: selectedFolderPath,
+      selectedIndex: index,
+      culture: culture
+    })
   }
 
   return (
@@ -55,50 +129,56 @@ function App() {
               <span className="nav-icon">≋</span>
               Story Ribbons
             </Link>
-          </nav>
-
-          <div className="story-selector">
-            <label htmlFor="story-select">Select Story:</label>
-            <select 
-              id="story-select"
-              value={selectedStory?.id || ''} 
-              onChange={handleStorySelect}
-              disabled={loading || stories.length === 0}
+            <Link 
+              to="/segmentation" 
+              className={`nav-link ${location.pathname === '/segmentation' ? 'active' : ''}`}
             >
-              {stories.map(story => (
-                <option key={story.id} value={story.id}>
-                  {story.title || story.id}
-                </option>
-              ))}
-            </select>
-          </div>
+              <span className="nav-icon">✂</span>
+              Segmentation
+            </Link>
+          </nav>
         </div>
       </header>
 
-      <main className="app-main">
-        {loading ? (
-          <div className="loading-state">
-            <div className="loading-spinner"></div>
-            <p>Loading stories...</p>
-          </div>
-        ) : !selectedStory ? (
-          <div className="empty-state">
-            <p>No stories found. Please run the data processing script first.</p>
-            <code>python3 post_data_process/process_json_for_viz.py</code>
-          </div>
-        ) : (
-          <Routes>
-            <Route 
-              path="/" 
-              element={<CharacterGraph story={selectedStory} />} 
-            />
-            <Route 
-              path="/ribbons" 
-              element={<StoryRibbons story={selectedStory} />} 
-            />
-          </Routes>
-        )}
-      </main>
+      <div className="app-layout">
+        <aside className="app-sidebar">
+          <StoryBrowser
+            storyFiles={storyFiles}
+            selectedIndex={selectedStoryIndex}
+            onFilesChange={handleStoryFilesChange}
+            onPickDirectory={handlePickDirectory}
+            onSelectStory={handleSelectStory}
+            culture={culture}
+            onCultureChange={setCulture}
+          />
+        </aside>
+
+        <main className="app-main">
+          {!selectedStory ? (
+            <div className="empty-state">
+              <p>No story selected. Please open a folder and select a story from the sidebar.</p>
+              <p style={{ fontSize: '0.9rem', color: '#64748b', marginTop: '0.5rem' }}>
+                The folder should contain a <code>texts</code> subfolder with story files.
+              </p>
+            </div>
+          ) : (
+            <Routes>
+              <Route 
+                path="/" 
+                element={<CharacterGraph story={selectedStory} />} 
+              />
+              <Route 
+                path="/ribbons" 
+                element={<StoryRibbons story={selectedStory} />} 
+              />
+              <Route 
+                path="/segmentation" 
+                element={<Segmentation story={selectedStory} />} 
+              />
+            </Routes>
+          )}
+        </main>
+      </div>
 
       <footer className="app-footer">
         <p>Fairytale Research Project • Visualization Framework</p>

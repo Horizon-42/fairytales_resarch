@@ -1,0 +1,85 @@
+.story-browser {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.story-browser-header {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f1f5f9;
+}
+
+.story-browser-header h2 {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+}
+
+.file-input-btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 0.4rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: #475569;
+  transition: all 0.15s;
+}
+
+.file-input-btn:hover {
+  border-color: #94a3b8;
+  color: #1e293b;
+}
+
+.file-input-btn input {
+  display: none;
+}
+
+.story-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+
+.story-item {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 2px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #475569;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.story-item:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.story-item.active {
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.empty-list-state {
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  text-align: center;
+  font-style: italic;
+}

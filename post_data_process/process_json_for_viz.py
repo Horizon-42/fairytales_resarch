@@ -218,6 +218,16 @@ def process_all_files(input_dir: str, output_dir: str):
             with open(ribbon_output, "w", encoding="utf-8") as f:
                 json.dump(ribbon_data, f, ensure_ascii=False, indent=2)
             
+            # Extract source text from original JSON if available
+            source_text = ""
+            try:
+                with open(json_file, "r", encoding="utf-8") as f:
+                    original_data = json.load(f)
+                    if original_data.get("source_info") and original_data["source_info"].get("text_content"):
+                        source_text = original_data["source_info"]["text_content"]
+            except Exception as e:
+                print(f"  Warning: Could not extract source text: {e}")
+            
             all_stories.append({
                 "id": story_id,
                 "title": ribbon_data["title"],
@@ -225,6 +235,7 @@ def process_all_files(input_dir: str, output_dir: str):
                 "event_count": ribbon_data["total_events"],
                 "relationship_file": f"{story_id}_relationships.json",
                 "ribbon_file": f"{story_id}_ribbons.json",
+                "text_content": source_text,  # Include source text in index
             })
             
         except Exception as e:

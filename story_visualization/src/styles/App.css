@@ -116,13 +116,28 @@
   box-shadow: 0 0 0 2px rgba(212, 163, 115, 0.3);
 }
 
+/* Layout with Sidebar */
+.app-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.app-sidebar {
+  width: 280px;
+  min-width: 280px;
+  background: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
 /* Main Content */
 .app-main {
   flex: 1;
   padding: var(--space-xl);
-  max-width: 1600px;
-  margin: 0 auto;
-  width: 100%;
+  overflow-y: auto;
+  background: #f8f9fa;
 }
 
 /* Loading & Empty States */

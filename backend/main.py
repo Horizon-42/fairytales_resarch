@@ -47,6 +47,8 @@ from llm_model.summaries_annotator import (
     annotate_single_paragraph_summary,
     annotate_whole_summary_from_per_paragraph,
 )
+from llm_model.text_segmentation import TextSegmenter
+from llm_model.ollama_client import embed as ollama_embed
 from llm_model.ollama_client import OllamaConfig, OllamaError, list_local_models
 from llm_model.vector_database import FairyVectorDB, VectorDBPaths
 from llm_model.vector_database.db import QueryConfig, VectorDBNotBuiltError
@@ -375,6 +377,34 @@ class MotifAtuDetectResponse(BaseModel):
     atu: List[MotifAtuDetectItem]
     motifs: List[MotifAtuDetectItem]
     chunks: int
+
+
+class TextSegmentationRequest(BaseModel):
+    """Request for text segmentation."""
+    
+    text: str = Field(..., description="Text to segment")
+    sentences: Optional[List[str]] = Field(None, description="Pre-split sentences (optional)")
+    algorithm: Literal["magnetic", "graph"] = Field("magnetic", description="Segmentation algorithm")
+    embedding_model: Optional[str] = Field(None, description="Embedding model name")
+    context_window: int = Field(2, ge=1, le=5, description="Context window size")
+    # Magnetic Clustering parameters
+    window_size: int = Field(3, ge=1, le=10, description="Window size for Magnetic Clustering")
+    filter_width: float = Field(2.0, ge=0.1, le=10.0, description="Filter width for smoothing")
+    # GraphSegSM parameters
+    threshold: float = Field(0.7, ge=0.0, le=1.0, description="Similarity threshold for GraphSegSM")
+    min_seg_size: int = Field(3, ge=1, le=20, description="Minimum segment size for GraphSegSM")
+    # Optional reference boundaries for evaluation
+    reference_boundaries: Optional[List[int]] = Field(None, description="Ground truth boundaries for evaluation")
+
+
+class TextSegmentationResponse(BaseModel):
+    """Response from text segmentation."""
+    
+    ok: bool
+    document_id: str
+    segments: List[Dict[str, Any]]
+    boundaries: List[int]
+    meta: Dict[str, Any]
 
 
 app = FastAPI(title="Fairytales Auto-Annotation API", version="0.1.0")
@@ -739,3 +769,59 @@ def detect_motif_atu(req: MotifAtuDetectRequest) -> MotifAtuDetectResponse:
         motifs=motif_items,
         chunks=int(result.get("chunks") or 0),
     )
+
+
+@app.post("/api/text/segment", response_model=TextSegmentationResponse)
+def segment_text(req: TextSegmentationRequest) -> TextSegmentationResponse:
+    """Segment text into semantic segments using LLM embeddings."""
+    
+    if not isinstance(req.text, str) or not req.text.strip():
+        raise HTTPException(status_code=400, detail="`text` must be a non-empty string")
+    
+    base_url = _env("OLLAMA_BASE_URL", "http://localhost:11434")
+    embedding_model = req.embedding_model or _env("OLLAMA_EMBEDDING_MODEL", "nomic-embed-text")
+    
+    _ensure_ollama_model_available(
+        model_name=embedding_model,
+        purpose="text segmentation embeddings",
+    )
+    
+    # Define embedding function
+    def embedding_func(texts):
+        return ollama_embed(
+            base_url=base_url,
+            model=embedding_model,
+            inputs=texts,
+        )
+    
+    try:
+        # Create segmenter
+        segmenter = TextSegmenter(
+            embedding_func=embedding_func,
+            algorithm=req.algorithm,
+            embedding_model=embedding_model,
+            context_window=req.context_window,
+            window_size=req.window_size,
+            filter_width=req.filter_width,
+            threshold=req.threshold,
+            min_seg_size=req.min_seg_size,
+        )
+        
+        # Perform segmentation
+        result = segmenter.segment(
+            text=req.text if not req.sentences else "",
+            document_id="api_segment",
+            sentences=req.sentences,
+            reference_boundaries=req.reference_boundaries,
+        )
+        
+        return TextSegmentationResponse(
+            ok=True,
+            document_id=result.document_id,
+            segments=result.segments,
+            boundaries=result.boundaries,
+            meta=result.meta,
+        )
+    except Exception as exc:
+        logger.exception("Text segmentation failed")
+        raise HTTPException(status_code=500, detail=f"Segmentation failed: {str(exc)}") from exc
