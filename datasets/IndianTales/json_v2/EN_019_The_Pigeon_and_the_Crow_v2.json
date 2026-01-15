@@ -274,16 +274,56 @@
       " OTHER (Honesty)",
       "JUSTICE"
     ],
-    "motif_type": [],
-    "atu_categories": [],
+    "motif_type": [
+      "Motif K359.4: K359.4. Crow makes friends with pigeon so as to be able to steal food in household to which he belongs. (K. Deceptions. > K300–K499. Thefts and cheats. > K310–K439. Thefts.)",
+      "Motif L451.1: L451.1. Tame bird and wild bird. The tame bird tells the wild one to look about him. He is shot. (L. Reversal of fortune. > L400–L499. Pride brought low.)",
+      "Motif J1565.1: J1565.1. Fox and crane invite each other. Fox serves the food on a flat dish so that the crane cannot eat. Crane serves his food in a bottle. (J. The wise and the foolish. > J1100–J1699. Cleverness. > J1500–J1649. Clever practical retorts.)"
+    ],
+    "atu_categories": [
+      "ATU 245: Tame Bird and Wild Bird (ANIMAL TALES > Other Animals and Objects (220-299))",
+      "ATU 223: The Bird and the Jackal (ANIMAL TALES > Other Animals and Objects (220-299))",
+      "ATU 239: The Crow Helps the Deer Escape from the Snare (ANIMAL TALES > Other Animals and Objects (220-299))"
+    ],
     "obstacle_thrower": [
       "The Crow",
       "The Cook"
     ],
     "helper_type": [],
     "thinking_process": "",
-    "atu_evidence": {},
-    "motif_evidence": {}
+    "atu_evidence": {
+      "ATU 245: Tame Bird and Wild Bird (ANIMAL TALES > Other Animals and Objects (220-299))": {
+        "evidence_keys": [
+          "S2423-3087"
+        ]
+      },
+      "ATU 223: The Bird and the Jackal (ANIMAL TALES > Other Animals and Objects (220-299))": {
+        "evidence_keys": [
+          "S2423-3087"
+        ]
+      },
+      "ATU 239: The Crow Helps the Deer Escape from the Snare (ANIMAL TALES > Other Animals and Objects (220-299))": {
+        "evidence_keys": [
+          "S2423-3087"
+        ]
+      }
+    },
+    "motif_evidence": {
+      "Motif K359.4: K359.4. Crow makes friends with pigeon so as to be able to steal food in household to which he belongs. (K. Deceptions. > K300–K499. Thefts and cheats. > K310–K439. Thefts.)": {
+        "evidence_keys": [
+          "S2423-3087"
+        ]
+      },
+      "Motif L451.1: L451.1. Tame bird and wild bird. The tame bird tells the wild one to look about him. He is shot. (L. Reversal of fortune. > L400–L499. Pride brought low.)": {
+        "evidence_keys": [
+          "S2423-3087"
+        ]
+      },
+      "Motif J1565.1: J1565.1. Fox and crane invite each other. Fox serves the food on a flat dish so that the crane cannot eat. Crane serves his food in a bottle. (J. The wise and the foolish. > J1100–J1699. Cleverness. > J1500–J1649. Clever practical retorts.)": {
+        "evidence_keys": [
+          "S2423-3087"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

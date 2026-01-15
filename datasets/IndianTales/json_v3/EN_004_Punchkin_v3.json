@@ -508,13 +508,35 @@
       "JUSTICE",
       "COURAGE"
     ],
-    "motif_type": [],
-    "atu_categories": [],
+    "motif_type": [
+      "Motif T69.1.2: T69.1.2. Seven princesses sought by seven princes. (T. Sex. > T0–T99. Love.)",
+      "Motif E715.1.3.2: E715.1.3.2. Ogre with life in parrot, speaks from inside parrot. (E. The dead. > E700–E799. The soul.)"
+    ],
+    "atu_categories": [
+      "ATU 610: The Healing Fruit (TALES OF MAGIC > Magic Objects (560-649))"
+    ],
     "obstacle_thrower": [],
     "helper_type": [],
     "thinking_process": "",
-    "atu_evidence": {},
-    "motif_evidence": {}
+    "atu_evidence": {
+      "ATU 610: The Healing Fruit (TALES OF MAGIC > Magic Objects (560-649))": {
+        "evidence_keys": [
+          "S24445-26084"
+        ]
+      }
+    },
+    "motif_evidence": {
+      "Motif T69.1.2: T69.1.2. Seven princesses sought by seven princes. (T. Sex. > T0–T99. Love.)": {
+        "evidence_keys": [
+          "S10407-10753"
+        ]
+      },
+      "Motif E715.1.3.2: E715.1.3.2. Ogre with life in parrot, speaks from inside parrot. (E. The dead. > E700–E799. The soul.)": {
+        "evidence_keys": [
+          "S19426-20906"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

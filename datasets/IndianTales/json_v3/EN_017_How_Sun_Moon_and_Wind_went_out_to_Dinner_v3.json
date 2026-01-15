@@ -289,15 +289,61 @@
       "OTHER (Selflessness)",
       "OTHER (Filial Duty)"
     ],
-    "motif_type": [],
-    "atu_categories": [],
+    "motif_type": [
+      "Motif L351.2: L351.2. Sun cursed by man for its burning rays, wind for its hot breath, but moon is blessed for its soft, cool, and beautiful light. (L. Reversal of fortune. > L300–L399. Triumph of the weak.)",
+      "Motif A153.3.2: A153.3.2. Sun, moon and wind dine with their uncle and aunt, thunder and lightning. (A. Mythological motifs. > A100–A499. Gods. > A100–A199. The gods in general.)"
+    ],
+    "atu_categories": [
+      "ATU 298: Wind and sun (ANIMAL TALES > Other Animals and Objects (220-299))",
+      "ATU 1458: The girl who ate so little (ANECDOTES AND JOKES > Stories about a Woman > Looking for a Wife (1450-1474))",
+      "ATU 1335: The Eaten Moon (ANECDOTES AND JOKES > Stories about a Fool (1200-1349))",
+      "ATU 713: The Mother Who Did Not Bear Me But Nourished Me (TALES OF MAGIC > Other Tales of the Supernatural (700-749))",
+      "ATU 898: The Daughter of the Sun (REALISTIC TALES > Proofs of FidelitY and Innocence (880-899))"
+    ],
     "obstacle_thrower": [
       "Star"
     ],
     "helper_type": [],
     "thinking_process": "",
-    "atu_evidence": {},
-    "motif_evidence": {}
+    "atu_evidence": {
+      "ATU 298: Wind and sun (ANIMAL TALES > Other Animals and Objects (220-299))": {
+        "evidence_keys": [
+          "S1645-1859"
+        ]
+      },
+      "ATU 1458: The girl who ate so little (ANECDOTES AND JOKES > Stories about a Woman > Looking for a Wife (1450-1474))": {
+        "evidence_keys": [
+          "S0-587"
+        ]
+      },
+      "ATU 1335: The Eaten Moon (ANECDOTES AND JOKES > Stories about a Fool (1200-1349))": {
+        "evidence_keys": [
+          "S0-587"
+        ]
+      },
+      "ATU 713: The Mother Who Did Not Bear Me But Nourished Me (TALES OF MAGIC > Other Tales of the Supernatural (700-749))": {
+        "evidence_keys": [
+          "S0-587"
+        ]
+      },
+      "ATU 898: The Daughter of the Sun (REALISTIC TALES > Proofs of FidelitY and Innocence (880-899))": {
+        "evidence_keys": [
+          "S1244-1595"
+        ]
+      }
+    },
+    "motif_evidence": {
+      "Motif L351.2: L351.2. Sun cursed by man for its burning rays, wind for its hot breath, but moon is blessed for its soft, cool, and beautiful light. (L. Reversal of fortune. > L300–L399. Triumph of the weak.)": {
+        "evidence_keys": [
+          "S1244-1595"
+        ]
+      },
+      "Motif A153.3.2: A153.3.2. Sun, moon and wind dine with their uncle and aunt, thunder and lightning. (A. Mythological motifs. > A100–A499. Gods. > A100–A199. The gods in general.)": {
+        "evidence_keys": [
+          "S0-587"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

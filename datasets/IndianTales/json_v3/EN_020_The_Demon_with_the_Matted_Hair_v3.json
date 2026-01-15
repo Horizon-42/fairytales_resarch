@@ -340,15 +340,61 @@
       "CUNNING",
       "JUSTICE"
     ],
-    "motif_type": [],
-    "atu_categories": [],
+    "motif_type": [
+      "Motif D2031.9: D2031.9. Enemy's last arrow made to appear crooked so that he does not use it, and adversary gets time to kill him. (D. Magic. > D1700–D2199. Magic powers and manifestations. > D1800–D2199. Manifestations of magic power. > D1950–D2049. Temporary magic characteristics.)",
+      "Motif Q55: Q55. Reward for sparing life when in animal form. (Q. Rewards and punishments. > Q10–Q99. Deeds rewarded.)",
+      "Motif F661.7.3: F661.7.3. One arrow shot into end of last one to make rope of arrows. (F. Marvels. > F200–F699. Marvelous creatures. > F600-F699. Persons with extraordinary powers.)"
+    ],
+    "atu_categories": [
+      "ATU 1084: Contest in shrieking or whistling (TALES OF THE STUPID OGRE (GIANT, DEVIL) > Contest between Man and Ogre (1060-1114))",
+      "ATU 1313: The Man who Thought Himself Dead (ANECDOTES AND JOKES > Stories about a Fool (1200-1349))",
+      "ATU 1145: The Ogre Afraid of what Rustles and Rattles (TALES OF THE STUPID OGRE (GIANT, DEVIL) > Ogre Frightened by Man (1145-1154))",
+      "ATU 157: Learning to Fear Men (ANIMAL TALES > Wild Animals and Humans (150-199))"
+    ],
     "obstacle_thrower": [
       "The Demon with the Matted Hair"
     ],
     "helper_type": [],
     "thinking_process": "",
-    "atu_evidence": {},
-    "motif_evidence": {}
+    "atu_evidence": {
+      "ATU 1084: Contest in shrieking or whistling (TALES OF THE STUPID OGRE (GIANT, DEVIL) > Contest between Man and Ogre (1060-1114))": {
+        "evidence_keys": [
+          "S3073-3437"
+        ]
+      },
+      "ATU 1313: The Man who Thought Himself Dead (ANECDOTES AND JOKES > Stories about a Fool (1200-1349))": {
+        "evidence_keys": [
+          "S3822-4184"
+        ]
+      },
+      "ATU 1145: The Ogre Afraid of what Rustles and Rattles (TALES OF THE STUPID OGRE (GIANT, DEVIL) > Ogre Frightened by Man (1145-1154))": {
+        "evidence_keys": [
+          "S1278-1571"
+        ]
+      },
+      "ATU 157: Learning to Fear Men (ANIMAL TALES > Wild Animals and Humans (150-199))": {
+        "evidence_keys": [
+          "S3822-4184"
+        ]
+      }
+    },
+    "motif_evidence": {
+      "Motif D2031.9: D2031.9. Enemy's last arrow made to appear crooked so that he does not use it, and adversary gets time to kill him. (D. Magic. > D1700–D2199. Magic powers and manifestations. > D1800–D2199. Manifestations of magic power. > D1950–D2049. Temporary magic characteristics.)": {
+        "evidence_keys": [
+          "S2192-2767"
+        ]
+      },
+      "Motif Q55: Q55. Reward for sparing life when in animal form. (Q. Rewards and punishments. > Q10–Q99. Deeds rewarded.)": {
+        "evidence_keys": [
+          "S4491-5714"
+        ]
+      },
+      "Motif F661.7.3: F661.7.3. One arrow shot into end of last one to make rope of arrows. (F. Marvels. > F200–F699. Marvelous creatures. > F600-F699. Persons with extraordinary powers.)": {
+        "evidence_keys": [
+          "S2192-2767"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

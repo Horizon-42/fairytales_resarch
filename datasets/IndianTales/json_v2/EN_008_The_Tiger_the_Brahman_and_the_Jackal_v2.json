@@ -308,7 +308,14 @@
       "JUSTICE",
       "OTHER"
     ],
-    "motif_type": [],
+    "motif_type": [
+      "Motif J873.2: J873.2. Clever jackal covers up his clumsiness in catching cows by saying he was running to and fro because he was looking for the fattest calf. (J. The wise and the foolish. > J200–J1099. Wise and unwise conduct. > J850–J899. Consolation in misfortune.)",
+      "Motif J2131.5.6: J2131.5.6. Jackal's head caught in pot of blue dye. Animals make him king, but detect him from his cry and turn him out. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J2050–J2199. Absurd short-sightedness.)",
+      "Motif J512.13: J512.13. Jackal accidentally made king but joins other jackals in howling at night. Killed. (J. The wise and the foolish. > J200–J1099. Wise and unwise conduct. > J500–J599. Prudence and Discretion.)",
+      "Motif J2413.8: J2413.8. Jackal tries to roar like lion at elephant. Is killed. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J2400–J2449. Foolish imitation.)",
+      "Motif K565.2: K565.2. Jackal entrapped in elephant's carcass tells passing God to show his magic power by making it rain. Elephant's hide swells; jackal escapes. (K. Deceptions. > K500–K699. Escape by deception.)",
+      "Motif J1791.4: J1791.4. Dog drops his meat for the reflection. Crossing a stream with meat in his mouth he sees his reflection; thinking it another dog with meat he dives for it and loses his meat. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J1750–J1849. Absurd misunderstandings. > J1750–J1809. One thing mistaken for another.)"
+    ],
     "atu_categories": [],
     "obstacle_thrower": [
       "The Tiger",
@@ -321,7 +328,38 @@
     ],
     "thinking_process": "",
     "atu_evidence": {},
-    "motif_evidence": {}
+    "motif_evidence": {
+      "Motif J873.2: J873.2. Clever jackal covers up his clumsiness in catching cows by saying he was running to and fro because he was looking for the fattest calf. (J. The wise and the foolish. > J200–J1099. Wise and unwise conduct. > J850–J899. Consolation in misfortune.)": {
+        "evidence_keys": [
+          "S1906-2590"
+        ]
+      },
+      "Motif J2131.5.6: J2131.5.6. Jackal's head caught in pot of blue dye. Animals make him king, but detect him from his cry and turn him out. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J2050–J2199. Absurd short-sightedness.)": {
+        "evidence_keys": [
+          "S1906-2590"
+        ]
+      },
+      "Motif J512.13: J512.13. Jackal accidentally made king but joins other jackals in howling at night. Killed. (J. The wise and the foolish. > J200–J1099. Wise and unwise conduct. > J500–J599. Prudence and Discretion.)": {
+        "evidence_keys": [
+          "S1906-2590"
+        ]
+      },
+      "Motif J2413.8: J2413.8. Jackal tries to roar like lion at elephant. Is killed. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J2400–J2449. Foolish imitation.)": {
+        "evidence_keys": [
+          "S1906-2590"
+        ]
+      },
+      "Motif K565.2: K565.2. Jackal entrapped in elephant's carcass tells passing God to show his magic power by making it rain. Elephant's hide swells; jackal escapes. (K. Deceptions. > K500–K699. Escape by deception.)": {
+        "evidence_keys": [
+          "S1906-2590"
+        ]
+      },
+      "Motif J1791.4: J1791.4. Dog drops his meat for the reflection. Crossing a stream with meat in his mouth he sees his reflection; thinking it another dog with meat he dives for it and loses his meat. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J1750–J1849. Absurd misunderstandings. > J1750–J1809. One thing mistaken for another.)": {
+        "evidence_keys": [
+          "S1906-2590"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

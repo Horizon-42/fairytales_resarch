@@ -210,15 +210,31 @@
       "OTHER (Greed)",
       "OTHER (Irreparable harm)"
     ],
-    "motif_type": [],
-    "atu_categories": [],
+    "motif_type": [
+      "Motif B103.4.2.1: B103.4.2.1. Grateful snake spits out lump of gold for his rescuer. (B. Animals. > B100–B199. Magic animals. > B100–B119. Treasure animals.)"
+    ],
+    "atu_categories": [
+      "ATU 285: The child and the snake (ANIMAL TALES > Other Animals and Objects (220-299))"
+    ],
     "obstacle_thrower": [
       "Brahman's Son"
     ],
     "helper_type": [],
     "thinking_process": "",
-    "atu_evidence": {},
-    "motif_evidence": {}
+    "atu_evidence": {
+      "ATU 285: The child and the snake (ANIMAL TALES > Other Animals and Objects (220-299))": {
+        "evidence_keys": [
+          "S1348-1600"
+        ]
+      }
+    },
+    "motif_evidence": {
+      "Motif B103.4.2.1: B103.4.2.1. Grateful snake spits out lump of gold for his rescuer. (B. Animals. > B100–B199. Magic animals. > B100–B119. Treasure animals.)": {
+        "evidence_keys": [
+          "S829-1011"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [
