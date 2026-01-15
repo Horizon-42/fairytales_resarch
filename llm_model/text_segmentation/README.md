@@ -150,6 +150,34 @@ Run the test suite:
 pytest llm_model/text_segmentation/tests/
 ```
 
+## Visualization
+
+The package includes a non-intrusive visualization module for debugging and validation:
+
+```python
+from llm_model.text_segmentation import VisualizableTextSegmenter, SegmentationVisualizer
+
+# Use VisualizableTextSegmenter instead of TextSegmenter
+segmenter = VisualizableTextSegmenter(
+    embedding_func=embedding_func,
+    algorithm="magnetic",
+)
+
+result = segmenter.segment(text)
+viz_data = segmenter.get_visualization_data()
+
+# Visualize
+visualizer = SegmentationVisualizer()
+visualizer.plot_similarity_matrix(viz_data["similarity_matrix"])
+visualizer.plot_magnetic_signal(
+    viz_data["raw_forces"],
+    smoothed_b_values=viz_data["smoothed_forces"],
+    predicted_boundaries=result.boundaries,
+)
+```
+
+See `README_VISUALIZATION.md` for detailed visualization guide and `quick_start_visualization.py` for examples.
+
 ## References
 
 This implementation is based on the paper "LLM-Enhanced Semantic Text Segmentation" and follows the development document specifications.
