@@ -149,9 +149,9 @@
       "object_type": "",
       "instrument": "",
       "time_order": 6,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "enemy",
-      "sentiment": "hostile",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
       "action_category": "",
       "action_type": "",
       "action_context": "",
@@ -633,14 +633,8 @@
       "COURAGE",
       "DISOBEDIENCE"
     ],
-    "motif_type": [
-      "Motif D990: Magic bodily members—human. N. A. Indian: Thompson Tales 318 n. (Magic > MAGIC OBJECTS > MAGIC BODILY MEMBERS)",
-      "Motif J1100-J1110: The Wise and the Foolish > CLEVERNESS > Clever persons and acts."
-    ],
-    "atu_categories": [
-      "ATU 888: The Faithful Wife (REALISTIC TALES > Proofs of FidelitY and Innocence)",
-      "ATU 875: The Clever Peasant girl (REALISTIC TALES > The Woman Marries the Prince)"
-    ],
+    "motif_type": [],
+    "atu_categories": [],
     "obstacle_thrower": [
       "秦始皇",
       "公差"
@@ -979,11 +973,29 @@
     "propp_notes": "",
     "paragraph_summaries": {
       "per_section": {
-        "S0-600": "秦始皇派卢教寻仙得蝌蚪文，误认'亡秦者胡也'为北方胡人威胁，遂命修长城并传谣捕苏州万喜良以填城。修长城需活人殉葬，引发民忧，官员借童谣传令捉拿万喜良。\nEnglish: Qin Shi Huang sent Lu Jiao to seek immortals, mistakenly interpreted the scroll's '亡秦者胡也' as a threat from northern barbarians, leading to the Great Wall construction and a rumor to capture Suzhou's Wan Xilang for殉葬. The belief in living sacrifices for eternal fortification caused panic, prompting officials to act on the folk song.",
-        "S601-887": "童遥的故事可能是虚构的，但苏州确实有位文弱书生万喜良。他因童遥的传言而惊慌，连夜逃离家乡，途中听到关于秦始皇征兵的谣言，最终躲入庄院花园避难。\nEnglish: The story of Tong Yao might be fictional, but there is indeed a weak scholar named Wan Xilang in Suzhou. Fearing the rumors, he fled his home, heard tales of conscription during the Qin Dynasty, and hid in a farm's garden."
+        "S0-600": "秦始皇派卢教求仙，带回蝌蚪文仙书，误认‘亡秦者胡也’为北方胡人威胁，下令修长城并用活人填城，后因童谣传颂苏州万喜良而决定捉拿他。\nEnglish: Qin Shi Huang sent Lu Jiao to seek immortality, who returned with a scroll in蝌蚪文. Misinterpreting '亡秦者胡也' as a threat from northern barbarians, he ordered the Great Wall's construction with living people to fill it, later deciding to capture Wan Xilang from Suzhou after a folk song spread.",
+        "S601-887": "童遥所编故事竟成真，苏州书生万喜良因官差追捕而逃亡。他逃至松江府听说官差追捕逃夫，慌忙躲入庄院花园。\nEnglish: Tong Yao's fictional story turns real as the scholar Wan Xilang flees from officials. He reaches Songjiang and hides in a manor's garden after hearing about the officials' search for fugitives.",
+        "S888-1286": "这所庄园原是孟员外的，他与妻子无子，收养了孟姜女。孟姜女因冬瓜中诞生而得名，现已成为聪明美丽的姑娘。\nEnglish: This estate was originally Meng Yuanbai's. He and his wife, childless, adopted Meng Jiangnü, who was born from a winter melon and is now a smart and beautiful young woman.",
+        "S1287-1517": "万喜良在孟家花园池塘边躲藏时，见孟姜女手持白团扇追逐蝴蝶，不慎跌入池中，他急忙将其救出。\nEnglish: While hiding in the Meng family garden, Wan Xilang saw Meng Jiangnü chasing butterflies with a white round fan. She accidentally fell into the pond and he rushed to rescue her.",
+        "S1518-1798": "孟员外带着夫人和使女赶到，发现女儿与陌生少年万喜良在池边对峙，少年紧拉女儿双手，女儿半身湿透且尴尬。得知少年因躲避拉夫救了落水女儿，父亲因‘男女授受不亲’礼节冲突，决定招赘他为女婿。\nEnglish: Meng Yuanwai arrives with his wife and servant, finding his daughter and the stranger Wan Xilang facing each other by the pond. The boy is holding her hands, and she is embarrassed and half-drenched. Learning that the boy saved her from drowning while fleeing conscription, the father faces a dilemma over the 'men and women not touching' tradition and decides to marry him off as a solution.",
+        "S1799-2043": "万喜良新婚三日即被官兵捕获，孟姜女目睹丈夫遭秦始皇暴政迫害，悲痛欲绝痛哭流涕。\nEnglish: Wan Xilin was captured by officials three days after marriage, and Meng Jiangnü mourned his unjust suffering under Qin Shi Huang's tyranny, crying bitterly.",
+        "S2044-2234": "万喜良被抓后被囚禁半年多，杳无音讯。孟姜女在十月北风起时梦见丈夫归来，因准备寒衣而坚持前往送衣，最终得到员外夫妇同意。\nEnglish: After being imprisoned for over half a year with no news, Wan Xilang was mentioned. Meng Jiangnü dreamed of her husband's return in October as the north wind blew, and after preparing a cold coat, she insisted on delivering it, eventually gaining her in-laws' permission.",
+        "S2235-2292": "孟姜女将寒衣和换洗衣物打包成包袱，携带雨伞告别父母后踏上旅程。\nEnglish: Meng Jiangnü packed her husband's winter clothes and laundry into a bundle, took an umbrella, bid farewell to her parents, and set off on her journey.",
+        "S2293-2477": "她历经艰辛来到大河前，因无桥无船而哭泣，通过拍打河岸使河水退去，最终横穿干涸河床到达对岸。一路上虽遭遇无数艰难，但总能因奇迹化险为夷。\nEnglish: Meng Jiangnü, after enduring great hardships, arrived at a river with no bridge or boat. By crying and striking the riverbank, she caused the water to recede, crossing the dried riverbed. Despite countless difficulties, miracles always saved her.",
+        "S2478-2849": "孟姜女在寻找丈夫途中遇到乌鸦指引，跟随乌鸦穿越田野最终抵达村庄。\nEnglish: Meng Jiangnü follows crows guiding her through fields to reach a village while searching for her husband.",
+        "S2850-2959": "孟姜女至村庄东头叩门借宿，遇塞翁讲述长城修建惨状，次日辞别继续行程。\nEnglish: Heng Nv seeks shelter at a village east house, meets Sai Wang who recounts the grim toll of the Great Wall's construction, and departs the next day.",
+        "S3091-3291": "孟姜女在民夫中未找到丈夫，询问工头得知万喜良因逃犯身份被处死并填入城墙，后因病身亡。她听后昏厥。\nEnglish: Meng Jiangnü couldn't find her husband among the laborers. The foreman revealed Wan Qixiang, a fugitive from Suzhou, was executed and used to fill the city wall, later dying from illness. She fainted upon hearing this.",
+        "S3292-3677": "孟姜女在众人救治下苏醒，目睹冷酷无情的长城，想起丈夫尸骨埋藏其中及无数百姓苦难，悲痛欲绝，哭声引发长城崩塌四十里，露出无数白骨。\nEnglish: Meng Jiangnü awakens after being tended to, witnessing the cold and ruthless Great Wall, recalling her husband's remains buried there and the suffering of countless people, leading to her heart-wrenching sorrow. Her cries cause the Great Wall to collapse forty li, revealing countless bones.",
+        "S3677-3867": "孟姜女用血测试尸骨，确认丈夫的遗骸后悲痛哭泣。\nEnglish: Meng Jiangnü uses her blood to identify her husband's bones, then mourns upon confirming his remains.",
+        "S3868-4037": "女子准备安葬丈夫遗骨，忽闻鼓乐声，原是秦始皇巡长城。秦始皇发现长城崩塌四十里，怒而传令召哭城女子来见。\nEnglish: A woman is preparing to bury her husband's bones when she hears drums and music, realizing it's Qin Shi Huang's procession. The emperor, upon discovering 40 li of the Great Wall collapsed, angrily orders the woman who caused it to appear.",
+        "S4038-4356": "孟姜女因美貌打动秦始皇，她直言哭倒长城的罪责，秦始皇被她的才智所折服，决定封她为妃。\nEnglish: Meng Jiangnü's beauty impresses Qin Shi Huang, who is moved by her bold accusation against the Great Wall's construction. The emperor, impressed by her wit, offers her a position as his concubine.",
+        "S4357-4935": "孟姜女怒不可遏却忍气吞声，以三件苛刻要求戏弄秦始皇，最终迫使他建造桥梁、修筑坟墓并假意以子礼祭奠。\nEnglish: Meng Jiangnü suppresses her anger and demands three humiliating conditions from Qin Shi Huang, forcing him to build a bridge, construct a tomb, and pretend to mourn as her husband's son.",
+        "S4936-5500": "造桥修坟工程迅速完工，秦始皇携文武百官祭奠万喜良坟墓，孟姜女在祭棚中跪陪。秦始皇欲成亲遭孟姜女拒绝，她怒斥秦始皇昏庸，揭露修长城的虚伪，并纵身跳江自尽。\nEnglish: The bridge and tomb were completed quickly, with Qin Shi Huang leading officials to mourn Wan Xilang. Meng Jiangnü refused to marry him, scolded him for his tyranny, exposed the futility of the Great Wall, and jumped into the river to die.",
+        "S5501-5582": "秦始皇被吓得惊怔在长桥下面，等他回过神来，才派了许多善于泅水的汉子去捞救孟姜女，打捞了多时始終无影无踪。\nEnglish: Qin Shi Huang was shocked under the long bridge, then sent skilled swimmers to rescue Meng Jiangnü, but couldn't find her.",
+        "S5583-5646": "据传孟姜女跳江后未死，被龙王接纳入宫，后送至天庭成为仙女。\nEnglish: Meng Jiangnü is said to have survived after jumping into the river, was welcomed by the Dragon King, and later sent to heaven as a fairy."
       },
       "combined": [],
-      "whole": ""
+      "whole": "秦始皇派卢教求仙带回蝌蚪文仙书，误将‘亡秦者胡也’视为北方威胁，下令修长城并活人填城。苏州书生万喜良因逃夫被追捕，躲入孟员外庄院花园，救起跌入池塘的孟姜女。孟员外因礼节冲突招赘其为婿，万喜良新婚三日即被官兵捕获。孟姜女目睹丈夫遭暴政迫害，历经艰辛寻夫，最终在长城发现丈夫尸骨，哭倒长城四十里。她以血验骨确认遗骸，怒斥秦始皇昏庸，纵身跳江自尽，后传为龙王接入天庭成仙。\nEnglish: Qin Shi Huang sent Lu Jiao to seek immortality, who returned with a蝌蚪文 scroll misinterpreted as a threat from northern barbarians, ordering the Great Wall's construction with living people. Scholar Wan Xilang fled conscription, hid in Meng Yuanbai's garden, and rescued Meng Jiangnü after she fell into a pond. Meng Yuanbai, conflicted by tradition, married him off. Wan was captured three days later, and Meng Jiangnü, witnessing his suffering, journeyed to the Great Wall, discovering his bones. Her tears collapsed 40 li of the wall; she confirmed his remains with her blood, scolded Qin Shi Huang, and jumped into the river, later said to have become a fairy by the Dragon King."
     },
     "bias_reflection": {
       "cultural_reading": "",

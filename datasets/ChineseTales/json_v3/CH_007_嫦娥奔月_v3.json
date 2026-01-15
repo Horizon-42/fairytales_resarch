@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "3.0",
   "metadata": {
     "id": "CH_007_嫦娥奔月",
     "title": "嫦娥奔月",
@@ -61,14 +61,14 @@
       "object_type": "normal_object",
       "instrument": "",
       "time_order": 1,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "75043d20-3a1b-4b96-812f-a124181d61ff",
@@ -89,14 +89,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 2,
-      "relationship_level1": "权威与阶级(Hierarchy)",
-      "relationship_level2": "master_servant",
-      "sentiment": "negative",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "逄蒙",
+          "target": "后羿",
+          "relationship_level1": "权威与阶级(Hierarchy)",
+          "relationship_level2": "master_servant",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "e3a01e45-29cb-49d2-bedb-3cef68429b37",
@@ -117,14 +125,22 @@
       "object_type": "",
       "instrument": "仙药",
       "time_order": 3,
-      "relationship_level1": "浪漫与激情(Romance)",
-      "relationship_level2": "lover",
-      "sentiment": "romantic",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "后羿",
+          "target": "嫦娥",
+          "relationship_level1": "浪漫与激情(Romance)",
+          "relationship_level2": "lover",
+          "sentiment": "romantic"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "139f07e6-066d-4329-bf2a-2b77871ac32e",
@@ -145,14 +161,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 4,
-      "relationship_level1": "权威与阶级(Hierarchy)",
-      "relationship_level2": "master_servant",
-      "sentiment": "negative",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "逄蒙",
+          "target": "嫦娥",
+          "relationship_level1": "权威与阶级(Hierarchy)",
+          "relationship_level2": "master_servant",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "fca14a75-7245-4a99-bca1-54d694792e50",
@@ -173,14 +197,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "relationship_level1": "权威与阶级(Hierarchy)",
-      "relationship_level2": "master_servant",
-      "sentiment": "negative",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "嫦娥",
+          "target": "逄蒙",
+          "relationship_level1": "权威与阶级(Hierarchy)",
+          "relationship_level2": "master_servant",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "c41ff3c8-35f9-47f7-a97a-1b3f35ec5e67",
@@ -201,14 +233,14 @@
       "object_type": "magical_agent",
       "instrument": "",
       "time_order": 6,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "496f9260-ab19-42a2-a20e-22efe0f25825",
@@ -229,14 +261,14 @@
       "object_type": "normal_object",
       "instrument": "",
       "time_order": 7,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     },
     {
       "id": "fcb692be-a2af-46f8-9350-a9363bee04c0",
@@ -257,14 +289,22 @@
       "object_type": "",
       "instrument": "",
       "time_order": 8,
-      "relationship_level1": "家庭与亲缘(Family & Kinship)",
-      "relationship_level2": "spouse",
-      "sentiment": "romantic",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [
+        {
+          "agent": "后羿",
+          "target": "嫦娥",
+          "relationship_level1": "家庭与亲缘(Family & Kinship)",
+          "relationship_level2": "spouse",
+          "sentiment": "romantic"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     }
   ],
   "themes_and_motifs": {

@@ -1,0 +1,87 @@
+{
+  "version": "3.0",
+  "metadata": {
+    "id": "CH_301_神犬盘瓠",
+    "title": "神犬盘瓠",
+    "culture": "Chinese",
+    "annotator": "",
+    "date_annotated": "2026-01-15",
+    "confidence": 0.8
+  },
+  "source_info": {
+    "language": "zh",
+    "type": "full_text",
+    "reference_uri": "datasets/ChineseTales/texts/CH_301_神犬盘瓠.txt",
+    "text_content": "据说，在高辛王当朝的时侯, 有一年，皇后娘娘忽然得了耳痛病，整整痛了三年，百般医治，没有效验。后来从耳朵里挑出一条金虫，形状像蚕子，三寸\n左右长。虫一桃出来, 耳痛病居然刹那间就好了。\n皇后觉得奇怪，便用瓠篱盛着这条虫，又用盘子盖着。哪知道盘子里的虫忽然变成一只龙狗，遍体锦纹，五色斑爛，毫光闪闪。因为是从盘子和瓠篱里变出来的，所以取名叫做\"盘瓠\"。高辛王见了这狗，非常欢喜，行坐随身，寸步\n不离。\n那时忽有房王作乱，高辛王忧虑国家危亡，便向群臣说道：\"若是有人能斩房王的头来献，愿把公主嫁给他。\" 群臣看见房王兵强马壮，料难获胜，都不敢去冒这生命危除。\n说话这天，宫廷里忽然不见了盘瓠，大家都不知道这狗究竟跑到哪里去了，一连寻找了好几天，都无踪影，高辛王深以为怪。\n却说盘瓠离了宫廷，一直走到房王军中，见了房王，摇头摆尾。房王一见这狗 ，高兴非常，向左右臣僚说道：\"高辛氏怕快灭亡了吧！连他的狗都嫩下他跑来投奔我，看来我房王是当兴了。\" 于是便高烧火炬，击鼓撞钟，举行宴会，为这\n个好征兆作乐庆贺。那天晚上，欢乐的房王喝得烂醉如泥，睡在中军帐中。盘瓠便趁这时机，猛地咬下房王的头，叼着它飞快地跑回高辛王王宫。\n高辛王看见爱犬衔了敌人的头跑回宫来，不禁大喜过望，便叫人多多拿些剁得细细的肉来喂他。哪知道盘瓠只把鼻头伸向盆边嗅了一嗅，便走开了，闷恹恹地去睡在屋角，不吃东西，也不活动，高辛王呼唤它也不起来，就这么过了两三天。\n高辛王心里难过，想了一想，便向盘輒说道；\"狗啊，你为什么既不吃东西，呼唤也不来呢？莫不是想要得到公主为妻，恨我不践诺言吗？并不是我不践诺言，实在是因为狗和人是不可以结婚的啊！”\n盘瓠登时口吐人言，说道：\"王啊，请不要忧虑，你只要将我放在金钟里面，七天七夜，我就可以变成人。”\n高辛王听了这话，深觉途异；果然将盘瓠放在金钟里面，看它怎么变化。\n一天、两天、三天……到了第六天，期待结婚的多情的公主怕它饿死，悄悄打开金钟一看，盘靓全身都变成了人，只留一个狗头没有来得及变，从此再也不能变了。\n于是，盘瓠从金钟里跳出来，披上大衣，公主则戴了狗头帽，他俩就在皇宫里结了婚。\n结婚以后，盘瓠带着妻子，到南山去，住在人迹罕至的深山岩洞中。公主脱下华贵的衣裳，穿上庶民百姓的服装，亲自劳作，毫无怨言。盘瓠则毎天出去打猎，以此为生, 夫妻俩和睦幸福地过日子。几年以后，生下三男一女。于是带着儿女们回家去看外公外婆。\n几个儿女都还没有姓氏，就请高辛王赐给他们姓。大儿子生下来是用盘子装的，就赐姓为盘；二儿子生下来是用篮子装的，就赐姓为蓝；只有三儿子想不出赐什么姓好，适逢天上有轰轰的雷声响过，便赐姓为雷。小女儿长大成人，招了个勇敢的兵士做女婿，跟着丈夫的姓姓了钟。蓝、雷、盘、钟四姓，互相婚配，\n后来子孙繁衍，成为国族，大家都奉盘瓠为他们共同的老祖宗。\n"
+  },
+  "characters": [],
+  "narrative_events": [
+    {
+      "id": "3c7ff483-415d-4b19-9289-2bd981a908de",
+      "text_span": null,
+      "event_type": "OTHER",
+      "description": "",
+      "agents": [],
+      "targets": [],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "1b695678-432d-4cdc-8500-0202517ff2e4",
+      "text_span": null,
+      "event_type": "OTHER",
+      "description": "",
+      "agents": [],
+      "targets": [],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [],
+    "motif_type": [],
+    "atu_categories": [],
+    "obstacle_thrower": [],
+    "helper_type": [],
+    "thinking_process": "",
+    "atu_evidence": {},
+    "motif_evidence": {}
+  },
+  "analysis": {
+    "propp_functions": [],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

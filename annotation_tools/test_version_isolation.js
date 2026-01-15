@@ -14,7 +14,7 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const PROJECT_ROOT = path.resolve(__dirname, '..', '..');
+const PROJECT_ROOT = path.resolve(__dirname, '..');
 
 // Test data: simulate narrativeStructure with mixed v1/v2/v3 fields
 const testNarrativeStructure = [

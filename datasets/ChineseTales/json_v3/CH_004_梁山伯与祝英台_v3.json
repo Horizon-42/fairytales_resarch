@@ -851,16 +851,126 @@
       "TRUE_LOVE"
     ],
     "motif_type": [
-      "Motif T80: Tragic love. Italian Novella: Rotunda; Jewish: Neuman; India: Thompson- (Sex > Love > Love)"
+      "Motif T80: Tragic love. Italian Novella: Rotunda; Jewish: Neuman; India: Thompson- (Sex > Love > Love)",
+      "Motif E631.0.1: E631.0.1. Twining branches grow from graves of lovers. (Cf. E419.6.) (E. The dead. > E600–E699. Reincarnation.)",
+      "Motif F1041.1.5.1: F1041.1.5.1. Bridegroom dies from joy. (F. Marvels. > F900-F1099. Extraordinary occurrences.)",
+      "Motif E643.1: E643.1. Smoke from funeral fires of two lovers mingles in sky. (E. The dead. > E600–E699. Reincarnation.)",
+      "Motif T92.14: T92.14. Three lovers mourn for dead girl: one throws himself into her funeral pyre; another gathers together the ashes and vows to spend his life sitting upon them; third resolves to turn fakir. (T. Sex. > T0–T99. Love.)",
+      "Motif T50.2.1: T50.2.1. King unwilling to marry his daughter to a man not her equal. (T. Sex. > T0–T99. Love.)",
+      "Motif T131.1.2.4: T131.1.2.4. Son refuses to marry father's choice. (T. Sex. > T100–T199. Marriage.)",
+      "Motif H314.1: H314.1. Suitor's sincerity tested by reporting girl's death. All but one make excuses for not helping with funeral. (H. Tests. > H300–H499. Marriage tests. > H310–H359. Suitor tests.)",
+      "Motif J1279.3: J1279.3. Suitor hesitates to marry girl as immature (or too delicate). Girl's father protests, saying that she has had three children. (J. The wise and the foolish. > J1100–J1699. Cleverness. > J1250–J1499. Clever verbal retorts (repartee).)",
+      "Motif F1041.1.3.1: F1041.1.3.1. Maiden who has been falsely accused apparently dies of sorrow. She revives on being prepared for burial. (F. Marvels. > F900-F1099. Extraordinary occurrences.)",
+      "Motif J1575.1: J1575.1. Suitor brings own lamp. Mother of girl tells suitor that she cannot have him burning her midnight oil. The next night he brings his own lamp and a can of oil, tells her he will stay all night if he wishes. (J. The wise and the foolish. > J1100–J1699. Cleverness. > J1500–J1649. Clever practical retorts.)"
     ],
     "atu_categories": [
-      "ATU 881: Oft-proved Fidelity (REALISTIC TALES > Proofs of Fidelity and Innocence)"
+      "ATU 881: Oft-proved Fidelity (REALISTIC TALES > Proofs of Fidelity and Innocence)",
+      "ATU 720: From the Juniper Tree (TALES OF MAGIC > Other Tales of the Supernatural (700-749))",
+      "ATU 885: The Poor Boy Betrothed to the Maiden (REALISTIC TALES > Proofs of FidelitY and Innocence (880-899))",
+      "ATU 1456: The blind fiancée (ANECDOTES AND JOKES > Stories about a Woman > Looking for a Wife (1450-1474))",
+      "ATU 856: The Girl Elopes with the Wrong Man (REALISTIC TALES > The Man Marries the Princess (850-869))",
+      "ATU 307: The Princess in the Shroud (TALES OF MAGIC > Supernatural Adversaries (300-399))",
+      "ATU 940: The Haughty Girl (REALISTIC TALES > Tales of Fate (930-949))",
+      "ATU 437: The Supplanted Bride (The Needle Prince) (TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Husband (425-449))",
+      "ATU 1457: The lisping maiden (ANECDOTES AND JOKES > Stories about a Woman > Looking for a Wife (1450-1474))"
     ],
     "obstacle_thrower": [],
     "helper_type": [],
     "thinking_process": "",
-    "atu_evidence": {},
-    "motif_evidence": {}
+    "atu_evidence": {
+      "ATU 720: From the Juniper Tree (TALES OF MAGIC > Other Tales of the Supernatural (700-749))": {
+        "evidence_keys": [
+          "S5600-5788"
+        ]
+      },
+      "ATU 885: The Poor Boy Betrothed to the Maiden (REALISTIC TALES > Proofs of FidelitY and Innocence (880-899))": {
+        "evidence_keys": [
+          "S3501-3814"
+        ]
+      },
+      "ATU 1456: The blind fiancée (ANECDOTES AND JOKES > Stories about a Woman > Looking for a Wife (1450-1474))": {
+        "evidence_keys": [
+          "S2276-2672"
+        ]
+      },
+      "ATU 856: The Girl Elopes with the Wrong Man (REALISTIC TALES > The Man Marries the Princess (850-869))": {
+        "evidence_keys": [
+          "S3501-3814"
+        ]
+      },
+      "ATU 307: The Princess in the Shroud (TALES OF MAGIC > Supernatural Adversaries (300-399))": {
+        "evidence_keys": [
+          "S5600-5788"
+        ]
+      },
+      "ATU 940: The Haughty Girl (REALISTIC TALES > Tales of Fate (930-949))": {
+        "evidence_keys": [
+          "S0-228"
+        ]
+      },
+      "ATU 437: The Supplanted Bride (The Needle Prince) (TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Husband (425-449))": {
+        "evidence_keys": [
+          "S5600-5788"
+        ]
+      },
+      "ATU 1457: The lisping maiden (ANECDOTES AND JOKES > Stories about a Woman > Looking for a Wife (1450-1474))": {
+        "evidence_keys": [
+          "S0-228"
+        ]
+      }
+    },
+    "motif_evidence": {
+      "Motif E631.0.1: E631.0.1. Twining branches grow from graves of lovers. (Cf. E419.6.) (E. The dead. > E600–E699. Reincarnation.)": {
+        "evidence_keys": [
+          "S5600-5788"
+        ]
+      },
+      "Motif F1041.1.5.1: F1041.1.5.1. Bridegroom dies from joy. (F. Marvels. > F900-F1099. Extraordinary occurrences.)": {
+        "evidence_keys": [
+          "S5600-5788"
+        ]
+      },
+      "Motif E643.1: E643.1. Smoke from funeral fires of two lovers mingles in sky. (E. The dead. > E600–E699. Reincarnation.)": {
+        "evidence_keys": [
+          "S5600-5788"
+        ]
+      },
+      "Motif T92.14: T92.14. Three lovers mourn for dead girl: one throws himself into her funeral pyre; another gathers together the ashes and vows to spend his life sitting upon them; third resolves to turn fakir. (T. Sex. > T0–T99. Love.)": {
+        "evidence_keys": [
+          "S5600-5788"
+        ]
+      },
+      "Motif T50.2.1: T50.2.1. King unwilling to marry his daughter to a man not her equal. (T. Sex. > T0–T99. Love.)": {
+        "evidence_keys": [
+          "S3501-3814"
+        ]
+      },
+      "Motif T131.1.2.4: T131.1.2.4. Son refuses to marry father's choice. (T. Sex. > T100–T199. Marriage.)": {
+        "evidence_keys": [
+          "S3501-3814"
+        ]
+      },
+      "Motif H314.1: H314.1. Suitor's sincerity tested by reporting girl's death. All but one make excuses for not helping with funeral. (H. Tests. > H300–H499. Marriage tests. > H310–H359. Suitor tests.)": {
+        "evidence_keys": [
+          "S5131-5245"
+        ]
+      },
+      "Motif J1279.3: J1279.3. Suitor hesitates to marry girl as immature (or too delicate). Girl's father protests, saying that she has had three children. (J. The wise and the foolish. > J1100–J1699. Cleverness. > J1250–J1499. Clever verbal retorts (repartee).)": {
+        "evidence_keys": [
+          "S3501-3814"
+        ]
+      },
+      "Motif F1041.1.3.1: F1041.1.3.1. Maiden who has been falsely accused apparently dies of sorrow. She revives on being prepared for burial. (F. Marvels. > F900-F1099. Extraordinary occurrences.)": {
+        "evidence_keys": [
+          "S5600-5788"
+        ]
+      },
+      "Motif J1575.1: J1575.1. Suitor brings own lamp. Mother of girl tells suitor that she cannot have him burning her midnight oil. The next night he brings his own lamp and a can of oil, tells her he will stay all night if he wishes. (J. The wise and the foolish. > J1100–J1699. Cleverness. > J1500–J1649. Clever practical retorts.)": {
+        "evidence_keys": [
+          "S3931-4193"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

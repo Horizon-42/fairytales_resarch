@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "3.0",
   "metadata": {
     "id": "CH_021_叶限(中国灰姑娘)",
     "title": "叶限(中国灰姑娘)",
@@ -18,6 +18,7 @@
   "narrative_events": [
     {
       "id": "dcbf2796-ccd6-4800-bbd9-d09d6b3d2e80",
+      "text_span": null,
       "event_type": "OTHER",
       "description": "",
       "agents": [],
@@ -26,14 +27,14 @@
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
     }
   ],
   "themes_and_motifs": {
