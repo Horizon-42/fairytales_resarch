@@ -8,8 +8,26 @@ This folder contains **only model-related logic** used for automatic annotation:
 - Prompt templates (`prompts.py`)
 - JSON extraction utilities (`json_utils.py`)
 - High-level annotator (`annotator.py`)
+- STAC (Situation, Task, Action, Consequence) analyzer (`stac_analyzer/`)
+- Sentence-level event analysis (`sentence_analysis/`)
 
 The FastAPI server that the frontend calls lives in `backend/`.
+
+## Installation
+
+Install core dependencies:
+
+```bash
+pip install -r llm_model/requirements.txt
+```
+
+Or install the package in editable mode (recommended):
+
+```bash
+pip install -e .
+```
+
+This makes `llm_model` importable from anywhere in the project.
 
 ## Quick CLI test
 
@@ -51,7 +69,7 @@ Analyze sentences to determine:
 
 ```bash
 cd /home/supercomputing/studys/fairytales_resarch
-python -m llm_model.auto_sentence_analysis_cli \
+python -m llm_model.sentence_analysis.cli \
   --story-file datasets/ChineseTales/texts/孟姜女哭长城.md \
   --sentence "The hero defeated the dragon."
 ```
@@ -59,7 +77,7 @@ python -m llm_model.auto_sentence_analysis_cli \
 ### Analyze a single sentence (no context):
 
 ```bash
-python -m llm_model.auto_sentence_analysis_cli \
+python -m llm_model.sentence_analysis.cli \
   --no-context \
   --sentence "The hero defeated the dragon."
 ```
@@ -72,12 +90,12 @@ The tool can automatically split the text file into sentences and analyze each o
 
 ```bash
 # With context (default) - uses story context for each sentence analysis
-python -m llm_model.auto_sentence_analysis_cli \
+python -m llm_model.sentence_analysis.cli \
   --story-file datasets/ChineseTales/texts/孟姜女哭长城.md \
   --output result.json
 
 # Without context - analyzes each sentence independently, no story context
-python -m llm_model.auto_sentence_analysis_cli \
+python -m llm_model.sentence_analysis.cli \
   --no-context \
   --story-file datasets/ChineseTales/texts/孟姜女哭长城.md \
   --output result.json
@@ -117,7 +135,7 @@ With Gemini:
 ```bash
 # With context
 LLM_PROVIDER=gemini \
-python -m llm_model.auto_sentence_analysis_cli \
+python -m llm_model.sentence_analysis.cli \
   --provider gemini \
   --model "$GEMINI_MODEL" \
   --story-file datasets/ChineseTales/texts/孟姜女哭长城.md \
@@ -125,9 +143,94 @@ python -m llm_model.auto_sentence_analysis_cli \
 
 # Without context
 LLM_PROVIDER=gemini \
-python -m llm_model.auto_sentence_analysis_cli \
+python -m llm_model.sentence_analysis.cli \
   --provider gemini \
   --model "$GEMINI_MODEL" \
   --no-context \
   --sentence "The hero defeated the dragon."
+```
+
+## STAC (Situation, Task, Action, Consequence) Analysis CLI
+
+Analyze sentences using STAC classification:
+- **Situation**: Provides background context or sets the stage (extracts location)
+- **Task**: States an explicit requirement (extracts task roles)
+- **Action**: Indicates an activity performed (extracts doers and receivers)
+- **Consequence**: Describes the outcome of a prior event (extracts changed state)
+
+### Analyze a single sentence (with context):
+
+```bash
+cd /home/supercomputing/studys/fairytales_resarch
+python -m llm_model.auto_stac_cli \
+  --story-file datasets/ChineseTales/texts/孟姜女哭长城.md \
+  --sentence "王子来到了森林"
+```
+
+### Analyze a single sentence (no context):
+
+```bash
+python -m llm_model.auto_stac_cli \
+  --no-context \
+  --sentence "王子来到了森林"
+```
+
+### Auto-split and analyze all sentences:
+
+```bash
+# With context (default) - uses story context for each sentence analysis
+python -m llm_model.auto_stac_cli \
+  --story-file datasets/ChineseTales/texts/孟姜女哭长城.md \
+  --output result.json
+
+# Without context - analyzes each sentence independently
+python -m llm_model.auto_stac_cli \
+  --no-context \
+  --story-file datasets/ChineseTales/texts/孟姜女哭长城.md \
+  --output result.json
+
+# With neighboring sentences as auxiliary context
+python -m llm_model.auto_stac_cli \
+  --story-file datasets/ChineseTales/texts/孟姜女哭长城.md \
+  --use-neighboring-sentences \
+  --output result.json
+```
+
+The output JSON structure:
+```json
+{
+  "story_file": "path/to/story.txt",
+  "use_context": true,
+  "use_neighboring_sentences": false,
+  "total_sentences": 10,
+  "analyzed_sentences": 10,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "第一句话...",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "森林",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "..."
+      }
+    },
+    ...
+  ]
+}
+```
+
+With Gemini:
+
+```bash
+# With context
+LLM_PROVIDER=gemini \
+python -m llm_model.auto_stac_cli \
+  --provider gemini \
+  --model "$GEMINI_MODEL" \
+  --story-file datasets/ChineseTales/texts/孟姜女哭长城.md \
+  --output result.json
 ```

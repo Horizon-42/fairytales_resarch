@@ -640,7 +640,9 @@
       "CUNNING"
     ],
     "motif_type": [],
-    "atu_categories": [],
+    "atu_categories": [
+      "ATU 554: The Grateful Animals (TALES OF MAGIC > Supernatural Helpers (500-559))"
+    ],
     "obstacle_thrower": [
       "The King"
     ],
@@ -649,7 +651,13 @@
       "HUMAN"
     ],
     "thinking_process": "",
-    "atu_evidence": {},
+    "atu_evidence": {
+      "ATU 554: The Grateful Animals (TALES OF MAGIC > Supernatural Helpers (500-559))": {
+        "evidence_keys": [
+          "S3332-3792"
+        ]
+      }
+    },
     "motif_evidence": {}
   },
   "analysis": {

@@ -217,13 +217,27 @@
     "key_values": [
       "OTHER"
     ],
-    "motif_type": [],
+    "motif_type": [
+      "Motif J2060: J2060. Absurd plans. Air-castles. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J2050–J2199. Absurd short-sightedness.)",
+      "Motif J2061: J2061. Air-castle shattered by lack of forethought. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J2050–J2199. Absurd short-sightedness.)"
+    ],
     "atu_categories": [],
     "obstacle_thrower": [],
     "helper_type": [],
     "thinking_process": "",
     "atu_evidence": {},
-    "motif_evidence": {}
+    "motif_evidence": {
+      "Motif J2060: J2060. Absurd plans. Air-castles. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J2050–J2199. Absurd short-sightedness.)": {
+        "evidence_keys": [
+          "S1645-1761"
+        ]
+      },
+      "Motif J2061: J2061. Air-castle shattered by lack of forethought. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J2050–J2199. Absurd short-sightedness.)": {
+        "evidence_keys": [
+          "S1645-1761"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

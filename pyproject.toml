@@ -8,10 +8,13 @@ version = "0.0.0"
 description = "Fairytales research: annotation tool + Ollama-backed auto-annotation backend"
 readme = "README.md"
 requires-python = ">=3.9"
+dependencies = [
+	"requests>=2.32.0",
+	"python-dotenv>=1.0.0",
+]
 
 [project.optional-dependencies]
 vector-db = [
-	"requests>=2.32.0",
 	"numpy>=1.24.0",
 	"hnswlib>=0.8.0",
 	"tqdm>=4.66.0",
@@ -19,6 +22,7 @@ vector-db = [
 
 # Keep runtime deps minimal here; the backend has its own requirements.txt.
 # You can optionally install backend deps with: pip install -r backend/requirements.txt
+# Core dependencies (requests, python-dotenv) are now in [project.dependencies]
 
 [tool.setuptools]
 include-package-data = false

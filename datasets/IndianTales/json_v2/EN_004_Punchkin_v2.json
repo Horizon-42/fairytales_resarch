@@ -412,13 +412,75 @@
       "JUSTICE",
       "COURAGE"
     ],
-    "motif_type": [],
+    "motif_type": [
+      "Motif T69.1.2: T69.1.2. Seven princesses sought by seven princes. (T. Sex. > T0–T99. Love.)",
+      "Motif B535.0.5: B535.0.5. Abandoned prince grows up in eagle's nest. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)",
+      "Motif D741: D741. Disenchantment of monster when prince promises to marry the monster's mother. The prince imagines falsely that the mother is also a monster. (D. Magic. > D700–D799. Disenchantment.)",
+      "Motif B522.1: B522.1. Serpent shows condemned man how to save prince's life. Bites the prince and then shows the man the proper remedy (cf. B512). By thus ingratiating himself the man is freed from false accusation. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)",
+      "Motif E715.1.3.2: E715.1.3.2. Ogre with life in parrot, speaks from inside parrot. (E. The dead. > E700–E799. The soul.)",
+      "Motif D838.10: D838.10. Prince procures magic object from bathing fairy when he steals her clothes. (D. Magic. > D800–D1699. Magic objects. > D800–D899. Ownership of magic objects. > D810–D859. Acquisition of magic object.)",
+      "Motif B524.1.6: B524.1.6. Helpful bird kills snake attacking master's wife and child. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)",
+      "Motif B521.3.3.1: B521.3.3.1. Prince awakened by fly on his nose in time to save himself from enemy. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)",
+      "Motif B589.1: B589.1. Eagle regains throne for deposed king. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)",
+      "Motif B391.3: B391.3. Hero kills horse to feed young ravens. (B. Animals. > B300–B599. Friendly animals. > B350–B399. Grateful animals.)"
+    ],
     "atu_categories": [],
     "obstacle_thrower": [],
     "helper_type": [],
     "thinking_process": "",
     "atu_evidence": {},
-    "motif_evidence": {}
+    "motif_evidence": {
+      "Motif T69.1.2: T69.1.2. Seven princesses sought by seven princes. (T. Sex. > T0–T99. Love.)": {
+        "evidence_keys": [
+          "S10407-10753"
+        ]
+      },
+      "Motif B535.0.5: B535.0.5. Abandoned prince grows up in eagle's nest. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)": {
+        "evidence_keys": [
+          "S21993-22617"
+        ]
+      },
+      "Motif D741: D741. Disenchantment of monster when prince promises to marry the monster's mother. The prince imagines falsely that the mother is also a monster. (D. Magic. > D700–D799. Disenchantment.)": {
+        "evidence_keys": [
+          "S24445-26084"
+        ]
+      },
+      "Motif B522.1: B522.1. Serpent shows condemned man how to save prince's life. Bites the prince and then shows the man the proper remedy (cf. B512). By thus ingratiating himself the man is freed from false accusation. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)": {
+        "evidence_keys": [
+          "S21993-22617"
+        ]
+      },
+      "Motif E715.1.3.2: E715.1.3.2. Ogre with life in parrot, speaks from inside parrot. (E. The dead. > E700–E799. The soul.)": {
+        "evidence_keys": [
+          "S19426-20906"
+        ]
+      },
+      "Motif D838.10: D838.10. Prince procures magic object from bathing fairy when he steals her clothes. (D. Magic. > D800–D1699. Magic objects. > D800–D899. Ownership of magic objects. > D810–D859. Acquisition of magic object.)": {
+        "evidence_keys": [
+          "S24445-26084"
+        ]
+      },
+      "Motif B524.1.6: B524.1.6. Helpful bird kills snake attacking master's wife and child. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)": {
+        "evidence_keys": [
+          "S21993-22617"
+        ]
+      },
+      "Motif B521.3.3.1: B521.3.3.1. Prince awakened by fly on his nose in time to save himself from enemy. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)": {
+        "evidence_keys": [
+          "S21993-22617"
+        ]
+      },
+      "Motif B589.1: B589.1. Eagle regains throne for deposed king. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)": {
+        "evidence_keys": [
+          "S21993-22617"
+        ]
+      },
+      "Motif B391.3: B391.3. Hero kills horse to feed young ravens. (B. Animals. > B300–B599. Friendly animals. > B350–B399. Grateful animals.)": {
+        "evidence_keys": [
+          "S21993-22617"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

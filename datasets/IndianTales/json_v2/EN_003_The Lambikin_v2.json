@@ -352,11 +352,19 @@
       "OTHER"
     ],
     "motif_type": [],
-    "atu_categories": [],
+    "atu_categories": [
+      "ATU 122: The Wolf Loses His Prey (ANIMAL TALES > Wild Animals and Domestic Animals (100-149))"
+    ],
     "obstacle_thrower": [],
     "helper_type": [],
     "thinking_process": "",
-    "atu_evidence": {},
+    "atu_evidence": {
+      "ATU 122: The Wolf Loses His Prey (ANIMAL TALES > Wild Animals and Domestic Animals (100-149))": {
+        "evidence_keys": [
+          "S881-1184"
+        ]
+      }
+    },
     "motif_evidence": {}
   },
   "analysis": {

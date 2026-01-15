@@ -269,15 +269,73 @@
       "JUSTICE",
       "SACRIFICE"
     ],
-    "motif_type": [],
-    "atu_categories": [],
+    "motif_type": [
+      "Motif K282.1: K282.1. Man contracts for load of hay on the road (without making any payment), orders the seller to deliver it at a certain inn. He then goes to the inn, sells the hay to the innkeeper, and pockets the money. The owner of the hay delivers it at the inn, tries to collect at the inn; the trickster absconds. (K. Deceptions. > K100–K299. Deceptive bargains.)",
+      "Motif K198: K198. Cheater is forced to eat excrements. Gentleman agrees to exchange his good horse for the peasant's jade, provided the peasant will eat its excrements. The peasant finds no difficulty in the task, whereas the gentleman, put to the same condition when he wants to get back his horse, finds it impossible. (K. Deceptions. > K100–K299. Deceptive bargains.)",
+      "Motif K441.3: K441.3. Fee from two persons for the same monopoly. Man to furnish goods exclusively to animal. Bargains at same time with another to do the same thing. (K. Deceptions. > K300–K499. Thefts and cheats. > K440–K499. Other cheats.)",
+      "Motif L251: L251. Beggar with small bag surpasses the one with the large. Latter refuses all but large donations; gets none. (L. Reversal of fortune. > L200–L299. Modesty brings reward.)",
+      "Motif K181: K181. Deceptive bargain: a peck of grain for each stack. The man who is to receive this share of the crop makes very small stacks. (K. Deceptions. > K100–K299. Deceptive bargains.)"
+    ],
+    "atu_categories": [
+      "ATU 1745: Three words at the grave (ANECDOTES AND JOKES > Jokes about Clergymen and Religious Figures > The Clergyman is Tricked (1725-1774))",
+      "ATU 1624: Thief's Excuse: the Big Wind (ANECDOTES AND JOKES > Stories about a Man > The Clever Man (1525-1639))",
+      "ATU 161: Peasant Betrays Fox by Pointing (ANIMAL TALES > Wild Animals and Humans (150-199))",
+      "ATU 859: The Penniless Bridegroom Pretends to Wealth (REALISTIC TALES > The Man Marries the Princess (850-869))"
+    ],
     "obstacle_thrower": [
       "The Money-lender"
     ],
     "helper_type": [],
     "thinking_process": "",
-    "atu_evidence": {},
-    "motif_evidence": {}
+    "atu_evidence": {
+      "ATU 1745: Three words at the grave (ANECDOTES AND JOKES > Jokes about Clergymen and Religious Figures > The Clergyman is Tricked (1725-1774))": {
+        "evidence_keys": [
+          "S0-373"
+        ]
+      },
+      "ATU 1624: Thief's Excuse: the Big Wind (ANECDOTES AND JOKES > Stories about a Man > The Clever Man (1525-1639))": {
+        "evidence_keys": [
+          "S1903-2449"
+        ]
+      },
+      "ATU 161: Peasant Betrays Fox by Pointing (ANIMAL TALES > Wild Animals and Humans (150-199))": {
+        "evidence_keys": [
+          "S1903-2449"
+        ]
+      },
+      "ATU 859: The Penniless Bridegroom Pretends to Wealth (REALISTIC TALES > The Man Marries the Princess (850-869))": {
+        "evidence_keys": [
+          "S0-373"
+        ]
+      }
+    },
+    "motif_evidence": {
+      "Motif K282.1: K282.1. Man contracts for load of hay on the road (without making any payment), orders the seller to deliver it at a certain inn. He then goes to the inn, sells the hay to the innkeeper, and pockets the money. The owner of the hay delivers it at the inn, tries to collect at the inn; the trickster absconds. (K. Deceptions. > K100–K299. Deceptive bargains.)": {
+        "evidence_keys": [
+          "S2780-3487"
+        ]
+      },
+      "Motif K198: K198. Cheater is forced to eat excrements. Gentleman agrees to exchange his good horse for the peasant's jade, provided the peasant will eat its excrements. The peasant finds no difficulty in the task, whereas the gentleman, put to the same condition when he wants to get back his horse, finds it impossible. (K. Deceptions. > K100–K299. Deceptive bargains.)": {
+        "evidence_keys": [
+          "S2780-3487"
+        ]
+      },
+      "Motif K441.3: K441.3. Fee from two persons for the same monopoly. Man to furnish goods exclusively to animal. Bargains at same time with another to do the same thing. (K. Deceptions. > K300–K499. Thefts and cheats. > K440–K499. Other cheats.)": {
+        "evidence_keys": [
+          "S2780-3487"
+        ]
+      },
+      "Motif L251: L251. Beggar with small bag surpasses the one with the large. Latter refuses all but large donations; gets none. (L. Reversal of fortune. > L200–L299. Modesty brings reward.)": {
+        "evidence_keys": [
+          "S0-373"
+        ]
+      },
+      "Motif K181: K181. Deceptive bargain: a peck of grain for each stack. The man who is to receive this share of the crop makes very small stacks. (K. Deceptions. > K100–K299. Deceptive bargains.)": {
+        "evidence_keys": [
+          "S2780-3487"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

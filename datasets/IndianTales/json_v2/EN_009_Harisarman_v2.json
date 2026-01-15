@@ -312,7 +312,13 @@
       "CUNNING",
       "OTHER (Fate/Destiny)"
     ],
-    "motif_type": [],
+    "motif_type": [
+      "Motif H587: H587. King gives enigmatic order to minister. (H. Tests. > H500–H899. Tests of cleverness. > H530–H899. Riddles.)",
+      "Motif H507.1.0.2: H507.1.0.2. King defeated in repartee by boy, who thus wins girl. Boy: \"Who would give a man a bath, feed him his rice, and then bring him the tamal-pan to chew?\" King: \"No one but a wife.\" Boy claims minister's daughter. (H. Tests. > H500–H899. Tests of cleverness.)",
+      "Motif K1581.2: K1581.2. Lover's gift regained: horse and wagon as gift. The lover regains gift of horse and wagon by pretending to the husband that the wife has confiscated them because he brought wood of uneven quality. (K. Deceptions. > K1500–K1599. Deceptions connected with adultery.)",
+      "Motif H1151.13: H1151.13. Task: stealing from a king. (H. Tests. > H900–H1199. Tests of prowess: tasks. > H1000–H1199. Nature of tasks.)",
+      "Motif K341.8.4: K341.8.4. King loses signet ring while endeavoring to learn from a thief the art of stealing. (K. Deceptions. > K300–K499. Thefts and cheats. > K310–K439. Thefts.)"
+    ],
     "atu_categories": [],
     "obstacle_thrower": [
       "Jihva",
@@ -322,7 +328,33 @@
     "helper_type": [],
     "thinking_process": "",
     "atu_evidence": {},
-    "motif_evidence": {}
+    "motif_evidence": {
+      "Motif H587: H587. King gives enigmatic order to minister. (H. Tests. > H500–H899. Tests of cleverness. > H530–H899. Riddles.)": {
+        "evidence_keys": [
+          "S5270-5836"
+        ]
+      },
+      "Motif H507.1.0.2: H507.1.0.2. King defeated in repartee by boy, who thus wins girl. Boy: \"Who would give a man a bath, feed him his rice, and then bring him the tamal-pan to chew?\" King: \"No one but a wife.\" Boy claims minister's daughter. (H. Tests. > H500–H899. Tests of cleverness.)": {
+        "evidence_keys": [
+          "S5270-5836"
+        ]
+      },
+      "Motif K1581.2: K1581.2. Lover's gift regained: horse and wagon as gift. The lover regains gift of horse and wagon by pretending to the husband that the wife has confiscated them because he brought wood of uneven quality. (K. Deceptions. > K1500–K1599. Deceptions connected with adultery.)": {
+        "evidence_keys": [
+          "S941-1670"
+        ]
+      },
+      "Motif H1151.13: H1151.13. Task: stealing from a king. (H. Tests. > H900–H1199. Tests of prowess: tasks. > H1000–H1199. Nature of tasks.)": {
+        "evidence_keys": [
+          "S2742-3132"
+        ]
+      },
+      "Motif K341.8.4: K341.8.4. King loses signet ring while endeavoring to learn from a thief the art of stealing. (K. Deceptions. > K300–K499. Thefts and cheats. > K310–K439. Thefts.)": {
+        "evidence_keys": [
+          "S2742-3132"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [],

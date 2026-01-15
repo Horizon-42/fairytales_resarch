@@ -349,7 +349,9 @@
       "JUSTICE",
       "OTHER"
     ],
-    "motif_type": [],
+    "motif_type": [
+      "Motif F420.5.2.1.4: F420.5.2.1.4. Water-goddess allows body of drowning person to come up three times. (F. Marvels. > F200–F699. Marvelous creatures. > F400–F499. Spirits and demons.)"
+    ],
     "atu_categories": [],
     "obstacle_thrower": [
       "Seven Wives"
@@ -357,7 +359,13 @@
     "helper_type": [],
     "thinking_process": "",
     "atu_evidence": {},
-    "motif_evidence": {}
+    "motif_evidence": {
+      "Motif F420.5.2.1.4: F420.5.2.1.4. Water-goddess allows body of drowning person to come up three times. (F. Marvels. > F200–F699. Marvelous creatures. > F400–F499. Spirits and demons.)": {
+        "evidence_keys": [
+          "S1534-2218"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [],
