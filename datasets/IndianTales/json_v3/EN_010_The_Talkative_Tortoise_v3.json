@@ -2,7 +2,7 @@
   "version": "3.0",
   "metadata": {
     "id": "EN_010_The_Talkative_Tortoise",
-    "title": "",
+    "title": "The_Talkative_Tortoise",
     "culture": "Indian",
     "annotator": "Deb",
     "date_annotated": "2026-01-14",
@@ -49,6 +49,11 @@
   "narrative_events": [
     {
       "id": "1d3c973b-fa3d-4afc-91b5-2ec5772f025b",
+      "text_span": {
+        "start": 183,
+        "end": 394,
+        "text": "Now this king was very talkative; while he was speaking, others had no opportunity for a word. And the future Buddha, wanting to cure this talkativeness of his, was constantly seeking for some means of doing so."
+      },
       "event_type": "LACK",
       "description": "The King's excessive talking creates a problem that the advisor seeks to resolve.",
       "agents": [
@@ -57,11 +62,6 @@
       "targets": [
         "The Future Buddha"
       ],
-      "text_span": {
-        "start": 183,
-        "end": 394,
-        "text": "Now this king was very talkative; while he was speaking, others had no opportunity for a word. And the future Buddha, wanting to cure this talkativeness of his, was constantly seeking for some means of doing so."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -85,6 +85,11 @@
     },
     {
       "id": "e9e73228-3a78-4fb5-a457-3c5a709fc644",
+      "text_span": {
+        "start": 640,
+        "end": 797,
+        "text": "\"Friend tortoise! the place where we live, at the Golden Cave on Mount Beautiful in the Himalaya country, is a delightful spot. Will you come there with us?\""
+      },
       "event_type": "MEDIATION",
       "description": "The ducks invite their friend the tortoise to migrate to the Golden Cave.",
       "agents": [
@@ -93,11 +98,6 @@
       "targets": [
         "The Tortoise"
       ],
-      "text_span": {
-        "start": 640,
-        "end": 797,
-        "text": "\"Friend tortoise! the place where we live, at the Golden Cave on Mount Beautiful in the Himalaya country, is a delightful spot. Will you come there with us?\""
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -121,6 +121,11 @@
     },
     {
       "id": "00efbdf1-5de7-4f2a-af05-126cd4c17504",
+      "text_span": {
+        "start": 798,
+        "end": 977,
+        "text": "\"But how can I get there?\"\n\"We can take you, if you can only hold your tongue, and will say nothing to anybody.\"\n\"Oh! that I can do. Take me with you.\" \n\"That's right,\" said they."
+      },
       "event_type": "INTERDICTION",
       "description": "The ducks set a strict condition for the flight: the tortoise must remain silent.",
       "agents": [
@@ -129,11 +134,6 @@
       "targets": [
         "The Tortoise"
       ],
-      "text_span": {
-        "start": 798,
-        "end": 977,
-        "text": "\"But how can I get there?\"\n\"We can take you, if you can only hold your tongue, and will say nothing to anybody.\"\n\"Oh! that I can do. Take me with you.\" \n\"That's right,\" said they."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -157,6 +157,11 @@
     },
     {
       "id": "e17bd659-5549-4e44-9496-add465a390d5",
+      "text_span": {
+        "start": 951,
+        "end": 1099,
+        "text": "\"That's right,\" said they. And making the tortoise bite hold of a stick, they themselves took the two ends in their teeth, and flew up into the air."
+      },
       "event_type": "DEPARTURE",
       "description": "The group begins the aerial journey using the stick method.",
       "agents": [
@@ -165,11 +170,6 @@
       "targets": [
         "The Tortoise"
       ],
-      "text_span": {
-        "start": 951,
-        "end": 1099,
-        "text": "\"That's right,\" said they. And making the tortoise bite hold of a stick, they themselves took the two ends in their teeth, and flew up into the air."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -193,6 +193,11 @@
     },
     {
       "id": "5b473dfa-e7a3-403a-a9f2-e8c3d6f30286",
+      "text_span": {
+        "start": 1100,
+        "end": 1225,
+        "text": "Seeing him thus carried by the hamsas, some villagers called out, \"Two wild ducks are carrying a tortoise along on a stick!\" "
+      },
       "event_type": "OTHER",
       "description": "Villagers comment on the strange sight, provoking the tortoise.",
       "agents": [
@@ -201,11 +206,6 @@
       "targets": [
         "The Tortoise"
       ],
-      "text_span": {
-        "start": 1100,
-        "end": 1225,
-        "text": "Seeing him thus carried by the hamsas, some villagers called out, \"Two wild ducks are carrying a tortoise along on a stick!\" "
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -229,6 +229,11 @@
     },
     {
       "id": "a8dccdd5-3e4e-4a1d-b514-3e9d1a35d763",
+      "text_span": {
+        "start": 1225,
+        "end": 1638,
+        "text": "Whereupon the tortoise wanted to say, \"If my friends choose to carry me, what is that to you, you wretched slaves!\" So just as the swift flight of the wild ducks had brought him over the king's palace in the city of Benares, he let go of the stick he was biting, and falling in the open courtyard, split in two! And there arose a universal cry, \"A tortoise has fallen in the open courtyard, and has split in two!\""
+      },
       "event_type": "VIOLATION",
       "description": "Unable to hold his tongue, the tortoise attempts to speak, loses his grip, falls, and dies.",
       "agents": [
@@ -237,11 +242,6 @@
       "targets": [
         "Villager"
       ],
-      "text_span": {
-        "start": 1225,
-        "end": 1638,
-        "text": "Whereupon the tortoise wanted to say, \"If my friends choose to carry me, what is that to you, you wretched slaves!\" So just as the swift flight of the wild ducks had brought him over the king's palace in the city of Benares, he let go of the stick he was biting, and falling in the open courtyard, split in two! And there arose a universal cry, \"A tortoise has fallen in the open courtyard, and has split in two!\""
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -265,6 +265,11 @@
     },
     {
       "id": "a18f896b-9e17-4e21-b38f-e513a4b540ed",
+      "text_span": {
+        "start": 1817,
+        "end": 2583,
+        "text": "The future Buddha thought to himself, \"Long expecting, wishing to admonish the king, have I sought for some means of doing so. This tortoise must have made friends with the wild ducks; and they must have made him bite hold of the stick, and have flown up into the air to take him to the hills. But he, being unable to hold his tongue when he hears any one else talk, must have wanted to say something, and let go the stick; and so must have fallen down from the sky, and thus lost his life.\" And saying, \"Truly, O king! those who are called chatter-boxes—people whose words have no end—come to grief like this,\" he uttered these Verses:\n\"Verily the tortoise killed himself\nWhilst uttering his voice;\nThough he was holding tight the stick,\nBy a word himself he slew.\n"
+      },
       "event_type": "TRANSFIGURATION",
       "description": "The Bodisat uses the incident to teach the King about the dangers of talking too much.",
       "agents": [
@@ -273,11 +278,6 @@
       "targets": [
         "The King"
       ],
-      "text_span": {
-        "start": 1817,
-        "end": 2583,
-        "text": "The future Buddha thought to himself, \"Long expecting, wishing to admonish the king, have I sought for some means of doing so. This tortoise must have made friends with the wild ducks; and they must have made him bite hold of the stick, and have flown up into the air to take him to the hills. But he, being unable to hold his tongue when he hears any one else talk, must have wanted to say something, and let go the stick; and so must have fallen down from the sky, and thus lost his life.\" And saying, \"Truly, O king! those who are called chatter-boxes—people whose words have no end—come to grief like this,\" he uttered these Verses:\n\"Verily the tortoise killed himself\nWhilst uttering his voice;\nThough he was holding tight the stick,\nBy a word himself he slew.\n"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -301,6 +301,11 @@
     },
     {
       "id": "cd9d5442-c0db-4f21-88fe-79967c489317",
+      "text_span": {
+        "start": 2995,
+        "end": 3068,
+        "text": "And the king henceforth refrained himself, and became a man of few words."
+      },
       "event_type": "LIQUIDATION",
       "description": "The King internalizes the lesson and reforms his behavior.",
       "agents": [
@@ -309,11 +314,6 @@
       "targets": [
         "self"
       ],
-      "text_span": {
-        "start": 2995,
-        "end": 3068,
-        "text": "And the king henceforth refrained himself, and became a man of few words."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",

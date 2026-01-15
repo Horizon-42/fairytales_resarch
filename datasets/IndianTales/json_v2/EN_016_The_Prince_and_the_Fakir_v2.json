@@ -2,7 +2,7 @@
   "version": "2.0",
   "metadata": {
     "id": "EN_016_The_Prince_and_the_Fakir",
-    "title": "",
+    "title": "The_Prince_and_the_Fakir",
     "culture": "Indian",
     "annotator": "Deb",
     "date_annotated": "2026-01-14",
@@ -54,35 +54,39 @@
   "narrative_events": [
     {
       "id": "3707d104-067b-41b8-a8ff-4c515f55f4bf",
+      "text_span": {
+        "start": 759,
+        "end": 1030,
+        "text": "The Fakir answered him, \"Oh King! If you have children, what will you give me?\"\n\"Whatever you ask, Fakir,\" answered the King.\nThe Fakir said, \"Of goods and gold I have no lack, but I will say a prayer for you, and you will have two sons; one of those sons will be mine.\"\n"
+      },
       "event_type": "Initial Situation",
       "description": "The childless King makes a deal with a Fakir: two sons in exchange for giving one up to the Fakir.",
-      "narrative_function": "trigger",
       "agents": [
         "The Fakir"
       ],
       "targets": [
         "The King"
       ],
-      "text_span": {
-        "start": 759,
-        "end": 1030,
-        "text": "The Fakir answered him, \"Oh King! If you have children, what will you give me?\"\n\"Whatever you ask, Fakir,\" answered the King.\nThe Fakir said, \"Of goods and gold I have no lack, but I will say a prayer for you, and you will have two sons; one of those sons will be mine.\"\n"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 1,
       "relationship_level1": "Neutral",
       "relationship_level2": "stranger",
-      "relationship_multi": [],
       "sentiment": "",
       "action_category": "transaction",
       "action_type": "exchange",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "trigger"
     },
     {
       "id": "d144cd87-c625-4e5d-aa58-25a566cf84cc",
+      "text_span": {
+        "start": 759,
+        "end": 1030,
+        "text": "The Fakir answered him, \"Oh King! If you have children, what will you give me?\"\n\"Whatever you ask, Fakir,\" answered the King.\nThe Fakir said, \"Of goods and gold I have no lack, but I will say a prayer for you, and you will have two sons; one of those sons will be mine.\"\n"
+      },
       "event_type": "OTHER",
       "description": "The King tries to trick the Fakir by presenting slave children instead of his own.",
       "agents": [
@@ -91,27 +95,26 @@
       "targets": [
         "The Fakir"
       ],
-      "text_span": {
-        "start": 759,
-        "end": 1030,
-        "text": "The Fakir answered him, \"Oh King! If you have children, what will you give me?\"\n\"Whatever you ask, Fakir,\" answered the King.\nThe Fakir said, \"Of goods and gold I have no lack, but I will say a prayer for you, and you will have two sons; one of those sons will be mine.\"\n"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 2,
       "relationship_level1": "Social & Alliance",
       "relationship_level2": "ally",
-      "relationship_multi": [],
       "sentiment": "negative",
-      "narrative_function": "setup",
       "action_category": "communicative",
       "action_type": "deceive",
       "action_context": "",
-      "action_status": "attempt"
+      "action_status": "attempt",
+      "narrative_function": "setup"
     },
     {
       "id": "fae1bdc3-649f-40f1-99e5-f327fb420c13",
+      "text_span": {
+        "start": 2329,
+        "end": 2714,
+        "text": "The King's sons are sitting in the cellar eating their food; you go and fetch a grain from there; why should you take mine from me?\" On this the second ant let go and did not rob the first, but went off to where the King's sons were eating their food.\nOn hearing this the Fakir said, \"King! these are not your sons; go and bring those children who are eating their food in the cellar.\""
+      },
       "event_type": "EXPOSURE",
       "description": "The Fakir overhears ants discussing the real location of the princes, exposing the King's lie.",
       "agents": [
@@ -120,27 +123,26 @@
       "targets": [
         "The Fakir"
       ],
-      "text_span": {
-        "start": 2329,
-        "end": 2714,
-        "text": "The King's sons are sitting in the cellar eating their food; you go and fetch a grain from there; why should you take mine from me?\" On this the second ant let go and did not rob the first, but went off to where the King's sons were eating their food.\nOn hearing this the Fakir said, \"King! these are not your sons; go and bring those children who are eating their food in the cellar.\""
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 3,
       "relationship_level1": "Neutral",
       "relationship_level2": "stranger",
-      "relationship_multi": [],
       "sentiment": "neutral",
-      "narrative_function": "climax",
       "action_category": "mental",
       "action_type": "realize",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "climax"
     },
     {
       "id": "163fb878-2d70-4e89-afd4-e7a0eefeef56",
+      "text_span": {
+        "start": 2760,
+        "end": 2847,
+        "text": "The Fakir chose the eldest son and took him away, and set off with him on his journey. "
+      },
       "event_type": "ABSENTATION",
       "description": "The Fakir claims the eldest son and takes him to his home.",
       "agents": [
@@ -149,27 +151,26 @@
       "targets": [
         "The Prince"
       ],
-      "text_span": {
-        "start": 2760,
-        "end": 2847,
-        "text": "The Fakir chose the eldest son and took him away, and set off with him on his journey. "
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 4,
       "relationship_level1": "Hierarchy",
       "relationship_level2": "master_servant",
-      "relationship_multi": [],
       "sentiment": "negative",
-      "narrative_function": "resolution",
       "action_category": "physical",
       "action_type": "travel",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "resolution"
     },
     {
       "id": "391df973-dc78-445b-a8c1-f007e20a0369",
+      "text_span": {
+        "start": 3319,
+        "end": 3419,
+        "text": "Then the Fakir made a dash at the King's son, thinking to catch him and throw him into the caldron. "
+      },
       "event_type": "STRUGGLE",
       "description": "The Fakir attempts to push the Prince into boiling oil.",
       "agents": [
@@ -178,27 +179,26 @@
       "targets": [
         "The Prince"
       ],
-      "text_span": {
-        "start": 3319,
-        "end": 3419,
-        "text": "Then the Fakir made a dash at the King's son, thinking to catch him and throw him into the caldron. "
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 5,
       "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
-      "relationship_multi": [],
       "sentiment": "hostile",
-      "narrative_function": "climax",
       "action_category": "physical",
       "action_type": "attack",
       "action_context": "",
-      "action_status": "attempt"
+      "action_status": "attempt",
+      "narrative_function": "climax"
     },
     {
       "id": "e9edb04b-abd7-4156-9a61-0bd798818fe3",
+      "text_span": {
+        "start": 3515,
+        "end": 4057,
+        "text": "Then the King's son, lifting the Fakir, gave him a jerk and threw him into the caldron, and he was burnt, and became roast meat. He then saw a key of the Fakir's lying there; he took this key and opened the door of the Fakir's house. Now many men were locked up in this house; two horses were standing there in a hut of the Fakir's; two greyhounds were tied up there; two simurgs were imprisoned, and two tigers also stood there. So the King's son let all the creatures go, and took them out of the house, and they all returned thanks to God."
+      },
       "event_type": "VICTORY",
       "description": "The Prince kills the Fakir, frees the imprisoned animals/people, and takes the magical beasts with him.",
       "agents": [
@@ -207,27 +207,26 @@
       "targets": [
         "The Fakir"
       ],
-      "text_span": {
-        "start": 3515,
-        "end": 4057,
-        "text": "Then the King's son, lifting the Fakir, gave him a jerk and threw him into the caldron, and he was burnt, and became roast meat. He then saw a key of the Fakir's lying there; he took this key and opened the door of the Fakir's house. Now many men were locked up in this house; two horses were standing there in a hut of the Fakir's; two greyhounds were tied up there; two simurgs were imprisoned, and two tigers also stood there. So the King's son let all the creatures go, and took them out of the house, and they all returned thanks to God."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 6,
       "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
-      "relationship_multi": [],
       "sentiment": "hostile",
-      "narrative_function": "resolution",
       "action_category": "physical",
       "action_type": "attack",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "resolution"
     },
     {
       "id": "8075b5d3-2c8b-488e-8e9c-2eb6e82859c0",
+      "text_span": {
+        "start": 4290,
+        "end": 5057,
+        "text": "As he went along the road he saw above him a bald man, grazing a herd of calves, and this bald man called out to him, \"Fellow! can you fight at all?\"\nThe King's son replied, \"When I was little I could fight a bit, and now, if any one wants to fight, I am not so unmanly as to turn my back. Come, I will fight you.\"\nThe bald man said, \"If I throw you, you shall be my slave; and if you throw me, I will be your slave.\" So they got ready and began to fight, and the King's son threw him.\nOn this the King's son said, \"I will leave my beasts here, my simurgs, tigers, and dogs, and horses; they will all stay here while I go to the city to see the sights. I appoint the tiger as guard over my property. And you are my slave, you, too, must stay here with my belongings.\""
+      },
       "event_type": "VICTORY",
       "description": "The Prince defeats a challenger, who then becomes his slave and guards his beasts.",
       "agents": [
@@ -236,27 +235,26 @@
       "targets": [
         "The Bald Man"
       ],
-      "text_span": {
-        "start": 4290,
-        "end": 5057,
-        "text": "As he went along the road he saw above him a bald man, grazing a herd of calves, and this bald man called out to him, \"Fellow! can you fight at all?\"\nThe King's son replied, \"When I was little I could fight a bit, and now, if any one wants to fight, I am not so unmanly as to turn my back. Come, I will fight you.\"\nThe bald man said, \"If I throw you, you shall be my slave; and if you throw me, I will be your slave.\" So they got ready and began to fight, and the King's son threw him.\nOn this the King's son said, \"I will leave my beasts here, my simurgs, tigers, and dogs, and horses; they will all stay here while I go to the city to see the sights. I appoint the tiger as guard over my property. And you are my slave, you, too, must stay here with my belongings.\""
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 7,
       "relationship_level1": "Adversarial",
       "relationship_level2": "rival",
-      "relationship_multi": [],
       "sentiment": "neutral",
-      "narrative_function": "setup",
       "action_category": "physical",
       "action_type": "attack",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "setup"
     },
     {
       "id": "e895ff81-b451-4764-abf6-92692fec1c1f",
+      "text_span": {
+        "start": 5270,
+        "end": 6436,
+        "text": "Now the King's daughter, who was sitting on the roof of the palace, saw his royal marks, and she said, \"This man is a king; when I marry, I will marry him and no other.\" So she said to her father, \"My father; I wish to marry.\"\n\"Good,\" said her father.\nThen the King made a proclamation: \"Let all men, great and small, attend to-day in the hall of audience, for the King's daughter will to-day take a husband.\"\nAll the men of the land assembled, and the traveller Prince also came, dressed in the Fakir's clothes, saying to himself, \"I must see this ceremony to-day.\" He went in and sat down.\nThe King's daughter came out and sat in the balcony, and cast her glance round all the assembly. She noticed that the traveller Prince was sitting in the assembly in Fakir's attire.\nThe Princess said to her handmaiden, \"Take this dish of henna, go to that traveller dressed like a Fakir, and sprinkle scent on him from the dish.\"\nThe handmaiden obeyed the Princess's order, went to him, and sprinkled the scent over him.\nThen the people said, \"The slave-girl has made a mistake.\"\nBut she replied, \"The slave-girl has made no mistake, 'tis her mistress has made the mistake.\""
+      },
       "event_type": "WEDDING",
       "description": "tis her mistress has made the mistake",
       "agents": [
@@ -265,27 +263,26 @@
       "targets": [
         "The Prince"
       ],
-      "text_span": {
-        "start": 5270,
-        "end": 6436,
-        "text": "Now the King's daughter, who was sitting on the roof of the palace, saw his royal marks, and she said, \"This man is a king; when I marry, I will marry him and no other.\" So she said to her father, \"My father; I wish to marry.\"\n\"Good,\" said her father.\nThen the King made a proclamation: \"Let all men, great and small, attend to-day in the hall of audience, for the King's daughter will to-day take a husband.\"\nAll the men of the land assembled, and the traveller Prince also came, dressed in the Fakir's clothes, saying to himself, \"I must see this ceremony to-day.\" He went in and sat down.\nThe King's daughter came out and sat in the balcony, and cast her glance round all the assembly. She noticed that the traveller Prince was sitting in the assembly in Fakir's attire.\nThe Princess said to her handmaiden, \"Take this dish of henna, go to that traveller dressed like a Fakir, and sprinkle scent on him from the dish.\"\nThe handmaiden obeyed the Princess's order, went to him, and sprinkled the scent over him.\nThen the people said, \"The slave-girl has made a mistake.\"\nBut she replied, \"The slave-girl has made no mistake, 'tis her mistress has made the mistake.\""
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 8,
       "relationship_level1": "Romance",
       "relationship_level2": "lover",
-      "relationship_multi": [],
       "sentiment": "romantic",
-      "narrative_function": "climax",
       "action_category": "communicative",
       "action_type": "command",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "climax"
     },
     {
       "id": "398fe9cf-5b7d-4343-abad-46576fe7d1b5",
+      "text_span": {
+        "start": 7086,
+        "end": 7553,
+        "text": "The newly married Prince went to his tigers, and told his tigers and hounds to kill and bring in a great number of gazelles and hog-deer and markhor. Instantly they killed and brought in a great number. Then taking with him these spoils of the chase, the Prince came to the pool settled on as a meeting-place. The other Princes, sons-in-law of the King of that city, also assembled there; but they had brought in no game, and the new Prince had brought a great deal. "
+      },
       "event_type": "DIFFICULT_TASK",
       "description": "The Prince uses his magical animals to succeed in the hunt where others fail.",
       "agents": [
@@ -294,27 +291,26 @@
       "targets": [
         "Animals"
       ],
-      "text_span": {
-        "start": 7086,
-        "end": 7553,
-        "text": "The newly married Prince went to his tigers, and told his tigers and hounds to kill and bring in a great number of gazelles and hog-deer and markhor. Instantly they killed and brought in a great number. Then taking with him these spoils of the chase, the Prince came to the pool settled on as a meeting-place. The other Princes, sons-in-law of the King of that city, also assembled there; but they had brought in no game, and the new Prince had brought a great deal. "
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 9,
       "relationship_level1": "Hierarchy",
       "relationship_level2": "master_servant",
-      "relationship_multi": [],
       "sentiment": "positive",
-      "narrative_function": "character_arc",
       "action_category": "physical",
       "action_type": "attack",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "character_arc"
     },
     {
       "id": "3476d22b-ee70-4c4b-8530-fe88157133a5",
+      "text_span": {
+        "start": 7683,
+        "end": 8021,
+        "text": "Then the new Prince told him that in fact he, too, was a Prince. At this the King, his father-in-law, was greatly delighted and took him by the hand and embraced him. He seated him by himself, saying, \"O Prince, I return thanks that you have come here and become my son-in-law; I am very happy at this, and I make over my kingdom to you.\""
+      },
       "event_type": "TRANSFIGURATION",
       "description": "The Prince reveals his true identity and is given the kingdom.",
       "agents": [
@@ -323,24 +319,18 @@
       "targets": [
         "The Prince"
       ],
-      "text_span": {
-        "start": 7683,
-        "end": 8021,
-        "text": "Then the new Prince told him that in fact he, too, was a Prince. At this the King, his father-in-law, was greatly delighted and took him by the hand and embraced him. He seated him by himself, saying, \"O Prince, I return thanks that you have come here and become my son-in-law; I am very happy at this, and I make over my kingdom to you.\""
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 10,
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "extended_family",
-      "relationship_multi": [],
       "sentiment": "positive",
-      "narrative_function": "resolution",
       "action_category": "transaction",
       "action_type": "give",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "resolution"
     }
   ],
   "themes_and_motifs": {

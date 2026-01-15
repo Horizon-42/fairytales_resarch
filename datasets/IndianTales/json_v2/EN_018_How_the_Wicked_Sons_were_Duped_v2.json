@@ -2,7 +2,7 @@
   "version": "2.0",
   "metadata": {
     "id": "EN_018_How_the_Wicked_Sons_were_Duped",
-    "title": "",
+    "title": "How_the_Wicked_Sons_were_Duped",
     "culture": "Indian",
     "annotator": "Deb",
     "date_annotated": "2026-01-14",
@@ -39,35 +39,39 @@
   "narrative_events": [
     {
       "id": "43c49f55-fcbd-4f0c-ac00-3cfa42fde213",
+      "text_span": {
+        "start": 0,
+        "end": 666,
+        "text": "A very wealthy old man, imagining that he was on the point of death, sent for his sons and divided his property among them. However, he did not die for several years afterwards; and miserable years many of them were. Besides the weariness of old age, the old fellow had to bear with much abuse and cruelty from his sons. Wretched, selfish ingrates! Previously they vied with one another in trying to please their father, hoping thus to receive more money, but now they had received their patrimony, they cared not how soon he left them—nay, the sooner the better, because he was only a needless trouble and expense. And they let the poor old man know what they felt."
+      },
       "event_type": "Initial Situation",
       "description": "The father gives his wealth away prematurely; once the sons have the money, they neglect and abuse him.",
-      "narrative_function": "trigger",
       "agents": [
         "The Sons"
       ],
       "targets": [
         "The Old Man"
       ],
-      "text_span": {
-        "start": 0,
-        "end": 666,
-        "text": "A very wealthy old man, imagining that he was on the point of death, sent for his sons and divided his property among them. However, he did not die for several years afterwards; and miserable years many of them were. Besides the weariness of old age, the old fellow had to bear with much abuse and cruelty from his sons. Wretched, selfish ingrates! Previously they vied with one another in trying to please their father, hoping thus to receive more money, but now they had received their patrimony, they cared not how soon he left them—nay, the sooner the better, because he was only a needless trouble and expense. And they let the poor old man know what they felt."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 1,
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "parent_child",
-      "relationship_multi": [],
       "sentiment": "hostile",
       "action_category": "communicative",
       "action_type": "betray",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "trigger"
     },
     {
       "id": "05b1d3ae-be2f-4ba7-a8a1-daad5bcecaf1",
+      "text_span": {
+        "start": 862,
+        "end": 1233,
+        "text": "He did so; in a few days he visited the old man and put down four bags full of stones and gravel before him.\n\"Look here, friend,\" said he. \"Your sons will get to know of my coming here to-day, and will inquire about it. You must pretend that I came to discharge a long-standing debt with you, and that you are several thousands of rupees richer than you thought you were."
+      },
       "event_type": "RECEIPT_OF_AGENT",
       "description": "A friend provides bags of stones and a false narrative about hidden wealth to trick the sons.",
       "agents": [
@@ -76,23 +80,26 @@
       "targets": [
         "The Old Man"
       ],
-      "text_span": {
-        "start": 862,
-        "end": 1233,
-        "text": "He did so; in a few days he visited the old man and put down four bags full of stones and gravel before him.\n\"Look here, friend,\" said he. \"Your sons will get to know of my coming here to-day, and will inquire about it. You must pretend that I came to discharge a long-standing debt with you, and that you are several thousands of rupees richer than you thought you were."
-      },
       "target_type": "object",
       "object_type": "normal_object",
       "instrument": "bag",
       "time_order": 2,
       "relationship_level1": "",
       "relationship_level2": "",
-      "relationship_multi": [],
       "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "",
       "narrative_function": "setup"
     },
     {
       "id": "58865644-205b-4faa-9450-a28a362fb563",
+      "text_span": {
+        "start": 1460,
+        "end": 1663,
+        "text": "When the young men got to hear of this further increase of wealth they began to be more attentive and pleasing to their father than ever before. And thus they continued to the day of the old man's demise"
+      },
       "event_type": "TRICKERY",
       "description": "Believing the deception, the sons treat their father well until his death to secure the new inheritance.",
       "agents": [
@@ -101,27 +108,26 @@
       "targets": [
         "The Sons"
       ],
-      "text_span": {
-        "start": 1460,
-        "end": 1663,
-        "text": "When the young men got to hear of this further increase of wealth they began to be more attentive and pleasing to their father than ever before. And thus they continued to the day of the old man's demise"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 3,
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "parent_child",
-      "relationship_multi": [],
       "sentiment": "positive",
-      "narrative_function": "climax",
       "action_category": "communicative",
       "action_type": "deceive",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "climax"
     },
     {
       "id": "a3900c6c-ba8e-494a-8e91-5a4f9e98d399",
+      "text_span": {
+        "start": 1665,
+        "end": 1745,
+        "text": "when the bags were greedily opened, and found to contain only stones and gravel!"
+      },
       "event_type": "EXPOSURE",
       "description": "After the father's death, the sons discover they were tricked and there is no gold.",
       "agents": [
@@ -130,19 +136,17 @@
       "targets": [
         "Self"
       ],
-      "text_span": {
-        "start": 1665,
-        "end": 1745,
-        "text": "when the bags were greedily opened, and found to contain only stones and gravel!"
-      },
       "target_type": "object",
       "object_type": "",
       "instrument": "",
       "time_order": 4,
       "relationship_level1": "",
       "relationship_level2": "",
-      "relationship_multi": [],
       "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "",
       "narrative_function": "resolution"
     }
   ],

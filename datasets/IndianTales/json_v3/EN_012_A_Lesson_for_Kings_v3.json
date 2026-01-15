@@ -49,6 +49,11 @@
   "narrative_events": [
     {
       "id": "90d227a1-af6c-49c9-b98e-fd66aa48955b",
+      "text_span": {
+        "start": 314,
+        "end": 905,
+        "text": "And after his father died he ascended the throne, and ruled the kingdom with righteousness and equity. He gave judgments without partiality, hatred, ignorance, or fear. Since he thus reigned with justice, with justice also his ministers administered the law. Law-suits being thus decided with justice, there were none who brought false cases. And as these ceased, the noise and tumult of litigation ceased in the king's court. Though the judges sat all day in the court, they had to leave without any one coming for justice. It came to this, that the Hall of Justice would have to be closed!"
+      },
       "event_type": "Initial Situation",
       "description": "Brahma-datta rules so perfectly that litigation ceases, leaving the courts empty.",
       "agents": [
@@ -57,11 +62,6 @@
       "targets": [
         "Kingdom"
       ],
-      "text_span": {
-        "start": 314,
-        "end": 905,
-        "text": "And after his father died he ascended the throne, and ruled the kingdom with righteousness and equity. He gave judgments without partiality, hatred, ignorance, or fear. Since he thus reigned with justice, with justice also his ministers administered the law. Law-suits being thus decided with justice, there were none who brought false cases. And as these ceased, the noise and tumult of litigation ceased in the king's court. Though the judges sat all day in the court, they had to leave without any one coming for justice. It came to this, that the Hall of Justice would have to be closed!"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -85,6 +85,11 @@
     },
     {
       "id": "2ebb3351-b269-4f5f-bdb8-586ab4853ceb",
+      "text_span": {
+        "start": 1088,
+        "end": 1674,
+        "text": "I must, therefore, now examine into my own faults; and if I find that anything is wrong in me, put that away, and practise only virtue.\"\nThenceforth he sought for some one to tell him his faults, but among those around him he found no one who would tell him of any fault, but heard only his own praise.\nThen he thought, \"It is from fear of me that these men speak only good things, and not evil things,\" and he sought among those people who lived outside the palace. And finding no fault-finder there, he sought among those who lived outside the city, in the suburbs, at the four gates."
+      },
       "event_type": "LACK",
       "description": "Fearing his virtue is merely flattery, the King actively seeks someone to criticize him.",
       "agents": [
@@ -93,11 +98,6 @@
       "targets": [
         "self"
       ],
-      "text_span": {
-        "start": 1088,
-        "end": 1674,
-        "text": "I must, therefore, now examine into my own faults; and if I find that anything is wrong in me, put that away, and practise only virtue.\"\nThenceforth he sought for some one to tell him his faults, but among those around him he found no one who would tell him of any fault, but heard only his own praise.\nThen he thought, \"It is from fear of me that these men speak only good things, and not evil things,\" and he sought among those people who lived outside the palace. And finding no fault-finder there, he sought among those who lived outside the city, in the suburbs, at the four gates."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -121,6 +121,11 @@
     },
     {
       "id": "ca3234c7-11ce-4468-93cd-5385f5a4877c",
+      "text_span": {
+        "start": 1796,
+        "end": 1925,
+        "text": "So he made over the kingdom to his ministers, and mounted his chariot; and taking only his charioteer, left the city in disguise."
+      },
       "event_type": "DEPARTURE",
       "description": "The King travels to the countryside to find a fault-finder.",
       "agents": [
@@ -129,11 +134,6 @@
       "targets": [
         "self"
       ],
-      "text_span": {
-        "start": 1796,
-        "end": 1925,
-        "text": "So he made over the kingdom to his ministers, and mounted his chariot; and taking only his charioteer, left the city in disguise."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -157,6 +157,11 @@
     },
     {
       "id": "ae128f11-07a6-4db1-829d-8576698f280e",
+      "text_span": {
+        "start": 2431,
+        "end": 2569,
+        "text": "And these two came face to face in a low cart-track with precipitous sides, where there was no space for a chariot to get out of the way!\n"
+      },
       "event_type": "STRUGGLE",
       "description": "The two kings meet on a narrow road; neither chariot can pass.",
       "agents": [
@@ -165,11 +170,6 @@
       "targets": [
         "Future Buddha"
       ],
-      "text_span": {
-        "start": 2431,
-        "end": 2569,
-        "text": "And these two came face to face in a low cart-track with precipitous sides, where there was no space for a chariot to get out of the way!\n"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -193,6 +193,11 @@
     },
     {
       "id": "003c8159-0fd5-4e86-a185-be55411a1118",
+      "text_span": {
+        "start": 3519,
+        "end": 3936,
+        "text": "Then he inquired about the extent of his kingdom, and about his army, and his wealth, and his renown, and about the country he lived in, and his caste and tribe and family. And he found that both were lords of a kingdom three hundred leagues in extent; and that in respect of army and wealth and renown, and the countries in which they lived, and their caste and their tribe and their family, they were just on a par!"
+      },
       "event_type": "OTHER",
       "description": "The charioteers compare the kings' material stats to decide precedence but find them equal.",
       "agents": [
@@ -201,11 +206,6 @@
       "targets": [
         "Charioteer of Benares"
       ],
-      "text_span": {
-        "start": 3519,
-        "end": 3936,
-        "text": "Then he inquired about the extent of his kingdom, and about his army, and his wealth, and his renown, and about the country he lived in, and his caste and tribe and family. And he found that both were lords of a kingdom three hundred leagues in extent; and that in respect of army and wealth and renown, and the countries in which they lived, and their caste and their tribe and their family, they were just on a par!"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -229,6 +229,11 @@
     },
     {
       "id": "3422eba8-02e0-4fe3-9d3a-9bd1835db3b3",
+      "text_span": {
+        "start": 4063,
+        "end": 4389,
+        "text": "Then the chorister of the king of Kosala, proclaiming his king's wickedness as goodness, uttered the First Stanza:\n\"The strong he overthrows by strength,\nThe mild by mildness, does Mallika;\nThe good he conquers by goodness,\nAnd the wicked by wickedness too.\nSuch is the nature of this king!\nMove out of the way, O charioteer!\""
+      },
       "event_type": "OTHER",
       "description": "Kosala's charioteer defines his king's righteousness as \"tit-for-tat\" (retributive justice).",
       "agents": [
@@ -237,11 +242,6 @@
       "targets": [
         "Charioteer of Benares"
       ],
-      "text_span": {
-        "start": 4063,
-        "end": 4389,
-        "text": "Then the chorister of the king of Kosala, proclaiming his king's wickedness as goodness, uttered the First Stanza:\n\"The strong he overthrows by strength,\nThe mild by mildness, does Mallika;\nThe good he conquers by goodness,\nAnd the wicked by wickedness too.\nSuch is the nature of this king!\nMove out of the way, O charioteer!\""
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -265,6 +265,11 @@
     },
     {
       "id": "84298742-6eaf-4482-a97b-07c6991da65a",
+      "text_span": {
+        "start": 4719,
+        "end": 5020,
+        "text": "And then the charioteer of the king of Benares called unto him to hearken, and uttered the Second Stanza:\n\"Anger he conquers by calmness,\nAnd by goodness the wicked;\nThe stingy he conquers by gifts,\nAnd by truth the speaker of lies.\nSuch is the nature of this king!\nMove out of the way, O charioteer!\""
+      },
       "event_type": "OTHER",
       "description": "Benares' charioteer defines his king's righteousness as \"good overcoming evil\" (restorative justice), exposing the other's \"virtues\" as faults.",
       "agents": [
@@ -273,11 +278,6 @@
       "targets": [
         "Charioteer of Kosala"
       ],
-      "text_span": {
-        "start": 4719,
-        "end": 5020,
-        "text": "And then the charioteer of the king of Benares called unto him to hearken, and uttered the Second Stanza:\n\"Anger he conquers by calmness,\nAnd by goodness the wicked;\nThe stingy he conquers by gifts,\nAnd by truth the speaker of lies.\nSuch is the nature of this king!\nMove out of the way, O charioteer!\""
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -301,6 +301,11 @@
     },
     {
       "id": "06cdf7f1-e8b8-4143-9453-8a4ec18d567b",
+      "text_span": {
+        "start": 5022,
+        "end": 5215,
+        "text": "And when he had thus spoken, both Mallika the king and his charioteer alighted from their chariot. And they took out the horses, and removed their chariot, and made way for the king of Benares!"
+      },
       "event_type": "VICTORY",
       "description": "Recognizing the superior virtue, King Mallika yields the road.",
       "agents": [
@@ -309,11 +314,6 @@
       "targets": [
         "Future Buddha"
       ],
-      "text_span": {
-        "start": 5022,
-        "end": 5215,
-        "text": "And when he had thus spoken, both Mallika the king and his charioteer alighted from their chariot. And they took out the horses, and removed their chariot, and made way for the king of Benares!"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",

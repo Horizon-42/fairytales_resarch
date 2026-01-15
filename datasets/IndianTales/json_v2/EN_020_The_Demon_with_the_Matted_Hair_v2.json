@@ -54,6 +54,11 @@
   "narrative_events": [
     {
       "id": "57e5d317-faa3-4f89-be4c-199adec6b71b",
+      "text_span": {
+        "start": 0,
+        "end": 512,
+        "text": "Once upon a time, when Brahmadatta was King of Benares, the Bodhisatta was born as son of his chief queen. On his name-day they asked 800 Brahmans, having satisfied them with all their desires, about his lucky marks. The Brahmans who had skill in divining from such marks beheld the excellence of his, and made answer:\n\"Full of goodness, great King, is your son, and when you die he will become king; he shall be famous and renowned for his skill with the five weapons, and shall be the chief man in all India.\" "
+      },
       "event_type": "Initial Situation",
       "description": "The Prince is born and prophesied to become a great warrior king.",
       "agents": [
@@ -62,27 +67,26 @@
       "targets": [
         "Brahmadatta"
       ],
-      "text_span": {
-        "start": 0,
-        "end": 512,
-        "text": "Once upon a time, when Brahmadatta was King of Benares, the Bodhisatta was born as son of his chief queen. On his name-day they asked 800 Brahmans, having satisfied them with all their desires, about his lucky marks. The Brahmans who had skill in divining from such marks beheld the excellence of his, and made answer:\n\"Full of goodness, great King, is your son, and when you die he will become king; he shall be famous and renowned for his skill with the five weapons, and shall be the chief man in all India.\" "
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 1,
       "relationship_level1": "Hierarchy",
       "relationship_level2": "ruler_subject",
-      "relationship_multi": [],
       "sentiment": "positive",
-      "narrative_function": "exposition",
       "action_category": "communicative",
       "action_type": "inform",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "exposition"
     },
     {
       "id": "70bb1286-4f32-4ee4-abd5-2e611f1e686c",
+      "text_span": {
+        "start": 1073,
+        "end": 1277,
+        "text": "The lad departed, and was educated by this teacher; he received the Five Weapons from him as a gift, bade him farewell, and leaving Takkasila, he began his journey to Benares, armed with the Five Weapons."
+      },
       "event_type": "RECEIPT_OF_AGENT",
       "description": "The Prince completes his education and receives the five weapons.",
       "agents": [
@@ -91,23 +95,26 @@
       "targets": [
         "Prince of the Five Weapons"
       ],
-      "text_span": {
-        "start": 1073,
-        "end": 1277,
-        "text": "The lad departed, and was educated by this teacher; he received the Five Weapons from him as a gift, bade him farewell, and leaving Takkasila, he began his journey to Benares, armed with the Five Weapons."
-      },
       "target_type": "object",
       "object_type": "magical_agent",
       "instrument": "Weapons",
       "time_order": 2,
       "relationship_level1": "",
       "relationship_level2": "",
-      "relationship_multi": [],
       "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "",
       "narrative_function": "setup"
     },
     {
       "id": "70801d15-0292-4aac-89d6-517f5be36fe9",
+      "text_span": {
+        "start": 1278,
+        "end": 1571,
+        "text": "On his way he came to a forest inhabited by the Demon with the Matted Hair. At the entering in of the forest some men saw him, and cried out:\n\"Hullo, young sir, keep clear of that wood! There's a Demon in it called he of the Matted Hair: he kills every man he sees!\" And they tried to stop him"
+      },
       "event_type": "INTERDICTION",
       "description": "Locals warn the Prince not to enter the forest due to the Demon.",
       "agents": [
@@ -116,27 +123,26 @@
       "targets": [
         "Prince of the Five Weapons"
       ],
-      "text_span": {
-        "start": 1278,
-        "end": 1571,
-        "text": "On his way he came to a forest inhabited by the Demon with the Matted Hair. At the entering in of the forest some men saw him, and cried out:\n\"Hullo, young sir, keep clear of that wood! There's a Demon in it called he of the Matted Hair: he kills every man he sees!\" And they tried to stop him"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 3,
       "relationship_level1": "Neutral",
       "relationship_level2": "stranger",
-      "relationship_multi": [],
       "sentiment": "fearful",
-      "narrative_function": "setup",
       "action_category": "communicative",
       "action_type": "inform",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "setup"
     },
     {
       "id": "c49ffbdf-3692-4acb-91c4-516f96ad35a2",
+      "text_span": {
+        "start": 1573,
+        "end": 1666,
+        "text": "But the Bodhisatta, having confidence in himself, went straight on, fearless as a maned lion."
+      },
       "event_type": "VIOLATION",
       "description": "The Prince ignores the warning and enters the forest.",
       "agents": [
@@ -145,27 +151,26 @@
       "targets": [
         "self"
       ],
-      "text_span": {
-        "start": 1573,
-        "end": 1666,
-        "text": "But the Bodhisatta, having confidence in himself, went straight on, fearless as a maned lion."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 4,
       "relationship_level1": "Neutral",
       "relationship_level2": "stranger",
-      "relationship_multi": [],
       "sentiment": "positive",
-      "narrative_function": "trigger",
       "action_category": "physical",
       "action_type": "travel",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "trigger"
     },
     {
       "id": "3d86fb2c-b0b4-4210-b738-3f6abf8b5d40",
+      "text_span": {
+        "start": 2192,
+        "end": 2767,
+        "text": "With this menace, he fitted to his bow an arrow dipped in deadly poison, and let fly. The arrow stuck fast in the Demon's hair. Then he shot and shot, till he had shot away fifty arrows; and they all stuck in the Demon's hair. The Demon snapped them all off short, and threw them down at his feet; then came up to the Bodhisatta, who drew his sword and struck the Demon, threatening him the while. His sword—it was three-and-thirty inches long—stuck in the Demon's hair! The Bodhisatta struck him with his spear—that stuck too! He struck him with his club—and that stuck too!"
+      },
       "event_type": "STRUGGLE",
       "description": "The Prince attacks with all five weapons, but they become entangled in the Demon's hair.",
       "agents": [
@@ -174,27 +179,26 @@
       "targets": [
         "The Demon with the Matted Hair"
       ],
-      "text_span": {
-        "start": 2192,
-        "end": 2767,
-        "text": "With this menace, he fitted to his bow an arrow dipped in deadly poison, and let fly. The arrow stuck fast in the Demon's hair. Then he shot and shot, till he had shot away fifty arrows; and they all stuck in the Demon's hair. The Demon snapped them all off short, and threw them down at his feet; then came up to the Bodhisatta, who drew his sword and struck the Demon, threatening him the while. His sword—it was three-and-thirty inches long—stuck in the Demon's hair! The Bodhisatta struck him with his spear—that stuck too! He struck him with his club—and that stuck too!"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 5,
       "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
-      "relationship_multi": [],
       "sentiment": "hostile",
-      "narrative_function": "climax",
       "action_category": "physical",
       "action_type": "attack",
       "action_context": "",
-      "action_status": "failure"
+      "action_status": "failure",
+      "narrative_function": "climax"
     },
     {
       "id": "deb64bcd-3be1-484d-9605-c171f7ab99ea",
+      "text_span": {
+        "start": 3073,
+        "end": 3437,
+        "text": "Thus did he declare his resolve, and with a shout he hit at the Demon with his right hand. It stuck fast in his hair! He hit him with his left hand—that stuck too! With his right foot he kicked him—that stuck too; then with his left—and that stuck too! Then he butted at him with his head, crying, \"I'll pound you to powder!\" and his head stuck fast like the rest."
+      },
       "event_type": "STRUGGLE",
       "description": "The Prince uses his body to attack, but he becomes completely trapped.",
       "agents": [
@@ -203,27 +207,26 @@
       "targets": [
         "The Demon with the Matted Hair"
       ],
-      "text_span": {
-        "start": 3073,
-        "end": 3437,
-        "text": "Thus did he declare his resolve, and with a shout he hit at the Demon with his right hand. It stuck fast in his hair! He hit him with his left hand—that stuck too! With his right foot he kicked him—that stuck too; then with his left—and that stuck too! Then he butted at him with his head, crying, \"I'll pound you to powder!\" and his head stuck fast like the rest."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 6,
       "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
-      "relationship_multi": [],
       "sentiment": "hostile",
-      "narrative_function": "climax",
       "action_category": "physical",
       "action_type": "attack",
       "action_context": "",
-      "action_status": "failure"
+      "action_status": "failure",
+      "narrative_function": "climax"
     },
     {
       "id": "bc7440d2-d9da-4ea7-b9a0-56ec89ff8a73",
+      "text_span": {
+        "start": 3822,
+        "end": 4184,
+        "text": "He was powerless to eat the man, but asked him: \"Why is it, young sir, that you are not frightened to death?\"\n\"Why should I fear, Demon?\" replied he. \"In one life a man can die but once. Besides, in my belly is a thunderbolt; if you eat me, you will never be able to digest it; this will tear your inwards into little bits, and kill you: so we shall both perish."
+      },
       "event_type": "TRICKERY",
       "description": "The Prince claims he has a \"thunderbolt\" (Weapon of Knowledge) inside him that will kill the demon if eaten.",
       "agents": [
@@ -232,27 +235,26 @@
       "targets": [
         "The Demon with the Matted Hair"
       ],
-      "text_span": {
-        "start": 3822,
-        "end": 4184,
-        "text": "He was powerless to eat the man, but asked him: \"Why is it, young sir, that you are not frightened to death?\"\n\"Why should I fear, Demon?\" replied he. \"In one life a man can die but once. Besides, in my belly is a thunderbolt; if you eat me, you will never be able to digest it; this will tear your inwards into little bits, and kill you: so we shall both perish."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 7,
       "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
-      "relationship_multi": [],
       "sentiment": "positive",
-      "narrative_function": "climax",
       "action_category": "communicative",
       "action_type": "deceive",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "climax"
     },
     {
       "id": "0cf2581c-48d8-4909-bc44-48fe5d3e4453",
+      "text_span": {
+        "start": 4491,
+        "end": 5714,
+        "text": "I'll let him go!\" So, being frightened to death, he let go the Bodhisatta, saying:\n\"Young sir, you are a lion of a man! I will not eat you up. I set you free from my hands, as the moon is disgorged from the jaws of Rāhu after the eclipse. Go back to the company of your friends and relations!\"\nAnd the Bodhisatta said: \"Demon, I will go, as you say. You were born a Demon, cruel, blood-bibbing, devourer of the flesh and gore of others, because you did wickedly in former lives. If you still go on doing wickedly, you will go from darkness to darkness. But now that you have seen me you will find it impossible to do wickedly. Taking the life of living creatures causes birth, as an animal, in the world of Petas, or in the body of an Asura, or, if one is reborn as a man, it makes his life short.\" With this and the like monition he told him the disadvantage of the five kinds of wickedness, and the profit of the five kinds of virtue, and frightened the Demon in various ways, discoursing to him until he subdued him and made him self-denying, and established him in the five kinds of virtue; he made him worship the deity to whom offerings were made in that wood; and having carefully admonished him, departed out of it."
+      },
       "event_type": "VICTORY",
       "description": "The Demon releases the Prince out of fear; the Prince then teaches the Demon to abandon evil.",
       "agents": [
@@ -261,24 +263,18 @@
       "targets": [
         "The Demon with the Matted Hair"
       ],
-      "text_span": {
-        "start": 4491,
-        "end": 5714,
-        "text": "I'll let him go!\" So, being frightened to death, he let go the Bodhisatta, saying:\n\"Young sir, you are a lion of a man! I will not eat you up. I set you free from my hands, as the moon is disgorged from the jaws of Rāhu after the eclipse. Go back to the company of your friends and relations!\"\nAnd the Bodhisatta said: \"Demon, I will go, as you say. You were born a Demon, cruel, blood-bibbing, devourer of the flesh and gore of others, because you did wickedly in former lives. If you still go on doing wickedly, you will go from darkness to darkness. But now that you have seen me you will find it impossible to do wickedly. Taking the life of living creatures causes birth, as an animal, in the world of Petas, or in the body of an Asura, or, if one is reborn as a man, it makes his life short.\" With this and the like monition he told him the disadvantage of the five kinds of wickedness, and the profit of the five kinds of virtue, and frightened the Demon in various ways, discoursing to him until he subdued him and made him self-denying, and established him in the five kinds of virtue; he made him worship the deity to whom offerings were made in that wood; and having carefully admonished him, departed out of it."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 8,
       "relationship_level1": "Hierarchy",
       "relationship_level2": "mentor_student",
-      "relationship_multi": [],
       "sentiment": "positive",
-      "narrative_function": "resolution",
       "action_category": "communicative",
       "action_type": "persuade",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "resolution"
     }
   ],
   "themes_and_motifs": {

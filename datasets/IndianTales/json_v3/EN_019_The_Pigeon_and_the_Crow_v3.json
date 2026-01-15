@@ -43,8 +43,24 @@
   ],
   "narrative_events": [
     {
+      "id": "0c7b0ff9-c646-4971-a590-a278b7f35148",
+      "text_span": {
+        "start": 155,
+        "end": 348,
+        "text": "A greedy Crow, flying near, saw all sorts of delicate food lying about in the kitchen, and fell a-hungering after it. \"How in the world can I get some?\" thought he? At last he hit upon a plan.\n"
+      },
       "event_type": "VILLAINY",
       "description": "The Crow sees the kitchen food and plots to gain access.",
+      "agents": [
+        "The Crow"
+      ],
+      "targets": [
+        "Food"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
       "relationships": [
         {
           "agent": "The Crow",
@@ -60,26 +76,15 @@
         "context": "",
         "status": "success",
         "function": "trigger"
-      },
-      "id": "0c7b0ff9-c646-4971-a590-a278b7f35148",
-      "target_type": "character",
-      "object_type": "",
-      "instrument": "",
-      "time_order": 1,
-      "text_span": {
-        "start": 155,
-        "end": 348,
-        "text": "A greedy Crow, flying near, saw all sorts of delicate food lying about in the kitchen, and fell a-hungering after it. \"How in the world can I get some?\" thought he? At last he hit upon a plan.\n"
-      },
-      "agents": [
-        "The Crow"
-      ],
-      "targets": [
-        "Food"
-      ]
+      }
     },
     {
       "id": "3bc1c0e0-52c5-4188-8053-525dcb9e39d2",
+      "text_span": {
+        "start": 438,
+        "end": 578,
+        "text": "\"What do you want, Mr. Crow? You and I don't feed alike.\"\n\"Ah, but I like you and your ways! Let me be your chum, and let us feed together.\""
+      },
       "event_type": "OTHER",
       "description": "The Crow feigns friendship to get close to the kitchen; the Pigeon accepts him.",
       "agents": [
@@ -88,11 +93,6 @@
       "targets": [
         "The Bodhisatta"
       ],
-      "text_span": {
-        "start": 438,
-        "end": 578,
-        "text": "\"What do you want, Mr. Crow? You and I don't feed alike.\"\n\"Ah, but I like you and your ways! Let me be your chum, and let us feed together.\""
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -116,6 +116,11 @@
     },
     {
       "id": "26cc939b-c1cc-4c07-bba6-0fc73809e33d",
+      "text_span": {
+        "start": 997,
+        "end": 1084,
+        "text": "The cook saw that his Pigeon had brought a friend, and hung up another basket for him.\n"
+      },
       "event_type": "UNRECOGNIZED_ARRIVAL",
       "description": "The Cook accepts the Crow and provides him shelter.",
       "agents": [
@@ -124,11 +129,6 @@
       "targets": [
         "The Crow"
       ],
-      "text_span": {
-        "start": 997,
-        "end": 1084,
-        "text": "The cook saw that his Pigeon had brought a friend, and hung up another basket for him.\n"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -152,6 +152,11 @@
     },
     {
       "id": "fbf47eae-2428-412d-b916-b31e7aa303e5",
+      "text_span": {
+        "start": 1179,
+        "end": 1411,
+        "text": "How the Crow longed for some! So there he lay, from early morn, groaning and making a great noise. Says the Pigeon to the Crow:\n\"Come, Sir Crow, and get your breakfast!\"\n\"Oh dear! oh dear! I have such a fit of indigestion!\" says he."
+      },
       "event_type": "TRICKERY",
       "description": "The Crow pretends to be sick so he can stay behind and steal the fish.",
       "agents": [
@@ -160,11 +165,6 @@
       "targets": [
         "The Bodhisatta"
       ],
-      "text_span": {
-        "start": 1179,
-        "end": 1411,
-        "text": "How the Crow longed for some! So there he lay, from early morn, groaning and making a great noise. Says the Pigeon to the Crow:\n\"Come, Sir Crow, and get your breakfast!\"\n\"Oh dear! oh dear! I have such a fit of indigestion!\" says he."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -188,6 +188,11 @@
     },
     {
       "id": "279a47de-e637-42fe-81b8-aef5f2ffc564",
+      "text_span": {
+        "start": 1412,
+        "end": 1787,
+        "text": "\"Nonsense! Crows never have indigestion,\" said the Pigeon. \"If you eat a lamp-wick, that stays in your stomach a little while; but anything else is digested in a trice, as soon as you eat it. Now do what I tell you; don't behave in this way just for seeing a little fish.\"\n\"Why do you say that, master? I have indigestion.\"\n\"Well, be careful,\" said the Pigeon, and flew away."
+      },
       "event_type": "INTERDICTION",
       "description": "The Pigeon sees through the lie, warns the Crow against greed, and leaves.",
       "agents": [
@@ -196,11 +201,6 @@
       "targets": [
         "The Crow"
       ],
-      "text_span": {
-        "start": 1412,
-        "end": 1787,
-        "text": "\"Nonsense! Crows never have indigestion,\" said the Pigeon. \"If you eat a lamp-wick, that stays in your stomach a little while; but anything else is digested in a trice, as soon as you eat it. Now do what I tell you; don't behave in this way just for seeing a little fish.\"\n\"Why do you say that, master? I have indigestion.\"\n\"Well, be careful,\" said the Pigeon, and flew away."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -224,6 +224,11 @@
     },
     {
       "id": "a2bece66-3d01-4303-be10-ccff45f1ad2e",
+      "text_span": {
+        "start": 1889,
+        "end": 2018,
+        "text": "\"Now's my time!\" thought Mr. Crow, and alighted on a dish containing some dainty food. Click! The cook heard it, and looked round"
+      },
       "event_type": "VIOLATION",
       "description": "The Crow tries to steal the food but alerts the Cook.",
       "agents": [
@@ -232,11 +237,6 @@
       "targets": [
         "Food"
       ],
-      "text_span": {
-        "start": 1889,
-        "end": 2018,
-        "text": "\"Now's my time!\" thought Mr. Crow, and alighted on a dish containing some dainty food. Click! The cook heard it, and looked round"
-      },
       "target_type": "object",
       "object_type": "normal_object",
       "instrument": "Food",
@@ -252,6 +252,11 @@
     },
     {
       "id": "d7078148-ed25-49d4-9a0d-49f697f12629",
+      "text_span": {
+        "start": 2020,
+        "end": 2323,
+        "text": "Ah! he caught the Crow, and plucked all the feathers out of his head, all but one tuft; he powdered ginger and cummin, mixed it up with butter-milk, and rubbed it well all over the bird's body.\n\"That's for spoiling my master's dinner and making me throw it away!\" said he, and threw him into his basket."
+      },
       "event_type": "PUNISHMENT",
       "description": "The Cook tortures the Crow as punishment for the attempted theft.",
       "agents": [
@@ -260,11 +265,6 @@
       "targets": [
         "The Crow"
       ],
-      "text_span": {
-        "start": 2020,
-        "end": 2323,
-        "text": "Ah! he caught the Crow, and plucked all the feathers out of his head, all but one tuft; he powdered ginger and cummin, mixed it up with butter-milk, and rubbed it well all over the bird's body.\n\"That's for spoiling my master's dinner and making me throw it away!\" said he, and threw him into his basket."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -288,6 +288,11 @@
     },
     {
       "id": "06ef08c1-7332-41ac-a5b6-dfe7af50eb6e",
+      "text_span": {
+        "start": 2423,
+        "end": 3087,
+        "text": "He made great game of him, and repeated a verse of poetry:\n\"Who is this tufted crane I see\nLying where he's no right to be?\nCome out! my friend, the crow is near,\nAnd he may do you harm, I fear!\"\nTo this the Crow answered with another:\n\"No tufted crane am I—no, no!\nI'm nothing but a greedy crow.\nI would not do as I was told,\nSo now I'm plucked, as you behold.\"\nAnd the Pigeon rejoined with a third verse:\n\"You'll come to grief again, I know—\nIt is your nature to do so;\nIf people make a dish of meat,\n'Tis not for little birds to eat.\"\nThen the Pigeon flew away, saying: \"I can't live with this creature any longer.\" And the Crow lay there groaning till he died."
+      },
       "event_type": "EXPOSURE",
       "description": "The Pigeon mocks the Crow's state; the Crow admits his greed and dies.",
       "agents": [
@@ -296,11 +301,6 @@
       "targets": [
         "self"
       ],
-      "text_span": {
-        "start": 2423,
-        "end": 3087,
-        "text": "He made great game of him, and repeated a verse of poetry:\n\"Who is this tufted crane I see\nLying where he's no right to be?\nCome out! my friend, the crow is near,\nAnd he may do you harm, I fear!\"\nTo this the Crow answered with another:\n\"No tufted crane am I—no, no!\nI'm nothing but a greedy crow.\nI would not do as I was told,\nSo now I'm plucked, as you behold.\"\nAnd the Pigeon rejoined with a third verse:\n\"You'll come to grief again, I know—\nIt is your nature to do so;\nIf people make a dish of meat,\n'Tis not for little birds to eat.\"\nThen the Pigeon flew away, saying: \"I can't live with this creature any longer.\" And the Crow lay there groaning till he died."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",

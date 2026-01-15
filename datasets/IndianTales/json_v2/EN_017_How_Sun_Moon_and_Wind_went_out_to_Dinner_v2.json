@@ -2,7 +2,7 @@
   "version": "2.0",
   "metadata": {
     "id": "EN_017_How_Sun_Moon_and_Wind_went_out_to_Dinner",
-    "title": "",
+    "title": "How_Sun_Moon_and_Wind_went_out_to_Dinner",
     "culture": "Indian",
     "annotator": "Deb",
     "date_annotated": "2026-01-14",
@@ -44,35 +44,39 @@
   "narrative_events": [
     {
       "id": "d898aea9-1328-41fe-90c4-568fc8a02604",
+      "text_span": {
+        "start": 0,
+        "end": 587,
+        "text": "One day Sun, Moon, and Wind went out to dine with their uncle and aunts Thunder and Lightning. Their mother (one of the most distant Stars you see far up in the sky) waited alone for her children's return.\nNow both Sun and Wind were greedy and selfish. They enjoyed the great feast that had been prepared for them, without a thought of saving any of it to take home to their mother—but the gentle Moon did not forget her. Of every dainty dish that was brought round, she placed a small portion under one of her beautiful long finger-nails, that Star might also have a share in the treat."
+      },
       "event_type": "Initial Situation",
       "description": "The children attend a feast; Sun and Wind gorge themselves, but Moon saves food for their mother.",
-      "narrative_function": "setup",
       "agents": [
         "Moon"
       ],
       "targets": [
         "Star"
       ],
-      "text_span": {
-        "start": 0,
-        "end": 587,
-        "text": "One day Sun, Moon, and Wind went out to dine with their uncle and aunts Thunder and Lightning. Their mother (one of the most distant Stars you see far up in the sky) waited alone for her children's return.\nNow both Sun and Wind were greedy and selfish. They enjoyed the great feast that had been prepared for them, without a thought of saving any of it to take home to their mother—but the gentle Moon did not forget her. Of every dainty dish that was brought round, she placed a small portion under one of her beautiful long finger-nails, that Star might also have a share in the treat."
-      },
       "target_type": "object",
       "object_type": "normal_object",
       "instrument": "",
       "time_order": 1,
       "relationship_level1": "",
       "relationship_level2": "",
-      "relationship_multi": [],
       "sentiment": "",
       "action_category": "",
       "action_type": "",
       "action_context": "",
-      "action_status": ""
+      "action_status": "",
+      "narrative_function": "setup"
     },
     {
       "id": "1ee83d98-83f5-48a1-a843-63edbe10866b",
+      "text_span": {
+        "start": 588,
+        "end": 748,
+        "text": "On their return, their mother, who had kept watch for them all night long with her little bright eye, said, \"Well, children, what have you brought home for me?\""
+      },
       "event_type": "RETURN",
       "description": "The mother asks her children what they brought her from the feast.",
       "agents": [
@@ -83,35 +87,26 @@
         "Moon",
         "Wind"
       ],
-      "text_span": {
-        "start": 588,
-        "end": 748,
-        "text": "On their return, their mother, who had kept watch for them all night long with her little bright eye, said, \"Well, children, what have you brought home for me?\""
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 2,
       "relationship_level1": "",
       "relationship_level2": "",
-      "relationship_multi": [
-        {
-          "agent": "Star",
-          "target": "Sun",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "neutral"
-        }
-      ],
       "sentiment": "",
-      "narrative_function": "trigger",
       "action_category": "communicative",
       "action_type": "challenge",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "trigger"
     },
     {
       "id": "ac82b9ed-703a-4902-85e7-75bb19861d7d",
+      "text_span": {
+        "start": 749,
+        "end": 969,
+        "text": "Then Sun (who was eldest) said, \"I have brought nothing home for you. I went out to enjoy myself with my friends—not to fetch a dinner for my mother!\" And Wind said, \"Neither have I brought anything home for you, mother."
+      },
       "event_type": "VIOLATION",
       "description": "Sun and Wind admit their selfishness and lack of consideration for their mother.",
       "agents": [
@@ -121,35 +116,26 @@
       "targets": [
         "Star"
       ],
-      "text_span": {
-        "start": 749,
-        "end": 969,
-        "text": "Then Sun (who was eldest) said, \"I have brought nothing home for you. I went out to enjoy myself with my friends—not to fetch a dinner for my mother!\" And Wind said, \"Neither have I brought anything home for you, mother."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 3,
       "relationship_level1": "",
       "relationship_level2": "",
-      "relationship_multi": [
-        {
-          "agent": "Sun",
-          "target": "Star",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "negative"
-        }
-      ],
       "sentiment": "",
-      "narrative_function": "climax",
       "action_category": "communicative",
       "action_type": "betray",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "climax"
     },
     {
       "id": "163979f6-4f75-4abf-9062-917da9af0f7b",
+      "text_span": {
+        "start": 1088,
+        "end": 1243,
+        "text": "But Moon said, \"Mother, fetch a plate, see what I have brought you.\" And shaking her hands she showered down such a choice dinner as never was seen before."
+      },
       "event_type": "DELIVERY",
       "description": "Moon presents the saved food to her mother.",
       "agents": [
@@ -158,23 +144,26 @@
       "targets": [
         "Star"
       ],
-      "text_span": {
-        "start": 1088,
-        "end": 1243,
-        "text": "But Moon said, \"Mother, fetch a plate, see what I have brought you.\" And shaking her hands she showered down such a choice dinner as never was seen before."
-      },
       "target_type": "object",
       "object_type": "normal_object",
       "instrument": "Food",
       "time_order": 4,
       "relationship_level1": "",
       "relationship_level2": "",
-      "relationship_multi": [],
       "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "",
       "narrative_function": "climax"
     },
     {
       "id": "be10ea1f-9050-4c77-8175-8c4f28c86f5d",
+      "text_span": {
+        "start": 1244,
+        "end": 1595,
+        "text": "Then Star turned to Sun and spoke thus, \"Because you went out to amuse yourself with your friends, and feasted and enjoyed yourself, without any thought of your mother at home—you shall be cursed. Henceforth, your rays shall ever be hot and scorching, and shall burn all that they touch. And men shall hate you, and cover their heads when you appear.\""
+      },
       "event_type": "PUNISHMENT",
       "description": "Star punishes Sun's selfishness by making his heat unbearable.",
       "agents": [
@@ -183,27 +172,26 @@
       "targets": [
         "Sun"
       ],
-      "text_span": {
-        "start": 1244,
-        "end": 1595,
-        "text": "Then Star turned to Sun and spoke thus, \"Because you went out to amuse yourself with your friends, and feasted and enjoyed yourself, without any thought of your mother at home—you shall be cursed. Henceforth, your rays shall ever be hot and scorching, and shall burn all that they touch. And men shall hate you, and cover their heads when you appear.\""
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 5,
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "parent_child",
-      "relationship_multi": [],
       "sentiment": "negative",
-      "narrative_function": "resolution",
       "action_category": "existential",
       "action_type": "cast_spell",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "resolution"
     },
     {
       "id": "0a6f3fa5-fdc1-48a5-b790-e0f63db54d8d",
+      "text_span": {
+        "start": 1645,
+        "end": 1859,
+        "text": "Then she turned to Wind and said, \"You also who forgot your mother in the midst of your selfish pleasures—hear your doom. You shall always blow in the hot dry weather, and shall parch and shrivel all living things."
+      },
       "event_type": "PUNISHMENT",
       "description": "Star punishes Wind's selfishness by associating him with hot, dry weather.",
       "agents": [
@@ -212,27 +200,26 @@
       "targets": [
         "Wind"
       ],
-      "text_span": {
-        "start": 1645,
-        "end": 1859,
-        "text": "Then she turned to Wind and said, \"You also who forgot your mother in the midst of your selfish pleasures—hear your doom. You shall always blow in the hot dry weather, and shall parch and shrivel all living things."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 6,
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "parent_child",
-      "relationship_multi": [],
       "sentiment": "negative",
-      "narrative_function": "resolution",
       "action_category": "existential",
       "action_type": "cast_spell",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "resolution"
     },
     {
       "id": "5a614ad7-c201-4f74-a98e-22052766211f",
+      "text_span": {
+        "start": 1990,
+        "end": 2257,
+        "text": "But to Moon she said, \"Daughter, because you remembered your mother, and kept for her a share in your own enjoyment, from henceforth you shall be ever cool, and calm, and bright. No noxious glare shall accompany your pure rays, and men shall always call you 'blessed."
+      },
       "event_type": "TRANSFIGURATION",
       "description": "Star rewards Moon's selflessness by making her light cool and beloved.",
       "agents": [
@@ -241,24 +228,18 @@
       "targets": [
         "Moon"
       ],
-      "text_span": {
-        "start": 1990,
-        "end": 2257,
-        "text": "But to Moon she said, \"Daughter, because you remembered your mother, and kept for her a share in your own enjoyment, from henceforth you shall be ever cool, and calm, and bright. No noxious glare shall accompany your pure rays, and men shall always call you 'blessed."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 7,
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "parent_child",
-      "relationship_multi": [],
       "sentiment": "positive",
-      "narrative_function": "resolution",
       "action_category": "existential",
       "action_type": "cast_spell",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "resolution"
     }
   ],
   "themes_and_motifs": {

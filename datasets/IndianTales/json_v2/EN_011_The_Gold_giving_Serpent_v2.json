@@ -2,7 +2,7 @@
   "version": "2.0",
   "metadata": {
     "id": "EN_011_The_Gold_giving_Serpent",
-    "title": "",
+    "title": "The_Gold_giving_Serpent",
     "culture": "Indian",
     "annotator": "Deb",
     "date_annotated": "2026-01-14",
@@ -34,35 +34,39 @@
   "narrative_events": [
     {
       "id": "8afcde0a-66f7-4903-a0db-19e294722a5f",
+      "text_span": {
+        "start": 252,
+        "end": 779,
+        "text": "Suddenly he saw a great hooded snake creeping out of an ant-hill near at hand. So he thought to himself, \"Sure this is the guardian deity of the field, and I have not ever worshipped it. That's why my farming is in vain. I will at once go and pay my respects to it.\"\nWhen he had made up his mind, he got some milk, poured it into a bowl, and went to the ant-hill, and said aloud: \"O Guardian of this Field! all this while I did not know that you dwelt here. That is why I have not yet paid my respects to you; pray forgive me.\""
+      },
       "event_type": "Initial Situation",
       "description": "Haridatta discovers the snake, assumes it is a deity, and offers milk to appease it for his farming failures.",
-      "narrative_function": "trigger",
       "agents": [
         "Haridatta"
       ],
       "targets": [
         "The Serpent"
       ],
-      "text_span": {
-        "start": 252,
-        "end": 779,
-        "text": "Suddenly he saw a great hooded snake creeping out of an ant-hill near at hand. So he thought to himself, \"Sure this is the guardian deity of the field, and I have not ever worshipped it. That's why my farming is in vain. I will at once go and pay my respects to it.\"\nWhen he had made up his mind, he got some milk, poured it into a bowl, and went to the ant-hill, and said aloud: \"O Guardian of this Field! all this while I did not know that you dwelt here. That is why I have not yet paid my respects to you; pray forgive me.\""
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 1,
       "relationship_level1": "Hierarchy",
       "relationship_level2": "ruler_subject",
-      "relationship_multi": [],
       "sentiment": "fearful",
       "action_category": "transaction",
       "action_type": "sacrifice",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "trigger"
     },
     {
       "id": "81a09ad1-16e3-489b-80c6-866b31112c62",
+      "text_span": {
+        "start": 829,
+        "end": 1011,
+        "text": "Next morning he came and looked, and he saw a gold denar in the bowl, and from that time onward every day the same thing occurred: he gave milk to the serpent and found a gold denar."
+      },
       "event_type": "RECEIPT_OF_AGENT",
       "description": "The Serpent reciprocates the offering with a gold coin daily.",
       "agents": [
@@ -71,23 +75,26 @@
       "targets": [
         "Haridatta"
       ],
-      "text_span": {
-        "start": 829,
-        "end": 1011,
-        "text": "Next morning he came and looked, and he saw a gold denar in the bowl, and from that time onward every day the same thing occurred: he gave milk to the serpent and found a gold denar."
-      },
       "target_type": "object",
       "object_type": "normal_object",
       "instrument": "",
       "time_order": 2,
       "relationship_level1": "",
       "relationship_level2": "",
-      "relationship_multi": [],
       "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "",
       "narrative_function": "setup"
     },
     {
       "id": "959273b7-4917-4525-93ef-1b8e2cf331ca",
+      "text_span": {
+        "start": 1177,
+        "end": 1346,
+        "text": "Next day he went again and found a denar, so he thought to himself: \"This ant-hill is surely full of golden denars; I'll kill the serpent, and take them all for myself.\""
+      },
       "event_type": "VILLAINY",
       "description": "The son greedily assumes the hoard is inside the hill and plots to kill the snake.",
       "agents": [
@@ -96,27 +103,26 @@
       "targets": [
         "The Serpent"
       ],
-      "text_span": {
-        "start": 1177,
-        "end": 1346,
-        "text": "Next day he went again and found a denar, so he thought to himself: \"This ant-hill is surely full of golden denars; I'll kill the serpent, and take them all for myself.\""
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 3,
       "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
-      "relationship_multi": [],
       "sentiment": "hostile",
-      "narrative_function": "trigger",
       "action_category": "mental",
       "action_type": "plot",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "trigger"
     },
     {
       "id": "93c820a5-9699-4e91-936f-9225bafd9a7c",
+      "text_span": {
+        "start": 1348,
+        "end": 1600,
+        "text": "o next day, while he was giving the milk to the serpent, the Brahman's son struck it on the head with a cudgel. But the serpent escaped death by the will of fate, and in a rage bit the Brahman's son with its sharp fangs, and he fell down dead at once. "
+      },
       "event_type": "PUNISHMENT",
       "description": "The son attacks the snake; the snake survives and bites him in self-defense, killing him.",
       "agents": [
@@ -127,35 +133,26 @@
         "The Serpent",
         "Brahman's Son"
       ],
-      "text_span": {
-        "start": 1348,
-        "end": 1600,
-        "text": "o next day, while he was giving the milk to the serpent, the Brahman's son struck it on the head with a cudgel. But the serpent escaped death by the will of fate, and in a rage bit the Brahman's son with its sharp fangs, and he fell down dead at once. "
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 4,
       "relationship_level1": "",
       "relationship_level2": "",
-      "relationship_multi": [
-        {
-          "agent": "Brahman's Son",
-          "target": "The Serpent",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "enemy",
-          "sentiment": "hostile"
-        }
-      ],
       "sentiment": "",
-      "narrative_function": "climax",
       "action_category": "physical",
       "action_type": "attack",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "climax"
     },
     {
       "id": "e5d664e6-b292-4261-89ec-c72d215e11de",
+      "text_span": {
+        "start": 1784,
+        "end": 2165,
+        "text": "But after a time, he took the bowl of milk, went to the ant-hill, and praised the serpent with a loud voice. After a long, long time the serpent appeared, but only with its head out of the opening of the ant-hill, and spoke to the Brahman: \"'Tis greed that brings you here, and makes you even forget the loss of your son. From this time forward friendship between us is impossible."
+      },
       "event_type": "RETURN",
       "description": "Haridatta tries to resume the relationship despite his son's death; the Serpent rejects him, citing the broken trust and mutual pain.",
       "agents": [
@@ -164,27 +161,26 @@
       "targets": [
         "The Serpent"
       ],
-      "text_span": {
-        "start": 1784,
-        "end": 2165,
-        "text": "But after a time, he took the bowl of milk, went to the ant-hill, and praised the serpent with a loud voice. After a long, long time the serpent appeared, but only with its head out of the opening of the ant-hill, and spoke to the Brahman: \"'Tis greed that brings you here, and makes you even forget the loss of your son. From this time forward friendship between us is impossible."
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 5,
       "relationship_level1": "Social & Alliance",
       "relationship_level2": "ally",
-      "relationship_multi": [],
       "sentiment": "negative",
-      "narrative_function": "resolution",
       "action_category": "communicative",
       "action_type": "reconcile",
       "action_context": "",
-      "action_status": "failure"
+      "action_status": "failure",
+      "narrative_function": "resolution"
     },
     {
       "id": "dac25c33-27e2-44b7-85e3-4a9a33e92675",
+      "text_span": {
+        "start": 2351,
+        "end": 2547,
+        "text": "So speaking, it gave the Brahman a costly pearl and disappeared. But before it went away it said: \"Come back no more.\" The Brahman took the pearl, and went back home, cursing the folly of his son."
+      },
       "event_type": "DEPARTURE",
       "description": "The Serpent gives a final parting gift (pearl) and banishes the Brahman forever.",
       "agents": [
@@ -193,19 +189,17 @@
       "targets": [
         "Haridatta"
       ],
-      "text_span": {
-        "start": 2351,
-        "end": 2547,
-        "text": "So speaking, it gave the Brahman a costly pearl and disappeared. But before it went away it said: \"Come back no more.\" The Brahman took the pearl, and went back home, cursing the folly of his son."
-      },
       "target_type": "object",
       "object_type": "normal_object",
       "instrument": "",
       "time_order": 6,
       "relationship_level1": "",
       "relationship_level2": "",
-      "relationship_multi": [],
       "sentiment": "",
+      "action_category": "",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "",
       "narrative_function": "resolution"
     }
   ],
