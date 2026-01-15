@@ -49,7 +49,15 @@
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "relationships": [],
+      "relationships": [
+        {
+          "agent": "男",
+          "target": "",
+          "relationship_level1": "Romance",
+          "relationship_level2": "lover",
+          "sentiment": "positive"
+        }
+      ],
       "action_layer": {
         "category": "existential",
         "type": "",
@@ -380,11 +388,16 @@
     }
   ],
   "themes_and_motifs": {
-    "ending_type": "HAPPY_REUNION",
-    "key_values": [],
+    "ending_type": "HAPPY_ENDING",
+    "key_values": [
+      "OBEDIENCE",
+      "DISOBEDIENCE"
+    ],
     "motif_type": [],
     "atu_categories": [],
-    "obstacle_thrower": [],
+    "obstacle_thrower": [
+      "兄さん"
+    ],
     "helper_type": [],
     "thinking_process": "",
     "atu_evidence": {},
@@ -555,7 +568,11 @@
     ],
     "propp_notes": "",
     "paragraph_summaries": {
-      "per_section": {},
+      "per_section": {
+        "S1-23": "Long ago, there was a poor man in a village.",
+        "S25-79": "An old man with a white beard visited the man's place one evening, asking to stay overnight as he was lost.",
+        "S80-131": "The man kindly offered to accommodate the grandfather."
+      },
       "combined": [],
       "whole": ""
     },

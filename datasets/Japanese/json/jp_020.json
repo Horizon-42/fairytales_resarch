@@ -11,8 +11,11 @@
   "metadata": {
     "main_motif": "",
     "atu_type": "",
-    "ending_type": "HAPPY_REUNION",
-    "key_values": [],
+    "ending_type": "HAPPY_ENDING",
+    "key_values": [
+      "OBEDIENCE",
+      "DISOBEDIENCE"
+    ],
     "target_motif": true
   },
   "thinking_process": "",
@@ -39,7 +42,9 @@
         }
       ],
       "obstacle_pattern": "",
-      "obstacle_thrower": [],
+      "obstacle_thrower": [
+        "兄さん"
+      ],
       "helper_type": [],
       "thinking_process": "",
       "atu_evidence": {},
@@ -47,7 +52,11 @@
     },
     "deep": {
       "paragraph_summaries": {
-        "per_section": {},
+        "per_section": {
+          "S1-23": "Long ago, there was a poor man in a village.",
+          "S25-79": "An old man with a white beard visited the man's place one evening, asking to stay overnight as he was lost.",
+          "S80-131": "The man kindly offered to accommodate the grandfather."
+        },
         "combined": [],
         "whole": ""
       },
@@ -234,10 +243,39 @@
       "object_type": "",
       "instrument": "",
       "time_order": 1,
+      "relationships": [
+        {
+          "agent": "男",
+          "target": "",
+          "relationship_level1": "Romance",
+          "relationship_level2": "lover",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": "setup"
+      },
+      "narrative_function": "setup",
+      "relationship_multi": [
+        {
+          "agent": "男",
+          "target": "",
+          "relationship_level1": "Romance",
+          "relationship_level2": "lover",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "Romance",
+      "relationship_level2": "lover",
+      "sentiment": "positive",
       "action_category": "existential",
       "action_type": "",
       "action_context": "",
-      "narrative_function": "setup"
+      "action_status": ""
     },
     {
       "id": "d859938f-d881-4076-b86e-343993286552",
@@ -258,11 +296,39 @@
       "object_type": "",
       "instrument": "",
       "time_order": 2,
+      "relationships": [
+        {
+          "agent": "白いひげのおじいさん",
+          "target": "男",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "request",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "白いひげのおじいさん",
+          "target": "男",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "neutral",
       "action_category": "transaction",
       "action_type": "request",
       "action_context": "",
-      "action_status": "success",
-      "sentiment": "neutral"
+      "action_status": "success"
     },
     {
       "id": "62583473-1355-4708-97d4-7cf26f3fe6d4",
@@ -283,11 +349,39 @@
       "object_type": "",
       "instrument": "",
       "time_order": 3,
+      "relationships": [
+        {
+          "agent": "男",
+          "target": "白いひげのおじいさん",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "give",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "男",
+          "target": "白いひげのおじいさん",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "positive",
       "action_category": "transaction",
       "action_type": "give",
       "action_context": "",
-      "action_status": "success",
-      "sentiment": "positive"
+      "action_status": "success"
     },
     {
       "id": "c7f0e593-4e73-45ba-b120-693c41d90862",
@@ -308,11 +402,39 @@
       "object_type": "",
       "instrument": "",
       "time_order": 4,
+      "relationships": [
+        {
+          "agent": "白いひげのおじいさん",
+          "target": "男",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "give",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "白いひげのおじいさん",
+          "target": "男",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "positive",
       "action_category": "transaction",
       "action_type": "give",
       "action_context": "",
-      "action_status": "success",
-      "sentiment": "positive"
+      "action_status": "success"
     },
     {
       "id": "7cfce8f3-1118-4c63-94a1-8312ec3c1ae8",
@@ -333,11 +455,39 @@
       "object_type": "",
       "instrument": "",
       "time_order": 5,
+      "relationships": [
+        {
+          "agent": "白いひげのおじいさん",
+          "target": "男",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "白いひげのおじいさん",
+          "target": "男",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "neutral",
       "action_category": "communicative",
       "action_type": "inform",
       "action_context": "",
-      "action_status": "success",
-      "sentiment": "neutral"
+      "action_status": "success"
     },
     {
       "id": "6b3e0274-3e80-4f4c-9602-389518096d43",
@@ -356,10 +506,38 @@
       "object_type": "",
       "instrument": "",
       "time_order": 6,
+      "relationships": [
+        {
+          "agent": "男",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "cast",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "男",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "neutral",
       "action_category": "existential",
       "action_type": "cast",
       "action_context": "",
-      "sentiment": "neutral",
       "action_status": "success"
     },
     {
@@ -381,12 +559,39 @@
       "object_type": "",
       "instrument": "",
       "time_order": 7,
+      "relationships": [
+        {
+          "agent": "兄さん",
+          "target": "男",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "plot",
+        "context": "",
+        "status": "success",
+        "function": "trigger"
+      },
+      "narrative_function": "trigger",
+      "relationship_multi": [
+        {
+          "agent": "兄さん",
+          "target": "男",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "neutral",
       "action_category": "mental",
       "action_type": "plot",
       "action_context": "",
-      "action_status": "success",
-      "sentiment": "neutral",
-      "narrative_function": "trigger"
+      "action_status": "success"
     },
     {
       "id": "1c1c3750-44f2-4463-9cee-6391ee77a989",
@@ -407,12 +612,39 @@
       "object_type": "",
       "instrument": "",
       "time_order": 8,
+      "relationships": [
+        {
+          "agent": "兄さん",
+          "target": "男",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "steal",
+        "context": "",
+        "status": "success",
+        "function": "climax"
+      },
       "narrative_function": "climax",
+      "relationship_multi": [
+        {
+          "agent": "兄さん",
+          "target": "男",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "negative",
       "action_category": "physical",
       "action_type": "steal",
       "action_context": "",
-      "action_status": "success",
-      "sentiment": "negative"
+      "action_status": "success"
     },
     {
       "id": "8a38ab87-ed97-4a76-aa96-6b8d7472eccc",
@@ -433,11 +665,39 @@
       "object_type": "magical_agent",
       "instrument": "",
       "time_order": 9,
+      "relationships": [
+        {
+          "agent": "兄さん",
+          "target": "石うす",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "cast",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "兄さん",
+          "target": "石うす",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "negative",
       "action_category": "existential",
       "action_type": "cast",
       "action_context": "",
-      "action_status": "success",
-      "sentiment": "negative"
+      "action_status": "success"
     },
     {
       "id": "d201427c-c973-4366-9646-3dea9100f9a0",
@@ -456,11 +716,39 @@
       "object_type": "",
       "instrument": "",
       "time_order": 10,
-      "action_status": "success",
+      "relationships": [
+        {
+          "agent": "",
+          "target": "男",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "punish",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "",
+          "target": "男",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
       "sentiment": "negative",
       "action_category": "transaction",
       "action_type": "punish",
-      "action_context": ""
+      "action_context": "",
+      "action_status": "success"
     }
   ],
   "cross_validation": {

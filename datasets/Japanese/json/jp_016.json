@@ -12,7 +12,10 @@
     "main_motif": "",
     "atu_type": "",
     "ending_type": "HAPPY_REUNION",
-    "key_values": [],
+    "key_values": [
+      "LUCK",
+      "JUSTICE"
+    ],
     "target_motif": true
   },
   "thinking_process": "",

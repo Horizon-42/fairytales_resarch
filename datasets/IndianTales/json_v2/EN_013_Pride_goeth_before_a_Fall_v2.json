@@ -1,0 +1,289 @@
+{
+  "version": "2.0",
+  "metadata": {
+    "id": "EN_013_Pride_goeth_before_a_Fall",
+    "title": "",
+    "culture": "Indian",
+    "annotator": "Deb",
+    "date_annotated": "2026-01-14",
+    "confidence": 0.8
+  },
+  "source_info": {
+    "language": "",
+    "type": "",
+    "reference_uri": "datasets/texts/EN_013_Pride_goeth_before_a_Fall.txt",
+    "text_content": "In a certain village there lived ten cloth merchants, who always went about together. Once upon a time they had travelled far afield, and were returning home with a great deal of money which they had obtained by selling their wares. Now there happened to be a dense forest near their village, and this they reached early one morning. In it there lived three notorious robbers, of whose existence the traders had never heard, and while they were still in the middle of it the robbers stood before them, with swords and cudgels in their hands, and ordered them to lay down all they had. The traders had no weapons with them, and so, though they were many more in number, they had to submit themselves to the robbers, who took away everything from them, even the very clothes they wore, and gave to each only a small loin-cloth a span in breadth and a cubit in length.\nThe idea that they had conquered ten men and plundered all their property, now took possession of the robbers' minds. They seated themselves like three monarchs before the men they had plundered, and ordered them to dance to them before returning home. The merchants now mourned their fate. They had lost all they had, except their loin-cloth, and still the robbers were not satisfied, but ordered them to dance.\n\nThere was, among the ten merchants, one who was very clever. He pondered over the calamity that had come upon him and his friends, the dance they would have to perform, and the magnificent manner in which the three robbers had seated themselves on the grass. At the same time he observed that these last had placed their weapons on the ground, in the assurance of having thoroughly cowed the traders, who were now commencing to dance. So he took the lead in the dance, and, as a song is always sung by the leader on such occasions, to which the rest keep time with hands and feet, he thus began to sing:\n\"We are enty men,\nThey are erith men:\nIf each erith man,\nSurround eno men\nEno man remains.\nTâ, tai, tôm, tadingana.\"\nThe robbers were all uneducated, and thought that the leader was merely singing a song as usual. So it was in one sense; for the leader commenced from a distance, and had sung the song over twice before he and his companions commenced to approach the robbers. They had understood his meaning, because they had been trained in trade.\nWhen two traders discuss the price of an article in the presence of a purchaser, they use a riddling sort of language.\n\"What is the price of this cloth?\" one trader will ask another.\n\"Enty rupees,\" another will reply, meaning \"ten rupees.\"\nThus, there is no possibility of the purchaser knowing what is meant unless he be acquainted with trade language. By the rules of this secret language erith means \"three,\" enty means \"ten,\" and eno means \"one.\" So the leader by his song meant to hint to his fellow-traders that they were ten men, the robbers only three, that if three pounced upon each of the robbers, nine of them could hold them down, while the remaining one bound the robbers' hands and feet.\nThe three thieves, glorying in their victory, and little understanding the meaning of the song and the intentions of the dancers, were proudly seated chewing betel and tobacco. Meanwhile the song was sung a third time. Tâ tai tôm had left the lips of the singer; and, before tadingana was out of them, the traders separated into parties of three, and each party pounced upon a thief. The remaining one—the leader himself—tore up into long narrow strips a large piece of cloth, six cubits long, and tied the hands and feet of the robbers. These were entirely humbled now, and rolled on the ground like three bags of rice!\nThe ten traders now took back all their property, and armed themselves with the swords and cudgels of their enemies; and when they reached their village, they often amused their friends and relatives by relating their adventure."
+  },
+  "characters": [
+    {
+      "name": "The Clever Merchant",
+      "alias": "The Leader",
+      "archetype": "Hero"
+    },
+    {
+      "name": "Ten Cloth Merchants",
+      "alias": "Traders",
+      "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "Three Robbers",
+      "alias": "Notorious robbers; Three monarchs",
+      "archetype": "Villain"
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "3be47a19-f09f-454e-b389-b404cd2f7f99",
+      "event_type": "VILLAINY",
+      "description": "The robbers ambush the merchants and strip them of all wealth and clothing.",
+      "narrative_function": "trigger",
+      "agents": [
+        "Three Robbers"
+      ],
+      "targets": [
+        "The Clever Merchant"
+      ],
+      "text_span": {
+        "start": 334,
+        "end": 865,
+        "text": "In it there lived three notorious robbers, of whose existence the traders had never heard, and while they were still in the middle of it the robbers stood before them, with swords and cudgels in their hands, and ordered them to lay down all they had. The traders had no weapons with them, and so, though they were many more in number, they had to submit themselves to the robbers, who took away everything from them, even the very clothes they wore, and gave to each only a small loin-cloth a span in breadth and a cubit in length."
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "enemy",
+      "relationship_multi": [],
+      "sentiment": "hostile",
+      "action_category": "physical",
+      "action_type": "steal",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "2410d891-d6e8-49a2-a3ab-4d252afe0efe",
+      "event_type": "DIFFICULT_TASK",
+      "description": "The robbers, drunk on power, force the merchants to dance for amusement.",
+      "agents": [
+        "Three Robbers"
+      ],
+      "targets": [
+        "The Clever Merchant"
+      ],
+      "text_span": {
+        "start": 984,
+        "end": 1278,
+        "text": "They seated themselves like three monarchs before the men they had plundered, and ordered them to dance to them before returning home. The merchants now mourned their fate. They had lost all they had, except their loin-cloth, and still the robbers were not satisfied, but ordered them to dance."
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "enemy",
+      "relationship_multi": [],
+      "sentiment": "negative",
+      "narrative_function": "setup",
+      "action_category": "communicative",
+      "action_type": "command",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "0fe9f506-1e9a-4806-8932-565e00298043",
+      "event_type": "TRICKERY",
+      "description": "The clever merchant sings a song in trade jargon (erith, enty, eno) to coordinate an attack without the robbers knowing.",
+      "agents": [
+        "The Clever Merchant"
+      ],
+      "targets": [
+        "Ten Cloth Merchants"
+      ],
+      "text_span": {
+        "start": 1280,
+        "end": 2001,
+        "text": "There was, among the ten merchants, one who was very clever. He pondered over the calamity that had come upon him and his friends, the dance they would have to perform, and the magnificent manner in which the three robbers had seated themselves on the grass. At the same time he observed that these last had placed their weapons on the ground, in the assurance of having thoroughly cowed the traders, who were now commencing to dance. So he took the lead in the dance, and, as a song is always sung by the leader on such occasions, to which the rest keep time with hands and feet, he thus began to sing:\n\"We are enty men,\nThey are erith men:\nIf each erith man,\nSurround eno men\nEno man remains.\nTâ, tai, tôm, tadingana.\"\n"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationship_level1": "Social & Alliance",
+      "relationship_level2": "colleague",
+      "relationship_multi": [],
+      "sentiment": "positive",
+      "narrative_function": "climax",
+      "action_category": "communicative",
+      "action_type": "inform",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "bcbf5d78-875c-41f0-91d5-4a6c29b38002",
+      "event_type": "STRUGGLE",
+      "description": "Following the song's instructions, the merchants overpower and bind the robbers.",
+      "agents": [
+        "Ten Cloth Merchants"
+      ],
+      "targets": [
+        "Three Robbers"
+      ],
+      "text_span": {
+        "start": 3343,
+        "end": 3658,
+        "text": "traders separated into parties of three, and each party pounced upon a thief. The remaining one—the leader himself—tore up into long narrow strips a large piece of cloth, six cubits long, and tied the hands and feet of the robbers. These were entirely humbled now, and rolled on the ground like three bags of rice!\n"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationship_level1": "Adversarial",
+      "relationship_level2": "enemy",
+      "relationship_multi": [],
+      "sentiment": "positive",
+      "narrative_function": "climax",
+      "action_category": "physical",
+      "action_type": "attack",
+      "action_context": "",
+      "action_status": "success"
+    },
+    {
+      "id": "e90f0438-b126-4f8f-887f-6dff1f890b4e",
+      "event_type": "LIQUIDATION",
+      "description": "The merchants recover their stolen goods and return home as heroes.",
+      "agents": [
+        "Ten Cloth Merchants"
+      ],
+      "targets": [],
+      "text_span": {
+        "start": 3658,
+        "end": 3886,
+        "text": "The ten traders now took back all their property, and armed themselves with the swords and cudgels of their enemies; and when they reached their village, they often amused their friends and relatives by relating their adventure."
+      },
+      "target_type": "object",
+      "object_type": "normal_object",
+      "instrument": "",
+      "time_order": 5,
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "relationship_multi": [],
+      "sentiment": "",
+      "narrative_function": "resolution"
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "HAPPY_ENDING",
+    "key_values": [
+      "CUNNING",
+      "JUSTICE",
+      "OTHER (Teamwork)"
+    ],
+    "motif_type": [],
+    "atu_categories": [],
+    "obstacle_thrower": [
+      "Three Robbers"
+    ],
+    "helper_type": [],
+    "thinking_process": "",
+    "atu_evidence": {},
+    "motif_evidence": {}
+  },
+  "analysis": {
+    "propp_functions": [
+      {
+        "id": "aee50247-7e86-4c6c-b880-6575de8d0e33",
+        "fn": "VILLAINY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 334,
+          "end": 865,
+          "text": "In it there lived three notorious robbers, of whose existence the traders had never heard, and while they were still in the middle of it the robbers stood before them, with swords and cudgels in their hands, and ordered them to lay down all they had. The traders had no weapons with them, and so, though they were many more in number, they had to submit themselves to the robbers, who took away everything from them, even the very clothes they wore, and gave to each only a small loin-cloth a span in breadth and a cubit in length."
+        },
+        "evidence": "The robbers ambush the merchants and strip them of all wealth and clothing.",
+        "narrative_event_id": "3be47a19-f09f-454e-b389-b404cd2f7f99"
+      },
+      {
+        "id": "b1c76ada-7b49-4634-9802-932ef9b02464",
+        "fn": "DIFFICULT_TASK",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 984,
+          "end": 1278,
+          "text": "They seated themselves like three monarchs before the men they had plundered, and ordered them to dance to them before returning home. The merchants now mourned their fate. They had lost all they had, except their loin-cloth, and still the robbers were not satisfied, but ordered them to dance."
+        },
+        "evidence": "The robbers, drunk on power, force the merchants to dance for amusement.",
+        "narrative_event_id": "2410d891-d6e8-49a2-a3ab-4d252afe0efe"
+      },
+      {
+        "id": "acb24aa2-49af-408e-b71e-ed52fa1a644b",
+        "fn": "TRICKERY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1280,
+          "end": 2001,
+          "text": "There was, among the ten merchants, one who was very clever. He pondered over the calamity that had come upon him and his friends, the dance they would have to perform, and the magnificent manner in which the three robbers had seated themselves on the grass. At the same time he observed that these last had placed their weapons on the ground, in the assurance of having thoroughly cowed the traders, who were now commencing to dance. So he took the lead in the dance, and, as a song is always sung by the leader on such occasions, to which the rest keep time with hands and feet, he thus began to sing:\n\"We are enty men,\nThey are erith men:\nIf each erith man,\nSurround eno men\nEno man remains.\nTâ, tai, tôm, tadingana.\"\n"
+        },
+        "evidence": "The clever merchant sings a song in trade jargon (erith, enty, eno) to coordinate an attack without the robbers knowing.",
+        "narrative_event_id": "0fe9f506-1e9a-4806-8932-565e00298043"
+      },
+      {
+        "id": "771d9791-c591-4d68-8134-5ef568195ba4",
+        "fn": "STRUGGLE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 3343,
+          "end": 3658,
+          "text": "traders separated into parties of three, and each party pounced upon a thief. The remaining one—the leader himself—tore up into long narrow strips a large piece of cloth, six cubits long, and tied the hands and feet of the robbers. These were entirely humbled now, and rolled on the ground like three bags of rice!\n"
+        },
+        "evidence": "Following the song's instructions, the merchants overpower and bind the robbers.",
+        "narrative_event_id": "bcbf5d78-875c-41f0-91d5-4a6c29b38002"
+      },
+      {
+        "id": "628bff97-4b03-40c8-8cc0-9b861da69bd9",
+        "fn": "LIQUIDATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 3658,
+          "end": 3886,
+          "text": "The ten traders now took back all their property, and armed themselves with the swords and cudgels of their enemies; and when they reached their village, they often amused their friends and relatives by relating their adventure."
+        },
+        "evidence": "The merchants recover their stolen goods and return home as heroes.",
+        "narrative_event_id": "e90f0438-b126-4f8f-887f-6dff1f890b4e"
+      }
+    ],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

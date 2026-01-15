@@ -12,7 +12,10 @@
     "main_motif": "",
     "atu_type": "",
     "ending_type": "HAPPY_REUNION",
-    "key_values": [],
+    "key_values": [
+      "SACRIFICE",
+      "LUCK"
+    ],
     "target_motif": true
   },
   "thinking_process": "",
@@ -40,7 +43,9 @@
       ],
       "obstacle_pattern": "",
       "obstacle_thrower": [],
-      "helper_type": [],
+      "helper_type": [
+        "SUPERNATURAL"
+      ],
       "thinking_process": "",
       "atu_evidence": {},
       "motif_evidence": {}
@@ -177,15 +182,23 @@
       "object_type": "",
       "instrument": "",
       "time_order": 1,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      },
+      "narrative_function": "",
+      "relationship_multi": [],
       "relationship_level1": "",
       "relationship_level2": "",
-      "relationship_multi": [],
       "sentiment": "",
       "action_category": "",
       "action_type": "",
       "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "action_status": ""
     },
     {
       "id": "a118cc3f-6dc1-479d-a27c-153d67e1d1a8",
@@ -205,9 +218,23 @@
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "action_category": "existential",
-      "action_type": "",
-      "action_context": "",
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "おじいさん",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "spouse",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": ""
+      },
+      "narrative_function": "",
       "relationship_multi": [
         {
           "agent": "おじいさん",
@@ -220,8 +247,10 @@
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
-      "action_status": "success",
-      "narrative_function": ""
+      "action_category": "existential",
+      "action_type": "",
+      "action_context": "",
+      "action_status": "success"
     },
     {
       "id": "5760b819-0d5b-4e66-a608-e15d8ac80458",
@@ -240,16 +269,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 2,
-      "relationship_level1": "",
-      "relationship_level2": "",
-      "sentiment": "neutral",
       "action_layer": {
         "category": "physical",
         "type": "travel",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "relationship_multi": [],
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
       "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "おじいさん",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "neutral",
       "action_category": "physical",
       "action_type": "travel",
       "action_context": "",
@@ -274,16 +322,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "sentiment": "neutral",
       "action_layer": {
         "category": "mental",
         "type": "observe",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "お地蔵様",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "おじいさん",
+          "target": "お地蔵様",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
       "relationship_level1": "",
       "relationship_level2": "",
-      "relationship_multi": [],
-      "narrative_function": "",
+      "sentiment": "neutral",
       "action_category": "mental",
       "action_type": "observe",
       "action_context": "",
@@ -308,16 +375,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 4,
-      "sentiment": "positive",
       "action_layer": {
         "category": "transaction",
         "type": "give",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "お地蔵様",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "おじいさん",
+          "target": "お地蔵様",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
       "relationship_level1": "",
       "relationship_level2": "",
-      "relationship_multi": [],
-      "narrative_function": "",
+      "sentiment": "positive",
       "action_category": "transaction",
       "action_type": "give",
       "action_context": "",
@@ -342,16 +428,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "sentiment": "positive",
       "action_layer": {
         "category": "transaction",
         "type": "give",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "お地蔵様",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "おじいさん",
+          "target": "お地蔵様",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
       "relationship_level1": "",
       "relationship_level2": "",
-      "relationship_multi": [],
-      "narrative_function": "",
+      "sentiment": "positive",
       "action_category": "transaction",
       "action_type": "give",
       "action_context": "",
@@ -376,16 +481,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 6,
-      "relationship_level1": "Family & Kinship",
-      "relationship_level2": "spouse",
-      "sentiment": "neutral",
       "action_layer": {
         "category": "physical",
         "type": "travel",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "relationship_multi": [],
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "おばあさん",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "spouse",
+          "sentiment": "neutral"
+        }
+      ],
       "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "おじいさん",
+          "target": "おばあさん",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "spouse",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "Family & Kinship",
+      "relationship_level2": "spouse",
+      "sentiment": "neutral",
       "action_category": "physical",
       "action_type": "travel",
       "action_context": "",
@@ -410,16 +534,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 7,
-      "relationship_level1": "Family & Kinship",
-      "relationship_level2": "spouse",
-      "sentiment": "neutral",
       "action_layer": {
         "category": "communicative",
         "type": "inform",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
-      "relationship_multi": [],
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "おばあさん",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "spouse",
+          "sentiment": "neutral"
+        }
+      ],
       "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "おじいさん",
+          "target": "おばあさん",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "spouse",
+          "sentiment": "neutral"
+        }
+      ],
+      "relationship_level1": "Family & Kinship",
+      "relationship_level2": "spouse",
+      "sentiment": "neutral",
       "action_category": "communicative",
       "action_type": "inform",
       "action_context": "",
@@ -444,16 +587,35 @@
       "object_type": "",
       "instrument": "",
       "time_order": 8,
-      "sentiment": "positive",
       "action_layer": {
         "category": "transaction",
         "type": "reward",
-        "status": "success"
+        "context": "",
+        "status": "success",
+        "function": ""
       },
+      "relationships": [
+        {
+          "agent": "お地蔵様",
+          "target": "おじいさん",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "narrative_function": "",
+      "relationship_multi": [
+        {
+          "agent": "お地蔵様",
+          "target": "おじいさん",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
       "relationship_level1": "",
       "relationship_level2": "",
-      "relationship_multi": [],
-      "narrative_function": "",
+      "sentiment": "positive",
       "action_category": "transaction",
       "action_type": "reward",
       "action_context": "",

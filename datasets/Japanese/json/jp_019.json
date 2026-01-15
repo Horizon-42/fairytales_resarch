@@ -11,8 +11,10 @@
   "metadata": {
     "main_motif": "",
     "atu_type": "",
-    "ending_type": "HAPPY_REUNION",
-    "key_values": [],
+    "ending_type": "HAPPY_ENDING",
+    "key_values": [
+      "OTHER"
+    ],
     "target_motif": true
   },
   "thinking_process": "",

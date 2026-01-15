@@ -661,12 +661,18 @@
     }
   ],
   "themes_and_motifs": {
-    "ending_type": "HAPPY_REUNION",
-    "key_values": [],
+    "ending_type": "HAPPY_ENDING",
+    "key_values": [
+      "OBEDIENCE"
+    ],
     "motif_type": [],
     "atu_categories": [],
-    "obstacle_thrower": [],
-    "helper_type": [],
+    "obstacle_thrower": [
+      "鬼ババ"
+    ],
+    "helper_type": [
+      "HUMAN"
+    ],
     "thinking_process": "",
     "atu_evidence": {},
     "motif_evidence": {}

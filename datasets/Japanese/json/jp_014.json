@@ -11,8 +11,11 @@
   "metadata": {
     "main_motif": "",
     "atu_type": "",
-    "ending_type": "HAPPY_REUNION",
-    "key_values": [],
+    "ending_type": "HAPPY_ENDING",
+    "key_values": [
+      "COURAGE",
+      "JUSTICE"
+    ],
     "target_motif": true
   },
   "thinking_process": "",
@@ -64,7 +67,9 @@
         }
       ],
       "obstacle_pattern": "",
-      "obstacle_thrower": [],
+      "obstacle_thrower": [
+        "鬼"
+      ],
       "helper_type": [],
       "thinking_process": "",
       "atu_evidence": {},

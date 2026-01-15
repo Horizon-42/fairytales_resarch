@@ -1,0 +1,266 @@
+{
+  "version": "3.0",
+  "metadata": {
+    "id": "EN_018_How_the_Wicked_Sons_were_Duped",
+    "title": "",
+    "culture": "Indian",
+    "annotator": "Deb",
+    "date_annotated": "2026-01-14",
+    "confidence": 0.95
+  },
+  "source_info": {
+    "language": "",
+    "type": "",
+    "reference_uri": "datasets/texts/EN_018_How_the_Wicked_Sons_were_Duped.txt",
+    "text_content": "A very wealthy old man, imagining that he was on the point of death, sent for his sons and divided his property among them. However, he did not die for several years afterwards; and miserable years many of them were. Besides the weariness of old age, the old fellow had to bear with much abuse and cruelty from his sons. Wretched, selfish ingrates! Previously they vied with one another in trying to please their father, hoping thus to receive more money, but now they had received their patrimony, they cared not how soon he left them—nay, the sooner the better, because he was only a needless trouble and expense. And they let the poor old man know what they felt.\nOne day he met a friend and related to him all his troubles. The friend sympathised very much with him, and promised to think over the matter, and call in a little while and tell him what to do. He did so; in a few days he visited the old man and put down four bags full of stones and gravel before him.\n\"Look here, friend,\" said he. \"Your sons will get to know of my coming here to-day, and will inquire about it. You must pretend that I came to discharge a long-standing debt with you, and that you are several thousands of rupees richer than you thought you were. Keep these bags in your own hands, and on no account let your sons get to them as long as you are alive. You will soon find them change their conduct towards you. Salaam. I will come again soon to see how you are getting on.\"\nWhen the young men got to hear of this further increase of wealth they began to be more attentive and pleasing to their father than ever before. And thus they continued to the day of the old man's demise, when the bags were greedily opened, and found to contain only stones and gravel!"
+  },
+  "characters": [
+    {
+      "name": "The Old Man",
+      "alias": "Father; Poor Old Man",
+      "archetype": "Hero"
+    },
+    {
+      "name": "The Sons",
+      "alias": "Wretched, selfish ingrates; Young men",
+      "archetype": "Villain"
+    },
+    {
+      "name": "The Friend",
+      "alias": "",
+      "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "Self",
+      "alias": "The Sons",
+      "archetype": "Villain"
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "43c49f55-fcbd-4f0c-ac00-3cfa42fde213",
+      "event_type": "Initial Situation",
+      "description": "The father gives his wealth away prematurely; once the sons have the money, they neglect and abuse him.",
+      "agents": [
+        "The Sons"
+      ],
+      "targets": [
+        "The Old Man"
+      ],
+      "text_span": {
+        "start": 0,
+        "end": 666,
+        "text": "A very wealthy old man, imagining that he was on the point of death, sent for his sons and divided his property among them. However, he did not die for several years afterwards; and miserable years many of them were. Besides the weariness of old age, the old fellow had to bear with much abuse and cruelty from his sons. Wretched, selfish ingrates! Previously they vied with one another in trying to please their father, hoping thus to receive more money, but now they had received their patrimony, they cared not how soon he left them—nay, the sooner the better, because he was only a needless trouble and expense. And they let the poor old man know what they felt."
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [
+        {
+          "agent": "The Sons",
+          "target": "The Old Man",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "parent_child",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "betray",
+        "context": "",
+        "status": "success",
+        "function": "trigger"
+      }
+    },
+    {
+      "id": "05b1d3ae-be2f-4ba7-a8a1-daad5bcecaf1",
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "A friend provides bags of stones and a false narrative about hidden wealth to trick the sons.",
+      "agents": [
+        "The Friend"
+      ],
+      "targets": [
+        "The Old Man"
+      ],
+      "text_span": {
+        "start": 862,
+        "end": 1233,
+        "text": "He did so; in a few days he visited the old man and put down four bags full of stones and gravel before him.\n\"Look here, friend,\" said he. \"Your sons will get to know of my coming here to-day, and will inquire about it. You must pretend that I came to discharge a long-standing debt with you, and that you are several thousands of rupees richer than you thought you were."
+      },
+      "target_type": "object",
+      "object_type": "normal_object",
+      "instrument": "bag",
+      "time_order": 2,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": "setup"
+      }
+    },
+    {
+      "id": "58865644-205b-4faa-9450-a28a362fb563",
+      "event_type": "TRICKERY",
+      "description": "Believing the deception, the sons treat their father well until his death to secure the new inheritance.",
+      "agents": [
+        "The Old Man"
+      ],
+      "targets": [
+        "The Sons"
+      ],
+      "text_span": {
+        "start": 1460,
+        "end": 1663,
+        "text": "When the young men got to hear of this further increase of wealth they began to be more attentive and pleasing to their father than ever before. And thus they continued to the day of the old man's demise"
+      },
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationships": [
+        {
+          "agent": "The Old Man",
+          "target": "The Sons",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "parent_child",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "deceive",
+        "context": "",
+        "status": "success",
+        "function": "climax"
+      }
+    },
+    {
+      "id": "a3900c6c-ba8e-494a-8e91-5a4f9e98d399",
+      "event_type": "EXPOSURE",
+      "description": "After the father's death, the sons discover they were tricked and there is no gold.",
+      "agents": [
+        "The Sons"
+      ],
+      "targets": [
+        "Self"
+      ],
+      "text_span": {
+        "start": 1665,
+        "end": 1745,
+        "text": "when the bags were greedily opened, and found to contain only stones and gravel!"
+      },
+      "target_type": "object",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": "resolution"
+      }
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "HAPPY_ENDING",
+    "key_values": [
+      "CUNNING",
+      "JUSTICE"
+    ],
+    "motif_type": [],
+    "atu_categories": [],
+    "obstacle_thrower": [
+      "The Sons"
+    ],
+    "helper_type": [],
+    "thinking_process": "",
+    "atu_evidence": {},
+    "motif_evidence": {}
+  },
+  "analysis": {
+    "propp_functions": [
+      {
+        "id": "7b2114a8-1e5a-42f2-9188-b026dc1bbc65",
+        "fn": "Initial Situation",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 0,
+          "end": 666,
+          "text": "A very wealthy old man, imagining that he was on the point of death, sent for his sons and divided his property among them. However, he did not die for several years afterwards; and miserable years many of them were. Besides the weariness of old age, the old fellow had to bear with much abuse and cruelty from his sons. Wretched, selfish ingrates! Previously they vied with one another in trying to please their father, hoping thus to receive more money, but now they had received their patrimony, they cared not how soon he left them—nay, the sooner the better, because he was only a needless trouble and expense. And they let the poor old man know what they felt."
+        },
+        "evidence": "The father gives his wealth away prematurely; once the sons have the money, they neglect and abuse him.",
+        "narrative_event_id": "43c49f55-fcbd-4f0c-ac00-3cfa42fde213"
+      },
+      {
+        "id": "a2f791c0-b21c-4573-94a8-598c2296ab7b",
+        "fn": "RECEIPT_OF_AGENT",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 862,
+          "end": 1233,
+          "text": "He did so; in a few days he visited the old man and put down four bags full of stones and gravel before him.\n\"Look here, friend,\" said he. \"Your sons will get to know of my coming here to-day, and will inquire about it. You must pretend that I came to discharge a long-standing debt with you, and that you are several thousands of rupees richer than you thought you were."
+        },
+        "evidence": "A friend provides bags of stones and a false narrative about hidden wealth to trick the sons.",
+        "narrative_event_id": "05b1d3ae-be2f-4ba7-a8a1-daad5bcecaf1"
+      },
+      {
+        "id": "2d7da6ec-3487-4163-b27b-6ea4fe9a884c",
+        "fn": "TRICKERY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1460,
+          "end": 1663,
+          "text": "When the young men got to hear of this further increase of wealth they began to be more attentive and pleasing to their father than ever before. And thus they continued to the day of the old man's demise"
+        },
+        "evidence": "Believing the deception, the sons treat their father well until his death to secure the new inheritance.",
+        "narrative_event_id": "58865644-205b-4faa-9450-a28a362fb563"
+      },
+      {
+        "id": "7b6e89bf-6328-482d-a18b-e63d8b731795",
+        "fn": "EXPOSURE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1665,
+          "end": 1745,
+          "text": "when the bags were greedily opened, and found to contain only stones and gravel!"
+        },
+        "evidence": "After the father's death, the sons discover they were tricked and there is no gold.",
+        "narrative_event_id": "a3900c6c-ba8e-494a-8e91-5a4f9e98d399"
+      }
+    ],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

@@ -593,11 +593,16 @@
     }
   ],
   "themes_and_motifs": {
-    "ending_type": "HAPPY_REUNION",
-    "key_values": [],
+    "ending_type": "HAPPY_ENDING",
+    "key_values": [
+      "COURAGE",
+      "JUSTICE"
+    ],
     "motif_type": [],
     "atu_categories": [],
-    "obstacle_thrower": [],
+    "obstacle_thrower": [
+      "鬼"
+    ],
     "helper_type": [],
     "thinking_process": "",
     "atu_evidence": {},
