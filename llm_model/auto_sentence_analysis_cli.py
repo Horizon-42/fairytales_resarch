@@ -10,10 +10,24 @@ Example:
   python -m llm_model.auto_sentence_analysis_cli \
     --story-file /path/to/story.txt \
     --output result.json
+  
+  # Use neighboring sentences as auxiliary context
+  python -m llm_model.auto_sentence_analysis_cli \
+    --story-file /path/to/story.txt \
+    --use-neighboring-sentences \
+    --output result.json
+  
+  # Single sentence with neighboring sentences
+  python -m llm_model.auto_sentence_analysis_cli \
+    --sentence "The hero defeated the dragon." \
+    --use-neighboring-sentences \
+    --previous-sentence "The dragon roared fiercely." \
+    --next-sentence "He claimed the treasure."
 
 This tool analyzes sentences within the context of a complete story.
 If --sentence is provided, it analyzes only that sentence.
 Otherwise, it automatically splits the story into sentences and analyzes each one.
+The --use-neighboring-sentences mode can be used independently or together with story context.
 """
 
 from __future__ import annotations
@@ -79,6 +93,23 @@ def main() -> int:
         help="Analyze sentences without story context. In this mode, --story-file can still be used for batch processing (sentence splitting), but won't be used as context.",
     )
     parser.add_argument(
+        "--use-neighboring-sentences",
+        action="store_true",
+        help="Use neighboring sentences (previous and next) as auxiliary context. This mode is orthogonal to --no-context and can be used independently or together. In batch mode, neighboring sentences are automatically extracted from the story.",
+    )
+    parser.add_argument(
+        "--previous-sentence",
+        type=str,
+        default=None,
+        help="Previous sentence (used with --use-neighboring-sentences for single sentence analysis). Ignored in batch mode.",
+    )
+    parser.add_argument(
+        "--next-sentence",
+        type=str,
+        default=None,
+        help="Next sentence (used with --use-neighboring-sentences for single sentence analysis). Ignored in batch mode.",
+    )
+    parser.add_argument(
         "--output",
         type=Path,
         default=None,
@@ -130,6 +161,7 @@ def main() -> int:
     )
 
     config = SentenceAnalyzerConfig(llm=llm)
+    use_neighboring_sentences = args.use_neighboring_sentences
 
     try:
         # If a specific sentence is provided, analyze only that sentence
@@ -139,10 +171,27 @@ def main() -> int:
                 print("Error: Sentence cannot be empty", file=sys.stderr)
                 return 1
             
+            # Get neighboring sentences for single sentence analysis
+            previous_sentence = args.previous_sentence.strip() if args.previous_sentence else None
+            next_sentence = args.next_sentence.strip() if args.next_sentence else None
+            
+            # Validate neighboring sentences if the mode is enabled
+            if use_neighboring_sentences:
+                if not previous_sentence and not next_sentence:
+                    print(
+                        "Error: --use-neighboring-sentences requires at least one of "
+                        "--previous-sentence or --next-sentence for single sentence analysis",
+                        file=sys.stderr
+                    )
+                    return 1
+            
             result = analyze_sentence(
                 sentence=sentence,
                 story_context=story_context,
                 use_context=use_context,
+                previous_sentence=previous_sentence,
+                next_sentence=next_sentence,
+                use_neighboring_sentences=use_neighboring_sentences,
                 config=config,
             )
             output_data = result
@@ -157,14 +206,32 @@ def main() -> int:
             sentences = split_sentences_advanced(file_content)
             print(f"Found {len(sentences)} sentences. Analyzing...", file=sys.stderr)
             
+            # Prepare neighboring sentences info if mode is enabled
+            if use_neighboring_sentences:
+                print("Using neighboring sentences as auxiliary context...", file=sys.stderr)
+            
             results = []
             for idx, sentence in enumerate(sentences, start=1):
                 print(f"Analyzing sentence {idx}/{len(sentences)}: {sentence[:50]}...", file=sys.stderr)
                 try:
+                    # Get neighboring sentences for batch processing
+                    previous_sentence = None
+                    next_sentence = None
+                    if use_neighboring_sentences:
+                        # idx is 1-based, convert to 0-based for indexing
+                        sent_idx = idx - 1
+                        if sent_idx > 0:
+                            previous_sentence = sentences[sent_idx - 1]
+                        if sent_idx < len(sentences) - 1:
+                            next_sentence = sentences[sent_idx + 1]
+                    
                     analysis = analyze_sentence(
                         sentence=sentence,
                         story_context=story_context if use_context else None,
                         use_context=use_context,
+                        previous_sentence=previous_sentence,
+                        next_sentence=next_sentence,
+                        use_neighboring_sentences=use_neighboring_sentences,
                         config=config,
                     )
                     results.append({
@@ -184,6 +251,7 @@ def main() -> int:
             output_data = {
                 "story_file": str(args.story_file) if args.story_file else None,
                 "use_context": use_context,
+                "use_neighboring_sentences": use_neighboring_sentences,
                 "total_sentences": len(sentences),
                 "analyzed_sentences": len(results),
                 "sentences": results,

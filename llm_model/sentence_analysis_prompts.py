@@ -24,6 +24,9 @@ def build_sentence_analysis_prompt(
     sentence: str,
     story_context: str | None = None,
     use_context: bool = True,
+    previous_sentence: str | None = None,
+    next_sentence: str | None = None,
+    use_neighboring_sentences: bool = False,
 ) -> str:
     """Build the user prompt for sentence-level event analysis.
     
@@ -31,8 +34,12 @@ def build_sentence_analysis_prompt(
         sentence: The specific sentence to analyze.
         story_context: The full story text providing context (optional if use_context is False).
         use_context: Whether to use story context in the analysis.
+        previous_sentence: The sentence immediately before the target sentence.
+        next_sentence: The sentence immediately after the target sentence.
+        use_neighboring_sentences: Whether to include neighboring sentences as auxiliary information.
     """
     
+    # Build task description with story context (if enabled)
     if use_context and story_context:
         task_description = (
             "# TASK\n"
@@ -44,9 +51,6 @@ def build_sentence_analysis_prompt(
             f"---\n"
             f"{story_context}\n"
             f"---\n\n"
-
-            f"**Sentence to Analyze**:\n"
-            f"\"{sentence}\"\n\n"
         )
     else:
         task_description = (
@@ -55,9 +59,22 @@ def build_sentence_analysis_prompt(
             "Determine if it contains an event, and if so, extract detailed information about it.\n\n"
 
             "# INPUT\n"
-            f"**Sentence to Analyze**:\n"
-            f"\"{sentence}\"\n\n"
         )
+    
+    # Add neighboring sentences as auxiliary information (if enabled)
+    # This is independent of story_context mode
+    if use_neighboring_sentences:
+        neighboring_info = ""
+        if previous_sentence:
+            neighboring_info += f"**Previous Sentence (Auxiliary Context)**:\n\"{previous_sentence}\"\n\n"
+        if next_sentence:
+            neighboring_info += f"**Next Sentence (Auxiliary Context)**:\n\"{next_sentence}\"\n\n"
+        
+        if neighboring_info:
+            task_description += neighboring_info
+    
+    # Add the target sentence to analyze
+    task_description += f"**Sentence to Analyze**:\n\"{sentence}\"\n\n"
 
     return (
         task_description +

@@ -34,6 +34,9 @@ def analyze_sentence(
     sentence: str,
     story_context: Optional[str] = None,
     use_context: bool = True,
+    previous_sentence: Optional[str] = None,
+    next_sentence: Optional[str] = None,
+    use_neighboring_sentences: bool = False,
     config: SentenceAnalyzerConfig = SentenceAnalyzerConfig(),
 ) -> Dict[str, Any]:
     """Analyze a single sentence, optionally within the context of a complete story.
@@ -42,6 +45,10 @@ def analyze_sentence(
         sentence: The specific sentence to analyze.
         story_context: The full story text providing context (required if use_context is True).
         use_context: Whether to use story context in the analysis. If False, only the sentence is analyzed.
+        previous_sentence: The sentence immediately before the target sentence (used if use_neighboring_sentences is True).
+        next_sentence: The sentence immediately after the target sentence (used if use_neighboring_sentences is True).
+        use_neighboring_sentences: Whether to use neighboring sentences as auxiliary information. 
+            This mode is orthogonal to use_context and can be used independently or together.
         config: Sentence analyzer configuration.
 
     Returns a dict containing:
@@ -68,6 +75,24 @@ def analyze_sentence(
         # If not using context, story_context is optional
         story_context = None
 
+    # Validate neighboring sentences if the mode is enabled
+    if use_neighboring_sentences:
+        # At least one neighboring sentence should be provided
+        if previous_sentence is None and next_sentence is None:
+            raise SentenceAnalysisError(
+                "At least one of `previous_sentence` or `next_sentence` must be provided "
+                "when `use_neighboring_sentences` is True"
+            )
+        # If provided, they should be non-empty strings
+        if previous_sentence is not None and (not isinstance(previous_sentence, str) or not previous_sentence.strip()):
+            raise SentenceAnalysisError("`previous_sentence` must be a non-empty string if provided")
+        if next_sentence is not None and (not isinstance(next_sentence, str) or not next_sentence.strip()):
+            raise SentenceAnalysisError("`next_sentence` must be a non-empty string if provided")
+    else:
+        # If not using neighboring sentences, ignore them
+        previous_sentence = None
+        next_sentence = None
+
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT_SENTENCE_ANALYSIS},
         {
@@ -76,6 +101,9 @@ def analyze_sentence(
                 sentence=sentence,
                 story_context=story_context,
                 use_context=use_context,
+                previous_sentence=previous_sentence,
+                next_sentence=next_sentence,
+                use_neighboring_sentences=use_neighboring_sentences,
             ),
         },
     ]
