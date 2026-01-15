@@ -1,0 +1,631 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_002_牛郎织女.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 43,
+  "analyzed_sentences": 43,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "相传织女是天帝的孙女，或说是王母娘娘的外孙女，这都用不着去管它了 ，总之，是有这么一个仙女，住在银河的东边，用了一种神奇的丝，在织布机上织出了层层叠叠的美丽云彩，随着时间和季节的不同而变幻它们的颜色，叫做\" 天衣\"，意思就是给天做的衣裳。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "银河的东边",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描述织女的身份、居住地及织造天衣的技艺，为故事建立了背景框架，属于设定叙事基础的'Situation'类别。核心地点聚焦于银河东边的织女居所。"
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "天也和人一样,是要穿衣裳的，虽然碧蓝如洗的赤裸青天自有它的美丽。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "sky",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes background context about the sky's need for clothing, setting up the narrative framework for the celestial weaving and the conflict between heaven and earth."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "做这种工作，除了织女而外，还有别的六位年轻的仙女，都是织女的姐妹，也都是天上的织造能手；织女在他们当中，是最勤勉、努力的一个。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "heavenly realm",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes background context about the celestial weaving work, introducing the characters (Zi Nu and her six sisters) and their roles as heavenly weavers, setting the stage for the narrative."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "隔着那条清浅的闪光的银河，就是人间。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "人间",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the spatial relationship between the celestial realm (where the weaving仙女 reside) and the human world (人间), setting up the narrative context for the separation between the divine and mortal realms."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "在那里住着一个牧牛郎，叫做牛郎，他的父母早死去了，常受哥嫂的虐待。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "人间",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence establishes the background context of Niulang's life in the mortal world, setting the stage for his struggles and the subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "終于，他被哥嫂不公平地分家出去，给了他一头老牛，叫他自立门户。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the cowherd being unfairly divided from his family and given a cow to start his own household, setting up the situation for future events. The location is not explicitly mentioned in this sentence."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "靠了老牛的帮助和他自己的努力劳动，他在荒野地上披荆斩棘，耕田种地，盖造屋子，一 两年后，居然菅建了一个小小的家，勉强可以维持生活。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "牛郎"
+        ],
+        "receivers": [
+          "家"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the actions taken by Niulang to build a house, making it an 'action' category. The doer is Niulang, and the receiver is the house."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "可是，除了那头不会说话的老牛以外，冷清的家里只有他一个人，日子过得相当寂寞。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "人间",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the current state of the cowherd's life in the human world, setting the stage for the subsequent events involving the cow's intervention. The location is specified as '人间' (human world) as per the story's context."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "有一天，老牛忽然口吐人言，告诉他，织女和别的仙女将要到银河去洗澡,叫他趁她们洗澡的时候，夺取织女的衣裳，她就可以成为他的妻子了。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "牛郎"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence explicitly states a requirement (to seize织女's clothes) that must be fulfilled by牛郎, making it a task. The cow's instruction directly assigns this responsibility to牛郎."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "惊异的牛郎终于听从了老牛的话，到时候悄悄便到银河岸边的芦牽丛里躲着，等候织女和她的女伴们的来临。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "牛郎"
+        ],
+        "receivers": [
+          "织女",
+          "仙女们"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 牛郎 taking action by going to hide and waiting for 织女 and her companions, making him the doer and the仙女们 the receivers."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "不一会儿，织女和美丽的仙女们果然来到银河洗操，脱下轻罗衣裳，纵身跃入清流，顷刻间，绿波荡漆的水面上就好像续开了朵朵的白莲。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "织女",
+          "仙女们"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the active action of 织女 and the仙女们 arriving at the银河 and performing the act of washing, which is a key event in the narrative progression."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "牛郎从芦苇里跑出来，从青草岸上仙女们的衣裳堆里夺取了织女的衣裳，惊骇的仙女们乱纷纷地急忙穿上自己的衣裳，像飞乌般地四下惊飞逃散,银河里就只剩下那个不能逃走的可怜织女。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "牛郎"
+        ],
+        "receivers": [
+          "织女的衣裳"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 牛郎 taking 织女's clothes from the仙女们, which is a direct activity performed by the character. The consequence of this action (仙女们 fleeing) is mentioned but the primary focus is on the action itself."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "牛郎对她说，她要答应做他的妻子，他才能还给她衣裳。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "织女"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence outlines a conditional task where 织女 must agree to marry 牛郎 in order for him to return her clothes, establishing a requirement that needs to be fulfilled."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "织女拿头发掩住她的胸脯，没法子只得含羞地点头（其实她对这虽然有点鲁莽可是却勇敢的少年也早已经动了一点爱念了）；这样，她就真的做了牛郎的妻。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "织女同意成为牛郎的妻子，两人结婚",
+        "explanation": "该句描述了牛郎夺取织女衣裳这一行动后的直接结果，即织女被迫同意结婚，导致两人关系发生根本性转变，符合'consequence'类别中因前序事件引发状态变化的定义。"
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "他们结婚以后，男耕女织，相亲相爱，生活过得非常美满幸福；不久生下了一儿一女，都是可爱的孩子。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "婚后夫妻生活美满幸福并生育子女，建立家庭",
+        "explanation": "该句描述牛郎织女结婚后的幸福生活及生育子女的结果，属于婚姻关系建立后的状态变化，符合'consequence'类别中因先前事件（结婚）导致的后续状态改变"
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "夫妻俩满以为能够終身厮守，白买到老。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "人间",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述牛郎织女夫妇在结婚后生活的美好预期，为后续被天帝强行分离的冲突事件建立背景，'人间'是他们最初生活的情境地点。"
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "哪知道天帝和王母娘娘查明了这回事情，都非常震怒，马上派遣天神，把织女捉回天庭问罪。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "织女被天庭捉回，导致牛郎与织女被迫分离",
+        "explanation": "该句描述了天帝和王母娘娘查明牛郎织女婚姻后震怒并采取行动的后果，直接导致了织女被捉回天庭，改变了夫妻分离的结局，属于对前事件的因果结果描述。"
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "王母娘娘怕天神办事疏虞，还亲自跟来观察动静。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the Queen Mother's concern regarding the heavenly officials' actions, setting the stage for her subsequent intervention. It does not mention a specific location, so the location field is left empty."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "织女和丈夫、孩子惨痛地分离，被天神押解着回天庭去。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "织女与丈夫、孩子被迫分离，被押解回天庭，导致家庭破裂和无法团聚的结局",
+        "explanation": "该句描述了天神押解织女回天庭导致的直接后果，即家庭成员的分离和无法团聚的状态变化，属于前序事件（天帝查实婚姻并派遣天神）的连锁反应。"
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "牛郎见爱妻去了，悲痛万分，立刻用箩筐挑了儿女们，连夜跟踪追去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "牛郎"
+        ],
+        "receivers": [
+          "儿女们"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 牛郎's action of taking his children and chasing his wife, which is an active performance by 牛郎 with the children as the direct recipients of his action."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "他原打算渡过那清浅的银河, 一直就到天庭，哪知道到了银河的地方，却早已消逝了银河的踪影,抬头一看, 原来银河已经被王母娘娘用法力搬到了天上。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "银河被王母娘娘用法力搬到了天上，导致牛郎无法再接近银河",
+        "explanation": "该句描述了牛郎试图渡过银河到达天庭时，发现银河已消失并被王母娘娘移到天上的结果，这是对牛郎行动的直接后果描述，属于consequence类别。"
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "在苍蓝色的夜空中，银河，还是那么一秘清浅的闪光的水流，可是已经仙凡异路，再也不能够接近它了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "银河成为仙凡永隔的不可逾越的天堑",
+        "explanation": "该句描述了王母娘娘用法力将银河搬到天上后造成的后果，即银河成为阻隔人间与天庭的永恒屏障，导致牛郎织女无法再相会。这是对前文'王母娘娘用法力搬到了天上'这一行动的直接结果描述。"
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "牛郎回到家里，和儿女们一样，插胸顿足，悲哀地号眺，爷儿三个哭做一团。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "牛郎与儿女因无法与织女团聚而陷入极度悲痛，家庭陷入分离后的绝望状态",
+        "explanation": "该句描述了牛郎与儿女在失去织女后的悲痛反应，是天帝强行分离夫妻导致的直接结果，体现了分离事件对家庭关系的破坏性后果。"
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "老牛在牛圈里又第二次发出人声：\"牛郎，牛郎，我快要死了，我死以后，你剥下我的皮来披在身上，就可以上天堂去。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "老牛"
+        ],
+        "receivers": [
+          "牛郎"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 老牛 performing the action of speaking to 牛郎, instructing him on what to do after its death. This is an active behavior by 老牛 that directly affects 牛郎's next course of action."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "老牛说完话，便倒地死去，牛郎果然披了老牛的皮，仍旧挑着一对儿女，追上天去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "牛郎"
+        ],
+        "receivers": [
+          "一对儿女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 牛郎 (the cowherd) taking the cow's skin and continuing to carry his children to heaven, which is a direct activity performed by the character."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "为了使箩筐两头的重量均衡，他随意拿了个粪瓢来放在箩筐的一头。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "牛郎"
+        ],
+        "receivers": [
+          "箩筐"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of placing a dung pot on the basket to balance its weight, performed by Niang郎 (牛郎) and affecting the basket."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "牛郎到了天上，风样地穿行在灿烂的群星之间，那银河，已经遥遥在望，隔河的织女，也仿佛可以看见。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "天上",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the current state of Niulang after reaching the heavens, setting the stage for the subsequent events involving the Milky Way and his reunion with Zhinv. The location '天上' (heavens) is the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "牛郎大喜过望，孩子们招着小手儿齐声欢呼：\"妈妈！妈妈！\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "牛郎与织女重逢的希望被激发，家庭团聚的喜悦情绪被引发",
+        "explanation": "该句描述牛郎抵达天庭后与织女重逢的喜悦场景，是王母娘娘阻断银河后牛郎仍坚持追寻导致的直接结果，体现了人物情感状态的转变和故事关键转折点。"
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "哪知道刚跑到银河，正想要涉河过去的时候，从更高的天空中忽然伸下来一只女人的大手————原来是王母娘娘着了急，拨下她头上的金簪，沿着银河这么一划，清浅的银河马上变成波满滚滚的天河。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "清浅的银河转变为波满滚滚的天河，阻断了牛郎与织女的团聚",
+        "explanation": "该句描述了王母娘娘用金簪划出天河后导致的直接结果，即原本可渡的清浅银河变为无法跨越的湍急天河，改变了牛郎追妻的物理可能性，属于前行动作引发的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "对着这天河，眼泪除了像天河里的水一样地满涌奔流，还有什么法子可想呢？",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The separation of the couple by the天河, leading to their emotional despair and the realization of their permanent separation",
+        "explanation": "The sentence describes the emotional outcome of the天河's creation, which physically separates the couple and leads to their sorrowful state. This is a consequence of the prior action where Bāomǔ娘娘 transformed the银河 into a vast天河, making reunion impossible."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "\"爹爹，我们拿这粪瓢来舀干天河的水。\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "小女儿",
+          "牛郎"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task proposed by the daughter to her father, suggesting they use a feces dipper to dry up the天河. The task roles are the daughter and the father."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "小女儿終于揩干了眼泪，瞪着一对小眼睛, 这么天真而又倔强地提议。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小女儿"
+        ],
+        "receivers": [
+          "牛郎"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter's action of wiping tears and making a proposal, which directly leads to the task of舀干天河的水. The daughter (doer) is proposing the action, and the father (receiver) is the one who will perform the task."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "\"对 ,我们来舀干天河的水。\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "小女儿",
+          "牛郎"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a proposed task to 'scoop dry the天河' (Heavenly River), with the daughter and father as the roles committing to this responsibility."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "悲愤的牛郎毫不犹豫地答应了。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "牛郎",
+          "小儿女"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates the cowherd's agreement to the plan of scooping the天河, which constitutes a commitment to fulfill the task. The task roles include both the cowherd and his children, as they are the ones taking action."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "说着，他果然拿起粪瓢，奋勇地一瓢一瓢地去舀那天河的水。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "牛郎"
+        ],
+        "receivers": [
+          "天河的水"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the active action of Niu Lang scooping water from the Milky Way using a feces bucket. The doer is '牛郎' (Niu Lang), and the receiver is '天河的水' (the water of the Milky Way)."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "他舀得倦乏了，儿女们又合力用他们稚弱的小手来帮爹爹自。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "儿女们"
+        ],
+        "receivers": [
+          "牛郎"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the children assisting their father in scooping the river, which is an active action performed by the children (doers) to help their father (receiver)."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "这坚强而执著的爱情，终于也稍稍感动了那威严的天帝和王母娘娘冷硬的心肠，允许他们每年七月七日的晚上相见一次，相见的时候，由喜鹤来替他们搭桥。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "天帝和王母娘娘允许牛郎和织女每年七月七日的晚上在鹊桥相会",
+        "explanation": "该句描述了牛郎织女的爱情故事导致天帝和王母娘娘改变原有决定的结局，属于前文事件（子女舀天河）引发的因果结果。"
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "夫妻俩就在鹤桥上相会，诉说衷情。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "牛郎",
+          "织女"
+        ],
+        "receivers": [
+          "织女",
+          "牛郎"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the couple's active meeting on the magpie bridge and confiding their feelings, which is an action performed by both characters towards each other."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "织女见了牛郎，免不得悲哀哭泣，这时大地上往往就是一阵细雨纷纷，妇女们都忍不住带着同情和叹伤的口吻说：“姐姐又哭了！”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "织女哭泣导致大地上细雨纷纷，妇女们同情地议论",
+        "explanation": "该句描述了织女与牛郎相会后哭泣引发的自然现象（细雨）及人间反应（妇女议论），属于前文事件（鹊桥相会）的后果，符合consequence分类。"
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "牛郎和他的儿女从此就住在天上，隔着一道天河，和爱妻织女遥遥相望，假如他们为相思所苦的时候，他们也自有巧妙的方法，传书递信，互通消息。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "牛郎、织女及儿女被分隔在天河两岸，但通过鹊桥传递书信维持联系",
+        "explanation": "该句描述了牛郎一家与织女被天河分隔后的长期状态，是天帝惩罚和王母娘娘干预事件的直接结果，体现了故事冲突的最终结局。"
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "在秋夜天空的繁星中间，至今我们还可以看见有两颗较大的星，在那条白练样的天河两边，晶莹地闪烁着，那就是牵牛星和织女星。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "秋夜天空",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the current observable phenomenon of the Cowherd and Weaver stars in the autumn night sky, establishing the enduring legacy of the story's characters. This sets the stage for understanding the symbolic representation of their love."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "和牵牛星并列成直线的两颗小星，是他俩的小儿女。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "夜空",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the celestial representation of the Cowherd and Weaving Maid's children in the night sky, establishing the symbolic location of their story."
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "稍远地方有四颗像平行四边形的小星，据说就是织女投掷给牛郎的织布梭；距织女星不远有三颗小星，像等腰三角形，据说就是牛郎投掷给织女的牛拐子；他俩把书信缚在梭和牛拐子上，就用这种方法传达相思。————他们的爱情，真可算是海枯石烂，坚贞不移了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "their love being eternal and symbolized by the stars, allowing them to meet once a year on the bridge",
+        "explanation": "The sentence describes the outcome of the prior events in the story, highlighting the enduring nature of the couple's love and its celestial symbolism, which is the consequence of their separation and the intervention of the heavens."
+      }
+    }
+  ]
+}

@@ -1,0 +1,2137 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_003_孟姜女哭长城.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 147,
+  "analyzed_sentences": 147,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "秦始皇派遣卢教到东海去访求神仙，卢教去了大半年，带回来一卷仙书。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "东海",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the initial context of Qin Shi Huang's quest for immortality by sending Lu Jiao to the East Sea, setting the stage for subsequent events involving the mysterious scroll and its implications."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "书上写的是弯弯扭扭的蝌蚪文字，满朝文武都不认识。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the content of the book brought back by Lu Jiao, establishing context for the subsequent events involving the emperor's reaction to the cryptic message. It sets the stage for the story's development without introducing a specific location."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "挣大了眼睛仔细辨认，约略认得五个字：\"亡秦者胡也。\"————秦始皇大吃一惊：什么，我的江山会葬送在北方胡人的手里？",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "秦始皇意识到他的江山会葬送在北方胡人的手里",
+        "explanation": "The sentence describes the consequence of Qin Shi Huang reading the text, leading to his realization that his empire will fall to the northern Rong people."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "这还了得！",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence expresses Qin Shi Huang's shock and concern upon realizing the prophecy in the immortal book, setting the stage for his subsequent actions (building the Great Wall) and establishing the narrative context for the story's conflict."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "该好好地防备着他们才是。————可怜的秦始皇，他却没有料到仙书所说的“胡”，原是指自己的儿子胡亥，后来胡亥做了皇帝，荒淫无道，果然把大好的江山葬送掉了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the emperor's son R亥 became emperor and led to the downfall of the Qin dynasty",
+        "explanation": "The sentence describes the outcome of the emperor's misinterpretation of the prophecy, leading to the downfall of the Qin dynasty through his son's tyranny. This is a consequence of the prior event (misreading the prophecy)."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "这是题外话，略过不提。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence serves as a narrative transition, indicating the author is shifting focus from the previous topic (the prophecy about 'R') to the main story about the Great Wall construction. It provides contextual setup for the upcoming narrative without introducing a specific location."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "且说秦始皇为了防备胡人的侵略，就下道圣旨，征发八十万民夫到北方去修筑一道万里长城。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "民夫"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence states an explicit requirement (to build the Great Wall) and identifies the laborers (民夫) as the task roles responsible for fulfilling this task."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "修长城需要很多石头，不知他从哪里弄来了赶山神鞭，拿着鞭子望空一抖，天下的石头都自动地跑来，聚集在长城脚下。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "秦始皇"
+        ],
+        "receivers": [
+          "石头"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of Qin Shi Huang using the '赶山神鞭' to gather stones for the Great Wall, which is an active activity performed by the emperor to fulfill the construction task."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "石头有了，马上就得动手开工。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "workers"
+        ],
+        "receivers": [
+          "长城"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the initiation of construction work on the Great Wall after obtaining stones, indicating an active activity performed by workers (doers) on the长城 (receiver)."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "那时有这么一种说法：要使新修的长城永远坚固，就得拿活人去填城。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "长城",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过引入'拿活人填城'的传说，为后续官员决定实施活人填城的行动提供背景设定，属于叙事中的情境铺垫。"
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "督率修城的大小官员都相信这种说法，决计要拿活人去填城，每一里要一个活人去填，一万里就得要一万人。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "督率修城的大小官员"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence states that the officials in charge of building the city have decided to implement the practice of using live people to fill the city, which is a task they are committing to."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "消息一传出，人人胆怕，个个心惊，都怕被活埋在长城下面。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "长城",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the widespread fear and anxiety among people upon learning about the plan to use live humans to fill the Great Wall, establishing the social context and emotional atmosphere leading to subsequent events."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "到处闹哄哄的，充满着动礼不安的景象。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the widespread fear and unrest caused by the conscription order, setting the stage for the subsequent events. It provides background context about the societal impact of the长城 construction without specifying a location."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "官员们一见这光景，也都暗中着慌。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the officials' reaction to the chaotic situation caused by the conscription for the Great Wall construction, setting the stage for their decision to act. No specific location is mentioned in the sentence itself."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "正在这时，不知从哪里传出了两句童遥： 苏州有个万喜良， 一人能抵万民亡。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "苏州",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the spread of a folk rhyme mentioning '苏州' as the location, setting the context for subsequent events involving the capture of万喜良. This establishes the narrative backdrop leading to the task and actions in the story."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "这童遥传出不久，像生了翅膀长了足似的，一传十，十传百，到处都传开了，官长们也听到了这两句童遥。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the rapid spread of the folk song, establishing context for how information travels and leads to officials taking action. It sets the stage for subsequent events without specifying a location."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "他们心里想，旣然苏州万喜良有这么大的功效，就到苏州去捉拿他来填城，倒省得许多麻烦。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "官长们"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the officials' decision to send enforcers to capture Wan Xilang in Suzhou, indicating an explicit requirement (task) to execute this action. The task roles are the officials (官长们) who initiate the plan, and the target (receiver) is Wan Xilang."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "大家商议已定，便派差官去捉拿万喜良。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "差官"
+        ],
+        "receivers": [
+          "万喜良"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of sending officials (差官) to capture Wan Xilang, with Wan Xilang as the target of the action. This directly reflects the active performance of the task decided upon in the previous sentence."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "童遥也许是瞎编出来的，不料苏州果真有个文弱书生叫万喜良。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "苏州",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context by revealing the existence of a real person (万喜良) in Suzhou, which sets the stage for the subsequent events involving his capture. The location '苏州' is explicitly mentioned as the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "差官还没赶到苏州，童遥已经先传到苏州了。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "苏州",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of the ballad spreading to Suzhou before the officials arrived, setting the stage for万喜良's subsequent flight and the story's progression."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "万喜良听了童遥，吓得魂不附体，赶紧收拾点简单行李，打做个小包袱，背上它，辞别爹娘，到远方避难去了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "万喜良"
+        ],
+        "receivers": [
+          "爹娘"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes万喜良 actively taking actions to avoid capture by packing行李, leaving his parents, and fleeing to safety. The doer is万喜良, and the receivers are his parents as he is departing from them."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "他在路上餐风饮露，走了非止一天。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "万喜良"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes万喜良's active movement and endurance during his journey, which constitutes an action performed by him. There is no clear receiver of the action, as he is traveling alone."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "这一天，来到松江府地面，只听见路上的人沸沸扬扬地传说，秦始皇修万里长城，捉拿“一人能抵万民亡”的万喜良没捉住，民夫们害怕大祸响头，逃跑了许多，现在又在别处拉夫，来补充逃亡的民夫了。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "松江府",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of the story by describing the spread of rumors about the emperor's长城 construction and the resulting mass conscription, setting the stage for the subsequent events involving Wan Xilang's escape and Meng Jiangnü's journey."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "万喜良一听这话，心里正发慌，又见大路远方烟尘滚滚，好像差官正骑马出来捉人的光景，更使他发慌不已。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes万喜良's emotional reaction to the threat of being captured, establishing the context of his fear and the impending danger. This sets the stage for his subsequent actions without explicitly mentioning a location."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "幸喜路旁有一所庄院，他就赶紧沿着短墙爬了进去, 躲在庄院的花园里。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "万喜良"
+        ],
+        "receivers": [
+          "庄院的花园"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 万喜良 crawling into the garden of a farmstead to hide from pursuers. The doer is 万喜良, and the receiver is the garden (庄院的花园) where he takes refuge."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "这所庄园，原来是孟员外的庄院。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "庄园",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence provides background context about the location where key events unfold, establishing the setting for the subsequent interactions between characters."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "孟员外夫妇年将半百，没儿没女，单有一个养女，名叫孟姜女，员外夫妇都非常宠爱。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence provides background context about Meng Yuanwai's family situation, establishing the characters' circumstances before introducing key plot elements. It sets the stage for subsequent events without introducing a specific location."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "提起孟姜女的来历，却很稀奇。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "孟员外的庄院",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过引入孟姜女的身世背景，为后续关于她出生的奇幻故事（冬瓜中诞下女婴）建立叙事框架，属于设定故事背景的'情况'类别。"
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "有一年，孟家的家人孟兴在院墙角栽了一棵冬瓜，瓜蔓沿着短墙爬过去，一直爬到隔壁姜婆的房顶上，就在那里结了一个大冬瓜。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "院墙角",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了孟兴在院墙角种植冬瓜的背景事件，为后续冬瓜归属纠纷及孟姜女身世的奇遇设定叙事基础，核心地点聚焦于孟家院墙角。"
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "孟兴说这冬瓜是他的，因为是他栽的；姜婆说这冬瓜是她的，因为分明在她的房顶上。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "姜婆的房顶",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述孟兴与姜婆因冬瓜归属权产生的争执，为后续冬瓜剖开诞下孟姜女的奇幻情节提供背景冲突，属于故事发展的重要铺垫。"
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "两个人为争冬瓜，吵嚷了半天。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "墙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the background conflict between Meng Xing and Jiang Po over the winter melon growing on the wall, setting the stage for the subsequent discovery of the baby girl. The location '墙' (wall) is the narrative focus where the dispute occurs."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "后来終于商议定：拿刀子将冬瓜剖成两半，两个人各要半边。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "孟兴",
+          "姜婆"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the agreement between 孟兴 and 姜婆 to split the winter melon into two halves, which establishes a specific task they must fulfill. This decision sets the stage for the subsequent discovery of the baby inside the melon."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "孟兴正拿刀去剖冬瓜，冬瓜里忽然传出婴孩的哭声，一时把孟兴和姜婆都吓慌了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟兴"
+        ],
+        "receivers": [
+          "冬瓜"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of孟兴 cutting the winter melon, which is a direct physical action performed by the character. The consequence of the baby's cry is a result of this action, but the sentence itself focuses on the active act of cutting."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "孟兴是男人，胆子大, 到底还是拿刀小心翼翼地剖开了瓜，却见瓜里躺着个白胖胖的眉清目秀的女孩。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟兴"
+        ],
+        "receivers": [
+          "冬瓜"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Meng Xing's action of cutting open the winter melon, which directly leads to the discovery of the girl. This is an active activity performed by the character, fitting the 'action' category."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "两人都想要这女孩，可是女孩却不能像冬瓜那样地分剖。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes a conflict over the ownership of the girl found inside the winter melon, setting up the subsequent adoption scenario. It provides background context for the narrative progression without specifying a physical location."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "正好孟员外没儿没女，就收女孩做了养女。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "孟员外的庄院",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述孟员外因无子嗣而收养女孩的背景情况，为后续孟姜女与万喜良的相遇和婚姻关系建立提供情境基础，属于故事背景设定。"
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "姜婆则留在孟府，由孟员外供给伙食，养老送終。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "孟府",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence establishes the background context of Jiang Po's current living situation after the wintermelon incident, setting the stage for subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "因为女孩是出自孟姜两姓，就取名叫做孟姜女，现在已经长成为一个十七八岁的聪明美丽的大姑娘了。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "孟家庄院",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过说明孟姜女的身世背景（孟姜两姓）和成长状态（十七八岁聪明美丽的大姑娘），为后续故事中孟姜女救夫、哭倒长城等情节提供人物背景设定，属于叙事中的情境铺垫。"
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "万喜良在孟家花园池塘边一棵掠树下躲了些时侯，见没有什么动静，正想离开花园，登程上路。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "万喜良"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes万喜良 actively performing the action of hiding in the garden and planning to leave, which is an ongoing activity he is undertaking."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "却见一个年轻美丽的姑娘————不用说就是孟姜女了————一手里拿着一把白团扇，从池塘那边走过来，边走边扑蝴蝶。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [
+          "蝴蝶"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 孟姜女's action of walking and chasing butterflies, which is an active activity performed by her."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "一对黄蝴蝶，在半空中飞舞着，沿着池岸歪歪斜斜，忽闪忽闪地飞，姑娘追踪着蝴蝶一个劲儿地扑，扑呀扑地，一个不留神，忽然失足跌落在池子里了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [
+          "蝴蝶"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the girl (孟姜女) chasing butterflies, which directly leads to her falling into the pool. The doer is the girl, and the receiver is the butterflies she is pursuing."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "在姑娘的惊呼求救声中，万喜良急忙从树后跑出，抓住姑娘的双手，连挽带拖，把姑娘拖到池边草地上，这时姑娘的大半个身子已经被泥水浸湿透了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "万喜良"
+        ],
+        "receivers": [
+          "姑娘"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes万喜良 actively rescuing the girl from the pool, detailing his physical action of grabbing her hands and pulling her to safety. This constitutes an explicit action performed by the doer (万喜良) on the receiver (姑娘)."
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "孟员外闻声帯着夫人和使女赶来，见自己的女儿和一个陌生少年面对面站在池边草地上，少年还紧拉住女儿的双手不放，女儿则半身湿透，通红着脸，样子很尴尬。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "池边草地",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence establishes the setting where孟员外 arrives and observes his daughter and万喜良 in a compromising situation, setting the stage for the subsequent conflict and resolution."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "一问情由，才知道少年名叫万喜良，因躲避拉夫逃进花园，偶然救了失足落水的女儿的性命。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "孟家花园",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过交代万喜良因躲避拉夫逃入孟家花园并偶然救下落水女儿的背景，为后续孟员外招赘其为女婿的情节发展提供情境基础，属于设定故事背景的Situation类别。"
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "女儿遇救当然是好事，可是“男女授受不亲”，这是自古相传下来的礼节呀，如今破坏了这礼节，怎么是好呢？",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the social conflict arising from the rescue incident, setting the stage for the family's dilemma regarding the violation of traditional etiquette. It provides context for the subsequent decision to marry the couple, fitting the 'situation' category as it outlines the background and conflict without introducing new actions or outcomes."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "看来只有招赘这个逃亡人做自己的女婿，才能解决这个难题了。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "孟员外",
+          "孟姜女"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence states the requirement to resolve the dilemma by taking the escaped man as a son-in-law, assigning the task to both the father (孟员外) and the daughter (孟姜女) to fulfill this responsibility."
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "他便把这番心意向万喜良和女儿说明。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟员外"
+        ],
+        "receivers": [
+          "万喜良",
+          "孟姜女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes孟员外 actively performing the action of explaining his plan to both万喜良 and his daughter, making them the direct receivers of his communication."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "这一对年貌相当的少年男女，在这一场奇遇中，早已经一见倾心，互相爱慕了，自然没有话说。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "孟家庄院",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述万喜良与孟姜女在孟家庄院相遇后已产生爱慕之情，为后续婚礼情节提供情感背景，属于设定故事发展基础的情境描述。"
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "于是当天晚上，孟员外就盼咐张灯结彩，给这一对新人举行了婚礼。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟员外"
+        ],
+        "receivers": [
+          "一对新人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of holding a wedding ceremony, with 孟员外 as the organizer (doer) and the couple (一对新人) as the recipients of the wedding action."
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "哪知结婚还不到三天，不幸万喜良逃避在孟家庄的消息传了出去。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the news of Wan Xilang's escape spread, leading to the arrival of officials to capture him",
+        "explanation": "The sentence describes the outcome of Wan Xilang's escape, which caused the news to spread and triggered the officials' pursuit. This state change sets up the subsequent events of the officials arriving to capture him."
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "那天早晨，一对新人刚起床，孟姜女正在对镜梳妆的时侯，外面忽然来了如狼似虎的公差，手执绳索和锁链，声称要捉拿逃亡的罪犯万喜良。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "公差"
+        ],
+        "receivers": [
+          "万喜良"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the arrival of the constables (doers) who come to arrest万喜良 (receiver), which is an active event directly leading to his capture. This falls under 'action' as it depicts an ongoing activity with clear actors and recipients."
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "公差们到处搜寻了一遍没寻着，却在柴房里一堆索索抖动的柴禾里寻着了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "公差们"
+        ],
+        "receivers": [
+          "万喜良"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the constables (公差们) searching and ultimately finding万喜良 in the straw pile. This is an active performance of a task by the constables directed at the target (万喜良)."
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "于是不由分说，将他绳捆索绑，又拿铁链锁起来，好像一只肉馄炖。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "公差"
+        ],
+        "receivers": [
+          "万喜良"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the officers (公差) physically restraining and chaining万喜良, making him the receiver of this action. This directly depicts an active activity performed by the officers against万喜良."
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "万喜良只得和新婚的妻子惨痛分别, 说自己此去定然凶多吉少，劝她另行择配，不要耽误青春。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "万喜良被迫与新婚妻子分离，并劝告妻子另寻良配，导致夫妻关系终结",
+        "explanation": "该句描述了万喜良被官差捕获后与新婚妻子分离的直接结果，属于前序事件（被逮捕）的后果。这一情节发展导致了夫妻关系的终结，并促使孟姜女后续展开寻夫行动。"
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "孟姜女眼见秦始皇虐待人民的暴行，心痛亲爱的丈夫无辜遭祸，肝肠寸断，心如刀绞，哭得像个泪人似的。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "孟姜女因丈夫无辜受害和秦始皇的暴行而极度悲痛，决定采取行动反抗",
+        "explanation": "该句描述了孟姜女因丈夫被冤枉处死和秦始皇的暴行而产生的强烈情感反应，这是之前事件（丈夫被处决）的后果，导致她后续的行动。"
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "万喜良被抓去以后，贬眼就是半年多，一直杳无音讯。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "万喜良被逮捕后下落不明，导致孟姜女在寻找丈夫的过程中经历漫长等待",
+        "explanation": "该句描述了万喜良被逮捕后杳无音讯的后果，直接导致孟姜女后续寻找丈夫的行动和情感变化，属于前事件（逮捕）引发的状态变化"
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "十月初，北风起了，刮得河岸边芦花飘飘荡荡，人们也开始感到了寒冷。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "河岸边",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描述十月初北风起、芦花飘荡、人们感到寒冷的自然景象，为后续孟姜女寻夫、过河等情节提供了季节和环境背景，属于设定故事发展基础情境的'situation'类别。"
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "有天晚上，孟姜女做了个梦，梦见丈夫从外面回来，一进门就喊：\"天哪！冻死我了！\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes a dream experienced by Meng Jiangnü, which serves as background context for her subsequent actions. It sets the stage for her emotional state and motivation to seek her husband's remains, fitting the 'situation' category as it provides narrative context without indicating a specific location."
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "醒来回想梦境，不禁十分凄惶。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "孟姜女感到极度悲伤",
+        "explanation": "该句描述了孟姜女在梦醒后因回忆丈夫冻死的噩梦而产生的强烈情感反应，这是对前文梦境事件的直接心理后果，符合'consequence'类别中因先前事件导致状态变化的定义。"
+      }
+    },
+    {
+      "sentence_index": 60,
+      "sentence": "幸喜她老早就为丈夫做好了一件寒衣，要亲自给他送去，只因员外夫妇再三劝阻，一时没能够成行。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "孟姜女"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates Clangnü female's intention to fulfill a responsibility (sending her husband's winter coat) despite external obstacles, establishing her as the task role."
+      }
+    },
+    {
+      "sentence_index": 61,
+      "sentence": "这回又苦苦地向爹妈恳求，员外夫妇见女儿志向坚决，无可奈何，只得应允了她。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the parents agreed to let her go on her journey",
+        "explanation": "The sentence describes the outcome of孟姜女's persistent pleas to her parents, resulting in their reluctant agreement to let her travel. This is a consequence of her previous actions and sets up the next phase of her journey."
+      }
+    },
+    {
+      "sentence_index": 62,
+      "sentence": "孟姜女于是把给丈夫做的寒衣和几件随身换洗的衣服打做一个小包袱，又带了一把雨伞, 一并杠在肩上，辞别爹妈，登程上路。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女 actively performing the action of packing her belongings and departing, which is a direct physical action she takes to prepare for her journey. The doer is clearly孟姜女, and there are no explicit receivers mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 63,
+      "sentence": "她走了许多时候，有一天，来到一条大河前面，只见河里波浪滔滔，既无桥梁，又无渡船，这怎么过得去呢？",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "大河",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of孟姜女 arriving at a river without bridges or boats, setting the stage for the subsequent challenge of crossing the river. This situational description focuses on the location as the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 64,
+      "sentence": "她就坐在河岸边伤心地哭泣，一边哭一边拿手掌拍打河岸。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [
+          "河岸"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女 actively performing the action of sitting by the riverbank and beating the riverbank with her hands while crying. The doer is孟姜女, and the receiver is the riverbank, as her actions directly interact with it."
+      }
+    },
+    {
+      "sentence_index": 65,
+      "sentence": "说也奇怪，那滔滔滚滚的河水，就随着她手掌的每一拍打,一寸一寸浅了下去，终于完全干洞。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the river dried up completely",
+        "explanation": "The sentence describes the outcome of孟姜女's previous action of crying and hitting the riverbank, resulting in the river drying up. This is a direct consequence of her actions, altering the state of the river from a flowing body of water to a dry riverbed."
+      }
+    },
+    {
+      "sentence_index": 66,
+      "sentence": "孟姜女就从干润的河床横穿过去，到达了对岸。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [
+          "对岸"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女's action of crossing the dried riverbed to reach the opposite bank, which is a direct physical movement performed by the protagonist."
+      }
+    },
+    {
+      "sentence_index": 67,
+      "sentence": "像这一类的艰难辛苦，一路上孟姜女不知经历了多少，后来总是会出现奇迹，使她每一次都能平安地渡过。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the general context of孟姜女's journey, highlighting the challenges she faces and the recurring miracles that aid her. This sets the stage for the narrative without specifying a particular location, fitting the 'situation' category."
+      }
+    },
+    {
+      "sentence_index": 68,
+      "sentence": "一路行来，渐渐临近长城地面了，孟姜女心里充满着焦灼和不安，不知道丈夫是生是死，或存或亡。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "长城地面",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女's emotional state and her approach to the Great Wall, establishing the context for her journey and the uncertainty about her husband's fate."
+      }
+    },
+    {
+      "sentence_index": 69,
+      "sentence": "长城地面这么宽广，更不知丈夫在哪个方向。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "长城地面",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女's emotional state and the challenging environment as she approaches the Great Wall, establishing the context for her subsequent actions. The location '长城地面' (Great Wall area) is the narrative focus where the story's tension and conflict unfold."
+      }
+    },
+    {
+      "sentence_index": 70,
+      "sentence": "正踌躇 间，只见路旁田野里忽然飞来一对小乌鸦，绕着孟姜女飞，不住\"哇哇哇\" 地叫。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "路旁田野里",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the emergence of a new event (the appearance of crows) that sets the stage for subsequent developments in the narrative, establishing a new contextual scenario for孟姜女's journey."
+      }
+    },
+    {
+      "sentence_index": 71,
+      "sentence": "孟姜女觉得奇怪，便说：\"乌鸦，你莫不是来替我引路的么？\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [
+          "乌鸦"
+        ],
+        "changed_state": "",
+        "explanation": "孟姜女主动与乌鸦对话，询问其是否引导自己，这是她主动发起的互动行为，属于行动类别。"
+      }
+    },
+    {
+      "sentence_index": 72,
+      "sentence": "一对乌鸦好像懂得人意，便\"哇哇\" 地叫着，朝前直飞，飞了一程又一程。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "乌鸦"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the active action of the pair of crows flying forward in response to孟姜女's request, indicating their behavior as the primary action performed."
+      }
+    },
+    {
+      "sentence_index": 73,
+      "sentence": "孟姜女就跟着这一对小乌鸦，赶了二三十里路的光景。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [
+          "小乌鸦"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女 actively following the two small crows as they guide her journey, which constitutes an action performed by her. The crows serve as the directional guide (receiver) for her movement."
+      }
+    },
+    {
+      "sentence_index": 74,
+      "sentence": "看着天色晚了，忽然从树林里飞起来一大群乌鸦，把两只小乌鸦团团围困在核心。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "树林里",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述孟姜女在追寻丈夫的过程中遇到乌鸦群围困小乌鸦的情景，为后续情节发展（乌鸦引路、长城崩塌等）提供背景铺垫，属于叙事中的情境设定。"
+      }
+    },
+    {
+      "sentence_index": 75,
+      "sentence": "孟姜女仰头一看，心想：“坏了，小乌鸦一定冲不出来了！”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女's realization of the imminent danger to the small crows, setting up the subsequent action where the crows escape. This establishes the context for the upcoming events, fitting the 'situation' category with no specific location mentioned."
+      }
+    },
+    {
+      "sentence_index": 76,
+      "sentence": "哪知道两只小乌鸦在乌鸦阵里盘旋挣扎了一会儿，冲出了群鸦的包围，斜刺里像箭似的窜下来，落在附近一株华表木上。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "两只小乌鸦"
+        ],
+        "receivers": [
+          "群鸦"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the two small crows breaking through the surrounding crows' formation and landing on a monument. The doers are the two small crows, and the receivers are the surrounding crows that were initially surrounding them."
+      }
+    },
+    {
+      "sentence_index": 77,
+      "sentence": "群鸦在空中乱噪了一阵，也就各自飞散了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The group of crows dispersed after being disturbed by the small crows' actions",
+        "explanation": "The sentence describes the outcome of the prior event where the small crows led孟姜女 to the village, causing the larger group of crows (群鸦) to scatter. This is a consequence of the previous action."
+      }
+    },
+    {
+      "sentence_index": 78,
+      "sentence": "华表木上的小乌鸦又带着孟姜女飞了一程，到达一处小小的村庄，两只乌鸦才突然飞得不知去向。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小乌鸦"
+        ],
+        "receivers": [
+          "孟姜女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the small crows carrying Meng Jiangnü to a village. The crows (doers) perform the action of flying with her (receiver), which is a key plot progression in the story."
+      }
+    },
+    {
+      "sentence_index": 79,
+      "sentence": "孟姜女到村庄东头一户人家叩门借宿。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Meng Jiangnü actively performing the action of traveling to a house and knocking on the door to seek shelter. The doer is clearly Meng Jiangnü, while the receiver is not explicitly identified in the sentence."
+      }
+    },
+    {
+      "sentence_index": 80,
+      "sentence": "出来一位老翁，自称是塞翁,在这边境上住了多年了，长城就在前面不远。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "边境",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过引入塞翁这一角色及其居住的边境地区，为后续故事发展提供地理和人物背景，属于设定叙事场景的'Situation'类别。"
+      }
+    },
+    {
+      "sentence_index": 81,
+      "sentence": "为修这长城，累死病死的民夫不计其数，尸骨都填筑在长城当中。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The laborers' bones are incorporated into the Great Wall, resulting in their permanent entombment within the structure.",
+        "explanation": "The sentence describes the outcome of the Great Wall's construction, detailing the deaths of laborers and their remains being used as part of the长城. This represents a state change caused by the prior action of building the wall."
+      }
+    },
+    {
+      "sentence_index": 82,
+      "sentence": "孟姜女听了老翁的话，暗自心惊，借宿一宵，就拜别老翁重登程途。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女's actions of staying overnight at the old man's residence and then departing to continue her journey, which are active behaviors performed by her."
+      }
+    },
+    {
+      "sentence_index": 83,
+      "sentence": "不久来到长城脚下。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "长城脚下",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence indicates the transition to a new location (the foot of the Great Wall) which sets the stage for subsequent events involving the长城 and孟姜女's journey. The location is explicitly mentioned as the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 84,
+      "sentence": "只见那长城果然造得十分缴蛾雄壮，像一条猛龙，蜿蜒起伏在绵直的群山之间。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "长城",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描绘长城的雄伟壮观景象，为后续情节（如孟姜女寻夫、长城崩塌等）建立场景背景，属于设定故事情境的范畴。"
+      }
+    },
+    {
+      "sentence_index": 85,
+      "sentence": "有些地方还未完工，那些抬石头、搬砖块的民夫，还在城墙的上下周围忙碌着，喊声，骂声扰撞成一片。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "长城",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the ongoing construction state of the Great Wall, setting the scene for the laborers' activities and the chaotic atmosphere at the construction site, which provides background context for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 86,
+      "sentence": "他们一个个都衣服襟楼，骨瘦如柴，胡须耗耗的脸上带着菜色和病容，看了真是叫人唯受。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "长城脚下",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence describes the physical condition of the laborers working on the Great Wall, providing background context about their suffering and setting the stage for subsequent events involving孟姜女's journey and the consequences of the长城 construction."
+      }
+    },
+    {
+      "sentence_index": 87,
+      "sentence": "孟姜女在民夫当中寻找了一遍，并没有见到丈夫的踪影。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [
+          "民夫"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女 actively performing the action of searching through the laborers (民夫) for her husband, making her the doer and the laborers the recipients of the search action."
+      }
+    },
+    {
+      "sentence_index": 88,
+      "sentence": "只得去问工头。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [
+          "工头"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女 taking the action of seeking information from the foreman (工头) after failing to locate her husband among the laborers, indicating an active step she performs to obtain details about her husband's fate."
+      }
+    },
+    {
+      "sentence_index": 89,
+      "sentence": "工头回答说：\"你问万喜良么？是有这么个万喜良。他是苏州的逃犯，捉回来本当立刻处死，拿尸首去填城的，只因为死的人已经不止一万个，都拿去填了城了，一时用不着他，仍旧让他在这儿干活。都怪他自己身子单薄，吃不消，几个月以前得下重病，后来便呜呼哀哉, 也填进这城墙去了。\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "长城脚下",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about万喜良's fate at the长城 construction site, setting the stage for孟姜女's emotional reaction and subsequent actions."
+      }
+    },
+    {
+      "sentence_index": 90,
+      "sentence": "孟姜女听了工头这番话，只觉得眼前天昏地黑，一下子就倒在地上，不省人事了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "孟姜女因听到工头关于丈夫尸骨被填入城墙的消息而昏厥，失去意识",
+        "explanation": "该句描述了孟姜女在得知丈夫尸骨被填入城墙后产生的生理反应，是前文工头陈述导致的直接结果，符合'consequence'类别中因先前事件引发状态变化的定义。"
+      }
+    },
+    {
+      "sentence_index": 91,
+      "sentence": "在众人的救治下，过了好一会儿，她才悠悠忽忽地苏醒转来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "孟姜女 regained consciousness after being treated by others",
+        "explanation": "The sentence describes the outcome of孟姜女 fainting (previous event), detailing her recovery through others' efforts. This represents a state change from unconsciousness to consciousness."
+      }
+    },
+    {
+      "sentence_index": 92,
+      "sentence": "一见眼前这座铁镑般的冷酷无情的长城，想起丈夫的尸骨就填在这城中，永生永世再也没 法见面了；又想起千千万万的青壮年男子，也已经或将要遭受和丈夫相同的命运，世间不知道有多少寡妇孤儿，还在痴心妄想地盼念着他们的亲人；而这些搬砖头、运石块的男人，现在虽然还在搬着，运着 ，也不过鼻孔里多一口气罢了，摆在他们面前的还不是死路一条。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "长城",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女's emotional reaction to the长城 and her reflections on the suffering of the people, establishing the context for her subsequent actions. The location is explicitly stated as the长城."
+      }
+    },
+    {
+      "sentence_index": 93,
+      "sentence": "想着这些，孟姜女就心里酸痛，不觉放声悲号起来，眼旧像泉水般盈眶而出。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女's action of crying as a direct response to her emotional turmoil, triggered by her thoughts about her husband's fate and the suffering of others. The action is performed by孟姜女 with no explicit receiver mentioned."
+      }
+    },
+    {
+      "sentence_index": 94,
+      "sentence": "她愈哭愈是伤心，只哭得天愁地惨，云昏雾瞑，日月无光，四野里卷起黄漫漫的风沙。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "天愁地惨，云昏雾瞑，日月无光，四野里卷起黄漫漫的风沙",
+        "explanation": "该句描述孟姜女持续哭泣引发的超自然现象，是其悲痛情绪导致的环境变化结果，符合'consequence'类别中因前序事件导致状态改变的定义。"
+      }
+    },
+    {
+      "sentence_index": 95,
+      "sentence": "人人听了这哭声，也都忍不住悲伤得纷纷流泪。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "people began to weep bitterly after hearing 孟姜女's cry",
+        "explanation": "The sentence describes the emotional reaction of the crowd to 孟姜女's intense crying, which is a direct consequence of her actions leading to the collapse of the Great Wall. This state change reflects the collective emotional impact of her sorrowful cry."
+      }
+    },
+    {
+      "sentence_index": 96,
+      "sentence": "孟姜女守在长城边上哭她的丈夫，也不知道哭了多少时候，哭着哭着，猛听得山摇地动般地“哗啦”一声巨响，那雄壮魏蛾的长城，一下子就崩了四十里。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the长城 collapsed forty li due to孟姜女's crying",
+        "explanation": "The sentence describes the outcome of孟姜女's prolonged crying at the长城, resulting in its collapse. This is a direct consequence of her actions, marking a significant state change in the narrative."
+      }
+    },
+    {
+      "sentence_index": 97,
+      "sentence": "等迷漫的尘雾散尽，便看见无数具森森的白骨，暴露在城脚下的泥土和石块中间。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The collapse of the Great Wall exposed countless white bones buried in the earth and stone beneath it, revealing the tragic fate of the laborers.",
+        "explanation": "This sentence describes the outcome of the Great Wall's collapse, which revealed the buried remains of the laborers. The state change involves the exposure of the bones and the structural destruction of the长城, directly resulting from the prior action of the wall collapsing."
+      }
+    },
+    {
+      "sentence_index": 98,
+      "sentence": "孟姜女忍住眼泪，一一去察看这些尸骨，但见每一具都这么相似，不知哪一具才是丈夫的尸骨。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [
+          "尸骨"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女 actively performing the action of examining the bones to identify her husband's remains, making her the doer and the bones the receivers of her action."
+      }
+    },
+    {
+      "sentence_index": 99,
+      "sentence": "她便用嘴使劲咬破自己的指头，把血滴在累累的白骨上。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [
+          "累累的白骨"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女 actively performing the action of biting her finger and dripping blood on the bones to identify her husband's remains, which is a key step in her quest to locate his corpse."
+      }
+    },
+    {
+      "sentence_index": 100,
+      "sentence": "心里暗中祝祷：若是丈夫的尸骨，血就浸进骨头；若不是丈夫的尸骨，血就流向四方。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "长城脚下",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女's internal prayer and condition for identifying her husband's remains, establishing the context for her subsequent action of testing the bones. The location is specified as the area near the长城 where the remains are found."
+      }
+    },
+    {
+      "sentence_index": 101,
+      "sentence": "滴了十来具，血都流向四方；忽然滴到一具, 血一直浸入到骨头里。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "孟姜女确认了丈夫的尸骨",
+        "explanation": "该句描述了孟姜女通过滴血验证尸骨的过程结果，是其先前行动（滴血测试）的直接后果，导致她确认了丈夫的尸骨，改变了她对丈夫下落的认知状态。"
+      }
+    },
+    {
+      "sentence_index": 102,
+      "sentence": "再滴再试，都是如此，这是丈夫的尸骨肯定无疑了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "孟姜女确认了找到的尸骨是丈夫的，这一发现直接导致她抱起尸骨痛哭并引发后续的祭奠场景",
+        "explanation": "该句描述了孟姜女通过血验确认尸骨身份后的确定性结论，这是血验行动（action）后的直接结果，导致她后续抱骨痛哭（action）和与秦始皇的对峙（situation），属于前行动的后果。"
+      }
+    },
+    {
+      "sentence_index": 103,
+      "sentence": "孟姜女找着了丈夫的尸骨，免不得怀抱着它，又伤心地痛哭了一场。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [
+          "丈夫的尸骨"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女 actively performing the action of holding her husband's remains and crying, making her the doer and the husband's bones the receiver of her emotional action."
+      }
+    },
+    {
+      "sentence_index": 104,
+      "sentence": "正打开包袱单，把丈夫的骨殖收拾好，准备带着它回家乡去埋葬，忽然听得一片鼓乐声响————原来是秦始皇的塞驾到了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [
+          "丈夫的骨殖"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of opening the bundle and preparing to take the husband's bones home, with 孟姜女 as the doer and the husband's bones as the receiver. The arrival of the emperor is a subsequent consequence, but the primary focus is on the active preparation."
+      }
+    },
+    {
+      "sentence_index": 105,
+      "sentence": "秦始皇坐在一部张着黄罗伞的马车上，由仪从侍卫族拥着，出来巡看长城的工程进行得究竟怎样。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "秦始皇"
+        ],
+        "receivers": [
+          "长城的工程"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Qin Shi Huang actively performing the action of inspecting the Great Wall's construction, making him the doer, and the Great Wall's construction the object being inspected."
+      }
+    },
+    {
+      "sentence_index": 106,
+      "sentence": "巡看到这一带地方，却见长城崩塌了四十里，不由非常霞怒。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "秦始皇因长城崩塌而非常愤怒",
+        "explanation": "The sentence describes the consequence of the长城崩塌 event, which is the emperor's anger upon witnessing the collapse. This reaction directly follows the prior event of the长城 collapsing due to孟姜女's crying."
+      }
+    },
+    {
+      "sentence_index": 107,
+      "sentence": "一问崩塌的情由，说是给一个寻找丈夫的女子哭崩的。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the collapse of the Great Wall caused by the woman's tears",
+        "explanation": "This sentence describes the outcome of the previous event (the collapse of the Great Wall) by attributing it to the action of the woman crying, which directly caused the structural failure."
+      }
+    },
+    {
+      "sentence_index": 108,
+      "sentence": "秦始皇不相信, 传令速命哭城的女子来见。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "秦始皇"
+        ],
+        "receivers": [
+          "哭城的女子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Qin Shi Huang issuing an order (action) to summon the woman who cried down the city wall. The doer is Qin Shi Huang, and the receiver is the woman targeted by the command."
+      }
+    },
+    {
+      "sentence_index": 109,
+      "sentence": "孟姜女被带到秦始皇跟前，她超群出众的美貌登时夺去了昏王的魂魄。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "秦始皇因孟姜女的美貌而失去冷静，被其美貌所震慑",
+        "explanation": "该句描述了孟姜女被带到秦始皇面前后，其美貌对秦始皇产生的直接影响，属于前文事件（孟姜女被带见）的后果，体现了秦始皇态度的转变。"
+      }
+    },
+    {
+      "sentence_index": 110,
+      "sentence": "秦始皇心想，我虽然有三宫六院，难及这女子的万分之一。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Qin Shi Huang's internal monologue about Meng Jiangnü's beauty surpassing his concubines, establishing his emotional state and setting the stage for his subsequent decision to grant her wishes. This internal reflection provides background context for the narrative progression."
+      }
+    },
+    {
+      "sentence_index": 111,
+      "sentence": "他下但不恼怒了，反而转怒为喜，诞着一付老脸笑嘻嘻地问孟姜女：“这长城可是你哭倒的？”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Qin Shi Huang transitions from anger to happiness and begins questioning孟姜女 about the collapse of the Great Wall",
+        "explanation": "The sentence describes a shift in Qin Shi Huang's emotional state and his subsequent action of questioning孟姜女, which is a direct consequence of the长城 collapsing due to her crying. This state change reflects the outcome of the prior event (the collapse) and his reaction to it."
+      }
+    },
+    {
+      "sentence_index": 112,
+      "sentence": "孟姜女理直气壮地说：“是我哭倒的，又怎样？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [
+          "秦始皇"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女 actively asserting her claim that she cried down the Great Wall, which constitutes a direct action performed by her and directed at秦始皇."
+      }
+    },
+    {
+      "sentence_index": 113,
+      "sentence": "秦始皇说：\"你可知道哭倒长城罪名不轻啊？\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "秦始皇对孟姜女哭倒长城的行为作出反应，从愤怒转为试图通过封赏安抚局势",
+        "explanation": "该句是秦始皇在孟姜女哭倒长城事件后的直接反应，属于该事件的后果。他的回应标志着从愤怒到试图通过封赏安抚局势的转变，体现了事件引发的连锁反应。"
+      }
+    },
+    {
+      "sentence_index": 114,
+      "sentence": "孟姜女说：“你这个无道的昏王，为修这长城，不知道多少无辜的人民被你害死！你害死了他们还不算，还将他们的尸骨填在城下，使他们父子夫妻永生永世再也不能相见，难道这样的罪名还轻吗？”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the deaths of innocent people and their bodies being placed in the长城, preventing families from being reunited",
+        "explanation": "The sentence describes the outcome of Qin Shi Huang's actions in constructing the Great Wall, leading to the deaths of countless people and their remains being buried within the structure, which disrupts familial bonds permanently. This is a direct consequence of the prior events described in the story."
+      }
+    },
+    {
+      "sentence_index": 115,
+      "sentence": "秦始皇见她不但貌美，而且多才善辨，心里更是欢喜，便向她说：“我看你才貌出众，也不追究你哭倒长城的罪过了，如今我倒想带你回去，封你做昭阳宫里的皇妃娘娘，不知你意下如何？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "秦始皇"
+        ],
+        "receivers": [
+          "孟姜女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Qin Shi Huang's active decision to offer Meng Jiangnü a position as a concubine, which constitutes an action performed by him towards her."
+      }
+    },
+    {
+      "sentence_index": 116,
+      "sentence": "孟姜女一见秦始皇早已怒气填膺，恨不得把这个残虐万民的昏王碎尸万段，哪里还容受得了这样的侮辱？",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "长城",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女's emotional reaction and internal state upon confronting秦始皇 at the长城, setting the context for her subsequent actions and decisions."
+      }
+    },
+    {
+      "sentence_index": 117,
+      "sentence": "她红涨着面皮，正待发作，忽又转念一想：在昏王的暴虐淫威之下，是不能和他硬碰的，硬碰反倒会招来更大的侮辱。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女's internal conflict and decision-making process in response to秦始皇's tyranny, establishing her psychological state and setting the stage for her subsequent actions. No specific location is mentioned in this context."
+      }
+    },
+    {
+      "sentence_index": 118,
+      "sentence": "不如好好地戏弄他一番，然后从容就义，怀着无瑕的清白去见自己的丈夫。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [
+          "秦始皇"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 孟姜女's decision to mock the emperor and commit suicide, which is an action she is about to take. The doer is 孟姜女, and the receiver is 秦始皇, the target of her mockery."
+      }
+    },
+    {
+      "sentence_index": 119,
+      "sentence": "这么想着，孟姜女就抑下怒气，强作欢容地向秦始皇说：“我是可以答应你的，不过要依我三件事情。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [
+          "秦始皇"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女 actively suppressing her anger and addressing秦始皇 with a request, which constitutes an action performed by her towards the emperor."
+      }
+    },
+    {
+      "sentence_index": 120,
+      "sentence": "秦始皇一听这话, 不由心花怒放，连说：\"快说，快说！不用说三件事，就是三十件我也依得。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "秦始皇"
+        ],
+        "receivers": [
+          "孟姜女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes秦始皇's active response to孟姜女's demands, indicating his decision to comply with her three requests. This is an action performed by秦始皇 (doer) in response to孟姜女's conditions (receiver)."
+      }
+    },
+    {
+      "sentence_index": 121,
+      "sentence": "孟姜女想了想，慢慢地说：“第一件，我要你在长城外面鸭绿江上造一座长桥，这桥要造得和天上的飞虹那样的壮观和美丽。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "秦始皇"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "孟姜女明确提出了要求秦始皇执行的具体任务（建造长桥），属于明确的责任要求，因此归类为task。任务角色是秦始皇，因其被要求履行建造长桥的职责。"
+      }
+    },
+    {
+      "sentence_index": 122,
+      "sentence": "秦始皇说：“依得, 依得。快说第二件。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "秦始皇"
+        ],
+        "receivers": [
+          "孟姜女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents an action where Qin Shi Huang (doer) responds to孟姜女's request by agreeing to the first task and prompting for the second, directly interacting with her (receiver)."
+      }
+    },
+    {
+      "sentence_index": 123,
+      "sentence": "孟姜女说：“第二件，我要你在长城的那面，造一座方墩墩的坟，这坟要十里长，十里宽，来埋葬我丈夫的尸骨。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "秦始皇"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents孟姜女 explicitly stating a requirement (task) for秦始皇 to construct a tomb for her husband. The task is directed at秦始皇, who is the designated role to fulfill this request."
+      }
+    },
+    {
+      "sentence_index": 124,
+      "sentence": "秦始皇心里暗想：“好大的坟啊！”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "长城的那面",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述秦始皇在听到孟姜女要求建造大坟时的心理活动，属于对故事背景和人物心理状态的铺垫，位置指向坟墓所在的地点。"
+      }
+    },
+    {
+      "sentence_index": 125,
+      "sentence": "嘴里却说：“好 ，好 ，也依你。再说第三件。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "秦始皇"
+        ],
+        "receivers": [
+          "孟姜女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Qin Shi Huang's verbal agreement to the first two demands set by Meng Jiangnü, which constitutes an active response to her task. The doer is Qin Shi Huang, and the receiver is Meng Jiangnü as the demands were directed towards him."
+      }
+    },
+    {
+      "sentence_index": 126,
+      "sentence": "孟姜女说： “第三件呀，我要你披麻戴孝去祭奠我丈夫的坟墓，因为他是被你害死的。又还有 ，我要满朝文武都去哭祭我的丈夫。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "秦始皇",
+          "满朝文武"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task assigned by孟姜女 to秦始皇 and the court, requiring specific actions (wearing mourning clothes for the funeral and having the entire court mourn). The task_roles include the emperor and the court officials as the entities obligated to fulfill these demands."
+      }
+    },
+    {
+      "sentence_index": 127,
+      "sentence": "这可把秦始皇难住了：要满朝文武都去哭祭都好办，当皇帝的怎么去祭奠一个民夫呢？",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Qin Shi Huang's dilemma in fulfilling孟姜女's demand to mourn a commoner, setting up the conflict that leads to his eventual compliance and the story's climax. This establishes the context for the subsequent events without introducing new actions or outcomes."
+      }
+    },
+    {
+      "sentence_index": 128,
+      "sentence": "那岂不是做了他的儿子吗？",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Qin Shi Huang is forced to act as a son to a commoner, compromising his imperial authority",
+        "explanation": "This sentence describes the outcome of Qin Shi Huang's dilemma in the negotiation with孟姜女. The prior event (task) of complying with the three demands leads to this consequence where the emperor must adopt a subservient role, marking a significant shift in his status and highlighting the consequences of his decision."
+      }
+    },
+    {
+      "sentence_index": 129,
+      "sentence": "若是不依呢，分明一场好事眼看就吹了。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "秦始皇"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates a requirement for Qin Shi Huang to comply with孟姜女's demands to prevent the loss of a favorable outcome. This explicitly states a task that must be fulfilled."
+      }
+    },
+    {
+      "sentence_index": 130,
+      "sentence": "没有法子，看在美人的份儿上，只得权且做一回儿子。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Qin Shi Huang's internal dilemma and decision-making process, setting the stage for his subsequent action of complying with Meng Jiangnü's demands. It provides context for the emperor's state of mind rather than directly stating a task, action, or consequence."
+      }
+    },
+    {
+      "sentence_index": 131,
+      "sentence": "于是秦始皇说：“好吧, 三件事情我都依你。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "秦始皇"
+        ],
+        "receivers": [
+          "孟姜女"
+        ],
+        "changed_state": "",
+        "explanation": "秦始皇主动同意孟姜女提出的三个要求，这是他主动采取的行动，直接导致后续建造长桥、方坟和祭奠等行为。"
+      }
+    },
+    {
+      "sentence_index": 132,
+      "sentence": "便盼咐摆驾回宫。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "秦始皇"
+        ],
+        "receivers": [
+          "宫殿"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Qin Shi Huang's action of ordering the carriage to be prepared and returning to the palace. The doer is Qin Shi Huang, and the receiver is the palace as the destination of his return."
+      }
+    },
+    {
+      "sentence_index": 133,
+      "sentence": "造桥和修坟的工程很快，不到三个月，己经完工。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The bridge and tomb construction projects were completed within three months.",
+        "explanation": "The sentence describes the outcome of the prior task (building the bridge and tomb) set by Qin Shi Huang after agreeing to Meng Jiangnü's demands, indicating the completion of these projects as a consequence of his actions."
+      }
+    },
+    {
+      "sentence_index": 134,
+      "sentence": "秦始皇果然披麻戴孝，带着满朝文武，前去祭奠万喜良的坟墓。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "秦始皇",
+          "满朝文武"
+        ],
+        "receivers": [
+          "万喜良的坟墓"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of Qin Shi Huang leading officials to pay respects at the tomb of Wan Xilang, with the doers being Qin Shi Huang and the officials, and the receiver being the tomb."
+      }
+    },
+    {
+      "sentence_index": 135,
+      "sentence": "出了长城, 就是鸭绿江。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "鸭绿江",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the geographical context by indicating that beyond the Great Wall lies the Yalu River, setting the stage for the subsequent description of the bridge and the encounter with Qin Shi Huang."
+      }
+    },
+    {
+      "sentence_index": 136,
+      "sentence": "只见鸭绿江的江水滚滚滔滔，中间架座白石栏杆的长桥，真好像是飞虹亘天。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "鸭绿江",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the setting of the Yalu River and the newly constructed bridge, establishing the scene for the subsequent events involving Qin Shi Huang's procession and the tomb. This context sets the stage for the narrative progression."
+      }
+    },
+    {
+      "sentence_index": 137,
+      "sentence": "秦始皇带着文武百官过了长桥，就看见那十里长、十里宽的大坟，四周遍栽松树，各样的祭棚、拜棚等一应设备齐全。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the setting of the tomb and its preparations, providing context for the subsequent ritual scene. It establishes the environment where the ceremony occurs without introducing new actions, tasks, or state changes."
+      }
+    },
+    {
+      "sentence_index": 138,
+      "sentence": "孟姜女这时也全身穿着孝服跪在祭棚里面陪着众人举行祭礼。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女's action of wearing mourning clothes and kneeling in the祭棚 to accompany the ritual, which is an active performance by her."
+      }
+    },
+    {
+      "sentence_index": 139,
+      "sentence": "秦始皇率领着文武百官，在灵堂前跪祭之后，便脱去孝服，回过头来对孟姜女说：“如今我三件事情都依了你，我们回宫成亲吧。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "秦始皇"
+        ],
+        "receivers": [
+          "孟姜女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Qin Shi Huang's action of removing mourning clothes and addressing Meng Jiangnü after the ritual, indicating his direct interaction and decision to offer marriage. The doer is Qin Shi Huang, and the receiver is Meng Jiangnü."
+      }
+    },
+    {
+      "sentence_index": 140,
+      "sentence": "孟姜女一言不发，站起身来，朝祭棚外面便走。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女's action of standing up and leaving the祭棚, which is a physical movement initiated by her as a response to秦始皇's proposal."
+      }
+    },
+    {
+      "sentence_index": 141,
+      "sentence": "秦始皇问：“哪里去？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "秦始皇"
+        ],
+        "receivers": [
+          "孟姜女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents an action where Qin Shi Huang (the doer) directly addresses Meng Jiangnü (the receiver) by asking 'Where are you going?' This is an interactive action within the narrative progression of their confrontation."
+      }
+    },
+    {
+      "sentence_index": 142,
+      "sentence": "孟姜女更不答话，率性放开步子跑起来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女's action of running away from秦始皇 without answering his question, indicating her proactive response to the situation."
+      }
+    },
+    {
+      "sentence_index": 143,
+      "sentence": "她跑呀跑的一直跑上了长桥，然后站在桥上 ，怒冲冲地指着秦始皇骂道：“你这昏王，真是瞎了你的眼睛！你以为我会贪图富责，就出卖我的丈夫？你错想了！我绝不会干出这种无耻的事情来的。无耻的事情，只有你们这般高高在上的衣冠禽兽才干得出来。你修长城为的是要挡住番兵，保你的江山，可是有什么用呢？那些被你填在城下的死人你却挡不住，他们的怨气一旦和活人的怨气连结起来，就可以不费吹灰之力夺去你的江山。昏王呀，你不要摆你的威风，你的江山坐不长了！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [
+          "秦始皇"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女 actively performing the action of running to the bridge and confronting秦始皇 with accusations, making her the doer and秦始皇 the receiver of her verbal action."
+      }
+    },
+    {
+      "sentence_index": 144,
+      "sentence": "孟姜女说罢，就毅然拿罗裙往脸上一蒙，从高高的长桥上纵身一跳，跳进了江心，浪花一溅，只见碧绿的波涛滚滚，再也见不到半点人影了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孟姜女"
+        ],
+        "receivers": [
+          "江"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes孟姜女's action of jumping into the river after her confrontation with Qin Shi Huang. The doer is孟姜女, and the receiver is the江 (river) where she jumps into."
+      }
+    },
+    {
+      "sentence_index": 145,
+      "sentence": "秦始皇被吓得惊怔在长桥下面，等他回过神来，才派了许多善于泅水的汉子去捞救孟姜女，打捞了多时始終无影无踪。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "孟姜女 was not found after the rescue attempt",
+        "explanation": "The sentence describes the outcome of孟姜女's previous action (jumping into the river), leading to秦始皇's shock and the failed rescue attempt. This represents a state change resulting from the prior event."
+      }
+    },
+    {
+      "sentence_index": 146,
+      "sentence": "秦始皇只得面带羞愧，无精打采地安排蛮驾离开长城，回宫去了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "秦始皇因孟姜女的反抗和失败的救援行动而感到羞愧，最终决定离开长城返回皇宫",
+        "explanation": "该句描述了秦始皇在经历孟姜女的反抗、失败的救援行动以及被羞辱后的情绪变化和后续行动，属于前事件（孟姜女跳江、秦始皇的羞辱）的直接结果。"
+      }
+    },
+    {
+      "sentence_index": 147,
+      "sentence": "据说，跳进江里去的孟姜女，她并没有死，她的身子悠悠忽忽地一直飘落到了龙宫，被龙王殷勤地接待着，后来送她到天上，成了天上的仙女。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "became an immortal fairy in heaven",
+        "explanation": "The sentence describes the outcome of Meng Jiangnü's jump into the river, stating she did not die and was taken to heaven to become an immortal fairy, representing a state change from mortal to divine existence."
+      }
+    }
+  ]
+}
