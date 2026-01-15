@@ -103,6 +103,41 @@ score = metric.calculate(
 print(f"Boundary similarity score: {score}")
 ```
 
+**Important: Boundary Index Definition**
+
+The `reference_boundaries` and `hypothesis_boundaries` parameters use **sentence gap indices**:
+- A boundary index `i` indicates a segmentation boundary **between sentence `i` and sentence `i+1`**
+- Sentence indices are 0-based (first sentence is index 0, second is index 1, etc.)
+
+**Example:**
+For a document with 10 sentences (indices 0-9):
+- `reference_boundaries=[2, 5]` means boundaries:
+  - Between sentence 2 and sentence 3 (after the 2ed sentence)
+  - Between sentence 5 and sentence 6 (after the 5th sentence)
+- This results in 3 segments:
+  - Segment 1: sentences 0-2 (indices 0, 1, 2)
+  - Segment 2: sentences 3-5 (indices 3, 4, 5)
+  - Segment 3: sentences 6-9 (indices 6, 7, 8, 9)
+
+```python
+sentences = [
+    "Sentence 0",  # Index 0
+    "Sentence 1",  # Index 1
+    "Sentence 2",  # Index 2
+    "Sentence 3",  # Index 3  <- boundary here (index 2)
+    "Sentence 4",  # Index 4
+    "Sentence 5",  # Index 5
+    "Sentence 6",  # Index 6  <- boundary here (index 5)
+    "Sentence 7",  # Index 7
+    "Sentence 8",  # Index 8
+    "Sentence 9",  # Index 9
+]
+
+# reference_boundaries=[2, 5] means:
+# - Boundary between sentence 2 and 3 (gap index 2)
+# - Boundary between sentence 5 and 6 (gap index 5)
+```
+
 ## Output Format
 
 The segmenter returns a `SegmentationResult` object with the following structure:
@@ -173,6 +208,13 @@ visualizer.plot_magnetic_signal(
     viz_data["raw_forces"],
     smoothed_b_values=viz_data["smoothed_forces"],
     predicted_boundaries=result.boundaries,
+)
+
+# Visualize story segmentation result
+visualizer.plot_segmentation_interface(
+    result=result,
+    sentences=sentences,
+    title="Story Segmentation Result",
 )
 ```
 

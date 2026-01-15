@@ -32,7 +32,11 @@ class BoundarySegmentationMetric:
         
         Args:
             reference_boundaries: List of reference (ground truth) boundary indices.
+                Each index `i` represents a boundary between sentence `i` and sentence `i+1`.
+                Sentence indices are 0-based (first sentence is 0, second is 1, etc.).
+                Example: [2, 5] means boundaries after sentence 2 and after sentence 5.
             hypothesis_boundaries: List of predicted boundary indices.
+                Same format as reference_boundaries.
             
         Returns:
             Boundary similarity score B in range [0, 1], where 1 is perfect match.
