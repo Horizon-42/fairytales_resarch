@@ -1,0 +1,202 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_198_董永与七仙女.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 13,
+  "analyzed_sentences": 13,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "七仙女也是天上的织女，是织女姐妹们当中年纪最小的一个。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "天上",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过介绍七仙女作为织女的身份及其在姐妹中的地位，为后续情节发展提供背景信息，属于设定故事背景的'situation'类别。"
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "她因为受不了天上的寂寞，偷偷来到凡间，在路上遇见了那个卖身葬父去傅员外家上工的孝子董永，爱上了她，就托土地主婚，请老槐树为媒，在槐萌下面和董永成了婚配。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "凡间",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the background of seven sisters' decision to leave heaven (因受不了寂寞) and her meeting Dong Yong on Earth, setting up the narrative context for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "结婚以后，夫妻俩双双到主人傅员外家去上工，因为卖身文契上原写着\"无牵无挂\" ，如今凭空多添了一个女人，傅员外不肯收留。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "傅员外家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the couple's new situation after marriage, establishing the conflict with their master傅员外 who refuses to accept an additional woman, setting the stage for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "经过恳求和争论，才限定董永夫妻在当天晚上织成云锦十匹，如果织出来，三年长工改为百日，如果织不出，三年之后再加三年。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "董永夫妻"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes a task imposed by傅员外 on董永夫妻, requiring them to weave ten pieces of cloud silk by night. This sets a clear responsibility that must be fulfilled."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "七仙女马上答应了，董永却非常焦愁。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "董永因任务压力产生焦愁情绪",
+        "explanation": "该句描述了董永因七仙女接受织造云锦任务而产生的焦愁情绪，这是对前文'限定董永夫妻在当天晚上织成云锦十匹'这一任务要求的直接后果。"
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "当天晚上，七仙女劝烦闷的董永先去睡了，自已则在屋子里烧起一炷下凡时候姐妹们赠送她的\" 难香\" 来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七仙女"
+        ],
+        "receivers": [
+          "难香"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 七仙女 performing the action of burning the '难香' incense, which is a key step in initiating the task of weaving the cloud silk. The incense is the object receiving the action."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "顷刻之间，天上的众仙女闻香赶到，听了小妹妹的倾诉，大家马上一齐动手，\"请动天丝\"，\"‘经’将起来，‘梳’将起来\"，这些灵巧的姑娘，天庭的织造能手，果然就在一夜之间织出了布满了花鸟的绝烂的云锦十匹。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "众仙女"
+        ],
+        "receivers": [
+          "云锦十匹"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the heavenly fairies weaving cloud silk, with the doers being the众仙女 and the receivers being the cloud锦十匹."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "第二天，夫妻俩便把这云锦送给主人，主人大为惊异。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七仙女",
+          "董永"
+        ],
+        "receivers": [
+          "傅员外"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the couple giving the cloud silk to their master, which is an active action performed by the couple (七仙女 and 董永) and received by the master (傅员外)."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "到了百日期满，他们就欢喜地去辞别主人，回他们自己的家。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七仙女",
+          "董永"
+        ],
+        "receivers": [
+          "他们的家"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the couple's action of returning to their home after completing the task, with '他们的家' as the destination."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "因为有约在先，主人无法留难，只好让他们回去。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context explaining the master's inability to prevent the couple's departure, setting up the narrative flow for their return home. It establishes the reason behind the master's decision without introducing new actions or consequences."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "在回家的路上，七仙女才告诉董永，说她已经有了身孕，董永听了，更是喜上加喜。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七仙女"
+        ],
+        "receivers": [
+          "董永"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 七仙女 informing 董永 about her pregnancy, which is a direct activity performed by the character."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "他们都幻想着建立一个小家，像牛郎织女那样过男耕女织的勤劳而幸福的生活。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the couple's aspirations for their future life, setting the context for their relationship and the subsequent tragic separation. It establishes the background of their hopes and the idealized lifestyle they envision, which contrasts with the impending consequence of their separation."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "可是，天帝查出七仙女私下凡尘，\"龙心大怒\"，立刻派遺天使，催动钟鼓，传旨令七仙女于\" 午时三刻，返回天庭，倘若不然，定派天兵天将捉拿，并将董永“碎尸万段”。幸福的美梦就这样轻易地破碎了。七仙女怕她的情郎果遭毒手，只得在他们婚配时候的那棵老槐树下和董永惨痛分离。原来董永叫一声应一声的老槐树，现在叫千声叫万声它都不应了，真是成了一段哑木头了！恩爱夫妻一下子就要永远分离，这是何其残酷的悲剧！可是七仙女在和董永约定\"来年碧桃花开日，槐树下面把子交\" 之后，终于还是趁董永昏倒在地的顷刻，跟随着天使上天去了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The恩爱夫妻 are forced to separate permanently, with七仙女 leaving董永 and the老槐树 becoming a silent, lifeless object.",
+        "explanation": "This sentence describes the tragic outcome of the Emperor's decree, resulting in the permanent separation of the couple and the transformation of the sacred tree into a lifeless object, representing the devastating consequence of the prior actions."
+      }
+    }
+  ]
+}

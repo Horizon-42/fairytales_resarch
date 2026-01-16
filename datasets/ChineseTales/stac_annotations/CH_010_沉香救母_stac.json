@@ -1,0 +1,1840 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_010_沉香救母.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 123,
+  "analyzed_sentences": 123,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "遥远的上古时代，有位伟大的女神叫女娲。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the temporal setting of the story ('遥远的上古时代') as background context for the narrative, which qualifies as a 'situation'. No physical location is mentioned, so the location field remains empty."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "相传，女娲娘娘炼石补天时，炼成了一盏奇异的神灯“宝莲灯”。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes background context about Nuwa's creation of the '宝莲灯' during her sky-repairing task, setting the stage for the story's events. No specific location is mentioned, so the location field remains empty."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "谁都想得到这盏宝莲灯，因为它拥有世间所有神奇的力量，可以改变命运，令乾坤逆转，时光倒流。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the宝莲灯's desirability and its powerful effects, setting the stage for future conflicts and events in the story. No specific location is mentioned in the sentence itself."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "这盏神灯是用晶莹剔透的碧玉做成的，灯高一尺多，灯座倒扣着一朵含苞待放的莲花，灯柄是莲花纤细的花枝，托起宛若盛开莲花般精致的灯盏，别提多好看了。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the creation and appearance of the宝莲灯, providing background context about its physical attributes and significance. This sets the stage for the story's events without introducing a specific location."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "灯盏中间嵌着一颗火红的珠子，五彩火焰冉冉腾起，一下就照亮了整个世界。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the physical characteristics and effects of the宝莲灯, establishing its significance and role in the story's context. Since it provides background information without introducing a specific location, the location field is left empty."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "这年春天，王母娘娘大寿，不少神仙前来祝贺，送来无数奇珍异宝，天庭一派热闹景象。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "天庭",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了王母娘娘寿辰时天庭的热闹场景，为后续宝莲灯出现及故事发展提供背景设定，属于情境类信息。"
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "在众多礼物中有一样东西吸引了所有人的目光，一阵阵的赞叹声此起彼伏。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "天庭",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了王母娘娘寿宴上众神仙对宝莲灯的瞩目反应，为后续情节发展（宝莲灯被送至瑶台、三圣母获得神灯等）建立背景，属于情境类信息。"
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "“哎呀，真是好东西啊！”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "光碧阁",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句子描述了宝莲灯被呈现在瑶台光碧阁时引发的惊叹反应，属于故事背景铺垫，为后续情节发展（如灯灭、三圣母获得灯等）建立情境。"
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "“此等宝物真乃世间少有。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the admiration for the宝莲灯's rarity, establishing its significance as a key object in the story. This sets the stage for subsequent events involving the lamp, fitting the 'situation' category as background context."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "“宝贝、宝贝啊！”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "瑶台的光碧阁",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了宝莲灯被展示时引发的惊叹反应，属于故事背景设定，地点为天庭瑶台的光碧阁。"
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "原来这东西正是女娲娘娘送给王母的寿礼——宝莲灯。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "光碧阁",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence reveals the identity of the object being discussed as the '宝莲灯' (Lotus Lamp), a gift from Nuwa to Wangmu, establishing its significance and context for its subsequent placement in the '光碧阁'."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "王母特别高兴，命人将宝莲灯放在瑶台最高的“光碧阁”。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王母"
+        ],
+        "receivers": [
+          "宝莲灯"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of placing the宝莲灯 in the光碧阁, performed by王母 as the direct actor. The lamp is the object receiving the action."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "从此天庭如同又多了一个太阳。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "天庭的亮度显著增加，如同多了一个太阳般明亮",
+        "explanation": "该句描述了宝莲灯被安置在瑶台光碧阁后产生的效果，属于前文放置神灯这一行动的直接结果，体现了天庭环境因神灯而发生的变化。"
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "可是，有一天宝莲灯忽然熄灭了，王母和众神仙想尽了办法，也没能使宝莲灯重新燃起。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "宝莲灯熄灭且无法重新燃起",
+        "explanation": "该句描述宝莲灯状态发生改变（熄灭且无法复燃），是此前事件（可能与神灯的灵性或三圣母的缘分有关）导致的直接结果，符合'consequence'类别中描述状态变化的定义。"
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "远在东方的燃灯佛祖听说此事后，前来出谋划策。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "燃灯佛祖"
+        ],
+        "receivers": [
+          "王母",
+          "众神仙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the燃灯佛祖 taking action by coming to offer advice (出谋划策) in response to the situation of the extinguished宝莲灯. The doer is the燃灯佛祖, and the receivers are the王母 and the other deities who were trying to solve the problem."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "他仔细看了看宝莲灯后对王母说：“阿弥陀佛，此乃天意，神灯是在等候有缘人哪。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the宝莲灯's purpose as a waiting-for-a-destined-person artifact, setting up future narrative developments. No specific location is mentioned in the sentence itself."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "王母与众神仙不解，忙问：“谁是它的有缘人啊？”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "瑶台",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the context of the celestial court's confusion about the lamp's destined owner, setting up the narrative focus on the '有缘人' (destined person) concept which drives subsequent events. The location '瑶台' (Yao Tai, the highest platform in the heavenly palace) is the narrative focus where this discussion occurs."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "燃灯佛祖轻轻一笑说：“天机不可泄露。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context by stating that the宝莲灯's fate is tied to a destined individual, setting up the narrative's central mystery. No specific location is mentioned in this sentence."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "这样又过了几日，王母和玉帝的小女儿三圣母到瑶池边玩耍，看见宝莲灯，便想拿来看看。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王母",
+          "三圣母"
+        ],
+        "receivers": [
+          "宝莲灯"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 王母 and 三圣母 going to the Yaochi pond and wanting to examine the Bao Lian lamp. The doers are the two characters, and the lamp is the object of their action."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "玉帝平日很宠爱三公主，就命人取下来给她。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "people"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the Jade Emperor assigning a task to take the宝莲灯 for his daughter, indicating an explicit requirement that must be fulfilled by the people ordered to do so."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "这时，奇怪的事情发生了，只见三圣母的手刚接触到宝莲灯，宝莲灯就自己亮了起来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the lamp lit up on its own",
+        "explanation": "The sentence describes the outcome of the three saint mother touching the lamp, resulting in the lamp lighting up, which is a state change from its previous extinguished state."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "原来燃灯祖师说的有缘人就是三圣母，于是王母娘娘就把宝莲灯送给了三圣母。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王母娘娘"
+        ],
+        "receivers": [
+          "三圣母"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of Wang Mother giving the lantern to Sanmǔ, which is a direct action performed by Wang Mother and received by Sanmǔ."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "后来，三圣母渐渐长大了，出落得亭亭玉立、美丽动人。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Sanmumu's physical development and transformation into a graceful, beautiful figure, which serves as background context for her subsequent interactions and story progression. No specific location is mentioned."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "玉帝见她乖巧懂事，就派她去西岳庙的雪映宫掌管华山。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "三圣母"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence states an explicit assignment of responsibility by the Jade Emperor to San Shengmu, making it a 'task' category. The task role is San Shengmu, who is ordered to manage Huashan at the Xueying Palace."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "此后，华山一带的百姓去西岳庙求签问卜，异常灵验。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the divination at the West Temple became exceptionally effective",
+        "explanation": "This sentence describes the outcome of the three saint mother being assigned to manage Huashan, resulting in the temple's divination practices becoming highly effective."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "久而久之，三圣母的名声就传开了，老百姓都很喜欢她，说她是最仁慈和善良的女神。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "三圣母的名声传开并被百姓喜爱，确立了她作为仁慈善良女神的形象",
+        "explanation": "该句描述了三圣母因西岳庙求签问卜灵验而获得百姓喜爱的后果，属于前文神灯灵验事件引发的连锁反应，符合'consequence'类别中因先前事件导致状态变化的定义"
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "有一年，一个叫刘彦昌的书生进京赶考路过华山，听人说西岳庙求签问卜特别灵验，便也进去求了几签。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "刘彦昌"
+        ],
+        "receivers": [
+          "西岳庙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes刘彦昌's active decision to travel to the West Temple (西岳庙) and seek fortune through divination, making it an 'action' with the doer as刘彦昌 and the receiver as the temple where he performed the act."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "可是三圣母那天刚好有事不在宫中，刘彦昌连抽了几次都是空签，这可把他气坏了，就随口吟出一首打油诗，并题在了雪映宫的墙壁上。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "刘彦昌"
+        ],
+        "receivers": [
+          "雪映宫的墙壁"
+        ],
+        "changed_state": "",
+        "explanation": "该句描述刘彦昌因求签未果而愤怒，主动采取行动在雪映宫墙壁题写打油诗的行为，属于主动执行的具体动作。"
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "诗文如下： 彦昌提笔怒满腔，只怨圣母三娘娘。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "雪映宫",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描述刘彦昌在雪映宫题诗的行为，为后续三圣母因诗文被激怒并采取行动埋下伏笔，属于设定故事背景的情境描述。"
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "安居神龛心如铁，枉受香火在一方。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "雪映宫",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句是刘彦昌在雪映宫求签时因未得到理想结果而写下诗句，为后续情节发展（三圣母惩治刘彦昌、沉香寻母等）埋下伏笔，属于设定故事背景的情境描述。"
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "写罢，刘彦昌拂了拂衣袖上的灰尘，扬长而去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "刘彦昌"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Liu Yanchang's action of brushing dust from his sleeves and leaving, making him the doer. There is no explicit receiver for the action, as the focus is on his movement away from the scene."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "三圣母回来，看见墙上的题诗，顿时火冒三丈，她心想：“你自己来得不是时候，怎么能怪我呢，我不能白白受这份嘲笑！”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Sanmeng becomes angry and decides to punish Muyanchang for the poem",
+        "explanation": "The sentence describes the emotional consequence of Muyanchang's poem, which directly leads to Sanmeng's decision to summon divine forces to punish him. This state change sets up the subsequent action of calling thunder and rain."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "于是她找来雷公电母、风伯雨师帮忙，要好好教训教训刘彦昌。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "三圣母"
+        ],
+        "receivers": [
+          "刘彦昌"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes三圣母 actively taking action by summoning divine beings to punish刘彦昌, making it an 'action' category with三圣母 as the doer and刘彦昌 as the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "刘彦昌正急着赶路，忽然晴朗的天空变得乌云密布，紧接着电闪雷鸣，狂风骤雨。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "华山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the sudden weather change that sets the stage for the subsequent events where Miao Yanchang is caught in the storm. The location is inferred as Huashan, the destination of Miao Yanchang's journey, which is the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "他没地方躲雨，被浇成了落汤鸡，还摔了好几个大跟头，沾了一身泥巴。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "刘彦昌被暴雨淋湿、摔跤并沾满泥巴",
+        "explanation": "该句描述了暴雨导致的直接结果，即刘彦昌被浇成落汤鸡并摔跤沾满泥巴，属于前文电闪雷鸣天气事件的后果。"
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "三圣母见他又狼狈又滑稽，忍不住哈哈大笑起来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "三圣母"
+        ],
+        "receivers": [
+          "刘彦昌"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 三圣母's action of laughing at 刘彦昌's pitiful state, making her the doer and 刘彦昌 the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "这时，刘彦昌抵挡不住风雨，晕倒在了路边。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "刘彦昌因无法抵挡风雨而晕倒",
+        "explanation": "该句描述了三圣母召唤风雨导致刘彦昌晕倒的直接结果，属于前序行动（三圣母发怒引发风雨）的后果，体现了状态变化"
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "三圣母见状，心有不忍，就命四位仙师收去云雨，把刘彦昌救了起来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "三圣母"
+        ],
+        "receivers": [
+          "四位仙师",
+          "刘彦昌"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes三圣母 actively commanding the four仙师 to stop the rain and rescue刘彦昌. The doer is三圣母, who issues the directive, while the receivers are the仙师 (executing the action) and刘彦昌 (the recipient of the rescue)."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "三圣母见对方是个眉清目秀、弱不禁风的白面书生，反对他有了几分爱慕，便点化出一座“仙庄”，悉心照料刘彦昌。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "三圣母"
+        ],
+        "receivers": [
+          "刘彦昌"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes三圣母 actively taking care of刘彦昌 by creating a仙庄, which is a direct action performed by her towards him."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "刘彦昌对三圣母也是一见钟情。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "刘彦昌"
+        ],
+        "receivers": [
+          "三圣母"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Mencian's active emotional response (falling in love) towards Sanmǔ, which is an internal action that directly leads to their subsequent marriage. The 'doer' is Mencian, and the 'receiver' is Sanmǔ as the object of his affection."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "不久，两人结了婚，还生了个可爱的小男孩，起名叫“沉香”。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "刘彦昌",
+          "三圣母"
+        ],
+        "receivers": [
+          "沉香"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of two characters (刘彦昌 and 三圣母) getting married and having a child named 沉香. The doers are the characters performing the action, and the receiver is the child, as the birth is a direct result of their union."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "可是，按照天庭戒律，神仙不能私自下凡也不能和凡人结婚，否则会受到最严厉的惩罚。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "天庭",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes background context about the heavenly court's regulations regarding deities' actions, setting the stage for subsequent events involving three saint mother's transgression."
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "此时，沉浸在爱情中的三圣母却早已把天条忘得一干二净。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Sanmǔ's internal state and disregard for heavenly laws, setting up the conflict with the divine decree. This establishes context for the subsequent events involving her relationship with Mianchang and the resulting consequences."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "直到有一天，二郎神去雪映宫探望她，才发现了这件事。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "二郎神"
+        ],
+        "receivers": [
+          "三圣母"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of Erlang Shen (二郎神) visiting San Shengmu (她) at Xueying Palace, which directly leads to the discovery of her secret relationship. The action is performed by 二郎神 and directed toward 三圣母."
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "二郎神愤然赶回天庭，向玉皇大帝禀报实情，玉帝大发雷霆，命他速速前去捉拿三圣母。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "二郎神",
+          "玉皇大帝"
+        ],
+        "receivers": [
+          "三圣母"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the active actions taken by Erlang Shen (returning to heaven and reporting the truth) and the Jade Emperor (ordering the capture of San Shengmu), which directly lead to the consequence of the divine punishment."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "随后，二郎神带领天兵天将杀气腾腾地向华山奔来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "二郎神",
+          "天兵天将"
+        ],
+        "receivers": [
+          "华山"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of Erlang Shen leading heavenly soldiers toward Mount Hua. The doers are the characters performing the action (二郎神 and 天兵天将), and the receiver is the target location (华山)."
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "只见他身穿八爪龙纹铠甲，手提三尖两刃神兵，威风凛凛地骑在银合马上。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "华山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes二郎神's appearance and state as he approaches华山, setting the stage for the impending confrontation with三圣母. This establishes the context for the subsequent action (the battle) without introducing a new task or consequence."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "三圣母见二郎神到来，不知何事，急忙上前迎接。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "三圣母"
+        ],
+        "receivers": [
+          "二郎神"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 三圣母's action of responding to 二郎神's arrival by hurrying to greet him, indicating her proactive behavior towards the situation."
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "二郎神气势汹汹地说：“三圣母，你好大的胆子，竟敢私配凡夫，快随我回天庭领罪。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "三圣母"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task issued by Erlang Shen, requiring Sanmǔ to return to heaven for her transgression of marrying a mortal. The task is explicitly stated as a responsibility Sanmǔ must fulfill."
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "三圣母见二郎神如此无礼，非常生气，大声说：“你休要多管闲事，要我回去也可，除非你有本事打败我。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "三圣母"
+        ],
+        "receivers": [
+          "二郎神"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes三圣母's verbal response to二郎神's aggression, which constitutes an active action performed by三圣母 directed at二郎神."
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "二郎神冷笑一声，举起神兵向三圣母挥来，众天兵天将也一拥而上，将三圣母团团围住。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "二郎神",
+          "众天兵天将"
+        ],
+        "receivers": [
+          "三圣母"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the active action of 二郎神 and the 天兵天将 attacking 三圣母, which is a direct physical confrontation initiated by the antagonist characters."
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "三圣母急忙取出宝莲灯，高高举起，顿时美丽的五彩灯花飞快旋转，幻化成一股威力无比的清音玄雷，直向二郎神射去，二郎神还没反应过来是怎么回事，就被弹下马来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "三圣母"
+        ],
+        "receivers": [
+          "二郎神"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes三圣母 actively using the宝莲灯 to attack二郎神, which is a direct action performed by三圣母 and directly affects二郎神 as the receiver of the attack."
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "众天兵天将也被打得东倒西歪，落荒而逃。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The heavenly soldiers and generals were defeated and forced to flee in disarray",
+        "explanation": "The sentence describes the outcome of三圣母's attack on二郎神, resulting in the defeat and retreat of the heavenly soldiers, which directly follows the action of using the宝莲灯 to attack."
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "二郎神吃了败仗心里很不服气，他心想：“宝莲灯是女娲娘娘送的宝物，不管什么妖怪，什么神仙，都不是宝莲灯的对手，只有偷了宝莲灯，才能抓住三圣母，可是怎么偷呢？”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Erlang Shen's internal thoughts and motivations after his defeat, setting the stage for his future actions. It provides context about his state of mind and plans, which is a narrative situation rather than an explicit task, action, or consequence."
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "他左思右想，终于想出一条妙计，于是叫来哮天犬悄悄吩咐了几句。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "二郎神"
+        ],
+        "receivers": [
+          "哮天犬"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of二郎神 devising a plan and instructing哮天犬 to execute it, which are active steps taken to achieve his goal of stealing the宝莲灯."
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "哮天犬领命，驾起一朵祥云，鬼鬼祟祟来到三圣母家。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哮天犬"
+        ],
+        "receivers": [
+          "三圣母家"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哮天犬 actively performing the action of flying on a cloud and secretly arriving at三圣母家. The doer is哮天犬, and the receiver is三圣母家 as the target location of the action."
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "它趁三圣母不注意，先偷偷叼走沉香，等三圣母追来解救沉香之时，又迅速丢下沉香，伺机夺走了宝莲灯。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哮天犬"
+        ],
+        "receivers": [
+          "沉香",
+          "宝莲灯"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action performed by哮天犬 (the doer) stealing沉香 (receiver) and夺走宝莲灯 (receiver). This is an active action taken to achieve a goal, fitting the 'action' category."
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "没有了宝莲灯，三圣母哪里斗得过二郎神，很快就被抓回了天庭，并被永远压在了华山下。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "三圣母被二郎神抓住并永远压在华山下",
+        "explanation": "该句描述了宝莲灯被夺走后导致的直接结果，即三圣母失去战斗能力被二郎神抓获并永久囚禁在华山，属于前序行动（哮天犬偷走宝莲灯）引发的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "三圣母有个丫环叫朝霞，她得知三圣母被抓，唯恐二郎神对沉香不利，便偷偷跑去看望沉香。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "朝霞"
+        ],
+        "receivers": [
+          "沉香"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an action performed by 朝霞 (the maid) to visit 沉香 after learning of his mother's capture, indicating her proactive behavior towards him."
+      }
+    },
+    {
+      "sentence_index": 60,
+      "sentence": "她见刘彦昌因救不了三圣母意志消沉，日渐憔悴，沉香又无人照料，十分伤感，便劝说刘彦昌：“沉香尚且年幼，失去母亲已经很可怜了，不能再失去父亲，所以为了沉香你一定要振作起来。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the current state of刘彦昌 and沉香, setting the context for the subsequent action of劝说. It provides background on their emotional and situational state, which is essential for understanding the narrative progression."
+      }
+    },
+    {
+      "sentence_index": 61,
+      "sentence": "这时，刘彦昌考期将至，听了朝霞的话，便把沉香托付给朝霞，进京去考试。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "刘彦昌"
+        ],
+        "receivers": [
+          "朝霞"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Moliuchang's action of entrusting Cheshang to Chaoxia and deciding to go to the capital for the exam. The doer is Moliuchang, and the receiver is Chaoxia (the one receiving the entrusted responsibility)."
+      }
+    },
+    {
+      "sentence_index": 62,
+      "sentence": "不久，他就金榜题名，还被朝廷任命为扬州知府。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "刘彦昌通过科举考试并被朝廷任命为扬州知府",
+        "explanation": "该句描述了刘彦昌因先前将沉香托付给朝霞而得以专心应试并取得功名的结局，属于前文行动导致的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 63,
+      "sentence": "一年又一年过去了，转眼间沉香长到八岁。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the passage of time leading to Changxiang's age of eight, setting the temporal context for his subsequent journey and actions in the story."
+      }
+    },
+    {
+      "sentence_index": 64,
+      "sentence": "他从小没有母亲，经常被小伙伴们嘲笑。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the background condition of the character's life without a mother and facing bullying, which sets the stage for his later actions. No specific location is mentioned."
+      }
+    },
+    {
+      "sentence_index": 65,
+      "sentence": "每当他哭着向父亲要母亲的时候，父亲总是唉声叹气。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the emotional background of沉香's longing for his mother and his father's sorrow, establishing the context for his later determination to rescue her. No specific location is mentioned."
+      }
+    },
+    {
+      "sentence_index": 66,
+      "sentence": "后来，他终于从朝霞的口中得知他的母亲是三圣母，已经被压在了华山下。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "华山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context explaining that沉香's mother (三圣母) is imprisoned under 华山, setting the stage for his subsequent quest to rescue her. This establishes the narrative focus on 华山 as the location of the conflict."
+      }
+    },
+    {
+      "sentence_index": 67,
+      "sentence": "沉香哭着对父亲说：“我不能再让母亲受苦了，我要去华山救她。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "沉香"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates Chenchang's determination to rescue his mother from Hua Mountain, establishing his responsibility to undertake this mission."
+      }
+    },
+    {
+      "sentence_index": 68,
+      "sentence": "父亲一边摸着他的头一边心疼地说：“你年纪还小，华山那么远怎么去呢？”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "华山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the father's concern regarding the son's ability to undertake the journey to Mount Hua, establishing the narrative context for the upcoming quest."
+      }
+    },
+    {
+      "sentence_index": 69,
+      "sentence": "沉香说：“路再远山再高，我也要去，只要能救出母亲，再大的困难我也不怕。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "沉香"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a declaration of intent to fulfill a responsibility (rescuing his mother), which qualifies as a task. The task role is explicitly Chenchang, who vows to overcome obstacles to save his mother."
+      }
+    },
+    {
+      "sentence_index": 70,
+      "sentence": "父亲见他如此坚决，只好勉强答应。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "父亲"
+        ],
+        "receivers": [
+          "沉香"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the father's action of reluctantly agreeing to let沉香 embark on his quest. The father (doer) takes action that directly affects沉香 (receiver) by allowing him to leave, which is a pivotal moment in the narrative progression."
+      }
+    },
+    {
+      "sentence_index": 71,
+      "sentence": "第二天，沉香背好行李，挥泪告别父亲，独自踏上了寻母之路。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "沉香"
+        ],
+        "receivers": [
+          "父亲"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes沉香's active actions of packing行李, bidding farewell to his father, and embarking on his journey to rescue his mother. The doer is沉香, and the receiver is his father as he is the one being bid farewell."
+      }
+    },
+    {
+      "sentence_index": 72,
+      "sentence": "他历尽了千辛万苦，越过了千山万岭，终于来到华山。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "沉香"
+        ],
+        "receivers": [
+          "华山"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of沉香 enduring hardships and traveling to reach华山. The doer is沉香, and the receiver is华山 as the destination of his journey."
+      }
+    },
+    {
+      "sentence_index": 73,
+      "sentence": "可是，沉香跑遍了华山，左找右找根本没有母亲的身影。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "沉香未能在华山找到母亲，导致山神被其哭声惊动",
+        "explanation": "该句描述沉香在华山寻找母亲无果后的结果，直接导致山神被其哭声惊动，属于前行动作引发的状态变化，符合consequence分类。"
+      }
+    },
+    {
+      "sentence_index": 74,
+      "sentence": "沉香着急地放声大哭起来，他那撕心裂肺的哭声传遍了整个华山，也惊动了此地的山神。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "沉香"
+        ],
+        "receivers": [
+          "山神"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes沉香 actively performing the action of crying, which directly affects the mountain god (山神) by disturbing him. This fits the 'action' category with the doer as沉香 and the receiver as山神."
+      }
+    },
+    {
+      "sentence_index": 75,
+      "sentence": "山神问明缘由，为沉香的行为感动。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "山神被沉香的行为感动并决定帮助他",
+        "explanation": "该句描述了沉香的哭声引发山神的反应，山神因感动而决定指引沉香寻找母亲，这是对前文沉香行为的直接结果，属于后果类别。"
+      }
+    },
+    {
+      "sentence_index": 76,
+      "sentence": "他说：“你妈妈就在莲花峰的黑云洞底，你去那边找吧！”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "莲花峰的黑云洞",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过山神告知沉香母亲被囚禁的具体地点，为后续沉香寻母行动提供关键背景信息，属于设定故事发展的情境。"
+      }
+    },
+    {
+      "sentence_index": 77,
+      "sentence": "沉香只有八岁，哪里救得出母亲，于是哭得更伤心了。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of Changxiang's emotional state (age and helplessness) as he searches for his mother, setting the stage for his subsequent actions. It provides background that influences the narrative progression without directly describing a location."
+      }
+    },
+    {
+      "sentence_index": 78,
+      "sentence": "这时，霹雳大仙路过华山，听到哭声，便上来问沉香：“孩子，你为什么哭呀？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "霹雳大仙"
+        ],
+        "receivers": [
+          "沉香"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of霹雳大仙 approaching沉香 and asking about his crying, indicating an active interaction between the characters."
+      }
+    },
+    {
+      "sentence_index": 79,
+      "sentence": "沉香抽噎着说：“我妈妈被压在华山下，我想救她出来。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "华山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the current state of Chen Xiang's emotional situation and his intent to rescue his mother, which sets the context for subsequent actions. The location '华山' (Mount Hua) is explicitly mentioned as the place where his mother is imprisoned."
+      }
+    },
+    {
+      "sentence_index": 80,
+      "sentence": "大仙一听觉得这孩子小小年纪挺有志气，就笑着说道：“要想救出母亲，得先学会高强的本领，你愿意跟我去学吗？”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "沉香"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence outlines the task for 沉香 to learn high-level skills in order to rescue his mother, which is a explicit requirement stated by 霹雳大仙."
+      }
+    },
+    {
+      "sentence_index": 81,
+      "sentence": "沉香用力点了点头，就跟着大仙去了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "沉香"
+        ],
+        "receivers": [
+          "大仙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Chen Xiang's active decision to follow the old man, representing his action of taking initiative to learn skills. The doer is '沉香' (Chen Xiang) and the receiver is '大仙' (the old man) as he is the one being followed."
+      }
+    },
+    {
+      "sentence_index": 82,
+      "sentence": "就这样，沉香每天刻苦练功，没几年便练就了一身好武艺。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "沉香练就了一身好武艺",
+        "explanation": "该句描述了沉香通过刻苦练功获得武艺的成果，属于前文行动（练习）后的状态变化，符合'consequence'类别中'描述前事件结果导致状态变化'的定义。"
+      }
+    },
+    {
+      "sentence_index": 83,
+      "sentence": "他拜别师傅，再次踏上了救母之路。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "沉香"
+        ],
+        "receivers": [
+          "三圣母"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 沉香 actively taking the action of departing from his master to embark on a journey to rescue his mother, making him the doer and his mother the receiver of the rescue action."
+      }
+    },
+    {
+      "sentence_index": 84,
+      "sentence": "霹雳大仙望着沉香远去的背影，微微一笑道：“沉香虽然练好了武艺，但是想救母亲光凭这些还不够，我得使些法术帮帮他。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides context about the霹雳大仙's plan to assist沉香 in his quest, setting the stage for the subsequent magical aid and conflict with二郎神. It establishes the narrative context without describing an action, consequence, or explicit task."
+      }
+    },
+    {
+      "sentence_index": 85,
+      "sentence": "说完悄悄驾起一朵祥云，尾随沉香而去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "霹雳大仙"
+        ],
+        "receivers": [
+          "沉香"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of '驾起祥云' (riding a cloud) and '尾随沉香而去' (following沉香), performed by霹雳大仙 to assist in the rescue mission. The action directly involves the doer (霹雳大仙) and the receiver (沉香) as the target of the following action."
+      }
+    },
+    {
+      "sentence_index": 86,
+      "sentence": "沉香正急着赶路，一条万丈深渊拦住了他的去路。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes a challenge (a deep chasm blocking the path) that sets the stage for future actions. It provides context about the obstacle沉香 must overcome, fitting the 'situation' category as it establishes the narrative context without introducing a task, action, or consequence."
+      }
+    },
+    {
+      "sentence_index": 87,
+      "sentence": "他咬紧牙关，毫不犹豫地纵身一跳，越过了深渊。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "沉香"
+        ],
+        "receivers": [
+          "深渊"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 沉香's action of jumping over the chasm, making him the doer and the chasm the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 88,
+      "sentence": "刚过深渊，忽然一阵惊天动地的吼声传来，沉香回头一看，一只庞大的猛虎向自己扑了过来。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "深渊",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the emergence of a new challenge (the tiger attack) after crossing the chasm, setting the stage for subsequent action sequences. The location '深渊' (abyss) is the narrative focus where this situation occurs."
+      }
+    },
+    {
+      "sentence_index": 89,
+      "sentence": "好个小沉香，面对猛虎毫不畏惧，挥动拳头一阵猛打，几下就把猛虎打翻在地。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "沉香"
+        ],
+        "receivers": [
+          "猛虎"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes沉香's active combat against the tiger, making it an 'action' category. The doer is沉香, and the receiver is the tiger being fought."
+      }
+    },
+    {
+      "sentence_index": 90,
+      "sentence": "奇怪的是，这猛虎倒地后竟变成了一只香喷喷的面虎，沉香正好腹中饥饿，就无所顾忌地大吃起来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the tiger transformed into a steamed bun, allowing Shen Xiang to eat it",
+        "explanation": "The sentence describes the unexpected transformation of the tiger into a steamed bun after being defeated, which directly leads to Shen Xiang's action of eating it. This outcome alters the state of the narrative by introducing a new element (the steamed bun) and triggering subsequent actions."
+      }
+    },
+    {
+      "sentence_index": 91,
+      "sentence": "吃过面虎，沉香觉得自己变得力大无穷。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "沉香变得力大无穷",
+        "explanation": "该句描述了沉香在食用面虎后的状态变化，属于前序动作（食用面虎）的直接结果，体现力量增强的后果。"
+      }
+    },
+    {
+      "sentence_index": 92,
+      "sentence": "这时，又有一条张牙舞爪的恶龙向他扑来。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "华山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces a new challenge (the dragon attack) occurring on华山, setting the stage for subsequent actions in the story."
+      }
+    },
+    {
+      "sentence_index": 93,
+      "sentence": "他闪身一跳，躲到一边，趁机抓住恶龙的尾巴，猛地将恶龙摔到了地上。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "沉香"
+        ],
+        "receivers": [
+          "恶龙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 沉香 actively performing a physical action (jumping aside, grabbing the dragon's tail, and throwing it to the ground) against the dragon, making it an 'action' category. The doer is 沉香, and the receiver is the dragon."
+      }
+    },
+    {
+      "sentence_index": 94,
+      "sentence": "突然，恶龙变成了一条彩虹，彩虹中飞出一柄闪闪发光的神斧。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the evil dragon transforms into a rainbow and a magical axe appears",
+        "explanation": "This sentence describes the outcome of the prior action where Chenchang defeated the dragon, leading to the dragon's transformation and the emergence of the magical axe, which directly impacts the plot progression."
+      }
+    },
+    {
+      "sentence_index": 95,
+      "sentence": "沉香接过神斧，心想：“嘿，太好了。我正好可以用神斧劈开华山，救出母亲。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "沉香"
+        ],
+        "receivers": [
+          "神斧"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 沉香 physically receiving the divine axe (action) and forming the intention to use it. The 'doer' is 沉香, and the 'receiver' is the axe. The internal thought about using it to save his mother is part of the action's purpose but not the action itself."
+      }
+    },
+    {
+      "sentence_index": 96,
+      "sentence": "想到这里，他立刻扛起神斧，继续赶路。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "沉香"
+        ],
+        "receivers": [
+          "神斧"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of '沉香' picking up the divine axe and continuing his journey, which is a physical action performed by the character on the object '神斧'."
+      }
+    },
+    {
+      "sentence_index": 97,
+      "sentence": "就在这时，霹雳大仙出现在了云端。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "霹雳大仙"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 霹雳大仙 appearing on the cloud, which is a key narrative progression triggering the subsequent task revelation. The doer is clearly 霹雳大仙, with no specific receiver mentioned."
+      }
+    },
+    {
+      "sentence_index": 98,
+      "sentence": "他说：“沉香，要想救出母亲，就得先打败二郎神，要想打败二郎神就得先拿回宝莲灯。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "沉香"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence explicitly outlines a task for沉香 to complete: defeating二郎神 and retrieving the宝莲灯 to rescue his mother. This directive establishes a clear responsibility that must be fulfilled."
+      }
+    },
+    {
+      "sentence_index": 99,
+      "sentence": "沉香点点头，谢过师傅继续赶路。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "沉香"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Chen Xiang's action of nodding, thanking his teacher, and continuing his journey. The doer is clearly '沉香' (Chen Xiang), and there is no explicit receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 100,
+      "sentence": "不久，他到了华山的莲花峰，冲着黑云洞大声呼喊起来：“妈妈，妈妈，我是沉香，我来救你了。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "沉香"
+        ],
+        "receivers": [
+          "三圣母"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes沉香 actively performing the action of shouting toward the Black Cloud Cave to call out to his mother, indicating a direct action with a clear doer (沉香) and receiver (三圣母)."
+      }
+    },
+    {
+      "sentence_index": 101,
+      "sentence": "三圣母听见喊声，激动不已，连忙答应：“沉香，沉香，我的孩子，我的好孩子啊。”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "三圣母因听到沉香的呼喊而产生强烈情感反应，并确认了沉香的身份，为后续救母行动铺垫",
+        "explanation": "该句描述了三圣母在听到沉香呼喊后的直接反应，属于前文沉香呼喊行为的后果。这一情感回应改变了故事的互动状态，使母子重逢成为可能，符合consequence的定义。"
+      }
+    },
+    {
+      "sentence_index": 102,
+      "sentence": "沉香听到妈妈的声音，举起神斧就要劈山。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "沉香"
+        ],
+        "receivers": [
+          "华山"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes沉香's action of raising his divine axe in preparation to split the mountain (华山), making it an 'action' category with the doer as沉香 and the receiver as华山."
+      }
+    },
+    {
+      "sentence_index": 103,
+      "sentence": "就在这时，二郎神拿着宝莲灯出现了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "二郎神"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Erlang Shen's action of appearing with the Paolian Lamp, which is a key moment in the conflict between Chen Xiang and Erlang Shen. The doer is clearly Erlang Shen, and there is no explicit receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 104,
+      "sentence": "他大声喝道：“哪里来的小毛孩，敢在这里寻事。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "二郎神"
+        ],
+        "receivers": [
+          "沉香"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents an active verbal action where 二郎神 directly addresses 沉香, indicating an interaction that drives the narrative conflict between the two characters."
+      }
+    },
+    {
+      "sentence_index": 105,
+      "sentence": "沉香昂起头来说：“我是三圣母的儿子沉香，你快放了我母亲。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "沉香"
+        ],
+        "receivers": [
+          "二郎神"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes沉香's active declaration and demand to二郎神, representing his direct action of asserting his identity and requesting the release of his mother."
+      }
+    },
+    {
+      "sentence_index": 106,
+      "sentence": "“住口，我当是谁，原来是你这小畜生长大成人了，今天我就把你一起压到华山下。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "二郎神"
+        ],
+        "receivers": [
+          "沉香"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents an action where Erlang Shen (二郎神) directly threatens Chen Xiang (沉香) with physical harm, indicating an active hostile intent towards the latter."
+      }
+    },
+    {
+      "sentence_index": 107,
+      "sentence": "二郎神怒吼一声，就要捉拿沉香。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "二郎神"
+        ],
+        "receivers": [
+          "沉香"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an active action performed by Erlang Shen (二郎神) targeting Changxiang (沉香), indicating an imminent apprehension as part of their conflict."
+      }
+    },
+    {
+      "sentence_index": 108,
+      "sentence": "沉香非常愤怒，不等二郎神扑来就挥动着神斧猛劈过去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "沉香"
+        ],
+        "receivers": [
+          "二郎神"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes沉香 actively performing the action of attacking二郎神 with his divine axe, indicating a direct physical confrontation between the two characters."
+      }
+    },
+    {
+      "sentence_index": 109,
+      "sentence": "霎时间天昏地暗、山摇地动。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the sky darkened and the mountains shook",
+        "explanation": "The sentence describes the environmental impact resulting from the intense battle between Chen Xiang and Erlang Shen, indicating a state change caused by prior action."
+      }
+    },
+    {
+      "sentence_index": 110,
+      "sentence": "二郎神也不示弱，旋转起宝莲灯就要向沉香下手。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "二郎神"
+        ],
+        "receivers": [
+          "沉香"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an active action performed by Erlang Shen (二郎神) against Shen Chang (沉香), involving the use of the Paolian lamp as a weapon. The action directly targets the receiver, initiating a physical confrontation."
+      }
+    },
+    {
+      "sentence_index": 111,
+      "sentence": "沉香一看这不就是母亲的神灯么，于是立刻伸手去夺，不料却被神灯射中胸口重重摔在了地上。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "沉香被神灯射中胸口并重重摔在地上",
+        "explanation": "该句描述了沉香试图夺取宝莲灯时被神灯反噬导致跌落的直接结果，属于前序动作（二郎神使用神灯攻击）引发的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 112,
+      "sentence": "沉香不甘示弱，咬咬牙，跳起来，挥动神斧又迎了上去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "沉香"
+        ],
+        "receivers": [
+          "二郎神"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes沉香 actively performing the action of confronting二郎神 with his divine axe, making him the doer and二郎神 the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 113,
+      "sentence": "只见一大一小两个身影，一会儿上一会儿下，一会儿左一会儿右，打得难解难分。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "沉香",
+          "二郎神"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the intense fight between沉香 and二郎神, indicating an active combat scenario where both characters are engaged in the action of fighting each other."
+      }
+    },
+    {
+      "sentence_index": 114,
+      "sentence": "这时，天上的太白金星正悠闲地打着呼噜睡午觉呢，忽然被一阵激烈的打斗声惊醒，他觉得非常扫兴，就向四位仙姑吩咐道：“去看看，发生了什么事？千万别让人再打搅本仙的好梦。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "太白金星"
+        ],
+        "receivers": [
+          "四位仙姑"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 太白金星 actively instructing the four仙姑 to investigate the fight, which is an action performed by 太白金星 and directed at the仙姑."
+      }
+    },
+    {
+      "sentence_index": 115,
+      "sentence": "四位仙姑透过云层往下一瞧，纷纷为沉香打抱不平，她们觉得二郎神这般欺负一个小孩儿，真是有失天威，于是她们相互递了个眼色，决心一起暗中帮助沉香对付二郎神。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "四位仙姑"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the four仙姑's decision to secretly assist沉香 against二郎神, which constitutes an active action taken by the仙姑. The doers are explicitly identified as the four仙姑, while no direct receiver is mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 116,
+      "sentence": "渐渐地，二郎神招架不住了，沉香却愈战愈勇，他虚晃一招，一把夺过宝莲灯，将二郎神打得落荒而逃。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "沉香"
+        ],
+        "receivers": [
+          "二郎神",
+          "宝莲灯"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes沉香's active actions of seizing the宝莲灯 and defeating二郎神 during a battle, making him the doer and the opposing forces (二郎神) and the object (宝莲灯) the receivers of his actions."
+      }
+    },
+    {
+      "sentence_index": 117,
+      "sentence": "沉香借着宝莲灯的力量，举起神斧，朝莲花峰奋力劈去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "沉香"
+        ],
+        "receivers": [
+          "莲花峰"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes沉香 actively using the宝莲灯's power to raise his divine axe and charge towards莲花峰, representing a direct action taken by the protagonist against the mountain."
+      }
+    },
+    {
+      "sentence_index": 118,
+      "sentence": "随着一道亮光闪起，华山“轰隆隆”裂成了两半，沉香冲进黑云洞，救出了妈妈。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "华山裂开，沉香救出母亲",
+        "explanation": "该句描述了沉香使用宝莲灯力量劈开华山、救出母亲的直接结果，属于前序行动（劈山）导致的状态变化，符合'consequence'分类要求。"
+      }
+    },
+    {
+      "sentence_index": 119,
+      "sentence": "母子二人隔了十六年才相见，一时百感交集，他们紧紧地相拥在一起，流下了幸福的泪水。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "母子二人十六年后重逢并相拥流泪，情感得到释放",
+        "explanation": "该句描述了沉香成功救出母亲后，母子十六年重逢的场景，属于前文宝莲灯劈山救母行动的直接结果，体现了人物关系的最终转变和情感释放。"
+      }
+    },
+    {
+      "sentence_index": 120,
+      "sentence": "后来，玉皇大帝赦免了三圣母的罪，准许她跟刘彦昌生活在一起，沉香也被封了神职。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "三圣母的罪被赦免，获得与刘彦昌共同生活的权利，沉香被封神职",
+        "explanation": "该句描述了前文冲突事件（三圣母被囚禁、沉香与二郎神战斗）后的结果，包括玉皇大帝的赦免决定和沉香的神职封赏，属于对先前事件的因果性结果描述。"
+      }
+    },
+    {
+      "sentence_index": 121,
+      "sentence": "二郎神主动前来道歉，得到了所有人的原谅。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Erlang God received forgiveness from everyone after apologizing",
+        "explanation": "The sentence describes the outcome of the prior conflict between Erlang God and Sanmǔ, where his apology led to reconciliation and forgiveness from all parties, representing a state change in the narrative."
+      }
+    },
+    {
+      "sentence_index": 122,
+      "sentence": "再后来，曾经囚禁三圣母的莲花峰旁，忽然多出了一座小山，与莲花峰紧紧相偎。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "a small mountain appeared near莲花峰, joining it closely",
+        "explanation": "This sentence describes the outcome of沉香's successful rescue of his mother, leading to the formation of a new mountain near莲花峰. The state change involves the creation of the new mountain and its physical connection to the existing莲花峰."
+      }
+    },
+    {
+      "sentence_index": 123,
+      "sentence": "据说站在小山的山顶可以听到当年沉香呼喊母亲的声音，所以华山的老百姓都亲切地称它“孝子峰”。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The small mountain near Lotus Peak is named 'Xiaozi Peak' due to the legend of Chenchang hearing his mother's call, leading to its association with filial piety.",
+        "explanation": "This sentence describes the outcome of the prior event where Chenchang rescued his mother, resulting in the mountain being named 'Xiaozi Peak' by the locals. The state change involves the mountain's new name and its symbolic connection to the story."
+      }
+    }
+  ]
+}

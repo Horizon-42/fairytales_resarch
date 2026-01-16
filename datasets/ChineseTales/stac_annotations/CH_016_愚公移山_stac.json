@@ -1,0 +1,232 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_016_愚公移山.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 15,
+  "analyzed_sentences": 15,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "太行、王屋两座山，方圆七百里，高七八千丈，本来在冀州南边，黄河北岸的北边。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "冀州南边",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the location and scale of the two mountains, establishing the setting for the story. The location '冀州南边' is the narrative focus as it defines the mountains' position relative to the main region."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "北山下面有个名叫愚公的人，年纪快到90岁了，在山的正对面居住。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "北山下面",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the character '愚公' and establishes his residence location relative to the mountains, setting the contextual background for the story."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "他苦于山区北部的阻塞，出来进去都要绕道，就召集全家人商量说：“我跟你们尽力挖平险峻的大山，使道路一直通到豫州南部，到达汉水南岸，好吗？”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "愚公",
+          "家人"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence explicitly states the task of digging mountains to clear the path, with愚公 initiating the plan and his family as the involved roles."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "大家纷纷表示赞同。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the family's agreement to the task, which is part of the background context leading to the action of digging the mountains."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "他的妻子提出疑问说：“凭你的力气，连魁父这座小山都不能削平，能把太行、王屋怎么样呢？再说，往哪儿搁挖下来的土和石头？”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence presents the wife's doubt about the feasibility of moving the mountains, establishing the conflict and context for the story's central challenge. This sets up the narrative situation without introducing new actions, locations, or consequences."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "众人说：“把它扔到渤海的边上，隐土的北边。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "愚公的家人"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents the group's decision to execute a specific plan (moving soil to the sea), which constitutes an explicit task. The task roles are the family members involved in the labor."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "于是愚公率领儿孙中能挑担子的三个人上了山，凿石头，挖土，用箕畚运到渤海边上。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "愚公",
+          "儿孙中能挑担子的三个人"
+        ],
+        "receivers": [
+          "石头",
+          "土壤",
+          "渤海边上"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the actions taken by愚公 and his family members to dig and move soil, which are active activities being performed."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "邻居京城氏的寡妇有个孤儿，刚七八岁，蹦蹦跳跳地去帮助他们。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "孤儿"
+        ],
+        "receivers": [
+          "愚公的家人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the child actively participating in the labor by helping the family group, indicating an action performed by the child (doer) and received by the family (receivers)."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "冬夏换季，才能往返一次。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The labor of moving soil takes an entire winter and summer season to complete a single round trip, highlighting the slow progress of the task.",
+        "explanation": "This sentence describes the outcome of the ongoing labor described in prior actions, showing the time required for the task and the challenges faced, which directly relates to the consequence of their efforts."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "河曲的智叟讥笑愚公，阻止他干这件事，说：“你简直太愚蠢了！就凭你残余的岁月、剩下的力气连山上的一棵草都动不了，又能把泥土石头怎么样呢？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "河曲的智叟"
+        ],
+        "receivers": [
+          "愚公"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 河曲的智叟 (the wise old man from Hequ) mocking and attempting to stop 愚公's efforts, which is an active behavior directed at愚公."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "北山愚公长叹说：“你的思想真顽固，顽固得没法开窍，连孤儿寡妇都比不上。即使我死了，还有儿子在呀；儿子又生孙子，孙子又生儿子；儿子又有儿子，儿子又有孙子；子子孙孙无穷无尽，可是山却不会增高加大，还怕挖不平吗？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "北山愚公"
+        ],
+        "receivers": [
+          "河曲智叟"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 北山愚公 actively engaging in dialogue (speaking) to counter 河曲智叟's criticism, which is an action performed by the愚公 directed at the智叟."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "河曲智叟无话可答。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "河曲智叟因愚公的论证而无法反驳，对话陷入僵局",
+        "explanation": "该句描述了愚公与智叟辩论后智叟无言以对的结局，是愚公论证导致的直接结果，属于后果类别。changed_state具体说明智叟被说服后无法继续反驳的状态变化"
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "握着蛇的山神听说了这件事，怕他没完没了地挖下去，向天帝报告了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "山神"
+        ],
+        "receivers": [
+          "天帝"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the mountain god's action of reporting to the heavenly emperor due to concerns about the ongoing excavation, making it an 'action' category with the doer as the mountain god and the receiver as the heavenly emperor."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "天帝被愚公的诚心感动，命令大力神夸娥氏的两个儿子背走了那两座山，一座放在朔方的东部，一座放在雍州的南部。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the two mountains were removed and relocated to different regions",
+        "explanation": "This sentence describes the outcome of the prior events (the mountain god's report and the Emperor's decision), resulting in the physical removal and relocation of the mountains, which resolves the initial problem of the mountain barrier."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "从这时开始，冀州的南部直到汉水南岸，再也没有高山阻隔了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "冀州的南部直到汉水南岸不再有高山阻隔",
+        "explanation": "该句描述了愚公移山行动完成后产生的结果，即原本被高山阻隔的区域恢复畅通，属于前序行动（山被移走）导致的状态变化。"
+      }
+    }
+  ]
+}

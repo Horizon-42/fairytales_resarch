@@ -1,0 +1,1013 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_019_七仙女和仙浴潭.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 70,
+  "analyzed_sentences": 70,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "有一个美丽的水潭，名叫“仙浴潭”。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "仙浴潭",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the setting of the story by describing the location of '仙浴潭' (Xian Yu Tan), establishing the context for the subsequent narrative about the seven fairies and their connection to the water潭."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "七块俊秀挺拔的岩石矗立在夕阳中，岩石下，碧波荡漾，金光闪闪，相传七仙女曾经在这沐浴过，所以此潭被称为“仙浴潭”，那七块秀挺的岩石被称为“七仙女岩”。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "仙浴潭",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence establishes the setting by describing the location of the water潭 and its association with the seven fairies' legend, providing background context for the story."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "传说天上有七位仙女，不但长得国色天香，而且清新脱俗，极为爱干净。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "天",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描述七仙女的外貌特征和生活习惯，为后续故事发展提供背景设定，属于情境类信息。'天'作为七仙女的居所，是故事的核心场景。"
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "每天，七位仙女都会到江河湖泊里沐浴嬉闹。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "江河湖泊",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the daily routine of the seven fairies bathing in rivers and lakes, establishing their habitual activity as part of the narrative context."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "当然，她们每天去的地方都不尽相同，比如鄱阳湖、太湖、西湖、洪泽湖，甚至长江等，大大小小的江河湖泊都留有她们的足迹。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "鄱阳湖",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the seven仙女's bathing habits, establishing their previous locations (including Poyang Lake) before they seek a more tranquil place. The narrative focus is on their movement between various lakes and rivers, with Poyang Lake being one of the explicitly mentioned locations."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "可是时间久了，七位仙女也感到那些地方失去了吸引力，虽然都是万顷清波，可是却没有她们最想寻找的那份幽静之感。",
+      "analysis": null,
+      "error": "Failed to reach Ollama at http://127.0.0.1:11434/api/chat: HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=300.0)"
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "于是，七位仙女开始寻找一个清幽的地方。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七仙女"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the initiation of the action by the seven fairies to search for a quiet place, making it an action with the doers as the seven fairies."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "在寻找的过程中，七仙女飞遍了山川大江，漫游于天地之间，真是快乐极了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七仙女"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the seven fairies flying through mountains and rivers during their search for a quiet place, indicating their active movement and exploration as part of their quest."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "每当她们自由自在、轻快自如地在天空中飞翔时，都能看见人间那男耕女织，夫妻恩爱的美好生活。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "天空中",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the仙女's experience of flying in the sky and observing human life, establishing background context for their growing desire for a peaceful existence. This sets the stage for their eventual decision to settle at the仙浴潭."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "所以，这在仙女们的心中产生了无限的向往。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the仙女们 developed an infinite longing for human life and family happiness",
+        "explanation": "The sentence describes the outcome of the仙女们 observing human life, leading to their emotional shift from heavenly indifference to yearning for human experiences. This state change directly follows their aerial observations of earthly families."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "从此，她们对无忧无虑的天庭生活失去了兴趣，却对人间的天伦之乐憧憬不已。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "狮坪",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the仙女们' shift in desire from heavenly life to human joys, setting the background for their eventual decision to remain on earth. The location '狮坪' is the narrative focus where this transformation occurs."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "有一年的秋天，七位仙女到了鸳鸯溪的狮坪。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "鸳鸯溪的狮坪",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描述七位仙女在秋天到达鸳鸯溪的狮坪，为后续情节发展（如与七郎相遇、成婚等）建立场景背景，属于设定故事发生地点的'情况'类别。"
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "飞在空中的仙女们往下看，只见那鸳鸯溪流水潺潺，碧波中还倒映着两岸青翠秀丽的树木。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "鸳鸯溪",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the仙女们' observation of the landscape while flying over鸳鸯溪, establishing the setting and their discovery of the tranquil environment. This sets the context for their decision to settle there."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "再往下飞的时候，她们看见水中还有成双成对的鸳鸯在戏水，看着恩恩爱爱的鸳鸯，仙女们羡慕极了。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "鸳鸯溪",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the仙女们 observing the scene of鸳鸯溪 and their feelings of envy towards the鸳鸯, establishing the setting and emotional context that leads to their decision to stay in this location."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "正所谓“只羡鸳鸯不羡仙”啊！",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "鸳鸯溪的狮坪",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the motivation behind the seven fairies' choice of the '鸳鸯溪的狮坪' as their peaceful retreat, setting the context for their subsequent actions. It describes their emotional state (envy of mandarin ducks) and reinforces the significance of the location as their desired sanctuary."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "这就是她们寻找已久的幽静之地。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "仙浴潭",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of the seven仙女's long-sought peaceful location, setting the stage for the story's central event at the Xian Yu Tan (Sacred Bath Pool)."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "碧水潺潺，树木青翠，景色秀丽，幽静惬意，是一个梦寐以求的地方。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "仙浴潭",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the characteristics of the location '仙浴潭' as the ideal peaceful place sought by the seven仙女, providing background context for the story's setting."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "从此之后，七位仙女们就经常在这儿沐浴戏水。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七仙女"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the ongoing action of the seven fairies bathing and playing in the water, indicating their active behavior at the location. The doers are the seven fairies, and there are no explicit receivers mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "狮坪的山沟里，生活着一对恩爱的老夫妻。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "狮坪的山沟里",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过引入'狮坪的山沟里'这一地点和'一对恩爱的老夫妻'的设定，为后续故事发展（七仙女与七兄弟的相遇、成婚等情节）提供了背景场景，属于设定故事基础情境的'Situation'分类。"
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "他们一共生了七个儿子，他们各个身体强壮、俊美帅气，依次叫做大郎、二郎、三郎、四郎、五郎、六郎、七郎。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background information about the old couple's family structure, establishing the context for subsequent events. It does not mention a specific location, so the location field is left empty."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "看着七个长大成人的儿子，老夫妻真是又欣慰又着急啊！",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "狮坪",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the emotional state of the old couple regarding their grown sons, establishing their motivation for seeking wives. The location '狮坪' is the narrative focus where the story's key events unfold."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "着急什么呢？",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "狮坪",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence '着急什么呢？' (What's the worry about?) is part of the narrative context establishing the old couple's emotional state and their concern about their sons' marital prospects. The location '狮坪' is the mountainous area where the story's main events unfold, serving as the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "原来他们都到了娶妻的年龄，老夫妻自然是着急，况且这山里也没有合适的姑娘啊！",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "山里",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过解释老夫妻着急的原因（儿子们到了娶妻年龄且山里无合适姑娘），为后续情节（兄弟们被要求到山外娶妻）提供背景信息，属于设定故事背景的'situation'类别。"
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "所以，老夫妻就让自己的七个儿子到山外去娶妻生子。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "七个儿子"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the old couple assigning a specific responsibility to their seven sons to go to the mountains and marry, which qualifies as a task. The task_roles are the seven sons who are required to fulfill this duty."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "但是，这七个兄弟都十分孝顺，他们说什么也不肯离开自己年迈的父母，坚决地要留下来侍奉二老一生一世。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "狮坪",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence establishes the background context of the seven brothers' filial piety and their decision to remain with their parents, setting the stage for their later interactions with the seven仙女. The location '狮坪' is the narrative focus where these events unfold."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "于是，他们兄弟七人就在山地里开荒耕种，并以打猎为生。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七兄弟"
+        ],
+        "receivers": [
+          "土地",
+          "动物"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action taken by the seven brothers (doers) engaging in farming (land) and hunting (animals) as their means of subsistence, which is a key activity in their daily life."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "他们都能吃苦勤劳，所以一家人生活的很幸福。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the family lives a very happy life",
+        "explanation": "The sentence describes the outcome of the brothers' hard work and diligence, resulting in the family's happiness. This is a consequence of their labor as stated in the preceding context."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "有一天，七位仙女又来到这里沐浴，就当她们在潭水里嬉闹之时，七郎正好打猎回来。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "仙浴潭",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence sets the scene for the subsequent interaction between the seven fairies and Qi Lang by establishing the location (仙浴潭) and the timing of their presence there when Qi Lang returns from hunting."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "他看到七位美若天仙的姑娘，心想天下竟有如此美丽的姑娘，可这深山老林里怎么会有这么美丽的姑娘呢？",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "深山老林",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述七郎在深山老林中偶遇七位仙女的情景，为后续情节发展（七郎认出仙女身份并引发后续婚配事件）提供背景设定，属于情境类描述。"
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "所以，七郎断定，她们一定是天上下凡的仙女。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Seven Brother concluded that the seven girls are celestial beings who have descended from heaven",
+        "explanation": "The sentence represents a consequence of the prior action (seven brothers observing and counting the seven girls). It describes the resulting conclusion drawn by Seven Brother, which alters the narrative state by establishing the girls' divine identity."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "他悄悄地数了一遍，正好是七个姑娘。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七郎"
+        ],
+        "receivers": [
+          "七仙女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes seven郎 performing the action of counting the seven仙女, which is a key moment in the story where he recognizes their presence and sets up the subsequent interaction."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "转念间，七郎又想到，自己不是有七个兄弟吗？",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the narrative context of seven郎's realization about his brothers, setting the stage for the subsequent development of the story where the brothers and the seven仙女 connect. It provides background for the eventual union and transformation into rocks."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "莫不是天降的好姻缘啊？",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "仙浴潭",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a narrative setup where seven郎 contemplates the divine significance of encountering seven仙女 at the '仙浴潭', establishing the context for the subsequent development of the story's central conflict and resolution."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "七郎一动不动，七位仙女还在水潭里嬉闹玩耍呢，最后等到七位仙女都腾云驾雾地飞上天空后，七郎才扛起猎物回了家。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七郎"
+        ],
+        "receivers": [
+          "七位仙女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes seven郎's action of waiting for the seven仙女 to leave before returning home, indicating his active behavior towards them."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "回到家里之后，七郎便把自己在路上所看见的奇遇告诉了父母和其他的六个哥哥。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七郎"
+        ],
+        "receivers": [
+          "父母",
+          "六个哥哥"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 七郎 actively performing the action of sharing his encounter with his parents and brothers, making him the doer and the family members the receivers of the information."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "父母和六个哥哥高兴极了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The parents and six brothers' happiness leads to their decision to plan marriage with the seven仙女",
+        "explanation": "This sentence describes the emotional outcome of the previous event (seven郎 sharing his encounter with the仙女), which directly influences the subsequent action of discussing marriage plans. The happiness of the family members represents a state change triggered by the prior event."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "然后，他们就一起商量娶七位仙女为妻的办法。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "七个兄弟"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates the seven brothers are tasked with discussing a plan to marry the seven fairies, establishing a clear responsibility and action item within the narrative."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "第二天，七位仙女又来到这儿沐浴。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七仙女"
+        ],
+        "receivers": [
+          "仙浴潭"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the seven fairies performing the action of coming to bathe at the '仙浴潭', making them the doers and the location the receiver of their action."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "她们轻轻地脱下莲花裙衫，缓缓地下水。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七仙女"
+        ],
+        "receivers": [
+          "水"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the seven仙女 performing the action of removing their lotus-silk robes and descending into the water, with the water as the receiving entity for their entry."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "这时，一直躲在潭边树林里的七个兄弟突然冒了出来，七个仙女吓了一大跳，她们急急忙忙跑到潭边，想穿好莲花裙衫好腾空而起！",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七个兄弟"
+        ],
+        "receivers": [
+          "七个仙女"
+        ],
+        "changed_state": "",
+        "explanation": "该句描述七个兄弟突然从树林中现身这一主动行为，属于动作类事件。执行者是七个兄弟，受事者是七个仙女，其行为直接导致仙女们惊慌失措的反应。"
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "可就在这时候，最小的七仙女看到了跑在最前面的兄弟。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七仙女"
+        ],
+        "receivers": [
+          "七郎"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the smallest seven fairy noticing the leading brother, which is an action performed by the fairy (doer) with the brother (receiver) as the object of her observation."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "她一下被他迷住了，他就是七郎，长得风度翩翩、眉清目秀。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the youngest仙女 was captivated by seven郎's appearance",
+        "explanation": "The sentence describes the outcome of the prior action (brothers grabbing the仙女's skirts), resulting in the youngest仙女 being captivated by seven郎's appearance, which alters the state of the仙女's emotional response."
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "于是，准备腾云而起的七仙女放慢了脚步，结果被第七个兄弟一把抓住了莲花裙。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七郎"
+        ],
+        "receivers": [
+          "七仙女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the seventh brother (七郎) performing the action of grabbing the lotus skirts of the seven fairies (七仙女), which is a direct physical interaction between the characters."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "而那些已经腾云而起的姐姐见妹妹被抓住了，又急忙落到潭边来救妹妹。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "姐姐们"
+        ],
+        "receivers": [
+          "妹妹"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the sisters' active response to their sister being caught, indicating an action performed by the sisters (doers) to rescue their sister (receiver)."
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "就在这一瞬间，六个兄弟全部都拥上来，大郎一把抓住了大仙女，二郎一把抓住了二仙女，三郎一下子拉住了三仙女的裙子，四郎也抓住了四仙女的袖子，五郎抓住了五仙女，六郎拉住了六仙女。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "大郎",
+          "二郎",
+          "三郎",
+          "四郎",
+          "五郎",
+          "六郎"
+        ],
+        "receivers": [
+          "大仙女",
+          "二仙女",
+          "三仙女",
+          "四仙女",
+          "五仙女",
+          "六仙女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the brothers' physical actions of grabbing the仙女s, making it an 'action' category. The doers are the six brothers (大郎-六郎), and the receivers are the corresponding仙女s (大仙女-六仙女)."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "七个仙女在惊吓之余，看见原来七个小伙子各个都英俊潇洒，心中便生出了凡念。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "七位仙女因被七个小伙子抓住而产生凡念，从单纯的天界存在转变为对人间情感的向往",
+        "explanation": "该句描述了七仙女在被七个小伙子抓住后的心理变化，这是对前文兄弟们抓住仙女这一行动的直接后果。仙女们由最初的惊吓转变为对人间情感的向往，标志着她们从天界到人间身份转变的关键转折点。"
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "她们都害羞地低下头，一句话也不说。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "七位仙女因害羞而低头沉默，表现出对人间情感的向往",
+        "explanation": "该句描述了七位仙女在被七个兄弟抓住裙衫后，因害羞和产生凡念而低头沉默的反应，这是对前文兄弟们施礼请求婚配这一行为的直接结果，体现了角色心理状态的转变。"
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "这下，七个兄弟才一起向七位仙女施礼道：“因为在家侍奉父母，所以至今我们兄弟七人还没有娶妻成婚，希望神仙姐姐成全我们。刚才的鲁莽还请姐姐多多包涵！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七个兄弟"
+        ],
+        "receivers": [
+          "七位仙女"
+        ],
+        "changed_state": "",
+        "explanation": "句子描述七个兄弟向七位仙女施礼并陈述请求婚姻的行动，属于主动行为。doers为执行动作的七个兄弟，receivers为接受动作的七位仙女。"
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "七位仙女听了他们的话语，觉得语气诚恳，又见他们看上去忠厚老实，善良勤劳，并且都一表人才，都默默地应许了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "七位仙女同意与七兄弟结婚",
+        "explanation": "该句描述了七位仙女在听到兄弟们诚恳请求后，内心产生共鸣并默许婚事，这是对兄弟们道歉这一前行动作的直接结果，导致仙女们同意婚配，改变了原本无法在凡间成婚的处境。"
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "可是仙女怎么可以在凡间成婚呢？",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The仙女's decision to marry mortal men violates heavenly regulations, creating a conflict with divine laws",
+        "explanation": "This sentence represents the consequence of the仙女's agreement to marry the seven brothers. It highlights the resulting conflict between their divine nature and the mortal world, which creates a new state of being that violates heavenly rules."
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "这可是触犯了天规，会受到惩罚的。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The seven fairies face the risk of punishment for breaking heavenly rules by marrying on Earth",
+        "explanation": "The sentence describes the outcome of the seven fairies' decision to marry the seven brothers on Earth, stating that this action violates heavenly rules and will result in punishment. This directly follows their agreement to marry and establishes the consequence of their choice."
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "因此，尽管她们心中已经同意了，可嘴上却什么都不敢言语。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The seven仙女 remained silent despite their internal agreement to marry the seven brothers, due to fear of breaking heavenly rules",
+        "explanation": "This sentence describes the outcome of the seven仙女's internal agreement to marry the brothers, highlighting their silence as a consequence of their fear of divine punishment. The state change is their unspoken consent versus their verbal silence."
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "最后，最小的七仙女想出了一个办法。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七仙女"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the youngest fairy taking an active step (coming up with a plan) to address the problem of marrying the seven brothers, making it an 'action' category. The doer is the youngest fairy, and there is no explicit receiver mentioned."
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "她对姐姐们说：“我有一个好办法！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七仙女"
+        ],
+        "receivers": [
+          "姐姐们"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the smallest fairy (七仙女) actively communicating her plan to her sisters (姐姐们), which is an action performed by the doer (七仙女) directed at the receivers (姐姐们)."
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "“什么办法？”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "七仙女"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task where the sisters (七仙女) are explicitly requesting the method to resolve their situation, setting up the responsibility for the seventh sister to provide the solution."
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "姐姐们迫不及待地问。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "姐姐们"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the sisters' eagerness to ask a question, which is an active interaction initiated by them. The 'doers' are the sisters, and there is no explicit receiver mentioned in the sentence."
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "“只要能把天上的神仙都迷惑住，我们就可以在凡间成婚了。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "七仙女"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence outlines the task requirement for the seven仙女 to deceive heavenly beings in order to achieve marriage on Earth, specifying their role in fulfilling this condition."
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "七仙女说。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七仙女"
+        ],
+        "receivers": [
+          "六位姐姐"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence indicates the Seven Fairies (doer) are speaking (action) to their sisters (receiver) as part of the dialogue where they propose a plan to marry the seven brothers."
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "“可怎么迷惑呢？”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "七仙女",
+          "姐姐们"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句子是七仙女与姐姐们讨论如何迷惑天庭的对话，属于明确的行动要求（即需要找到迷惑天庭的方法）。任务角色包括七仙女和她的姐姐们，她们是提出并寻求解决方法的主体。"
+      }
+    },
+    {
+      "sentence_index": 60,
+      "sentence": "姐姐们忙问。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七仙女"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the sisters actively asking a question, which is an action performed by them."
+      }
+    },
+    {
+      "sentence_index": 61,
+      "sentence": "“那就把我们的仙身变成七块岩石，而我们的真身随着七郎们到人间变成凡人，这样我们就不会受到惩罚啦！男耕女织，夫妻恩爱，这不就是人间的幸福吗？”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "七仙女"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a proposed plan (task) by the seven仙女 to transform their divine forms into rocks and become mortal beings to avoid punishment. The task roles are the seven仙女 who are the ones initiating and executing this plan."
+      }
+    },
+    {
+      "sentence_index": 62,
+      "sentence": "听了七仙女的好办法，六位姐姐连忙点头同意。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "六位姐姐同意了七仙女的计划",
+        "explanation": "该句描述了六位姐姐在听到七仙女的计划后同意，这是对七仙女提出计划这一先前事件的直接结果，导致她们同意了计划。"
+      }
+    },
+    {
+      "sentence_index": 63,
+      "sentence": "七个兄弟也因为她们的应允而激动不已。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the seven brothers became greatly excited",
+        "explanation": "The sentence describes the emotional reaction of the seven brothers to the仙女们' agreement, which is a direct consequence of the prior event where the仙女们 accepted their marriage proposal."
+      }
+    },
+    {
+      "sentence_index": 64,
+      "sentence": "于是，七位仙女便开始施展仙术，只见一阵白色的轻雾笼罩了起来，随后七座俊秀的岩石就突然矗立在那儿。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七位仙女"
+        ],
+        "receivers": [
+          "七座俊秀的岩石"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the seven fairies casting a spell (施展仙术) which directly results in the creation of seven rocks. The doers are the fairies performing the magic, and the receivers are the rocks that materialize as a consequence of their action."
+      }
+    },
+    {
+      "sentence_index": 65,
+      "sentence": "忽然，七个兄弟的眼前站着七个美丽、欢笑的姑娘。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The seven仙女's transformation into human-like forms allows them to be seen by the brothers, leading to their marriage and living as mortal couples.",
+        "explanation": "This sentence describes the outcome of the seven仙女's previous action of transforming into rocks, resulting in their visible presence to the brothers and the subsequent marriage. The state change involves their transition from invisible divine beings to visible human forms."
+      }
+    },
+    {
+      "sentence_index": 66,
+      "sentence": "就这样，她们和七兄弟成婚了，过着男耕女织的幸福生活。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "七位仙女与七兄弟结为夫妻，过上男耕女织的凡人生活，改变了她们作为仙女的原有状态",
+        "explanation": "该句描述了七仙女与七兄弟结婚后的生活结果，体现了从仙女身份到凡人生活的转变，属于前序事件（仙术转化）的直接后果。"
+      }
+    },
+    {
+      "sentence_index": 67,
+      "sentence": "七对夫妻恩恩爱爱，享尽人间天伦之乐。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "七对夫妻恩恩爱爱，享尽人间天伦之乐",
+        "explanation": "该句描述七仙女与七兄弟结为夫妻后获得的幸福结局，是前文仙女们通过化为岩石实现凡间婚配的直接结果，体现了因果关系的后果状态。"
+      }
+    },
+    {
+      "sentence_index": 68,
+      "sentence": "据说，那七块岩石十分俊俏，生长在岩石顶上葱葱郁郁的树木，就是七位仙女的秀发；七位仙女光洁的身子化为了石身；岩石下方的层层褶皱，就是七位仙女的荷花裙衫。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "七位仙女的仙身化为岩石，其秀发、身体和荷花裙衫分别转化为岩石顶的树木、石身和岩石下方的褶皱，形成自然景观",
+        "explanation": "该句描述了七仙女因违反天规而被转化为岩石的结局，这是她们选择留在凡间成婚的直接结果，导致自然景观发生根本性变化。"
+      }
+    },
+    {
+      "sentence_index": 69,
+      "sentence": "还有传说，最小的七仙女最爱撒娇，在她隐去仙身之前，还故意生气地踢了七郎一脚，说：“都是你害的！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "七仙女"
+        ],
+        "receivers": [
+          "七郎"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the smallest seven fairy (七仙女) kicking seven郎 and expressing blame, which is a direct physical and verbal action performed by the doer towards the receiver."
+      }
+    },
+    {
+      "sentence_index": 70,
+      "sentence": "结果，岸边的岩石竟被她踢出了一个洞来！",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The rocks by the shore were transformed into having a hole created by the kick",
+        "explanation": "The sentence describes the outcome of the previous action (the seven仙女 kicking seven郎), resulting in the physical alteration of the rocks. This is a consequence of the prior event in the narrative."
+      }
+    }
+  ]
+}

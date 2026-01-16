@@ -1,0 +1,2473 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_026_聂小倩.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 164,
+  "analyzed_sentences": 164,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "宁采臣是浙江人，性格慷慨爽直，品行端方，洁身自好。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "浙江",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句子通过描述宁采臣的出身和性格特征，为后续故事发展奠定人物基础，属于背景设定类的'Situation'分类。"
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "他常常对人说：“平生除了妻子外，不好任何女色。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "浙江",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描述宁采臣的个人品德（不近女色）为后续情节（如女鬼小倩的试探）建立人物性格背景，属于故事背景设定。"
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "有一次，他到金华去，走到北门外，就在一座寺庙里解下了行李。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "一座寺庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述宁采臣前往金华并在北门外寺庙解下行李的情景，为后续故事发展（如遇见小倩、鬼魅事件等）建立场景背景，属于设定故事发生的地点和初始情境。"
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "这座寺庙殿屋及宝塔都很壮丽，但是庭院里却长满了一人多高的蓬蒿，好像很久没人走动过了。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "寺庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描述寺庙的壮丽建筑与荒芜庭院形成对比，为后续情节发展（如鬼魅事件）建立场景基础，属于叙事中的背景设定。"
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "东西两侧的僧舍，一个个门扉虚掩着，只有南侧的一间小屋，门锁像是新的。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "寺庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描述寺庙僧舍的门扉状态和南侧小屋的门锁情况，为后续情节发展（如宁采臣留宿、小倩出现等）提供环境背景，属于叙事中的场景铺垫。"
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "再往大殿东角落望去，只见修长的翠竹足有两手合围那么粗，台阶下有个大水池，池中的野莲已经开花。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "寺庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描述寺庙东角的翠竹、水池和野莲等细节，为故事构建了具体的场景背景，属于设定情境的描写。"
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "宁采臣很喜欢这里幽静的环境。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "寺庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述宁采臣对寺庙幽静环境的喜好，属于为后续情节（留宿寺庙）提供背景信息的'情况'分类，'寺庙'是叙事聚焦的地点。"
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "当时正赶上学政到金华测试秀才，城里客房租金昂贵，他打算留宿在这里，于是一边散步一边等僧人回来。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "金华",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about宁采臣's reason for staying at the temple, mentioning his journey to金华 for the exam and the high cost of city accommodations. This sets the stage for his decision to stay at the temple."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "天色渐晚，有个壮士走来，开了南屋的门。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "壮士"
+        ],
+        "receivers": [
+          "南屋的门"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an action performed by the壮士 (strong man) who opens the door of the south room, indicating a direct physical action with a clear doer and receiver."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "宁采臣连忙赶过去施礼，并告诉他自己打算留宿。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "壮士"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes宁采臣 actively performing the action of rushing to greet the壮士 and informing him of his intention to stay, making him the clear doer. The壮士 is the receiver of this action as he is the one being addressed."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "壮士说：“这里没有房主，我也是借住。你不在乎荒凉，早晚能得到你的指教，当然很好了。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "寺庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句子通过壮士的对话交代了宁采臣留宿寺庙的背景，说明此处无房主且壮士亦为借住，为后续情节发展（如小倩现身、鬼魅事件）奠定场景基础。"
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "宁采臣很高兴，忙铺干麦秸当作床，支起木板当作桌子，打算住上一些日子。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "床",
+          "桌子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes宁采臣 actively performing the action of setting up a bed (using dry wheat straw) and a table (using wooden boards), which are the direct objects receiving his actions."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "这天夜里，明月高悬，月色皎洁，犹如清水一般，二人在佛殿廊下促膝谈心，各自通名报姓。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣",
+          "燕赤霞"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of two characters engaging in a conversation and exchanging names, which is an active interaction between them."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "壮士自我介绍说：“我姓燕，字赤霞。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "壮士"
+        ],
+        "receivers": [
+          "宁采臣"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the '壮士' actively performing the action of self-introduction by stating his name and surname. The doer is the '壮士' (who later reveals his name as 燕赤霞), and the receiver is '宁采臣' as he is the one listening to and processing this information."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "宁采臣猜测他是个赶考的秀才，但听说话的声音，又很不像浙江人。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "浙江",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about宁采臣对壮士（燕赤霞）身份的推测，涉及其可能的籍贯（浙江）与实际说话方式的矛盾，属于设定故事背景的情境信息。"
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "于是便问他家乡何处，壮士自己说是秦地人。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "秦地",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background information about the壮士's origin, establishing his location as秦地. This contextual detail contributes to the narrative setup by revealing the character's background before further interactions."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "言语很是坦诚。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the sincerity of the conversation between宁采臣 and the壮士, establishing their mutual trust as a situational context for their subsequent interactions. No specific location is mentioned in the sentence itself."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "过了一会儿，彼此也没什么可说的了，便拱手告别，各自回房睡觉。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣",
+          "燕赤霞"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the mutual action of宁采臣 and燕赤霞 parting ways and returning to their respective rooms after their conversation, indicating a social interaction and physical movement."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "宁采臣由于新来乍到，很长时间睡不着觉。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "寺庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述宁采臣因新到寺庙而长期失眠的状态，为后续听到北院异常声响等情节提供背景，属于设定故事发展基础情境的'situation'类别。"
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "他听到房屋北边有小声嘀咕的声音，好像有人家。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "寺庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述宁采臣在寺庙中听到房屋北边有声音，为后续他窥视并发现鬼魂等情节提供背景，属于设定故事发展的情境。"
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "宁采臣便爬在北墙根石窗下，窥视外面的动静。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes宁采臣 actively performing the action of climbing onto the stone window and peeking outside to observe the external movements. The doer is clearly宁采臣, and there is no explicit receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "只见短墙外有个小院，院中有个四十多岁的妇女，还有一个老太太，穿着褪了色的红色衣服，头上插着大银梳子，年老体衰，正和那个妇女在月下说话呢。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "短墙外的小院",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描述短墙外小院中两位女性人物的场景，为后续情节发展建立背景环境，属于设定故事场景的'Situation'类别。"
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "妇女说：“小倩这么久了为何还不来？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "妇女"
+        ],
+        "receivers": [
+          "老太太"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents a dialogue where the woman (doer) is speaking to the old lady (receiver), which is an active interaction within the narrative."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "老太太说：“大概快来了吧。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "寺庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句子属于情境类别，描述了老妇人对小倩即将到来的推测，为后续情节发展（小倩现身、宁采臣与鬼魂互动等）提供了背景信息。故事发生地点明确为寺庙，符合情境分类中设置叙事背景的要求。"
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "妇女说：“是不是向姥姥您发过怨言呢？”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "寺庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句子通过对话揭示了人物之间的关系和背景，属于设定故事发展的情境。对话发生在寺庙环境中，为后续情节（如小倩的出现和鬼魅事件）提供背景信息。"
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "老太太说：“没听见什么，不过流露出闷闷不乐的神态。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "寺庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句子描述了老太太在月夜下与妇女对话时观察到小倩的神情状态，为后续小倩现身及与宁采臣的互动埋下伏笔，属于故事背景设定。"
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "妇女说：“这丫头不要好生待她。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "寺庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句子描述了庙中老妇人对少女的责备，为后续少女现身并展开人鬼互动的情节提供了背景铺垫，属于故事发展的重要情境设定。"
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "话声未断，有一个十七八岁的姑娘走来，长得艳丽绝伦。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "姑娘"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the arrival of a girl (Xiao Qian) as an active event in the narrative. The girl is the doer of the action of appearing, and there is no explicit receiver mentioned in the sentence."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "老太太笑着说：“背地不应该议论人。我俩正念叨，你这小妖精就悄悄无声地来了，幸好没有说你的坏话。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "寺庙庭院",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句子通过老太太与妇女的对话，揭示了寺庙庭院中人物互动的背景信息，为后续情节发展（如小倩的出现）建立情境基础。"
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "又接着说：“小娘子真是个画中的美人，假使我是个男人，也会被你勾了魂去。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "姥姥"
+        ],
+        "receivers": [
+          "小倩"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents an action where the elderly woman (姥姥) is speaking to the young woman (小倩) during their dialogue, which is an activity actively performed by the doer and directed towards the receiver."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "那个姑娘说：“姥姥要不夸我几句，还有谁会说我好呢？”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "寺庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句子通过对话揭示了小倩与姥姥之间的互动关系，为后续情节发展（如小倩寻求认可、姥姥的反应等）提供背景，属于设定故事场景的'情况'类别。对话发生地点为寺庙，符合叙事背景。"
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "后来妇女也跟姑娘说了几句，听不清说的什么。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "妇女"
+        ],
+        "receivers": [
+          "姑娘"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the older woman (妇女) speaking to the girl (姑娘), indicating an interaction where the woman is the doer and the girl is the receiver of the speech."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "宁采臣估计这几个人都是邻居的家眷，也就回去睡觉，不再听什么。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "宁采臣基于对听到对话的判断，主动选择停止监听并返回睡眠，这是他主动采取的行为，因此归类为'行动'。"
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "又过了一会儿，这才没有了说话声。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the talking ceased, leading to宁采臣 resuming sleep",
+        "explanation": "The sentence describes the cessation of prior dialogue between supernatural entities, which directly results in宁采臣 returning to sleep. This is a consequence of the earlier interactions in the scene."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "宁采臣刚要睡着，觉得有人进了屋里。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [
+          "宁采臣的房间"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of someone (小倩) entering Ning Caichen's room, which Ning Caichen perceives. The doer is 小倩, and the receiver is the room."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "急忙起身审视，原来是北院里的那个姑娘。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "北院里的那个姑娘"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes宁采臣's immediate action of getting up to investigate the presence of the girl from the north courtyard, indicating an active response to the previous event of someone entering his room."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "惊问来人用意，那个姑娘笑着说：“明月之夜，我睡不着觉，想同你亲热欢好。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "那个姑娘"
+        ],
+        "receivers": [
+          "宁采臣"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the girl's action of approaching宁采臣 and expressing her intention to be intimate, making her the doer and宁采臣 the receiver of her actions."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "宁采臣板着脸严肃地说：“你应防备别人的议论，我也害怕别人的闲话。一旦失足，就会丧尽廉耻。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "姑娘"
+        ],
+        "changed_state": "",
+        "explanation": "宁采臣通过言语拒绝姑娘的诱惑，主动表达自身道德立场，这一行为直接推动了后续情节发展，属于主动采取的行动。"
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "姑娘说：“夜里无人知晓。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "姑娘"
+        ],
+        "receivers": [
+          "宁采臣"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents the girl's verbal action of speaking to宁采臣, which is an active interaction in the narrative. The doer is the girl, and the receiver is宁采臣 as she addresses him directly."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "宁采臣又呵斥她。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "她"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Ni Cai Chen's action of scolding the girl, which is a direct interaction between the characters in the story. The action is performed by Ni Cai Chen (doer) and directed at the female character (receiver)."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "她徘徊着还想说些什么，宁采臣大声叱道：“快走！不然的话，我就喊南屋的人来啦。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "姑娘"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes宁采臣 taking action by shouting at the姑娘 to force her to leave, indicating an active response to her lingering presence."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "姑娘畏惧，这才退下。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the girl's action of retreating due to fear after being threatened by Ning Caichen. The doer is the girl (小倩), and there is no explicit receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "刚走出门，又返回来了，拿出一锭黄金放在褥子上。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "姑娘"
+        ],
+        "receivers": [
+          "褥子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the girl's action of returning and placing a lump of gold on the褥子 (bedding). The doer is the girl, and the receiver is the褥子 where the gold is placed."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "宁采臣抓起黄金，把它扔到屋外，说道：“不义之财，别弄脏了我的囊袋！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "黄金"
+        ],
+        "changed_state": "",
+        "explanation": "宁采臣主动抓起黄金并将其扔到屋外，这是他主动实施的行为，属于'行动'类别。动作的执行者是宁采臣，受事者是黄金。"
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "这个姑娘惭愧地走出屋，拾起黄金，自言自语说：“这个汉子真是铁石一般。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "这个姑娘"
+        ],
+        "receivers": [
+          "黄金"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the girl's action of picking up the gold and her self-commentary, which directly follows her rejection by宁采臣. The action involves both the physical act of retrieving the gold and the verbal expression of her reaction."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "第二天早晨，有个从兰溪来的书生，带着一个仆人来参加考试，住在东厢房，夜里突然暴死。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "东厢房",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了新事件的发生场景，为后续揭示书生暴死之谜建立背景。'东厢房'作为事件发生的具体地点，符合situation类别中设定叙事焦点位置的要求。"
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "只见他脚心有一个小窟窿眼儿，就像锥子刺的一样，细细地有血渗出。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the cause of death was revealed as a small hole in the foot with blood渗出",
+        "explanation": "This sentence describes the physical manifestation of the death caused by the supernatural entity, directly linking to the prior event of the bookish man's sudden death. The consequence clarifies the mechanism behind the death, showing the state change from ambiguous circumstances to a specific supernatural cause."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "谁也不知道什么缘故。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The cause of the deaths remains unknown to all",
+        "explanation": "The sentence describes the outcome of the previous events (the deaths of the bookie and his servant) by stating that no one knows the reason, indicating a state change in the narrative where the mystery persists."
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "过了一宿，他的仆人也死了，症状完全一样。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The servant died with the same symptoms as the bookish man, indicating the supernatural curse's continued effect",
+        "explanation": "This sentence describes the outcome of the previous event (the bookish man's death) where the servant also dies with identical symptoms, demonstrating the ongoing impact of the supernatural forces described in the story."
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "傍晚时，燕赤霞回来了，宁采臣便去询问他，燕赤霞认为是鬼魅闹事。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "寺庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了燕赤霞返回并告知宁采臣鬼魅闹事的情境，为后续鬼怪活动和冲突埋下伏笔，属于故事背景设定中的'情况'分类。"
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "宁采臣历来就刚直不屈，一点儿也不在意。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes宁采臣's character trait of being upright and resolute, establishing his personality which sets the stage for his subsequent interactions with小倩. It provides background context for his behavior without mentioning a specific location."
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "半夜中，那个姑娘又来了，对宁采臣说：“我见过的人多了，没有一个像你这样刚强正直。你实在是个圣贤，我不敢欺骗你。我小倩，姓聂，十八岁时夭折，埋葬在寺庙旁边，后被妖精威胁，做这些下贱的事情，不顾羞耻面向众人，实在不是心甘情愿的。现在寺庙中没有能杀的人了，恐怕夜叉要来。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [
+          "宁采臣"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the girl (小倩) actively approaching宁采臣 and revealing her backstory, which constitutes an action performed by her towards him."
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "宁采臣害怕，请姑娘想个办法。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "小倩"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes宁采臣 taking an active step by requesting小倩 to devise a solution, making it an 'action' where宁采臣 is the doer and小倩 is the receiver of the request."
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "小倩说：“与燕生同室就可以免除灾难。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides contextual information about the solution to the supernatural threat, explaining that sharing a room with Yan Sheng will prevent disaster. This sets the stage for subsequent actions and is part of the narrative's situational setup."
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "宁采臣问：“你为什么不迷惑燕生呢？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "小倩"
+        ],
+        "changed_state": "",
+        "explanation": "宁采臣主动向小倩提问，询问她为何未尝试迷惑燕生，这是对话中的主动行为，属于'行动'类别。提问者为宁采臣，接收者为小倩。"
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "小倩说：“他是个奇人，不敢接近。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context explaining Xiao Qian's hesitation to approach Yan Chixia, establishing her perspective and motivations which influence subsequent interactions. This situational setup explains why she hasn't attempted to bewitch Yan despite her abilities."
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "又问：“怎么迷惑人呢？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "小倩"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents an action where 宁采臣 asks 小倩 how to deceive people, indicating an interaction seeking information."
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "小倩说：“亲昵我的人，我就暗中用锥子扎他的脚心，那时他就会昏迷不知，借此抽他的血供给妖精喝。或者用金钱引诱他，其实那不是真金，而是罗刹鬼的骨头，留下就会被摘走心肝。这两种办法都是用来投其所好的。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [
+          "人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Xiao Qian's actions of using a cone to stab people's feet and employing fake gold made from demon bones to deceive them, which are active behaviors she performs to achieve her goals."
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "宁采臣感谢小倩说出真相。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "宁采臣对小倩的诚实坦白表示感激，关系产生积极转变",
+        "explanation": "该句描述宁采臣因小倩揭露真相而产生的感激之情，属于前文小倩坦白行为的直接结果，导致双方关系发生积极变化。"
+      }
+    },
+    {
+      "sentence_index": 60,
+      "sentence": "问戒备的时间，小倩讲就在明天晚上。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "寺庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过小倩告知宁采臣戒备时间（明天晚上），为后续鬼魅闹事的事件提供了时间背景，属于设定未来事件发生条件的情境描述。"
+      }
+    },
+    {
+      "sentence_index": 61,
+      "sentence": "临别时，小倩哭着说：“我坠入了地狱之海，找不到岸边。郎君义气冲天，必定能够拔生救苦。如果肯把我的朽骨包起来，送回家安葬，不亚于再生父母。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "宁采臣"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence presents a direct request from Xiao Qian to Ning Caishen, explicitly requiring him to perform the task of burying her remains. This constitutes an explicit responsibility or requirement."
+      }
+    },
+    {
+      "sentence_index": 62,
+      "sentence": "宁采臣毅然答应下来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "小倩"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes宁采臣's active decision to agree to小倩's request, making him the doer of the action. The receiver is小倩, as the agreement is directed towards her request."
+      }
+    },
+    {
+      "sentence_index": 63,
+      "sentence": "于是又问原来埋在哪里，小倩说：“只要记住有乌鸦筑巢的那棵白杨树下就是了。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "有乌鸦筑巢的那棵白杨树下",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过小倩的指引明确埋葬地点，为后续宁采臣挖掘尸骨埋下伏笔，属于故事背景信息的铺垫。"
+      }
+    },
+    {
+      "sentence_index": 64,
+      "sentence": "说罢出门，倏然间不见了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes小倩's action of leaving after providing information about the burial location. The action is performed by小倩 with no explicit receiver mentioned."
+      }
+    },
+    {
+      "sentence_index": 65,
+      "sentence": "第二天，宁采臣怕燕赤霞外出，早早就过去约他来家一聚。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "燕赤霞"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Ning Caichen actively taking the initiative to invite Yan Chixia to his home, indicating an action performed by Ning Caichen with Yan Chixia as the recipient."
+      }
+    },
+    {
+      "sentence_index": 66,
+      "sentence": "七八点钟，宁采臣准备好酒菜，请燕赤霞一块儿喝酒，同时注意观察着燕赤霞。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "燕赤霞"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes宁采臣 actively preparing wine and food, inviting燕赤霞 to drink together, and observing him. This constitutes an action performed by宁采臣 with燕赤霞 as the recipient of the invitation and observation."
+      }
+    },
+    {
+      "sentence_index": 67,
+      "sentence": "宁采臣约请燕赤霞一块住宿，燕赤霞托词自己性情孤僻，喜欢安静而不同意。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "燕赤霞"
+        ],
+        "changed_state": "",
+        "explanation": "宁采臣主动邀请燕赤霞共同住宿，这一行为属于主动发起的社交互动，符合'action'类别中'指示一个活动正在执行或刚刚完成'的定义。行动发起者为宁采臣，接收者为燕赤霞。"
+      }
+    },
+    {
+      "sentence_index": 68,
+      "sentence": "宁采臣不听，硬是把行李搬了过来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "行李"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Ni Cai Chen's active action of forcibly moving his luggage, which is a physical action performed by the protagonist. The doer is clearly Ni Cai Chen, and the receiver is the luggage being moved."
+      }
+    },
+    {
+      "sentence_index": 69,
+      "sentence": "燕赤霞迫不得已，只好把床搬过来一起住了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "燕赤霞"
+        ],
+        "receivers": [
+          "宁采臣"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Yan Chixia's action of moving his bed to stay with Ning Caichen, indicating an active activity performed by Yan Chixia (doer) that directly affects Ning Caichen (receiver)."
+      }
+    },
+    {
+      "sentence_index": 70,
+      "sentence": "燕赤霞嘱咐宁采臣说：“我知道足下是个大丈夫，很是倾慕你的风度。不过我有些心里话，一时不便说明。请你千万不要翻弄察看箱匣里包着的东西，违背我的话，对你我都没有好处。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "宁采臣"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a direct instruction from燕赤霞 to宁采臣, explicitly stating a requirement (not to open the box). This constitutes a 'task' category where the task role is宁采臣, who must adhere to the instruction."
+      }
+    },
+    {
+      "sentence_index": 71,
+      "sentence": "宁采臣恭谨听命。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Ning Caichen's action of respectfully obeying Yan Chixia's instruction, indicating his compliance with the task given in the previous sentence."
+      }
+    },
+    {
+      "sentence_index": 72,
+      "sentence": "不久，各自睡觉。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣",
+          "燕赤霞"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of '各自睡觉' (each going to sleep) performed by both Ning Caichen and Yan Chixia. This action follows the previous task of obeying the warning and sets the stage for the subsequent events involving the box."
+      }
+    },
+    {
+      "sentence_index": 73,
+      "sentence": "燕赤霞把小箱子放在窗台上，躺下不大工夫，就鼾声如雷，宁采臣却睡不着觉。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "燕赤霞"
+        ],
+        "receivers": [
+          "小箱子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes燕赤霞 actively placing the small box on the windowsill and lying down, which is a physical action performed by him. The subsequent details about his snoring and宁采臣's inability to sleep are consequences of this action, but the primary focus is on the action itself."
+      }
+    },
+    {
+      "sentence_index": 74,
+      "sentence": "快到一更天时，窗外隐隐约约有个人影。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "寺庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了时间（一更天）和窗外出现人影的情境，为后续夜叉袭击等事件的发生提供了时间背景和场景铺垫，属于叙事中的情境设定。"
+      }
+    },
+    {
+      "sentence_index": 75,
+      "sentence": "不一会儿，走近窗前来窥视，目光忽闪忽闪的。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [
+          "宁采臣"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of approaching the window to peek, with 小倩 as the doer and 宁采臣 as the receiver (the one being observed)."
+      }
+    },
+    {
+      "sentence_index": 76,
+      "sentence": "宁采臣害怕，刚想要呼叫燕赤霞，突然间有一个东西冲破箱子飞出去，晶光闪闪犹如一匹白色绸子，把窗户上的石棂子都撞折了，忽然一射，马上又收回来，宛如电闪那样快。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [
+          "窗户上的石棂子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an action where an unknown entity (likely a supernatural force) breaks the stone lattices of the window. The doers field is empty because the specific agent is not explicitly named, while the receivers are the stone lattices damaged by the action."
+      }
+    },
+    {
+      "sentence_index": 77,
+      "sentence": "燕赤霞觉察有动静便起身了，宁采臣假装睡觉，暗中却在观察着。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "燕赤霞",
+          "宁采臣"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes燕赤霞 detecting movement and rising, while宁采臣 pretends to sleep but secretly observes. These are active actions taken by the characters in response to the previous event (the object flying out of the box)."
+      }
+    },
+    {
+      "sentence_index": 78,
+      "sentence": "只见燕赤霞捧着小箱子查看，他从小箱子中取出一件东西，对着月光又是闻又是看，只见它晶莹闪亮，长有二寸，宽如韭叶。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "燕赤霞"
+        ],
+        "receivers": [
+          "小箱子中的东西"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes燕赤霞 actively examining an item from the small box, which constitutes an action performed by him. The item being examined is the receiver of his action."
+      }
+    },
+    {
+      "sentence_index": 79,
+      "sentence": "查看过后，再把它包起来，足足包裹了好几层，仍然放回已经破了的小箱子内，自言自语说：“什么老鬼魅，如此大胆，居然把我的小箱子都弄坏了。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "燕赤霞"
+        ],
+        "receivers": [
+          "小箱子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes燕赤霞 wrapping the item and placing it back into the small box, which is an active action performed by him. The small box is the receiver of the action of placing."
+      }
+    },
+    {
+      "sentence_index": 80,
+      "sentence": "而后又躺下睡觉。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "燕赤霞"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes燕赤霞's action of lying down to sleep after handling the sword, with no direct receiver mentioned."
+      }
+    },
+    {
+      "sentence_index": 81,
+      "sentence": "宁采臣非常惊奇，便起来询问这是怎么回事，还把自己所见到的情况告诉了燕赤霞。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "燕赤霞"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes宁采臣's active response to a previous event (the mysterious object flying out of the box). He takes action by investigating and informing燕赤霞, making him the doer and燕赤霞 the receiver of his actions."
+      }
+    },
+    {
+      "sentence_index": 82,
+      "sentence": "燕赤霞说：“我们既然彼此相好，我怎敢深藏不说呢。我是个剑客。如果不是石窗棂，妖精早就死了，不过它也受伤了。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "寺庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句子通过燕赤霞的对话揭示了故事背景，说明他作为剑客的身份以及妖精受伤的原因，为后续情节发展（如小倩的出现、鬼魅闹事等）提供情境基础。"
+      }
+    },
+    {
+      "sentence_index": 83,
+      "sentence": "宁采臣问：“包的那是什么东西？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "燕赤霞"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents a direct question posed by Ni Cai Chen to Yan Chixia about the contents of a package, constituting an active interaction that initiates the revelation of the sword's supernatural properties."
+      }
+    },
+    {
+      "sentence_index": 84,
+      "sentence": "燕赤霞说：“是剑。刚才闻了闻，有妖气。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "燕赤霞"
+        ],
+        "receivers": [
+          "宁采臣"
+        ],
+        "changed_state": "",
+        "explanation": "燕赤霞通过对话向宁采臣解释包裹中的物品是带有妖气的剑，属于主动信息传递行为。动作执行者为燕赤霞，信息接收者为宁采臣。"
+      }
+    },
+    {
+      "sentence_index": 85,
+      "sentence": "宁采臣想看看，燕赤霞很痛快地拿出来给他看，只见是一把荧荧发光的小剑。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "燕赤霞"
+        ],
+        "receivers": [
+          "宁采臣"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes燕赤霞 actively performing the action of showing the sword to宁采臣, which is a direct physical interaction where the doer (燕赤霞) transfers an object (the sword) to the receiver (宁采臣)."
+      }
+    },
+    {
+      "sentence_index": 86,
+      "sentence": "于是宁采臣对燕赤霞更加尊重敬爱了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "宁采臣对燕赤霞的尊重敬爱程度显著提升",
+        "explanation": "该句描述了宁采臣在目睹燕赤霞展示荧荧发光小剑后，对其产生更深敬重的情感变化，属于前序动作（展示宝剑）引发的心理状态转变，符合'consequence'类别。"
+      }
+    },
+    {
+      "sentence_index": 87,
+      "sentence": "第二天，宁采臣看到窗外有血迹。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "寺庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述宁采臣在寺庙中发现血迹的现象，为后续寻找坟墓、揭示小倩身份等情节提供背景信息，属于设定故事发展基础情境的'Situation'类别。"
+      }
+    },
+    {
+      "sentence_index": 88,
+      "sentence": "他出了寺庙向北走去，只见荒坟累累，一座坟堆中果然长着一棵白杨，杨树梢上有个乌鸦窝。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "坟堆",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes宁采臣离开寺庙后向北行走时所见的环境，具体指出他所处的地点是坟堆（荒坟），这是故事中后续行动（如挖掘尸骨）的地理背景，属于设定场景的背景信息。"
+      }
+    },
+    {
+      "sentence_index": 89,
+      "sentence": "宁采臣等心中打好主意后，就收拾行李，准备回去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes宁采臣 actively performing the action of packing his belongings and preparing to return, with no clear receiver specified for the action."
+      }
+    },
+    {
+      "sentence_index": 90,
+      "sentence": "燕赤霞设酒饯行，情义很是深厚。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "燕赤霞"
+        ],
+        "receivers": [
+          "宁采臣"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes燕赤霞 actively performing the action of setting a farewell banquet (设酒饯行) for宁采臣, which is a gesture of deep friendship. The doer is燕赤霞, and the receiver is宁采臣, who is the subject of the farewell gesture."
+      }
+    },
+    {
+      "sentence_index": 91,
+      "sentence": "他拿出一个破了的皮袋子送给宁采臣，说：“这是个剑袋，要珍藏好，可以远避鬼魅邪魔。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "燕赤霞"
+        ],
+        "receivers": [
+          "宁采臣"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an action where 燕赤霞 (Yan Chixia) actively performs the act of giving a broken leather bag to 宁采臣 (Ning Caichen), transferring the object and delivering its purpose as a protective item against supernatural forces."
+      }
+    },
+    {
+      "sentence_index": 92,
+      "sentence": "宁采臣想跟他学剑术。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "燕赤霞"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Niangcai Chen's active intention to learn swordsmanship from 燕赤霞, indicating his desire to engage in the action of acquiring sword skills."
+      }
+    },
+    {
+      "sentence_index": 93,
+      "sentence": "他说：“像你这样的讲信义，又刚正直爽，是可以当个剑客的。不过，你是富贵中人，不是这道中的人。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence presents a dialogue where燕赤霞 evaluates宁采臣's character and suitability for becoming a swordsmen, establishing the context for their relationship and future interactions. This sets the stage for subsequent events without directly describing a location."
+      }
+    },
+    {
+      "sentence_index": 94,
+      "sentence": "宁采臣假托有个妹子埋在这里，挖出尸骨，用衣被包裹好，便租只小船回去了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "尸骨",
+          "小船"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes宁采臣 actively performing the actions of digging up the remains, wrapping them in cloth, and renting a boat to leave, which are physical actions taken to resolve the situation involving the buried corpse."
+      }
+    },
+    {
+      "sentence_index": 95,
+      "sentence": "宁采臣的住室临近郊野，于是把坟墓安置在房宅外，埋葬后，宁采臣祭道：“可怜你魂魄孤单，把你埋葬在我的斗室之旁，你的歌声与哭泣我都能听到，大概可以免于雄鬼的欺凌。这一碗汤水请你喝了吧，虽然并不醇美，希望不要嫌弃。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "坟墓"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes宁采臣 actively performing the action of burying the body and conducting a ritual, with the坟墓 (grave) as the direct receiver of his actions."
+      }
+    },
+    {
+      "sentence_index": 96,
+      "sentence": "宁采臣祷告完便往回走。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Ning Caishen's action of returning after completing his prayer, indicating his movement as the primary activity."
+      }
+    },
+    {
+      "sentence_index": 97,
+      "sentence": "后面有人叫道：“慢点儿，等我一块走！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [
+          "宁采臣"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an action where小倩 calls out to宁采臣 from behind, initiating an interaction that leads to her revealing herself. The call is an active event performed by小倩 (doer) directed at宁采臣 (receiver)."
+      }
+    },
+    {
+      "sentence_index": 98,
+      "sentence": "回头一看，原来是小倩。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "小倩"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 'turning around and seeing' performed by 宁采臣, with 小倩 as the recipient of his gaze. This action follows the previous event of someone calling from behind and precedes 小倩's expression of gratitude."
+      }
+    },
+    {
+      "sentence_index": 99,
+      "sentence": "小倩欢喜地感谢说：“你真是讲信义，我就是为你死去十次也不能报答你的恩情。请带我去拜见公婆，就是当婢妾丫环也不后悔。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "宁采臣"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task request from Xiao Qian to Ning Caichen, asking him to take her to meet his parents-in-law. The task role is Ning Caichen, who is expected to fulfill this request."
+      }
+    },
+    {
+      "sentence_index": 100,
+      "sentence": "宁采臣细细打量着小倩，见她肌肤白里透红犹如霞光，小脚翘起如同细笋，白天端详相貌，比之夜里更显娇艳无比。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "小倩"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes宁采臣 actively examining小倩's appearance, which constitutes an action performed by him towards her. The action involves observing her physical features and comparing her daytime appearance to her nighttime look."
+      }
+    },
+    {
+      "sentence_index": 101,
+      "sentence": "于是一同进入家宅。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣",
+          "小倩"
+        ],
+        "receivers": [
+          "家宅"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the joint action of Ning Caichen and Xiao Qian entering the family residence, indicating their active movement into the location. The doers are the two characters, and the receiver is the family residence."
+      }
+    },
+    {
+      "sentence_index": 102,
+      "sentence": "宁采臣嘱咐她坐着等一会儿，自己先去禀报母亲，母亲听后十分惊讶。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "她",
+          "母亲"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes宁采臣's actions of instructing小倩 to wait and informing his mother, which are active behaviors performed by him. The receivers include小倩 (the one instructed to wait) and his mother (the one informed)."
+      }
+    },
+    {
+      "sentence_index": 103,
+      "sentence": "当时宁采臣的妻子久病卧床，母亲告诫儿子不要说出这事，唯恐惊吓她。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about宁采臣's wife's illness and his mother's caution, establishing the family's circumstances that influence subsequent interactions with小倩. No specific location is mentioned, so the location field is left empty."
+      }
+    },
+    {
+      "sentence_index": 104,
+      "sentence": "正说着，小倩已经翩翩进来，跪倒在地上。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes小倩's action of entering the room and kneeling, which is a physical action performed by her. The doer is clearly小倩, and there is no explicit mention of a receiver receiving the action."
+      }
+    },
+    {
+      "sentence_index": 105,
+      "sentence": "宁采臣说：“这就是小倩。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "母亲"
+        ],
+        "changed_state": "",
+        "explanation": "宁采臣通过言语揭示小倩的身份，这一行为直接作用于母亲，属于主动的交流行为，符合'行动'分类。"
+      }
+    },
+    {
+      "sentence_index": 106,
+      "sentence": "母亲吃惊地看着小倩，不知怎么办好。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "母亲因见到小倩而感到震惊和不知所措",
+        "explanation": "该句描述了母亲在见到小倩后的震惊反应，这是对前文小倩突然出现并表达婚愿事件的直接后果，体现了人物心理状态的突变。"
+      }
+    },
+    {
+      "sentence_index": 107,
+      "sentence": "小倩对母亲说：“孩儿飘零孤苦一人，远离父母兄弟。承蒙公子对我的大恩大德，情愿嫁给公子，以报答他。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "母亲的家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句子通过小倩的独白揭示了她孤苦飘零的处境和对宁采臣的感激之情，为后续母亲与小倩的对话及家庭关系变化埋下伏笔，属于叙事背景设定。"
+      }
+    },
+    {
+      "sentence_index": 108,
+      "sentence": "母亲见她长得温柔秀美，这才敢跟她讲话，说道：“小娘子愿意照顾我的儿子，老身非常喜欢。但是我这一辈子只有这一个儿子，靠他继承祖宗烟火，不敢叫他娶个鬼女。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the mother's internal conflict and reasoning regarding her son's potential marriage to a ghost, establishing the emotional and situational context that will influence future decisions. No specific location is mentioned."
+      }
+    },
+    {
+      "sentence_index": 109,
+      "sentence": "小倩说：“孩儿实在是没有歹意。已死之人既然得不到老母的信任，请以兄妹相称，跟着母亲过，早晚侍候您老人家，这样好吗？”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "母亲的家中",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句子通过小倩的对话揭示了她请求以兄妹相称的处境，为后续母亲同意其留居的情节发展提供背景，属于叙事中的情境铺垫。"
+      }
+    },
+    {
+      "sentence_index": 110,
+      "sentence": "母亲可怜她一片诚心，就答应了她。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "母亲"
+        ],
+        "receivers": [
+          "小倩"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the mother's action of agreeing to小倩's request to be treated as a sister, indicating an active decision made by the mother in response to the prior interaction."
+      }
+    },
+    {
+      "sentence_index": 111,
+      "sentence": "小倩当时就想去拜见嫂子，母亲说她有病不宜相见，这才作罢。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "小倩未能拜见嫂子，因母亲认为她有病不宜相见",
+        "explanation": "该句描述了母亲因担忧小倩身体状况而阻止她拜见嫂子的决定，导致小倩未能完成拜见行动，属于前序事件（母亲答应接纳小倩）后的结果变化。"
+      }
+    },
+    {
+      "sentence_index": 112,
+      "sentence": "小倩立即进了厨房，为母亲做饭，她在房间中走来走去，好像久住的人一样熟悉。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [
+          "母亲"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 小倩's active actions of entering the kitchen to cook for her mother and moving around the rooms, which are direct behaviors she performs toward the mother as the receiver."
+      }
+    },
+    {
+      "sentence_index": 113,
+      "sentence": "傍晚，母亲有点儿害怕小倩，让她回去睡觉，不给她设置床铺。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "母亲"
+        ],
+        "receivers": [
+          "小倩"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the mother's action of sending Xiao Qian away due to her fear, which is an active behavior performed by the mother towards Xiao Qian."
+      }
+    },
+    {
+      "sentence_index": 114,
+      "sentence": "小倩暗知母亲的心意，于是立即离开。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Xiao Qian's action of leaving immediately after understanding her mother's intention. The doer is clearly 小倩, and there is no explicit receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 115,
+      "sentence": "她走到书斋时，想进去，又退了回来，在门外徘徊不定，好像怕什么东西。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes 小倩's action of approaching the study room, hesitating to enter, and lingering outside due to fear. The doer is 小倩, and there is no explicit receiver as the action focuses on her internal hesitation rather than an external recipient."
+      }
+    },
+    {
+      "sentence_index": 116,
+      "sentence": "宁采臣招呼她，她说：“室内剑气使人害怕。前些时候在途中之所以没有拜见你，也是这个缘故。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "书斋",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过对话揭示小倩因室内剑气而不敢进入书斋的原因，为后续夜叉袭击事件提供背景信息，属于设定故事发展的情境。"
+      }
+    },
+    {
+      "sentence_index": 117,
+      "sentence": "宁采臣想到是由于皮袋子的缘故，便拿下来挂在别的屋里，小倩这才进来，靠近烛光坐下。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "皮袋子",
+          "小倩"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes宁采臣 actively taking the皮袋子 down and hanging it elsewhere, which directly enables小倩 to enter the room. The action is performed by宁采臣, with the皮袋子 as the object being moved and小倩 as the recipient of the resulting change in environment."
+      }
+    },
+    {
+      "sentence_index": 118,
+      "sentence": "过了一会儿，不见小倩说一句话。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "小倩保持沉默，未回应宁采臣的询问",
+        "explanation": "该句描述小倩在请求借书后保持沉默的状态，是其先前行为（请求借书）后的结果，属于后果类别。"
+      }
+    },
+    {
+      "sentence_index": 119,
+      "sentence": "又过了好久，小倩问道：“你夜里读书吗？我小时候念过《楞严经》，现在多半都忘了。请求你借我一卷，夜里闲暇时，好请兄长指正。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [
+          "宁采臣"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes小倩's action of requesting to borrow a book from宁采臣, indicating an active interaction where she initiates a request."
+      }
+    },
+    {
+      "sentence_index": 120,
+      "sentence": "宁采臣答应下来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "小倩"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Ni Cai Chen's action of agreeing to Xiao Qian's request to lend a book, making him the doer and Xiao Qian the receiver of this agreement."
+      }
+    },
+    {
+      "sentence_index": 121,
+      "sentence": "小倩又是坐着，默默无语，二更都要过去了，还是不说走。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "宁采臣的家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述小倩在宁采臣家中静坐沉默直至深夜未离开的状态，为后续宁采臣催促她离开的情节提供背景，属于叙事中的情境铺垫。"
+      }
+    },
+    {
+      "sentence_index": 122,
+      "sentence": "宁采臣催她离开。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "小倩"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Ni Cai Chen actively performing the action of urging someone to leave. The doer is Ni Cai Chen, and the receiver is Xiao Qian (小倩), who is the subject of his urging."
+      }
+    },
+    {
+      "sentence_index": 123,
+      "sentence": "她愀然神伤地说：“他乡的孤魂，真怕那荒凉的墓穴啊。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "墓穴",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes 小倩's emotional state as a lonely spirit fearing the desolate tomb, establishing her处境 and setting the stage for her subsequent interactions. The location '墓穴' (tomb) is explicitly mentioned in the sentence as the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 124,
+      "sentence": "宁采臣说：“屋里又没有别的床铺，再说兄妹之间也应避嫌。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "屋里",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides context about Ning Caichen's reasoning for not allowing Xiao Qian to stay, which is part of the situation setup in the story."
+      }
+    },
+    {
+      "sentence_index": 125,
+      "sentence": "小倩起身，双眉紧锁，嘴角咧着想哭，举起脚又不愿意走，走走停停，最后挨到了门口，下了台阶就不见了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Xiao Qian's physical actions of rising, hesitating, and finally leaving, which constitutes an active behavior performed by her. No direct receiver is specified for the action."
+      }
+    },
+    {
+      "sentence_index": 126,
+      "sentence": "宁采臣暗中可怜她，想留下她住在别的房间，但又怕母亲怪罪。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes宁采臣's internal conflict and his intention to leave小倩 in another room, setting the context for future actions. No specific location is mentioned in the sentence."
+      }
+    },
+    {
+      "sentence_index": 127,
+      "sentence": "早晨起来，小倩先去问候母亲，端上洗脸水，伺候洗盥梳头；然后又下堂操作家务，没有不顺承母亲心意的。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [
+          "母亲"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes小倩's actions of serving her mother and handling household chores, which are active behaviors performed by小倩 (doer) to fulfill her mother's wishes (receiver)."
+      }
+    },
+    {
+      "sentence_index": 128,
+      "sentence": "黄昏时便告退，来到书斋，在烛光下念经。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Xiao Qian's action of retreating in the evening and reciting scriptures in the study under candlelight. The doer is clearly Xiao Qian, and there is no explicit receiver mentioned for the action."
+      }
+    },
+    {
+      "sentence_index": 129,
+      "sentence": "感觉到宁采臣要睡了，这才伤感地离去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes 小倩's action of leaving Ning Caichen's presence after sensing he was about to sleep. The action is performed by 小倩 with no direct receiver specified."
+      }
+    },
+    {
+      "sentence_index": 130,
+      "sentence": "原先，宁采臣妻子病倒后，母亲操劳过度，难以承受，自从得到小倩帮助，变得非常安逸，所以打心里感谢她。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "宁采臣家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了宁采臣妻子病倒后，母亲因得到小倩帮助而恢复平静的背景情况，为后续情节发展提供情境基础。"
+      }
+    },
+    {
+      "sentence_index": 131,
+      "sentence": "日子渐长，彼此愈加熟悉，甚至把小倩当成了自己的闺女一样亲爱，竟然忘记她是个鬼，到了晚上不忍让她离开，便留她一起住。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The family began treating Xiao Qian as their daughter, forgetting her true identity as a ghost, and allowed her to stay overnight.",
+        "explanation": "This sentence describes the outcome of the family's growing familiarity with Xiao Qian, leading to a change in their relationship dynamics and her living arrangements."
+      }
+    },
+    {
+      "sentence_index": 132,
+      "sentence": "小倩初来时从来不吃不喝，半年后渐渐地喝些稀粥了。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Xiao Qian's initial behavior of not eating/drinking upon arrival, establishing her condition and setting up the narrative context for her later interactions. This falls under 'situation' as it provides background context without introducing new actions or consequences."
+      }
+    },
+    {
+      "sentence_index": 133,
+      "sentence": "母子二人都很溺爱小倩，从来避开不提她是鬼，别人也就更不知道了。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the ongoing relationship dynamics between the mother and son (宁采臣) regarding their treatment of 小倩, establishing context for their secret concealment of her true nature as a ghost. This sets the stage for future interactions and the narrative's progression."
+      }
+    },
+    {
+      "sentence_index": 134,
+      "sentence": "不久，宁采臣的妻子病故了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "宁采臣的妻子去世，导致家庭结构发生变化，为后续母亲考虑纳小倩为妻的情节铺垫",
+        "explanation": "该句描述宁采臣妻子因病去世的结局，这是其长期患病的直接结果，导致家庭失去主要女性成员，进而引发母亲对小倩的接纳态度转变，属于前因（妻子患病）后的结果性事件。"
+      }
+    },
+    {
+      "sentence_index": 135,
+      "sentence": "母亲私下有纳小倩做媳妇的心思，但是又怕对儿子不利。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the mother's internal contemplation and hesitation regarding her intentions toward Xiao Qian, establishing psychological context for subsequent narrative developments. It provides background on the family's internal dynamics without specifying a physical location."
+      }
+    },
+    {
+      "sentence_index": 136,
+      "sentence": "小倩略微察觉到母亲的心思，找机会告诉母亲说：“我在这里住了一年多了，应当知道孩儿心眼好坏。我是不想再祸害行人，所以才跟郎君来这里。我对郎君没有别的意思，只是公子光明磊落，连天人都钦佩他，我其实只想依附公子三五年，借此博得个封诰，也使在泉壤中的我光耀一番。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [
+          "母亲"
+        ],
+        "changed_state": "",
+        "explanation": "小倩主动向母亲解释自己留在宁采臣身边的原因，属于主动沟通行为。她作为行动主体（doers）向母亲（receivers）传达自身动机，属于典型的行动描述。"
+      }
+    },
+    {
+      "sentence_index": 137,
+      "sentence": "母亲也知道小倩没有恶意，只是害怕影响传宗接代。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the mother's awareness of Xiao Qian's intentions and her concern about family lineage, which sets the stage for subsequent interactions and decisions in the story."
+      }
+    },
+    {
+      "sentence_index": 138,
+      "sentence": "小倩又说：“子女都是上天授给的。郎君命中有福报，将生有光宗耀祖的三个儿子，不会因为娶了鬼妻而丧失。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "母亲的家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about Xiao Qian's reassurance to the mother regarding their future children, setting the stage for the mother's decision."
+      }
+    },
+    {
+      "sentence_index": 139,
+      "sentence": "母亲相信小倩的话，便与儿子商议。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "母亲",
+          "儿子"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the mother and son engaging in a discussion (商议), which is an active decision-making process. The doers are the mother and son, while no specific receiver is mentioned as the action pertains to their internal deliberation."
+      }
+    },
+    {
+      "sentence_index": 140,
+      "sentence": "宁采臣很高兴，于是大摆酒宴，请来亲戚朋友。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "亲戚朋友"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Ni Cai Chen actively performing the action of holding a grand banquet and inviting relatives and friends, making him the doer and the invited guests the receivers."
+      }
+    },
+    {
+      "sentence_index": 141,
+      "sentence": "有人提出请新娘子出来看看，小倩便爽快地穿着华丽的衣服出来了，满屋子的人都看呆了，不但不疑心是鬼，反而认为是天仙下凡。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [
+          "满屋子的人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 小倩 (Xiao Qian) voluntarily appearing in her wedding attire, which directly causes the reaction of the gathered people. The doer is 小倩, and the receivers are the people in the room who witness this action."
+      }
+    },
+    {
+      "sentence_index": 142,
+      "sentence": "于是，远近亲戚的内眷都带着礼品去祝贺，争先恐后拜会相识。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "远近亲戚的内眷因小倩的美貌和神秘气质而主动前来祝贺并拜会，改变了原本对鬼魅的恐惧态度",
+        "explanation": "该句描述了小倩以天仙形象出现后，亲戚们的态度转变和行动变化，属于前文事件（小倩展现天仙形象）的后果，体现了社会关系和认知状态的改变。"
+      }
+    },
+    {
+      "sentence_index": 143,
+      "sentence": "小倩擅长画兰花梅花，常常把画的条幅送给亲戚，表示答谢。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [
+          "亲戚"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 小倩 actively performing the action of painting orchids and plum blossoms, and giving the scrolls to relatives as a gesture of gratitude. This directly reflects her actions and the recipients of those actions."
+      }
+    },
+    {
+      "sentence_index": 144,
+      "sentence": "得到画幅的人都珍藏起来，以此为荣。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The recipients of Xiao Qian's paintings began to cherish them and take pride in possessing them",
+        "explanation": "This sentence describes the outcome of Xiao Qian's artistic contributions. The prior action (creating and gifting paintings) led to a consequence where the recipients valued the paintings as treasures, indicating a change in their social status or appreciation."
+      }
+    },
+    {
+      "sentence_index": 145,
+      "sentence": "有一天，小倩低着头坐在窗前，显出忧伤焦虑的样子。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "窗前",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Xiao Qian's emotional state and physical location, setting the stage for her subsequent concern about the leather bag. The location '窗前' (by the window) is explicitly mentioned and serves as the narrative focus for this context."
+      }
+    },
+    {
+      "sentence_index": 146,
+      "sentence": "忽然间，小倩问道：“皮袋子在哪？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [
+          "宁采臣"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents an action where Xiao Qian actively inquires about the location of the skin bag. The doer is 小倩 (Xiao Qian), and the receiver is 宁采臣 (Ning Caichen), as the question implies she is seeking information from him about the bag's whereabouts."
+      }
+    },
+    {
+      "sentence_index": 147,
+      "sentence": "宁采臣说：“因为你怕它，所以把它封起来放到别的地方了。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "皮袋子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Ning Caichen's action of moving the leather bag to another location, explaining his reason for doing so."
+      }
+    },
+    {
+      "sentence_index": 148,
+      "sentence": "小倩说：“我接受人的生气很久了，应该不会再畏惧它，最好取来挂在床头上。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about Xiao Qian's prolonged interaction with human life and her diminished fear of the妖精, setting the stage for the subsequent confrontation with the night demon. It establishes her psychological state and motivations without initiating a new action or consequence."
+      }
+    },
+    {
+      "sentence_index": 149,
+      "sentence": "宁采臣询问用意何在，小倩说：“这三两天，心里一直怔忡不安，想必金华那个妖精痛恨我远远地逃走，恐怕早晚会寻找到这里。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "金华",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about Xiao Qian's anxiety regarding the demon in Jinhua, establishing the narrative focus on the location where the supernatural threat originates."
+      }
+    },
+    {
+      "sentence_index": 150,
+      "sentence": "宁采臣便把皮袋子拿来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宁采臣"
+        ],
+        "receivers": [
+          "皮袋子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Ni Cai Chen actively performing the action of retrieving the leather bag, making him the doer and the leather bag the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 151,
+      "sentence": "小倩反复察看，说道：“这是剑仙盛人头的皮袋子呀。都破旧到这个样子了，不知杀了多少人！我现在看见它，身子还起鸡皮疙瘩呢。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [
+          "皮袋子",
+          "宁采臣"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Xiao Qian's action of examining the skin bag and speaking to Ning Caichen, which are active behaviors performed by her."
+      }
+    },
+    {
+      "sentence_index": 152,
+      "sentence": "而后，把皮口袋悬在床头上了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [
+          "床头"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Xiao Qian performing the action of hanging the leather bag on the bedpost, making her the doer and the bedpost the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 153,
+      "sentence": "第二天，小倩又叫把皮口袋挂在门上。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩"
+        ],
+        "receivers": [
+          "门"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Xiao Qian actively performing the action of hanging the leather bag on the door. The doer is Xiao Qian, and the receiver is the door where the bag is placed."
+      }
+    },
+    {
+      "sentence_index": 154,
+      "sentence": "夜晚，小倩与宁采臣对烛而坐，还提醒宁采臣不要睡觉。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小倩",
+          "宁采臣"
+        ],
+        "receivers": [
+          "宁采臣"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an active interaction where both characters are engaged in sitting together by the candle and Xiao Qian is reminding Ning Caishen not to sleep. The doers are the two characters performing the action, and the receiver is Ning Caishen for the reminder."
+      }
+    },
+    {
+      "sentence_index": 155,
+      "sentence": "忽然，有一个东西像飞鸟一样坠落下来，小倩吓得藏在帷帐后面。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "夜叉"
+        ],
+        "receivers": [
+          "小倩"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the night demon (夜叉) performing the action of falling like a bird, which directly causes Xiao Qian to hide in the curtain. The doer is the night demon, and the receiver is Xiao Qian's reaction to the action."
+      }
+    },
+    {
+      "sentence_index": 156,
+      "sentence": "宁采臣一瞧，这东西像个夜叉，两眼闪闪如电光，舌头血红血红，张牙舞爪奔过来，到了门前又退了几步。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "寺庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过详细描述夜叉的外形特征（两眼如电光、血红舌头、张牙舞爪）和行动状态（奔过来又退却），为后续夜叉试图夺取皮口袋的冲突事件建立场景背景，属于情境设定。"
+      }
+    },
+    {
+      "sentence_index": 157,
+      "sentence": "徘徊了好久，才敢接近皮口袋，伸出爪子去摘取，好像要把皮口袋撕碎。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "夜叉"
+        ],
+        "receivers": [
+          "皮口袋"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the night叉's action of hesitating, approaching the leather bag, and attempting to tear it. This directly depicts an active behavior performed by the night叉 towards the leather bag."
+      }
+    },
+    {
+      "sentence_index": 158,
+      "sentence": "忽然间，皮口袋“咯噔”一响，变得像个大土筐一般大，恍惚中好像有个鬼物从里面探出半身，一下子把夜叉揪了进去，然后声音顿然消失，皮口袋又缩回了原来的样子。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "夜叉被皮口袋中的鬼物揪入其中并消失，皮口袋恢复原状，危机解除",
+        "explanation": "该句描述了前文夜叉试图夺取皮口袋时引发的连锁反应结果，皮口袋释放出鬼物将夜叉吞噬，最终恢复原状，直接导致了危机的解除和状态的改变。"
+      }
+    },
+    {
+      "sentence_index": 159,
+      "sentence": "宁采臣看到这情景，真是又害怕又惊讶。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "宁采臣因目睹皮口袋对抗夜叉的奇景而产生恐惧与惊讶的情绪反应",
+        "explanation": "该句描述宁采臣目睹皮口袋与夜叉对抗后产生的心理状态变化，属于前序事件（皮口袋吞噬夜叉）导致的情绪后果，符合consequence类别中'描述前事件结果导致状态变化'的定义。"
+      }
+    },
+    {
+      "sentence_index": 160,
+      "sentence": "小倩也走出来，非常高兴地说：“好了，没有事了！”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the threat posed by the night demon is neutralized",
+        "explanation": "The sentence describes the outcome of the previous event where the night demon attempted to steal the skin bag. The consequence is the resolution of the threat, as indicated by小倩's statement that 'there's no problem anymore'."
+      }
+    },
+    {
+      "sentence_index": 161,
+      "sentence": "他们一起观看皮口袋，只见里面有几斗清水而已。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The previously dangerous leather bag, which had been used to kill people, is now harmless and contains only clear water.",
+        "explanation": "This sentence describes the outcome of the prior event where Xiao Qian used the leather bag to defeat the night demon. The transformation of the bag's contents from a deadly weapon to harmless water represents a significant state change in the narrative."
+      }
+    },
+    {
+      "sentence_index": 162,
+      "sentence": "后来又过了几年，宁采臣果然考上了进士。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "宁采臣通过科举考试成为进士，标志着他的人生转折和功名成就",
+        "explanation": "该句描述了宁采臣在经历一系列超自然事件后最终通过科举考试获得功名的结局，属于前文事件（如与小倩的互动、皮袋事件等）导致的直接结果，符合'consequence'类别。"
+      }
+    },
+    {
+      "sentence_index": 163,
+      "sentence": "小倩也生下一个男孩。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Xiao Qian gives birth to a son, contributing to the eventual birth of three sons and the family's prosperity",
+        "explanation": "The sentence describes the outcome of Xiao Qian's union with Ning Caichen, leading to the birth of a son which directly contributes to the later consequence of three sons achieving official status. This is a consequence of the prior events involving their relationship and the supernatural elements in the story."
+      }
+    },
+    {
+      "sentence_index": 164,
+      "sentence": "等宁采臣娶了妾后，妾与小倩又各生了一个男孩，这三个儿子长大后都做了官，声誉很好。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "三个儿子长大后都做了官，声誉很好",
+        "explanation": "该句描述了宁采臣娶妾后，妾与小倩各自生育的儿子最终成为官员并获得良好声誉的结果，属于前文事件（婚娶、生育）的后续影响，符合'consequence'类别。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "input_dir": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts",
+  "output_dir": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "provider": "ollama",
+  "model": "qwen3:8b",
+  "total_files": 28,
+  "results": {
+    "success": [
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_005_白蛇传.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_005_白蛇传_stac.json",
+        "total_sentences": 158,
+        "analyzed_sentences": 158
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_006_花木兰从军.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_006_花木兰从军_stac.json",
+        "total_sentences": 79,
+        "analyzed_sentences": 79
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_007_嫦娥奔月.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_007_嫦娥奔月_stac.json",
+        "total_sentences": 29,
+        "analyzed_sentences": 29
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_008_盘古开天.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_008_盘古开天_stac.json",
+        "total_sentences": 17,
+        "analyzed_sentences": 17
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_009_女娲补天.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_009_女娲补天_stac.json",
+        "total_sentences": 59,
+        "analyzed_sentences": 59
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_010_沉香救母.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_010_沉香救母_stac.json",
+        "total_sentences": 123,
+        "analyzed_sentences": 123
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_011_精卫填海.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_011_精卫填海_stac.json",
+        "total_sentences": 23,
+        "analyzed_sentences": 23
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_012_后羿射日.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_012_后羿射日_stac.json",
+        "total_sentences": 55,
+        "analyzed_sentences": 55
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_013_哪吒闹海.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_013_哪吒闹海_stac.json",
+        "total_sentences": 115,
+        "analyzed_sentences": 115
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_014_武松打虎.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_014_武松打虎_stac.json",
+        "total_sentences": 48,
+        "analyzed_sentences": 48
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_015_大禹治水.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_015_大禹治水_stac.json",
+        "total_sentences": 57,
+        "analyzed_sentences": 57
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_016_愚公移山.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_016_愚公移山_stac.json",
+        "total_sentences": 15,
+        "analyzed_sentences": 15
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_017_田螺姑娘.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_017_田螺姑娘_stac.json",
+        "total_sentences": 45,
+        "analyzed_sentences": 45
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_018_聚宝盆.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_018_聚宝盆_stac.json",
+        "total_sentences": 36,
+        "analyzed_sentences": 36
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_019_七仙女和仙浴潭.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_019_七仙女和仙浴潭_stac.json",
+        "total_sentences": 70,
+        "analyzed_sentences": 70
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_021_叶限(中国灰姑娘).txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_021_叶限(中国灰姑娘)_stac.json",
+        "total_sentences": 28,
+        "analyzed_sentences": 28
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_022_画皮.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_022_画皮_stac.json",
+        "total_sentences": 113,
+        "analyzed_sentences": 113
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_023_劳山道士.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_023_劳山道士_stac.json",
+        "total_sentences": 67,
+        "analyzed_sentences": 67
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_024_促织(蟋蟀).txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_024_促织(蟋蟀)_stac.json",
+        "total_sentences": 111,
+        "analyzed_sentences": 111
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_025_东郭先生与狼.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_025_东郭先生与狼_stac.json",
+        "total_sentences": 38,
+        "analyzed_sentences": 38
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_026_聂小倩.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_026_聂小倩_stac.json",
+        "total_sentences": 164,
+        "analyzed_sentences": 164
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_027_成仙.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_027_成仙_stac.json",
+        "total_sentences": 152,
+        "analyzed_sentences": 152
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_028_侠女.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_028_侠女_stac.json",
+        "total_sentences": 117,
+        "analyzed_sentences": 117
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_198_董永与七仙女.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_198_董永与七仙女_stac.json",
+        "total_sentences": 13,
+        "analyzed_sentences": 13
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_301_神犬盘瓠.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/stac_annotations/CH_301_神犬盘瓠_stac.json",
+        "total_sentences": 31,
+        "analyzed_sentences": 31
+      }
+    ],
+    "skipped": [
+      {
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_002_牛郎织女.txt",
+        "reason": "Output file already exists"
+      },
+      {
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_003_孟姜女哭长城.txt",
+        "reason": "Output file already exists"
+      },
+      {
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_004_梁山伯与祝英台.txt",
+        "reason": "Output file already exists"
+      }
+    ],
+    "error": []
+  }
+}

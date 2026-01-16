@@ -1,0 +1,726 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_014_武松打虎.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 48,
+  "analyzed_sentences": 48,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "晌午，武松走进一家酒店，放下哨棒，叫酒倌把好酒好肉拿上来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "武松"
+        ],
+        "receivers": [
+          "酒倌"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wu Song's action of entering the hotel and ordering food and drink, with the server (酒倌) as the receiver of the order."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "酒倌端上三碗酒三盆肉。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "酒倌"
+        ],
+        "receivers": [
+          "武松"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the wine attendant (酒倌) performing the action of bringing three bowls of wine and three bowls of meat to Wu Song (武松). The action is a direct physical activity carried out by the doer (酒倌) and received by the receiver (武松)."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "武松端起酒碗，腕子一仰，咕嘟咕嘟，便把三大碗酒喝得精光。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "武松"
+        ],
+        "receivers": [
+          "酒"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes武松 actively performing the action of drinking three bowls of wine, making him the doer. The wine (酒) is the receiver of the action as it is consumed."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "嘴巴一抹，啧啧称道：“好酒！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "武松"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Wu Song's immediate action of wiping his mouth and praising the wine after drinking, which is a direct physical and verbal response to his consumption."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "武松叫酒倌接着送酒送肉。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "酒倌"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates an explicit requirement (task) for the wine attendant to continue providing wine and meat. The task role is the wine attendant who must fulfill this directive."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "酒倌说：“客官，肉要多少给多少，酒么，最多不超过三碗！”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "酒店",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the inn's policy on alcohol, establishing the setting and rules that will influence subsequent events."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "武松火了，酒倌说：“请别发怒，你看看那上面的字。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "酒倌"
+        ],
+        "receivers": [
+          "武松"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the server (酒倌) performing the action of speaking to Wu Song (武松) to calm his anger, which is an active interaction within the narrative."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "武松顺着酒倌指的方向看去——店门口竖着一面旗，旗上写着五个字：“三碗不过冈③”。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "店门口",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述武松根据酒倌指示查看店门口的旗帜，揭示了故事关键背景信息（'三碗不过冈'的警示），为后续情节发展（醉酒过冈、与老虎搏斗）建立情境基础。"
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "酒倌解释说，这儿的酒远近闻名。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "酒店",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过酒倌的解释，为故事提供背景信息，说明此地酒的声誉，为后续武松饮酒及遭遇老虎的情节发展奠定基础。"
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "凡是来喝酒的客人，三碗以后没有一个能过得景阳冈，都醉倒爬不起来了。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "景阳冈",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the effects of the wine at the inn, establishing the setting and consequences of drinking the wine, which is central to the narrative's situation."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "武松哈哈大笑说：“原来这样，可是我喝了三碗怎么一点儿不醉呢？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "武松"
+        ],
+        "receivers": [
+          "酒倌"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents Wu Song's verbal action of responding to the wine seller's explanation, indicating his reaction to the information provided. The doer is Wu Song, and the receiver is the wine seller (酒倌) as he addresses him."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "酒倌说：“我这酒叫‘出门倒’，劲儿在后头哩！”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background information about the wine's properties, explaining its effects and setting up the context for subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "武松不信，催他快上酒。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "武松"
+        ],
+        "receivers": [
+          "酒倌"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wu Song actively urging the wine seller to serve more wine, making it an action performed by Wu Song with the wine seller as the receiver."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "酒倌见他身强体壮，气势威武，不敢怠慢，只好又送肉又端酒。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "酒倌"
+        ],
+        "receivers": [
+          "武松"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the wine server's action of continuing to serve meat and wine to Wu Song in response to his demand. The doer is the wine server (酒倌), and the receiver is Wu Song (武松) who consumes the food and drink."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "武松一口气又喝了十五碗酒。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "武松"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Wu Song's active action of drinking fifteen bowls of wine, which is a physical activity performed by the character."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "随后，笑眯眯醉醺醺地走出酒店。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "became drunk and exited the hotel",
+        "explanation": "This sentence describes the outcome of drinking fifteen bowls of wine, resulting in Wu Song being intoxicated and leaving the hotel, which directly leads to the subsequent interaction with the innkeeper and the tiger encounter."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "不料酒倌一把拦住了他，告诉他，近几日景阳冈藏着一只老虎，常常晚上出来伤人。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "景阳冈",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the tiger on Jingyang Ridge, setting the stage for the impending conflict. It establishes the location as the narrative focus where the critical event (tiger encounter) will occur."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "县府贴出告示，通知来往客人傍晚不要过冈。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "景阳冈",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes background context about a regulation posted by the county government, setting the stage for the subsequent events involving the tiger on Jingyang Ridge."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "武松听了毫不在乎，敞开胸怀，迎着凉风，大摇大摆地走上景阳冈。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "武松"
+        ],
+        "receivers": [
+          "景阳冈"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wu Song's active decision to proceed toward Jingyang Ridge despite the warning, constituting a physical action performed by the protagonist with the mountain as the target location."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "冈上长满了古藤老树，地上落满松软的黄叶。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "景阳冈",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the environmental setting of the mountain peak, establishing the location where subsequent events will unfold. The mention of ancient vines, old trees, and fallen leaves creates atmospheric context for the impending confrontation with the tiger."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "夕阳斜照，一片苍凉。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "景阳冈",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the atmospheric setting of the mountain during sunset, establishing the environment for the upcoming encounter with the tiger. The location '景阳冈' is the narrative focus as it connects to the previous context of the broken temple and the tiger's lair."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "武松边走边看，不知不觉走近冈上的一座破庙。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "武松"
+        ],
+        "receivers": [
+          "破庙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wu Song's active movement towards the broken temple on the mountain, indicating his physical action of approaching the location."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "门上贴着一张告示，意思和酒倌说的果然一样。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "破庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描述破庙门上的告示内容，为后续武松遭遇老虎的情节提供背景信息，说明酒馆警告与山中危险的关联性，属于设定故事发展背景的Situation类别。"
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "武松想：“好汉不怕虎，怕虎非好汉。走！”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents Wu Song's internal resolve to confront the tiger, setting the stage for his subsequent actions on the mountain."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "穿过树林，前面有块大青石。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "大青石",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the setting as Wu Song approaches the large green stone while traversing the woods, setting the stage for the impending encounter with the tiger."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "武松嘴发干，浑身热乎乎的，便摇摇晃晃地走到大青石前摘下毡笠儿，躺了下来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "武松"
+        ],
+        "receivers": [
+          "大青石",
+          "毡笠儿"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wu Song's physical actions of moving to the big stone, removing his hat, and lying down. These actions are performed by Wu Song (doer) and involve interacting with the stone and his hat (receivers)."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "刚要昏昏睡去，只听到树林间一声呼啸，一股带着臊腥气的风，扑面而来。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "景阳冈",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the atmospheric setup immediately before the tiger attack, establishing the environment and foreshadowing the impending conflict on the mountain."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "一只吊睛白额大虎，朝武松压过来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "老虎"
+        ],
+        "receivers": [
+          "武松"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the tiger's action of approaching Wu Song, making it an 'action' category with the tiger as the doer and Wu Song as the receiver."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "武松腾空跳起，轻轻落在一边躲过。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "武松"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Wu Song's active movement to dodge the tiger's attack, making it an 'action' category. The doer is clearly Wu Song, and there is no explicit receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "饿虎更加疯狂，两只前爪在地上一按，张开大口又腾空扑来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "饿虎"
+        ],
+        "receivers": [
+          "武松"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the tiger's aggressive action of attacking Wu Song, specifying the tiger as the doer and Wu Song as the receiver of the attack."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "武松一个鹞鹰翻身，跳到了老虎身后。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "武松"
+        ],
+        "receivers": [
+          "老虎"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wu Song's physical action of performing a '鹞鹰翻身' (swallow's flight flip) to position himself behind the tiger, making him the doer and the tiger the receiver of this movement."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "老虎背后看人最费劲。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "景阳冈",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides contextual information about the tiger's physical limitation (difficulty seeing from behind) during the confrontation on Jingyang Ridge, establishing the situational context for the subsequent fight sequence."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "它前爪搭在地上，身子使劲一掀，武松只轻轻一闪，老虎掀了个空。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "老虎"
+        ],
+        "receivers": [
+          "武松"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the tiger's physical action of '前爪搭在地上，身子使劲一掀' (front paws on the ground, body exerting a powerful lift) and Wu Song's reaction of '轻轻一闪' (lightly flicking aside). The tiger's action is directed at Wu Song, making Wu Song the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "老虎吃不到武松，力气却用了不少。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the tiger expended its strength due to failed attacks on Wu Song",
+        "explanation": "The sentence describes the outcome of the tiger's failed attack attempts on Wu Song, indicating the tiger used up significant strength without succeeding."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "它仰天一声狂吼，震得那山冈也在动了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the mountain ridge trembled as a result of the tiger's roar",
+        "explanation": "The sentence describes the outcome of the tiger's previous actions (the roar), which caused the mountain ridge to shake. This is a consequence of the tiger's aggressive behavior towards Wu Song."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "它竖起铁棍般的尾巴，朝武松拦腰剪过来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "老虎"
+        ],
+        "receivers": [
+          "武松"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the tiger's action of raising its tail and swinging it toward Wu Song, indicating a physical attack action performed by the tiger (doer) against Wu Song (receiver)."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "说时迟，那时快，武松只轻轻一跳又躲过了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "武松"
+        ],
+        "receivers": [
+          "老虎"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wu Song's action of dodging the tiger's attack, with '武松' as the doer and '老虎' as the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "其实，这老虎吃人的招数就是一扑一掀一剪。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "景阳冈",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the tiger's attack patterns, setting the stage for the impending confrontation between Wu Song and the tiger on Jingyang Ridge."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "武松等老虎这几招儿用尽，正在那儿呼哧呼哧喘气时，便双手抡起哨棒朝它劈头打去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "武松"
+        ],
+        "receivers": [
+          "老虎"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes武松 actively performing the action of swinging his staff at the tiger, making him the doer and the tiger the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "“啪”的一声，老虎没伤着，倒把哨棒打在树上，断成了两截。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the staff broke after hitting the tree",
+        "explanation": "The sentence describes the outcome of Wu Song's attack on the tiger, resulting in the staff breaking. This is a direct consequence of the prior action."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "老虎咆哮着扑向武松。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "老虎"
+        ],
+        "receivers": [
+          "武松"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the tiger actively charging at Wu Song, making '老虎' the doer and '武松' the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "武松扔掉哨棒，空出双手把吊睛白额大虎的脑门紧紧揪住，老虎的头动弹不了，使劲扭动身子。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "武松"
+        ],
+        "receivers": [
+          "吊睛白额大虎"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes武松 actively performing the action of grabbing the tiger's head with his hands, which is a physical struggle during the fight scene."
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "武松不敢枪手，便用脚乱踢一阵。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "武松"
+        ],
+        "receivers": [
+          "老虎"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes武松 actively performing the action of kicking the tiger with his feet, making him the doer and the tiger the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "老虎痛得东躲西闪。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The tiger's pain and erratic movement caused it to lose its ability to attack effectively",
+        "explanation": "This sentence describes the outcome of Wu Song's physical confrontation with the tiger, showing the tiger's inability to continue its attack due to pain and movement, which directly results from the prior action of being punched."
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "武松揪紧虎头死死往地上摁，一边抽出右手，将铁锤般的拳头重重打去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "武松"
+        ],
+        "receivers": [
+          "老虎"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes武松 actively engaging in combat with the tiger by grabbing its head and delivering punches, which constitutes a physical action performed by the protagonist against the antagonist."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "武松一口气打了五六十拳，打得老虎眼睛鼻孔直冒血。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "老虎眼睛鼻孔直冒血",
+        "explanation": "该句描述了武松连续击打老虎导致老虎受伤的直接结果，属于前序动作（打老虎）引发的状态变化，符合consequence类别中描述结果的定义。"
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "老虎断了气。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the tiger died",
+        "explanation": "The sentence describes the outcome of the prior event (Wu Song's attack on the tiger), resulting in the tiger's death, which marks a significant state change in the narrative."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "武松回到青石上坐了半歇，然后在石头边找到毡笠儿，转过乱树林，一步步挨下冈来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "武松成功击败老虎并安全下冈，结束了与老虎的冲突",
+        "explanation": "该句描述了武松在击败老虎后离开景阳冈的情景，是老虎死亡这一前行动作的直接结果，体现了冲突解决后的状态变化。"
+      }
+    }
+  ]
+}

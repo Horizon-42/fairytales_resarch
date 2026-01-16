@@ -1,0 +1,1659 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_024_促织(蟋蟀).txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 111,
+  "analyzed_sentences": 111,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "明朝宣德年间，皇宫中盛行斗蟋蟀的游戏，每年都向民间征收蟋蟀。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "皇宫",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the historical context (Ming Xuande period) and sets the stage for the story's events by describing the imperial court's cricket fighting tradition and annual collection of crickets from the populace."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "这东西本来不是陕西的特产，而有位华阴县令想讨好上司，便进献了一头蟋蟀，让它试斗了一回，还真厉害，所以朝廷便责成华阴县年年进贡蟋蟀。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "华阴县",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了蟋蟀进贡制度的起源，属于背景设定。核心地点为华阴县，说明县令因献蟋蟀导致朝廷设立年贡制度，为后续情节提供背景。"
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "县令又把差事责成里正来办。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "里正"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence states that the county magistrate assigned the responsibility (task) of handling the蟋蟀征收 to the local official (里正)."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "街市上的游手好闲之徒捉到好的蟋蟀便养在竹笼里，抬高价格，当成稀有的东西待价而沽。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "街市上",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the market behavior of idle individuals handling蟋蟀, establishing the social context of蟋蟀 trade as part of the broader narrative setup."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "乡里的差役狡猾奸诈，借此名目按人口加以摊派，每指定交一头蟋蟀，就能使好几家破产。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "乡里",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the corrupt system where local officials exploit the蟋蟀 tax to extort villagers, setting the stage for the protagonist's困境. The location '乡里' (village) is the narrative focus where this systemic oppression occurs."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "县里有一个叫成名的，是个童生，多年没考中秀才。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "县里",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the character Chengming and his status as a failed candidate for the imperial exams, establishing background context for the story's events. The location '县里' (the county) is the narrative focus where the main story unfolds."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "他为人迂腐，拙于辞令，于是被狡诈的差役上报让他来承担里正的差事，他想尽办法都没推掉这个差事，不到一年，不多的家产都赔光了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "his property was lost within a year",
+        "explanation": "The sentence describes the outcome of being forced to take on the local official's duties, resulting in the complete loss of his meager assets within a year."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "这次正赶上征收蟋蟀，成名不敢按户摊派，而自己又无法赔偿，心中愁闷得直想死。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of成名's困境 due to the蟋蟀 tax, setting the stage for subsequent events. It describes his financial desperation without specifying a location, fitting the 'situation' category."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "妻子说：“死有什么用？不如自己去找找看，也许还有一线希望。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context for成名's emotional state and the wife's suggestion, which sets the stage for his subsequent actions. It does not describe a specific location, so the location field is left empty."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "成名认为言之有理。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "成名"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates成名 accepts his wife's suggestion to take action, which leads to the task of searching for a蟋蟀. The task role is '成名' as he is the one who must fulfill this responsibility."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "他早出晚归，提着竹筒和铜丝笼子，在败壁残垣、杂草丛生的地方，翻石头，挖洞穴，无计不施，始终一无所获。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes 成名's active efforts to search for a蟋蟀, detailing his actions of early departures, carrying tools, and searching in specific locations. The doer is clearly 成名, while no direct receiver is specified as the actions focus on his own efforts without clear object recipients."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "即使捉到三两头，也是劣等弱小不合规格的家伙。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "成名所捕捉的蟋蟀均为劣等弱小不合规格的家伙，导致其无法满足官府进贡要求",
+        "explanation": "该句描述了成名在履行里正差事过程中，即使捕捉到蟋蟀也因品质不合格而无法完成任务的直接结果，属于因先前行动（搜寻蟋蟀）导致的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "县令定了严格的期限催促追逼责打，在十多天里，他挨了上百板子，两股间脓血直淌，连蟋蟀也捉不成了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "成名因严刑拷打导致身体重伤，无法继续捕捉蟋蟀",
+        "explanation": "该句描述了县令设定严格期限导致成名遭受体罚后的直接结果，即身体重伤和无法完成蟋蟀捕捉任务，属于前行动作引发的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "成名在床上辗转反侧，唯一的念头就是自杀。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes成名's emotional state of despair and suicidal thoughts, establishing the context for his subsequent actions. It sets the stage for the narrative progression without introducing a specific location."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "当时村里来了一个驼背的巫婆，能通过神灵预卜凶吉。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "村里",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过引入驼背巫婆这一新元素，为后续情节（成名妻子问卜）提供背景设定，属于故事发展的情境铺垫。'村里'作为事件发生的地点，是叙事焦点。"
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "成名的妻子准备好钱财前去问卜，只见红妆少女和白发老妇挤满了门口。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名的妻子"
+        ],
+        "receivers": [
+          "巫婆"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the wife's active action of preparing to consult the witch (巫婆) for divination, which is a direct activity performed by her towards the witch."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "进到屋里，一间密室挂着布帘，布帘前面摆着香案。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "密室",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the physical setting of the fortune-telling ritual, establishing the location where the subsequent events (the divination process) will take place."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "问卜者在香炉里点上香，拜两拜。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "问卜者"
+        ],
+        "receivers": [
+          "香炉"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the diviner (问卜者) performing a ritual by lighting incense in the incense burner (香炉) and bowing, which is part of the divination process in the story."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "巫婆在旁边朝天代其祷告，嘴里念念有词，却不知说的什么。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "巫婆"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the witch priestess performing the action of praying to the heavens on behalf of the requester. The action is explicitly stated as '朝天代其祷告', with the witch as the doer and no direct receiver specified."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "每个人都恭敬地站着静听。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "巫婆的密室",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了众人恭敬聆听巫婆祷告的场景，为后续巫婆通过神灵预卜凶吉的情节提供背景设定，属于叙事中的情境铺垫。"
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "没多久，帘子后面扔出一张纸，写的便是人们要问的事，丝毫不差。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "巫婆的密室",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了巫婆通过神灵预卜凶吉的场景，为后续成名妻子问卜并获得蟋蟀图的关键情节提供背景设定，属于故事发展的重要情境铺垫。"
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "成名的妻子把钱放在案头，也像前面的人一样烧香行礼。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名的妻子"
+        ],
+        "receivers": [
+          "案头",
+          "香案"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the wife performing the action of placing money on the case and burning incense as part of the ritual, making her the doer. The case (案头) and incense table (香案) are the objects receiving the action."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "过了一顿饭的工夫，帘子掀动，一张纸抛落在地。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "巫婆"
+        ],
+        "receivers": [
+          "成名的妻子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the curtain moving and a paper being thrown, which is part of the divination process performed by the witch for the wife."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "捡起来一看，不是字而是张画：中间画着殿堂楼阁，类似寺庙的样子；后面小山下，有着各种各样的怪石，丛生的荆棘刺儿尖尖，下面伏着一头青麻头蟋蟀；旁边有一只蛤蟆，像要跳起来似的。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "巫婆的屋子",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了成名妻子在巫婆处问卜后获得的画作内容，为后续成名根据画中线索寻找蟋蟀的情节发展提供了背景设定，属于叙事中的情境铺垫。"
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "她反复玩味，莫明其妙，不过看到画上有蟋蟀，却也隐隐切中心事。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "home",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the wife's internal reaction to the mysterious drawing, setting the context for her subsequent actions. The location is her home where she is processing the drawing's meaning."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "于是她把画折好收了起来，拿回家给成名看。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名的妻子"
+        ],
+        "receivers": [
+          "成名"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the wife's action of folding the drawing and taking it home to show her husband, indicating a direct action performed by the wife (doer) and received by Cheng Ming (receiver)."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "成名自己反复琢磨，这莫非是指点我捉蟋蟀的地点吗？",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "画"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成名's internal thought process of contemplating the meaning of the drawing, which is an active mental activity leading to his decision to investigate the location. The 'doer' is 成名, and the 'receiver' is the drawing (the object of his contemplation)."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "细看那些景物，酷似村东的大佛阁。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "村东的大佛阁",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描述画面中景物与村东大佛阁的相似性，为后续成名前往寺院寻找蟋蟀的行动提供地理背景，属于设定故事发展场景的'情况'分类。"
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "于是他勉强起身，拄着拐杖，拿着图画来到寺院后面。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes 成名 actively taking the initiative to move towards the temple based on the witch's drawing, which is a direct action he performs to fulfill his task of finding a suitable蟋蟀."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "那里古墓又多高又高，沿墓地前行，只见乱石蹲伏，密集如鱼鳞，俨然与图画完全相似。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "大佛阁",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了成名根据巫婆画像寻找蟋蟀的地点——大佛阁后的古墓群环境，为后续寻找蟋蟀的行动提供了具体场景，属于背景情境设定。"
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "他随即在野草中侧耳细听，缓步徐行，就像在找一根针，找一个芥子，然而，心力、目力、耳力完全用尽，却既没看见蟋蟀的影，也没听见蟋蟀叫。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "蟋蟀"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes成名's active search for a蟋蟀 in the weeds, detailing his meticulous efforts. He is the doer performing the action of searching, and the蟋蟀 is the target of his search (receiver)."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "成名仍然不停地尽量寻找，忽然，一只癞蛤蟆猛然一跃而去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes成名's continuous searching action for the蟋蟀, which is an active effort he performs. The frog's sudden movement is a consequence of his search but the sentence's focus is on his ongoing action."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "他愈加惊愕，急忙追赶过去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "癞蛤蟆"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成名 actively pursuing the toad, which is an action he takes in response to the toad's sudden movement. The doer is 成名, and the receiver is the toad being chased."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "这时癞蛤蟆跳进草丛，他紧盯着癞蛤蟆的踪迹，扒开杂草寻找，看见一头蟋蟀伏在草根上。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "蟋蟀"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成名 actively performing the action of searching for a cricket by digging through weeds, with the cricket as the object being sought."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "他连忙去扑蟋蟀，蟋蟀钻进了石缝。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "蟋蟀"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成名's action of attempting to catch the蟋蟀, which is the direct object of his action. The cricket's escape into the stone crevice is a consequence of this action, but the primary classification remains 'action' as it focuses on the active attempt to capture the insect."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "他用尖细的草叶去拨蟋蟀，蟋蟀不肯出来，他用竹筒往里灌水，蟋蟀才蹦了出来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "蟋蟀"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成名's active efforts to retrieve the蟋蟀 using grass leaves and a bamboo tube, fitting the 'action' category. The doer is 成名, and the receiver is the蟋蟀."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "蟋蟀的外形很是矫健。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the蟋蟀's physical characteristics, contributing to the narrative context of the story. It does not introduce a new location, task, action, or consequence, but rather provides descriptive background about the蟋蟀, fitting the 'situation' category."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "他追上去捉住了蟋蟀，仔细一看，只见蟋蟀形体很大，双尾很长，青色的颈项，金黄的翅膀。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "蟋蟀"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成名 actively performing the action of chasing and capturing the蟋蟀, with the蟋蟀 as the recipient of his actions. The detailed description of the蟋蟀's physical characteristics follows the completion of the action."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "他非常高兴，把蟋蟀放到笼子里带回了家。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "蟋蟀"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成名's action of placing the cricket in a cage and taking it home, with the cricket as the direct recipient of the action."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "全家都为此庆贺，比得到价值连城的大璧玉还要高兴。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The family's celebration and relief from the burden of the蟋蟀 tax, with their happiness surpassing the value of a priceless jade",
+        "explanation": "This sentence describes the outcome of成名's successful capture of the蟋蟀, leading to the family's celebration and relief from their financial困境. The heightened happiness compared to receiving jade emphasizes the significance of this consequence."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "成名把蟋蟀放在土盆喂养，给它吃白白的蟹肉，黄黄的栗实，爱护备至，准备只等限期一到，就拿它应付官差。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "蟋蟀"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Cheng Ming's active actions of feeding and caring for the cricket, which is an explicit activity he performs. The doer is clearly Cheng Ming, and the receiver is the cricket."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "成名有个九岁的儿子，见父亲不在，偷偷把盆打开。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "九岁的儿子"
+        ],
+        "receivers": [
+          "盆"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the son's action of opening the pot, which is a direct activity performed by the character. The doer is the son, and the receiver is the pot being opened."
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "蟋蟀一跃跳出盆来，快得来不及去捉。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "蟋蟀"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the cricket's action of jumping out of the pot, which is an active event performed by the cricket."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "等扑到手里时，蟋蟀已经掉了大腿，破了肚子，一会儿就死了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "蟋蟀因被儿子捕捉而死亡",
+        "explanation": "该句描述了儿子试图捕捉蟋蟀导致蟋蟀死亡的直接结果，属于前文行动（儿子捕捉蟋蟀）的后果，体现了状态的改变。"
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "儿子害怕，哭着告诉了母亲。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "儿子"
+        ],
+        "receivers": [
+          "母亲"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the son's action of informing his mother out of fear, making it an 'action' category. The doer is the son, and the receiver is the mother."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "母亲一听，面如死灰，大骂道：“孽种！你的死期到了！你爹回来，自然会跟你算账！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "母亲"
+        ],
+        "receivers": [
+          "儿子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the mother actively reacting to her son's actions by expressing anger and issuing a threat, which constitutes an action performed by the mother directed at her son."
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "儿子流着眼泪出门走了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "儿子"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the son's active action of leaving home while crying, which is a direct behavioral response to his mother's scolding. The son is the sole doer of this action, with no clear receiver specified."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "不久，成名回到家里，听妻子一说，就像冰雪浸透了全身。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "成名因儿子死亡而陷入极度悲痛和绝望的情绪状态",
+        "explanation": "该句描述了成名在得知儿子死亡后产生的强烈情感冲击，是儿子离家出走并最终死亡这一事件的直接结果，导致其情绪从之前的焦虑转向极端悲痛。"
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "他怒气冲冲地去找儿子，儿子却无影无踪，不知去了哪里。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "儿子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成名's action of searching for his son, making it an 'action' category. The doer is 成名, and the receiver is 儿子."
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "后来，他在井中找到了儿子的尸体，因此愤怒化为悲伤，呼天抢地，几乎晕死过去。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the father's emotional state shifts from anger to profound sorrow, leading to near-fainting",
+        "explanation": "The sentence describes the emotional outcome of discovering the son's corpse, marking a significant state change from anger to despair."
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "夫妻向隅而泣，无心做饭，只面对面地沉默不语，再没有指望了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "夫妻陷入绝望情绪，失去希望，停止日常活动（无心做饭），并保持沉默",
+        "explanation": "该句描述了因儿子死亡这一前事件导致的夫妻情感状态变化，属于后果类别。他们从之前的悲痛中进一步陷入绝望，停止了正常生活活动，表现出彻底失去希望的心理状态。"
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "天快黑时，成名打算把儿子草草埋葬了事。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "儿子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Cheng Ming's intention to perform the action of burying his son, making him the doer and the son the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "他近前一摸，儿子还有微弱的气息。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "儿子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成名 performing the action of checking his son's pulse, making him the doer, and the son as the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "他高兴地把儿子放到床上，半夜里，儿子苏醒过来，夫妻二人心里稍感宽慰。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "儿子从死亡边缘恢复意识，夫妻二人由绝望转为短暂的宽慰",
+        "explanation": "该句描述了儿子在被发现仍有微弱气息后，最终苏醒的后果，导致夫妻情绪从极度悲痛转向短暂的宽慰，属于前事件（儿子死亡）的直接结果。"
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "但是蟋蟀笼还空着，只要往那儿瞅一眼，成名就气上不来，话说不出，但也不敢再去追究儿子。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "蟋蟀笼空置导致成名情绪压抑且无法追究儿子责任，形成新的心理困境",
+        "explanation": "该句描述因儿子死亡和蟋蟀死亡导致的连锁后果，蟋蟀笼空置成为成名无法追究儿子责任的直接原因，形成新的心理困境，属于前事件（儿子死亡、蟋蟀死亡）的后果。"
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "从黄昏到天亮，他始终没合眼。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "成名因儿子死亡的悲痛和焦虑导致整夜未眠",
+        "explanation": "该句描述了成名因儿子死亡事件产生的心理状态变化，是前文儿子死亡事件的直接后果，体现了情感冲击导致的生理反应。"
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "太阳从东方升边，成名还呆呆地躺在床上发愁。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes成名's state of being in bed and troubled, setting the context for his subsequent actions. It provides background context for the story's progression without introducing a specific location."
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "忽然，他听见门外有蟋蟀在叫，心中一惊，连忙起身察看，却见蟋蟀好像还伏在那里。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "蟋蟀"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成名 actively performing the action of checking for the cricket after hearing it, making it an action with 成名 as the doer and the cricket as the receiver."
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "他欢欢喜喜地去捉蟋蟀。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "蟋蟀"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成名 actively performing the action of catching a cricket, with '蟋蟀' as the object being caught."
+      }
+    },
+    {
+      "sentence_index": 60,
+      "sentence": "蟋蟀叫了一声就跳走了，跳得还很快。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the cricket's action of jumping away quickly, which is a physical movement performed by the cricket. Since the cricket is an object rather than a character, no specific doers or receivers are identified, but the action itself is central to the narrative progression of Cheng Ming's attempts to catch it."
+      }
+    },
+    {
+      "sentence_index": 61,
+      "sentence": "他用手掌把蟋蟀罩住，掌中仿佛空无一物，可是刚把手抬起来，蟋蟀便又迅速跳走。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "蟋蟀"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成名 actively attempting to catch the蟋蟀 by covering it with his hand, which is a direct action performed by the character. The蟋蟀 is the recipient of this action as it is being pursued."
+      }
+    },
+    {
+      "sentence_index": 62,
+      "sentence": "他急忙追赶，刚转过墙角，就不知去向了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "蟋蟀"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes成名's active pursuit of the蟋蟀, indicating an action performed by him (doer) with the蟋蟀 as the target of his pursuit (receiver)."
+      }
+    },
+    {
+      "sentence_index": 63,
+      "sentence": "成名徘徊不前，四处张望，看见蟋蟀伏在墙壁上。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "蟋蟀"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes成名 actively searching for the蟋蟀, which is an action performed by him with the蟋蟀 as the receiver."
+      }
+    },
+    {
+      "sentence_index": 64,
+      "sentence": "仔细一看，蟋蟀形体短小，黑中带红，根本不是原来那头蟋蟀。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "成名发现了一只与原蟋蟀不同的新蟋蟀，其形体短小且颜色特征不同",
+        "explanation": "该句描述了成名在寻找原蟋蟀未果后，发现一只新蟋蟀的特征，这是其先前失去原蟋蟀（因儿子误杀）后的结果，导致状态变化为获得新的蟋蟀，为后续斗蟋蟀情节埋下伏笔。"
+      }
+    },
+    {
+      "sentence_index": 65,
+      "sentence": "他嫌这头蟋蟀太小，没看上眼，只是走来走去，东张西望，找刚才要捉的那头蟋蟀。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "蟋蟀"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成名 actively searching for the previously lost蟋蟀, indicating his action of searching. The doer is 成名, and the receiver is the蟋蟀 he is trying to find."
+      }
+    },
+    {
+      "sentence_index": 66,
+      "sentence": "这时伏在墙壁上的小蟋蟀，忽然跳落在他的衣襟衣袖之间。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "蟋蟀"
+        ],
+        "receivers": [
+          "衣襟衣袖"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the small蟋蟀 jumping into the person's clothing, which is an active event performed by the蟋蟀."
+      }
+    },
+    {
+      "sentence_index": 67,
+      "sentence": "一看，这蟋蟀形如土狗，梅花翅膀，方头长腿，觉得似乎还挺好，便高兴地捉到笼里。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "蟋蟀"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成名 actively performing the action of catching the蟋蟀 and placing it into a cage, making it an 'action' category with 成名 as the doer and the蟋蟀 as the receiver."
+      }
+    },
+    {
+      "sentence_index": 68,
+      "sentence": "将要把蟋蟀献给官府时，成名惴惴不安，唯恐上面不满意，想试斗一回，看看如何。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes成名's anxious state as he prepares to present the cricket to the authorities, setting the context for the subsequent trial. It establishes the emotional and situational backdrop without specifying a physical location."
+      }
+    },
+    {
+      "sentence_index": 69,
+      "sentence": "正巧村中有个好事的年轻人，驯养了一头蟋蟀，自己给它取名叫“蟹壳青”，每天与其他年轻人斗蟋蟀，从来都是取胜。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "村中",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描述村中年轻人驯养蟋蟀并屡战屡胜的情节，为后续成名与年轻人斗蟋蟀的事件提供背景设定，属于情境类描述。"
+      }
+    },
+    {
+      "sentence_index": 70,
+      "sentence": "他想靠这头蟋蟀发财，但是要价太高，也就没人买他的。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "村中",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man's situation in the village where he owns a prized cricket but cannot sell it due to its high price, setting the context for subsequent interactions."
+      }
+    },
+    {
+      "sentence_index": 71,
+      "sentence": "他径自登门去找成名，看了成名养的小蟋蟀，掩口哑然失笑。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "年轻人"
+        ],
+        "receivers": [
+          "成名",
+          "蟋蟀"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man's action of visiting成名 and inspecting his蟋蟀, which are the doers and receivers respectively."
+      }
+    },
+    {
+      "sentence_index": 72,
+      "sentence": "他随即拿出自己的蟋蟀，放到斗蟋蟀用的笼子里。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "年轻人"
+        ],
+        "receivers": [
+          "斗蟋蟀用的笼子"
+        ],
+        "changed_state": "",
+        "explanation": "该句描述了年轻人将自己饲养的蟋蟀放入斗蟋蟀用的笼子中的具体行为，属于主动执行的动作。'年轻人'是执行者，'斗蟋蟀用的笼子'是动作的接收对象。"
+      }
+    },
+    {
+      "sentence_index": 73,
+      "sentence": "成名一看，那蟋蟀形体既长又大，自然倍感惭愧，不敢较量。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "成名因感到羞愧而不敢与年轻人的蟋蟀较量",
+        "explanation": "该句描述了成名在看到年轻人蟋蟀后产生的心理变化，是年轻人放置蟋蟀这一行动的直接后果，导致成名产生羞愧情绪并放弃较量，属于后果类别。"
+      }
+    },
+    {
+      "sentence_index": 74,
+      "sentence": "那年轻人硬要比试。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "年轻人"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man's active decision to insist on a match, which is an action taken by him. The receiver is not explicitly mentioned in the sentence."
+      }
+    },
+    {
+      "sentence_index": 75,
+      "sentence": "成名心想养一头下等货终究也没有用，不如拼一拼，以博一笑，因此把蟋蟀倒进了斗盆。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "斗盆"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成名's decision to actively place the蟋蟀 into the 斗盆 (fighting container), which is a direct action performed by him. The action's receiver is the 斗盆, as the蟋蟀 is being put into it."
+      }
+    },
+    {
+      "sentence_index": 76,
+      "sentence": "小蟋蟀伏着不动，呆若木鸡。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the small蟋蟀 became motionless and stunned",
+        "explanation": "The sentence describes the outcome of the prior action where the small蟋蟀 was placed in the斗盆, resulting in its stunned and motionless state. This is a consequence of the previous action taken by成名."
+      }
+    },
+    {
+      "sentence_index": 77,
+      "sentence": "年轻人又哈哈大笑。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "年轻人"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man's action of laughing, which is a direct response to the蟋蟀's inaction during the match. The doer is explicitly the young man, and there is no clear receiver specified in the sentence."
+      }
+    },
+    {
+      "sentence_index": 78,
+      "sentence": "他用猪鬃撩拨小蟋蟀的须子，小蟋蟀仍然不动。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "年轻人"
+        ],
+        "receivers": [
+          "小蟋蟀"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the young man using pig bristles to flick the small cricket's antennae, which is an active activity performed by the young man (doer) on the small cricket (receiver)."
+      }
+    },
+    {
+      "sentence_index": 79,
+      "sentence": "年轻人又笑了起来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "年轻人"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man's action of laughing again after attempting to provoke the蟋蟀. The doer is explicitly the young man, and there is no clear receiver specified in the action."
+      }
+    },
+    {
+      "sentence_index": 80,
+      "sentence": "他多次撩拨，小蟋蟀被激得大怒，直奔向前，于是两只蟋蟀彼此腾跃搏击，振翅长鸣。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小蟋蟀"
+        ],
+        "receivers": [
+          "蟹壳青"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the small蟋蟀 (小蟋蟀) actively engaging in combat with the other蟋蟀 (蟹壳青), indicating a physical struggle triggered by prior provocation."
+      }
+    },
+    {
+      "sentence_index": 81,
+      "sentence": "一会儿，只见小蟋蟀纵身跃起，张尾伸须，径直去咬蟹壳青的颈部。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小蟋蟀"
+        ],
+        "receivers": [
+          "蟹壳青"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the small蟋蟀 (doer) attacking the '蟹壳青'蟋蟀 (receiver) during their battle, which is a key moment in the story's progression."
+      }
+    },
+    {
+      "sentence_index": 82,
+      "sentence": "年轻人大吃一惊，忙把双方分开，让它们停止角斗。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "年轻人"
+        ],
+        "receivers": [
+          "小蟋蟀",
+          "蟹壳青"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man's active intervention to stop the蟋蟀 fight, making it an 'action' performed by him (doer) that directly affects the two蟋蟀 (receivers)."
+      }
+    },
+    {
+      "sentence_index": 83,
+      "sentence": "这时，小蟋蟀张开两翅，骄傲地鸣叫起来，好像在向主人报捷。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小蟋蟀"
+        ],
+        "receivers": [
+          "成名"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the small cricket spreading its wings and proudly calling, which is performed by the cricket (doer) and directed towards its owner (receiver)."
+      }
+    },
+    {
+      "sentence_index": 84,
+      "sentence": "成名大喜。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Chengming's emotional state shifts from distress to happiness due to the蟋蟀's successful performance",
+        "explanation": "The sentence describes the emotional outcome of the蟋蟀's previous actions in the斗蟋蟀 contest, marking a state change from despair to joy."
+      }
+    },
+    {
+      "sentence_index": 85,
+      "sentence": "两人正在观赏这只小蟋蟀，一只公鸡突然跑来，上前便啄。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "公鸡"
+        ],
+        "receivers": [
+          "蟋蟀"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an action performed by the rooster (公鸡) that suddenly runs and pecks, implying an interaction with the蟋蟀. The doer is the rooster, and the receiver is the蟋蟀, as the pecking action is directed toward it."
+      }
+    },
+    {
+      "sentence_index": 86,
+      "sentence": "成名吓得站在那里直喊。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Chengming is scared and shouting due to the chicken's attack",
+        "explanation": "The sentence describes Chengming's emotional and physical reaction to the chicken's attack on the蟋蟀, which is a direct consequence of the prior action (the chicken approaching). This state change reflects the impact of the preceding event on the narrative."
+      }
+    },
+    {
+      "sentence_index": 87,
+      "sentence": "幸亏公鸡没有啄中，小蟋蟀一下子跳出一尺多远，公鸡健步向前，紧紧追逼，眼看小蟋蟀已落在鸡爪之下了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "蟋蟀"
+        ],
+        "receivers": [
+          "公鸡"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the active action of the蟋蟀 escaping from the chicken's pursuit, with the蟋蟀 as the doer and the chicken as the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 88,
+      "sentence": "成名仓促间不知如何去救，急得直跺脚，脸色大变。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "成名因无法救蟋蟀而陷入极度恐慌，情绪剧烈波动",
+        "explanation": "该句描述了成名在公鸡追击蟋蟀时的慌乱反应，是前文公鸡追击事件导致的情绪和心理状态变化，符合'consequence'类别中因先前事件引发的状态改变。"
+      }
+    },
+    {
+      "sentence_index": 89,
+      "sentence": "很快见那公鸡伸长脖子直扑棱，近前一看，原来小蟋蟀落在鸡冠上，用力咬着不放。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小蟋蟀"
+        ],
+        "receivers": [
+          "公鸡"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the small蟋蟀 biting the公鸡's鸡冠, which is an active event in the narrative where the蟋蟀 actively engages with the公鸡."
+      }
+    },
+    {
+      "sentence_index": 90,
+      "sentence": "成名愈加惊喜，便捉住蟋蟀，放进竹笼。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "蟋蟀",
+          "竹笼"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes成名 actively performing the action of catching the蟋蟀 and placing it into the竹笼. The doer is clearly成名, and the receivers are the蟋蟀 (cricket) and竹笼 (bamboo cage) as the objects directly involved in the action."
+      }
+    },
+    {
+      "sentence_index": 91,
+      "sentence": "第二天，成名把小蟋蟀献给县令，县令嫌蟋蟀太小，怒冲冲地把成名训斥了一顿。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "县令"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成名 actively performing the action of presenting the small蟋蟀 to the county magistrate, which is a direct action taken by 成名 towards the magistrate."
+      }
+    },
+    {
+      "sentence_index": 92,
+      "sentence": "成名讲了小蟋蟀奇异不凡的本领，县令不肯相信。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成名"
+        ],
+        "receivers": [
+          "县令"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Cheng Ming actively explaining the extraordinary abilities of the cricket to the county magistrate, which is an action performed by Cheng Ming directed towards the magistrate."
+      }
+    },
+    {
+      "sentence_index": 93,
+      "sentence": "试着让它的其他蟋蟀斗，其他蟋蟀个个惨败，又试着让它和公鸡斗，也果然与成名说的一样。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "县令通过测试确认小蟋蟀的非凡本领，导致后续奖赏成名并进献蟋蟀",
+        "explanation": "该句描述县令测试其他蟋蟀和公鸡失败后，验证了小蟋蟀的特殊能力，这是对前文县令质疑的直接结果，导致后续奖赏和进献行为，属于后果类别。"
+      }
+    },
+    {
+      "sentence_index": 94,
+      "sentence": "于是县令奖赏成名，把小蟋蟀献给巡抚。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "县令"
+        ],
+        "receivers": [
+          "成名",
+          "巡抚"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the county magistrate's action of rewarding Chengming and presenting the small cricket to the governor, which directly follows the cricket's successful battles."
+      }
+    },
+    {
+      "sentence_index": 95,
+      "sentence": "巡抚非常高兴，又把小蟋蟀盛在金丝笼子里献给皇上，并上表详细陈述小蟋蟀的本领。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "巡抚"
+        ],
+        "receivers": [
+          "皇上"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the governor's active actions of placing the蟋蟀 in a golden cage and presenting it to the Emperor, along with submitting a detailed report. The governor (巡抚) is the doer, and the Emperor (皇上) is the primary receiver of these actions."
+      }
+    },
+    {
+      "sentence_index": 96,
+      "sentence": "小蟋蟀进宫后，拿全国各地进献的蝴蝶、螳螂、油利挞、青丝额等所有名贵的蟋蟀与它斗，没有比它厉害的。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "小蟋蟀因展现卓越斗技而声名远扬，成为全国闻名的珍稀蟋蟀，最终被进献给皇室并获得极高评价",
+        "explanation": "该句描述小蟋蟀进宫后与其他名贵蟋蟀比斗并获胜的后果，直接导致其声名鹊起并获得皇室认可，属于前文进献行为的直接结果。"
+      }
+    },
+    {
+      "sentence_index": 97,
+      "sentence": "每当听到琴瑟的声音，小蟋蟀还能按节拍跳舞，越发被人们所赏识。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "小蟋蟀因能随琴瑟节奏起舞而获得更多赏识",
+        "explanation": "该句描述小蟋蟀因具备音乐感知能力而获得更高评价，是其先前展现斗蟋蟀能力后的结果，属于前行动作引发的后续状态变化"
+      }
+    },
+    {
+      "sentence_index": 98,
+      "sentence": "皇上也非常高兴，大加赞许，下诏赐给巡抚名马和锦缎。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "皇上因蟋蟀的出色表现而赐予巡抚名马和锦缎，导致巡抚获得赏赐并上报县令政绩优异",
+        "explanation": "该句描述了因蟋蟀斗技成功引发的皇室赏赐行为，属于前文事件（蟋蟀斗技胜利）的直接结果，导致权力阶层给予物质奖励和政治认可，改变了原有社会地位和资源分配状态。"
+      }
+    },
+    {
+      "sentence_index": 99,
+      "sentence": "巡抚也没有忘本，没多久，县令在考核中被评为“政绩卓越优异”上报。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "县令因政绩优异被上级评定并上报，导致其获得晋升和免除成名的里正差役",
+        "explanation": "该句描述了巡抚因前任赏赐而奖励县令，最终导致县令在考核中被评为政绩优异并上报的结果，属于前文事件（蟋蟀进贡成功）的后续影响。"
+      }
+    },
+    {
+      "sentence_index": 100,
+      "sentence": "县令自然也很高兴，便免去成名的里正差役，还嘱托学使，让成名进了县学。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "县令"
+        ],
+        "receivers": [
+          "成名"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the county magistrate taking active measures to remove 成名's local official duties and arrange his enrollment in the county school. The action is performed by the county magistrate (doer) and directly affects 成名 (receiver)."
+      }
+    },
+    {
+      "sentence_index": 101,
+      "sentence": "过了一年多，成名的儿子精神复原，他自己说身体化作蟋蟀，轻健敏捷，善于角斗，至今才苏醒过来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the son's spirit is restored and he transforms into a蟋蟀, regaining his health and vitality",
+        "explanation": "The sentence describes the outcome of the prior events (son's death and family's despair) leading to a state change where the son's spirit is revived and he becomes a蟋蟀, which directly follows the previous actions and serves as a consequence."
+      }
+    },
+    {
+      "sentence_index": 102,
+      "sentence": "巡抚也重赏成名。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "巡抚重赏成名，导致成家获得财富和地位提升",
+        "explanation": "该句描述了因成名献蟋蟀成功而引发的后续结果，即巡抚对其重赏，直接导致成家获得财富和地位提升，符合'consequence'类别中描述先前事件结果导致状态变化的定义。"
+      }
+    },
+    {
+      "sentence_index": 103,
+      "sentence": "没几年工夫，成家良田百顷，楼阁万间，牛羊各二百头，每当外出时，穿轻裘，骑肥马，比世家大族还排场。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the family's wealth and social status increased dramatically",
+        "explanation": "The sentence describes the outcome of the prior events where the蟋蟀's success led to成名's family gaining immense wealth and social standing, transitioning from poverty to prosperity."
+      }
+    },
+    {
+      "sentence_index": 104,
+      "sentence": "异史氏说：天子偶然用过一件东西，未必不是过后就已忘了，而奉行的官员便将进献的物品著为定例。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides historical context explaining how imperial actions led to bureaucratic practices, setting the stage for the story's events. It describes a systemic situation rather than a specific location or actionable task."
+      }
+    },
+    {
+      "sentence_index": 105,
+      "sentence": "加上官吏贪婪暴虐，百姓为此每天都要典妻卖子，再无终止之日。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of corrupt officials' exploitation leading to widespread suffering among the populace, setting the stage for the story's central conflict. It provides background on the systemic issues driving the narrative without specifying a location."
+      }
+    },
+    {
+      "sentence_index": 106,
+      "sentence": "所以天子的一举一动，都关系到百姓的死活，决不可疏忽。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes a broader contextual relationship between the emperor's actions and the people's survival, setting the stage for the narrative's moral critique. It provides background on the systemic impact of imperial decisions without specifying a physical location."
+      }
+    },
+    {
+      "sentence_index": 107,
+      "sentence": "唯独成名因蠹吏敲诈而贫穷，因进献蟋蟀而致富，轻裘肥马，得意扬扬。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "成名 became wealthy and proud, with light clothing and fat horses, feeling triumphant",
+        "explanation": "The sentence describes the outcome of prior events (being forced to contribute a cricket leading to wealth and status), fitting the 'consequence' category. The state change involves成名's transformation from poverty to prosperity and his resulting pride."
+      }
+    },
+    {
+      "sentence_index": 108,
+      "sentence": "他担任里正、遭受责打的时候，哪能想到会有今天呢！",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "成名因进献蟋蟀而致富，获得官府赏识，最终成为县学士，家境富裕",
+        "explanation": "该句通过反思成名过去担任里正、遭受责打的境遇，揭示其因进献蟋蟀而获得财富和地位的转折结果，属于因果关系的后果描述。"
+      }
+    },
+    {
+      "sentence_index": 109,
+      "sentence": "上天打算让忠厚老实的人得到报偿，于是连带使巡抚县令都受到蟋蟀的庇佑。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "巡抚县令因蟋蟀的庇佑而获得利益，成名因忠厚老实得到报偿，最终官职晋升并获得财富",
+        "explanation": "该句描述了因成名进献蟋蟀导致的连锁后果，包括巡抚县令受庇佑、成名获得官职晋升和财富，属于前事件（蟋蟀进贡成功）的直接结果。"
+      }
+    },
+    {
+      "sentence_index": 110,
+      "sentence": "曾听说：一人得道升天，连他家的鸡犬也会成仙。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The protagonist's honesty and perseverance lead to unexpected prosperity, with his family's misfortune being reversed and his social status elevated through the success of the蟋蟀.",
+        "explanation": "The sentence reflects the outcome of the protagonist's struggles and the broader societal consequences of the story's events, illustrating how his actions lead to both personal redemption and systemic change."
+      }
+    },
+    {
+      "sentence_index": 111,
+      "sentence": "的确如此啊！",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The affirmation of the moral that success can bring unexpected benefits, even to family members, as exemplified by the story's resolution where the family's fortunes improve and the cricket's influence extends to the household.",
+        "explanation": "The sentence '的确如此啊！' serves as a conclusion affirming the moral of the story, which is a consequence of the prior events where the protagonist's actions through the cricket lead to his family's salvation and societal recognition. This validates the earlier statement about how one's success can ripple to their family, altering the narrative's state."
+      }
+    }
+  ]
+}

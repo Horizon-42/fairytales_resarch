@@ -1,0 +1,251 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_008_盘古开天.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 17,
+  "analyzed_sentences": 17,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "据说当天地还没有分开的时候，宇宙的景象就只是黑暗混纯的一团，好像一个大鸡蛋。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "大鸡蛋",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the initial state of the universe as a chaotic darkness resembling a big egg, establishing the background context for the creation story. The location is explicitly stated as '大鸡蛋' (big egg)."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "我们的老祖宗盘古就孕育在这个大鸡蛋中。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "大鸡蛋",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描述盘古孕育于混沌的'大鸡蛋'中，为后续创世神话建立背景场景，属于设定故事初始状态的'situation'类别。"
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "他在大鸡蛋中孕育着，成长着，呼呼地睡着觉，这样一直经过了一万八千年。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "大鸡蛋",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述盘古在混沌状态下的成长过程，为后续劈开天地的行动建立背景，属于情境设定。"
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "有一天, 他忽然睡醒了，挣开眼睛一看：啊呀！",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "盘古"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes盘古 performing the action of waking up from his sleep, which is a key moment initiating the subsequent events. The doer is clearly盘古, and there is no explicit receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "什么也看不见，看见的只是漆黑黏糊的一片，闷得人怪心慌。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "大鸡蛋",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述盘古在混沌未分的宇宙中醒来后所处的黑暗环境，为后续劈开天地的行动提供背景情境，属于设定故事发展基础的'situation'类别。"
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "他觉得这种状况非常可恼。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "大鸡蛋",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes盘古's emotional reaction to the chaotic darkness, establishing his internal state which leads to the subsequent action of splitting the cosmic egg. The location is explicitly stated as the primordial egg."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "心里一生气，不知道从哪里抓过来一把大板斧 ，朝着眼面前的黑暗混纯，用力这么一挥，只听得山崩地裂似的一声响：哗啦！",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "盘古"
+        ],
+        "receivers": [
+          "黑暗混纯"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes盘古 actively performing the action of grabbing a big axe and swinging it at the chaotic darkness, making him the doer and the darkness the target of the action."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "大鸡蛋突然破裂开来其中有些轻而清的东西，冉冉上升，变成了天，另外 有些重而浊的东西，沉沉下降，变成了地。————当初是混沌不分的天地，就这样被盘古的板斧一挥，划分开来了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "heaven and earth were separated from the primordial chaos",
+        "explanation": "The sentence describes the outcome of盘古's action of splitting the cosmic egg, resulting in the division of heaven and earth from the chaotic primordial state."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "天和地分开以后，盘古怕它们还要合挽，就头顶天，脚踏地，站在天地的当中，随着它们的变化而变化。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "盘古"
+        ],
+        "receivers": [
+          "天",
+          "地"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes盘古's active action of standing between heaven and earth to prevent them from merging, with the heavens and earth as the objects affected by his action."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "天每天升高一丈，地每天加厚一丈，盘古的身子也每天增长一丈。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the sky rises daily, the earth thickens daily, and Pan Gu's body grows daily",
+        "explanation": "The sentence describes the outcome of Pan Gu's task to prevent heaven and earth from merging, detailing the ongoing transformation of the cosmic structure and his own physical growth as a direct result of his sustained effort."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "这样又过了一万八千年, 天升得极高了，地变得极厚了，盘古的身子也长得极长了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "天升得极高了，地变得极厚了，盘古的身子也长得极长了",
+        "explanation": "该句描述了盘古持续撑天立地导致天地和自身发生显著变化的结果，属于前文所述持续增长行为的直接后果。"
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "盘古的身子究竟有多长呢？",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces a question about the length of Pangu's body, which is part of the narrative context leading to the explanation in the next sentence."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "推算的结果，说是有九万里那么长。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides a specific measurement (nine thousand li) about Pangu's body length, which serves as background information establishing the scale of the cosmic event. It does not describe an action, task, or consequence, but rather sets context for the narrative."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "这巍峨的巨人，就像一根长柱子，撑在天和地的当中，不让它们有重归于黑暗混吨的机会。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "盘古"
+        ],
+        "receivers": [
+          "天",
+          "地"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes盘古 actively supporting the heavens and earth to prevent them from merging, which is an ongoing action performed by盘古 with the heavens and earth as the recipients of his support."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "他孤独地站在那里，做这种撑天往地的辛苦工作，又不知道经过了多少年。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "盘古"
+        ],
+        "receivers": [
+          "天",
+          "地"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes盘古 actively performing the action of sustaining the heavens and earth through his labor, with the天地 as the recipients of his sustaining effort."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "到后来，天和地的构造似乎已经相当巩固，他不必再担心它们会合在一起，他实在也需要休息休息，终于，他也和我们人类一样倒下来死去了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "盘古 died and his body transformed into various elements of the world",
+        "explanation": "The sentence describes the outcome of the prior event (the separation of heaven and earth) leading to盘古's death and subsequent transformation into natural elements, which is a direct consequence of his labor and the solidification of the cosmic structure."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "他临死的时候，周身突然起了大的变化：他口里呼出的气变成了风和云，他的声音变成了轰隆的雷霆，他的左眼睛变成了太阳，右眼睛变成了月亮，他的手足和身躯变成了大地的四极和五方的名山，他的血液变成了江河，他的筋 脉变成了道路，他的肌肉变成了田土，他的头发和髭须变成了天上的星星，他的皮肤和汗毛变成了花草树木，他的牙齿、骨头、骨髓等，也都变成了闪光的金属、坚硬的石头、圆亮的珍珠和温润的玉石，就是那最没用处的身上出的汗，也 变成了雨露和甘霖一一总之一句话：这\"垂死化身\"的盘古，用了他的整个身体使这新诞生的世界丰富而美丽。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "盘古的整个身体转化为新诞生世界的各种元素，使世界变得丰富而美丽",
+        "explanation": "该句描述盘古死亡后其身体分解为自然元素的过程，是盘古死亡这一前行动作导致的直接结果，符合'consequence'类别中对状态变化的描述要求"
+      }
+    }
+  ]
+}

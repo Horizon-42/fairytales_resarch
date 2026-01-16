@@ -1,0 +1,758 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_012_后羿射日.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 55,
+  "analyzed_sentences": 55,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "传说在世界还很年轻的时候，天空曾经同时出现过十个太阳。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "天空",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the mythological background of ten suns existing in the sky during the world's youth, setting the stage for subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "东方天帝的妻子就是这十个太阳的母亲。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes background context about the origin of the ten suns by revealing their mother's identity as the wife of the Eastern Heaven Emperor, setting the stage for the subsequent narrative events."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "母亲经常将他们放在世界最东边的东海中洗澡，每当洗完澡之后，他们就会像小鸟儿那样在一棵大树上栖息。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "东海",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence establishes the daily routine of the ten suns being bathed in the East Sea and resting on a tree, setting the background context for the story's events."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "当然，太阳可不是什么小鸟儿，他们之所以栖息在树上，那是因为每个太阳的中心就是只鸟儿。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "树",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence explains the reason behind the suns' behavior of perching on trees, providing background context about their nature as entities with bird-like cores. The location refers to the tree where they rest."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "比较矮的树枝上栖息着九个太阳，另一个太阳则栖息在树的树梢上。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "树",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了十个太阳在树上栖息的具体位置，为后续情节（如后羿射日）提供背景设定，属于情境类信息。"
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "每个夜晚更换一次。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "树",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了十个太阳在树上栖息的规律性更换过程，为后续后羿射日的情节提供背景设定，属于情境类信息。"
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "当预示着黎明的曙光来临时，栖息在树梢上的那轮太阳，就会坐着两轮车穿越天空，就这样，轮流替换，每天都会有一个太阳被换到天空上，给大地上的万物带来光明和热量。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "sky",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence establishes the daily cycle of the suns moving across the sky, providing background context for the story's events. The location is the sky where the suns traverse."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "在那个时候，大地上的人们生活得非常幸福和睦。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "大地上",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了十个太阳出现时人类生活的幸福状态，为后续冲突事件提供背景设定，属于情境类描述。"
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "人和动物就如同邻居和朋友那样生活在一起，他们没有偏见没有斗争，彼此坦诚相待、相互尊重。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the harmonious coexistence between humans and animals as part of the established background context, setting the stage for the subsequent conflict caused by the ten suns. It provides situational context without introducing new actions, tasks, or consequences."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "动物会将他们的宝宝安心地放在窝里，不用担心受到人类的伤害。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes a peaceful coexistence between humans and animals as part of the narrative's background context before the conflict with the suns, establishing the prior state of harmony."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "农民也会将谷物堆放在田野中，而不用担心会有动物起偷盗之心。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "田野中",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了人类与动物和谐共处的背景场景，通过农民安全存放谷物的情节，为后续太阳暴晒导致的冲突建立社会状态背景。"
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "总之，人们日出而作，日落而息，日子祥和安宁。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the background context of peaceful human-animal coexistence before the conflict with the ten suns, serving as the narrative foundation for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "人们和动物常常会感恩太阳带给他们的时辰、光明和快乐。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the harmonious relationship between people and animals under the ten suns' benevolent rule, establishing the background context before the conflict arises. It sets the stage for the subsequent disruption caused by the excessive sunlight."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "就这样，幸福的生活缓缓地前进着。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the prior state of peaceful coexistence between humans and animals before the conflict with the ten suns, serving as background context for the narrative."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "但是，谁也想不到，突然有一天，这十个太阳想，要是兄弟十人能够同时去天空中周游，该是多么有趣啊。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "天空",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了十个太阳产生共同穿越天空的想法，为后续他们集体升空导致灾难的行动提供了背景动机，属于设定未来事件的情境描述。"
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "于是，他们兄弟十个就商量好，趁黎明到来的时候，他们一起爬上两轮车。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the ten suns' decision to take collective action, setting up the context for their subsequent journey. It provides background for the upcoming action without specifying a location."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "那天，就在黎明的曙光刚刚来临的时候，十个太阳便一起爬上车，踏上穿越天空的征程。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "十个太阳"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the ten suns taking the chariot journey across the sky, with '十个太阳' as the active doers. No direct receivers are mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "能够一起穿越天空，十个太阳开心极了，可大地上的人们和动物却遭殃了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the people and animals on Earth suffered from the excessive heat and resulting disasters",
+        "explanation": "The sentence describes the negative outcome of the ten suns' journey, detailing how their collective presence caused suffering to humans and animals, which is a direct consequence of their prior action."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "因为同时出现在天空中的十个太阳，就像是十个火团似的，放出炙热无比的热量烘烤着大地。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the intense heat from the ten suns caused fires, dried up the land, and led to suffering for people and animals",
+        "explanation": "The sentence describes the negative outcomes of the ten suns appearing together, which directly follows the action of them ascending together and precedes the description of the resulting disasters. This is a consequence of their prior action."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "很快，森林就着起了大火，大火烧死许多动物，森林变得一片漆黑。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the forest burned, killing many animals and turning it dark",
+        "explanation": "The sentence describes the outcome of the ten suns' excessive heat, resulting in forest fires, animal deaths, and darkness. This is a direct consequence of the prior event (ten suns causing extreme heat)."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "而那些在大火中幸存的动物，由于受到惊吓，也纷纷蹿到人群中，发疯似的寻找食物，还伤害曾经和他们和睦相处的善良的人们。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Animals that survived the fire turn on humans, leading to mutual harm and the breakdown of peaceful coexistence between humans and animals",
+        "explanation": "The sentence describes the outcome of the forest fire caused by the ten suns, showing how the surviving animals' panic leads to violence against humans, marking a critical shift from harmony to conflict."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "后来，大地烤焦了，河流也干枯了，大海也干涸了，所有的鱼儿都死去了，水中的怪物也悄悄地爬上岸偷窃食物，还有很多人和动物被渴死。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The environment underwent catastrophic degradation with scorched earth, dried rivers and seas, dead aquatic life, and mass deaths from thirst, leading to ecological collapse and human/animal suffering.",
+        "explanation": "This sentence describes the dire outcomes of the ten suns' simultaneous appearance, detailing environmental destruction and resulting fatalities, which directly follows the prior action of the suns causing extreme heat."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "农作物和果园全部都枯萎了，供给人和家畜的食物也断绝了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "农作物和果园全部都枯萎了，供给人和家畜的食物也断绝了",
+        "explanation": "该句描述了十个太阳同时出现导致的极端高温后果，属于前文事件（十个太阳升空）引发的状态变化，符合Consequence类别。"
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "有些人由于出门觅食，而被太阳活活烤死；还有一些人被饥饿的野兽吃掉了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "People are being killed by extreme heat from the sun and attacked by starving animals due to the scorched earth caused by the ten suns",
+        "explanation": "This sentence describes the negative outcomes of the ten suns causing extreme heat and resource scarcity, leading to human suffering and violence between humans and animals. It directly follows the cause (ten suns in sky) and shows the resulting state changes."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "人们再也没有幸福了，动物和人也反目成仇，他们彼此伤害和追杀。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The state of harmony and mutual respect between humans and animals collapsed, resulting in mutual hostility, suffering, and survival struggles",
+        "explanation": "This sentence describes the outcome of the ten suns' destructive presence, showing the transition from a peaceful coexistence to a state of conflict and despair, which qualifies as a consequence of the prior events."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "在一片火海里，人们苦苦地挣扎和煎熬着，他们哭天喊地，寻求活下去的希望。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "people suffer in a fiery environment, leading to loss of life and disrupted harmony",
+        "explanation": "The sentence describes the outcome of the ten suns causing catastrophic effects, resulting in widespread suffering, death, and the breakdown of peaceful coexistence between humans and animals."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "可是哭天天不应，哭地地不灵啊！",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "earth",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the desperate state of people suffering from the scorching heat of ten suns, establishing the context of their plight on Earth before the intervention of Hou Yi."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "在这个时候，出现了一个非常年轻英俊叫后羿的英雄。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the emergence of Hou Yi as a hero in response to the crisis caused by the ten suns, setting the stage for the subsequent action of shooting down the suns. It provides background context for the narrative progression."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "后羿是一个很厉害的神箭手，他的箭法非常了得，可以说是百发百中。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background information about Hou Yi's archery skills, establishing his capability which sets the stage for his later actions in the story. No specific location is mentioned in this context."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "而当他看到身边发生的一切时，心里很不是滋味。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Hou Yi's emotional reaction to the suffering caused by the ten suns, establishing his internal state as motivation for his subsequent action. It provides background context for the narrative progression without specifying a physical location."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "人们所遇到的苦难，他看在眼里，急在心上，于是决定帮助人们脱离苦海，将那多余的九个太阳射下来，还给人们从前那平静安宁的生活。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "后羿"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes后羿's decision to take action to help people by shooting down the extra suns, which constitutes an explicit task he commits to fulfilling."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "后羿说做就做。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "后羿"
+        ],
+        "receivers": [
+          "十个太阳"
+        ],
+        "changed_state": "",
+        "explanation": "句子描述后羿决定立即采取行动，对应于他后续射日的行为。'doers' 是执行行动的主体后羿，'receivers' 是行动的目标对象十个太阳。"
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "他翻过九十九座高山，趟过九十九条大河，穿过九十九个峡谷，到了东海的边上。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "后羿"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the active actions performed by Hou Yi as he travels across mountains, rivers, and valleys to reach the East Sea. These actions are part of his journey to execute the task of shooting down the suns."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "他登上了一座大山，山脚下是一片茫茫的大海。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "大山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the setting where the subsequent action (shooting the sun) occurs, describing the mountain as the key location. The sea at the mountain's base is part of the environment but the narrative focus is on the mountain as the location for the upcoming action."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "后羿将上万斤的弓弩拉开后，搭上千斤重的利箭，瞄准天上那火辣辣的太阳中的一个，嗖地一下就将箭射出去了，第一个太阳被射中了，他落进了大海里。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "后羿"
+        ],
+        "receivers": [
+          "第一个太阳"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes后羿 actively performing the action of shooting an arrow at the sun, making him the doer. The first sun is the receiver of the action as it is the target of the arrow."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "接着，后羿又拉开弓弩，搭上利箭，嗖的一声又射了出去，天上的两个太阳同时被射中了，他们应声落下，也掉进了茫茫的海水里。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "后羿"
+        ],
+        "receivers": [
+          "太阳"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes后羿 actively performing the action of shooting arrows at the suns, with the suns as the recipients of the action."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "就这样，一会儿工夫，后羿就射掉了三个太阳。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "后羿"
+        ],
+        "receivers": [
+          "太阳"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Hou Yi's action of shooting down three suns, making him the doer and the suns the receivers of the action."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "此时，天空中就只剩下七个太阳了，他们又怕又惊地瞪大红彤彤的眼睛。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the number of suns in the sky decreased from ten to seven, and the remaining suns became fearful and startled",
+        "explanation": "This sentence describes the outcome of the prior action (shooting three suns) by stating the new state of seven remaining suns and their fearful reaction, which directly results from the prior event."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "比起十个太阳，七个太阳的热量已经减少了很多，可是后羿仍然感觉焦热难耐。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The intense heat from the remaining seven suns persists, necessitating further action to alleviate the suffering of humans and animals.",
+        "explanation": "The sentence describes the ongoing negative impact of the reduced number of suns, highlighting the unresolved problem that drives subsequent actions. This is a consequence of the prior action where Hou Yi shot down the suns."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "于是，他又狠狠地射出了第三支箭。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "后羿"
+        ],
+        "receivers": [
+          "太阳"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 后羿 actively performing the action of shooting an arrow, targeting the suns (太阳) as the receivers of the action."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "不料，这支箭更有力，竟然同时击落了天上的四个太阳。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "four suns were hit and fell, reducing the number of suns in the sky",
+        "explanation": "The sentence describes the outcome of后羿 shooting the third arrow, resulting in four suns being struck and falling, which directly alters the state of the sky by decreasing the number of suns."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "顿时，天上其他的太阳被吓得全身直抖，围在一起紧紧旋转。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The remaining suns become frightened and cluster together, altering the celestial balance and contributing to the cooling effect on Earth",
+        "explanation": "This sentence describes the outcome of the prior action (the arrow hitting the suns), showing the suns' fear response and their collective behavior which directly impacts the environmental state change"
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "不过，后羿一不做二不休，他鼓足劲，一支箭接着一支箭地射出去，没有一个打偏的，共射掉九个太阳。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "后羿"
+        ],
+        "receivers": [
+          "九个太阳"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes后羿 actively shooting arrows at the suns, making it an 'action' with后羿 as the doer and the nine suns as the receivers of the action."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "被箭射中的九个太阳当然没有办法生存下去，他们一个接着一个地死去了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the nine suns died, leading to the earth cooling down and the end of the scorching heat",
+        "explanation": "The sentence describes the outcome of后羿's actions (shooting the suns) resulting in their death and a significant environmental change, fitting the 'consequence' category."
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "他们的羽毛纷纷落到地上，他们的光和热也慢慢地消失了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The light and heat of the nine suns disappeared, causing the earth to become darker and cooler",
+        "explanation": "The sentence describes the outcome of Hou Yi's action of shooting down the suns, resulting in the loss of their light and heat which directly alters the environmental state of the earth."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "于是，大地变得越来越暗，越来越凉爽，直到天空中，只剩下一个太阳的光芒，后羿才罢休。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "大地变得越来越暗，越来越凉爽，天空中只剩下一个太阳的光芒",
+        "explanation": "该句描述了后羿射落九个太阳后导致的环境变化，属于前序行动（射日）的直接结果，体现了状态从极端炎热到逐渐冷却的转变"
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "天上剩下的这个太阳简直是害怕极了，他在天上摇摇晃晃，慌慌张张，用非常快的速度躲进大海中，不敢出来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "剩下的太阳因恐惧而躲入大海，导致天空黑暗，万物失去阳光滋养",
+        "explanation": "该句描述了后羿射落九个太阳后，剩余太阳因恐惧而躲入大海导致的后果，属于前行动作引发的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "这下子可糟了，天上没有太阳，变得一片黑暗。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the sky became dark and life on Earth suffered",
+        "explanation": "The sentence describes the outcome of the prior event (the sun being shot down) leading to darkness and ecological collapse, fitting the 'consequence' category."
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "万物也无法得到阳光的哺育，毒蛇猛兽都趁机出来扰乱人类的生活。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the world became dark and poisonous snakes and beasts disrupted human life",
+        "explanation": "This sentence describes the outcome of the prior event where the remaining sun fled into the sea, leading to darkness and chaos. The consequence is the inability of万物 to receive sunlight and the emergence of threats from毒蛇猛兽."
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "人们苦苦请求天帝，让他将第十个太阳请出来，只有这样人类万物才可以顺利地繁衍下去。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence explicitly states the requirement for the people to request the heavenly emperor to bring back the tenth sun, which is necessary for the survival of humans and all living things."
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "天帝接受他们的请求。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "天帝"
+        ],
+        "receivers": [
+          "人们"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Heavenly Emperor's action of accepting the people's request, which is an active response to their plea."
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "在这些黑暗持续很久后的一天早上，东边的海面上，透射出五彩缤纷的朝霞，一轮金灿灿的太阳随后露出海面。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the return of the sun, ending the darkness and restoring light and life to the world",
+        "explanation": "This sentence describes the outcome of the prior event (the sun being hidden and darkness lasting) where the sun reappears, marking a significant state change from darkness to light and the restoration of balance."
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "看到太阳的光辉，人们高兴得手舞足蹈，齐声欢呼这个时刻的到来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "人们因太阳重现而感到高兴并庆祝，黑暗被驱散，万物重新获得阳光哺育",
+        "explanation": "该句描述了太阳重现后的直接结果，即人们因重见光明而欢庆，黑暗被驱散，万物恢复生机，属于前文事件（后羿射日）的后果。"
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "从此以后，这个太阳每天都从东方的海边升起来，穿越天空给人间以温暖，禾苗也因此得到生长，万物也因此能够生存下去。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the world returns to a balanced state with one sun, allowing crops to grow and all living things to survive",
+        "explanation": "This sentence describes the outcome of Hou Yi's action of shooting down nine suns, resulting in a restored natural order where a single sun provides warmth and sustains life, marking a significant state change from the previous scorched earth scenario."
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "由于射杀太阳，拯救了人间万物，后羿功劳盖世，被天帝赐封了天将的职位。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "后羿被天帝赐封为天将职位，人间恢复了平静与秩序",
+        "explanation": "该句描述了后羿射日行动后的结果，即他因拯救人间而被天帝封职，属于因果关系的后果描述。changed_state具体说明了因射杀太阳导致的职位授予和世界恢复秩序的双重结果。"
+      }
+    }
+  ]
+}
