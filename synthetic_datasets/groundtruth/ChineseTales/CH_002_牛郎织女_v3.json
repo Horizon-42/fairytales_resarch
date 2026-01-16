@@ -1,0 +1,909 @@
+{
+  "version": "3.0",
+  "metadata": {
+    "id": "CH_002_牛郎织女",
+    "title": "牛郎织女",
+    "culture": "Chinese",
+    "annotator": "Dongxu",
+    "date_annotated": "2025-12-15",
+    "confidence": 0.8
+  },
+  "source_info": {
+    "language": "zh",
+    "type": "full_text",
+    "reference_uri": "datasets/texts/CH_002_牛郎织女.txt"
+  },
+  "characters": [
+    {
+      "name": "织女",
+      "alias": "",
+      "archetype": "Lover"
+    },
+    {
+      "name": "天帝",
+      "alias": "",
+      "archetype": "Villain"
+    },
+    {
+      "name": "牛郎",
+      "alias": "",
+      "archetype": "Hero"
+    },
+    {
+      "name": "老牛",
+      "alias": "",
+      "archetype": "Mentor"
+    },
+    {
+      "name": "天神",
+      "alias": "",
+      "archetype": "Villain"
+    },
+    {
+      "name": "小女儿",
+      "alias": "",
+      "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "妇女们",
+      "alias": "",
+      "archetype": "Everyman"
+    },
+    {
+      "name": "哥嫂",
+      "alias": "",
+      "archetype": "Everyman"
+    },
+    {
+      "name": "一儿一女",
+      "alias": "孩子; 一对儿女;儿女们",
+      "archetype": "Everyman"
+    },
+    {
+      "name": "王母娘娘",
+      "alias": "王母",
+      "archetype": "Villain"
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "05828210-380c-4e6f-936c-d5164c1524f6",
+      "text_span": {
+        "start": 0,
+        "end": 214
+      },
+      "event_type": "OTHER",
+      "description": "织;neat",
+      "agents": [
+        "织女"
+      ],
+      "targets": [
+        "天衣"
+      ],
+      "target_type": "object",
+      "object_type": "normal_object",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "38bb88d7-ed7a-402f-a2b1-6baa1c0f5840",
+      "text_span": {
+        "start": 215,
+        "end": 297
+      },
+      "event_type": "VILLAINY",
+      "description": "虐待;abuse",
+      "agents": [
+        "哥嫂"
+      ],
+      "targets": [
+        "牛郎"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationships": [
+        {
+          "agent": "哥嫂",
+          "target": "牛郎",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "sibling",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "262880a0-126d-4734-9786-dcb806220381",
+      "text_span": {
+        "start": 363,
+        "end": 401
+      },
+      "event_type": "LACK",
+      "description": "寂寞;get lonely",
+      "agents": [
+        "牛郎"
+      ],
+      "targets": [],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "317d5e4b-255a-4acb-a23d-206a5e4afeb2",
+      "text_span": {
+        "start": 298,
+        "end": 363
+      },
+      "event_type": "OTHER",
+      "description": "帮助;Help",
+      "agents": [
+        "老牛"
+      ],
+      "targets": [
+        "牛郎"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationships": [
+        {
+          "agent": "老牛",
+          "target": "牛郎",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "ally",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "51923dc8-acf0-477d-b540-36baccc032fd",
+      "text_span": {
+        "start": 402,
+        "end": 514
+      },
+      "event_type": "GUIDANCE",
+      "description": "去河边, 去夺取织女的衣服",
+      "agents": [
+        "老牛"
+      ],
+      "targets": [
+        "牛郎"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationships": [
+        {
+          "agent": "老牛",
+          "target": "牛郎",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "ally",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "fbbacb08-5f24-480e-8fdb-3a9fed2da817",
+      "text_span": {
+        "start": 515,
+        "end": 753
+      },
+      "event_type": "LIQUIDATION",
+      "description": "在非暴力强迫下, 女方同意嫁给男方",
+      "agents": [
+        "牛郎"
+      ],
+      "targets": [
+        "织女"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6,
+      "relationships": [
+        {
+          "agent": "牛郎",
+          "target": "织女",
+          "relationship_level1": "Romance",
+          "relationship_level2": "lover",
+          "sentiment": "romantic"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "2865c3b3-8f6e-4247-afb4-ed81b0d3cd98",
+      "text_span": {
+        "start": 819,
+        "end": 908
+      },
+      "event_type": "VILLAINY",
+      "description": "妻子被迫和丈夫、子女分开",
+      "agents": [
+        "天帝"
+      ],
+      "targets": [
+        "牛郎",
+        "织女"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 8,
+      "relationships": [
+        {
+          "agent": "天帝",
+          "target": "牛郎",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "6317923a-117f-4f21-a69d-5dd96f69b92a",
+      "text_span": {
+        "start": 754,
+        "end": 818
+      },
+      "event_type": "LIQUIDATION",
+      "description": "夫妻生活美满, 养育子女",
+      "agents": [
+        "织女",
+        "牛郎"
+      ],
+      "targets": [
+        "一儿一女"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 7,
+      "relationships": [
+        {
+          "agent": "织女",
+          "target": "一儿一女",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "parent_child",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "57c3dded-bfbd-4335-aa4a-413524a8c7d5",
+      "text_span": {
+        "start": 1413,
+        "end": 1549
+      },
+      "event_type": "STRUGGLE",
+      "description": "试图舀干天河水",
+      "agents": [
+        "牛郎",
+        "一儿一女",
+        "小女儿"
+      ],
+      "targets": [
+        "王母娘娘"
+      ],
+      "target_type": "character",
+      "object_type": "normal_object",
+      "instrument": "粪瓢",
+      "time_order": 9,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "098695bb-91a7-4a58-b32d-46325ac17351",
+      "text_span": {
+        "start": 908,
+        "end": 1055
+      },
+      "event_type": "VILLAINY",
+      "description": "阻止相见",
+      "agents": [
+        "王母娘娘",
+        "天神"
+      ],
+      "targets": [
+        "牛郎"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 9,
+      "relationships": [
+        {
+          "agent": "王母娘娘",
+          "target": "牛郎",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "cdbee6a6-dc9b-4040-8ce9-1e48d382acb3",
+      "text_span": {
+        "start": 1056,
+        "end": 1212
+      },
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "受到帮助开始追击",
+      "agents": [
+        "老牛"
+      ],
+      "targets": [
+        "牛郎",
+        "一儿一女"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "牛皮;Skin of the cow",
+      "time_order": 10,
+      "relationships": [
+        {
+          "agent": "老牛",
+          "target": "牛郎",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "ally",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "64e5afbc-b36a-4fda-a2ef-78bb6c13fa83",
+      "text_span": {
+        "start": 1213,
+        "end": 1412
+      },
+      "event_type": "VILLAINY",
+      "description": "阻止相见",
+      "agents": [
+        "王母娘娘"
+      ],
+      "targets": [
+        "牛郎",
+        "一儿一女"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "金簪",
+      "time_order": 11,
+      "relationships": [
+        {
+          "agent": "王母娘娘",
+          "target": "牛郎",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "1dcdf54d-0930-41fd-a1b4-b4c4d2113162",
+      "text_span": {
+        "start": 1549,
+        "end": 1692
+      },
+      "event_type": "VICTORY",
+      "description": "感动",
+      "agents": [
+        "牛郎",
+        "织女"
+      ],
+      "targets": [
+        "天帝",
+        "王母娘娘"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 12,
+      "relationships": [
+        {
+          "agent": "牛郎",
+          "target": "天帝",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "e9a8526d-44ac-4793-a415-c1d4a526fa3e",
+      "text_span": {
+        "start": 1693,
+        "end": 1959
+      },
+      "event_type": "SOLUTION",
+      "description": "隔河相望，传递相思",
+      "agents": [
+        "牛郎"
+      ],
+      "targets": [
+        "织女"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "梭;拐子",
+      "time_order": 13,
+      "relationships": [
+        {
+          "agent": "牛郎",
+          "target": "织女",
+          "relationship_level1": "Romance",
+          "relationship_level2": "lover",
+          "sentiment": "romantic"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "BITTERSWEET",
+    "key_values": [
+      "OTHER (爱;家庭)"
+    ],
+    "motif_type": [
+      "Motif T254.3: T254.3. Man with obedient wife looks young; with disobedient, old. (T. Sex. > T200–T299. Married life.)",
+      "Motif T268: T268. Beautiful woman married to hideous man: he is thankful, she patient. She says that they have thus both gained paradise. (T. Sex. > T200–T299. Married life.)",
+      "Motif T145.7: T145.7. Man's senior wife ugly but diligent; his second, beautiful but lazy. (T. Sex. > T100–T199. Marriage.)",
+      "Motif T252.4: T252.4. Prize for husband who rules his wife. (Ham, egg.) (T. Sex. > T200–T299. Married life.)",
+      "Motif T591.1.2: T591.1.2. Milk of hornless, single-colored cow drunk by man to make wife fruitful. (T. Sex. > T500–T599. Conception and birth.)",
+      "Motif H1097.1: H1097.1. Task: drying up a lake in one night. (H. Tests. > H900–H1199. Tests of prowess: tasks. > H1000–H1199. Nature of tasks.)",
+      "Motif H1143: H1143. Task: dipping out the sea with a spoon: countertask: stop all the rivers. (Cf. H1113., H1142.3.) (H. Tests. > H900–H1199. Tests of prowess: tasks. > H1000–H1199. Nature of tasks.)",
+      "Motif H1102: H1102. Task: cleaning Augean stable. Stable has not been cleaned in years. Must be done in one night. River turned through it. (H. Tests. > H900–H1199. Tests of prowess: tasks. > H1000–H1199. Nature of tasks.)",
+      "Motif T251.1.3: T251.1.3. Man had rather remain transformed to mule than to live with his shrewish wife. (T. Sex. > T200–T299. Married life.)",
+      "Motif T202: T202. The happy couple: wife blind, husband deaf. (T. Sex. > T200–T299. Married life.)"
+    ],
+    "atu_categories": [
+      "ATU 465: Man persecuted for his beautiful wife (TALES OF MAGIC > Supernatural Tasks (460-499))",
+      "ATU 413: Marriage by Stealing Clothing (TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Wife (400-424))",
+      "ATU 1463: Finger-drying Contest Won by Deception (ANECDOTES AND JOKES > Stories about a Woman > Looking for a Wife (1450-1474))",
+      "ATU 1948: Too much talk (ANECDOTES AND JOKES > Tall Tales (1875-1999))",
+      "ATU 1405: The Lazy Spinner (ANECDOTES AND JOKES > Stories about Married Couples > The Foolish Husband and His Wife (1405-1429))",
+      "ATU 1211: The Peasant Woman Thinks the Cow Chewing her Cud is Mimicking Her (ANECDOTES AND JOKES > Stories about a Fool (1200-1349))",
+      "ATU 915: All depends on how you take it (REALISTIC TALES > Good Precepts (910-919))",
+      "ATU 804: Peter's Mother Falls from Heaven (RELIGIOUS TALES > Heaven (800-809))",
+      "ATU 805: Joseph and Mary Threatens to Leave Heaven... (RELIGIOUS TALES > Heaven (800-809))",
+      "ATU 1408: The man who does his wife's work (ANECDOTES AND JOKES > Stories about Married Couples > The Foolish Husband and His Wife (1405-1429))"
+    ],
+    "obstacle_thrower": [
+      "天帝",
+      "王母娘娘"
+    ],
+    "helper_type": [
+      "ANIMAL"
+    ],
+    "thinking_process": "",
+    "atu_evidence": {
+      "ATU 465: Man persecuted for his beautiful wife (TALES OF MAGIC > Supernatural Tasks (460-499))": {
+        "evidence_keys": [
+          "S515-753"
+        ]
+      },
+      "ATU 413: Marriage by Stealing Clothing (TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Wife (400-424))": {
+        "evidence_keys": [
+          "S515-753"
+        ]
+      },
+      "ATU 1463: Finger-drying Contest Won by Deception (ANECDOTES AND JOKES > Stories about a Woman > Looking for a Wife (1450-1474))": {
+        "evidence_keys": [
+          "S1413-1549"
+        ]
+      },
+      "ATU 1948: Too much talk (ANECDOTES AND JOKES > Tall Tales (1875-1999))": {
+        "evidence_keys": [
+          "S363-401"
+        ]
+      },
+      "ATU 1405: The Lazy Spinner (ANECDOTES AND JOKES > Stories about Married Couples > The Foolish Husband and His Wife (1405-1429))": {
+        "evidence_keys": [
+          "S754-818"
+        ]
+      },
+      "ATU 1211: The Peasant Woman Thinks the Cow Chewing her Cud is Mimicking Her (ANECDOTES AND JOKES > Stories about a Fool (1200-1349))": {
+        "evidence_keys": [
+          "S363-401"
+        ]
+      },
+      "ATU 915: All depends on how you take it (REALISTIC TALES > Good Precepts (910-919))": {
+        "evidence_keys": [
+          "S754-818"
+        ]
+      },
+      "ATU 804: Peter's Mother Falls from Heaven (RELIGIOUS TALES > Heaven (800-809))": {
+        "evidence_keys": [
+          "S908-1055"
+        ]
+      },
+      "ATU 805: Joseph and Mary Threatens to Leave Heaven... (RELIGIOUS TALES > Heaven (800-809))": {
+        "evidence_keys": [
+          "S908-1055"
+        ]
+      },
+      "ATU 1408: The man who does his wife's work (ANECDOTES AND JOKES > Stories about Married Couples > The Foolish Husband and His Wife (1405-1429))": {
+        "evidence_keys": [
+          "S754-818"
+        ]
+      }
+    },
+    "motif_evidence": {
+      "Motif T254.3: T254.3. Man with obedient wife looks young; with disobedient, old. (T. Sex. > T200–T299. Married life.)": {
+        "evidence_keys": [
+          "S754-818"
+        ]
+      },
+      "Motif T268: T268. Beautiful woman married to hideous man: he is thankful, she patient. She says that they have thus both gained paradise. (T. Sex. > T200–T299. Married life.)": {
+        "evidence_keys": [
+          "S754-818"
+        ]
+      },
+      "Motif T145.7: T145.7. Man's senior wife ugly but diligent; his second, beautiful but lazy. (T. Sex. > T100–T199. Marriage.)": {
+        "evidence_keys": [
+          "S754-818"
+        ]
+      },
+      "Motif T252.4: T252.4. Prize for husband who rules his wife. (Ham, egg.) (T. Sex. > T200–T299. Married life.)": {
+        "evidence_keys": [
+          "S754-818"
+        ]
+      },
+      "Motif T591.1.2: T591.1.2. Milk of hornless, single-colored cow drunk by man to make wife fruitful. (T. Sex. > T500–T599. Conception and birth.)": {
+        "evidence_keys": [
+          "S215-297"
+        ]
+      },
+      "Motif H1097.1: H1097.1. Task: drying up a lake in one night. (H. Tests. > H900–H1199. Tests of prowess: tasks. > H1000–H1199. Nature of tasks.)": {
+        "evidence_keys": [
+          "S1413-1549"
+        ]
+      },
+      "Motif H1143: H1143. Task: dipping out the sea with a spoon: countertask: stop all the rivers. (Cf. H1113., H1142.3.) (H. Tests. > H900–H1199. Tests of prowess: tasks. > H1000–H1199. Nature of tasks.)": {
+        "evidence_keys": [
+          "S1413-1549"
+        ]
+      },
+      "Motif H1102: H1102. Task: cleaning Augean stable. Stable has not been cleaned in years. Must be done in one night. River turned through it. (H. Tests. > H900–H1199. Tests of prowess: tasks. > H1000–H1199. Nature of tasks.)": {
+        "evidence_keys": [
+          "S1413-1549"
+        ]
+      },
+      "Motif T251.1.3: T251.1.3. Man had rather remain transformed to mule than to live with his shrewish wife. (T. Sex. > T200–T299. Married life.)": {
+        "evidence_keys": [
+          "S754-818"
+        ]
+      },
+      "Motif T202: T202. The happy couple: wife blind, husband deaf. (T. Sex. > T200–T299. Married life.)": {
+        "evidence_keys": [
+          "S754-818"
+        ]
+      }
+    }
+  },
+  "analysis": {
+    "propp_functions": [
+      {
+        "id": "80ef1091-c37c-44b4-bc04-92228236d42d",
+        "fn": "VILLAINY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 215,
+          "end": 297,
+          "text": "隔着那条清浅的闪光的银河，就是人间。在那里住着一个牧牛郎，叫做牛郎，他的父母早死去了，常受哥嫂的虐待。終于，他被哥嫂不公平地分家出去，给了他一头老牛，叫他自立门户。"
+        },
+        "evidence": "虐待;abuse",
+        "narrative_event_id": "38bb88d7-ed7a-402f-a2b1-6baa1c0f5840"
+      },
+      {
+        "id": "c0023c54-be78-489f-867d-e8a636705bd9",
+        "fn": "LACK",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 363,
+          "end": 401,
+          "text": "可是，除了那头不会说话的老牛以外，冷清的家里只有他一个人，日子过得相当寂寞。"
+        },
+        "evidence": "寂寞;get lonely",
+        "narrative_event_id": "262880a0-126d-4734-9786-dcb806220381"
+      },
+      {
+        "id": "2e394120-cdfd-4ba5-96ba-dcebbffd58f1",
+        "fn": "GUIDANCE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 402,
+          "end": 514,
+          "text": "有一天，老牛忽然口吐人言，告诉他，织女和别的仙女将要到银河去洗澡,叫他趁她们洗澡的时候，夺取织女的衣裳，她就可以成为他的妻子了。惊异的牛郎终于听从了老牛的话，到时候悄悄便到银河岸边的芦牽丛里躲着，等候织女和她的女伴们的来临。"
+        },
+        "evidence": "去河边, 去夺取织女的衣服",
+        "narrative_event_id": "51923dc8-acf0-477d-b540-36baccc032fd"
+      },
+      {
+        "id": "e5cdd0e5-f1a7-4124-83a1-5fca609012ee",
+        "fn": "LIQUIDATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 515,
+          "end": 753,
+          "text": "不一会儿，织女和美丽的仙女们果然来到银河洗操，脱下轻罗衣裳，纵身跃入清流，顷刻间，绿波荡漆的水面上就好像续开了朵朵的白莲。牛郎从芦苇里跑出来，从青草岸上仙女们的衣裳堆里夺取了织女的衣裳，惊骇的仙女们乱纷纷地急忙穿上自己的衣裳，像飞乌般地四下惊飞逃散,银河里就只剩下那个不能逃走的可怜织女。牛郎对她说，她要答应做他的妻子，他才能还给她衣裳。织女拿头发掩住她的胸脯，没法子只得含羞地点头（其实她对这虽然有点鲁莽可是却勇敢的少年也早已经动了一点爱念了）；这样，她就真的做了牛郎的妻。"
+        },
+        "evidence": "在非暴力强迫下, 女方同意嫁给男方",
+        "narrative_event_id": "fbbacb08-5f24-480e-8fdb-3a9fed2da817"
+      },
+      {
+        "id": "3f3fb0e4-f5f5-4868-8b6d-977ea88a5c57",
+        "fn": "VILLAINY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 819,
+          "end": 908,
+          "text": "哪知道天帝和王母娘娘查明了这回事情，都非常震怒，马上派遣天神，把织女捉回天庭问罪。王母娘娘怕天神办事疏虞，还亲自跟来观察动静。\n织女和丈夫、孩子惨痛地分离，被天神押解着回天庭去。"
+        },
+        "evidence": "妻子被迫和丈夫、子女分开",
+        "narrative_event_id": "2865c3b3-8f6e-4247-afb4-ed81b0d3cd98"
+      },
+      {
+        "id": "ba21c4d4-0563-4a27-a93a-167ee5585489",
+        "fn": "LIQUIDATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 754,
+          "end": 818,
+          "text": "他们结婚以后，男耕女织，相亲相爱，生活过得非常美满幸福；不久生下了一儿一女，都是可爱的孩子。夫妻俩满以为能够終身厮守，白买到老。"
+        },
+        "evidence": "夫妻生活美满, 养育子女",
+        "narrative_event_id": "6317923a-117f-4f21-a69d-5dd96f69b92a"
+      },
+      {
+        "id": "e6bca793-6cd5-4bc6-b5dd-75af08414e02",
+        "fn": "STRUGGLE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1413,
+          "end": 1549,
+          "text": "\"爹爹，我们拿这粪瓢来舀干天河的水。\"小女儿終于揩干了眼泪，瞪着一对小眼睛, 这么天真而又倔强地提议。\n\"对 ,我们来舀干天河的水。\"悲愤的牛郎毫不犹豫地答应了。\n说着，他果然拿起粪瓢，奋勇地一瓢一瓢地去舀那天河的水。他舀得倦乏了，儿女们又合力用他们稚弱的小手来帮爹爹自。"
+        },
+        "evidence": "试图舀干天河水",
+        "narrative_event_id": "57c3dded-bfbd-4335-aa4a-413524a8c7d5"
+      },
+      {
+        "id": "19bd688f-4cb4-45da-9c81-54d6b44d5703",
+        "fn": "VILLAINY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 908,
+          "end": 1055,
+          "text": "牛郎见爱妻去了，悲痛万分，立刻用箩筐挑了儿女们，连夜跟踪追去。他原打算渡过那清浅的银河, 一直就到天庭，哪知道到了银河的地方，却早已消逝了银河的踪影,抬头一看, 原来银河已经被王母娘娘用法力搬到了天上。在苍蓝色的夜空中，银河，还是那么一秘清浅的闪光的水流，可是已经仙凡异路，再也不能够接近它了。"
+        },
+        "evidence": "阻止相见",
+        "narrative_event_id": "098695bb-91a7-4a58-b32d-46325ac17351"
+      },
+      {
+        "id": "6e00bb52-f3db-4b6b-92d8-0484dac8c6d0",
+        "fn": "RECEIPT_OF_AGENT",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1056,
+          "end": 1212,
+          "text": "牛郎回到家里，和儿女们一样，插胸顿足，悲哀地号眺，爷儿三个哭做一团。老牛在牛圈里又第二次发出人声：\"牛郎，牛郎，我快要死了，我死以后，你剥下我的皮来披在身上，就可以上天堂去。”\n老牛说完话，便倒地死去，牛郎果然披了老牛的皮，仍旧挑着一对儿女，追上天去。为了使箩筐两头的重量均衡，他随意拿了个粪瓢来放在箩筐的一头。"
+        },
+        "evidence": "牛郎回到家里，和儿女们一样，插胸顿足，悲哀地号眺，爷儿三个哭做一团。老牛在牛圈里又第二次发出人声：\"牛郎，牛郎，我快要死了，我死以后，你剥下我的皮来披在身上，就可以上天堂去。”\n老牛说完话，便倒地死去",
+        "narrative_event_id": "cdbee6a6-dc9b-4040-8ce9-1e48d382acb3"
+      },
+      {
+        "id": "04fb8225-41d2-48c3-ae89-6767ee58231b",
+        "fn": "VILLAINY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1213,
+          "end": 1412,
+          "text": "牛郎到了天上，风样地穿行在灿烂的群星之间，那银河，已经遥遥在望，隔河的织女，也仿佛可以看见。牛郎大喜过望，孩子们招着小手儿齐声欢呼：\"妈妈！妈妈！\" 哪知道刚跑到银河，正想要涉河过去的时候，从更高的天空中忽然伸下来一只女人的大手————原来是王母娘娘着了急，拨下她头上的金營，沿着银河这么一划，清浅的银河马上变成波满滚滚的天河。\n对着这天河，眼泪除了像天河里的水一样地满涌奔流，还有什么法子可想呢？"
+        },
+        "evidence": "阻止相见",
+        "narrative_event_id": "64e5afbc-b36a-4fda-a2ef-78bb6c13fa83"
+      },
+      {
+        "id": "2e7837d5-a40a-4b86-869c-925f67b87c7f",
+        "fn": "VICTORY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1549,
+          "end": 1692,
+          "text": "这坚强而执著的爱情，终于也稍稍感动了那威严的天帝和王母娘娘冷硬的心肠，允许他们每年七月七日的晚上相见一次，相见的时候，由喜鹤来替他们搭桥。夫妻俩就在鹤桥上相会，诉说衷情。织女见了牛郎，免不得悲哀哭泣，这时大地上往往就是一阵细雨纷纷，妇女们都忍不住带着同情和叹伤的口吻说：“姐姐又哭了！”"
+        },
+        "evidence": "感动",
+        "narrative_event_id": "1dcdf54d-0930-41fd-a1b4-b4c4d2113162"
+      },
+      {
+        "id": "a64502e3-a797-40c6-91d6-92a3166aae4f",
+        "fn": "SOLUTION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1693,
+          "end": 1959,
+          "text": "牛郎和他的儿女从此就住在天上，隔着一道天河，和爱妻织女遥遥相望，假如他们为相思所苦的时候，他们也自有巧妙的方法，传书递信，互通消息。\n在秋夜天空的繁星中间，至今我们还可以看见有两颗较大的星，在那条白练样的天河两边，晶莹地闪烁着，那就是牵牛星和织女星。和牵牛星并列成直线的两颗小星，是他俩的小儿女。稍远地方有四颗像平行四边形的小星，据说就是织女投掷给牛郎的织布梭；距织女星不远有三颗小星，像等腰三角形，据说就是牛郎投掷给织女的牛拐子；他俩把书信缚在梭和牛拐子上，就用这种方法传达相思。————他们的爱情，真可算是海枯石烂，坚贞不移了。"
+        },
+        "evidence": "隔河相望，传递相思",
+        "narrative_event_id": "e9a8526d-44ac-4793-a415-c1d4a526fa3e"
+      }
+    ],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {
+        "S0-214": "相传织女是天帝孙女或王母娘娘外孙女，她与六位仙女姐妹共同在银河东岸织造变幻色彩的天衣，以供天界穿戴，其中织女因勤勉努力而最为突出。\nEnglish: Zhi Nu is said to be the granddaughter of the Heaven Emperor or the Queen Mother's granddaughter. She, along with six sister仙女, weaves colorful heavenly robes in the east of the Milky Way, with Zhi Nu being the most diligent among them.",
+        "S215-297": "隔著那條清淺的閃光銀河便是人間，牧牛郎牛郎因父母早逝遭哥嫂虐待，最終被分家時隻得一頭老牛自立門戶。\nEnglish: Beyond the clear, shining Milky Way lies the mortal world. The cowherd Niu Lang, having lost his parents, was mistreated by his in-laws and eventually given an old cow to start his own life.",
+        "S298-363": "在老牛的帮助下和自己的努力劳动下，他通过开荒种地、盖屋等努力，一两年后建起一个小家，勉强维持生活。\nEnglish: With the help of an old ox and his own hard work, he cleared land, farmed, and built a house, eventually creating a small home after a couple of years that could barely sustain his life.",
+        "S363-401": "除了不会说话的老牛外，家中只有他一人，生活十分寂寞。\nEnglish: Besides the old cow that doesn't speak, he is alone in the house, leading a very lonely life.",
+        "S402-514": "老牛告知牛郎织女将去银河沐浴，建议他趁机夺取织女衣物以娶她。牛郎惊讶但遵从，前往河岸芦苇丛等待。\nEnglish: The old ox told the cowherd that Zhi Nu would go to the Milky Way to bathe and advised him to seize her clothes to marry her. The cowherd, surprised but obedient, went to the reed丛 by the riverbank to wait.",
+        "S515-753": "织女和仙女们来到银河洗浴，牛郎抢走织女的衣裳，仙女们惊慌逃散，织女被迫答应成为牛郎的妻子。\nEnglish: The Weaver Girl and her companions come to the Milky Way to bathe, but Cowherd takes her clothes, causing the仙女们 to flee, and the Weaver Girl reluctantly agrees to marry him.",
+        "S754-818": "夫妻结婚后男耕女织，生活美满幸福，育有一子一女，期盼白首偕老。\nEnglish: After getting married, the couple worked together, lived a happy life, had a son and daughter, and hoped to stay together forever.",
+        "S819-908": "天帝和王母娘娘查明后震怒，派天神捉拿织女回天庭问罪，导致织女与家人被迫分离。\nEnglish: The Jade Emperor and Queen Mother, upon investigating, were furious and sent heavenly soldiers to arrest Zhi Nu, leading to her forced separation from her family.",
+        "S908-1055": "牛郎见爱妻离去悲痛欲绝，带着儿女连夜追赶，却发现银河已被王母娘娘移至天上，仙凡永隔。\nEnglish: Niu Lang, overwhelmed with grief after his wife left, took his children and rushed to follow her, only to find the Milky Way had been moved by the Queen Mother to the heavens, separating them forever.",
+        "S1056-1212": "牛郎与儿女悲痛欲绝，老牛临终前嘱咐他剥皮上天，牛郎依言行事并用粪瓢平衡箩筐。\nEnglish: Niulang grieved with his children, and the old ox instructed him to skin it to ascend to heaven, which he did, balancing the basket with a dung basin.",
+        "S1213-1412": "牛郎穿越星群接近银河时，王母娘娘用金簪划出天河阻隔，令他只能含泪凝望。\nEnglish: Niulang approaches the Milky Way, but the Queen Mother blocks his path with her hairpin, leaving him to weep helplessly.",
+        "S1413-1549": "小女儿提议用粪瓢舀干天河的水，牛郎悲愤地答应并立即行动，儿女们随后合力协助。\nEnglish: The daughter suggests using a dung scoop to dry the Heaven River, which the father agrees to, and they begin the task with the children's assistance.",
+        "S1549-1692": "这段坚定的爱情最终感动了天帝和王母娘娘，允许牛郎织女每年七月七日相会，由喜鹤搭桥。而织女的泪水化作细雨，引发人间妇人的同情。\nEnglish: This steadfast love eventually moved the heavenly beings, allowing Cowherd and Weaver Maid to meet once a year on July 7th via the magpie bridge. Weaver Maid's tears turn into rain, evoking sympathy from women on earth.",
+        "S1693-1959": "牛郎与织女被天河分隔，但通过子女星和织布梭、牛拐子等星象传递书信，以象征他们坚贞不渝的爱情。\nEnglish: Cowherd and Weaver Girl are separated by the Milky Way, but they communicate through their children's stars and symbols like the loom shuttle and ox plow, symbolizing their eternal love."
+      },
+      "combined": [],
+      "whole": "相传织女是天帝孙女，与六位仙女姐妹在银河东岸织造天衣。牛郎因家贫被分得老牛自立门户，后因孤独而求助老牛。老牛指引他夺取织女衣物以娶她，牛郎遂抢得织女衣物并与之成婚，夫妻育有一子一女。天帝得知后怒派天兵捉拿织女，牛郎带儿女追赶却遇天河阻隔。最终天帝允许牛郎织女每年七月七日相会，织女泪水化作人间细雨，两人通过星象传递书信象征永恒爱情。\nEnglish: Zhi Nu, the granddaughter of the Heaven Emperor, wove heavenly robes with six sister仙女 by the Milky Way. Niu Lang, left with an old cow after being mistreated, sought help from the cow and eventually took Zhi Nu's clothes to marry her. After marrying and having children, the heavens punished them by separating Zhi Nu. Niu Lang's desperate attempt to cross the Milky Way failed, but the heavens allowed them to meet once a year on July 7th. Zhi Nu's tears became rain, and their love was symbolized by celestial symbols."
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

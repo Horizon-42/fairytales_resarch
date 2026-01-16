@@ -1,0 +1,848 @@
+{
+  "version": "3.0",
+  "metadata": {
+    "id": "jp_014",
+    "title": "",
+    "culture": "Japanese",
+    "annotator": "",
+    "date_annotated": "2026-01-11",
+    "confidence": 0.8
+  },
+  "source_info": {
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "datasets/Japanese/texts/jp_014.txt"
+  },
+  "characters": [
+    {
+      "name": "一寸法師",
+      "alias": "",
+      "archetype": "Hero"
+    },
+    {
+      "name": "おとうさん",
+      "alias": "夫婦",
+      "archetype": "Everyman"
+    },
+    {
+      "name": "おかあさん",
+      "alias": "夫婦",
+      "archetype": "Everyman"
+    },
+    {
+      "name": "鬼",
+      "alias": "",
+      "archetype": "Villain"
+    },
+    {
+      "name": "宰相殿",
+      "alias": "",
+      "archetype": "Ruler"
+    },
+    {
+      "name": "姫",
+      "alias": "お姫ひめさま",
+      "archetype": "Damsel"
+    },
+    {
+      "name": "天子",
+      "alias": "",
+      "archetype": "Ruler"
+    },
+    {
+      "name": "明神",
+      "alias": "",
+      "archetype": "Mentor"
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "7e4c60ab-a526-45bb-ab70-c4a43830cd49",
+      "text_span": {
+        "start": 1,
+        "end": 49
+      },
+      "event_type": "Initial Situation",
+      "description": "むかし、摂津国せっつのくにの難波なにわという所ところに、夫婦ふうふの者ものが住すんでおりました。",
+      "agents": [
+        "おとうさん",
+        "おかあさん"
+      ],
+      "targets": [],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [
+        {
+          "agent": "おとうさん",
+          "target": "",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "spouse",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "7ea1ebe9-e3e7-450b-8f54-f0e6c6b48bf1",
+      "text_span": {
+        "start": 71,
+        "end": 186
+      },
+      "event_type": "BEGINNING_COUNTERACTION",
+      "description": "住吉すみよしの明神みょうじんさまに、おまいりをしては、\n「どうぞ子供こどもを一人ひとりおさずけ下くださいまし。それは指ゆびほどの小ちいさな子でもよろしゅうございますから。」\n　と一生懸命いっしょうけん",
+      "agents": [
+        "おとうさん",
+        "おかあさん"
+      ],
+      "targets": [
+        "明神さま"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationships": [
+        {
+          "agent": "おとうさん",
+          "target": "",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "request",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "75429e11-1e6d-47c2-b1d1-84744e7048ef",
+      "text_span": {
+        "start": 189,
+        "end": 217
+      },
+      "event_type": "LIQUIDATION",
+      "description": "すると間まもなく、お上かみさんは身持みもちになりました。",
+      "agents": [
+        "明神"
+      ],
+      "targets": [
+        "おかあさん"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationships": [
+        {
+          "agent": "明神",
+          "target": "おかあさん",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "transform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "09d8e4da-2977-41c6-8e56-cca99b7d1c47",
+      "text_span": {
+        "start": 325,
+        "end": 369
+      },
+      "event_type": "OTHER",
+      "description": "ところがそれがまた小ちいさいといって、ほんとうに指ゆびほどの大きさしかありませんでした。",
+      "agents": [
+        "一寸法師"
+      ],
+      "targets": [
+        "一寸法師"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationships": [
+        {
+          "agent": "一寸法師",
+          "target": "一寸法師",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "c198f40c-54e3-4a83-9b41-1213f1f9153b",
+      "text_span": {
+        "start": 659,
+        "end": 766
+      },
+      "event_type": "VILLAINY",
+      "description": "近所きんじょの子供こどもたちが集あつまってきて、\n「やあ、ちびが歩あるいている。」\n「ふみ殺ころされるなよ。」\n「つまんでかみつぶしてやろうか。」\n「ちびやい。ちびやい。」\n　と口々くちぐちにいって、",
+      "agents": [
+        "近所の子供たち"
+      ],
+      "targets": [
+        "一寸法師"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationships": [
+        {
+          "agent": "近所の子供たち",
+          "target": "一寸法師",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "stranger",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "action is 近所の子供達がhumiliating",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "75fc335d-0d1c-49c8-8472-68f9b70052d6",
+      "text_span": {
+        "start": 821,
+        "end": 886
+      },
+      "event_type": "BEGINNING_COUNTERACTION",
+      "description": "ある日一寸法師いっすんぼうしは、おとうさんとおかあさんの前まえへ出て、\n「どうかわたくしにお暇ひまを下ください。」\n　といいました",
+      "agents": [
+        "一寸法師"
+      ],
+      "targets": [
+        "おとうさん",
+        "おかあさん"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6,
+      "relationships": [
+        {
+          "agent": "一寸法師",
+          "target": "おとうさん",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "parent_child",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "b2e48d5a-7823-40f5-897f-0091e303934d",
+      "text_span": {
+        "start": 1303,
+        "end": 1326
+      },
+      "event_type": "DEPARTURE",
+      "description": "住吉すみよしの浜はまから舟出ふなでをしました。",
+      "agents": [
+        "一寸法師"
+      ],
+      "targets": [
+        "おとうさん",
+        "おかあさん"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 7,
+      "relationships": [
+        {
+          "agent": "一寸法師",
+          "target": "おとうさん",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "parent_child",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "travel",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "ae44b782-3a7a-4f5e-8bf0-7149d5c8a31e",
+      "text_span": {
+        "start": 2946,
+        "end": 3008
+      },
+      "event_type": "FIRST_FUNCTION_DONOR",
+      "description": "「おもしろい小僧こぞうだ。よしよし使つかってやろう。」\n　とおっしゃって、そのままお屋敷やしきに置おいておやりになりました。",
+      "agents": [
+        "宰相殿"
+      ],
+      "targets": [
+        "一寸法師"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 8,
+      "relationships": [
+        {
+          "agent": "宰相殿",
+          "target": "一寸法師",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "master_servant",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "2312a7e2-58cd-4313-81d8-6d97f6125f50",
+      "text_span": {
+        "start": 4770,
+        "end": 4840
+      },
+      "event_type": "VILLAINY",
+      "description": "二匹ひきの鬼おにがそこへひょっこり飛とび出だしてきました。そしていきなりお姫ひめさまにとびかかって、ただ一口ひとくちに食たべようとしました。",
+      "agents": [
+        "鬼"
+      ],
+      "targets": [
+        "姫"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 9,
+      "relationships": [
+        {
+          "agent": "鬼",
+          "target": "姫",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "",
+        "status": "attempt",
+        "function": ""
+      }
+    },
+    {
+      "id": "7516077f-a209-4e38-ae78-932f8e69c2c4",
+      "text_span": {
+        "start": 4879,
+        "end": 5070
+      },
+      "event_type": "STRUGGLE",
+      "description": "一寸法師いっすんぼうしは、例れいのぬい針ばりの刀かたなをきらりと引ひき抜ぬいて、ぴょこんと鬼おにの前まえへ飛とんで出ました。そしてありったけの大きな声こえを振ふり立たてて、\n「これこれ、このお方かたを",
+      "agents": [
+        "一寸法師"
+      ],
+      "targets": [
+        "鬼"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 10,
+      "relationships": [
+        {
+          "agent": "一寸法師",
+          "target": "鬼",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "0dbc486f-b731-43ab-a05f-6b4c3eca1f99",
+      "text_span": {
+        "start": 5762,
+        "end": 5868
+      },
+      "event_type": "VICTORY",
+      "description": "鬼おには目玉めだまが抜ぬけ出だしたかと思おもって、びっくりして、\n「大たいへん、大たいへん。」\n　と、後あとをも見みずに逃にげ出だしました。するともう一匹ぴきの鬼おにも、\n「こりやかなわん。逃にげろ、",
+      "agents": [
+        "鬼"
+      ],
+      "targets": [
+        "一寸法師"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 11,
+      "relationships": [
+        {
+          "agent": "鬼",
+          "target": "一寸法師",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "flee",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "86533a30-f3a6-474e-af01-2f43a0f4a584",
+      "text_span": {
+        "start": 6155,
+        "end": 6216
+      },
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "「これは鬼おにの忘わすれて行った打うち出での小槌こづちです。これを振ふれば、何なんでもほしいと思おもうものが出でてきます。",
+      "agents": [
+        "一寸法師"
+      ],
+      "targets": [
+        "打ち出の小槌"
+      ],
+      "target_type": "object",
+      "object_type": "magical_agent",
+      "instrument": "小槌",
+      "time_order": 12,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "ff7a9752-9afc-4d73-a9a7-c6e0b179c44b",
+      "text_span": {
+        "start": 6257,
+        "end": 6413
+      },
+      "event_type": "TRANSFIGURATION",
+      "description": "こういって、一寸法師いっすんぼうしは、打うち出での小槌こづちを振ふり上あげて、\n「一寸法師いっすんぼうしよ、大きくなれ。あたり前まえの背せいになれ。」\n　といいながら、一度ど振ふりますと背せいが一尺し",
+      "agents": [
+        "一寸法師"
+      ],
+      "targets": [
+        "一寸法師"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 13,
+      "relationships": [
+        {
+          "agent": "一寸法師",
+          "target": "一寸法師",
+          "relationship_level1": "",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "transform",
+        "context": "it can be interpreted as reward as well.",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "4f9aa160-991c-4bdd-8c19-26badb0fb895",
+      "text_span": {
+        "start": 7277,
+        "end": 7344
+      },
+      "event_type": "RECOGNITION",
+      "description": "天子てんしさまはさっそく、一寸法師いっすんぼうしに位くらいをおさずけになって、堀河ほりかわの少将しょうしょうとお呼よばせになりました。",
+      "agents": [
+        "天子"
+      ],
+      "targets": [
+        "一寸法師"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 14,
+      "relationships": [
+        {
+          "agent": "天子",
+          "target": "一寸法師",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "command",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "1a4dc965-70c0-4437-8640-f97c0420bce8",
+      "text_span": {
+        "start": 7394,
+        "end": 7416
+      },
+      "event_type": "WEDDING",
+      "description": "、お姫ひめさまをお嫁よめさんにもらいました。",
+      "agents": [
+        "一寸法師"
+      ],
+      "targets": [
+        "姫"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 15,
+      "relationships": [
+        {
+          "agent": "一寸法師",
+          "target": "姫",
+          "relationship_level1": "Romance",
+          "relationship_level2": "lover",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "promise",
+        "context": "marriage",
+        "status": "success",
+        "function": ""
+      }
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "HAPPY_ENDING",
+    "key_values": [
+      "COURAGE",
+      "JUSTICE"
+    ],
+    "motif_type": [
+      "Motif D1470: Magic object as provider. (Magic > MAGIC OBJECTS > Function of magic objects.)"
+    ],
+    "atu_categories": [
+      "ATU 700: Tom Thumb (TALES OF MAGIC > Other Tales of the Supernatural)"
+    ],
+    "obstacle_thrower": [
+      "鬼"
+    ],
+    "helper_type": [],
+    "thinking_process": "",
+    "atu_evidence": {
+      "ATU 700: Tom Thumb (TALES OF MAGIC > Other Tales of the Supernatural)": {
+        "evidence_keys": []
+      }
+    },
+    "motif_evidence": {
+      "Motif D1470: Magic object as provider. (Magic > MAGIC OBJECTS > Function of magic objects.)": {
+        "evidence_keys": []
+      }
+    }
+  },
+  "analysis": {
+    "propp_functions": [
+      {
+        "id": "5f36b747-1409-49c4-8ff9-79b8219e5aa6",
+        "fn": "Initial Situation",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1,
+          "end": 49,
+          "text": "むかし、摂津国せっつのくにの難波なにわという所ところに、夫婦ふうふの者ものが住すんでおりました。"
+        },
+        "evidence": "むかし、摂津国せっつのくにの難波なにわという所ところに、夫婦ふうふの者ものが住すんでおりました。",
+        "narrative_event_id": "7e4c60ab-a526-45bb-ab70-c4a43830cd49"
+      },
+      {
+        "id": "ff8255df-8353-4192-a73b-93f5550e3edd",
+        "fn": "BEGINNING_COUNTERACTION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 71,
+          "end": 186,
+          "text": "住吉すみよしの明神みょうじんさまに、おまいりをしては、\n「どうぞ子供こどもを一人ひとりおさずけ下くださいまし。それは指ゆびほどの小ちいさな子でもよろしゅうございますから。」\n　と一生懸命いっしょうけんめいにお願ねがい申もうしました"
+        },
+        "evidence": "住吉すみよしの明神みょうじんさまに、おまいりをしては、\n「どうぞ子供こどもを一人ひとりおさずけ下くださいまし。それは指ゆびほどの小ちいさな子でもよろしゅうございますから。」\n　と一生懸命いっしょうけん",
+        "narrative_event_id": "7ea1ebe9-e3e7-450b-8f54-f0e6c6b48bf1"
+      },
+      {
+        "id": "d4060260-45bb-4423-80b7-bc1efd5cf359",
+        "fn": "LIQUIDATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 189,
+          "end": 217,
+          "text": "すると間まもなく、お上かみさんは身持みもちになりました。"
+        },
+        "evidence": "すると間まもなく、お上かみさんは身持みもちになりました。",
+        "narrative_event_id": "75429e11-1e6d-47c2-b1d1-84744e7048ef"
+      },
+      {
+        "id": "449bb578-8eb8-46ae-9427-33abbde38590",
+        "fn": "VILLAINY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 659,
+          "end": 766,
+          "text": "近所きんじょの子供こどもたちが集あつまってきて、\n「やあ、ちびが歩あるいている。」\n「ふみ殺ころされるなよ。」\n「つまんでかみつぶしてやろうか。」\n「ちびやい。ちびやい。」\n　と口々くちぐちにいって、からかいました"
+        },
+        "evidence": "近所きんじょの子供こどもたちが集あつまってきて、\n「やあ、ちびが歩あるいている。」\n「ふみ殺ころされるなよ。」\n「つまんでかみつぶしてやろうか。」\n「ちびやい。ちびやい。」\n　と口々くちぐちにいって、",
+        "narrative_event_id": "c198f40c-54e3-4a83-9b41-1213f1f9153b"
+      },
+      {
+        "id": "ddfe0e51-d140-45e4-8686-1ba2793f7c63",
+        "fn": "BEGINNING_COUNTERACTION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 821,
+          "end": 886,
+          "text": "ある日一寸法師いっすんぼうしは、おとうさんとおかあさんの前まえへ出て、\n「どうかわたくしにお暇ひまを下ください。」\n　といいました"
+        },
+        "evidence": "ある日一寸法師いっすんぼうしは、おとうさんとおかあさんの前まえへ出て、\n「どうかわたくしにお暇ひまを下ください。」\n　といいました",
+        "narrative_event_id": "75fc335d-0d1c-49c8-8472-68f9b70052d6"
+      },
+      {
+        "id": "0a150a6a-9171-4951-bfd3-8860e2f3fd03",
+        "fn": "DEPARTURE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1303,
+          "end": 1326,
+          "text": "住吉すみよしの浜はまから舟出ふなでをしました。"
+        },
+        "evidence": "住吉すみよしの浜はまから舟出ふなでをしました。",
+        "narrative_event_id": "b2e48d5a-7823-40f5-897f-0091e303934d"
+      },
+      {
+        "id": "98424b19-79ea-4309-b849-3a3ee2303c72",
+        "fn": "FIRST_FUNCTION_DONOR",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 2946,
+          "end": 3008,
+          "text": "「おもしろい小僧こぞうだ。よしよし使つかってやろう。」\n　とおっしゃって、そのままお屋敷やしきに置おいておやりになりました。"
+        },
+        "evidence": "「おもしろい小僧こぞうだ。よしよし使つかってやろう。」\n　とおっしゃって、そのままお屋敷やしきに置おいておやりになりました。",
+        "narrative_event_id": "ae44b782-3a7a-4f5e-8bf0-7149d5c8a31e"
+      },
+      {
+        "id": "baa4f606-9e5e-4e24-a697-c07a89009ee8",
+        "fn": "VILLAINY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 4770,
+          "end": 4840,
+          "text": "二匹ひきの鬼おにがそこへひょっこり飛とび出だしてきました。そしていきなりお姫ひめさまにとびかかって、ただ一口ひとくちに食たべようとしました。"
+        },
+        "evidence": "二匹ひきの鬼おにがそこへひょっこり飛とび出だしてきました。そしていきなりお姫ひめさまにとびかかって、ただ一口ひとくちに食たべようとしました。",
+        "narrative_event_id": "2312a7e2-58cd-4313-81d8-6d97f6125f50"
+      },
+      {
+        "id": "1694816c-757d-43fa-800e-cf1f229ea611",
+        "fn": "STRUGGLE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 4879,
+          "end": 5070,
+          "text": "一寸法師いっすんぼうしは、例れいのぬい針ばりの刀かたなをきらりと引ひき抜ぬいて、ぴょこんと鬼おにの前まえへ飛とんで出ました。そしてありったけの大きな声こえを振ふり立たてて、\n「これこれ、このお方かたをだれだと思おもう。三条さんじょうの宰相殿さいしょうどのの姫君ひめぎみだぞ。うっかり失礼しつれいなまねをすると、この一寸法師いっすんぼうしが承知しょうちしないぞ。」\n　とどなりました。"
+        },
+        "evidence": "一寸法師いっすんぼうしは、例れいのぬい針ばりの刀かたなをきらりと引ひき抜ぬいて、ぴょこんと鬼おにの前まえへ飛とんで出ました。そしてありったけの大きな声こえを振ふり立たてて、\n「これこれ、このお方かたを",
+        "narrative_event_id": "7516077f-a209-4e38-ae78-932f8e69c2c4"
+      },
+      {
+        "id": "a7038411-f97a-45bf-b933-f0faf5290e03",
+        "fn": "VICTORY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 5762,
+          "end": 5868,
+          "text": "鬼おには目玉めだまが抜ぬけ出だしたかと思おもって、びっくりして、\n「大たいへん、大たいへん。」\n　と、後あとをも見みずに逃にげ出だしました。するともう一匹ぴきの鬼おにも、\n「こりやかなわん。逃にげろ、逃にげろ。」"
+        },
+        "evidence": "鬼おには目玉めだまが抜ぬけ出だしたかと思おもって、びっくりして、\n「大たいへん、大たいへん。」\n　と、後あとをも見みずに逃にげ出だしました。するともう一匹ぴきの鬼おにも、\n「こりやかなわん。逃にげろ、",
+        "narrative_event_id": "0dbc486f-b731-43ab-a05f-6b4c3eca1f99"
+      },
+      {
+        "id": "c55d61e2-e6ce-4778-bad7-cadaf7e187e1",
+        "fn": "RECEIPT_OF_AGENT",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 6155,
+          "end": 6216,
+          "text": "「これは鬼おにの忘わすれて行った打うち出での小槌こづちです。これを振ふれば、何なんでもほしいと思おもうものが出でてきます。"
+        },
+        "evidence": "「これは鬼おにの忘わすれて行った打うち出での小槌こづちです。これを振ふれば、何なんでもほしいと思おもうものが出でてきます。",
+        "narrative_event_id": "86533a30-f3a6-474e-af01-2f43a0f4a584"
+      },
+      {
+        "id": "4d556117-8466-46be-a4c9-aaf4cdf437df",
+        "fn": "TRANSFIGURATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 6257,
+          "end": 6413,
+          "text": "こういって、一寸法師いっすんぼうしは、打うち出での小槌こづちを振ふり上あげて、\n「一寸法師いっすんぼうしよ、大きくなれ。あたり前まえの背せいになれ。」\n　といいながら、一度ど振ふりますと背せいが一尺しゃくのび、二度ど振ふりますと三尺じゃくのび、三度どめには六尺しゃくに近ちかいりっぱな大男おおおとこになりました。"
+        },
+        "evidence": "こういって、一寸法師いっすんぼうしは、打うち出での小槌こづちを振ふり上あげて、\n「一寸法師いっすんぼうしよ、大きくなれ。あたり前まえの背せいになれ。」\n　といいながら、一度ど振ふりますと背せいが一尺し",
+        "narrative_event_id": "ff7a9752-9afc-4d73-a9a7-c6e0b179c44b"
+      },
+      {
+        "id": "e7c00676-215b-414a-8a67-f72186217edb",
+        "fn": "RECOGNITION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 7277,
+          "end": 7344,
+          "text": "天子てんしさまはさっそく、一寸法師いっすんぼうしに位くらいをおさずけになって、堀河ほりかわの少将しょうしょうとお呼よばせになりました。"
+        },
+        "evidence": "天子てんしさまはさっそく、一寸法師いっすんぼうしに位くらいをおさずけになって、堀河ほりかわの少将しょうしょうとお呼よばせになりました。",
+        "narrative_event_id": "4f9aa160-991c-4bdd-8c19-26badb0fb895"
+      },
+      {
+        "id": "a9295c53-1efc-4f2a-b6dc-f8cbe7af6cb5",
+        "fn": "WEDDING",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 7394,
+          "end": 7416,
+          "text": "、お姫ひめさまをお嫁よめさんにもらいました。"
+        },
+        "evidence": "、お姫ひめさまをお嫁よめさんにもらいました。",
+        "narrative_event_id": "1a4dc965-70c0-4437-8640-f97c0420bce8"
+      }
+    ],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

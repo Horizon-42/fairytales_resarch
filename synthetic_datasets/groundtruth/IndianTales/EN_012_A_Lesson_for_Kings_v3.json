@@ -1,0 +1,458 @@
+{
+  "version": "3.0",
+  "metadata": {
+    "id": "EN_012_A_Lesson_for_Kings",
+    "title": "A_Lesson_for_Kings",
+    "culture": "Indian",
+    "annotator": "Deb",
+    "date_annotated": "2026-01-14",
+    "confidence": 0.8
+  },
+  "source_info": {
+    "language": "",
+    "type": "",
+    "reference_uri": "datasets/texts/EN_012_A_Lesson_for_Kings.txt"
+  },
+  "characters": [
+    {
+      "name": "Future Buddha",
+      "alias": "Prince Brahma-datta; King of Benares",
+      "archetype": "Hero"
+    },
+    {
+      "name": "Mallika",
+      "alias": "King of Kosala",
+      "archetype": "Rebel"
+    },
+    {
+      "name": "Charioteer of Benares",
+      "alias": "",
+      "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "Charioteer of Kosala",
+      "alias": "",
+      "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "Kingdom",
+      "alias": "",
+      "archetype": "Other"
+    },
+    {
+      "name": "self",
+      "alias": "Future Buddha",
+      "archetype": "Hero"
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "90d227a1-af6c-49c9-b98e-fd66aa48955b",
+      "text_span": {
+        "start": 314,
+        "end": 905
+      },
+      "event_type": "Initial Situation",
+      "description": "Brahma-datta rules so perfectly that litigation ceases, leaving the courts empty.",
+      "agents": [
+        "Future Buddha"
+      ],
+      "targets": [
+        "Kingdom"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [
+        {
+          "agent": "Future Buddha",
+          "target": "Kingdom",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "command",
+        "context": "",
+        "status": "success",
+        "function": "exposition"
+      }
+    },
+    {
+      "id": "2ebb3351-b269-4f5f-bdb8-586ab4853ceb",
+      "text_span": {
+        "start": 1088,
+        "end": 1674
+      },
+      "event_type": "LACK",
+      "description": "Fearing his virtue is merely flattery, the King actively seeks someone to criticize him.",
+      "agents": [
+        "Future Buddha"
+      ],
+      "targets": [
+        "self"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationships": [
+        {
+          "agent": "Future Buddha",
+          "target": "self",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "stranger",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "investigate",
+        "context": "",
+        "status": "success",
+        "function": "trigger"
+      }
+    },
+    {
+      "id": "ca3234c7-11ce-4468-93cd-5385f5a4877c",
+      "text_span": {
+        "start": 1796,
+        "end": 1925
+      },
+      "event_type": "DEPARTURE",
+      "description": "The King travels to the countryside to find a fault-finder.",
+      "agents": [
+        "Future Buddha"
+      ],
+      "targets": [
+        "self"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationships": [
+        {
+          "agent": "Future Buddha",
+          "target": "self",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "master_servant",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "travel",
+        "context": "",
+        "status": "success",
+        "function": "setup"
+      }
+    },
+    {
+      "id": "ae128f11-07a6-4db1-829d-8576698f280e",
+      "text_span": {
+        "start": 2431,
+        "end": 2569
+      },
+      "event_type": "STRUGGLE",
+      "description": "The two kings meet on a narrow road; neither chariot can pass.",
+      "agents": [
+        "Mallika"
+      ],
+      "targets": [
+        "Future Buddha"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationships": [
+        {
+          "agent": "Mallika",
+          "target": "Future Buddha",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "stranger",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "restrain",
+        "context": "",
+        "status": "success",
+        "function": "climax"
+      }
+    },
+    {
+      "id": "003c8159-0fd5-4e86-a185-be55411a1118",
+      "text_span": {
+        "start": 3519,
+        "end": 3936
+      },
+      "event_type": "OTHER",
+      "description": "The charioteers compare the kings' material stats to decide precedence but find them equal.",
+      "agents": [
+        "Charioteer of Benares"
+      ],
+      "targets": [
+        "Charioteer of Benares"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationships": [
+        {
+          "agent": "Charioteer of Benares",
+          "target": "Charioteer of Benares",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "rival",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "success",
+        "function": "climax"
+      }
+    },
+    {
+      "id": "3422eba8-02e0-4fe3-9d3a-9bd1835db3b3",
+      "text_span": {
+        "start": 4063,
+        "end": 4389
+      },
+      "event_type": "OTHER",
+      "description": "Kosala's charioteer defines his king's righteousness as \"tit-for-tat\" (retributive justice).",
+      "agents": [
+        "Charioteer of Kosala"
+      ],
+      "targets": [
+        "Charioteer of Benares"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6,
+      "relationships": [
+        {
+          "agent": "Charioteer of Kosala",
+          "target": "Charioteer of Benares",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "rival",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "challenge",
+        "context": "",
+        "status": "success",
+        "function": "climax"
+      }
+    },
+    {
+      "id": "84298742-6eaf-4482-a97b-07c6991da65a",
+      "text_span": {
+        "start": 4719,
+        "end": 5020
+      },
+      "event_type": "OTHER",
+      "description": "Benares' charioteer defines his king's righteousness as \"good overcoming evil\" (restorative justice), exposing the other's \"virtues\" as faults.",
+      "agents": [
+        "Charioteer of Benares"
+      ],
+      "targets": [
+        "Charioteer of Kosala"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 7,
+      "relationships": [
+        {
+          "agent": "Charioteer of Benares",
+          "target": "Charioteer of Kosala",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "rival",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "success",
+        "function": "climax"
+      }
+    },
+    {
+      "id": "06cdf7f1-e8b8-4143-9453-8a4ec18d567b",
+      "text_span": {
+        "start": 5022,
+        "end": 5215
+      },
+      "event_type": "VICTORY",
+      "description": "Recognizing the superior virtue, King Mallika yields the road.",
+      "agents": [
+        "Mallika"
+      ],
+      "targets": [
+        "Future Buddha"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 8,
+      "relationships": [
+        {
+          "agent": "Mallika",
+          "target": "Future Buddha",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "ally",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "travel",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      }
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "HAPPY_ENDING",
+    "key_values": [
+      "JUSTICE",
+      "OTHER (Non-violence)"
+    ],
+    "motif_type": [
+      "Motif J811.3: J811.3. King honors poet and critic: the first so that he will honor the king; the second, so that he will not dishonor him. (J. The wise and the foolish. > J200–J1099. Wise and unwise conduct. > J800–J849. Adaptability.)",
+      "Motif J817.2.1: J817.2.1. King makes absurd statement about flowers. Flatterer agrees: it is the king he serves, not the wretched flowers. (J. The wise and the foolish. > J200–J1099. Wise and unwise conduct. > J800–J849. Adaptability.)"
+    ],
+    "atu_categories": [],
+    "obstacle_thrower": [
+      "Mallika",
+      "Charioteer of Kosala"
+    ],
+    "helper_type": [],
+    "thinking_process": "",
+    "atu_evidence": {},
+    "motif_evidence": {
+      "Motif J811.3: J811.3. King honors poet and critic: the first so that he will honor the king; the second, so that he will not dishonor him. (J. The wise and the foolish. > J200–J1099. Wise and unwise conduct. > J800–J849. Adaptability.)": {
+        "evidence_keys": [
+          "S4063-4389"
+        ]
+      },
+      "Motif J817.2.1: J817.2.1. King makes absurd statement about flowers. Flatterer agrees: it is the king he serves, not the wretched flowers. (J. The wise and the foolish. > J200–J1099. Wise and unwise conduct. > J800–J849. Adaptability.)": {
+        "evidence_keys": [
+          "S4063-4389"
+        ]
+      }
+    }
+  },
+  "analysis": {
+    "propp_functions": [
+      {
+        "id": "fe7f7e9e-8e04-4fc9-8b24-b4940143f1f3",
+        "fn": "Initial Situation",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 314,
+          "end": 905,
+          "text": "And after his father died he ascended the throne, and ruled the kingdom with righteousness and equity. He gave judgments without partiality, hatred, ignorance, or fear. Since he thus reigned with justice, with justice also his ministers administered the law. Law-suits being thus decided with justice, there were none who brought false cases. And as these ceased, the noise and tumult of litigation ceased in the king's court. Though the judges sat all day in the court, they had to leave without any one coming for justice. It came to this, that the Hall of Justice would have to be closed!"
+        },
+        "evidence": "Brahma-datta rules so perfectly that litigation ceases, leaving the courts empty.",
+        "narrative_event_id": "90d227a1-af6c-49c9-b98e-fd66aa48955b"
+      },
+      {
+        "id": "c2b57d3b-ab36-497c-ac30-ff0bf190501d",
+        "fn": "LACK",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1088,
+          "end": 1674,
+          "text": "I must, therefore, now examine into my own faults; and if I find that anything is wrong in me, put that away, and practise only virtue.\"\nThenceforth he sought for some one to tell him his faults, but among those around him he found no one who would tell him of any fault, but heard only his own praise.\nThen he thought, \"It is from fear of me that these men speak only good things, and not evil things,\" and he sought among those people who lived outside the palace. And finding no fault-finder there, he sought among those who lived outside the city, in the suburbs, at the four gates."
+        },
+        "evidence": "Fearing his virtue is merely flattery, the King actively seeks someone to criticize him.",
+        "narrative_event_id": "2ebb3351-b269-4f5f-bdb8-586ab4853ceb"
+      },
+      {
+        "id": "47609185-81eb-4fd9-bc71-52955409c1f3",
+        "fn": "DEPARTURE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1796,
+          "end": 1925,
+          "text": "So he made over the kingdom to his ministers, and mounted his chariot; and taking only his charioteer, left the city in disguise."
+        },
+        "evidence": "The King travels to the countryside to find a fault-finder.",
+        "narrative_event_id": "ca3234c7-11ce-4468-93cd-5385f5a4877c"
+      },
+      {
+        "id": "04995378-144b-4ef6-a84d-e5ba4b445e7d",
+        "fn": "STRUGGLE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 2431,
+          "end": 2569,
+          "text": "And these two came face to face in a low cart-track with precipitous sides, where there was no space for a chariot to get out of the way!\n"
+        },
+        "evidence": "The two kings meet on a narrow road; neither chariot can pass.",
+        "narrative_event_id": "ae128f11-07a6-4db1-829d-8576698f280e"
+      },
+      {
+        "id": "39cc4e27-ac08-4767-a5e6-c3ad4eaa829f",
+        "fn": "VICTORY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 5022,
+          "end": 5215,
+          "text": "And when he had thus spoken, both Mallika the king and his charioteer alighted from their chariot. And they took out the horses, and removed their chariot, and made way for the king of Benares!"
+        },
+        "evidence": "Recognizing the superior virtue, King Mallika yields the road.",
+        "narrative_event_id": "06cdf7f1-e8b8-4143-9453-8a4ec18d567b"
+      }
+    ],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

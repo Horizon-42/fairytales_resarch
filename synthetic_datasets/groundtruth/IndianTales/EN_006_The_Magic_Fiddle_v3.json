@@ -1,0 +1,377 @@
+{
+  "version": "3.0",
+  "metadata": {
+    "id": "EN_006_The_Magic_Fiddle",
+    "title": "The_Magic_Fiddle",
+    "culture": "Indian",
+    "annotator": "Deb",
+    "date_annotated": "2026-01-12",
+    "confidence": 0.8
+  },
+  "source_info": {
+    "language": "",
+    "type": "",
+    "reference_uri": "datasets/IndianTales/texts/EN_006_The_Magic_Fiddle.txt"
+  },
+  "characters": [
+    {
+      "name": "Bonga Girl",
+      "alias": "sister",
+      "archetype": "Hero"
+    },
+    {
+      "name": "Seven Wives",
+      "alias": "Sisters-in-law",
+      "archetype": "Villain"
+    },
+    {
+      "name": "The Jogi",
+      "alias": "",
+      "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "Chief's Son",
+      "alias": "Young Chief",
+      "archetype": "Lover"
+    },
+    {
+      "name": "Seven Brothers",
+      "alias": "",
+      "archetype": "Other"
+    },
+    {
+      "name": "nature",
+      "alias": "",
+      "archetype": "Other"
+    },
+    {
+      "name": "",
+      "alias": "",
+      "archetype": ""
+    },
+    {
+      "name": "Bamboo",
+      "alias": "",
+      "archetype": "Other"
+    },
+    {
+      "name": "Chief's Family",
+      "alias": "",
+      "archetype": "Sidekick/Helper"
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "ad2570f5-1bfd-4954-811a-0141ee7ca7c3",
+      "text_span": {
+        "start": 198,
+        "end": 949
+      },
+      "event_type": "VILLAINY",
+      "description": "The wives plot to remove the sister by offering her to a Bonga (spirit).",
+      "agents": [
+        "Seven Wives"
+      ],
+      "targets": [
+        "Bonga Girl"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [
+        {
+          "agent": "Seven Wives",
+          "target": "Bonga Girl",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "rival",
+          "sentiment": "fearful"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": "trigger"
+      }
+    },
+    {
+      "id": "d8ce288f-29b6-42c4-9339-a2c0856bbd65",
+      "text_span": {
+        "start": 1534,
+        "end": 2218
+      },
+      "event_type": "VILLAINY",
+      "description": "The sister is drowned by the Bonga and abducted into the spirit world.",
+      "agents": [
+        "Seven Wives"
+      ],
+      "targets": [
+        "Bonga Girl"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationships": [
+        {
+          "agent": "Seven Wives",
+          "target": "Bonga Girl",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "fearful"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "die",
+        "context": "",
+        "status": "success",
+        "function": "climax"
+      }
+    },
+    {
+      "id": "dc81bd78-7d13-49dc-bfa9-3b9a44d2c965",
+      "text_span": {
+        "start": 2221,
+        "end": 2331
+      },
+      "event_type": "TRANSFIGURATION",
+      "description": "The drowned girl reincarnates as a bamboo plant.",
+      "agents": [
+        "nature"
+      ],
+      "targets": [
+        "Bonga Girl"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationships": [
+        {
+          "agent": "nature",
+          "target": "Bonga Girl",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "stranger",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "transform",
+        "context": "",
+        "status": "success",
+        "function": "setup"
+      }
+    },
+    {
+      "id": "6feabc22-904d-4aa5-9673-0d8b3ee51f81",
+      "text_span": {
+        "start": 2331,
+        "end": 3218
+      },
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "A Jogi cuts the bamboo (ignoring its pleas) and crafts a musical instrument.",
+      "agents": [
+        "The Jogi"
+      ],
+      "targets": [
+        "Bonga Girl"
+      ],
+      "target_type": "object",
+      "object_type": "magical_agent",
+      "instrument": "",
+      "time_order": 4,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": "setup"
+      }
+    },
+    {
+      "id": "3722719e-bebc-4266-833c-47bc1d6f1385",
+      "text_span": {
+        "start": 3968,
+        "end": 3972
+      },
+      "event_type": "OTHER",
+      "description": "The Chief's family intoxicates the Jogi and steals the magical fiddle.",
+      "agents": [
+        "Chief's Family"
+      ],
+      "targets": [
+        "The Jogi"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationships": [
+        {
+          "agent": "Chief's Family",
+          "target": "The Jogi",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "exchange",
+        "context": "",
+        "status": "success",
+        "function": "trigger"
+      }
+    },
+    {
+      "id": "1ae0a7eb-19bb-4f22-b03f-bfb6f270e331",
+      "text_span": {
+        "start": 4814,
+        "end": 5039
+      },
+      "event_type": "UNRECOGNIZED_ARRIVAL",
+      "description": "The girl secretly performs domestic duties for the Chief's son.",
+      "agents": [
+        "Bonga Girl"
+      ],
+      "targets": [
+        "Chief's Son"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6,
+      "relationships": [
+        {
+          "agent": "Bonga Girl",
+          "target": "Chief's Son",
+          "relationship_level1": "Romance",
+          "relationship_level2": "lover",
+          "sentiment": "romantic"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": "setup"
+      }
+    },
+    {
+      "id": "d2723caa-1285-4572-9585-ec30f4e1a294",
+      "text_span": {
+        "start": 5760,
+        "end": 6160
+      },
+      "event_type": "WEDDING",
+      "description": "The son catches the girl; she reveals her true nature, and they marry.",
+      "agents": [
+        "Chief's Son"
+      ],
+      "targets": [
+        "Bonga Girl"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 7,
+      "relationships": [
+        {
+          "agent": "Chief's Son",
+          "target": "Bonga Girl",
+          "relationship_level1": "Romance",
+          "relationship_level2": "lover",
+          "sentiment": "romantic"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "persuade",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      }
+    },
+    {
+      "id": "dca13f7e-7caa-4a5e-8122-4d9db843c376",
+      "text_span": {
+        "start": 5760,
+        "end": 6160
+      },
+      "event_type": "RECOGNITION",
+      "description": "The brothers visit; the sister reveals herself and confronts them about their negligence.",
+      "agents": [
+        "Bonga Girl"
+      ],
+      "targets": [
+        "Seven Brothers"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 8,
+      "relationships": [
+        {
+          "agent": "Bonga Girl",
+          "target": "Seven Brothers",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "sibling",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "betray",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      }
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "BITTERSWEET",
+    "key_values": [
+      "JUSTICE",
+      "OTHER"
+    ],
+    "motif_type": [
+      "Motif F420.5.2.1.4: F420.5.2.1.4. Water-goddess allows body of drowning person to come up three times. (F. Marvels. > F200–F699. Marvelous creatures. > F400–F499. Spirits and demons.)"
+    ],
+    "atu_categories": [],
+    "obstacle_thrower": [
+      "Seven Wives"
+    ],
+    "helper_type": [],
+    "thinking_process": "",
+    "atu_evidence": {},
+    "motif_evidence": {
+      "Motif F420.5.2.1.4: F420.5.2.1.4. Water-goddess allows body of drowning person to come up three times. (F. Marvels. > F200–F699. Marvelous creatures. > F400–F499. Spirits and demons.)": {
+        "evidence_keys": [
+          "S1534-2218"
+        ]
+      }
+    }
+  },
+  "analysis": {
+    "propp_functions": [],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

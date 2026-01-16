@@ -1,0 +1,790 @@
+{
+  "version": "3.0",
+  "metadata": {
+    "id": "jp_005",
+    "title": "",
+    "culture": "Japanese",
+    "annotator": "",
+    "date_annotated": "2025-12-20",
+    "confidence": 0.8
+  },
+  "source_info": {
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "datasets/Japanese/texts/jp_005.txt"
+  },
+  "characters": [
+    {
+      "name": "竹取の翁",
+      "alias": "造麻呂",
+      "archetype": "Hero"
+    },
+    {
+      "name": "お婆ばあさん",
+      "alias": "妻",
+      "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "迎むかへの者",
+      "alias": "天人",
+      "archetype": "Guardian"
+    },
+    {
+      "name": "赫映姫",
+      "alias": "かぐや姫",
+      "archetype": "Other"
+    },
+    {
+      "name": "石造皇子",
+      "alias": "",
+      "archetype": ""
+    },
+    {
+      "name": "車持皇子",
+      "alias": "",
+      "archetype": ""
+    },
+    {
+      "name": "阿倍右大臣",
+      "alias": "",
+      "archetype": ""
+    },
+    {
+      "name": "大納言",
+      "alias": "",
+      "archetype": ""
+    },
+    {
+      "name": "中納言",
+      "alias": "",
+      "archetype": ""
+    },
+    {
+      "name": "帝",
+      "alias": "みかど",
+      "archetype": ""
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "9ac7526f-2afc-45af-9741-730d97f8153f",
+      "text_span": null,
+      "event_type": "OTHER",
+      "description": "",
+      "agents": [],
+      "targets": [],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "ca34caee-b1a4-4690-b92c-18b54bd2a5fb",
+      "text_span": {
+        "start": 18,
+        "end": 178
+      },
+      "event_type": "LACK",
+      "description": "竹取たけとりの翁おきなといふ人ひとがありました。ほんとうの名なは讃岐さぬきの造麻呂みやつこまろといふのでしたが、毎日まいにちのように野山のやまの竹藪たけやぶにはひつて、竹たけを切きり取とつて、いろ／＼",
+      "agents": [
+        "竹取の翁"
+      ],
+      "targets": [
+        "竹取の翁",
+        "お婆さん"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [
+        {
+          "agent": "竹取の翁",
+          "target": "竹取の翁",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": ""
+        }
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "fe57eb27-8e22-44d4-9a92-ad9ef04537c1",
+      "text_span": {
+        "start": 211,
+        "end": 319
+      },
+      "event_type": "FIRST_FUNCTION_DONOR",
+      "description": "一本いつぽん妙みように光ひかる竹たけの幹みきがありました。不思議ふしぎに思おもつて近寄ちかよつて、そっと切きつて見みると、その切きつた筒つゝの中なかに高たかさ三寸さんずんばかりの美うつくしい女をんなの",
+      "agents": [
+        "竹取の翁"
+      ],
+      "targets": [
+        "赫映姫"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationships": [
+        {
+          "agent": "竹取の翁",
+          "target": "赫映姫",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "defend",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "5b3105e0-2b69-4fa1-84a8-0b3864f4ec95",
+      "text_span": {
+        "start": 240,
+        "end": 667
+      },
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "不思議ふしぎに思おもつて近寄ちかよつて、そっと切きつて見みると、その切きつた筒つゝの中なかに高たかさ三寸さんずんばかりの美うつくしい女をんなの子こがゐました。いつも見慣みなれてゐる藪やぶの竹たけの中な",
+      "agents": [],
+      "targets": [
+        "竹取の翁（家）"
+      ],
+      "target_type": "character",
+      "object_type": "magical_agent",
+      "instrument": "",
+      "time_order": 3,
+      "relationships": [
+        {
+          "agent": "",
+          "target": "竹取の翁（家）",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": ""
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "dc7fc83a-4955-46cb-afb0-0e59105a95ef",
+      "text_span": {
+        "start": 790,
+        "end": 853
+      },
+      "event_type": "GUIDANCE",
+      "description": "大事だいじの子こですから、家いへの奧おくにかこつて外そとへは少すこしも出ださずに、いよ／＼心こゝろを入いれて養やしなひました。",
+      "agents": [
+        "竹取の翁",
+        "お婆ばあさん"
+      ],
+      "targets": [
+        "赫映姫"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationships": [
+        {
+          "agent": "竹取の翁",
+          "target": "赫映姫",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "parent_child",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "command",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "1e759a67-5e48-47f3-84e6-a0be4452b3c5",
+      "text_span": {
+        "start": 1360,
+        "end": 1469
+      },
+      "event_type": "RECONNAISSANCE",
+      "description": "世間せけんの男をとこたちは妻つまに貰もらひたい、又また見みるだけでも見みておきたいと思おもつて、家いへの近ちかくに來きて、すき間まのようなところから覗のぞかうとしましたが、どうしても姿すがたを見みるこ",
+      "agents": [],
+      "targets": [
+        "赫映姫"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationships": [
+        {
+          "agent": "",
+          "target": "赫映姫",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "persuade",
+        "context": "",
+        "status": "failure",
+        "function": ""
+      }
+    },
+    {
+      "id": "e89a8ea2-da94-4afe-92b7-bb5130136f22",
+      "text_span": {
+        "start": 2252,
+        "end": 2339
+      },
+      "event_type": "DIFFICULT_TASK",
+      "description": "五人ごにんの方々かた／″＼に私わたしの欲ほしいと思おもふ物ものを註文ちゆうもんして、それを間違まちがひなく持もつて來きて下くださる方かたにお仕つかへすることに致いたしませう」",
+      "agents": [],
+      "targets": [],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6,
+      "relationships": [
+        {
+          "agent": "",
+          "target": "",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "command",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "ec9ae5e4-8400-4f59-a255-6ac056686dbe",
+      "text_span": {
+        "start": 3089,
+        "end": 3223
+      },
+      "event_type": "TRICKERY",
+      "description": "天竺てんじくへ行いつたように見みせかけて、三年さんねんばかりたつて、大和やまとの國くにのある山寺やまでらの賓頭廬樣びんずるさまの前まへに置おいてある石いしの鉢はちの眞黒まつくろに煤すゝけたのを、もった",
+      "agents": [
+        "石造皇子"
+      ],
+      "targets": [
+        "赫映姫"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 7,
+      "relationships": [
+        {
+          "agent": "石造皇子",
+          "target": "赫映姫",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": ""
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "deceive",
+        "context": "",
+        "status": "failure",
+        "function": ""
+      }
+    },
+    {
+      "id": "62f53edd-7939-4030-b2e1-6b77aa6d253d",
+      "text_span": {
+        "start": 3228,
+        "end": 3299
+      },
+      "event_type": "EXPOSURE",
+      "description": "立派りつぱな光ひかりのあるはずの鉢はちに螢火ほたるびほどの光ひかりもないので、すぐに註文ちゆうもんちがひといつて跳はねつけられてしまひました。",
+      "agents": [
+        "赫映姫"
+      ],
+      "targets": [
+        "石造皇子"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 8,
+      "relationships": [
+        {
+          "agent": "赫映姫",
+          "target": "石造皇子",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": ""
+        }
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "realize",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "4c11b211-5390-4caf-bd3e-7a483b84eeab",
+      "text_span": {
+        "start": 3440,
+        "end": 3692
+      },
+      "event_type": "TRICKERY",
+      "description": "ひそかに註文ちゆうもんに似にた玉たまの枝えだを作つくらせて、姫ひめのところに持もつて行ゆきました。翁おきなも姫ひめもその細工さいくの立派りつぱなのに驚をどろいてゐますと、そこへ運うんわるく玉職人たまし",
+      "agents": [
+        "車持皇子"
+      ],
+      "targets": [
+        "赫映姫"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 9,
+      "relationships": [
+        {
+          "agent": "車持皇子",
+          "target": "赫映姫",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": ""
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "deceive",
+        "context": "",
+        "status": "failure",
+        "function": ""
+      }
+    },
+    {
+      "id": "c63c8141-3f65-48f3-9b3c-d78a4af80c45",
+      "text_span": {
+        "start": 5178,
+        "end": 5392
+      },
+      "event_type": "PUNISHMENT",
+      "description": "綱つながぷっつりと切きれて、運うんわるくも下したにあつた鼎かなへの上うへに落おちて眼めを廻まはしました。水みづを飮のませられて漸やうやく正氣しようきになつた時とき、\n「腰こしは痛いたむが子安貝こやすが",
+      "agents": [
+        "中納言"
+      ],
+      "targets": [
+        "中納言"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 10,
+      "relationships": [
+        {
+          "agent": "中納言",
+          "target": "中納言",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": ""
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "travel",
+        "context": "",
+        "status": "failure",
+        "function": ""
+      }
+    },
+    {
+      "id": "c3e8596c-c958-4fea-8f04-9a76061db85d",
+      "text_span": {
+        "start": 6711,
+        "end": 6937
+      },
+      "event_type": "STRUGGLE",
+      "description": "「逃にげても許ゆるさぬ。宮中きゆうちゆうに連つれ行ゆくぞ」\n　と仰おほせられました。\n「私わたしがこの國くにで生うまれたものでありますならば、お宮仕みやづかへも致いたしませうけれど、さうではございませ",
+      "agents": [
+        "帝"
+      ],
+      "targets": [
+        "赫映姫"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 11,
+      "relationships": [
+        {
+          "agent": "帝",
+          "target": "赫映姫",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "restrain",
+        "context": "",
+        "status": "failure",
+        "function": ""
+      }
+    },
+    {
+      "id": "3b0af4b1-a3fa-4fb7-80f2-d1b386e98d9b",
+      "text_span": {
+        "start": 9228,
+        "end": 9989
+      },
+      "event_type": "RETURN",
+      "description": "その時とき、空そらから雲くもに乘のつた人々ひと／″＼が降おりて來きて、地面じめんから五尺ごしやくばかりの空中くうちゆうに、ずらりと立たち列ならびました。「それ來きたっ」と、武士ぶしたちが得物えものをと",
+      "agents": [
+        "迎むかへの者"
+      ],
+      "targets": [
+        "赫映姫"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 12,
+      "relationships": [
+        {
+          "agent": "迎むかへの者",
+          "target": "赫映姫",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "",
+          "sentiment": ""
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "travel",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "a338dc9e-0532-47b4-91e2-cf1bc1c77900",
+      "text_span": {
+        "start": 10200,
+        "end": 10294
+      },
+      "event_type": "PUNISHMENT",
+      "description": "不死ふしの藥くすりを焚たかしめられました。それからはこの山やまを不死ふしの山やまと呼よぶようになつて、その藥くすりの煙けむりは今いまでも雲くもの中なかへ立たち昇のぼるといふことであります。",
+      "agents": [
+        "帝"
+      ],
+      "targets": [
+        "不死ふしの藥くすり"
+      ],
+      "target_type": "object",
+      "object_type": "magical_agent",
+      "instrument": "",
+      "time_order": 13,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "BITTERSWEET",
+    "key_values": [
+      "LOYALTY",
+      "SACRIFICE",
+      "OBEDIENCE"
+    ],
+    "motif_type": [
+      "Motif Category: Mythological Motifs",
+      "Motif Category: Marvels",
+      "Motif Category: Ordaining the Future",
+      "Motif Category: Tests"
+    ],
+    "atu_categories": [
+      "ATU 461-485: TALES OF MAGIC > Supernatural Tasks",
+      "ATU 411: The King and the Lamia (TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Wife (400-424))"
+    ],
+    "obstacle_thrower": [
+      "迎むかへの者"
+    ],
+    "helper_type": [
+      "SUPERNATURAL",
+      "OBJECT"
+    ],
+    "thinking_process": "本作は「超自然的存在（かぐや姫）が人間界に現れ、求婚者に不可能課題を与えて排除し、最終的に天上へ帰還する」という構造で、TALES OF MAGIC の中でも Supernatural Tasks（難題による選別）と Heavenly Return（天界への帰還）が中心モチーフになっている。",
+    "atu_evidence": {
+      "ATU 411: The King and the Lamia (TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Wife (400-424))": {
+        "evidence_keys": [
+          "S240-667"
+        ]
+      }
+    },
+    "motif_evidence": {}
+  },
+  "analysis": {
+    "propp_functions": [
+      {
+        "id": "a94d59c0-0a8c-4263-938d-653805157181",
+        "fn": "LACK",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 18,
+          "end": 178,
+          "text": "竹取たけとりの翁おきなといふ人ひとがありました。ほんとうの名なは讃岐さぬきの造麻呂みやつこまろといふのでしたが、毎日まいにちのように野山のやまの竹藪たけやぶにはひつて、竹たけを切きり取とつて、いろ／＼の物ものを造つくり、それを商あきなふことにしてゐましたので、俗ぞくに竹取たけとりの翁おきなといふ名なで通とほつてゐました"
+        },
+        "evidence": "竹取たけとりの翁おきなといふ人ひとがありました。ほんとうの名なは讃岐さぬきの造麻呂みやつこまろといふのでしたが、毎日まいにちのように野山のやまの竹藪たけやぶにはひつて、竹たけを切きり取とつて、いろ／＼",
+        "narrative_event_id": "ca34caee-b1a4-4690-b92c-18b54bd2a5fb"
+      },
+      {
+        "id": "565f7d45-e672-4b76-8409-6de81c0eb032",
+        "fn": "FIRST_FUNCTION_DONOR",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 211,
+          "end": 319,
+          "text": "一本いつぽん妙みように光ひかる竹たけの幹みきがありました。不思議ふしぎに思おもつて近寄ちかよつて、そっと切きつて見みると、その切きつた筒つゝの中なかに高たかさ三寸さんずんばかりの美うつくしい女をんなの子こがゐました。"
+        },
+        "evidence": "一本いつぽん妙みように光ひかる竹たけの幹みきがありました。不思議ふしぎに思おもつて近寄ちかよつて、そっと切きつて見みると、その切きつた筒つゝの中なかに高たかさ三寸さんずんばかりの美うつくしい女をんなの",
+        "narrative_event_id": "fe57eb27-8e22-44d4-9a92-ad9ef04537c1"
+      },
+      {
+        "id": "9f66e32c-d3d2-4d50-b69a-e7a10e7d938b",
+        "fn": "RECEIPT_OF_AGENT",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 240,
+          "end": 667,
+          "text": "不思議ふしぎに思おもつて近寄ちかよつて、そっと切きつて見みると、その切きつた筒つゝの中なかに高たかさ三寸さんずんばかりの美うつくしい女をんなの子こがゐました。いつも見慣みなれてゐる藪やぶの竹たけの中なかにゐる人ひとですから、きっと、天てんが我わが子ことして與あたへてくれたものであらうと考かんがへて、その子こを手ての上うへに載のせて持もち歸かへり、妻つまのお婆ばあさんに渡わたして、よく育そだてるようにいひつけました。お婆ばあさんもこの子この大たいそう美うつくしいのを喜よろこんで、籠かごの中なかに入いれて大切たいせつに育そだてました。\n　このことがあつてからも、翁おきなはやはり竹たけを取とつて、その日ひ／＼を送おくつてゐましたが、奇妙きみようなことには、多おほくの竹たけを切きるうちに節ふしと節ふしとの間あひだに、黄金おうごんがはひつてゐる竹たけを見みつけることが度々たび／＼ありました。それで翁おきなの家いへは次第しだいに裕福ゆうふくになりました。"
+        },
+        "evidence": "不思議ふしぎに思おもつて近寄ちかよつて、そっと切きつて見みると、その切きつた筒つゝの中なかに高たかさ三寸さんずんばかりの美うつくしい女をんなの子こがゐました。いつも見慣みなれてゐる藪やぶの竹たけの中な",
+        "narrative_event_id": "5b3105e0-2b69-4fa1-84a8-0b3864f4ec95"
+      },
+      {
+        "id": "7694dab7-b9cf-4087-972b-b43debdb1d6a",
+        "fn": "GUIDANCE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 790,
+          "end": 853,
+          "text": "大事だいじの子こですから、家いへの奧おくにかこつて外そとへは少すこしも出ださずに、いよ／＼心こゝろを入いれて養やしなひました。"
+        },
+        "evidence": "大事だいじの子こですから、家いへの奧おくにかこつて外そとへは少すこしも出ださずに、いよ／＼心こゝろを入いれて養やしなひました。",
+        "narrative_event_id": "dc7fc83a-4955-46cb-afb0-0e59105a95ef"
+      },
+      {
+        "id": "c851556d-d472-4923-934b-3066292c29b4",
+        "fn": "RECONNAISSANCE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1360,
+          "end": 1469,
+          "text": "世間せけんの男をとこたちは妻つまに貰もらひたい、又また見みるだけでも見みておきたいと思おもつて、家いへの近ちかくに來きて、すき間まのようなところから覗のぞかうとしましたが、どうしても姿すがたを見みることが出來できません"
+        },
+        "evidence": "世間せけんの男をとこたちは妻つまに貰もらひたい、又また見みるだけでも見みておきたいと思おもつて、家いへの近ちかくに來きて、すき間まのようなところから覗のぞかうとしましたが、どうしても姿すがたを見みるこ",
+        "narrative_event_id": "1e759a67-5e48-47f3-84e6-a0be4452b3c5"
+      },
+      {
+        "id": "3ba4c344-8e80-4460-9343-156e94afd7fc",
+        "fn": "DIFFICULT_TASK",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 2252,
+          "end": 2339,
+          "text": "五人ごにんの方々かた／″＼に私わたしの欲ほしいと思おもふ物ものを註文ちゆうもんして、それを間違まちがひなく持もつて來きて下くださる方かたにお仕つかへすることに致いたしませう」"
+        },
+        "evidence": "五人ごにんの方々かた／″＼に私わたしの欲ほしいと思おもふ物ものを註文ちゆうもんして、それを間違まちがひなく持もつて來きて下くださる方かたにお仕つかへすることに致いたしませう」",
+        "narrative_event_id": "e89a8ea2-da94-4afe-92b7-bb5130136f22"
+      },
+      {
+        "id": "55312eb8-c7a5-4dc8-b250-238cb1c981af",
+        "fn": "TRICKERY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 3089,
+          "end": 3223,
+          "text": "天竺てんじくへ行いつたように見みせかけて、三年さんねんばかりたつて、大和やまとの國くにのある山寺やまでらの賓頭廬樣びんずるさまの前まへに置おいてある石いしの鉢はちの眞黒まつくろに煤すゝけたのを、もったいらしく錦にしきの袋ふくろに入いれて姫ひめのもとにさし出だしました。"
+        },
+        "evidence": "天竺てんじくへ行いつたように見みせかけて、三年さんねんばかりたつて、大和やまとの國くにのある山寺やまでらの賓頭廬樣びんずるさまの前まへに置おいてある石いしの鉢はちの眞黒まつくろに煤すゝけたのを、もった",
+        "narrative_event_id": "ec9ae5e4-8400-4f59-a255-6ac056686dbe"
+      },
+      {
+        "id": "743188e5-cfe4-4df2-9432-abb5ce115c5a",
+        "fn": "EXPOSURE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 3228,
+          "end": 3299,
+          "text": "立派りつぱな光ひかりのあるはずの鉢はちに螢火ほたるびほどの光ひかりもないので、すぐに註文ちゆうもんちがひといつて跳はねつけられてしまひました。"
+        },
+        "evidence": "立派りつぱな光ひかりのあるはずの鉢はちに螢火ほたるびほどの光ひかりもないので、すぐに註文ちゆうもんちがひといつて跳はねつけられてしまひました。",
+        "narrative_event_id": "62f53edd-7939-4030-b2e1-6b77aa6d253d"
+      },
+      {
+        "id": "db9d2e44-f917-41ad-a9a1-cdd6c51c4fff",
+        "fn": "TRICKERY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 3440,
+          "end": 3692,
+          "text": "ひそかに註文ちゆうもんに似にた玉たまの枝えだを作つくらせて、姫ひめのところに持もつて行ゆきました。翁おきなも姫ひめもその細工さいくの立派りつぱなのに驚をどろいてゐますと、そこへ運うんわるく玉職人たましよくにんの親方おやかたがやつて來きて、千日せんにちあまりも骨折ほねをつて作つくつたのに、まだ細工賃さいくちんを下くださるといふ御沙汰ごさたがないと、苦情くじようを持もち込こみましたので、まやかしものといふことがわかつて、これも忽たちまち突つっ返かへされ、皇子みこは大恥おほはぢをかいて引ひきさがりました。"
+        },
+        "evidence": "ひそかに註文ちゆうもんに似にた玉たまの枝えだを作つくらせて、姫ひめのところに持もつて行ゆきました。翁おきなも姫ひめもその細工さいくの立派りつぱなのに驚をどろいてゐますと、そこへ運うんわるく玉職人たまし",
+        "narrative_event_id": "4c11b211-5390-4caf-bd3e-7a483b84eeab"
+      },
+      {
+        "id": "80af8489-95f9-472f-9906-2f901d9b5156",
+        "fn": "PUNISHMENT",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 5178,
+          "end": 5392,
+          "text": "綱つながぷっつりと切きれて、運うんわるくも下したにあつた鼎かなへの上うへに落おちて眼めを廻まはしました。水みづを飮のませられて漸やうやく正氣しようきになつた時とき、\n「腰こしは痛いたむが子安貝こやすがひは取とつたぞ。それ見みてくれ」\n　といひました。皆みながそれを見みると、子安貝こやすがひではなくて燕つばめの古糞ふるくそでありました。中納言ちゆうなごんはそれきり腰こしも立たたず、氣病きやみも加くははつて死しんでしまひました。"
+        },
+        "evidence": "綱つながぷっつりと切きれて、運うんわるくも下したにあつた鼎かなへの上うへに落おちて眼めを廻まはしました。水みづを飮のませられて漸やうやく正氣しようきになつた時とき、\n「腰こしは痛いたむが子安貝こやすが",
+        "narrative_event_id": "c63c8141-3f65-48f3-9b3c-d78a4af80c45"
+      },
+      {
+        "id": "d9ea3483-f865-4021-8151-a47eb9a9b2bc",
+        "fn": "STRUGGLE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 6711,
+          "end": 6937,
+          "text": "「逃にげても許ゆるさぬ。宮中きゆうちゆうに連つれ行ゆくぞ」\n　と仰おほせられました。\n「私わたしがこの國くにで生うまれたものでありますならば、お宮仕みやづかへも致いたしませうけれど、さうではございませんから、お連つれになることはかなひますまい」\n　と姫ひめは申まをし上あげました。\n「いや、そんなはずはない。どうあつても連つれて行ゆく」\n　かねて支度したくしてあつたお輿こしに載のせようとなさると、姫ひめの形かたちは影かげのように消きえてしまひました。"
+        },
+        "evidence": "「逃にげても許ゆるさぬ。宮中きゆうちゆうに連つれ行ゆくぞ」\n　と仰おほせられました。\n「私わたしがこの國くにで生うまれたものでありますならば、お宮仕みやづかへも致いたしませうけれど、さうではございませ",
+        "narrative_event_id": "c3e8596c-c958-4fea-8f04-9a76061db85d"
+      },
+      {
+        "id": "77c464b5-ff94-4183-a518-ad9c9989bf15",
+        "fn": "RETURN",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 9228,
+          "end": 9989,
+          "text": "その時とき、空そらから雲くもに乘のつた人々ひと／″＼が降おりて來きて、地面じめんから五尺ごしやくばかりの空中くうちゆうに、ずらりと立たち列ならびました。「それ來きたっ」と、武士ぶしたちが得物えものをとつて立たち向むかはうとすると、誰だれもかれも物ものに魅おそはれたように戰たゝかふ氣きもなくなり、力ちからも出でず、たゞ、ぼんやりとして目めをぱち／＼させてゐるばかりであります。そこへ月つきの人々ひと／″＼は空そらを飛とぶ車くるまを一ひとつ持もつて來きました。その中なかから頭かしららしい一人ひとりが翁おきなを呼よび出だして、\n「汝なんぢ翁おきなよ、そちは少すこしばかりの善いいことをしたので、それを助たすけるために片時かたときの間あひだ、姫ひめを下くだして、たくさんの黄金おうごんを儲まうけさせるようにしてやつたが、今いまは姫ひめの罪つみも消きえたので迎むかへに來きた。早はやく返かへすがよい」\n　と叫さけびます。翁おきなが少すこし澁しぶつてゐると、それには構かまはずに、\n「さあ／＼姫ひめ、こんなきたないところにゐるものではありません」\n　といつて、例れいの車くるまをさし寄よせると、不思議ふしぎにも堅かたく閉とざした格子こうしも土藏どぞうも自然しぜんと開あいて、姫ひめの體からだはする／＼と出でました。翁おきなが留とめようとあがくのを姫ひめは靜しづかにおさへて、形見かたみの文ふみを書かいて翁おきなに渡わたし、また帝みかどにさし上あげる別べつの手紙てがみを書かいて、それに月つきの人々ひと／″＼の持もつて來きた不死ふしの藥くすり一壺ひとつぼを添そへて勅使ちよくしに渡わたし、天あまの羽衣はごろもを着きて、あの車くるまに乘のつて、百人ひやくにんばかりの天人てんにんに取とりまかれて、空高そらたかく昇のぼつて行ゆきました。"
+        },
+        "evidence": "その時とき、空そらから雲くもに乘のつた人々ひと／″＼が降おりて來きて、地面じめんから五尺ごしやくばかりの空中くうちゆうに、ずらりと立たち列ならびました。「それ來きたっ」と、武士ぶしたちが得物えものをと",
+        "narrative_event_id": "3b0af4b1-a3fa-4fb7-80f2-d1b386e98d9b"
+      },
+      {
+        "id": "c954ce00-dea8-424e-beea-fa367e1ff3a7",
+        "fn": "PUNISHMENT",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 10200,
+          "end": 10294,
+          "text": "不死ふしの藥くすりを焚たかしめられました。それからはこの山やまを不死ふしの山やまと呼よぶようになつて、その藥くすりの煙けむりは今いまでも雲くもの中なかへ立たち昇のぼるといふことであります。"
+        },
+        "evidence": "不死ふしの藥くすりを焚たかしめられました。それからはこの山やまを不死ふしの山やまと呼よぶようになつて、その藥くすりの煙けむりは今いまでも雲くもの中なかへ立たち昇のぼるといふことであります。",
+        "narrative_event_id": "a338dc9e-0532-47b4-91e2-cf1bc1c77900"
+      }
+    ],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

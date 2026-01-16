@@ -1,0 +1,421 @@
+{
+  "version": "3.0",
+  "metadata": {
+    "id": "EN_009_Harisarman",
+    "title": "Harisarman",
+    "culture": "Indian",
+    "annotator": "Deb",
+    "date_annotated": "2026-01-14",
+    "confidence": 0.85
+  },
+  "source_info": {
+    "language": "",
+    "type": "",
+    "reference_uri": "datasets/texts/EN_009_Harisarman.txt"
+  },
+  "characters": [
+    {
+      "name": "Harisarman",
+      "alias": "Froggie",
+      "archetype": "Hero"
+    },
+    {
+      "name": "Sthuladatta",
+      "alias": "Rich householder",
+      "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "Harisarman's Wife",
+      "alias": "",
+      "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "Jihva",
+      "alias": "Tongue",
+      "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "The King",
+      "alias": "",
+      "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "Devajnanin",
+      "alias": "The Minister",
+      "archetype": "Rebel"
+    },
+    {
+      "name": "self",
+      "alias": "Harisarman",
+      "archetype": "Hero"
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "c78d1216-2a3b-4f08-be02-a1d3de949f5c",
+      "text_span": {
+        "start": 0,
+        "end": 940
+      },
+      "event_type": "LACK",
+      "description": "Harisarman is ignored at a feast, feeling the sting of his poverty and disrespect.",
+      "agents": [
+        "Sthuladatta"
+      ],
+      "targets": [
+        "Harisarman"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [
+        {
+          "agent": "Sthuladatta",
+          "target": "Harisarman",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "master_servant",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "failure",
+        "function": "trigger"
+      }
+    },
+    {
+      "id": "88af4eb2-e9ef-4b51-be99-56df278ef7aa",
+      "text_span": {
+        "start": 941,
+        "end": 1670
+      },
+      "event_type": "OTHER",
+      "description": "To gain respect, Harisarman steals his master's horse to later \"find\" it using fake magic.",
+      "agents": [
+        "Harisarman"
+      ],
+      "targets": [
+        "Sthuladatta"
+      ],
+      "target_type": "object",
+      "object_type": "magical_agent",
+      "instrument": "",
+      "time_order": 2,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": "setup"
+      }
+    },
+    {
+      "id": "6a1d5dde-6933-451f-9115-3054307be512",
+      "text_span": {
+        "start": 1671,
+        "end": 2529
+      },
+      "event_type": "TRICKERY",
+      "description": "Harisarman \"divines\" the location of the horse he stole, gaining fame as a sage.",
+      "agents": [
+        "Harisarman"
+      ],
+      "targets": [
+        "Sthuladatta"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationships": [
+        {
+          "agent": "Harisarman",
+          "target": "Sthuladatta",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "commander_subordinate",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "success",
+        "function": "climax"
+      }
+    },
+    {
+      "id": "bb57f070-098c-4c47-841d-7d5d357fcb86",
+      "text_span": {
+        "start": 2742,
+        "end": 3132
+      },
+      "event_type": "DIFFICULT_TASK",
+      "description": "The King demands Harisarman use his magic to find stolen royal treasure; Harisarman is trapped by his own lie.",
+      "agents": [
+        "The King"
+      ],
+      "targets": [
+        "Harisarman"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationships": [
+        {
+          "agent": "The King",
+          "target": "Harisarman",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "fearful"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "",
+        "context": "",
+        "status": "attempt",
+        "function": "climax"
+      }
+    },
+    {
+      "id": "0ccee174-484d-4677-b954-da1a6145b38d",
+      "text_span": {
+        "start": 3508,
+        "end": 3868
+      },
+      "event_type": "RECOGNITION",
+      "description": "Harisarman blames his \"tongue\" (Jihva) for his trouble; the thief named Jihva (Tongue) overhears and confesses, thinking he knows her crime.",
+      "agents": [
+        "Harisarman"
+      ],
+      "targets": [
+        "Jihva"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationships": [
+        {
+          "agent": "Harisarman",
+          "target": "Jihva",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "stranger",
+          "sentiment": "fearful"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      }
+    },
+    {
+      "id": "3d88f817-c24d-475d-8bac-dd4c54010ab5",
+      "text_span": {
+        "start": 3508,
+        "end": 3868
+      },
+      "event_type": "LIQUIDATION",
+      "description": "Harisarman reveals the treasure's location (keeping the thief's secret) and is rewarded.",
+      "agents": [
+        "Harisarman"
+      ],
+      "targets": [
+        "The King"
+      ],
+      "target_type": "object",
+      "object_type": "normal_object",
+      "instrument": "",
+      "time_order": 6,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": "resolution"
+      }
+    },
+    {
+      "id": "3af645f7-06f3-4b9e-9b02-aef8248886b2",
+      "text_span": {
+        "start": 5270,
+        "end": 5836
+      },
+      "event_type": "DIFFICULT_TASK",
+      "description": "Skeptical minister prompts a final test; the King asks Harisarman to guess the contents of a pitcher.",
+      "agents": [
+        "The King"
+      ],
+      "targets": [
+        "Harisarman"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 7,
+      "relationships": [
+        {
+          "agent": "The King",
+          "target": "Harisarman",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "fearful"
+        }
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "",
+        "context": "",
+        "status": "attempt",
+        "function": "climax"
+      }
+    },
+    {
+      "id": "eaca967c-2f6e-49c2-bd54-9a10407d12e7",
+      "text_span": {
+        "start": 5837,
+        "end": 6239
+      },
+      "event_type": "SOLUTION",
+      "description": "Harisarman laments his own fate using his childhood nickname \"Froggie,\" which coincidentally matches the frog in the pitcher.",
+      "agents": [
+        "Harisarman"
+      ],
+      "targets": [
+        "self"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 8,
+      "relationships": [
+        {
+          "agent": "Harisarman",
+          "target": "self",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "stranger",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      }
+    },
+    {
+      "id": "3c9cb032-e9c6-441b-904c-72a06e1f7d11",
+      "text_span": {
+        "start": 6451,
+        "end": 6692
+      },
+      "event_type": "TRANSFIGURATION",
+      "description": "Harisarman is permanently honored and enriched.",
+      "agents": [
+        "The King"
+      ],
+      "targets": [
+        "Harisarman"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 9,
+      "relationships": [
+        {
+          "agent": "The King",
+          "target": "Harisarman",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "reward",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      }
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "HAPPY_ENDING",
+    "key_values": [
+      "LUCK",
+      "CUNNING",
+      "OTHER (Fate/Destiny)"
+    ],
+    "motif_type": [
+      "Motif H587: H587. King gives enigmatic order to minister. (H. Tests. > H500–H899. Tests of cleverness. > H530–H899. Riddles.)",
+      "Motif H507.1.0.2: H507.1.0.2. King defeated in repartee by boy, who thus wins girl. Boy: \"Who would give a man a bath, feed him his rice, and then bring him the tamal-pan to chew?\" King: \"No one but a wife.\" Boy claims minister's daughter. (H. Tests. > H500–H899. Tests of cleverness.)",
+      "Motif K1581.2: K1581.2. Lover's gift regained: horse and wagon as gift. The lover regains gift of horse and wagon by pretending to the husband that the wife has confiscated them because he brought wood of uneven quality. (K. Deceptions. > K1500–K1599. Deceptions connected with adultery.)",
+      "Motif H1151.13: H1151.13. Task: stealing from a king. (H. Tests. > H900–H1199. Tests of prowess: tasks. > H1000–H1199. Nature of tasks.)",
+      "Motif K341.8.4: K341.8.4. King loses signet ring while endeavoring to learn from a thief the art of stealing. (K. Deceptions. > K300–K499. Thefts and cheats. > K310–K439. Thefts.)"
+    ],
+    "atu_categories": [],
+    "obstacle_thrower": [
+      "Jihva",
+      "The King",
+      "Devajnanin"
+    ],
+    "helper_type": [],
+    "thinking_process": "",
+    "atu_evidence": {},
+    "motif_evidence": {
+      "Motif H587: H587. King gives enigmatic order to minister. (H. Tests. > H500–H899. Tests of cleverness. > H530–H899. Riddles.)": {
+        "evidence_keys": [
+          "S5270-5836"
+        ]
+      },
+      "Motif H507.1.0.2: H507.1.0.2. King defeated in repartee by boy, who thus wins girl. Boy: \"Who would give a man a bath, feed him his rice, and then bring him the tamal-pan to chew?\" King: \"No one but a wife.\" Boy claims minister's daughter. (H. Tests. > H500–H899. Tests of cleverness.)": {
+        "evidence_keys": [
+          "S5270-5836"
+        ]
+      },
+      "Motif K1581.2: K1581.2. Lover's gift regained: horse and wagon as gift. The lover regains gift of horse and wagon by pretending to the husband that the wife has confiscated them because he brought wood of uneven quality. (K. Deceptions. > K1500–K1599. Deceptions connected with adultery.)": {
+        "evidence_keys": [
+          "S941-1670"
+        ]
+      },
+      "Motif H1151.13: H1151.13. Task: stealing from a king. (H. Tests. > H900–H1199. Tests of prowess: tasks. > H1000–H1199. Nature of tasks.)": {
+        "evidence_keys": [
+          "S2742-3132"
+        ]
+      },
+      "Motif K341.8.4: K341.8.4. King loses signet ring while endeavoring to learn from a thief the art of stealing. (K. Deceptions. > K300–K499. Thefts and cheats. > K310–K439. Thefts.)": {
+        "evidence_keys": [
+          "S2742-3132"
+        ]
+      }
+    }
+  },
+  "analysis": {
+    "propp_functions": [],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

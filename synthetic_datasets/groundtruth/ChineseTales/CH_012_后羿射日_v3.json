@@ -1,0 +1,294 @@
+{
+  "version": "3.0",
+  "metadata": {
+    "id": "CH_012_后羿射日",
+    "title": "后羿射日",
+    "culture": "Chinese",
+    "annotator": "",
+    "date_annotated": "2025-12-17",
+    "confidence": 0.8
+  },
+  "source_info": {
+    "language": "zh",
+    "type": "full_text",
+    "reference_uri": "datasets/texts/CH_012_后羿射日.txt"
+  },
+  "characters": [
+    {
+      "name": "十个太阳",
+      "alias": "",
+      "archetype": "Villain"
+    },
+    {
+      "name": "东方天帝的妻子",
+      "alias": "",
+      "archetype": "Other"
+    },
+    {
+      "name": "后羿",
+      "alias": "",
+      "archetype": "Hero"
+    },
+    {
+      "name": "天帝",
+      "alias": "",
+      "archetype": "Ruler"
+    },
+    {
+      "name": "太阳",
+      "alias": "",
+      "archetype": "Other"
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "0fcd80cc-2cd1-42b7-9f01-38b7bf19fa1a",
+      "text_span": {
+        "start": 0,
+        "end": 927
+      },
+      "event_type": "VILLAINY",
+      "description": "强大的反派造成了天灾; 十日凌空, 民不聊生",
+      "agents": [
+        "十个太阳"
+      ],
+      "targets": [
+        "全世界"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "86681bf5-c31f-45a2-b224-ac8213bd7af9",
+      "text_span": {
+        "start": 928,
+        "end": 1559
+      },
+      "event_type": "BEGINNING_COUNTERACTION",
+      "description": "英雄解决了部分问题; 后羿射下九个太阳, 吓跑了最后一个",
+      "agents": [
+        "后羿"
+      ],
+      "targets": [
+        "十个太阳"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationships": [
+        {
+          "agent": "后羿",
+          "target": "十个太阳",
+          "relationship_level1": "对抗与敌对(Adversarial)",
+          "relationship_level2": "enemy",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "792c918d-74db-47e3-8e4e-8186ad585bed",
+      "text_span": {
+        "start": 1560,
+        "end": 1701
+      },
+      "event_type": "DIFFICULT_TASK",
+      "description": "反派依然被需要; 太阳躲了起来",
+      "agents": [
+        "十个太阳"
+      ],
+      "targets": [],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "2ca1846d-db3a-402b-bc54-aa3bd2dd7d63",
+      "text_span": {
+        "start": 1702,
+        "end": 1848
+      },
+      "event_type": "SOLUTION",
+      "description": "(看似)中立的统治者解决了问题; 天地命令太阳照常升起",
+      "agents": [
+        "天帝"
+      ],
+      "targets": [
+        "太阳"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationships": [
+        {
+          "agent": "天帝",
+          "target": "太阳",
+          "relationship_level1": "权威与阶级(Hierarchy)",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "10ff17b3-a13c-4807-a4e8-b39dd3594d66",
+      "text_span": {
+        "start": 1849,
+        "end": 1883
+      },
+      "event_type": "WEDDING",
+      "description": "英雄受到了奖赏(注意不是结婚); 后羿受封赏",
+      "agents": [
+        "天帝"
+      ],
+      "targets": [
+        "后羿"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationships": [
+        {
+          "agent": "天帝",
+          "target": "后羿",
+          "relationship_level1": "权威与阶级(Hierarchy)",
+          "relationship_level2": "ruler_subject",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [],
+    "motif_type": [],
+    "atu_categories": [],
+    "obstacle_thrower": [],
+    "helper_type": [],
+    "thinking_process": "",
+    "atu_evidence": {},
+    "motif_evidence": {}
+  },
+  "analysis": {
+    "propp_functions": [
+      {
+        "id": "4d50890e-9853-4c5f-ae89-0f75ba727287",
+        "fn": "VILLAINY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 0,
+          "end": 927,
+          "text": "传说在世界还很年轻的时候，天空曾经同时出现过十个太阳。东方天帝的妻子就是这十个太阳的母亲。母亲经常将他们放在世界最东边的东海中洗澡，每当洗完澡之后，他们就会像小鸟儿那样在一棵大树上栖息。当然，太阳可不是什么小鸟儿，他们之所以栖息在树上，那是因为每个太阳的中心就是只鸟儿。比较矮的树枝上栖息着九个太阳，另一个太阳则栖息在树的树梢上。每个夜晚更换一次。\n当预示着黎明的曙光来临时，栖息在树梢上的那轮太阳，就会坐着两轮车穿越天空，就这样，轮流替换，每天都会有一个太阳被换到天空上，给大地上的万物带来光明和热量。\n在那个时候，大地上的人们生活得非常幸福和睦。人和动物就如同邻居和朋友那样生活在一起，他们没有偏见没有斗争，彼此坦诚相待、相互尊重。动物会将他们的宝宝安心地放在窝里，不用担心受到人类的伤害。农民也会将谷物堆放在田野中，而不用担心会有动物起偷盗之心。总之，人们日出而作，日落而息，日子祥和安宁。人们和动物常常会感恩太阳带给他们的时辰、光明和快乐。\n就这样，幸福的生活缓缓地前进着。\n但是，谁也想不到，突然有一天，这十个太阳想，要是兄弟十人能够同时去天空中周游，该是多么有趣啊。于是，他们兄弟十个就商量好，趁黎明到来的时候，他们一起爬上两轮车。那天，就在黎明的曙光刚刚来临的时候，十个太阳便一起爬上车，踏上穿越天空的征程。能够一起穿越天空，十个太阳开心极了，可大地上的人们和动物却遭殃了。因为同时出现在天空中的十个太阳，就像是十个火团似的，放出炙热无比的热量烘烤着大地。\n很快，森林就着起了大火，大火烧死许多动物，森林变得一片漆黑。而那些在大火中幸存的动物，由于受到惊吓，也纷纷蹿到人群中，发疯似的寻找食物，还伤害曾经和他们和睦相处的善良的人们。\n后来，大地烤焦了，河流也干枯了，大海也干涸了，所有的鱼儿都死去了，水中的怪物也悄悄地爬上岸偷窃食物，还有很多人和动物被渴死。农作物和果园全部都枯萎了，供给人和家畜的食物也断绝了。有些人由于出门觅食，而被太阳活活烤死；还有一些人被饥饿的野兽吃掉了。人们再也没有幸福了，动物和人也反目成仇，他们彼此伤害和追杀。在一片火海里，人们苦苦地挣扎和煎熬着，他们哭天喊地，寻求活下去的希望。可是哭天天不应，哭地地不灵啊！"
+        },
+        "evidence": "传说在世界还很年轻的时候，天空曾经同时出现过十个太阳。东方天帝的妻子就是这十个太阳的母亲。母亲经常将他们放在世界最东边的东海中洗澡，每当洗完澡之后，他们就会像小鸟儿那样在一棵大树上栖息。当然，太阳可不",
+        "narrative_event_id": "0fcd80cc-2cd1-42b7-9f01-38b7bf19fa1a"
+      },
+      {
+        "id": "a412a67b-2e95-4f74-b2c1-7cd6f77e8fe4",
+        "fn": "DIFFICULT_TASK",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1560,
+          "end": 1701,
+          "text": "天上剩下的这个太阳简直是害怕极了，他在天上摇摇晃晃，慌慌张张，用非常快的速度躲进大海中，不敢出来。\n这下子可糟了，天上没有太阳，变得一片黑暗。万物也无法得到阳光的哺育，毒蛇猛兽都趁机出来扰乱人类的生活。人们苦苦请求天帝，让他将第十个太阳请出来，只有这样人类万物才可以顺利地繁衍下去。"
+        },
+        "evidence": "天上剩下的这个太阳简直是害怕极了，他在天上摇摇晃晃，慌慌张张，用非常快的速度躲进大海中，不敢出来。\n这下子可糟了，天上没有太阳，变得一片黑暗。万物也无法得到阳光的哺育，毒蛇猛兽都趁机出来扰乱人类的生活",
+        "narrative_event_id": "792c918d-74db-47e3-8e4e-8186ad585bed"
+      },
+      {
+        "id": "9a1cdd0a-f3d8-453e-9de7-c77cef9ec667",
+        "fn": "SOLUTION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1702,
+          "end": 1848,
+          "text": "天帝接受他们的请求。在这些黑暗持续很久后的一天早上，东边的海面上，透射出五彩缤纷的朝霞，一轮金灿灿的太阳随后露出海面。\n看到太阳的光辉，人们高兴得手舞足蹈，齐声欢呼这个时刻的到来。\n从此以后，这个太阳每天都从东方的海边升起来，穿越天空给人间以温暖，禾苗也因此得到生长，万物也因此能够生存下去。"
+        },
+        "evidence": "天帝接受他们的请求。在这些黑暗持续很久后的一天早上，东边的海面上，透射出五彩缤纷的朝霞，一轮金灿灿的太阳随后露出海面。\n看到太阳的光辉，人们高兴得手舞足蹈，齐声欢呼这个时刻的到来。\n从此以后，这个太阳",
+        "narrative_event_id": "2ca1846d-db3a-402b-bc54-aa3bd2dd7d63"
+      },
+      {
+        "id": "995e11a0-2b8f-4cdd-aeec-1a115908ccec",
+        "fn": "WEDDING",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1849,
+          "end": 1883,
+          "text": "由于射杀太阳，拯救了人间万物，后羿功劳盖世，被天帝赐封了天将的职位。"
+        },
+        "evidence": "由于射杀太阳，拯救了人间万物，后羿功劳盖世，被天帝赐封了天将的职位。",
+        "narrative_event_id": "10ff17b3-a13c-4807-a4e8-b39dd3594d66"
+      }
+    ],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

@@ -1,0 +1,382 @@
+{
+  "version": "3.0",
+  "metadata": {
+    "id": "jp_002",
+    "title": "",
+    "culture": "Japanese",
+    "annotator": "",
+    "date_annotated": "2025-12-18",
+    "confidence": 0.8
+  },
+  "source_info": {
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "datasets/texts/jp_002.txt"
+  },
+  "characters": [
+    {
+      "name": "浦島太郎",
+      "alias": "浦島",
+      "archetype": "Hero"
+    },
+    {
+      "name": "かめ",
+      "alias": "",
+      "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "乙姫",
+      "alias": "",
+      "archetype": "Guardian"
+    },
+    {
+      "name": "竜宮城",
+      "alias": "",
+      "archetype": "Other"
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "9c044ad9-030d-46f2-a1e5-162d5f2d2206",
+      "text_span": null,
+      "event_type": "OTHER",
+      "description": "",
+      "agents": [],
+      "targets": [],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "afb9eb75-914b-47c9-8cb5-a76a8599a588",
+      "text_span": {
+        "start": 212,
+        "end": 759
+      },
+      "event_type": "RESCUE",
+      "description": "小さいかめの子を一ぴきつかまえて、棒ぼうでつついたり、石でたたいたり、さんざんにいじめているのです。浦島は見かねて、\n「まあ、そんなかわいそうなことをするものではない。いい子だから」\nと、とめましたが",
+      "agents": [
+        "浦島太郎"
+      ],
+      "targets": [
+        "かめ"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "dd3c87eb-76af-4dc5-b6f9-7e392e27c449",
+      "text_span": {
+        "start": 832,
+        "end": 1311
+      },
+      "event_type": "GUIDANCE",
+      "description": "ますと、ふとうしろのほうで\n「浦島さん、浦島さん」\nとよぶ声がしました。おやとおもってふりかえってみますと、だれも人のかげは見えません。その代かわり、いつのまにか、一ぴきのかめが、舟のそばにきていまし",
+      "agents": [
+        "かめ"
+      ],
+      "targets": [
+        "浦島太郎"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "ac3a5515-3b07-4d48-857e-af5330c7e9f7",
+      "text_span": {
+        "start": 1973,
+        "end": 2240
+      },
+      "event_type": "OTHER",
+      "description": "「浦島さん、ようこそおいでくださいました。先日はかめのいのちをお助たすけくださいまして、まことにありがとうございます。なんにもおもてなしはございませんが、どうぞゆっくりおあそびくださいまし」\nと、乙姫",
+      "agents": [
+        "乙姫"
+      ],
+      "targets": [
+        "浦島太郎"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "9e08d3dd-f787-4b15-ab8d-d1bd7187c30f",
+      "text_span": {
+        "start": 3741,
+        "end": 3892
+      },
+      "event_type": "INTERDICTION",
+      "description": "「これは玉手箱たまてばこといって、なかには、人間のいちばんだいじなたからがこめてございます。これをおわかれのしるしにさし上げますから、お持ちかえりくださいまし。ですが、あなたがもういちどりゅう宮ぐうへ",
+      "agents": [
+        "乙姫"
+      ],
+      "targets": [
+        "浦島太郎"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "cc52e33e-609e-4e8e-b0d0-3b6692ffc768",
+      "text_span": {
+        "start": 5586,
+        "end": 5626
+      },
+      "event_type": "VIOLATION",
+      "description": "浦島は、うっかり乙姫おとひめさまにいわれたことはわすれて、箱のふたをとりました。",
+      "agents": [
+        "浦島太郎"
+      ],
+      "targets": [
+        "浦島太郎"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "073430b2-729a-42aa-83ef-5fcad96b5979",
+      "text_span": {
+        "start": 5626,
+        "end": 5790
+      },
+      "event_type": "PUNISHMENT",
+      "description": "するとむらさき色の雲が、なかからむくむく立ちのぼって、それが顔にかかったかとおもうと、すうっと消えて行って箱のなかにはなんにものこっていませんでした。その代かわり、いつのまにか顔じゅうしわになって、手",
+      "agents": [
+        "玉手箱"
+      ],
+      "targets": [
+        "浦島太郎"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "OTHER",
+    "key_values": [
+      "DISOBEDIENCE",
+      "LOYALTY"
+    ],
+    "motif_type": [
+      "Motif C321.1: C321.1. Tabu: opening too much of magic box at a time. A priest gives a prince a sealed packet which he is to open in time of distress. He must open only one portion at a time. (C. Tabu. > C300–C399. Looking tabu.)",
+      "Motif B548.2: B548.2. Fish brings lost object from bottom of sea. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)",
+      "Motif Q285.1.2.1: Q285.1.2.1. Boy reaches into bird's nest for pigeon's eggs. A stone in the nest holds his hand for three days and nights. He is finally released by prayers. (Q. Rewards and punishments. > Q200–Q399. Deeds punished.)",
+      "Motif D1651.12: D1651.12. Box can be opened only by right person. (Cf. D1170.) (D. Magic. > D800–D1699. Magic objects. > D1600–D1699. Characteristics of magic objects.)",
+      "Motif B551.5: B551.5. Turtle (tortoise) carries person across river (ocean). (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)",
+      "Motif B375.1.1: B375.1.1. Grateful fish grants mad hero his wish: to impregnate a princess. Later the fish saves the hero and his family from death at sea. (B. Animals. > B300–B599. Friendly animals. > B350–B399. Grateful animals.)"
+    ],
+    "atu_categories": [
+      "ATU 554: The Grateful Animals (TALES OF MAGIC > Supernatural Helpers (500-559))"
+    ],
+    "obstacle_thrower": [],
+    "helper_type": [],
+    "thinking_process": "本作は「開けてはならない玉手箱」という明確な禁忌を中心に構成されている。\n主人公が禁忌を破った結果、不可逆的な罰（急速な老化）が与えられる点から、\n禁忌違反とその処罰を主軸とするモチーフに該当すると判断した。\n",
+    "atu_evidence": {
+      "ATU 554: The Grateful Animals (TALES OF MAGIC > Supernatural Helpers (500-559))": {
+        "evidence_keys": [
+          "S212-759"
+        ]
+      }
+    },
+    "motif_evidence": {
+      "Motif C321.1: C321.1. Tabu: opening too much of magic box at a time. A priest gives a prince a sealed packet which he is to open in time of distress. He must open only one portion at a time. (C. Tabu. > C300–C399. Looking tabu.)": {
+        "evidence_keys": [
+          "S3741-3892"
+        ]
+      },
+      "Motif B548.2: B548.2. Fish brings lost object from bottom of sea. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)": {
+        "evidence_keys": [
+          "S832-1311"
+        ]
+      },
+      "Motif Q285.1.2.1: Q285.1.2.1. Boy reaches into bird's nest for pigeon's eggs. A stone in the nest holds his hand for three days and nights. He is finally released by prayers. (Q. Rewards and punishments. > Q200–Q399. Deeds punished.)": {
+        "evidence_keys": [
+          "S212-759"
+        ]
+      },
+      "Motif D1651.12: D1651.12. Box can be opened only by right person. (Cf. D1170.) (D. Magic. > D800–D1699. Magic objects. > D1600–D1699. Characteristics of magic objects.)": {
+        "evidence_keys": [
+          "S3741-3892"
+        ]
+      },
+      "Motif B551.5: B551.5. Turtle (tortoise) carries person across river (ocean). (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)": {
+        "evidence_keys": [
+          "S832-1311"
+        ]
+      },
+      "Motif B375.1.1: B375.1.1. Grateful fish grants mad hero his wish: to impregnate a princess. Later the fish saves the hero and his family from death at sea. (B. Animals. > B300–B599. Friendly animals. > B350–B399. Grateful animals.)": {
+        "evidence_keys": [
+          "S832-1311"
+        ]
+      }
+    }
+  },
+  "analysis": {
+    "propp_functions": [
+      {
+        "id": "daa1cf41-674e-4ff1-b9ab-6e92289638e7",
+        "fn": "RESCUE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 212,
+          "end": 759,
+          "text": "小さいかめの子を一ぴきつかまえて、棒ぼうでつついたり、石でたたいたり、さんざんにいじめているのです。浦島は見かねて、\n「まあ、そんなかわいそうなことをするものではない。いい子だから」\nと、とめましたが、子どもたちはきき入れようともしないで、\n「なんだい。なんだい、かまうもんかい」\nといいながら、またかめの子を、あおむけにひっくりかえして、足でけったり、砂すなのなかにうずめたりしました。浦島はますますかわいそうにおもって、\n「じゃあ、おじさんがおあしをあげるから、そのかめの子を売っておくれ」\nといいますと、こどもたちは、\n「うんうん、おあしをくれるならやってもいい」\nといって、手を出しました。そこで浦島はおあしをやってかめの子をもらいうけました。\n　子どもたちは、\n「おじさん、ありがとう。また買っておくれよ」\nと、わいわいいいながら、行ってしまいました。\n　そのあとで浦島は、こうらからそっと出したかめの首くびをやさしくなでてやって、\n「やれやれ、あぶないところだった。さあもうお帰りお帰り」\nといって、わざわざ、かめを海ばたまで持って行ってはなしてやりました。かめはさもうれしそうに、首や手足をうごかして、やがて、ぶくぶくあわをたてながら、水のなかにふかくしずんで行ってしまいました。"
+        },
+        "evidence": "小さいかめの子を一ぴきつかまえて、棒ぼうでつついたり、石でたたいたり、さんざんにいじめているのです。浦島は見かねて、\n「まあ、そんなかわいそうなことをするものではない。いい子だから」\nと、とめましたが",
+        "narrative_event_id": "afb9eb75-914b-47c9-8cb5-a76a8599a588"
+      },
+      {
+        "id": "a0982fc3-c84f-47be-80e7-d3625c7828ff",
+        "fn": "GUIDANCE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 832,
+          "end": 1311,
+          "text": "ますと、ふとうしろのほうで\n「浦島さん、浦島さん」\nとよぶ声がしました。おやとおもってふりかえってみますと、だれも人のかげは見えません。その代かわり、いつのまにか、一ぴきのかめが、舟のそばにきていました。\n　浦島がふしぎそうな顔をしていると、\n「わたくしは、先日助たすけていただいたかめでございます。きょうはちょっとそのお礼れいにまいりました」\n　かめがこういったので、浦島はびっくりしました。\n「まあ、そうかい。わざわざ礼なんぞいいにくるにはおよばないのに」\n「でも、ほんとうにありがとうございました。ときに、浦島さん、あなたはりゅう宮ぐうをごらんになったことがありますか」\n「いや、話にはきいているが、まだ見たことはないよ」\n「ではほんのお礼のしるしに、わたくしがりゅう宮を見せて上げたいとおもいますがいかがでしょう」\n「へえ、それはおもしろいね。ぜひ行ってみたいが、それはなんでも海の底にあるということではないか。どうして行くつもりだね。わたしにはとてもそこまでおよいでは行けないよ」\n「なに、わけはございません。わたくしの背中せなかにおのりください」"
+        },
+        "evidence": "ますと、ふとうしろのほうで\n「浦島さん、浦島さん」\nとよぶ声がしました。おやとおもってふりかえってみますと、だれも人のかげは見えません。その代かわり、いつのまにか、一ぴきのかめが、舟のそばにきていまし",
+        "narrative_event_id": "dd3c87eb-76af-4dc5-b6f9-7e392e27c449"
+      },
+      {
+        "id": "d401f404-223d-42c0-86de-dcd12f038ed3",
+        "fn": "INTERDICTION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 3741,
+          "end": 3892,
+          "text": "「これは玉手箱たまてばこといって、なかには、人間のいちばんだいじなたからがこめてございます。これをおわかれのしるしにさし上げますから、お持ちかえりくださいまし。ですが、あなたがもういちどりゅう宮ぐうへ帰ってきたいとおぼしめすなら、どんなことがあっても、けっしてこの箱をあけてごらんになってはいけません」"
+        },
+        "evidence": "「これは玉手箱たまてばこといって、なかには、人間のいちばんだいじなたからがこめてございます。これをおわかれのしるしにさし上げますから、お持ちかえりくださいまし。ですが、あなたがもういちどりゅう宮ぐうへ",
+        "narrative_event_id": "9e08d3dd-f787-4b15-ab8d-d1bd7187c30f"
+      },
+      {
+        "id": "fdcab820-b7c0-4e61-a91d-48f16c81212d",
+        "fn": "VIOLATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 5586,
+          "end": 5626,
+          "text": "浦島は、うっかり乙姫おとひめさまにいわれたことはわすれて、箱のふたをとりました。"
+        },
+        "evidence": "浦島は、うっかり乙姫おとひめさまにいわれたことはわすれて、箱のふたをとりました。",
+        "narrative_event_id": "cc52e33e-609e-4e8e-b0d0-3b6692ffc768"
+      },
+      {
+        "id": "84562e29-8ef4-4475-90cf-ad1a4988d0be",
+        "fn": "PUNISHMENT",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 5626,
+          "end": 5790,
+          "text": "するとむらさき色の雲が、なかからむくむく立ちのぼって、それが顔にかかったかとおもうと、すうっと消えて行って箱のなかにはなんにものこっていませんでした。その代かわり、いつのまにか顔じゅうしわになって、手も足もちぢかまって、きれいなみぎわの水にうつった影かげを見ると、髪かみもひげも、まっしろな、かわいいおじいさんになっていました。"
+        },
+        "evidence": "するとむらさき色の雲が、なかからむくむく立ちのぼって、それが顔にかかったかとおもうと、すうっと消えて行って箱のなかにはなんにものこっていませんでした。その代かわり、いつのまにか顔じゅうしわになって、手",
+        "narrative_event_id": "073430b2-729a-42aa-83ef-5fcad96b5979"
+      }
+    ],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {
+        "S173-233": "これは不思議な石うすでな、右へ回せば欲しい物が出て、左へ回せば止まるんじゃ。止めるまで出続けるから、気をつけるんじゃぞ",
+        "S257-315": "The man tried turning the stone mill, and white rice came out in a crunching sound."
+      },
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

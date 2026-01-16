@@ -1,0 +1,721 @@
+{
+  "version": "3.0",
+  "metadata": {
+    "id": "EN_004_Punchkin",
+    "title": "Punchkin",
+    "culture": "Indian",
+    "annotator": "Deb",
+    "date_annotated": "2026-01-12",
+    "confidence": 0.8
+  },
+  "source_info": {
+    "language": "",
+    "type": "",
+    "reference_uri": "datasets/IndianTales/texts/EN_004_Punchkin.txt"
+  },
+  "characters": [
+    {
+      "name": "Balna's Son",
+      "alias": "Balna's Son",
+      "archetype": "Hero"
+    },
+    {
+      "name": "Balna",
+      "alias": "The Youngest Princess",
+      "archetype": "Other"
+    },
+    {
+      "name": "Punchkin",
+      "alias": "The Fakir",
+      "archetype": "Villain"
+    },
+    {
+      "name": "The Ranee",
+      "alias": "The Prudhan's Widow",
+      "archetype": "Villain"
+    },
+    {
+      "name": "The Raja",
+      "alias": "Father",
+      "archetype": "Other"
+    },
+    {
+      "name": "Malee's Wife",
+      "alias": "",
+      "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "Eagles",
+      "alias": "",
+      "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "Seven Princes",
+      "alias": "The Uncles",
+      "archetype": "Other"
+    },
+    {
+      "name": "dead mother",
+      "alias": "",
+      "archetype": "Other"
+    },
+    {
+      "name": "self",
+      "alias": "Balna's Son",
+      "archetype": "Other"
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "223870ef-02cc-4753-8864-a9991c252bfa",
+      "text_span": {
+        "start": 3470,
+        "end": 3676
+      },
+      "event_type": "Initial Situation",
+      "description": "The stepmother mistreats the seven princesses, starving them.",
+      "agents": [
+        "The Ranee"
+      ],
+      "targets": [
+        "Balna"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [
+        {
+          "agent": "The Ranee",
+          "target": "Balna",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "parent_child",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "challenge",
+        "context": "",
+        "status": "success",
+        "function": "trigger"
+      }
+    },
+    {
+      "id": "96bf6836-70b3-42d3-ac96-60fe24ac3441",
+      "text_span": {
+        "start": 4147,
+        "end": 4508
+      },
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "The spirit of the dead mother provides food via a tree and later a tank of cream.",
+      "agents": [
+        "dead mother"
+      ],
+      "targets": [
+        "Balna"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationships": [
+        {
+          "agent": "dead mother",
+          "target": "Balna",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "parent_child",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": "setup"
+      }
+    },
+    {
+      "id": "8eeec2f9-f063-42e1-a189-72609b6f7726",
+      "text_span": {
+        "start": 4147,
+        "end": 4508
+      },
+      "event_type": "OTHER",
+      "description": "To save them from the stepmother's demand for their blood, the father abandons them in the jungle.",
+      "agents": [
+        "The Raja"
+      ],
+      "targets": [
+        "Balna"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationships": [
+        {
+          "agent": "The Raja",
+          "target": "Balna",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "parent_child",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "defend",
+        "context": "",
+        "status": "success",
+        "function": "trigger"
+      }
+    },
+    {
+      "id": "0f670608-3531-4c05-876c-30e1af2d9668",
+      "text_span": {
+        "start": 10407,
+        "end": 10753
+      },
+      "event_type": "WEDDING",
+      "description": "The seven princes find the abandoned sisters and marry them.",
+      "agents": [
+        "Seven Princes"
+      ],
+      "targets": [
+        "Balna"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationships": [
+        {
+          "agent": "Seven Princes",
+          "target": "Balna",
+          "relationship_level1": "Romance",
+          "relationship_level2": "lover",
+          "sentiment": "romantic"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "reconcile",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      }
+    },
+    {
+      "id": "4c5b3fd4-9db7-430c-aa79-913e950088a0",
+      "text_span": {
+        "start": 11534,
+        "end": 11861
+      },
+      "event_type": "ABSENTATION",
+      "description": "The husbands disappear while hunting (captured by Punchkin).",
+      "agents": [
+        "Punchkin"
+      ],
+      "targets": [
+        "Seven Princes"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationships": [
+        {
+          "agent": "Punchkin",
+          "target": "Seven Princes",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "stranger",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": "trigger"
+      }
+    },
+    {
+      "id": "4b330c3d-3bf5-417c-b2a1-fdfaa30158de",
+      "text_span": {
+        "start": 12586,
+        "end": 13524
+      },
+      "event_type": "VILLAINY",
+      "description": "Punchkin kidnaps Balna after she refuses to marry him.",
+      "agents": [
+        "Punchkin"
+      ],
+      "targets": [
+        "Balna"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6,
+      "relationships": [
+        {
+          "agent": "Punchkin",
+          "target": "Balna",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": "trigger"
+      }
+    },
+    {
+      "id": "13d40aad-1c24-4933-8afc-5539d7d583d0",
+      "text_span": {
+        "start": 14409,
+        "end": 15171
+      },
+      "event_type": "DEPARTURE",
+      "description": "Balna's son leaves home to rescue his family.",
+      "agents": [
+        "Balna's Son"
+      ],
+      "targets": [
+        "self"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 7,
+      "relationships": [
+        {
+          "agent": "Balna's Son",
+          "target": "self",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "parent_child",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "travel",
+        "context": "",
+        "status": "attempt",
+        "function": "character_arc"
+      }
+    },
+    {
+      "id": "ef109007-4f2f-4157-896d-ad882fce1d1f",
+      "text_span": {
+        "start": 16832,
+        "end": 16918
+      },
+      "event_type": "GUIDANCE",
+      "description": "The gardener's wife helps the prince disguise himself to enter Punchkin's domain.",
+      "agents": [
+        "Malee's Wife"
+      ],
+      "targets": [
+        "Balna's Son"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 8,
+      "relationships": [
+        {
+          "agent": "Malee's Wife",
+          "target": "Balna's Son",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "friend",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": "setup"
+      }
+    },
+    {
+      "id": "231d1e27-59aa-40e5-bb94-9e0a147b1402",
+      "text_span": {
+        "start": 18517,
+        "end": 19662
+      },
+      "event_type": "RECONNAISSANCE",
+      "description": "The Prince identifies himself to his mother; she agrees to trick Punchkin into revealing the secret of his immortality",
+      "agents": [
+        "Balna's Son"
+      ],
+      "targets": [
+        "Balna"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 9,
+      "relationships": [
+        {
+          "agent": "Balna's Son",
+          "target": "Balna",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "parent_child",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "plan",
+        "context": "",
+        "status": "success",
+        "function": "climax"
+      }
+    },
+    {
+      "id": "57e15be1-284c-44b9-a711-5771e3021925",
+      "text_span": {
+        "start": 19426,
+        "end": 20906
+      },
+      "event_type": "COMPLICITY",
+      "description": "Balna tricks Punchkin into revealing that his soul is hidden in a parrot in a distant jungle.",
+      "agents": [
+        "Balna"
+      ],
+      "targets": [
+        "Punchkin"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 10,
+      "relationships": [
+        {
+          "agent": "Balna",
+          "target": "Punchkin",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "success",
+        "function": "climax"
+      }
+    },
+    {
+      "id": "cde0dc9e-abc1-4bc4-b8c2-23f0b9bd9bec",
+      "text_span": {
+        "start": 21993,
+        "end": 22617
+      },
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "The Prince saves eaglets from a serpent; the eagles fly him to the location of the parrot.",
+      "agents": [
+        "Eagles"
+      ],
+      "targets": [
+        "Balna's Son"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 11,
+      "relationships": [
+        {
+          "agent": "Eagles",
+          "target": "Balna's Son",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "friend",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": "setup"
+      }
+    },
+    {
+      "id": "4389d6bc-a625-4299-9921-f7b5e12a6d37",
+      "text_span": {
+        "start": 24445,
+        "end": 26084
+      },
+      "event_type": "VICTORY",
+      "description": "The Prince forces Punchkin to restore the victims, then kills the parrot, which kills Punchkin.",
+      "agents": [
+        "Balna's Son"
+      ],
+      "targets": [
+        "Punchkin"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 12,
+      "relationships": [
+        {
+          "agent": "Balna's Son",
+          "target": "Punchkin",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      }
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "HAPPY_ENDING",
+    "key_values": [
+      "CUNNING",
+      "LOYALTY",
+      "JUSTICE",
+      "COURAGE"
+    ],
+    "motif_type": [
+      "Motif T69.1.2: T69.1.2. Seven princesses sought by seven princes. (T. Sex. > T0–T99. Love.)",
+      "Motif E715.1.3.2: E715.1.3.2. Ogre with life in parrot, speaks from inside parrot. (E. The dead. > E700–E799. The soul.)"
+    ],
+    "atu_categories": [
+      "ATU 610: The Healing Fruit (TALES OF MAGIC > Magic Objects (560-649))"
+    ],
+    "obstacle_thrower": [],
+    "helper_type": [],
+    "thinking_process": "",
+    "atu_evidence": {
+      "ATU 610: The Healing Fruit (TALES OF MAGIC > Magic Objects (560-649))": {
+        "evidence_keys": [
+          "S24445-26084"
+        ]
+      }
+    },
+    "motif_evidence": {
+      "Motif T69.1.2: T69.1.2. Seven princesses sought by seven princes. (T. Sex. > T0–T99. Love.)": {
+        "evidence_keys": [
+          "S10407-10753"
+        ]
+      },
+      "Motif E715.1.3.2: E715.1.3.2. Ogre with life in parrot, speaks from inside parrot. (E. The dead. > E700–E799. The soul.)": {
+        "evidence_keys": [
+          "S19426-20906"
+        ]
+      }
+    }
+  },
+  "analysis": {
+    "propp_functions": [
+      {
+        "id": "c713faa4-7455-44df-9a03-72f63745ee33",
+        "fn": "Initial Situation",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 3470,
+          "end": 3676,
+          "text": "and instead of being grateful to them for their kindness to her, she did all she could to make them miserable. She gave them nothing but bread to eat, and very little of that, and very little water to drink"
+        },
+        "evidence": "The stepmother mistreats the seven princesses, starving them.",
+        "narrative_event_id": "223870ef-02cc-4753-8864-a9991c252bfa"
+      },
+      {
+        "id": "63f31f3e-1679-4689-bc31-0f3384db98be",
+        "fn": "RECEIPT_OF_AGENT",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 4147,
+          "end": 4508,
+          "text": " a beautiful pomelo tree grew up out of the grave, covered with fresh ripe pomeloes, and the children satisfied their hunger by eating some of the fruit, and every day after this, instead of trying to eat the bad dinner their step-mother provided for them, they used to go out to their mother's grave and eat the pomeloes which grew there on the beautiful tree."
+        },
+        "evidence": "The spirit of the dead mother provides food via a tree and later a tank of cream.",
+        "narrative_event_id": "96bf6836-70b3-42d3-ac96-60fe24ac3441"
+      },
+      {
+        "id": "1f2cb5a2-7905-4c3f-9355-3b3e4955c866",
+        "fn": "WEDDING",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 10407,
+          "end": 10753,
+          "text": "So the seven Princes rode through the wood until they came to the place where the seven Princesses sat crying and wringing their hands. At the sight of them the young Princes were very much astonished, and still more so on learning their story; and they settled that each should take one of these poor forlorn ladies home with him, and marry her."
+        },
+        "evidence": "The seven princes find the abandoned sisters and marry them.",
+        "narrative_event_id": "0f670608-3531-4c05-876c-30e1af2d9668"
+      },
+      {
+        "id": "54455acf-8f8b-4540-9576-93369a965574",
+        "fn": "ABSENTATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 11534,
+          "end": 11861,
+          "text": "They had thus lived very happily for some time, when one fine day the seventh Prince (Balna's husband) said he would go out hunting, and away he went; and they waited long for him, but he never came back. Then his six brothers said they would go and see what had become of him; and they went away, but they also did not return."
+        },
+        "evidence": "The husbands disappear while hunting (captured by Punchkin).",
+        "narrative_event_id": "4c5b3fd4-9db7-430c-aa79-913e950088a0"
+      },
+      {
+        "id": "699f2464-97cf-4fe1-90c9-7746f7d66ae2",
+        "fn": "VILLAINY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 12586,
+          "end": 13524,
+          "text": "Punchkin Fakir wandered through the palace, and saw many beautiful things there, till at last he reached the room where Balna sat singing beside her little boy's cradle. The Magician thought her more beautiful than all the other beautiful things he had seen, insomuch that he asked her to go home with him and to marry him. But she said, \"My husband, I fear, is dead, but my little boy is still quite young; I will stay here and teach him to grow up a clever man, and when he is grown up he shall go out into the world, and try and learn tidings of his father. Heaven forbid that I should ever leave him, or marry you.\" At these words the Magician was very angry, and turned her into a little black dog, and led her away; saying, \"Since you will not come with me of your own free will, I will make you.\" So the poor Princess was dragged away, without any power of effecting an escape, or of letting her sisters know what had become of her"
+        },
+        "evidence": "Punchkin kidnaps Balna after she refuses to marry him.",
+        "narrative_event_id": "4b330c3d-3bf5-417c-b2a1-fdfaa30158de"
+      },
+      {
+        "id": "211e5cfc-f372-4b0a-8054-4a1c41d0648a",
+        "fn": "DEPARTURE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 14409,
+          "end": 15171,
+          "text": "Thus time went on, till Balna's son was fourteen years old. Then, one day, his aunts told him the history of the family; and no sooner did he hear it, than he was seized with a great desire to go in search of his father and mother and uncles, and if he could find them alive to bring them home again. His aunts, on learning his determination, were much alarmed and tried to dissuade him, saying, \"We have lost our husbands, and our sister and her husband, and you are now our sole hope; if you go away, what shall we do?\" But he replied, \"I pray you not to be discouraged; I will return soon, and if it is possible bring my father and mother and uncles with me.\" So he set out on his travels; but for some months he could learn nothing to help him in his search."
+        },
+        "evidence": "Balna's son leaves home to rescue his family.",
+        "narrative_event_id": "13d40aad-1c24-4933-8afc-5539d7d583d0"
+      },
+      {
+        "id": "664763ec-240d-4f65-b381-0383004daf7c",
+        "fn": "GUIDANCE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 16832,
+          "end": 16918,
+          "text": "So the Malee's wife dressed him up in a saree, and pretended that he was her daughter."
+        },
+        "evidence": "The gardener's wife helps the prince disguise himself to enter Punchkin's domain.",
+        "narrative_event_id": "ef109007-4f2f-4157-896d-ad882fce1d1f"
+      },
+      {
+        "id": "cfdb5a0e-5392-43e4-b6c8-38c3d15babf2",
+        "fn": "RECONNAISSANCE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 18517,
+          "end": 19662,
+          "text": "It fell with a clang on the floor, and Balna, looking to see what made the strange sound, found the little ring tied to the flowers. On recognising it, she at once believed the story her son told her of his long search, and begged him to advise her as to what she had better do; at the same time entreating him on no account to endanger his life by trying to rescue her. She told him that for twelve long years the Magician had kept her shut up in the tower because she refused to marry him, and she was so closely guarded that she saw no hope of release.\nNow Balna's son was a bright, clever boy, so he said, \"Do not fear, dear mother; the first thing to do is to discover how far the Magician's power extends, in order that we may be able to liberate my father and uncles, whom he has imprisoned in the form of rocks and trees. You have spoken to him angrily for twelve long years; now rather speak kindly. Tell him you have given up all hopes of again seeing the husband you have so long mourned, and say you are willing to marry him. Then endeavour to find out what his power consists in, and whether he is immortal, or can be put to death.\""
+        },
+        "evidence": "The Prince identifies himself to his mother; she agrees to trick Punchkin into revealing the secret of his immortality",
+        "narrative_event_id": "231d1e27-59aa-40e5-bb94-9e0a147b1402"
+      },
+      {
+        "id": "35710852-279a-48c4-9003-30ca454e5bcb",
+        "fn": "COMPLICITY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 19426,
+          "end": 20906,
+          "text": "Tell him you have given up all hopes of again seeing the husband you have so long mourned, and say you are willing to marry him. Then endeavour to find out what his power consists in, and whether he is immortal, or can be put to death.\"\nBalna determined to take her son's advice; and the next day sent for Punchkin, and spoke to him as had been suggested.\nThe Magician, greatly delighted, begged her to allow the wedding to take place as soon as possible.\nBut she told him that before she married him he must allow her a little more time, in which she might make his acquaintance, and that, after being enemies so long, their friendship could but strengthen by degrees. \"And do tell me,\" she said, \"are you quite immortal? Can death never touch you? And are you too great an enchanter ever to feel human suffering?\"\n\"Why do you ask?\" said he.\n\"Because,\" she replied, \"if I am to be your wife, I would fain know all about you, in order, if any calamity threatens you, to overcome, or if possible to avert it.\"\n\"It is true,\" he added, \"that I am not as others. Far, far away, hundreds of thousands of miles from this, there lies a desolate country covered with thick jungle. In the midst of the jungle grows a circle of palm trees, and in the centre of the circle stand six chattees full of water, piled one above another: below the sixth chattee is a small cage which contains a little green parrot; on the life of the parrot depends my life; and if the parrot is killed I must die"
+        },
+        "evidence": "Balna tricks Punchkin into revealing that his soul is hidden in a parrot in a distant jungle.",
+        "narrative_event_id": "57e15be1-284c-44b9-a711-5771e3021925"
+      },
+      {
+        "id": "f470941c-7fc4-4a06-8f53-92a4e584c31a",
+        "fn": "RECEIPT_OF_AGENT",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 21993,
+          "end": 22617,
+          "text": "The Prince seeing the danger of the young birds, drew his sword, and killed the serpent; at the same moment a rushing sound was heard in the air, and the two old eagles, who had been out hunting for food for their young ones, returned. They quickly saw the dead serpent and the young Prince standing over it; and the old mother eagle said to him, \"Dear boy, for many years all our young ones have been devoured by that cruel serpent; you have now saved the lives of our children; whenever you are in need, therefore, send to us and we will help you; and as for these little eagles, take them, and let them be your servants.\""
+        },
+        "evidence": "The Prince saves eaglets from a serpent; the eagles fly him to the location of the parrot.",
+        "narrative_event_id": "cde0dc9e-abc1-4bc4-b8c2-23f0b9bd9bec"
+      },
+      {
+        "id": "369c545b-281d-4bfe-93f7-2e19505921a1",
+        "fn": "VICTORY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 24445,
+          "end": 26084,
+          "text": "The Prince answered, \"Let the seven Raja's sons whom you turned into rocks and trees be instantly liberated.\"\n\"It is done as you desire,\" said the Magician, \"only give me my parrot.\" And with that, by a stroke of his wand, Balna's husband and his brothers resumed their natural shapes. \"Now, give me my parrot,\" repeated Punchkin.\n\"Not so fast, my master,\" rejoined the Prince; \"I must first beg that you will restore to life all whom you have thus imprisoned.\"\nThe Magician immediately waved his wand again; and, whilst he cried, in an imploring voice, \"Give me my parrot!\" the whole garden became suddenly alive: where rocks, and stones, and trees had been before, stood Rajas, and Punts, and Sirdars, and mighty men on prancing horses, and jewelled pages, and troops of armed attendants.\n\"Give me my parrot!\" cried Punchkin. Then the boy took hold of the parrot, and tore off one of its wings; and as he did so the Magician's right arm fell off.\nPunchkin then stretched out his left arm, crying, \"Give me my parrot!\" The Prince pulled off the parrot's second wing, and the Magician's left arm tumbled off.\n\"Give me my parrot!\" cried he, and fell on his knees. The Prince pulled off the parrot's right leg, the Magician's right leg fell off: the Prince pulled off the parrot's left leg, down fell the Magician's left.\nNothing remained of him save the limbless body and the head; but still he rolled his eyes, and cried, \"Give me my parrot!\" \"Take your parrot, then,\" cried the boy, and with that he wrung the bird's neck, and threw it at the Magician; and, as he did so, Punchkin's head twisted round, and, with a fearful groan, he died!"
+        },
+        "evidence": "The Prince forces Punchkin to restore the victims, then kills the parrot, which kills Punchkin.",
+        "narrative_event_id": "4389d6bc-a625-4299-9921-f7b5e12a6d37"
+      }
+    ],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

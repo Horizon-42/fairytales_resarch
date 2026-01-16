@@ -1,0 +1,86 @@
+{
+  "version": "3.0",
+  "metadata": {
+    "id": "CH_301_神犬盘瓠",
+    "title": "神犬盘瓠",
+    "culture": "Chinese",
+    "annotator": "",
+    "date_annotated": "2026-01-15",
+    "confidence": 0.8
+  },
+  "source_info": {
+    "language": "zh",
+    "type": "full_text",
+    "reference_uri": "datasets/ChineseTales/texts/CH_301_神犬盘瓠.txt"
+  },
+  "characters": [],
+  "narrative_events": [
+    {
+      "id": "3c7ff483-415d-4b19-9289-2bd981a908de",
+      "text_span": null,
+      "event_type": "OTHER",
+      "description": "",
+      "agents": [],
+      "targets": [],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "1b695678-432d-4cdc-8500-0202517ff2e4",
+      "text_span": null,
+      "event_type": "OTHER",
+      "description": "",
+      "agents": [],
+      "targets": [],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [],
+    "motif_type": [],
+    "atu_categories": [],
+    "obstacle_thrower": [],
+    "helper_type": [],
+    "thinking_process": "",
+    "atu_evidence": {},
+    "motif_evidence": {}
+  },
+  "analysis": {
+    "propp_functions": [],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

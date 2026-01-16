@@ -1,0 +1,685 @@
+{
+  "version": "3.0",
+  "metadata": {
+    "id": "jp_008",
+    "title": "",
+    "culture": "Japanese",
+    "annotator": "",
+    "date_annotated": "2025-12-22",
+    "confidence": 0.8
+  },
+  "source_info": {
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "datasets/Japanese/texts/jp_008.txt"
+  },
+  "characters": [
+    {
+      "name": "おじいさん",
+      "alias": "",
+      "archetype": "Hero"
+    },
+    {
+      "name": "おばあさん",
+      "alias": "",
+      "archetype": "Villain"
+    },
+    {
+      "name": "すずめ",
+      "alias": "",
+      "archetype": "Sidekick/Helper"
+    },
+    {
+      "name": "お化ばけ",
+      "alias": "",
+      "archetype": "Shadow"
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "f4f8dbc3-6a45-4765-aa1a-7f5570ff428a",
+      "text_span": {
+        "start": 37,
+        "end": 92
+      },
+      "event_type": "Initial Situation",
+      "description": "子供こどもがないものですから、おじいさんはすずめの子を一羽わ、だいじにして、かごに入いれて飼かっておきました。",
+      "agents": [
+        "おじいさん"
+      ],
+      "targets": [
+        "すずめ"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "すずめ",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "db726690-5e44-42fe-81d3-d3c94e70cdf0",
+      "text_span": {
+        "start": 315,
+        "end": 423
+      },
+      "event_type": "VILLAINY",
+      "description": "いじのわるいおばあさんはたいへんおこって、かわいそうに、小さなすずめをつかまえて、むりに口をあかせながら、\n「この舌したがそんなわるさをしたのか。」\n　と言いって、はさみで舌したをちょん切ぎってしまい",
+      "agents": [
+        "おばあさん"
+      ],
+      "targets": [
+        "すずめ"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationships": [
+        {
+          "agent": "おばあさん",
+          "target": "すずめ",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "5a957dc2-dc4d-406c-a157-7770e8593146",
+      "text_span": {
+        "start": 424,
+        "end": 498
+      },
+      "event_type": "DEPARTURE",
+      "description": "「さあ、どこへでも出ていけ。」\n　と言いって放はなしました。すずめは悲かなしそうな声こえで、「いたい、いたい。」と鳴なきながら、飛とんでいきました。",
+      "agents": [
+        "すずめ"
+      ],
+      "targets": [],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationships": [
+        {
+          "agent": "すずめ",
+          "target": "",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "flee",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "98c41ac8-6c99-4042-81b6-b933d359732e",
+      "text_span": {
+        "start": 620,
+        "end": 668
+      },
+      "event_type": "MEDIATION",
+      "description": "おじいさんはおどろいて、\n「おばあさん、おばあさん、すずめはどこへ行ったろう。」\n　と言いいます",
+      "agents": [
+        "おじいさん"
+      ],
+      "targets": [
+        "すずめ"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "すずめ",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "investigate",
+        "context": "",
+        "status": "attempt",
+        "function": ""
+      }
+    },
+    {
+      "id": "21704768-da1a-4b91-a086-6259d7ac710e",
+      "text_span": {
+        "start": 858,
+        "end": 935
+      },
+      "event_type": "DEPARTURE",
+      "description": "夜よがあけるとさっそく出かけていきました。おじいさんは道々みちみち、つえをついて、\n「舌切したきりすずめ、\nお宿やどはどこだ、\nチュウ、チュウ、チュウ。」",
+      "agents": [
+        "おじいさん"
+      ],
+      "targets": [
+        "すずめ"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "すずめ",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "travel",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "97161bb6-848a-4abc-9b95-1d8cce8191c5",
+      "text_span": {
+        "start": 1023,
+        "end": 1058
+      },
+      "event_type": "GUIDANCE",
+      "description": "「舌切したきりすずめ、\nお宿やどはここよ。\nチュウ、チュウ、チュウ。」",
+      "agents": [
+        "すずめ"
+      ],
+      "targets": [
+        "おじいさん"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6,
+      "relationships": [
+        {
+          "agent": "すずめ",
+          "target": "おじいさん",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "77bf559e-81eb-47e7-aea4-d0ed433d61c9",
+      "text_span": {
+        "start": 1960,
+        "end": 2019
+      },
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "おじいさん、重おもいつづらに、軽かるいつづらです。どちらでもよろしい方ほうをお持もち下ください。」\n　と言いいました。",
+      "agents": [
+        "すずめ"
+      ],
+      "targets": [
+        "おじいさん"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 7,
+      "relationships": [
+        {
+          "agent": "すずめ",
+          "target": "おじいさん",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "exchange",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "72893de8-17a7-4339-b974-4e3fffda7c1a",
+      "text_span": {
+        "start": 2579,
+        "end": 2635
+      },
+      "event_type": "FIRST_FUNCTION_DONOR",
+      "description": "さっそくつづらのふたをあけますと、中から目のさめるような金銀きんぎんさんごや、宝珠ほうじゅの玉たまが出てきました",
+      "agents": [
+        "おじいさん"
+      ],
+      "targets": [
+        "おじいさん"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 8,
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "おじいさん",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "reward",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "c3acb49f-315e-483f-a668-9125eb1e0d61",
+      "text_span": {
+        "start": 2956,
+        "end": 2995
+      },
+      "event_type": "TRICKERY",
+      "description": "よしよし、これから行いって、わたしが重おもいつづらの方ほうももらってきます。」",
+      "agents": [
+        "おばあさん"
+      ],
+      "targets": [
+        "すずめ"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 9,
+      "relationships": [
+        {
+          "agent": "おばあさん",
+          "target": "すずめ",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "deceive",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "00dd948e-ff92-4959-b38b-3d79f3325c2e",
+      "text_span": {
+        "start": 4256,
+        "end": 4450
+      },
+      "event_type": "PUNISHMENT",
+      "description": "中を目のくらむような金銀きんぎんさんごと思おもいの外ほか、三みつ目め小僧こぞうだの、一ひとつ目め小僧こぞうだの、がま入道にゅうどうだの、いろいろなお化ばけがにょろにょろ、にょろにょろ飛とび出だして、\n",
+      "agents": [
+        "お化ばけ"
+      ],
+      "targets": [
+        "おばあさん"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 10,
+      "relationships": [
+        {
+          "agent": "お化ばけ",
+          "target": "おばあさん",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "63f02c88-3c50-42cd-8acb-cd5e28539966",
+      "text_span": {
+        "start": 4665,
+        "end": 4731
+      },
+      "event_type": "LIQUIDATION",
+      "description": "「やれやれ、それはひどい目にあったな。だからあんまりむじひなことをしたり、あんまり欲よくばったりするものではない。」と言いいました。",
+      "agents": [
+        "おじいさん"
+      ],
+      "targets": [
+        "おばあさん"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 11,
+      "relationships": [
+        {
+          "agent": "おじいさん",
+          "target": "おばあさん",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "HAPPY_ENDING",
+    "key_values": [
+      "OBEDIENCE",
+      "JUSTICE"
+    ],
+    "motif_type": [
+      "Motif Category: Magic",
+      "Motif Category: Marvels",
+      "Motif Q10-Q80: Rewards and Punishments > Deeds rewarded > Deeds rewarded",
+      "Motif Category: Traits of Character",
+      "Motif Q285.1.1.1: Q285.1.1.1. Man slits tongue of magpie so that it can learn to speak. His fingernails grow out like bird's claws as punishment. (Q. Rewards and punishments. > Q200–Q399. Deeds punished.)",
+      "Motif Q552.5.1: Q552.5.1. Man who cuts off tongue of swallow has dumb children. (Cf. Q285.1.1.) (Q. Rewards and punishments. > Q400–Q599. Kinds of punishment.)",
+      "Motif Q451.4.8.1: Q451.4.8.1. Tongue cut (bitten) off as punishment for unfaithfulness to wife. (Q. Rewards and punishments. > Q400–Q599. Kinds of punishment.)",
+      "Motif Q285.1.1: Q285.1.1. Punishment for cutting off bird's tongue. (Cf. Q451.4, Q552.5.1.) (Q. Rewards and punishments. > Q200–Q399. Deeds punished.)",
+      "Motif Z49.3: Z49.3. The bird indifferent to pain. A man catches a mango-bird eating mangoes and strikes it against the roots of a mango-tree. The bird cannot be made to say it suffers from the blow. In turn, he puts it in water, strikes it on the ground, a stile, a door-frame, singes its feathers, cuts it up, cooks it, and eats it. The bird always expresses indifference in a cumulative rhyme. At last the bird asks him to look out of the window, whereupon it flies out of his nose and the man dies. (Z. Miscellaneous groups of motifs. > Z0–Z99. Formulas. > Z20–Z59. Cumulative tales.)",
+      "Motif Q281.3: Q281.3. Woman eats flesh and leaves cat only bones of fish cat has caught for them. Cursed by cat. (Q. Rewards and punishments. > Q200–Q399. Deeds punished.)"
+    ],
+    "atu_categories": [
+      "ATU 901: Taming of the Shrew (REALISTIC TALES > The Obstinate Wife Learns to Obey (900-909))"
+    ],
+    "obstacle_thrower": [
+      "おばあさん"
+    ],
+    "helper_type": [
+      "HUMAN",
+      "SUPERNATURAL"
+    ],
+    "thinking_process": "本作は「動物の超自然的援助」と「欲深さへの制裁」を対比させることで、\n正直さ・思いやりが報われ、残酷さと強欲が罰せられるという\n**報酬と罰（Justice）**の道徳構造を明確に示している。",
+    "atu_evidence": {
+      "ATU 901: Taming of the Shrew (REALISTIC TALES > The Obstinate Wife Learns to Obey (900-909))": {
+        "evidence_keys": [
+          "S315-423"
+        ]
+      }
+    },
+    "motif_evidence": {
+      "Motif Q285.1.1.1: Q285.1.1.1. Man slits tongue of magpie so that it can learn to speak. His fingernails grow out like bird's claws as punishment. (Q. Rewards and punishments. > Q200–Q399. Deeds punished.)": {
+        "evidence_keys": [
+          "S315-423"
+        ]
+      },
+      "Motif Q552.5.1: Q552.5.1. Man who cuts off tongue of swallow has dumb children. (Cf. Q285.1.1.) (Q. Rewards and punishments. > Q400–Q599. Kinds of punishment.)": {
+        "evidence_keys": [
+          "S315-423"
+        ]
+      },
+      "Motif Q451.4.8.1: Q451.4.8.1. Tongue cut (bitten) off as punishment for unfaithfulness to wife. (Q. Rewards and punishments. > Q400–Q599. Kinds of punishment.)": {
+        "evidence_keys": [
+          "S315-423"
+        ]
+      },
+      "Motif Q285.1.1: Q285.1.1. Punishment for cutting off bird's tongue. (Cf. Q451.4, Q552.5.1.) (Q. Rewards and punishments. > Q200–Q399. Deeds punished.)": {
+        "evidence_keys": [
+          "S315-423"
+        ]
+      },
+      "Motif Z49.3: Z49.3. The bird indifferent to pain. A man catches a mango-bird eating mangoes and strikes it against the roots of a mango-tree. The bird cannot be made to say it suffers from the blow. In turn, he puts it in water, strikes it on the ground, a stile, a door-frame, singes its feathers, cuts it up, cooks it, and eats it. The bird always expresses indifference in a cumulative rhyme. At last the bird asks him to look out of the window, whereupon it flies out of his nose and the man dies. (Z. Miscellaneous groups of motifs. > Z0–Z99. Formulas. > Z20–Z59. Cumulative tales.)": {
+        "evidence_keys": [
+          "S315-423"
+        ]
+      },
+      "Motif Q281.3: Q281.3. Woman eats flesh and leaves cat only bones of fish cat has caught for them. Cursed by cat. (Q. Rewards and punishments. > Q200–Q399. Deeds punished.)": {
+        "evidence_keys": [
+          "S315-423"
+        ]
+      }
+    }
+  },
+  "analysis": {
+    "propp_functions": [
+      {
+        "id": "539e562f-78ca-4ca1-8ade-29c572017c68",
+        "fn": "Initial Situation",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 37,
+          "end": 92,
+          "text": "子供こどもがないものですから、おじいさんはすずめの子を一羽わ、だいじにして、かごに入いれて飼かっておきました。"
+        },
+        "evidence": "子供こどもがないものですから、おじいさんはすずめの子を一羽わ、だいじにして、かごに入いれて飼かっておきました。",
+        "narrative_event_id": "f4f8dbc3-6a45-4765-aa1a-7f5570ff428a"
+      },
+      {
+        "id": "b1929550-a5f8-4401-bf75-0ea2943fe326",
+        "fn": "VILLAINY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 315,
+          "end": 423,
+          "text": "いじのわるいおばあさんはたいへんおこって、かわいそうに、小さなすずめをつかまえて、むりに口をあかせながら、\n「この舌したがそんなわるさをしたのか。」\n　と言いって、はさみで舌したをちょん切ぎってしまいました。そして、"
+        },
+        "evidence": "いじのわるいおばあさんはたいへんおこって、かわいそうに、小さなすずめをつかまえて、むりに口をあかせながら、\n「この舌したがそんなわるさをしたのか。」\n　と言いって、はさみで舌したをちょん切ぎってしまい",
+        "narrative_event_id": "db726690-5e44-42fe-81d3-d3c94e70cdf0"
+      },
+      {
+        "id": "444cc8b0-5c57-4895-9eb4-7d0db0b10162",
+        "fn": "DEPARTURE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 424,
+          "end": 498,
+          "text": "「さあ、どこへでも出ていけ。」\n　と言いって放はなしました。すずめは悲かなしそうな声こえで、「いたい、いたい。」と鳴なきながら、飛とんでいきました。"
+        },
+        "evidence": "「さあ、どこへでも出ていけ。」\n　と言いって放はなしました。すずめは悲かなしそうな声こえで、「いたい、いたい。」と鳴なきながら、飛とんでいきました。",
+        "narrative_event_id": "5a957dc2-dc4d-406c-a157-7770e8593146"
+      },
+      {
+        "id": "d05d3133-1fa1-468e-9606-9d5f2c4c5b09",
+        "fn": "DEPARTURE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 858,
+          "end": 935,
+          "text": "夜よがあけるとさっそく出かけていきました。おじいさんは道々みちみち、つえをついて、\n「舌切したきりすずめ、\nお宿やどはどこだ、\nチュウ、チュウ、チュウ。」"
+        },
+        "evidence": "夜よがあけるとさっそく出かけていきました。おじいさんは道々みちみち、つえをついて、\n「舌切したきりすずめ、\nお宿やどはどこだ、\nチュウ、チュウ、チュウ。」",
+        "narrative_event_id": "21704768-da1a-4b91-a086-6259d7ac710e"
+      },
+      {
+        "id": "5e77a804-715c-41ce-8689-4f94fab16989",
+        "fn": "GUIDANCE",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1023,
+          "end": 1058,
+          "text": "「舌切したきりすずめ、\nお宿やどはここよ。\nチュウ、チュウ、チュウ。」"
+        },
+        "evidence": "「舌切したきりすずめ、\nお宿やどはここよ。\nチュウ、チュウ、チュウ。」",
+        "narrative_event_id": "97161bb6-848a-4abc-9b95-1d8cce8191c5"
+      },
+      {
+        "id": "fa32fb45-b684-48d4-a9bd-cf9706123747",
+        "fn": "RECEIPT_OF_AGENT",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 1960,
+          "end": 2019,
+          "text": "おじいさん、重おもいつづらに、軽かるいつづらです。どちらでもよろしい方ほうをお持もち下ください。」\n　と言いいました。"
+        },
+        "evidence": "おじいさん、重おもいつづらに、軽かるいつづらです。どちらでもよろしい方ほうをお持もち下ください。」\n　と言いいました。",
+        "narrative_event_id": "77bf559e-81eb-47e7-aea4-d0ed433d61c9"
+      },
+      {
+        "id": "f98f1b3b-874b-4356-911c-6ed0d3ce9cf8",
+        "fn": "FIRST_FUNCTION_DONOR",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 2579,
+          "end": 2635,
+          "text": "さっそくつづらのふたをあけますと、中から目のさめるような金銀きんぎんさんごや、宝珠ほうじゅの玉たまが出てきました"
+        },
+        "evidence": "さっそくつづらのふたをあけますと、中から目のさめるような金銀きんぎんさんごや、宝珠ほうじゅの玉たまが出てきました",
+        "narrative_event_id": "72893de8-17a7-4339-b974-4e3fffda7c1a"
+      },
+      {
+        "id": "b69addf0-49e6-4351-95bd-0ab3bc81d06f",
+        "fn": "TRICKERY",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 2956,
+          "end": 2995,
+          "text": "よしよし、これから行いって、わたしが重おもいつづらの方ほうももらってきます。」"
+        },
+        "evidence": "よしよし、これから行いって、わたしが重おもいつづらの方ほうももらってきます。」",
+        "narrative_event_id": "c3acb49f-315e-483f-a668-9125eb1e0d61"
+      },
+      {
+        "id": "296f3fc3-76db-4363-8768-c7e21acb8fc3",
+        "fn": "PUNISHMENT",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 4256,
+          "end": 4450,
+          "text": "中を目のくらむような金銀きんぎんさんごと思おもいの外ほか、三みつ目め小僧こぞうだの、一ひとつ目め小僧こぞうだの、がま入道にゅうどうだの、いろいろなお化ばけがにょろにょろ、にょろにょろ飛とび出だして、\n「この欲よくばりばばあめ。」と言いいながら、こわい目をしてにらめつけるやら、気味きみの悪わるい舌したを出だして顔かおをなめるやらするので、もうおばあさんは生いきた空そらはありませんでした。"
+        },
+        "evidence": "中を目のくらむような金銀きんぎんさんごと思おもいの外ほか、三みつ目め小僧こぞうだの、一ひとつ目め小僧こぞうだの、がま入道にゅうどうだの、いろいろなお化ばけがにょろにょろ、にょろにょろ飛とび出だして、\n",
+        "narrative_event_id": "00dd948e-ff92-4959-b38b-3d79f3325c2e"
+      },
+      {
+        "id": "19e8bb48-c822-46d4-a835-18e138a0b8a9",
+        "fn": "MEDIATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 620,
+          "end": 668,
+          "text": "おじいさんはおどろいて、\n「おばあさん、おばあさん、すずめはどこへ行ったろう。」\n　と言いいます"
+        },
+        "evidence": "おじいさんはおどろいて、\n「おばあさん、おばあさん、すずめはどこへ行ったろう。」\n　と言いいます",
+        "narrative_event_id": "98c41ac8-6c99-4042-81b6-b933d359732e"
+      },
+      {
+        "id": "81bec47c-17e8-4ce1-a07b-96062c4d59ce",
+        "fn": "LIQUIDATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 4665,
+          "end": 4731,
+          "text": "「やれやれ、それはひどい目にあったな。だからあんまりむじひなことをしたり、あんまり欲よくばったりするものではない。」と言いいました。"
+        },
+        "evidence": "「やれやれ、それはひどい目にあったな。だからあんまりむじひなことをしたり、あんまり欲よくばったりするものではない。」と言いいました。",
+        "narrative_event_id": "63f02c88-3c50-42cd-8acb-cd5e28539966"
+      }
+    ],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

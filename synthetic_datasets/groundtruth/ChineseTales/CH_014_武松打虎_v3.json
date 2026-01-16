@@ -1,0 +1,101 @@
+{
+  "version": "3.0",
+  "metadata": {
+    "id": "CH_014_武松打虎",
+    "title": "武松打虎",
+    "culture": "Chinese",
+    "annotator": "",
+    "date_annotated": "2025-12-22",
+    "confidence": 0.8
+  },
+  "source_info": {
+    "language": "en",
+    "type": "summary",
+    "reference_uri": "datasets/texts/CH_014_武松打虎.txt"
+  },
+  "characters": [
+    {
+      "name": "武松",
+      "alias": "",
+      "archetype": "Hero"
+    },
+    {
+      "name": "酒倌",
+      "alias": "",
+      "archetype": "Herald"
+    },
+    {
+      "name": "老虎",
+      "alias": "吊睛白额大虎",
+      "archetype": "Guardian"
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "2f762f67-28ab-4c6d-8c8b-36a22a2dc40c",
+      "text_span": {
+        "start": 0,
+        "end": 337
+      },
+      "event_type": "gamma",
+      "description": "Hero receives warning about impending danger; Innkeeper explains wine's effects and mountain peril",
+      "agents": [
+        "武松"
+      ],
+      "targets": [
+        "酒倌"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationships": [
+        {
+          "agent": "武松",
+          "target": "酒倌",
+          "relationship_level1": "stranger",
+          "relationship_level2": "neutral",
+          "sentiment": "neutral"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "warning",
+        "status": "success",
+        "function": ""
+      }
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [],
+    "motif_type": [],
+    "atu_categories": [],
+    "obstacle_thrower": [
+      "老虎"
+    ],
+    "helper_type": [
+      "HUMAN"
+    ],
+    "thinking_process": "",
+    "atu_evidence": {},
+    "motif_evidence": {}
+  },
+  "analysis": {
+    "propp_functions": [],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

@@ -1,0 +1,301 @@
+{
+  "version": "3.0",
+  "metadata": {
+    "id": "EN_005_The_Broken_Pot",
+    "title": "The_Broken_Pot",
+    "culture": "Indian",
+    "annotator": "Deb",
+    "date_annotated": "2026-01-12",
+    "confidence": 0.9
+  },
+  "source_info": {
+    "language": "",
+    "type": "",
+    "reference_uri": "datasets/IndianTales/texts/EN_005_The_Broken_Pot.txt"
+  },
+  "characters": [
+    {
+      "name": "Svabhavakripana",
+      "alias": "A born miser",
+      "archetype": "Other"
+    },
+    {
+      "name": "pot",
+      "alias": "",
+      "archetype": "Other"
+    },
+    {
+      "name": "self",
+      "alias": "Svabhavakripana",
+      "archetype": "Other"
+    },
+    {
+      "name": "beautiful daughter",
+      "alias": "wife",
+      "archetype": "Lover"
+    },
+    {
+      "name": "I",
+      "alias": "Narrator",
+      "archetype": "Other"
+    },
+    {
+      "name": "He",
+      "alias": "Reader",
+      "archetype": "Other"
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "72f286a5-d13a-4764-ac01-65cbafa03f72",
+      "text_span": {
+        "start": 102,
+        "end": 285
+      },
+      "event_type": "Initial Situation",
+      "description": "The Brahman secures his surplus rice, setting the stage for his wealth fantasy.",
+      "agents": [
+        "Svabhavakripana"
+      ],
+      "targets": [
+        "pot"
+      ],
+      "target_type": "object",
+      "object_type": "normal_object",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": "exposition"
+      }
+    },
+    {
+      "id": "e83b2704-ad16-4535-9f1b-8bf5ea77a9ed",
+      "text_span": {
+        "start": 290,
+        "end": 857
+      },
+      "event_type": "MEDIATION",
+      "description": "He constructs an elaborate mental chain of events where the rice converts into vast wealth.",
+      "agents": [
+        "Svabhavakripana"
+      ],
+      "targets": [
+        "self"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationships": [
+        {
+          "agent": "Svabhavakripana",
+          "target": "self",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "stranger",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "plan",
+        "context": "",
+        "status": "success",
+        "function": "setup"
+      }
+    },
+    {
+      "id": "48d612d8-794f-484e-a16f-2b4801c39ef4",
+      "text_span": {
+        "start": 909,
+        "end": 1464
+      },
+      "event_type": "UNFOUNDED_CLAIMS",
+      "description": "The fantasy escalates to marriage, fatherhood, and domestic conflict.",
+      "agents": [
+        "Svabhavakripana"
+      ],
+      "targets": [
+        "beautiful daughter"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationships": [
+        {
+          "agent": "Svabhavakripana",
+          "target": "beautiful daughter",
+          "relationship_level1": "Family & Kinship",
+          "relationship_level2": "parent_child",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "",
+        "context": "",
+        "status": "success",
+        "function": "character_arc"
+      }
+    },
+    {
+      "id": "94ff8d1b-e89c-48d2-94b3-d3cc3e1451b6",
+      "text_span": {
+        "start": 1519,
+        "end": 1644
+      },
+      "event_type": "OTHER",
+      "description": "Acting out his dream physically, he kicks the pot, destroying his only real asset.",
+      "agents": [
+        "Svabhavakripana"
+      ],
+      "targets": [
+        "pot"
+      ],
+      "target_type": "object",
+      "object_type": "normal_object",
+      "instrument": "Pot",
+      "time_order": 4,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": "climax"
+      }
+    },
+    {
+      "id": "58eff05d-bc76-4b86-aa0f-3f61af4b958b",
+      "text_span": {
+        "start": 1645,
+        "end": 1761
+      },
+      "event_type": "OTHER",
+      "description": "The narrator delivers the lesson on the foolishness of counting chickens before they hatch",
+      "agents": [
+        "I"
+      ],
+      "targets": [
+        "He"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationships": [
+        {
+          "agent": "I",
+          "target": "He",
+          "relationship_level1": "Neutral",
+          "relationship_level2": "stranger",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "challenge",
+        "context": "",
+        "status": "success",
+        "function": "resolution"
+      }
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "OTHER",
+    "key_values": [
+      "OTHER"
+    ],
+    "motif_type": [
+      "Motif J2060: J2060. Absurd plans. Air-castles. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J2050–J2199. Absurd short-sightedness.)",
+      "Motif J2061: J2061. Air-castle shattered by lack of forethought. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J2050–J2199. Absurd short-sightedness.)"
+    ],
+    "atu_categories": [],
+    "obstacle_thrower": [],
+    "helper_type": [],
+    "thinking_process": "",
+    "atu_evidence": {},
+    "motif_evidence": {
+      "Motif J2060: J2060. Absurd plans. Air-castles. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J2050–J2199. Absurd short-sightedness.)": {
+        "evidence_keys": [
+          "S1645-1761"
+        ]
+      },
+      "Motif J2061: J2061. Air-castle shattered by lack of forethought. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J2050–J2199. Absurd short-sightedness.)": {
+        "evidence_keys": [
+          "S1645-1761"
+        ]
+      }
+    }
+  },
+  "analysis": {
+    "propp_functions": [
+      {
+        "id": "3fa5e91d-6fb4-4a53-ac75-3b42c08b7a8c",
+        "fn": "Initial Situation",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 102,
+          "end": 285,
+          "text": "He had collected a quantity of rice by begging, and after having dined off it, he filled a pot with what was left over. He hung the pot on a peg on the wall, placed his couch beneath,"
+        },
+        "evidence": "The Brahman secures his surplus rice, setting the stage for his wealth fantasy.",
+        "narrative_event_id": "72f286a5-d13a-4764-ac01-65cbafa03f72"
+      },
+      {
+        "id": "8fc9dc9c-5891-482d-aa4a-420110b0138f",
+        "fn": "MEDIATION",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 290,
+          "end": 857,
+          "text": "looking intently at it all the night, he thought, \"Ah, that pot is indeed brimful of rice. Now, if there should be a famine, I should certainly make a hundred rupees by it. With this I shall buy a couple of goats. They will have young ones every six months, and thus I shall have a whole herd of goats. Then, with the goats, I shall buy cows. As soon as they have calved, I shall sell the calves. Then, with the calves, I shall buy buffaloes; with the buffaloes, mares. When the mares have foaled, I shall have plenty of horses; and when I sell them, plenty of gold. "
+        },
+        "evidence": "He constructs an elaborate mental chain of events where the rice converts into vast wealth.",
+        "narrative_event_id": "e83b2704-ad16-4535-9f1b-8bf5ea77a9ed"
+      },
+      {
+        "id": "74d0e0d4-3d50-4ffd-a804-87bad9814dd6",
+        "fn": "UNFOUNDED_CLAIMS",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 909,
+          "end": 1464,
+          "text": "And then a Brahman will come to my house, and will give me his beautiful daughter, with a large dowry. She will have a son, and I shall call him Somasarman.\nWhen he is old enough to be danced on his father's knee, I shall sit with a book at the back of the stable, and while I am reading, the boy will see me, jump from his mother's lap, and run towards me to be danced on my knee. He will come too near the horse's hoof, and, full of anger, I shall call to my wife, 'Take the baby; take him!' But she, distracted by some domestic work, does not hear me. "
+        },
+        "evidence": "The fantasy escalates to marriage, fatherhood, and domestic conflict.",
+        "narrative_event_id": "48d612d8-794f-484e-a16f-2b4801c39ef4"
+      }
+    ],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}

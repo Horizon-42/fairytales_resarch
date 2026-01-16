@@ -1,0 +1,491 @@
+{
+  "version": "3.0",
+  "metadata": {
+    "id": "CH_005_白蛇传",
+    "title": "白蛇传",
+    "culture": "Chinese",
+    "annotator": "",
+    "date_annotated": "2025-12-19",
+    "confidence": 0.8
+  },
+  "source_info": {
+    "language": "zh",
+    "type": "full_text",
+    "reference_uri": "datasets/texts/CH_005_白蛇传.txt"
+  },
+  "characters": [
+    {
+      "name": "白素贞",
+      "alias": "小白蛇",
+      "archetype": "Hero"
+    },
+    {
+      "name": "捕蛇人",
+      "alias": "捕蛇者",
+      "archetype": "Villain"
+    },
+    {
+      "name": "牧童",
+      "alias": "",
+      "archetype": "Hero"
+    },
+    {
+      "name": "观世音菩萨",
+      "alias": "",
+      "archetype": "Mentor"
+    },
+    {
+      "name": "小青",
+      "alias": "青蛇; 小青蛇",
+      "archetype": "Sidekick/Helper"
+    }
+  ],
+  "narrative_events": [
+    {
+      "id": "c3fd911b-ae53-48fc-b167-0aec242ec3e6",
+      "text_span": {
+        "start": 1226,
+        "end": 1565
+      },
+      "event_type": "OTHER",
+      "description": "",
+      "agents": [],
+      "targets": [],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 10,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "f9ab0892-dd68-4578-b690-5b08921f8ccf",
+      "text_span": {
+        "start": 0,
+        "end": 77
+      },
+      "event_type": "Initial Situation",
+      "description": "女主出场; 白素贞出场",
+      "agents": [
+        "白素贞"
+      ],
+      "targets": [],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    },
+    {
+      "id": "e4dd0792-1834-444a-91fc-88f10421ffa4",
+      "text_span": {
+        "start": 78,
+        "end": 162
+      },
+      "event_type": "VILLAINY",
+      "description": "动物形态的女主被猎人抓住, 危在旦夕; 小白蛇落入捕蛇人手中,命悬一线",
+      "agents": [
+        "捕蛇人"
+      ],
+      "targets": [
+        "白素贞"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 2,
+      "relationships": [
+        {
+          "agent": "捕蛇人",
+          "target": "白素贞",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "hostile"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "ambush",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "e3db673a-1f50-48e3-9032-94ff86984368",
+      "text_span": {
+        "start": 370,
+        "end": 506
+      },
+      "event_type": "RESCUE",
+      "description": "在男主(前世)的帮助下, (动物形态的)女主从猎人手里逃出生天; 白素贞乘捕蛇人不备逃出生天",
+      "agents": [
+        "白素贞"
+      ],
+      "targets": [
+        "捕蛇人"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 4,
+      "relationships": [
+        {
+          "agent": "白素贞",
+          "target": "捕蛇人",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "flee",
+        "context": "strategic_retreat",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "fd96e43e-1204-4363-946a-f8d16a6491ee",
+      "text_span": {
+        "start": 163,
+        "end": 369
+      },
+      "event_type": "STRUGGLE",
+      "description": "正在这个时候，一阵笛声传来，有个骑着牛的牧童向捕蛇者而来。他看到捕蛇者手中的小白蛇，有些不忍心，便央求道：“叔叔，我看这蛇也怪可怜的，您行行好，放了它吧。”\n捕蛇人自然不肯答应。牧童想了想，心中有了主",
+      "agents": [
+        "牧童"
+      ],
+      "targets": [
+        "捕蛇人"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 3,
+      "relationships": [
+        {
+          "agent": "牧童",
+          "target": "捕蛇人",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "enemy",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "plot",
+        "context": "strategy",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "12cf6ff8-4514-4943-874f-5b9bee1eed80",
+      "text_span": {
+        "start": 507,
+        "end": 702
+      },
+      "event_type": "UNRECOGNIZED_ARRIVAL",
+      "description": "女主由动物形态化身为人; 白素贞修炼成人, 踏入凡尘(红尘俗世);",
+      "agents": [
+        "白素贞"
+      ],
+      "targets": [],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 5,
+      "relationships": [],
+      "action_layer": {
+        "category": "existential",
+        "type": "transform",
+        "context": "shapeshift",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "10f9ad39-cb0a-4a58-8add-ddda626924dd",
+      "text_span": {
+        "start": 703,
+        "end": 862
+      },
+      "event_type": "HERO_REACTION",
+      "description": "女主打败了潜在的对手, 但没有下死手; 白素贞遇到青蛇, 出于维护秩序的意愿, 打败了青蛇, 但没有痛下杀手",
+      "agents": [
+        "白素贞"
+      ],
+      "targets": [
+        "小青"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 6,
+      "relationships": [
+        {
+          "agent": "白素贞",
+          "target": "小青",
+          "relationship_level1": "Adversarial",
+          "relationship_level2": "rival",
+          "sentiment": "negative"
+        }
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "magical_blast",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "145e5279-1009-4bc0-afd5-9f4ed79d5663",
+      "text_span": {
+        "start": 862,
+        "end": 959
+      },
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "魔法对手在被女主击败后臣服于她; 小青臣服于白素贞",
+      "agents": [
+        "小青"
+      ],
+      "targets": [
+        "白素贞"
+      ],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 7,
+      "relationships": [
+        {
+          "agent": "小青",
+          "target": "白素贞",
+          "relationship_level1": "Social & Alliance",
+          "relationship_level2": "ally",
+          "sentiment": "positive"
+        }
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "promise",
+        "context": "oath",
+        "status": "success",
+        "function": ""
+      }
+    },
+    {
+      "id": "8d031b4b-5137-420d-a3c0-5dc850558809",
+      "text_span": {
+        "start": 960,
+        "end": 1225
+      },
+      "event_type": "",
+      "description": "水光潋滟晴方好，山色空濛雨亦奇。欲把西湖比西子，淡妆浓抹总相宜。西湖的美景总让人百看不厌，白素贞与小青姐妹俩每日便在这杭州西湖畔一边游山玩水，一边找寻白素贞的转世恩人。\n三月初三，清明节这天，姐妹两人",
+      "agents": [],
+      "targets": [],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 8,
+      "relationships": [],
+      "action_layer": {
+        "category": "",
+        "type": "",
+        "context": "",
+        "status": "",
+        "function": ""
+      }
+    }
+  ],
+  "themes_and_motifs": {
+    "ending_type": "HAPPY_REUNION",
+    "key_values": [],
+    "motif_type": [
+      "Motif B600: Marriage of person to animal. Extremely common. Only a few references (Animal Motifs > Marriage of person to animal > Marriage of person to animal.)",
+      "Motif B190: Magic animals: miscellaneous motifs. (Animal Motifs > Magic animals > Magic animals)",
+      "Motif B91.7: B91.7. Serpent is immortal. (B. Animals. > B0–B99. Mythical animals.)",
+      "Motif B514.3: B514.3. Snake gives man antidote for poison. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)",
+      "Motif B511.1.1: B511.1.1. Snake creeps into man's mouth and heals him. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)",
+      "Motif J1053: J1053. Snake disregards warnings to improve his manners: eaten by crab. (J. The wise and the foolish. > J200–J1099. Wise and unwise conduct. > J1000–J1099. Other aspects of wisdom.)",
+      "Motif N332.3.2: N332.3.2. Snake in jug bites would-be thief. (N. Chance and fate. > N300–N399. Unlucky accidents.)",
+      "Motif B524.3: B524.3. Helpful snake protects man from attack. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)",
+      "Motif B765.10: B765.10. Snake cracks self like coach whip and chases man. (B. Animals. > B700–B799. Fanciful traits of animals.)",
+      "Motif J2102.2: J2102.2. Snake rids himself of wasps: he lets himself be run over by a cart wheel along with them. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J2050–J2199. Absurd short-sightedness.)",
+      "Motif B752.3: B752.3. Snake kills itself by biting part of body (when in danger or torture). (B. Animals. > B700–B799. Fanciful traits of animals.)",
+      "Motif B511.1.3: B511.1.3. Helpful hedgehog forces snake to suck out poison from bitten raja. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)"
+    ],
+    "atu_categories": [
+      "ATU 400: The Quest for a Lost Bride (TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Wife)",
+      "ATU 285: The child and the snake (ANIMAL TALES > Other Animals and Objects (220-299))",
+      "ATU 182: The helpful animal and the snake (ANIMAL TALES > Wild Animals and Humans (150-199))",
+      "ATU 673: The White Snake (TALES OF MAGIC > Supernatural Power or Knowledge (650-699))",
+      "ATU 168: The musician in the wolf-trap (ANIMAL TALES > Wild Animals and Humans (150-199))",
+      "ATU 180: The rebounding bow (ANIMAL TALES > Wild Animals and Humans (150-199))",
+      "ATU 161: Peasant Betrays Fox by Pointing (ANIMAL TALES > Wild Animals and Humans (150-199))",
+      "ATU 155: Ingratitude Is the World's Reward (ANIMAL TALES > Wild Animals and Humans (150-199))",
+      "ATU 247: Every Mother Thinks Her Child Is the Most Beautiful (ANIMAL TALES > Other Animals and Objects (220-299))",
+      "ATU 1652: The Wolves in the Stable (ANECDOTES AND JOKES > Stories about a Man > Lucky Accidents (1640-1674))",
+      "ATU 411: The King and the Lamia (TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Wife (400-424))"
+    ],
+    "obstacle_thrower": [
+      "捕蛇人"
+    ],
+    "helper_type": [
+      "SUPERNATURAL"
+    ],
+    "thinking_process": "",
+    "atu_evidence": {
+      "ATU 285: The child and the snake (ANIMAL TALES > Other Animals and Objects (220-299))": {
+        "evidence_keys": [
+          "S163-369"
+        ]
+      },
+      "ATU 182: The helpful animal and the snake (ANIMAL TALES > Wild Animals and Humans (150-199))": {
+        "evidence_keys": [
+          "S370-506"
+        ]
+      },
+      "ATU 673: The White Snake (TALES OF MAGIC > Supernatural Power or Knowledge (650-699))": {
+        "evidence_keys": [
+          "S0-77"
+        ]
+      },
+      "ATU 168: The musician in the wolf-trap (ANIMAL TALES > Wild Animals and Humans (150-199))": {
+        "evidence_keys": [
+          "S163-369"
+        ]
+      },
+      "ATU 180: The rebounding bow (ANIMAL TALES > Wild Animals and Humans (150-199))": {
+        "evidence_keys": [
+          "S370-506"
+        ]
+      },
+      "ATU 161: Peasant Betrays Fox by Pointing (ANIMAL TALES > Wild Animals and Humans (150-199))": {
+        "evidence_keys": [
+          "S163-369"
+        ]
+      },
+      "ATU 155: Ingratitude Is the World's Reward (ANIMAL TALES > Wild Animals and Humans (150-199))": {
+        "evidence_keys": [
+          "S370-506"
+        ]
+      },
+      "ATU 247: Every Mother Thinks Her Child Is the Most Beautiful (ANIMAL TALES > Other Animals and Objects (220-299))": {
+        "evidence_keys": [
+          "S163-369"
+        ]
+      },
+      "ATU 1652: The Wolves in the Stable (ANECDOTES AND JOKES > Stories about a Man > Lucky Accidents (1640-1674))": {
+        "evidence_keys": [
+          "S163-369"
+        ]
+      },
+      "ATU 411: The King and the Lamia (TALES OF MAGIC > Supernatural or Enchanted Wife (Husband) or Other Relative > Wife (400-424))": {
+        "evidence_keys": [
+          "S0-77"
+        ]
+      }
+    },
+    "motif_evidence": {
+      "Motif B91.7: B91.7. Serpent is immortal. (B. Animals. > B0–B99. Mythical animals.)": {
+        "evidence_keys": [
+          "S0-77"
+        ]
+      },
+      "Motif B514.3: B514.3. Snake gives man antidote for poison. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)": {
+        "evidence_keys": [
+          "S370-506"
+        ]
+      },
+      "Motif B511.1.1: B511.1.1. Snake creeps into man's mouth and heals him. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)": {
+        "evidence_keys": [
+          "S370-506"
+        ]
+      },
+      "Motif J1053: J1053. Snake disregards warnings to improve his manners: eaten by crab. (J. The wise and the foolish. > J200–J1099. Wise and unwise conduct. > J1000–J1099. Other aspects of wisdom.)": {
+        "evidence_keys": [
+          "S370-506"
+        ]
+      },
+      "Motif N332.3.2: N332.3.2. Snake in jug bites would-be thief. (N. Chance and fate. > N300–N399. Unlucky accidents.)": {
+        "evidence_keys": [
+          "S370-506"
+        ]
+      },
+      "Motif B524.3: B524.3. Helpful snake protects man from attack. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)": {
+        "evidence_keys": [
+          "S370-506"
+        ]
+      },
+      "Motif B765.10: B765.10. Snake cracks self like coach whip and chases man. (B. Animals. > B700–B799. Fanciful traits of animals.)": {
+        "evidence_keys": [
+          "S370-506"
+        ]
+      },
+      "Motif J2102.2: J2102.2. Snake rids himself of wasps: he lets himself be run over by a cart wheel along with them. (J. The wise and the foolish. > J1700–J2749. Fools (and other unwise persons). > J2050–J2199. Absurd short-sightedness.)": {
+        "evidence_keys": [
+          "S370-506"
+        ]
+      },
+      "Motif B752.3: B752.3. Snake kills itself by biting part of body (when in danger or torture). (B. Animals. > B700–B799. Fanciful traits of animals.)": {
+        "evidence_keys": [
+          "S370-506"
+        ]
+      },
+      "Motif B511.1.3: B511.1.3. Helpful hedgehog forces snake to suck out poison from bitten raja. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)": {
+        "evidence_keys": [
+          "S370-506"
+        ]
+      }
+    }
+  },
+  "analysis": {
+    "propp_functions": [
+      {
+        "id": "c9cab8c6-3182-42e6-803f-61ecc535b2bd",
+        "fn": "Initial Situation",
+        "spanType": "text",
+        "span": {
+          "start": 0,
+          "end": 0
+        },
+        "textSpan": {
+          "start": 0,
+          "end": 77,
+          "text": "很久很久以前，有一条小白蛇。它吸天地之灵气得以长生不死，久而成精。它向往着那些成仙的传说，一心向道，认真修炼，希望自己有一天可以蜕去这一身蛇皮，出尘成仙。"
+        },
+        "evidence": "很久很久以前，有一条小白蛇。它吸天地之灵气得以长生不死，久而成精。它向往着那些成仙的传说，一心向道，认真修炼，希望自己有一天可以蜕去这一身蛇皮，出尘成仙。",
+        "narrative_event_id": "f9ab0892-dd68-4578-b690-5b08921f8ccf"
+      }
+    ],
+    "propp_notes": "",
+    "paragraph_summaries": {
+      "per_section": {},
+      "combined": [],
+      "whole": ""
+    },
+    "bias_reflection": {
+      "cultural_reading": "",
+      "gender_norms": "",
+      "hero_villain_mapping": "",
+      "ambiguous_motifs": []
+    },
+    "qa_notes": ""
+  }
+}
