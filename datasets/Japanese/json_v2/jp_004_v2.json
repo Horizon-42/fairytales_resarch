@@ -33,84 +33,58 @@
   ],
   "narrative_events": [
     {
+      "id": "91e1a303-20c4-4cb3-bd9b-0c3344614233",
+      "text_span": null,
       "event_type": "OTHER",
       "description": "",
-      "id": "91e1a303-20c4-4cb3-bd9b-0c3344614233",
+      "agents": [],
+      "targets": [],
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "relationships": [],
-      "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": ""
-      },
-      "narrative_function": "",
-      "relationship_multi": [],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "",
       "action_type": "",
       "action_context": "",
-      "action_status": ""
+      "action_status": "",
+      "narrative_function": ""
     },
     {
       "id": "74e605ca-4268-4480-b2b6-8881808ca5e7",
+      "text_span": {
+        "start": 71,
+        "end": 107,
+        "text": "すると途中の田んぼの中で、一羽のツルがワナにかかってもがいていたのです。"
+      },
       "event_type": "VILLAINY",
       "description": "すると途中の田んぼの中で、一羽のツルがワナにかかってもがいていたのです。",
       "agents": [],
       "targets": [
         "ツル"
       ],
-      "text_span": {
-        "start": 71,
-        "end": 107,
-        "text": "すると途中の田んぼの中で、一羽のツルがワナにかかってもがいていたのです。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "action_layer": {
-        "category": "physical",
-        "type": "restrain",
-        "context": "",
-        "status": "interrupted",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "",
-          "target": "ツル",
-          "relationship_level1": "Neutral",
-          "relationship_level2": "stranger",
-          "sentiment": "negative"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "",
-          "target": "ツル",
-          "relationship_level1": "Neutral",
-          "relationship_level2": "stranger",
-          "sentiment": "negative"
-        }
-      ],
       "relationship_level1": "Neutral",
       "relationship_level2": "stranger",
       "sentiment": "negative",
       "action_category": "physical",
       "action_type": "restrain",
       "action_context": "",
-      "action_status": "interrupted"
+      "action_status": "interrupted",
+      "narrative_function": ""
     },
     {
       "id": "2fab2acf-f7ce-427e-9a27-29f3522785de",
+      "text_span": {
+        "start": 124,
+        "end": 154,
+        "text": "おじいさんは、かわいそうに思って、ツルを逃がしてやりました。"
+      },
       "event_type": "FIRST_FUNCTION_DONOR",
       "description": "おじいさんは、かわいそうに思って、ツルを逃がしてやりました。",
       "agents": [
@@ -119,102 +93,52 @@
       "targets": [
         "ツル"
       ],
-      "text_span": {
-        "start": 124,
-        "end": 154,
-        "text": "おじいさんは、かわいそうに思って、ツルを逃がしてやりました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 2,
-      "action_layer": {
-        "category": "physical",
-        "type": "defend",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "おじいさん",
-          "target": "ツル",
-          "relationship_level1": "Neutral",
-          "relationship_level2": "stranger",
-          "sentiment": "positive"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "おじいさん",
-          "target": "ツル",
-          "relationship_level1": "Neutral",
-          "relationship_level2": "stranger",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "Neutral",
       "relationship_level2": "stranger",
       "sentiment": "positive",
       "action_category": "physical",
       "action_type": "defend",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "8ae4f860-1386-4daf-9e4d-cfbd1abab073",
+      "text_span": {
+        "start": 156,
+        "end": 215,
+        "text": "するとツルは、おじいさんの頭の上を三ベん回って、\n「カウ、カウ、カウ」\nと、さもうれしそうに鳴いて、飛んでいきました。"
+      },
       "event_type": "DEPARTURE",
       "description": "するとツルは、おじいさんの頭の上を三ベん回って、\n「カウ、カウ、カウ」\nと、さもうれしそうに鳴いて、飛んでいきました。",
       "agents": [
         "ツル"
       ],
       "targets": [],
-      "text_span": {
-        "start": 156,
-        "end": 215,
-        "text": "するとツルは、おじいさんの頭の上を三ベん回って、\n「カウ、カウ、カウ」\nと、さもうれしそうに鳴いて、飛んでいきました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "action_layer": {
-        "category": "physical",
-        "type": "travel",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "ツル",
-          "target": "",
-          "relationship_level1": "Neutral",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "ツル",
-          "target": "",
-          "relationship_level1": "Neutral",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "Neutral",
       "relationship_level2": "",
       "sentiment": "positive",
       "action_category": "physical",
       "action_type": "travel",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "65328f95-cc9a-489e-a2c3-3b53faff2413",
+      "text_span": {
+        "start": 256,
+        "end": 431,
+        "text": "　おじいさんがおばあさんに、ツルを助けた話をしていると、表の戸を、トントン、トントンと、たたく音がします。\n「ごめんください。開けてくださいまし」\n　若い女の人の声です。\n　おばあさんが戸を開けると、頭から雪をかぶった娘が立っていました。\n　おばあさんはおどろいて、\n「まあ、まあ、寒かったでしょう。さあ、早くお入り」\nと、娘を家に入れてやりました。"
+      },
       "event_type": "UNRECOGNIZED_ARRIVAL",
       "description": "おじいさんがおばあさんに、ツルを助けた話をしていると、表の戸を、トントン、トントンと、たたく音がします。\n「ごめんください。開けてくださいまし」\n　若い女の人の声です。\n　おばあさんが戸を開けると、頭",
       "agents": [
@@ -224,51 +148,26 @@
         "おばあさん",
         "おじいさん"
       ],
-      "text_span": {
-        "start": 256,
-        "end": 431,
-        "text": "　おじいさんがおばあさんに、ツルを助けた話をしていると、表の戸を、トントン、トントンと、たたく音がします。\n「ごめんください。開けてくださいまし」\n　若い女の人の声です。\n　おばあさんが戸を開けると、頭から雪をかぶった娘が立っていました。\n　おばあさんはおどろいて、\n「まあ、まあ、寒かったでしょう。さあ、早くお入り」\nと、娘を家に入れてやりました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 4,
-      "action_layer": {
-        "category": "communicative",
-        "type": "inform",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "ツル",
-          "target": "おばあさん",
-          "relationship_level1": "Social & Alliance",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "ツル",
-          "target": "おばあさん",
-          "relationship_level1": "Social & Alliance",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "communicative",
       "action_type": "inform",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "202fdacf-c4f4-4f22-b57a-829e268e299e",
+      "text_span": {
+        "start": 377,
+        "end": 431,
+        "text": "おばあさんはおどろいて、\n「まあ、まあ、寒かったでしょう。さあ、早くお入り」\nと、娘を家に入れてやりました。"
+      },
       "event_type": "BEGINNING_COUNTERACTION",
       "description": "おばあさんはおどろいて、\n「まあ、まあ、寒かったでしょう。さあ、早くお入り」\nと、娘を家に入れてやりました。",
       "agents": [
@@ -278,51 +177,26 @@
       "targets": [
         "ツル"
       ],
-      "text_span": {
-        "start": 377,
-        "end": 431,
-        "text": "おばあさんはおどろいて、\n「まあ、まあ、寒かったでしょう。さあ、早くお入り」\nと、娘を家に入れてやりました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "relationships": [
-        {
-          "agent": "おじいさん",
-          "target": "ツル",
-          "relationship_level1": "Social & Alliance",
-          "relationship_level2": "ally",
-          "sentiment": "positive"
-        }
-      ],
-      "action_layer": {
-        "category": "communicative",
-        "type": "",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "おじいさん",
-          "target": "ツル",
-          "relationship_level1": "Social & Alliance",
-          "relationship_level2": "ally",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "communicative",
       "action_type": "",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "a7c9a0a9-5cdf-409f-8188-4ca42e784fc1",
+      "text_span": {
+        "start": 1036,
+        "end": 1067,
+        "text": "娘が機(はた)をおりたいから、糸を買ってくださいと頼みました。"
+      },
       "event_type": "FIRST_FUNCTION_DONOR",
       "description": "娘が機(はた)をおりたいから、糸を買ってくださいと頼みました。",
       "agents": [
@@ -331,51 +205,26 @@
       "targets": [
         "おじいさん"
       ],
-      "text_span": {
-        "start": 1036,
-        "end": 1067,
-        "text": "娘が機(はた)をおりたいから、糸を買ってくださいと頼みました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 6,
-      "action_layer": {
-        "category": "transaction",
-        "type": "request",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "ツル",
-          "target": "おじいさん",
-          "relationship_level1": "Social & Alliance",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "ツル",
-          "target": "おじいさん",
-          "relationship_level1": "Social & Alliance",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "Social & Alliance",
       "relationship_level2": "",
       "sentiment": "positive",
       "action_category": "transaction",
       "action_type": "request",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "14d8281f-972c-4745-bfd5-9d14ec6b66f1",
+      "text_span": {
+        "start": 1101,
+        "end": 1144,
+        "text": "「機をおりあげるまで、決してのぞかないでください」\nと、いって、機をおりはじめました。"
+      },
       "event_type": "INTERDICTION",
       "description": "「機をおりあげるまで、決してのぞかないでください」\nと、いって、機をおりはじめました。",
       "agents": [
@@ -385,102 +234,52 @@
         "おじいさん",
         "おばあさん"
       ],
-      "text_span": {
-        "start": 1101,
-        "end": 1144,
-        "text": "「機をおりあげるまで、決してのぞかないでください」\nと、いって、機をおりはじめました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 7,
-      "action_layer": {
-        "category": "communicative",
-        "type": "promise",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "ツル",
-          "target": "おじいさん",
-          "relationship_level1": "Social & Alliance",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "ツル",
-          "target": "おじいさん",
-          "relationship_level1": "Social & Alliance",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "communicative",
       "action_type": "promise",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "f0f86deb-e99d-4c2f-8faf-edae01f09cbd",
+      "text_span": {
+        "start": 1302,
+        "end": 1361,
+        "text": "おじいさんが町へ売りに行くと、それを殿さまが高い値段で買ってくれました。\n　おじいさんは喜んで、糸を買って帰りました。"
+      },
       "event_type": "LIQUIDATION",
       "description": "おじいさんが町へ売りに行くと、それを殿さまが高い値段で買ってくれました。\n　おじいさんは喜んで、糸を買って帰りました。",
       "agents": [
         "おじいさん"
       ],
       "targets": [],
-      "text_span": {
-        "start": 1302,
-        "end": 1361,
-        "text": "おじいさんが町へ売りに行くと、それを殿さまが高い値段で買ってくれました。\n　おじいさんは喜んで、糸を買って帰りました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 8,
-      "action_layer": {
-        "category": "transaction",
-        "type": "exchange",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "おじいさん",
-          "target": "",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "おじいさん",
-          "target": "",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "",
       "sentiment": "positive",
       "action_category": "transaction",
       "action_type": "exchange",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "7e7a0948-512a-4e5c-b0f7-536aec7f13ee",
+      "text_span": {
+        "start": 1384,
+        "end": 1443,
+        "text": "ねえ、おじいさん。あの娘は、いったいどうして、あんな見事な布をおるのでしょうね。・・・ほんの少し、のぞいてみましょう」"
+      },
       "event_type": "VIOLATION",
       "description": "ねえ、おじいさん。あの娘は、いったいどうして、あんな見事な布をおるのでしょうね。・・・ほんの少し、のぞいてみましょう」",
       "agents": [
@@ -490,102 +289,52 @@
       "targets": [
         "ツル"
       ],
-      "text_span": {
-        "start": 1384,
-        "end": 1443,
-        "text": "ねえ、おじいさん。あの娘は、いったいどうして、あんな見事な布をおるのでしょうね。・・・ほんの少し、のぞいてみましょう」"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 9,
-      "action_layer": {
-        "category": "mental",
-        "type": "investigate",
-        "context": "Violating the promise",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "おじいさん",
-          "target": "ツル",
-          "relationship_level1": "Social & Alliance",
-          "relationship_level2": "ally",
-          "sentiment": "negative"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "おじいさん",
-          "target": "ツル",
-          "relationship_level1": "Social & Alliance",
-          "relationship_level2": "ally",
-          "sentiment": "negative"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "mental",
       "action_type": "investigate",
       "action_context": "Violating the promise",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "46645a40-f98f-4e7b-919e-77084e802c10",
+      "text_span": {
+        "start": 1470,
+        "end": 1530,
+        "text": "そこに娘はいなくて、やせこけた一羽のツルが、長いくちばしで自分の羽毛を引きぬいては、糸にはさんで機をおっていたのです。\n"
+      },
       "event_type": "EXPOSURE",
       "description": "そこに娘はいなくて、やせこけた一羽のツルが、長いくちばしで自分の羽毛を引きぬいては、糸にはさんで機をおっていたのです。",
       "agents": [
         "おじいさん"
       ],
       "targets": [],
-      "text_span": {
-        "start": 1470,
-        "end": 1530,
-        "text": "そこに娘はいなくて、やせこけた一羽のツルが、長いくちばしで自分の羽毛を引きぬいては、糸にはさんで機をおっていたのです。\n"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 10,
-      "action_layer": {
-        "category": "mental",
-        "type": "realize",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "おじいさん",
-          "target": "",
-          "relationship_level1": "Neutral",
-          "relationship_level2": "",
-          "sentiment": ""
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "おじいさん",
-          "target": "",
-          "relationship_level1": "Neutral",
-          "relationship_level2": "",
-          "sentiment": ""
-        }
-      ],
       "relationship_level1": "Neutral",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "mental",
       "action_type": "realize",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "31c4a0b2-7c7c-4d99-97c2-a7cacf716775",
+      "text_span": {
+        "start": 1632,
+        "end": 1751,
+        "text": "「おじいさま、おばあさま。もう、かくしていても仕方ありませんね。わたしは、いつか助けられたツルでございます。ご恩をお返ししたいと思って娘になってまいりました。けれど、もうお別れでございます。どうぞ、いつまでもおたっしゃでいてくださいませ」"
+      },
       "event_type": "PUNISHMENT",
       "description": "「おじいさま、おばあさま。もう、かくしていても仕方ありませんね。わたしは、いつか助けられたツルでございます。ご恩をお返ししたいと思って娘になってまいりました。けれど、もうお別れでございます。どうぞ、い",
       "agents": [
@@ -595,99 +344,44 @@
         "おじいさん",
         "おばあさん"
       ],
-      "text_span": {
-        "start": 1632,
-        "end": 1751,
-        "text": "「おじいさま、おばあさま。もう、かくしていても仕方ありませんね。わたしは、いつか助けられたツルでございます。ご恩をお返ししたいと思って娘になってまいりました。けれど、もうお別れでございます。どうぞ、いつまでもおたっしゃでいてくださいませ」"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 11,
-      "action_layer": {
-        "category": "physical",
-        "type": "flee",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "ツル",
-          "target": "おじいさん",
-          "relationship_level1": "Social & Alliance",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "ツル",
-          "target": "おじいさん",
-          "relationship_level1": "Social & Alliance",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "physical",
       "action_type": "flee",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "4821875c-638e-493e-b857-14bb4e18b72c",
+      "text_span": {
+        "start": 1785,
+        "end": 1866,
+        "text": "たちまち一羽のツルになって空へまいあがりました。\n　そして、家の上を三ベん回って、\n「 カウ、カウ、カウ」\nと、鳴きながら、山の向こうへ飛んでいってしまいました。"
+      },
       "event_type": "DEPARTURE",
       "description": "たちまち一羽のツルになって空へまいあがりました。\n　そして、家の上を三ベん回って、\n「 カウ、カウ、カウ」\nと、鳴きながら、山の向こうへ飛んでいってしまいました。",
       "agents": [
         "ツル"
       ],
       "targets": [],
-      "text_span": {
-        "start": 1785,
-        "end": 1866,
-        "text": "たちまち一羽のツルになって空へまいあがりました。\n　そして、家の上を三ベん回って、\n「 カウ、カウ、カウ」\nと、鳴きながら、山の向こうへ飛んでいってしまいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 12,
-      "action_layer": {
-        "category": "physical",
-        "type": "travel",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "ツル",
-          "target": "",
-          "relationship_level1": "Neutral",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "ツル",
-          "target": "",
-          "relationship_level1": "Neutral",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
       "relationship_level1": "Neutral",
       "relationship_level2": "",
       "sentiment": "negative",
       "action_category": "physical",
       "action_type": "travel",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     }
   ],
   "themes_and_motifs": {
@@ -697,9 +391,14 @@
       "LOYALTY",
       "DISOBEDIENCE"
     ],
-    "motif_type": [],
+    "motif_type": [
+      "Motif C495.3: C495.3. All questions to be answered \"Thanks\". Youth is so advised by old woman helper. (C. Tabu. > C400–C499. Speaking tabu.)",
+      "Motif F62.0.1: F62.0.1. Bird flies to upper world. (F. Marvels. > F0–F199. Other world journeys. > F10–F79. The upper world.)",
+      "Motif H1195: H1195. Task: having a shirt made by a woman free from trouble and worry. (H. Tests. > H900–H1199. Tests of prowess: tasks. > H1000–H1199. Nature of tasks.)"
+    ],
     "atu_categories": [
-      "ATU Category: TALES OF MAGIC"
+      "ATU Category: TALES OF MAGIC",
+      "ATU 554: The Grateful Animals (TALES OF MAGIC > Supernatural Helpers (500-559))"
     ],
     "obstacle_thrower": [
       "curiosity"
@@ -708,8 +407,30 @@
       "ANIMAL"
     ],
     "thinking_process": "本作は「助けられた動物が人間の妻となり恩を返す」という変身譚であり、\n明確な禁忌（覗いてはならない）の提示と、その違反による不可逆的な別離を中心構造としている。\n鶴は欺く存在ではなく、条件付きで家を守る守護的存在として描かれる。",
-    "atu_evidence": {},
-    "motif_evidence": {}
+    "atu_evidence": {
+      "ATU 554: The Grateful Animals (TALES OF MAGIC > Supernatural Helpers (500-559))": {
+        "evidence_keys": [
+          "S1632-1751"
+        ]
+      }
+    },
+    "motif_evidence": {
+      "Motif C495.3: C495.3. All questions to be answered \"Thanks\". Youth is so advised by old woman helper. (C. Tabu. > C400–C499. Speaking tabu.)": {
+        "evidence_keys": [
+          "S256-431"
+        ]
+      },
+      "Motif F62.0.1: F62.0.1. Bird flies to upper world. (F. Marvels. > F0–F199. Other world journeys. > F10–F79. The upper world.)": {
+        "evidence_keys": [
+          "S1785-1866"
+        ]
+      },
+      "Motif H1195: H1195. Task: having a shirt made by a woman free from trouble and worry. (H. Tests. > H900–H1199. Tests of prowess: tasks. > H1000–H1199. Nature of tasks.)": {
+        "evidence_keys": [
+          "S1036-1067"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

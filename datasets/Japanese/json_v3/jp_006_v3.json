@@ -38,9 +38,12 @@
   ],
   "narrative_events": [
     {
+      "id": "f6fe8c53-a8c1-4b0a-902b-ad7bc361ac96",
+      "text_span": null,
       "event_type": "OTHER",
       "description": "",
-      "id": "f6fe8c53-a8c1-4b0a-902b-ad7bc361ac96",
+      "agents": [],
+      "targets": [],
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -56,6 +59,11 @@
     },
     {
       "id": "b38d5e6a-31c5-4b28-9884-0e1a93670e72",
+      "text_span": {
+        "start": 60,
+        "end": 159,
+        "text": "裏うらの山から一ぴきの古ふるだぬきが出てきて、おじいさんがせっかく丹精たんせいをしてこしらえた畑はたけのものを荒あらした上に、どんどん石いしころや土つちくれをおじいさんのうしろから投なげつけました。"
+      },
       "event_type": "VILLAINY",
       "description": "裏うらの山から一ぴきの古ふるだぬきが出てきて、おじいさんがせっかく丹精たんせいをしてこしらえた畑はたけのものを荒あらした上に、どんどん石いしころや土つちくれをおじいさんのうしろから投なげつけました。",
       "agents": [
@@ -64,22 +72,10 @@
       "targets": [
         "おじいさん"
       ],
-      "text_span": {
-        "start": 60,
-        "end": 159,
-        "text": "裏うらの山から一ぴきの古ふるだぬきが出てきて、おじいさんがせっかく丹精たんせいをしてこしらえた畑はたけのものを荒あらした上に、どんどん石いしころや土つちくれをおじいさんのうしろから投なげつけました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "action_layer": {
-        "category": "physical",
-        "type": "attack",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "たぬき",
@@ -88,10 +84,22 @@
           "relationship_level2": "enemy",
           "sentiment": "negative"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "03ba684b-4620-4a58-ab54-e593c2c974ae",
+      "text_span": {
+        "start": 227,
+        "end": 277,
+        "text": "おじいさんも困こまりきって、わなをかけておきますと、ある日、たぬきはとうとうそのわなにかかりました。"
+      },
       "event_type": "BEGINNING_COUNTERACTION",
       "description": "おじいさんも困こまりきって、わなをかけておきますと、ある日、たぬきはとうとうそのわなにかかりました。",
       "agents": [
@@ -100,22 +108,10 @@
       "targets": [
         "たぬき"
       ],
-      "text_span": {
-        "start": 227,
-        "end": 277,
-        "text": "おじいさんも困こまりきって、わなをかけておきますと、ある日、たぬきはとうとうそのわなにかかりました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 2,
-      "action_layer": {
-        "category": "physical",
-        "type": "restrain",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "おじいさん",
@@ -124,10 +120,22 @@
           "relationship_level2": "enemy",
           "sentiment": "positive"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "restrain",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "3e217e60-ed41-41c3-aff7-f6af1cfc0f2b",
+      "text_span": {
+        "start": 614,
+        "end": 674,
+        "text": "「もしもし、おばあさん、くたびれたら少すこしお手伝てつだいをいたしましょう。その代かわりこの縄なわをといて下ください。」"
+      },
       "event_type": "TRICKERY",
       "description": "「もしもし、おばあさん、くたびれたら少すこしお手伝てつだいをいたしましょう。その代かわりこの縄なわをといて下ください。」",
       "agents": [
@@ -136,22 +144,10 @@
       "targets": [
         "おばあさん"
       ],
-      "text_span": {
-        "start": 614,
-        "end": 674,
-        "text": "「もしもし、おばあさん、くたびれたら少すこしお手伝てつだいをいたしましょう。その代かわりこの縄なわをといて下ください。」"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "action_layer": {
-        "category": "communicative",
-        "type": "deceive",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "たぬき",
@@ -160,10 +156,22 @@
           "relationship_level2": "stranger",
           "sentiment": "negative"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "deceive",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "275be13a-787f-4888-a772-6166ee9b1a2e",
+      "text_span": {
+        "start": 956,
+        "end": 1061,
+        "text": "おばあさんのきねを取とり上あげて、麦むぎをつくふりをして、いきなりおばあさんの脳天のうてんからきねを打うち下おろしますと、「きゃっ。」という間まもなく、おばあさんは目をまわして、倒たおれて死しんでしまいました。"
+      },
       "event_type": "VILLAINY",
       "description": "おばあさんのきねを取とり上あげて、麦むぎをつくふりをして、いきなりおばあさんの脳天のうてんからきねを打うち下おろしますと、「きゃっ。」という間まもなく、おばあさんは目をまわして、倒たおれて死しんでしま",
       "agents": [
@@ -172,22 +180,10 @@
       "targets": [
         "おばあさん"
       ],
-      "text_span": {
-        "start": 956,
-        "end": 1061,
-        "text": "おばあさんのきねを取とり上あげて、麦むぎをつくふりをして、いきなりおばあさんの脳天のうてんからきねを打うち下おろしますと、「きゃっ。」という間まもなく、おばあさんは目をまわして、倒たおれて死しんでしまいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "きね",
       "time_order": 4,
-      "action_layer": {
-        "category": "physical",
-        "type": "attack",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "たぬき",
@@ -196,10 +192,22 @@
           "relationship_level2": "enemy",
           "sentiment": "negative"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "d4735a5a-52bd-44c6-ac8c-30379fa174c2",
+      "text_span": {
+        "start": 1558,
+        "end": 1586,
+        "text": "「ばばあくったじじい、\n流ながしの下の骨ほねを見みろ。」"
+      },
       "event_type": "EXPOSURE",
       "description": "「ばばあくったじじい、\n流ながしの下の骨ほねを見みろ。」",
       "agents": [
@@ -208,22 +216,10 @@
       "targets": [
         "おじいさん"
       ],
-      "text_span": {
-        "start": 1558,
-        "end": 1586,
-        "text": "「ばばあくったじじい、\n流ながしの下の骨ほねを見みろ。」"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "action_layer": {
-        "category": "communicative",
-        "type": "slander",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "たぬき",
@@ -232,10 +228,22 @@
           "relationship_level2": "enemy",
           "sentiment": "hostile"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "slander",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "85c8d56b-93f8-40d1-8f55-9d13553eb9b2",
+      "text_span": {
+        "start": 1873,
+        "end": 1931,
+        "text": "「まあ、それはとんだことでしたね。けれどかたきはわたしがきっととって上あげますから、安心あんしんしていらっしゃい。」"
+      },
       "event_type": "MEDIATION",
       "description": "「まあ、それはとんだことでしたね。けれどかたきはわたしがきっととって上あげますから、安心あんしんしていらっしゃい。」",
       "agents": [
@@ -244,22 +252,10 @@
       "targets": [
         "おじいさん"
       ],
-      "text_span": {
-        "start": 1873,
-        "end": 1931,
-        "text": "「まあ、それはとんだことでしたね。けれどかたきはわたしがきっととって上あげますから、安心あんしんしていらっしゃい。」"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 6,
-      "action_layer": {
-        "category": "communicative",
-        "type": "promise",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "うさぎ",
@@ -268,10 +264,22 @@
           "relationship_level2": "ally",
           "sentiment": "positive"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "promise",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "01fbf3b6-e98c-41e8-92b2-728c0d4385a7",
+      "text_span": {
+        "start": 2956,
+        "end": 2998,
+        "text": "うさぎのつけた火が、たぬきの背中せなかのしばにうつって、ぼうぼう燃もえ出だしました。"
+      },
       "event_type": "PUNISHMENT",
       "description": "うさぎのつけた火が、たぬきの背中せなかのしばにうつって、ぼうぼう燃もえ出だしました。",
       "agents": [
@@ -280,22 +288,10 @@
       "targets": [
         "たぬき"
       ],
-      "text_span": {
-        "start": 2956,
-        "end": 2998,
-        "text": "うさぎのつけた火が、たぬきの背中せなかのしばにうつって、ぼうぼう燃もえ出だしました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 7,
-      "action_layer": {
-        "category": "physical",
-        "type": "attack",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "うさぎ",
@@ -304,10 +300,22 @@
           "relationship_level2": "enemy",
           "sentiment": "negative"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "eabbb367-81bf-4cfb-b475-5a577e47ad38",
+      "text_span": {
+        "start": 4779,
+        "end": 4929,
+        "text": "「ざまを見みろ。おばあさんをだまして殺ころして、おじいさんにばばあ汁じるを食くわせたむくいだ。」\n　と言いいますと、たぬきはもうそんなことはしないから助たすけてくれと言いって、うさぎをおがみました。そのうちどんどん舟ふねは崩くずれて、あっぷあっぷいうまもなく、たぬきはとうとう沈しずんでしまいました。"
+      },
       "event_type": "PUNISHMENT",
       "description": "「ざまを見みろ。おばあさんをだまして殺ころして、おじいさんにばばあ汁じるを食くわせたむくいだ。」\n　と言いいますと、たぬきはもうそんなことはしないから助たすけてくれと言いって、うさぎをおがみました。そ",
       "agents": [
@@ -316,22 +324,10 @@
       "targets": [
         "たぬき"
       ],
-      "text_span": {
-        "start": 4779,
-        "end": 4929,
-        "text": "「ざまを見みろ。おばあさんをだまして殺ころして、おじいさんにばばあ汁じるを食くわせたむくいだ。」\n　と言いいますと、たぬきはもうそんなことはしないから助たすけてくれと言いって、うさぎをおがみました。そのうちどんどん舟ふねは崩くずれて、あっぷあっぷいうまもなく、たぬきはとうとう沈しずんでしまいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 8,
-      "action_layer": {
-        "category": "physical",
-        "type": "attack",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "うさぎ",
@@ -340,7 +336,14 @@
           "relationship_level2": "enemy",
           "sentiment": "negative"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     }
   ],
   "themes_and_motifs": {
@@ -351,7 +354,8 @@
     "motif_type": [
       "Motif Category: Deceptions",
       "Motif Q400-Q590: Rewards and Punishments > Kinds of punishment > Kinds of punishment",
-      "Motif B800: Miscellaneous animal motifs. (Animal Motifs > Miscellaneous animal motifs > Miscellaneous animal motifs)"
+      "Motif B800: Miscellaneous animal motifs. (Animal Motifs > Miscellaneous animal motifs > Miscellaneous animal motifs)",
+      "Motif A2253.1: A2253.1. Dog burned in jumping contest over fire: enmity between dog and hare. (A. Mythological motifs. > A2200–A2599. Animal characteristics. > A2200–A2299. Various causes of animal characteristics.)"
     ],
     "atu_categories": [
       "ATU 150-182: ANIMAL TALES > Wild Animals and Humans"
@@ -364,7 +368,13 @@
     ],
     "thinking_process": "本作は、欺瞞と殺害という重い悪行に対し、動物の知恵と罠によって段階的な報復が行われ、最終的に完全な制裁が下される「報復正義型動物譚」である。",
     "atu_evidence": {},
-    "motif_evidence": {}
+    "motif_evidence": {
+      "Motif A2253.1: A2253.1. Dog burned in jumping contest over fire: enmity between dog and hare. (A. Mythological motifs. > A2200–A2599. Animal characteristics. > A2200–A2299. Various causes of animal characteristics.)": {
+        "evidence_keys": [
+          "S2956-2998"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

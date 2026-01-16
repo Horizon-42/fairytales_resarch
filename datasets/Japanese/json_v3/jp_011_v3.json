@@ -49,6 +49,11 @@
   "narrative_events": [
     {
       "id": "f35495ee-0ff0-4ada-8f9f-68bfc5c8df73",
+      "text_span": {
+        "start": 3,
+        "end": 90,
+        "text": "むかし、金太郎きんたろうという強つよい子供こどもがありました。相模国さがみのくに足柄山あしがらやまの山奥やまおくに生うまれて、おかあさんの山うばといっしょにくらしていました。"
+      },
       "event_type": "Initial Situation",
       "description": "むかし、金太郎きんたろうという強つよい子供こどもがありました。相模国さがみのくに足柄山あしがらやまの山奥やまおくに生うまれて、おかあさんの山うばといっしょにくらしていました。",
       "agents": [
@@ -57,11 +62,6 @@
       "targets": [
         "山うば"
       ],
-      "text_span": {
-        "start": 3,
-        "end": 90,
-        "text": "むかし、金太郎きんたろうという強つよい子供こどもがありました。相模国さがみのくに足柄山あしがらやまの山奥やまおくに生うまれて、おかあさんの山うばといっしょにくらしていました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -85,6 +85,11 @@
     },
     {
       "id": "6f89f0c9-570d-435f-b44b-a20cea348953",
+      "text_span": {
+        "start": 92,
+        "end": 213,
+        "text": "金太郎きんたろうは生うまれた時ときからそれはそれは力ちからが強つよくって、もう七つ八つのころには、石臼いしうすやもみぬかの俵たわらぐらい、へいきで持もち上あげました。大抵たいていの大人おとなを相手あいてにすもうを取とっても負まけませんでした。"
+      },
       "event_type": "Initial Situation",
       "description": "金太郎きんたろうは生うまれた時ときからそれはそれは力ちからが強つよくって、もう七つ八つのころには、石臼いしうすやもみぬかの俵たわらぐらい、へいきで持もち上あげました。大抵たいていの大人おとなを相手あい",
       "agents": [
@@ -93,11 +98,6 @@
       "targets": [
         "石臼・俵"
       ],
-      "text_span": {
-        "start": 92,
-        "end": 213,
-        "text": "金太郎きんたろうは生うまれた時ときからそれはそれは力ちからが強つよくって、もう七つ八つのころには、石臼いしうすやもみぬかの俵たわらぐらい、へいきで持もち上あげました。大抵たいていの大人おとなを相手あいてにすもうを取とっても負まけませんでした。"
-      },
       "target_type": "object",
       "object_type": "",
       "instrument": "",
@@ -121,6 +121,11 @@
     },
     {
       "id": "55f1462a-0490-4f9c-b8b7-2ec41e9205f8",
+      "text_span": {
+        "start": 353,
+        "end": 472,
+        "text": "ある日森もりの奥おくのずっと奥おくに入はいって、いつものように大きな木を切きっていますと、のっそり大きな熊くまが出て来きました。熊くまは目を光ひからせながら、\n「だれだ、おれの森もりをあらすのは。」\n　と言いって、とびかかって来きました。"
+      },
       "event_type": "VILLAINY",
       "description": "ある日森もりの奥おくのずっと奥おくに入はいって、いつものように大きな木を切きっていますと、のっそり大きな熊くまが出て来きました。熊くまは目を光ひからせながら、\n「だれだ、おれの森もりをあらすのは。」\n",
       "agents": [
@@ -129,22 +134,10 @@
       "targets": [
         "金太郎"
       ],
-      "text_span": {
-        "start": 353,
-        "end": 472,
-        "text": "ある日森もりの奥おくのずっと奥おくに入はいって、いつものように大きな木を切きっていますと、のっそり大きな熊くまが出て来きました。熊くまは目を光ひからせながら、\n「だれだ、おれの森もりをあらすのは。」\n　と言いって、とびかかって来きました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "action_layer": {
-        "category": "physical",
-        "type": "attack",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "熊",
@@ -153,10 +146,22 @@
           "relationship_level2": "enemy",
           "sentiment": "hostile"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "2e991ec0-0410-4322-80c9-273d02b67880",
+      "text_span": {
+        "start": 500,
+        "end": 588,
+        "text": "金太郎きんたろうを知しらないか。」\n　と言いいながら、まさかりをほうり出だして、いきなり熊くまに組くみつきました。そして足あしがらをかけて、どしんと地じびたに投なげつけました。"
+      },
       "event_type": "STRUGGLE",
       "description": "金太郎きんたろうを知しらないか。」\n　と言いいながら、まさかりをほうり出だして、いきなり熊くまに組くみつきました。そして足あしがらをかけて、どしんと地じびたに投なげつけました。",
       "agents": [
@@ -165,22 +170,10 @@
       "targets": [
         "熊"
       ],
-      "text_span": {
-        "start": 500,
-        "end": 588,
-        "text": "金太郎きんたろうを知しらないか。」\n　と言いいながら、まさかりをほうり出だして、いきなり熊くまに組くみつきました。そして足あしがらをかけて、どしんと地じびたに投なげつけました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 4,
-      "action_layer": {
-        "category": "physical",
-        "type": "attack",
-        "context": "",
-        "status": "attempt",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "金太郎",
@@ -189,10 +182,22 @@
           "relationship_level2": "enemy",
           "sentiment": "hostile"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "",
+        "status": "attempt",
+        "function": ""
+      }
     },
     {
       "id": "519168cd-ce78-411a-b5d5-9c8b2f322490",
+      "text_span": {
+        "start": 588,
+        "end": 637,
+        "text": "熊くまはへいこうして、両手りょうてをついてあやまって、金太郎きんたろうの家来けらいになりました。森"
+      },
       "event_type": "VICTORY",
       "description": "熊くまはへいこうして、両手りょうてをついてあやまって、金太郎きんたろうの家来けらいになりました。",
       "agents": [
@@ -201,22 +206,10 @@
       "targets": [
         "金太郎"
       ],
-      "text_span": {
-        "start": 588,
-        "end": 637,
-        "text": "熊くまはへいこうして、両手りょうてをついてあやまって、金太郎きんたろうの家来けらいになりました。森"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "action_layer": {
-        "category": "communicative",
-        "type": "slander",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "熊",
@@ -225,10 +218,22 @@
           "relationship_level2": "ally",
           "sentiment": "positive"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "slander",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "d24962a8-d652-4fe3-93af-a90a683483bd",
+      "text_span": {
+        "start": 686,
+        "end": 769,
+        "text": "そのあとからうさぎだの、猿さるだの、鹿しかだのがぞろぞろついて来きて、\n「金太郎きんたろうさん、どうぞわたくしも御家来ごけらいにして下ください。」\n　と言いいました。"
+      },
       "event_type": "UNFOUNDED_CLAIMS",
       "description": "そのあとからうさぎだの、猿さるだの、鹿しかだのがぞろぞろついて来きて、\n「金太郎きんたろうさん、どうぞわたくしも御家来ごけらいにして下ください。」\n　と言いいました。",
       "agents": [
@@ -237,22 +242,10 @@
       "targets": [
         "金太郎"
       ],
-      "text_span": {
-        "start": 686,
-        "end": 769,
-        "text": "そのあとからうさぎだの、猿さるだの、鹿しかだのがぞろぞろついて来きて、\n「金太郎きんたろうさん、どうぞわたくしも御家来ごけらいにして下ください。」\n　と言いいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 6,
-      "action_layer": {
-        "category": "communicative",
-        "type": "slander",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "動物",
@@ -261,10 +254,22 @@
           "relationship_level2": "ally",
           "sentiment": "positive"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "slander",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "8aa519c2-5563-4a9c-b6e8-73bc3612cbf1",
+      "text_span": {
+        "start": 878,
+        "end": 963,
+        "text": "金太郎きんたろうが口笛くちぶえを吹ふいて、\n「さあ、みんな来こい。みんな来こい。」\n　と呼よびますと、熊くまを頭かしらに、鹿しかや猿さるやうさぎがのそのそ出て来きました。"
+      },
       "event_type": "GUIDANCE",
       "description": "金太郎きんたろうが口笛くちぶえを吹ふいて、\n「さあ、みんな来こい。みんな来こい。」\n　と呼よびますと、熊くまを頭かしらに、鹿しかや猿さるやうさぎがのそのそ出て来きました。",
       "agents": [
@@ -273,22 +278,10 @@
       "targets": [
         "動物"
       ],
-      "text_span": {
-        "start": 878,
-        "end": 963,
-        "text": "金太郎きんたろうが口笛くちぶえを吹ふいて、\n「さあ、みんな来こい。みんな来こい。」\n　と呼よびますと、熊くまを頭かしらに、鹿しかや猿さるやうさぎがのそのそ出て来きました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 7,
-      "action_layer": {
-        "category": "communicative",
-        "type": "command",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "金太郎",
@@ -297,10 +290,22 @@
           "relationship_level2": "ally",
           "sentiment": "positive"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "command",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "06b5b558-ab3f-48fb-ad83-6be7a7b2740a",
+      "text_span": {
+        "start": 1118,
+        "end": 1151,
+        "text": "「さあ、みんなすもうを取とれ。ごほうびにはこのおむすびをやるぞ。」"
+      },
       "event_type": "FIRST_FUNCTION_DONOR",
       "description": "「さあ、みんなすもうを取とれ。ごほうびにはこのおむすびをやるぞ。」",
       "agents": [
@@ -309,11 +314,6 @@
       "targets": [
         "動物"
       ],
-      "text_span": {
-        "start": 1118,
-        "end": 1151,
-        "text": "「さあ、みんなすもうを取とれ。ごほうびにはこのおむすびをやるぞ。」"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -337,6 +337,11 @@
     },
     {
       "id": "099264f8-e0e7-4048-9179-e79cbf16365d",
+      "text_span": {
+        "start": 1572,
+        "end": 1640,
+        "text": "そこでうさぎと、猿さると、鹿しかと、いちばんおしまいに熊くまがかかっていきましたが、片かたっぱしからころころ、ころがされてしまいました。"
+      },
       "event_type": "VICTORY",
       "description": "そこでうさぎと、猿さると、鹿しかと、いちばんおしまいに熊くまがかかっていきましたが、片かたっぱしからころころ、ころがされてしまいました。",
       "agents": [
@@ -345,22 +350,10 @@
       "targets": [
         "動物"
       ],
-      "text_span": {
-        "start": 1572,
-        "end": 1640,
-        "text": "そこでうさぎと、猿さると、鹿しかと、いちばんおしまいに熊くまがかかっていきましたが、片かたっぱしからころころ、ころがされてしまいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 9,
-      "action_layer": {
-        "category": "physical",
-        "type": "attack",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "金太郎",
@@ -369,10 +362,22 @@
           "relationship_level2": "ally",
           "sentiment": "positive"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "attack",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "6a1bf5d9-dcb3-4000-867f-9d0f6e763375",
+      "text_span": {
+        "start": 2044,
+        "end": 2111,
+        "text": "うさぎと猿さると鹿しかと熊くまをまわりにぐるりに並ならばせて、自分じぶんがまん中に座すわって、おむすびを分わけてみんなで食たべました。"
+      },
       "event_type": "LIQUIDATION",
       "description": "うさぎと猿さると鹿しかと熊くまをまわりにぐるりに並ならばせて、自分じぶんがまん中に座すわって、おむすびを分わけてみんなで食たべました。",
       "agents": [
@@ -381,11 +386,6 @@
       "targets": [
         "動物"
       ],
-      "text_span": {
-        "start": 2044,
-        "end": 2111,
-        "text": "うさぎと猿さると鹿しかと熊くまをまわりにぐるりに並ならばせて、自分じぶんがまん中に座すわって、おむすびを分わけてみんなで食たべました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -409,6 +409,11 @@
     },
     {
       "id": "6e72eac4-956b-466d-b399-1327c3f4f8b9",
+      "text_span": {
+        "start": 2190,
+        "end": 2330,
+        "text": "　帰かえって行いく道々みちみちも、森もりの中でかけっくらをしたり、岩いわの上で鬼おにごっこをしたりして遊あそび遊あそび行いくうちに、大きな谷川たにがわのふちへ出ました。水はごうごうと音おとを立たてて、えらい勢いきおいで流ながれて行いきますが、あいにく橋はしがかかっていませんでした"
+      },
       "event_type": "LACK",
       "description": "帰かえって行いく道々みちみちも、森もりの中でかけっくらをしたり、岩いわの上で鬼おにごっこをしたりして遊あそび遊あそび行いくうちに、大きな谷川たにがわのふちへ出ました。水はごうごうと音おとを立たてて、え",
       "agents": [
@@ -418,22 +423,10 @@
         "金太郎",
         "動物"
       ],
-      "text_span": {
-        "start": 2190,
-        "end": 2330,
-        "text": "　帰かえって行いく道々みちみちも、森もりの中でかけっくらをしたり、岩いわの上で鬼おにごっこをしたりして遊あそび遊あそび行いくうちに、大きな谷川たにがわのふちへ出ました。水はごうごうと音おとを立たてて、えらい勢いきおいで流ながれて行いきますが、あいにく橋はしがかかっていませんでした"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 11,
-      "action_layer": {
-        "category": "physical",
-        "type": "restrain",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "大きな谷川",
@@ -442,10 +435,22 @@
           "relationship_level2": "",
           "sentiment": "negative"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "restrain",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "27bd8f73-b183-4225-9e88-34bdd47f38b7",
+      "text_span": {
+        "start": 2471,
+        "end": 2589,
+        "text": "金太郎きんたろうはまさかりをほうり出だして、いきなり杉すぎの木に両手りょうてをかけました。そして二、三度どぐんぐん押おしたと思おもうと、めりめりとひどい音おとがして、木は川かわの上にどっさりと倒たおれかかって、りっぱな橋はしができました"
+      },
       "event_type": "SOLUTION",
       "description": "金太郎きんたろうはまさかりをほうり出だして、いきなり杉すぎの木に両手りょうてをかけました。そして二、三度どぐんぐん押おしたと思おもうと、めりめりとひどい音おとがして、木は川かわの上にどっさりと倒たおれ",
       "agents": [
@@ -454,22 +459,10 @@
       "targets": [
         "動物"
       ],
-      "text_span": {
-        "start": 2471,
-        "end": 2589,
-        "text": "金太郎きんたろうはまさかりをほうり出だして、いきなり杉すぎの木に両手りょうてをかけました。そして二、三度どぐんぐん押おしたと思おもうと、めりめりとひどい音おとがして、木は川かわの上にどっさりと倒たおれかかって、りっぱな橋はしができました"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 12,
-      "action_layer": {
-        "category": "existential",
-        "type": "transform",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "金太郎",
@@ -478,10 +471,22 @@
           "relationship_level2": "ally",
           "sentiment": "positive"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "transform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "4b53d0fa-1a2d-40a9-8e02-b28ebd3a7405",
+      "text_span": {
+        "start": 2695,
+        "end": 2743,
+        "text": "その時とき向むこうの岩いわの上にきこりが一人ひとりかくれていて、この様子ようすを見みていました。"
+      },
       "event_type": "RECONNAISSANCE",
       "description": "その時とき向むこうの岩いわの上にきこりが一人ひとりかくれていて、この様子ようすを見みていました。",
       "agents": [
@@ -490,22 +495,10 @@
       "targets": [
         "金太郎"
       ],
-      "text_span": {
-        "start": 2695,
-        "end": 2743,
-        "text": "その時とき向むこうの岩いわの上にきこりが一人ひとりかくれていて、この様子ようすを見みていました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 13,
-      "action_layer": {
-        "category": "mental",
-        "type": "observe",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "碓井貞光",
@@ -514,10 +507,22 @@
           "relationship_level2": "stranger",
           "sentiment": "neutral"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "observe",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "bc35c2bd-62e0-4f89-9cea-7edafa041d40",
+      "text_span": {
+        "start": 3208,
+        "end": 3264,
+        "text": "「これこれ、坊ぼうや。こんどはおじさんとすもうを取とろう。」\n　と言いいながら、のこのこ入はいって行いきました。"
+      },
       "event_type": "FIRST_FUNCTION_DONOR",
       "description": "「これこれ、坊ぼうや。こんどはおじさんとすもうを取とろう。」\n　と言いいながら、のこのこ入はいって行いきました。",
       "agents": [
@@ -526,22 +531,10 @@
       "targets": [
         "金太郎"
       ],
-      "text_span": {
-        "start": 3208,
-        "end": 3264,
-        "text": "「これこれ、坊ぼうや。こんどはおじさんとすもうを取とろう。」\n　と言いいながら、のこのこ入はいって行いきました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 14,
-      "action_layer": {
-        "category": "transaction",
-        "type": "request",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "碓井貞光",
@@ -550,10 +543,22 @@
           "relationship_level2": "stranger",
           "sentiment": "neutral"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "request",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "2325caaa-950f-45be-bcfd-3ce22c27da9b",
+      "text_span": {
+        "start": 3393,
+        "end": 3486,
+        "text": "そこで二人ふたりはしばらく真まっ赤かな顔かおをして押おし合あいました。そのうちきこりはふいと、\n「もう止よそう。勝負しょうぶがつかない。」\n　と言いって、手てを引ひっ込こめてしまいました"
+      },
       "event_type": "HERO_REACTION",
       "description": "そこで二人ふたりはしばらく真まっ赤かな顔かおをして押おし合あいました。そのうちきこりはふいと、\n「もう止よそう。勝負しょうぶがつかない。」\n　と言いって、手てを引ひっ込こめてしまいました",
       "agents": [
@@ -562,11 +567,6 @@
       "targets": [
         "金太郎"
       ],
-      "text_span": {
-        "start": 3393,
-        "end": 3486,
-        "text": "そこで二人ふたりはしばらく真まっ赤かな顔かおをして押おし合あいました。そのうちきこりはふいと、\n「もう止よそう。勝負しょうぶがつかない。」\n　と言いって、手てを引ひっ込こめてしまいました"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -590,6 +590,11 @@
     },
     {
       "id": "d9899310-6c4a-4505-875b-7d11e8ed251a",
+      "text_span": {
+        "start": 3685,
+        "end": 3755,
+        "text": "こう言いって、こんどは金太郎きんたろうに向むかって、\n「どうだね、坊ぼうやは都みやこへ出てお侍さむらいにならないかい。」\n　と言いいました。"
+      },
       "event_type": "GUIDANCE",
       "description": "こう言いって、こんどは金太郎きんたろうに向むかって、\n「どうだね、坊ぼうやは都みやこへ出てお侍さむらいにならないかい。」\n　と言いいました。",
       "agents": [
@@ -598,22 +603,10 @@
       "targets": [
         "金太郎"
       ],
-      "text_span": {
-        "start": 3685,
-        "end": 3755,
-        "text": "こう言いって、こんどは金太郎きんたろうに向むかって、\n「どうだね、坊ぼうやは都みやこへ出てお侍さむらいにならないかい。」\n　と言いいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 16,
-      "action_layer": {
-        "category": "communicative",
-        "type": "persuade",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "碓井貞光",
@@ -622,10 +615,22 @@
           "relationship_level2": "",
           "sentiment": "positive"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "persuade",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "2016ba6f-6d79-4d09-869c-5d222175af6f",
+      "text_span": {
+        "start": 4559,
+        "end": 4615,
+        "text": "金太郎きんたろうはおかあさんの前まえに手てをついて、\n「おかあさん、では行ってまいります。」\n　と言いいました。"
+      },
       "event_type": "DEPARTURE",
       "description": "金太郎きんたろうはおかあさんの前まえに手てをついて、\n「おかあさん、では行ってまいります。」\n　と言いいました。",
       "agents": [
@@ -634,22 +639,10 @@
       "targets": [
         "山うば"
       ],
-      "text_span": {
-        "start": 4559,
-        "end": 4615,
-        "text": "金太郎きんたろうはおかあさんの前まえに手てをついて、\n「おかあさん、では行ってまいります。」\n　と言いいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 17,
-      "action_layer": {
-        "category": "communicative",
-        "type": "inform",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "金太郎",
@@ -658,10 +651,22 @@
           "relationship_level2": "parent_child",
           "sentiment": "positive"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "e2427929-f664-4450-902d-a6eec088d5a3",
+      "text_span": {
+        "start": 4859,
+        "end": 4935,
+        "text": "「だが金太郎きんたろうという名なは侍さむらいにはおかしい。父親ちちおやが坂田さかたというのなら、今いまから坂田金時さかたのきんときと名乗なのるがいい。」"
+      },
       "event_type": "TRANSFIGURATION",
       "description": "「だが金太郎きんたろうという名なは侍さむらいにはおかしい。父親ちちおやが坂田さかたというのなら、今いまから坂田金時さかたのきんときと名乗なのるがいい。」",
       "agents": [
@@ -670,22 +675,10 @@
       "targets": [
         "金太郎"
       ],
-      "text_span": {
-        "start": 4859,
-        "end": 4935,
-        "text": "「だが金太郎きんたろうという名なは侍さむらいにはおかしい。父親ちちおやが坂田さかたというのなら、今いまから坂田金時さかたのきんときと名乗なのるがいい。」"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 18,
-      "action_layer": {
-        "category": "transaction",
-        "type": "give",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "碓井貞光",
@@ -694,10 +687,22 @@
           "relationship_level2": "mentor_student",
           "sentiment": ""
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "give",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "507c3657-3450-4fd5-b2e9-b06ffc64052a",
+      "text_span": {
+        "start": 4939,
+        "end": 4988,
+        "text": "で金太郎きんたろうは坂田金時さかたのきんときと名乗なのって、頼光らいこうの家来けらいになりました。"
+      },
       "event_type": "WEDDING",
       "description": "で金太郎きんたろうは坂田金時さかたのきんときと名乗なのって、頼光らいこうの家来けらいになりました。",
       "agents": [
@@ -706,22 +711,10 @@
       "targets": [
         "碓井貞光"
       ],
-      "text_span": {
-        "start": 4939,
-        "end": 4988,
-        "text": "で金太郎きんたろうは坂田金時さかたのきんときと名乗なのって、頼光らいこうの家来けらいになりました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 19,
-      "action_layer": {
-        "category": "existential",
-        "type": "transform",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "金太郎",
@@ -730,10 +723,22 @@
           "relationship_level2": "commander_subordinate",
           "sentiment": "positive"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "transform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "990930d6-15de-4be5-927e-66b2429202f5",
+      "text_span": {
+        "start": 5023,
+        "end": 5084,
+        "text": "卜部季武うらべのすえたけ、碓井貞光うすいのさだみつといっしょに、頼光らいこうの四天王てんのうと呼よばれるようになりました。"
+      },
       "event_type": "RECOGNITION",
       "description": "卜部季武うらべのすえたけ、碓井貞光うすいのさだみつといっしょに、頼光らいこうの四天王てんのうと呼よばれるようになりました。",
       "agents": [
@@ -742,22 +747,10 @@
       "targets": [
         "金太郎"
       ],
-      "text_span": {
-        "start": 5023,
-        "end": 5084,
-        "text": "卜部季武うらべのすえたけ、碓井貞光うすいのさだみつといっしょに、頼光らいこうの四天王てんのうと呼よばれるようになりました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 20,
-      "action_layer": {
-        "category": "existential",
-        "type": "transform",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "世間",
@@ -766,7 +759,14 @@
           "relationship_level2": "",
           "sentiment": "neutral"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "transform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     }
   ],
   "themes_and_motifs": {

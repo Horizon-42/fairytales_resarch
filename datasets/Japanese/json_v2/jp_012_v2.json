@@ -44,6 +44,11 @@
   "narrative_events": [
     {
       "id": "6505b9b2-f3a7-433a-8299-601edd13ee97",
+      "text_span": {
+        "start": 2,
+        "end": 75,
+        "text": "　むかし越後国えちごのくに松まつの山家やまがの片田舎かたいなかに、おとうさんとおかあさんと娘むすめと、おやこ三人にん住すんでいるうちがありました。"
+      },
       "event_type": "Initial Situation",
       "description": "むかし越後国えちごのくに松まつの山家やまがの片田舎かたいなかに、おとうさんとおかあさんと娘むすめと、おやこ三人にん住すんでいるうちがありました。",
       "agents": [
@@ -52,51 +57,26 @@
         "おかあさん"
       ],
       "targets": [],
-      "text_span": {
-        "start": 2,
-        "end": 75,
-        "text": "　むかし越後国えちごのくに松まつの山家やまがの片田舎かたいなかに、おとうさんとおかあさんと娘むすめと、おやこ三人にん住すんでいるうちがありました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "relationships": [
-        {
-          "agent": "娘",
-          "target": "",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "neutral"
-        }
-      ],
-      "action_layer": {
-        "category": "existential",
-        "type": "",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "娘",
-          "target": "",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "neutral"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "existential",
       "action_type": "",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "b7ca4ed3-2d72-4515-96de-cad1feb7f325",
+      "text_span": {
+        "start": 77,
+        "end": 128,
+        "text": "ある時ときおとうさんは、よんどころない用事ようじが出来できて、京都きょうとへ上のぼることになりました。"
+      },
       "event_type": "ABSENTATION",
       "description": "ある時ときおとうさんは、よんどころない用事ようじが出来できて、京都きょうとへ上のぼることになりました。",
       "agents": [
@@ -106,51 +86,26 @@
         "娘",
         "おかあさん"
       ],
-      "text_span": {
-        "start": 77,
-        "end": 128,
-        "text": "ある時ときおとうさんは、よんどころない用事ようじが出来できて、京都きょうとへ上のぼることになりました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 2,
-      "action_layer": {
-        "category": "physical",
-        "type": "travel",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "おとうさん",
-          "target": "娘",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "neutral"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "おとうさん",
-          "target": "娘",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "neutral"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "physical",
       "action_type": "travel",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "e226b87f-ea64-48bc-962d-66912c764307",
+      "text_span": {
+        "start": 299,
+        "end": 334,
+        "text": "「しっかり留守るすを頼たのむよ。それから子供こどもに気きをつけてね。」"
+      },
       "event_type": "INTERDICTION",
       "description": "「しっかり留守るすを頼たのむよ。それから子供こどもに気きをつけてね。」",
       "agents": [
@@ -159,51 +114,26 @@
       "targets": [
         "おかあさん"
       ],
-      "text_span": {
-        "start": 299,
-        "end": 334,
-        "text": "「しっかり留守るすを頼たのむよ。それから子供こどもに気きをつけてね。」"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "action_layer": {
-        "category": "communicative",
-        "type": "command",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "おとうさん",
-          "target": "おかあさん",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "spouse",
-          "sentiment": ""
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "おとうさん",
-          "target": "おかあさん",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "spouse",
-          "sentiment": ""
-        }
-      ],
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "spouse",
       "sentiment": "",
       "action_category": "communicative",
       "action_type": "command",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "97f1e17f-fd8f-4cc2-8ae5-e6ad0a9596b5",
+      "text_span": {
+        "start": 616,
+        "end": 656,
+        "text": "おとうさんが立たって行いってしまうと、うちの中は急きゅうに寂さびしくなりました。"
+      },
       "event_type": "DEPARTURE",
       "description": "おとうさんが立たって行いってしまうと、うちの中は急きゅうに寂さびしくなりました。",
       "agents": [
@@ -213,100 +143,50 @@
         "娘",
         "おかあさん"
       ],
-      "text_span": {
-        "start": 616,
-        "end": 656,
-        "text": "おとうさんが立たって行いってしまうと、うちの中は急きゅうに寂さびしくなりました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 4,
-      "action_layer": {
-        "category": "physical",
-        "type": "travel",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "おとうさん",
-          "target": "娘",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "negative"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "おとうさん",
-          "target": "娘",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "negative"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "physical",
       "action_type": "travel",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "0bb8ef4b-a3fd-4837-ae65-77b2829fc322",
-      "event_type": "LACK",
-      "description": "三日みっか四日よっかとなると、そろそろおとうさんがこいしくなりました。",
-      "agents": [],
-      "targets": [],
       "text_span": {
         "start": 714,
         "end": 749,
         "text": "三日みっか四日よっかとなると、そろそろおとうさんがこいしくなりました。"
       },
+      "event_type": "LACK",
+      "description": "三日みっか四日よっかとなると、そろそろおとうさんがこいしくなりました。",
+      "agents": [],
+      "targets": [],
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "action_layer": {
-        "category": "mental",
-        "type": "realize",
-        "context": "突然の寂しさ",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "",
-          "target": "",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "negative"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "",
-          "target": "",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "negative"
-        }
-      ],
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "parent_child",
       "sentiment": "negative",
       "action_category": "mental",
       "action_type": "realize",
       "action_context": "突然の寂しさ",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "8f45b0d1-7c6e-4ca2-b87c-0f3bba2cb2ec",
+      "text_span": {
+        "start": 1320,
+        "end": 1385,
+        "text": "その日の夕方ゆうがた、おとうさんは荷物にもつをしょって、\n「ああ、疲つかれた、疲つかれた。」\n　といいながら、帰かえって来きました"
+      },
       "event_type": "RETURN",
       "description": "その日の夕方ゆうがた、おとうさんは荷物にもつをしょって、\n「ああ、疲つかれた、疲つかれた。」\n　といいながら、帰かえって来きました",
       "agents": [
@@ -316,51 +196,26 @@
         "娘",
         "おかあさん"
       ],
-      "text_span": {
-        "start": 1320,
-        "end": 1385,
-        "text": "その日の夕方ゆうがた、おとうさんは荷物にもつをしょって、\n「ああ、疲つかれた、疲つかれた。」\n　といいながら、帰かえって来きました"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 6,
-      "relationships": [
-        {
-          "agent": "おとうさん",
-          "target": "娘",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "positive"
-        }
-      ],
-      "action_layer": {
-        "category": "physical",
-        "type": "",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "おとうさん",
-          "target": "娘",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "physical",
       "action_type": "",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "e9176c32-d7d0-4b06-be9e-be015e64d86f",
+      "text_span": {
+        "start": 1720,
+        "end": 1774,
+        "text": "包つつみの中から細長ほそながい箱はこを出だして、にこにこしながら、\n「さあ、お約束やくそくのおみやげだよ。」"
+      },
       "event_type": "LIQUIDATION",
       "description": "包つつみの中から細長ほそながい箱はこを出だして、にこにこしながら、\n「さあ、お約束やくそくのおみやげだよ。」",
       "agents": [
@@ -369,51 +224,26 @@
       "targets": [
         "娘"
       ],
-      "text_span": {
-        "start": 1720,
-        "end": 1774,
-        "text": "包つつみの中から細長ほそながい箱はこを出だして、にこにこしながら、\n「さあ、お約束やくそくのおみやげだよ。」"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 7,
-      "action_layer": {
-        "category": "transaction",
-        "type": "give",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "おとうさん",
-          "target": "娘",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "positive"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "おとうさん",
-          "target": "娘",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "parent_child",
       "sentiment": "positive",
       "action_category": "transaction",
       "action_type": "give",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "9be614c7-2e88-4bba-918c-5b3f717cd52e",
+      "text_span": {
+        "start": 1969,
+        "end": 2006,
+        "text": "「これはお前まえのおみやげだ。」\n　といって、おかあさんに渡わたしました。"
+      },
       "event_type": "RECEIPT_OF_AGENT",
       "description": "「これはお前まえのおみやげだ。」\n　といって、おかあさんに渡わたしました。",
       "agents": [
@@ -422,51 +252,26 @@
       "targets": [
         "おかあさん"
       ],
-      "text_span": {
-        "start": 1969,
-        "end": 2006,
-        "text": "「これはお前まえのおみやげだ。」\n　といって、おかあさんに渡わたしました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 8,
-      "action_layer": {
-        "category": "transaction",
-        "type": "give",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "おとうさん",
-          "target": "おかあさん",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "spouse",
-          "sentiment": "positive"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "おとうさん",
-          "target": "おかあさん",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "spouse",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "spouse",
       "sentiment": "positive",
       "action_category": "transaction",
       "action_type": "give",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "6f4fdf68-dedb-4638-a23b-857a551b6bd0",
+      "text_span": {
+        "start": 2363,
+        "end": 2411,
+        "text": "ちょうど十五になった時とき、おかあさんはふと病気びょうきになって、どっと寝込ねこんでしまいました"
+      },
       "event_type": "OTHER",
       "description": "ちょうど十五になった時とき、おかあさんはふと病気びょうきになって、どっと寝込ねこんでしまいました",
       "agents": [
@@ -475,51 +280,26 @@
       "targets": [
         "おかあさん"
       ],
-      "text_span": {
-        "start": 2363,
-        "end": 2411,
-        "text": "ちょうど十五になった時とき、おかあさんはふと病気びょうきになって、どっと寝込ねこんでしまいました"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 9,
-      "action_layer": {
-        "category": "existential",
-        "type": "transform",
-        "context": "mother became sick",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "おかあさん",
-          "target": "おかあさん",
-          "relationship_level1": "",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "おかあさん",
-          "target": "おかあさん",
-          "relationship_level1": "",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "negative",
       "action_category": "existential",
       "action_type": "transform",
       "action_context": "mother became sick",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "2168dea8-5152-4b69-861d-a1ddb976ae5a",
+      "text_span": {
+        "start": 2874,
+        "end": 2940,
+        "text": "この中にはわたしの魂たましいが込こめてあるのだから、この後のちいつでもおかあさんの顔かおが見みたくなったら、出だしてごらんなさい。」"
+      },
       "event_type": "RECEIPT_OF_AGENT",
       "description": "この中にはわたしの魂たましいが込こめてあるのだから、この後のちいつでもおかあさんの顔かおが見みたくなったら、出だしてごらんなさい。」",
       "agents": [
@@ -528,51 +308,26 @@
       "targets": [
         "娘"
       ],
-      "text_span": {
-        "start": 2874,
-        "end": 2940,
-        "text": "この中にはわたしの魂たましいが込こめてあるのだから、この後のちいつでもおかあさんの顔かおが見みたくなったら、出だしてごらんなさい。」"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 11,
-      "action_layer": {
-        "category": "communicative",
-        "type": "inform",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "おかあさん",
-          "target": "娘",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": ""
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "おかあさん",
-          "target": "娘",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": ""
-        }
-      ],
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "parent_child",
       "sentiment": "",
       "action_category": "communicative",
       "action_type": "inform",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "514b6fc3-4982-489b-bb7f-25993c0b3e76",
+      "text_span": {
+        "start": 2961,
+        "end": 2995,
+        "text": "それから間まもなく、おかあさんはとうとう息いきを引ひき取とりました。"
+      },
       "event_type": "LACK",
       "description": "それから間まもなく、おかあさんはとうとう息いきを引ひき取とりました。",
       "agents": [
@@ -581,51 +336,26 @@
       "targets": [
         "おかあさん"
       ],
-      "text_span": {
-        "start": 2961,
-        "end": 2995,
-        "text": "それから間まもなく、おかあさんはとうとう息いきを引ひき取とりました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 10,
-      "action_layer": {
-        "category": "existential",
-        "type": "die",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "おかあさん",
-          "target": "おかあさん",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "negative"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "おかあさん",
-          "target": "おかあさん",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "negative"
-        }
-      ],
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "parent_child",
       "sentiment": "negative",
       "action_category": "existential",
       "action_type": "die",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "e0c1a68c-047e-4cfe-9eed-846727d2c8ca",
+      "text_span": {
+        "start": 3290,
+        "end": 3348,
+        "text": "鏡かがみの向むこうにはおかあさんが、それはずっと若わかい美うつくしい顔かおで、にっこり笑わらっていらっしゃいました。"
+      },
       "event_type": "UNFOUNDED_CLAIMS",
       "description": "鏡かがみの向むこうにはおかあさんが、それはずっと若わかい美うつくしい顔かおで、にっこり笑わらっていらっしゃいました。",
       "agents": [
@@ -634,51 +364,26 @@
       "targets": [
         "おかあさん"
       ],
-      "text_span": {
-        "start": 3290,
-        "end": 3348,
-        "text": "鏡かがみの向むこうにはおかあさんが、それはずっと若わかい美うつくしい顔かおで、にっこり笑わらっていらっしゃいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 12,
-      "action_layer": {
-        "category": "mental",
-        "type": "realize",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "娘",
-          "target": "おかあさん",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "positive"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "娘",
-          "target": "おかあさん",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "parent_child",
       "sentiment": "positive",
       "action_category": "mental",
       "action_type": "realize",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "1483e324-fad1-4377-b9a6-5f24a1012c14",
+      "text_span": {
+        "start": 3435,
+        "end": 3473,
+        "text": "その後のちおとうさんは人にすすめられて、二度どめのおかあさんをもらいました。"
+      },
       "event_type": "WEDDING",
       "description": "その後のちおとうさんは人にすすめられて、二度どめのおかあさんをもらいました。",
       "agents": [
@@ -687,51 +392,26 @@
       "targets": [
         "こんどのおかあさん"
       ],
-      "text_span": {
-        "start": 3435,
-        "end": 3473,
-        "text": "その後のちおとうさんは人にすすめられて、二度どめのおかあさんをもらいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 13,
-      "action_layer": {
-        "category": "existential",
-        "type": "transform",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "おとうさん",
-          "target": "こんどのおかあさん",
-          "relationship_level1": "Romance",
-          "relationship_level2": "lover",
-          "sentiment": "positive"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "おとうさん",
-          "target": "こんどのおかあさん",
-          "relationship_level1": "Romance",
-          "relationship_level2": "lover",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "Romance",
       "relationship_level2": "lover",
       "sentiment": "positive",
       "action_category": "existential",
       "action_type": "transform",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "0a666e01-f586-4136-9a7d-9f8b67e68ced",
+      "text_span": {
+        "start": 3850,
+        "end": 3904,
+        "text": "こんどのおかあさんは、時々ときどき娘むすめが悲かなしそうな顔かおをしているのを見みつけて心配しんぱいしました"
+      },
       "event_type": "RECONNAISSANCE",
       "description": "こんどのおかあさんは、時々ときどき娘むすめが悲かなしそうな顔かおをしているのを見みつけて心配しんぱいしました。",
       "agents": [
@@ -740,51 +420,26 @@
       "targets": [
         "娘"
       ],
-      "text_span": {
-        "start": 3850,
-        "end": 3904,
-        "text": "こんどのおかあさんは、時々ときどき娘むすめが悲かなしそうな顔かおをしているのを見みつけて心配しんぱいしました"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 14,
-      "action_layer": {
-        "category": "mental",
-        "type": "observe",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "こんどのおかあさん",
-          "target": "娘",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "negative"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "こんどのおかあさん",
-          "target": "娘",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "negative"
-        }
-      ],
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "parent_child",
       "sentiment": "negative",
       "action_category": "mental",
       "action_type": "observe",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "0349d239-c02c-4e15-af19-99167d3ab0e5",
+      "text_span": {
+        "start": 4644,
+        "end": 4718,
+        "text": "「どれ、お見みせ。」\n　といいながら、娘むすめのうしろからのぞきますと、そこには若わかい時ときのおかあさんそっくりの娘むすめの顔かおがうつりました。"
+      },
       "event_type": "EXPOSURE",
       "description": "「どれ、お見みせ。」\n　といいながら、娘むすめのうしろからのぞきますと、そこには若わかい時ときのおかあさんそっくりの娘むすめの顔かおがうつりました。",
       "agents": [
@@ -793,51 +448,26 @@
       "targets": [
         "娘"
       ],
-      "text_span": {
-        "start": 4644,
-        "end": 4718,
-        "text": "「どれ、お見みせ。」\n　といいながら、娘むすめのうしろからのぞきますと、そこには若わかい時ときのおかあさんそっくりの娘むすめの顔かおがうつりました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 15,
-      "action_layer": {
-        "category": "mental",
-        "type": "realize",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "おとうさん",
-          "target": "娘",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "neutral"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "おとうさん",
-          "target": "娘",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "neutral"
-        }
-      ],
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "parent_child",
       "sentiment": "neutral",
       "action_category": "mental",
       "action_type": "realize",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "1696f028-a5b5-403c-89e7-7969d45f84f1",
+      "text_span": {
+        "start": 4975,
+        "end": 5009,
+        "text": "「これですっかり分わかりました。何なんというやさしい心こころでしょう"
+      },
       "event_type": "LIQUIDATION",
       "description": "「これですっかり分わかりました。何なんというやさしい心こころでしょう。",
       "agents": [
@@ -846,51 +476,26 @@
       "targets": [
         "娘"
       ],
-      "text_span": {
-        "start": 4975,
-        "end": 5009,
-        "text": "「これですっかり分わかりました。何なんというやさしい心こころでしょう"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 16,
-      "action_layer": {
-        "category": "mental",
-        "type": "realize",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "こんどのおかあさん",
-          "target": "娘",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "positive"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "こんどのおかあさん",
-          "target": "娘",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "parent_child",
       "sentiment": "positive",
       "action_category": "mental",
       "action_type": "realize",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "df1201cc-6522-4a0d-b7aa-bf87b5989850",
+      "text_span": {
+        "start": 5071,
+        "end": 5123,
+        "text": "「おとうさんにも、おかあさんにも、よけいな御心配ごしんぱいをかけてすみませんでした。」\n　といいました。"
+      },
       "event_type": "RECOGNITION",
       "description": "「おとうさんにも、おかあさんにも、よけいな御心配ごしんぱいをかけてすみませんでした。」",
       "agents": [
@@ -900,110 +505,62 @@
         "おとうさん",
         "こんどのおかあさん"
       ],
-      "text_span": {
-        "start": 5071,
-        "end": 5123,
-        "text": "「おとうさんにも、おかあさんにも、よけいな御心配ごしんぱいをかけてすみませんでした。」\n　といいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 17,
-      "action_layer": {
-        "category": "communicative",
-        "type": "inform",
-        "context": "apologize",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "娘",
-          "target": "おとうさん",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "positive"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "娘",
-          "target": "おとうさん",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "parent_child",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "communicative",
       "action_type": "inform",
       "action_context": "apologize",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "a32608c0-c299-45c7-b4fc-481075fbd2f8",
+      "text_span": null,
       "event_type": "",
       "description": "",
       "agents": [],
       "targets": [],
-      "text_span": null,
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 18,
-      "relationships": [],
-      "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": ""
-      },
-      "narrative_function": "",
-      "relationship_multi": [],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "",
       "action_type": "",
       "action_context": "",
-      "action_status": ""
+      "action_status": "",
+      "narrative_function": ""
     },
     {
       "id": "fe2b9c6d-f49d-4692-ace4-f31c4be07741",
-      "event_type": "",
-      "description": "「どれ、お見みせ。」\n　といいながら、娘むすめのうしろからのぞきますと、そこには若わかい時ときのおかあさんそっくりの娘むすめの顔かおがうつりました。",
-      "agents": [],
-      "targets": [],
       "text_span": {
         "start": 4644,
         "end": 4718,
         "text": "「どれ、お見みせ。」\n　といいながら、娘むすめのうしろからのぞきますと、そこには若わかい時ときのおかあさんそっくりの娘むすめの顔かおがうつりました。"
       },
+      "event_type": "",
+      "description": "「どれ、お見みせ。」\n　といいながら、娘むすめのうしろからのぞきますと、そこには若わかい時ときのおかあさんそっくりの娘むすめの顔かおがうつりました。",
+      "agents": [],
+      "targets": [],
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 19,
-      "relationships": [],
-      "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": ""
-      },
-      "narrative_function": "",
-      "relationship_multi": [],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "",
       "action_type": "",
       "action_context": "",
-      "action_status": ""
+      "action_status": "",
+      "narrative_function": ""
     }
   ],
   "themes_and_motifs": {
@@ -1012,13 +569,27 @@
       "LOYALTY",
       "OBEDIENCE"
     ],
-    "motif_type": [],
+    "motif_type": [
+      "Motif L222: L222. Modest choice: parting gift. Small gift with blessing preferred to large gift with parent's curse. (L. Reversal of fortune. > L200–L299. Modesty brings reward.)",
+      "Motif L221: L221. Modest request: present from the journey. Asked what her father shall bring her as a present, the heroine chooses a modest gift. It is usually a flower but sometimes does not turn out to be such a simple gift after all (golden cloak, golden apple). (L. Reversal of fortune. > L200–L299. Modesty brings reward.)"
+    ],
     "atu_categories": [],
     "obstacle_thrower": [],
     "helper_type": [],
     "thinking_process": "",
     "atu_evidence": {},
-    "motif_evidence": {}
+    "motif_evidence": {
+      "Motif L222: L222. Modest choice: parting gift. Small gift with blessing preferred to large gift with parent's curse. (L. Reversal of fortune. > L200–L299. Modesty brings reward.)": {
+        "evidence_keys": [
+          "S1969-2006"
+        ]
+      },
+      "Motif L221: L221. Modest request: present from the journey. Asked what her father shall bring her as a present, the heroine chooses a modest gift. It is usually a flower but sometimes does not turn out to be such a simple gift after all (golden cloak, golden apple). (L. Reversal of fortune. > L200–L299. Modesty brings reward.)": {
+        "evidence_keys": [
+          "S1969-2006"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

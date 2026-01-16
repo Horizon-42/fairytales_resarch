@@ -38,9 +38,12 @@
   ],
   "narrative_events": [
     {
+      "id": "24123a2e-1af1-4d61-9b68-5f227fb4ada4",
+      "text_span": null,
       "event_type": "OTHER",
       "description": "",
-      "id": "24123a2e-1af1-4d61-9b68-5f227fb4ada4",
+      "agents": [],
+      "targets": [],
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -56,6 +59,11 @@
     },
     {
       "id": "6f9d98eb-51b6-4d05-b5e3-7c1f9d86e5ab",
+      "text_span": {
+        "start": 0,
+        "end": 53,
+        "text": "むかしむかし、木こりのおじいさんは、お昼になったので、切りかぶに腰をかけて、お弁当を食ベることにしました。"
+      },
       "event_type": "Initial Situation",
       "description": "むかしむかし、木こりのおじいさんは、お昼になったので、切りかぶに腰をかけて、お弁当を食ベることにしました。",
       "agents": [
@@ -64,11 +72,6 @@
       "targets": [
         "おじいさん"
       ],
-      "text_span": {
-        "start": 0,
-        "end": 53,
-        "text": "むかしむかし、木こりのおじいさんは、お昼になったので、切りかぶに腰をかけて、お弁当を食ベることにしました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -92,6 +95,11 @@
     },
     {
       "id": "9d113541-f259-4cf7-b6fb-6187a1dbdbcf",
+      "text_span": {
+        "start": 121,
+        "end": 166,
+        "text": "コロリンと、おむすびが一つ地面に落ちて、コロコロと、そばの穴ヘころがりこんでしまいました。"
+      },
       "event_type": "LACK",
       "description": "コロリンと、おむすびが一つ地面に落ちて、コロコロと、そばの穴ヘころがりこんでしまいました。",
       "agents": [
@@ -100,11 +108,6 @@
       "targets": [
         "おむすび"
       ],
-      "text_span": {
-        "start": 121,
-        "end": 166,
-        "text": "コロリンと、おむすびが一つ地面に落ちて、コロコロと、そばの穴ヘころがりこんでしまいました。"
-      },
       "target_type": "object",
       "object_type": "normal_object",
       "instrument": "",
@@ -120,6 +123,11 @@
     },
     {
       "id": "9eaccfa5-d546-4f48-9b48-b623bc0eb641",
+      "text_span": {
+        "start": 187,
+        "end": 310,
+        "text": "おじいさんが穴をのぞいてみますと、深い穴の中から、こんな歌が聞こえてきました。\n♪おむすびコロリン　コロコロリン。\n♪コロリンころげて　穴の中。\n「ふしぎだなあ。だれが歌っているんだろう？」\n　こんなきれいな歌声は、今まで聞いたことがありません。"
+      },
       "event_type": "RECONNAISSANCE",
       "description": "おじいさんが穴をのぞいてみますと、深い穴の中から、こんな歌が聞こえてきました。\n♪おむすびコロリン　コロコロリン。\n♪コロリンころげて　穴の中。\n「ふしぎだなあ。だれが歌っているんだろう？」\n　こんな",
       "agents": [
@@ -128,22 +136,10 @@
       "targets": [
         "穴"
       ],
-      "text_span": {
-        "start": 187,
-        "end": 310,
-        "text": "おじいさんが穴をのぞいてみますと、深い穴の中から、こんな歌が聞こえてきました。\n♪おむすびコロリン　コロコロリン。\n♪コロリンころげて　穴の中。\n「ふしぎだなあ。だれが歌っているんだろう？」\n　こんなきれいな歌声は、今まで聞いたことがありません。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "action_layer": {
-        "category": "mental",
-        "type": "observe",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "おじいさん",
@@ -152,10 +148,22 @@
           "relationship_level2": "",
           "sentiment": "neutral"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "observe",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "d0bb8778-dc97-4cf0-b7cb-e6106beb9a1a",
+      "text_span": {
+        "start": 322,
+        "end": 468,
+        "text": "おじいさんは、おむすびをもう一つ、穴の中へ落としてみました。\n　するとすぐに、歌が返ってきました。\n♪おむすびコロリン　コロコロリン。\n♪コロリンころげて　穴の中。\n「これは、おもしろい」\n　おじいさんは、すっかりうれしくなって、自分は一つも食ベずに、おむすびをぜんぶ穴へ入れてしまいました。"
+      },
       "event_type": "RECONNAISSANCE",
       "description": "おじいさんは、おむすびをもう一つ、穴の中へ落としてみました。\n　するとすぐに、歌が返ってきました。\n♪おむすびコロリン　コロコロリン。\n♪コロリンころげて　穴の中。\n「これは、おもしろい」\n　おじいさ",
       "agents": [
@@ -164,22 +172,10 @@
       "targets": [
         "穴"
       ],
-      "text_span": {
-        "start": 322,
-        "end": 468,
-        "text": "おじいさんは、おむすびをもう一つ、穴の中へ落としてみました。\n　するとすぐに、歌が返ってきました。\n♪おむすびコロリン　コロコロリン。\n♪コロリンころげて　穴の中。\n「これは、おもしろい」\n　おじいさんは、すっかりうれしくなって、自分は一つも食ベずに、おむすびをぜんぶ穴へ入れてしまいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 4,
-      "action_layer": {
-        "category": "mental",
-        "type": "investigate",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "おじいさん",
@@ -188,32 +184,32 @@
           "relationship_level2": "",
           "sentiment": "positive"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "mental",
+        "type": "investigate",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "8dcf813a-16d6-4bba-b6b3-df623d66785e",
+      "text_span": {
+        "start": 637,
+        "end": 704,
+        "text": "そうだ、穴の中へ入って、たのんでみることにしよう」\n　おじいさんは、おむすびのようにコロコロころがりながら、穴の中へ入っていきました。"
+      },
       "event_type": "DEPARTURE",
       "description": "そうだ、穴の中へ入って、たのんでみることにしよう」\n　おじいさんは、おむすびのようにコロコロころがりながら、穴の中へ入っていきました。",
       "agents": [
         "おじいさん"
       ],
       "targets": [],
-      "text_span": {
-        "start": 637,
-        "end": 704,
-        "text": "そうだ、穴の中へ入って、たのんでみることにしよう」\n　おじいさんは、おむすびのようにコロコロころがりながら、穴の中へ入っていきました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "action_layer": {
-        "category": "physical",
-        "type": "travel",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "おじいさん",
@@ -222,10 +218,22 @@
           "relationship_level2": "",
           "sentiment": "neutral"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "physical",
+        "type": "travel",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "e6ff6d06-a2eb-4322-ba1e-fc6728322996",
+      "text_span": {
+        "start": 743,
+        "end": 809,
+        "text": "「ようこそ、おじいさん。おいしいおむすびをたくさん、ごちそうさま」\n　ネズミたちは、小さな頭をさげて、おじいさんにお礼をいいました。"
+      },
       "event_type": "FIRST_FUNCTION_DONOR",
       "description": "「ようこそ、おじいさん。おいしいおむすびをたくさん、ごちそうさま」\n　ネズミたちは、小さな頭をさげて、おじいさんにお礼をいいました。",
       "agents": [
@@ -234,22 +242,10 @@
       "targets": [
         "おじいさん"
       ],
-      "text_span": {
-        "start": 743,
-        "end": 809,
-        "text": "「ようこそ、おじいさん。おいしいおむすびをたくさん、ごちそうさま」\n　ネズミたちは、小さな頭をさげて、おじいさんにお礼をいいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 6,
-      "action_layer": {
-        "category": "communicative",
-        "type": "inform",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "ネズミたち",
@@ -258,10 +254,22 @@
           "relationship_level2": "",
           "sentiment": "positive"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "communicative",
+        "type": "inform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "a772ef78-c194-49a7-b6e8-072dde17d1c9",
+      "text_span": {
+        "start": 957,
+        "end": 1017,
+        "text": "おじいさんはごちそうになったうえに、ほしい物をなんでも出してくれるという、打ち出の小づちをおみやげにもらって帰りました。"
+      },
       "event_type": "RECEIPT_OF_AGENT",
       "description": "おじいさんはごちそうになったうえに、ほしい物をなんでも出してくれるという、打ち出の小づちをおみやげにもらって帰りました。",
       "agents": [
@@ -270,22 +278,10 @@
       "targets": [
         "おじいさん"
       ],
-      "text_span": {
-        "start": 957,
-        "end": 1017,
-        "text": "おじいさんはごちそうになったうえに、ほしい物をなんでも出してくれるという、打ち出の小づちをおみやげにもらって帰りました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 7,
-      "action_layer": {
-        "category": "transaction",
-        "type": "give",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "ネズミたち",
@@ -294,10 +290,22 @@
           "relationship_level2": "",
           "sentiment": "positive"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "transaction",
+        "type": "give",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "ebf51fef-5164-43e2-9e2e-2b92792c31a9",
+      "text_span": {
+        "start": 1138,
+        "end": 1188,
+        "text": "おじいさんが、小づちをひとふりしただけで、おばあさんのひざの上には、もうあかちゃんがのっていました。"
+      },
       "event_type": "LIQUIDATION",
       "description": "おじいさんが、小づちをひとふりしただけで、おばあさんのひざの上には、もうあかちゃんがのっていました。",
       "agents": [
@@ -306,22 +314,10 @@
       "targets": [
         "おばあさん"
       ],
-      "text_span": {
-        "start": 1138,
-        "end": 1188,
-        "text": "おじいさんが、小づちをひとふりしただけで、おばあさんのひざの上には、もうあかちゃんがのっていました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 8,
-      "action_layer": {
-        "category": "existential",
-        "type": "transform",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "おじいさん",
@@ -330,10 +326,22 @@
           "relationship_level2": "spouse",
           "sentiment": "positive"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "transform",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     },
     {
       "id": "6e235485-e35d-4d6b-8ec6-d98875538ff4",
+      "text_span": {
+        "start": 1214,
+        "end": 1253,
+        "text": "おじいさんとおばあさんはあかちゃんを育てながら、仲よく楽しくくらしましたとさ。"
+      },
       "event_type": "RETURN",
       "description": "おじいさんとおばあさんはあかちゃんを育てながら、仲よく楽しくくらしましたとさ。",
       "agents": [
@@ -343,22 +351,10 @@
       "targets": [
         "あかちゃん"
       ],
-      "text_span": {
-        "start": 1214,
-        "end": 1253,
-        "text": "おじいさんとおばあさんはあかちゃんを育てながら、仲よく楽しくくらしましたとさ。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 9,
-      "action_layer": {
-        "category": "existential",
-        "type": "express_emotion",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
       "relationships": [
         {
           "agent": "おじいさん",
@@ -367,7 +363,14 @@
           "relationship_level2": "parent_child",
           "sentiment": "positive"
         }
-      ]
+      ],
+      "action_layer": {
+        "category": "existential",
+        "type": "express_emotion",
+        "context": "",
+        "status": "success",
+        "function": ""
+      }
     }
   ],
   "themes_and_motifs": {
@@ -375,13 +378,25 @@
     "key_values": [
       "LUCK"
     ],
-    "motif_type": [],
+    "motif_type": [
+      "Motif F949.2: F949.2. Man falls underground through hole. (F. Marvels. > F900-F1099. Extraordinary occurrences.)",
+      "Motif B390: Animals grateful for other kind acts. (Animal Motifs > FRIENDLY ANIMALS > Grateful animals)"
+    ],
     "atu_categories": [],
     "obstacle_thrower": [],
     "helper_type": [],
     "thinking_process": "",
     "atu_evidence": {},
-    "motif_evidence": {}
+    "motif_evidence": {
+      "Motif F949.2: F949.2. Man falls underground through hole. (F. Marvels. > F900-F1099. Extraordinary occurrences.)": {
+        "evidence_keys": [
+          "S121-166"
+        ]
+      },
+      "Motif B390: Animals grateful for other kind acts. (Animal Motifs > FRIENDLY ANIMALS > Grateful animals)": {
+        "evidence_keys": []
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

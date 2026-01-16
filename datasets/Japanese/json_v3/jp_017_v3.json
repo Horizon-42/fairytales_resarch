@@ -38,8 +38,16 @@
   ],
   "narrative_events": [
     {
+      "id": "8e0144e1-7f4a-4e10-b772-1c4451e2913f",
+      "text_span": null,
       "event_type": "OTHER",
       "description": "",
+      "agents": [],
+      "targets": [],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
       "relationships": [],
       "action_layer": {
         "category": "",
@@ -47,26 +55,21 @@
         "context": "",
         "status": "",
         "function": ""
-      },
-      "id": "8e0144e1-7f4a-4e10-b772-1c4451e2913f",
-      "target_type": "character",
-      "object_type": "",
-      "instrument": "",
-      "time_order": 1
+      }
     },
     {
       "id": "f97d8a08-3533-40ca-9dd9-a25e242b8f24",
+      "text_span": {
+        "start": 0,
+        "end": 27,
+        "text": "むかしむかし、あるところに、貧乏な古道具屋がいました。"
+      },
       "event_type": "Initial Situation",
       "description": "むかしむかし、あるところに、貧乏な古道具屋がいました。",
       "agents": [
         "古道具屋"
       ],
       "targets": [],
-      "text_span": {
-        "start": 0,
-        "end": 27,
-        "text": "むかしむかし、あるところに、貧乏な古道具屋がいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -90,6 +93,11 @@
     },
     {
       "id": "5489ddda-2e08-4bc9-9854-93de6d3e4f8b",
+      "text_span": {
+        "start": 29,
+        "end": 65,
+        "text": "ある日の事、古道具屋は一匹のタヌキが、ワナにかかっているのを見つけました"
+      },
       "event_type": "RECONNAISSANCE",
       "description": "ある日の事、古道具屋は一匹のタヌキが、ワナにかかっているのを見つけました",
       "agents": [
@@ -98,11 +106,6 @@
       "targets": [
         "タヌキ"
       ],
-      "text_span": {
-        "start": 29,
-        "end": 65,
-        "text": "ある日の事、古道具屋は一匹のタヌキが、ワナにかかっているのを見つけました"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -126,6 +129,11 @@
     },
     {
       "id": "7b7532a6-76de-49a2-81a4-5b005c1e52a5",
+      "text_span": {
+        "start": 68,
+        "end": 102,
+        "text": "古道具屋はかわいそうに思って、そのタヌキをワナから助けてやりました。"
+      },
       "event_type": "LIQUIDATION",
       "description": "古道具屋はかわいそうに思って、そのタヌキをワナから助けてやりました。",
       "agents": [
@@ -134,11 +142,6 @@
       "targets": [
         "タヌキ"
       ],
-      "text_span": {
-        "start": 68,
-        "end": 102,
-        "text": "古道具屋はかわいそうに思って、そのタヌキをワナから助けてやりました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -162,6 +165,11 @@
     },
     {
       "id": "c96cc851-23ed-40bb-9373-5d8295ce3471",
+      "text_span": {
+        "start": 104,
+        "end": 135,
+        "text": "次の日の朝、昨日のタヌキが古道具屋の所へやってきて言いました。"
+      },
       "event_type": "RETURN",
       "description": "次の日の朝、昨日のタヌキが古道具屋の所へやってきて言いました。",
       "agents": [
@@ -170,11 +178,6 @@
       "targets": [
         "古道具屋"
       ],
-      "text_span": {
-        "start": 104,
-        "end": 135,
-        "text": "次の日の朝、昨日のタヌキが古道具屋の所へやってきて言いました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -190,6 +193,11 @@
     },
     {
       "id": "ccf30cbd-9463-4dfb-9ac8-18e2f1664aef",
+      "text_span": {
+        "start": 217,
+        "end": 245,
+        "text": "わたしが茶がまに化けますから、持って行って売って下さい」"
+      },
       "event_type": "TRICKERY",
       "description": "わたしが茶がまに化けますから、持って行って売って下さい」",
       "agents": [
@@ -198,11 +206,6 @@
       "targets": [
         "古道具屋"
       ],
-      "text_span": {
-        "start": 217,
-        "end": 245,
-        "text": "わたしが茶がまに化けますから、持って行って売って下さい」"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -226,6 +229,11 @@
     },
     {
       "id": "2df12173-572b-465a-b4ec-221808563bba",
+      "text_span": {
+        "start": 322,
+        "end": 367,
+        "text": "和尚さんはタヌキの化けた茶がまを大変気に入った様子で、とても高い値で買い取ってくれました。"
+      },
       "event_type": "LIQUIDATION",
       "description": "和尚さんはタヌキの化けた茶がまを大変気に入った様子で、とても高い値で買い取ってくれました。",
       "agents": [
@@ -234,11 +242,6 @@
       "targets": [
         "古道具屋"
       ],
-      "text_span": {
-        "start": 322,
-        "end": 367,
-        "text": "和尚さんはタヌキの化けた茶がまを大変気に入った様子で、とても高い値で買い取ってくれました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -262,15 +265,15 @@
     },
     {
       "id": "aafad5a0-c565-47d7-a002-35d4584fcc0b",
-      "event_type": "GUIDANCE",
-      "description": "新しい茶がまを手に入れた和尚さんは、小坊主に、\n「この茶がまを、洗ってきなさい」\nと、言いました。",
-      "agents": [],
-      "targets": [],
       "text_span": {
         "start": 372,
         "end": 421,
         "text": "新しい茶がまを手に入れた和尚さんは、小坊主に、\n「この茶がまを、洗ってきなさい」\nと、言いました。"
       },
+      "event_type": "GUIDANCE",
+      "description": "新しい茶がまを手に入れた和尚さんは、小坊主に、\n「この茶がまを、洗ってきなさい」\nと、言いました。",
+      "agents": [],
+      "targets": [],
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -286,15 +289,15 @@
     },
     {
       "id": "fdf583c5-6d23-4451-8f0b-2035a9cab5c2",
-      "event_type": "EXPOSURE",
-      "description": "すると茶がまは、\n「おい小坊主、もっとやさしく洗ってくれ、尻が痛くてたまらん」\nと、しゃべったのです。\n「うひゃー、茶がまがしゃべった！！」",
-      "agents": [],
-      "targets": [],
       "text_span": {
         "start": 461,
         "end": 531,
         "text": "すると茶がまは、\n「おい小坊主、もっとやさしく洗ってくれ、尻が痛くてたまらん」\nと、しゃべったのです。\n「うひゃー、茶がまがしゃべった！！」"
       },
+      "event_type": "EXPOSURE",
+      "description": "すると茶がまは、\n「おい小坊主、もっとやさしく洗ってくれ、尻が痛くてたまらん」\nと、しゃべったのです。\n「うひゃー、茶がまがしゃべった！！」",
+      "agents": [],
+      "targets": [],
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -310,6 +313,11 @@
     },
     {
       "id": "227c00b8-f04d-44e9-9827-58274dfc35e6",
+      "text_span": {
+        "start": 656,
+        "end": 680,
+        "text": "タヌキの化けた茶がまに水を入れて火にかけました。"
+      },
       "event_type": "DIFFICULT_TASK",
       "description": "タヌキの化けた茶がまに水を入れて火にかけました。",
       "agents": [
@@ -318,11 +326,6 @@
       "targets": [
         "タヌキ"
       ],
-      "text_span": {
-        "start": 656,
-        "end": 680,
-        "text": "タヌキの化けた茶がまに水を入れて火にかけました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -346,6 +349,11 @@
     },
     {
       "id": "0e161b6a-16ab-4653-9bb5-9e37dc537435",
+      "text_span": {
+        "start": 725,
+        "end": 745,
+        "text": "タヌキは一目散に、山へ逃げていきました。"
+      },
       "event_type": "DEPARTURE",
       "description": "タヌキは一目散に、山へ逃げていきました。",
       "agents": [
@@ -354,11 +362,6 @@
       "targets": [
         "小坊主"
       ],
-      "text_span": {
-        "start": 725,
-        "end": 745,
-        "text": "タヌキは一目散に、山へ逃げていきました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -382,6 +385,11 @@
     },
     {
       "id": "fe61fb43-674d-4547-a5ef-cb8d41a68b9c",
+      "text_span": {
+        "start": 747,
+        "end": 814,
+        "text": "その夜、タヌキはまた、古道具屋の家にやってきて言いました。\n「二人で町へ行きましょう。私がつなわたりをしますから、人を集めて下さいな」"
+      },
       "event_type": "TRICKERY",
       "description": "その夜、タヌキはまた、古道具屋の家にやってきて言いました。\n「二人で町へ行きましょう。私がつなわたりをしますから、人を集めて下さいな」",
       "agents": [
@@ -390,11 +398,6 @@
       "targets": [
         "古道具屋"
       ],
-      "text_span": {
-        "start": 747,
-        "end": 814,
-        "text": "その夜、タヌキはまた、古道具屋の家にやってきて言いました。\n「二人で町へ行きましょう。私がつなわたりをしますから、人を集めて下さいな」"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -418,17 +421,17 @@
     },
     {
       "id": "e6c1cfc5-4440-433d-865b-5e9fbc833f09",
+      "text_span": {
+        "start": 850,
+        "end": 985,
+        "text": "さあさあ、世にも珍しい、タヌキのつなわたりだよ」\n　入り口で古道具屋が大声で言うと、タヌキはつなの上を器用に渡りながら、腹づつみを打ったり歌ったりします。\n「これはめずらしい。なんて面白いんだろう」\n　タヌキのつなわたりは大評判となり、毎日押すな押すなの大にぎわいです。"
+      },
       "event_type": "STRUGGLE",
       "description": "さあさあ、世にも珍しい、タヌキのつなわたりだよ」\n　入り口で古道具屋が大声で言うと、タヌキはつなの上を器用に渡りながら、腹づつみを打ったり歌ったりします。\n「これはめずらしい。なんて面白いんだろう」\n",
       "agents": [
         "タヌキ"
       ],
       "targets": [],
-      "text_span": {
-        "start": 850,
-        "end": 985,
-        "text": "さあさあ、世にも珍しい、タヌキのつなわたりだよ」\n　入り口で古道具屋が大声で言うと、タヌキはつなの上を器用に渡りながら、腹づつみを打ったり歌ったりします。\n「これはめずらしい。なんて面白いんだろう」\n　タヌキのつなわたりは大評判となり、毎日押すな押すなの大にぎわいです。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -452,15 +455,15 @@
     },
     {
       "id": "13b66752-7007-48bb-8330-9e7bab52a42a",
-      "event_type": "LIQUIDATION",
-      "description": "こうして古道具屋は、タヌキのお陰で大金持ちになったという事です。",
-      "agents": [],
-      "targets": [],
       "text_span": {
         "start": 987,
         "end": 1019,
         "text": "こうして古道具屋は、タヌキのお陰で大金持ちになったという事です。"
       },
+      "event_type": "LIQUIDATION",
+      "description": "こうして古道具屋は、タヌキのお陰で大金持ちになったという事です。",
+      "agents": [],
+      "targets": [],
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -480,13 +483,29 @@
     "key_values": [
       "JUSTICE"
     ],
-    "motif_type": [],
-    "atu_categories": [],
+    "motif_type": [
+      "Motif R214: R214. Animal eludes bird watchman and escapes from his hole. (R. Captives and fugitives. > R200–R299. Escapes and pursuits.)"
+    ],
+    "atu_categories": [
+      "ATU 554: The Grateful Animals (TALES OF MAGIC > Supernatural Helpers (500-559))"
+    ],
     "obstacle_thrower": [],
     "helper_type": [],
     "thinking_process": "",
-    "atu_evidence": {},
-    "motif_evidence": {}
+    "atu_evidence": {
+      "ATU 554: The Grateful Animals (TALES OF MAGIC > Supernatural Helpers (500-559))": {
+        "evidence_keys": [
+          "S68-102"
+        ]
+      }
+    },
+    "motif_evidence": {
+      "Motif R214: R214. Animal eludes bird watchman and escapes from his hole. (R. Captives and fugitives. > R200–R299. Escapes and pursuits.)": {
+        "evidence_keys": [
+          "S725-745"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

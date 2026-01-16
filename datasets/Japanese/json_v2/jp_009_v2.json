@@ -54,6 +54,11 @@
   "narrative_events": [
     {
       "id": "448bd670-8174-4308-b69d-c59f022a3478",
+      "text_span": {
+        "start": 0,
+        "end": 28,
+        "text": "むかし、むかし、あるところに、猿さるとかにがありました。"
+      },
       "event_type": "Initial Situation",
       "description": "むかし、むかし、あるところに、猿さるとかにがありました。",
       "agents": [
@@ -61,51 +66,26 @@
         "かに"
       ],
       "targets": [],
-      "text_span": {
-        "start": 0,
-        "end": 28,
-        "text": "むかし、むかし、あるところに、猿さるとかにがありました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 2,
-      "relationships": [
-        {
-          "agent": "猿",
-          "target": "",
-          "relationship_level1": "Neutral",
-          "relationship_level2": "",
-          "sentiment": "neutral"
-        }
-      ],
-      "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": ""
-      },
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "猿",
-          "target": "",
-          "relationship_level1": "Neutral",
-          "relationship_level2": "",
-          "sentiment": "neutral"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "",
       "action_type": "",
       "action_context": "",
-      "action_status": ""
+      "action_status": "",
+      "narrative_function": ""
     },
     {
       "id": "c7786ac2-6994-4443-9e3b-7f63515e22a9",
+      "text_span": {
+        "start": 271,
+        "end": 310,
+        "text": "「どうだ、この柿かきの種たねと取とりかえっこをしないか。」\n　と言いいました。"
+      },
       "event_type": "TRICKERY",
       "description": "「どうだ、この柿かきの種たねと取とりかえっこをしないか。」\n　と言いいました。",
       "agents": [
@@ -114,51 +94,26 @@
       "targets": [
         "かに"
       ],
-      "text_span": {
-        "start": 271,
-        "end": 310,
-        "text": "「どうだ、この柿かきの種たねと取とりかえっこをしないか。」\n　と言いいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "action_layer": {
-        "category": "communicative",
-        "type": "deceive",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "猿",
-          "target": "かに",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "enemy",
-          "sentiment": "negative"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "猿",
-          "target": "かに",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "enemy",
-          "sentiment": "negative"
-        }
-      ],
       "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
       "sentiment": "negative",
       "action_category": "communicative",
       "action_type": "deceive",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "985cfd21-5585-49d6-86f8-240d4be4ffe1",
+      "text_span": {
+        "start": 443,
+        "end": 481,
+        "text": "とうとう大きなおむすびと、小さな柿かきの種たねとを取とりかえてしまいました。"
+      },
       "event_type": "COMPLICITY",
       "description": "とうとう大きなおむすびと、小さな柿かきの種たねとを取とりかえてしまいました。",
       "agents": [
@@ -167,51 +122,26 @@
       "targets": [
         "猿"
       ],
-      "text_span": {
-        "start": 443,
-        "end": 481,
-        "text": "とうとう大きなおむすびと、小さな柿かきの種たねとを取とりかえてしまいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 4,
-      "action_layer": {
-        "category": "transaction",
-        "type": "exchange",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "かに",
-          "target": "猿",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "enemy",
-          "sentiment": "negative"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "かに",
-          "target": "猿",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "enemy",
-          "sentiment": "negative"
-        }
-      ],
       "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
       "sentiment": "negative",
       "action_category": "transaction",
       "action_type": "exchange",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "c4dde017-b35e-4f20-84d5-bbdf0ee6d34a",
+      "text_span": {
+        "start": 1792,
+        "end": 1899,
+        "text": "いちばん青あおい硬かたいのをもいで、あおむいて待まっているかにの頭あたまをめがけて力ちからいっぱい投なげつけますと、かには、「あっ。」と言いったなり、ひどく甲羅こうらをうたれて、目をまわして、死しんでしまいました。"
+      },
       "event_type": "VILLAINY",
       "description": "いちばん青あおい硬かたいのをもいで、あおむいて待まっているかにの頭あたまをめがけて力ちからいっぱい投なげつけますと、かには、「あっ。」と言いったなり、ひどく甲羅こうらをうたれて、目をまわして、死しんで",
       "agents": [
@@ -220,51 +150,26 @@
       "targets": [
         "かに"
       ],
-      "text_span": {
-        "start": 1792,
-        "end": 1899,
-        "text": "いちばん青あおい硬かたいのをもいで、あおむいて待まっているかにの頭あたまをめがけて力ちからいっぱい投なげつけますと、かには、「あっ。」と言いったなり、ひどく甲羅こうらをうたれて、目をまわして、死しんでしまいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "action_layer": {
-        "category": "physical",
-        "type": "attack",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "猿",
-          "target": "かに",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "猿",
-          "target": "かに",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
       "relationship_level1": "Adversarial",
       "relationship_level2": "",
       "sentiment": "negative",
       "action_category": "physical",
       "action_type": "attack",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "ef314401-a2e5-472b-bd5d-9f63d69d995b",
+      "text_span": {
+        "start": 2116,
+        "end": 2178,
+        "text": "子がにはびっくりしておいおい泣なき出だしました。泣なきながら、「いったいだれがこんなひどいことをしたのだろう。」と思おもって"
+      },
       "event_type": "MEDIATION",
       "description": "子がにはびっくりしておいおい泣なき出だしました。泣なきながら、「いったいだれがこんなひどいことをしたのだろう。」と思おもって",
       "agents": [
@@ -273,51 +178,26 @@
       "targets": [
         "かに"
       ],
-      "text_span": {
-        "start": 2116,
-        "end": 2178,
-        "text": "子がにはびっくりしておいおい泣なき出だしました。泣なきながら、「いったいだれがこんなひどいことをしたのだろう。」と思おもって"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 6,
-      "action_layer": {
-        "category": "mental",
-        "type": "realize",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "子がに",
-          "target": "かに",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "子がに",
-          "target": "かに",
-          "relationship_level1": "Family & Kinship",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "",
       "sentiment": "negative",
       "action_category": "mental",
       "action_type": "realize",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "7772078a-218d-4c80-919f-3019d933cdad",
+      "text_span": {
+        "start": 2246,
+        "end": 2399,
+        "text": "「じゃあ、猿さるのやつが殺ころして、柿かきを取とっていったのだな。」\n　とかにはくやしがって、またおいおい泣なき出だしました。\n　するとそこへ栗くりがぽんとはねて来きて、\n「かにさん、かにさん、なぜ泣なくの。」\n　と聞ききました。子がには、猿さるが親おやがにを殺ころしたから、かたきを討うちたいと言いいます"
+      },
       "event_type": "BEGINNING_COUNTERACTION",
       "description": "「じゃあ、猿さるのやつが殺ころして、柿かきを取とっていったのだな。」\n　とかにはくやしがって、またおいおい泣なき出だしました。\n　するとそこへ栗くりがぽんとはねて来きて、\n「かにさん、かにさん、なぜ泣",
       "agents": [
@@ -326,51 +206,26 @@
       "targets": [
         "猿"
       ],
-      "text_span": {
-        "start": 2246,
-        "end": 2399,
-        "text": "「じゃあ、猿さるのやつが殺ころして、柿かきを取とっていったのだな。」\n　とかにはくやしがって、またおいおい泣なき出だしました。\n　するとそこへ栗くりがぽんとはねて来きて、\n「かにさん、かにさん、なぜ泣なくの。」\n　と聞ききました。子がには、猿さるが親おやがにを殺ころしたから、かたきを討うちたいと言いいます"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 7,
-      "action_layer": {
-        "category": "mental",
-        "type": "plot",
-        "context": "",
-        "status": "attempt",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "子がに",
-          "target": "猿",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "子がに",
-          "target": "猿",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
       "relationship_level1": "Adversarial",
       "relationship_level2": "",
       "sentiment": "negative",
       "action_category": "mental",
       "action_type": "plot",
       "action_context": "",
-      "action_status": "attempt"
+      "action_status": "attempt",
+      "narrative_function": ""
     },
     {
       "id": "fe32e661-3086-4084-ab0f-d4e0cedb2f04",
+      "text_span": {
+        "start": 2407,
+        "end": 2457,
+        "text": "「にくい猿さるだ。よしよし、おじさんがかたきをとってやるから、お泣なきでない。」\n　と言いいました。"
+      },
       "event_type": "FIRST_FUNCTION_DONOR",
       "description": "「にくい猿さるだ。よしよし、おじさんがかたきをとってやるから、お泣なきでない。」\n　と言いいました。",
       "agents": [
@@ -379,51 +234,26 @@
       "targets": [
         "子がに"
       ],
-      "text_span": {
-        "start": 2407,
-        "end": 2457,
-        "text": "「にくい猿さるだ。よしよし、おじさんがかたきをとってやるから、お泣なきでない。」\n　と言いいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 8,
-      "action_layer": {
-        "category": "communicative",
-        "type": "promise",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "栗",
-          "target": "子がに",
-          "relationship_level1": "Social & Alliance",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "栗",
-          "target": "子がに",
-          "relationship_level1": "Social & Alliance",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "Social & Alliance",
       "relationship_level2": "",
       "sentiment": "positive",
       "action_category": "communicative",
       "action_type": "promise",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "b477b66f-cd5d-431c-bc79-61b49ae69450",
+      "text_span": {
+        "start": 2994,
+        "end": 3106,
+        "text": "栗くりと蜂はちと昆布こんぶと臼うすとは、みんなよって、かたき討うちの相談そうだんをはじめました。\n\n\n　相談そうだんがやっとまとまると、臼うすと昆布こんぶと蜂はちと栗くりは、子がにを連つれて猿さるのうちへ出かけて行きました。"
+      },
       "event_type": "DEPARTURE",
       "description": "栗くりと蜂はちと昆布こんぶと臼うすとは、みんなよって、かたき討うちの相談そうだんをはじめました。\n\n\n　相談そうだんがやっとまとまると、臼うすと昆布こんぶと蜂はちと栗くりは、子がにを連つれて猿さるのうちへ出かけて行きました。",
       "agents": [
@@ -435,51 +265,26 @@
       "targets": [
         "猿"
       ],
-      "text_span": {
-        "start": 2994,
-        "end": 3106,
-        "text": "栗くりと蜂はちと昆布こんぶと臼うすとは、みんなよって、かたき討うちの相談そうだんをはじめました。\n\n\n　相談そうだんがやっとまとまると、臼うすと昆布こんぶと蜂はちと栗くりは、子がにを連つれて猿さるのうちへ出かけて行きました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 9,
-      "action_layer": {
-        "category": "physical",
-        "type": "travel",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "臼",
-          "target": "猿",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "enemy",
-          "sentiment": "hostile"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "臼",
-          "target": "猿",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "enemy",
-          "sentiment": "hostile"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "physical",
       "action_type": "travel",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "de69b206-0761-49d6-956d-8e04fb94c10d",
+      "text_span": {
+        "start": 3170,
+        "end": 3207,
+        "text": "「ちょうどいい。この間あいだにみんなでうちの中にかくれて待まっていよう。」"
+      },
       "event_type": "TRICKERY",
       "description": "「ちょうどいい。この間あいだにみんなでうちの中にかくれて待まっていよう。」",
       "agents": [
@@ -492,51 +297,26 @@
         "昆布",
         "蜂"
       ],
-      "text_span": {
-        "start": 3170,
-        "end": 3207,
-        "text": "「ちょうどいい。この間あいだにみんなでうちの中にかくれて待まっていよう。」"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 10,
-      "action_layer": {
-        "category": "mental",
-        "type": "plot",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "臼",
-          "target": "子がに",
-          "relationship_level1": "Social & Alliance",
-          "relationship_level2": "",
-          "sentiment": "neutral"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "臼",
-          "target": "子がに",
-          "relationship_level1": "Social & Alliance",
-          "relationship_level2": "",
-          "sentiment": "neutral"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "mental",
       "action_type": "plot",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "1c155305-be61-46c4-a3d3-febe9c998775",
+      "text_span": {
+        "start": 3514,
+        "end": 3583,
+        "text": "手てをかけますと、灰はいの中にかくれていた栗くりがぽんとはね出だして、とび上あがって、猿さるの鼻面はなづらを力ちからまかせにけつけました。"
+      },
       "event_type": "STRUGGLE",
       "description": "手てをかけますと、灰はいの中にかくれていた栗くりがぽんとはね出だして、とび上あがって、猿さるの鼻面はなづらを力ちからまかせにけつけました。",
       "agents": [
@@ -545,51 +325,26 @@
       "targets": [
         "猿"
       ],
-      "text_span": {
-        "start": 3514,
-        "end": 3583,
-        "text": "手てをかけますと、灰はいの中にかくれていた栗くりがぽんとはね出だして、とび上あがって、猿さるの鼻面はなづらを力ちからまかせにけつけました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 11,
-      "action_layer": {
-        "category": "physical",
-        "type": "attack",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "栗",
-          "target": "猿",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "enemy",
-          "sentiment": "hostile"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "栗",
-          "target": "猿",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "enemy",
-          "sentiment": "hostile"
-        }
-      ],
       "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
       "sentiment": "hostile",
       "action_category": "physical",
       "action_type": "attack",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "42777d9d-f9ca-44c4-8643-d02692759af3",
+      "text_span": {
+        "start": 3634,
+        "end": 3710,
+        "text": "そしてやけどをひやそうと思おもって、水がめの上に顔かおを出だしますと、陰かげから蜂はちがぶんととび出だして、猿さるの目の上をいやというほど刺さしました。"
+      },
       "event_type": "STRUGGLE",
       "description": "そしてやけどをひやそうと思おもって、水がめの上に顔かおを出だしますと、陰かげから蜂はちがぶんととび出だして、猿さるの目の上をいやというほど刺さしました。",
       "agents": [
@@ -598,51 +353,26 @@
       "targets": [
         "猿"
       ],
-      "text_span": {
-        "start": 3634,
-        "end": 3710,
-        "text": "そしてやけどをひやそうと思おもって、水がめの上に顔かおを出だしますと、陰かげから蜂はちがぶんととび出だして、猿さるの目の上をいやというほど刺さしました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 12,
-      "action_layer": {
-        "category": "physical",
-        "type": "attack",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "蜂",
-          "target": "猿",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "enemy",
-          "sentiment": "hostile"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "蜂",
-          "target": "猿",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "enemy",
-          "sentiment": "hostile"
-        }
-      ],
       "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
       "sentiment": "hostile",
       "action_category": "physical",
       "action_type": "attack",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "5bdb089d-fc85-4be2-851a-b0b87e38a3a5",
+      "text_span": {
+        "start": 3720,
+        "end": 3804,
+        "text": "猿さるはさけんで、またあわてておもてへ逃にげ出だしました。逃にげ出だすひょうしに、敷居しきいの上に寝ねていた昆布こんぶでつるりとすべって、腹はらんばいに倒たおれました。"
+      },
       "event_type": "STRUGGLE",
       "description": "猿さるはさけんで、またあわてておもてへ逃にげ出だしました。逃にげ出だすひょうしに、敷居しきいの上に寝ねていた昆布こんぶでつるりとすべって、腹はらんばいに倒たおれました。",
       "agents": [
@@ -651,51 +381,26 @@
       "targets": [
         "猿"
       ],
-      "text_span": {
-        "start": 3720,
-        "end": 3804,
-        "text": "猿さるはさけんで、またあわてておもてへ逃にげ出だしました。逃にげ出だすひょうしに、敷居しきいの上に寝ねていた昆布こんぶでつるりとすべって、腹はらんばいに倒たおれました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 13,
-      "action_layer": {
-        "category": "physical",
-        "type": "attack",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "昆布",
-          "target": "猿",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "enemy",
-          "sentiment": "hostile"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "昆布",
-          "target": "猿",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "enemy",
-          "sentiment": "hostile"
-        }
-      ],
       "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
       "sentiment": "hostile",
       "action_category": "physical",
       "action_type": "attack",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "6804a342-2e21-4199-b16e-c65c48933c7c",
+      "text_span": {
+        "start": 3804,
+        "end": 3847,
+        "text": "その上に臼うすが、どさりところげ落おちて、うんとこしょと重おもしになってしまいました。"
+      },
       "event_type": "STRUGGLE",
       "description": "その上に臼うすが、どさりところげ落おちて、うんとこしょと重おもしになってしまいました。",
       "agents": [
@@ -704,51 +409,26 @@
       "targets": [
         "猿"
       ],
-      "text_span": {
-        "start": 3804,
-        "end": 3847,
-        "text": "その上に臼うすが、どさりところげ落おちて、うんとこしょと重おもしになってしまいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 14,
-      "action_layer": {
-        "category": "physical",
-        "type": "attack",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "臼",
-          "target": "猿",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "enemy",
-          "sentiment": "hostile"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "臼",
-          "target": "猿",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "enemy",
-          "sentiment": "hostile"
-        }
-      ],
       "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
       "sentiment": "hostile",
       "action_category": "physical",
       "action_type": "attack",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "1c9b1b57-c861-4132-8524-2e05c73e12e3",
+      "text_span": {
+        "start": 3946,
+        "end": 4012,
+        "text": "「親おやのかたき、覚おぼえたか。」\n　と言いいながら、はさみをふり上あげて、猿さるの首くびをちょきんとはさみではさんでしまいました。"
+      },
       "event_type": "PUNISHMENT",
       "description": "「親おやのかたき、覚おぼえたか。」\n　と言いいながら、はさみをふり上あげて、猿さるの首くびをちょきんとはさみではさんでしまいました。",
       "agents": [
@@ -757,48 +437,18 @@
       "targets": [
         "猿"
       ],
-      "text_span": {
-        "start": 3946,
-        "end": 4012,
-        "text": "「親おやのかたき、覚おぼえたか。」\n　と言いいながら、はさみをふり上あげて、猿さるの首くびをちょきんとはさみではさんでしまいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 16,
-      "action_layer": {
-        "category": "physical",
-        "type": "attack",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "relationships": [
-        {
-          "agent": "子がに",
-          "target": "猿",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "enemy",
-          "sentiment": "hostile"
-        }
-      ],
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "子がに",
-          "target": "猿",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "enemy",
-          "sentiment": "hostile"
-        }
-      ],
       "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
       "sentiment": "hostile",
       "action_category": "physical",
       "action_type": "attack",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     }
   ],
   "themes_and_motifs": {
@@ -808,7 +458,9 @@
       "REVENGE"
     ],
     "motif_type": [
-      "Motif K0-K90: Deceptions > Contests won by deception > Contests won by deception."
+      "Motif K0-K90: Deceptions > Contests won by deception > Contests won by deception.",
+      "Motif J512.14: J512.14. Snake wants to act as pet like parrot: killed. (J. The wise and the foolish. > J200–J1099. Wise and unwise conduct. > J500–J599. Prudence and Discretion.)",
+      "Motif K827.5: K827.5. Cheese smeared on crab lures giant to smell him. Crab pinches giant's neck and kills him. (K. Deceptions. > K800–K999. Killing or maiming by deception.)"
     ],
     "atu_categories": [],
     "obstacle_thrower": [
@@ -819,7 +471,18 @@
     ],
     "thinking_process": "",
     "atu_evidence": {},
-    "motif_evidence": {}
+    "motif_evidence": {
+      "Motif J512.14: J512.14. Snake wants to act as pet like parrot: killed. (J. The wise and the foolish. > J200–J1099. Wise and unwise conduct. > J500–J599. Prudence and Discretion.)": {
+        "evidence_keys": [
+          "S3946-4012"
+        ]
+      },
+      "Motif K827.5: K827.5. Cheese smeared on crab lures giant to smell him. Crab pinches giant's neck and kills him. (K. Deceptions. > K800–K999. Killing or maiming by deception.)": {
+        "evidence_keys": [
+          "S1792-1899"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

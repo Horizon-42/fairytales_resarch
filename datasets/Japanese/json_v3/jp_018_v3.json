@@ -33,8 +33,16 @@
   ],
   "narrative_events": [
     {
+      "id": "63fe70a8-42fa-41e0-8690-bfe9a36e2220",
+      "text_span": null,
       "event_type": "OTHER",
       "description": "",
+      "agents": [],
+      "targets": [],
+      "target_type": "character",
+      "object_type": "",
+      "instrument": "",
+      "time_order": 1,
       "relationships": [],
       "action_layer": {
         "category": "",
@@ -42,26 +50,21 @@
         "context": "",
         "status": "",
         "function": ""
-      },
-      "id": "63fe70a8-42fa-41e0-8690-bfe9a36e2220",
-      "target_type": "character",
-      "object_type": "",
-      "instrument": "",
-      "time_order": 1
+      }
     },
     {
       "id": "27697fd9-7daf-4af7-8df6-07e69136e41d",
+      "text_span": {
+        "start": 1,
+        "end": 34,
+        "text": "むかしむかし、ある山寺の小坊主が、クリひろいに行きたくなりました。"
+      },
       "event_type": "Initial Situation",
       "description": "むかしむかし、ある山寺の小坊主が、クリひろいに行きたくなりました。",
       "agents": [
         "小坊主"
       ],
       "targets": [],
-      "text_span": {
-        "start": 1,
-        "end": 34,
-        "text": "むかしむかし、ある山寺の小坊主が、クリひろいに行きたくなりました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -85,6 +88,11 @@
     },
     {
       "id": "6cf94414-b323-44a4-b17b-d9d9769de299",
+      "text_span": {
+        "start": 88,
+        "end": 111,
+        "text": "「クリひろいか。しかし、山には鬼ババが出るぞ」"
+      },
       "event_type": "INTERDICTION",
       "description": "「クリひろいか。しかし、山には鬼ババが出るぞ」",
       "agents": [
@@ -93,11 +101,6 @@
       "targets": [
         "小坊主"
       ],
-      "text_span": {
-        "start": 88,
-        "end": 111,
-        "text": "「クリひろいか。しかし、山には鬼ババが出るぞ」"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -121,6 +124,11 @@
     },
     {
       "id": "98f2e82d-b838-449c-bf8e-ebf5a40e5405",
+      "text_span": {
+        "start": 145,
+        "end": 204,
+        "text": "和尚さんは三枚のお札を渡して、\n「困った事があったら、このお札に願いをかけなさい。きっと、お前を助けてくれるじゃろう」"
+      },
       "event_type": "RECEIPT_OF_AGENT",
       "description": "和尚さんは三枚のお札を渡して、\n「困った事があったら、このお札に願いをかけなさい。きっと、お前を助けてくれるじゃろう」",
       "agents": [
@@ -129,11 +137,6 @@
       "targets": [
         "小坊主"
       ],
-      "text_span": {
-        "start": 145,
-        "end": 204,
-        "text": "和尚さんは三枚のお札を渡して、\n「困った事があったら、このお札に願いをかけなさい。きっと、お前を助けてくれるじゃろう」"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -157,6 +160,11 @@
     },
     {
       "id": "6026adb7-fa0d-4197-9cc1-63224a75c876",
+      "text_span": {
+        "start": 258,
+        "end": 349,
+        "text": "小坊主が夢中でクリひろいをしていると、突然目の前に鬼ババが現れました。\n「うまそうな坊主じゃ。家に帰って食ってやろう」\n　小坊主は身がすくんでしまい、叫ぶ事も逃げ出す事も出来ません。"
+      },
       "event_type": "VILLAINY",
       "description": "小坊主が夢中でクリひろいをしていると、突然目の前に鬼ババが現れました。\n「うまそうな坊主じゃ。家に帰って食ってやろう」\n　小坊主は身がすくんでしまい、叫ぶ事も逃げ出す事も出来ません。",
       "agents": [
@@ -165,11 +173,6 @@
       "targets": [
         "小坊主"
       ],
-      "text_span": {
-        "start": 258,
-        "end": 349,
-        "text": "小坊主が夢中でクリひろいをしていると、突然目の前に鬼ババが現れました。\n「うまそうな坊主じゃ。家に帰って食ってやろう」\n　小坊主は身がすくんでしまい、叫ぶ事も逃げ出す事も出来ません。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -193,6 +196,11 @@
     },
     {
       "id": "e0683688-9b5a-458c-9a82-f5eb160ae4ed",
+      "text_span": {
+        "start": 351,
+        "end": 375,
+        "text": "そしてそのまま鬼ババの家へ、連れていかれました。"
+      },
       "event_type": "VILLAINY",
       "description": "そしてそのまま鬼ババの家へ、連れていかれました。",
       "agents": [
@@ -201,11 +209,6 @@
       "targets": [
         "小坊主"
       ],
-      "text_span": {
-        "start": 351,
-        "end": 375,
-        "text": "そしてそのまま鬼ババの家へ、連れていかれました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -229,6 +232,11 @@
     },
     {
       "id": "0dc885dc-0ced-4a39-a5d1-ff7d396af6c2",
+      "text_span": {
+        "start": 421,
+        "end": 476,
+        "text": "(たっ、大変だ。食われてしまうぞ！)\n　小坊主はそう思うと、とっさに、\n「ウンチがしたい！」\nと、言いました。"
+      },
       "event_type": "TRICKERY",
       "description": "(たっ、大変だ。食われてしまうぞ！)\n　小坊主はそう思うと、とっさに、\n「ウンチがしたい！」\nと、言いました。",
       "agents": [
@@ -237,11 +245,6 @@
       "targets": [
         "鬼ババ"
       ],
-      "text_span": {
-        "start": 421,
-        "end": 476,
-        "text": "(たっ、大変だ。食われてしまうぞ！)\n　小坊主はそう思うと、とっさに、\n「ウンチがしたい！」\nと、言いました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -265,6 +268,11 @@
     },
     {
       "id": "3de5fc51-d672-46db-8b0c-f1f3889211c0",
+      "text_span": {
+        "start": 525,
+        "end": 556,
+        "text": "　鬼ババは小坊主の腰になわをつけて、便所に行かせてくれました。"
+      },
       "event_type": "COMPLICITY",
       "description": "鬼ババは小坊主の腰になわをつけて、便所に行かせてくれました。",
       "agents": [
@@ -273,11 +281,6 @@
       "targets": [
         "鬼ババ"
       ],
-      "text_span": {
-        "start": 525,
-        "end": 556,
-        "text": "　鬼ババは小坊主の腰になわをつけて、便所に行かせてくれました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -301,6 +304,11 @@
     },
     {
       "id": "6eec6cd4-418f-42f4-9327-00d7f5c829e8",
+      "text_span": {
+        "start": 590,
+        "end": 644,
+        "text": "お札をはりつけて、\n「お札さん。おれの代わりに、返事をしておくれ」\nと、言いつけると、窓から逃げ出しました。"
+      },
       "event_type": "HERO_REACTION",
       "description": "お札をはりつけて、\n「お札さん。おれの代わりに、返事をしておくれ」\nと、言いつけると、窓から逃げ出しました。",
       "agents": [
@@ -309,11 +317,6 @@
       "targets": [
         "お札"
       ],
-      "text_span": {
-        "start": 590,
-        "end": 644,
-        "text": "お札をはりつけて、\n「お札さん。おれの代わりに、返事をしておくれ」\nと、言いつけると、窓から逃げ出しました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -337,6 +340,11 @@
     },
     {
       "id": "21d8db64-abf2-4c1b-80bb-db92e877e3aa",
+      "text_span": {
+        "start": 852,
+        "end": 882,
+        "text": "鬼ババは叫びながら、夜道を走る小坊主を追いかけて行きました。"
+      },
       "event_type": "VILLAINY",
       "description": "鬼ババは叫びながら、夜道を走る小坊主を追いかけて行きました。",
       "agents": [
@@ -345,11 +353,6 @@
       "targets": [
         "小坊主"
       ],
-      "text_span": {
-        "start": 852,
-        "end": 882,
-        "text": "鬼ババは叫びながら、夜道を走る小坊主を追いかけて行きました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -373,6 +376,11 @@
     },
     {
       "id": "ad6b8cf5-20bb-4aee-84cc-93b7a55a0d32",
+      "text_span": {
+        "start": 884,
+        "end": 931,
+        "text": "それを知った小坊主は、二枚目の札を取り出すと、\n「川になれ！」\nと、言って、後ろに投げました。"
+      },
       "event_type": "HERO_REACTION",
       "description": "それを知った小坊主は、二枚目の札を取り出すと、\n「川になれ！」\nと、言って、後ろに投げました。",
       "agents": [
@@ -381,11 +389,6 @@
       "targets": [
         "お札"
       ],
-      "text_span": {
-        "start": 884,
-        "end": 931,
-        "text": "それを知った小坊主は、二枚目の札を取り出すと、\n「川になれ！」\nと、言って、後ろに投げました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -409,6 +412,11 @@
     },
     {
       "id": "2b705f4e-8fda-4c57-9da6-a6a2c6b85e53",
+      "text_span": {
+        "start": 933,
+        "end": 961,
+        "text": "すると後ろに川が現れて、鬼ババは流されそうになりました。"
+      },
       "event_type": "BEGINNING_COUNTERACTION",
       "description": "すると後ろに川が現れて、鬼ババは流されそうになりました。",
       "agents": [
@@ -417,11 +425,6 @@
       "targets": [
         "鬼ババ"
       ],
-      "text_span": {
-        "start": 933,
-        "end": 961,
-        "text": "すると後ろに川が現れて、鬼ババは流されそうになりました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -445,6 +448,11 @@
     },
     {
       "id": "90433e9f-4326-4087-bec2-76efc4260569",
+      "text_span": {
+        "start": 1005,
+        "end": 1116,
+        "text": "小坊主は、三枚目の札を出すと、\n「山火事になれ！」\nと、言って、後ろに投げました。\n　すると後ろで山火事がおきて鬼ババを通せんぼうしましたが、鬼ババはさっき飲んだ川の水を吐き出すと、またたく間に山火事を消してしまいました。"
+      },
       "event_type": "BEGINNING_COUNTERACTION",
       "description": "小坊主は、三枚目の札を出すと、\n「山火事になれ！」\nと、言って、後ろに投げました。\n　すると後ろで山火事がおきて鬼ババを通せんぼうしましたが、鬼ババはさっき飲んだ川の水を吐き出すと、またたく間に山火事",
       "agents": [
@@ -453,11 +461,6 @@
       "targets": [
         "鬼ババ"
       ],
-      "text_span": {
-        "start": 1005,
-        "end": 1116,
-        "text": "小坊主は、三枚目の札を出すと、\n「山火事になれ！」\nと、言って、後ろに投げました。\n　すると後ろで山火事がおきて鬼ババを通せんぼうしましたが、鬼ババはさっき飲んだ川の水を吐き出すと、またたく間に山火事を消してしまいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -481,6 +484,11 @@
     },
     {
       "id": "50aea03b-6295-4665-b6b2-6e59896f36a8",
+      "text_span": {
+        "start": 1136,
+        "end": 1193,
+        "text": "小坊主は命からがらお寺にたどりつくと、和尚さんに助けを求めました。\n「和尚さん！　助けてください！　鬼ババです！」"
+      },
       "event_type": "RESCUE",
       "description": "小坊主は命からがらお寺にたどりつくと、和尚さんに助けを求めました。\n「和尚さん！　助けてください！　鬼ババです！」",
       "agents": [
@@ -489,11 +497,6 @@
       "targets": [
         "和尚"
       ],
-      "text_span": {
-        "start": 1136,
-        "end": 1193,
-        "text": "小坊主は命からがらお寺にたどりつくと、和尚さんに助けを求めました。\n「和尚さん！　助けてください！　鬼ババです！」"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -517,6 +520,11 @@
     },
     {
       "id": "63f9e4b6-494c-4c57-a905-71c167ac9d22",
+      "text_span": {
+        "start": 1259,
+        "end": 1306,
+        "text": "「鬼ババよ。わしの頼みを一つきいてくれたら坊主をお前にやるが、どうだ？」\nと、持ちかけました。"
+      },
       "event_type": "TRICKERY",
       "description": "「鬼ババよ。わしの頼みを一つきいてくれたら坊主をお前にやるが、どうだ？」\nと、持ちかけました。",
       "agents": [
@@ -525,11 +533,6 @@
       "targets": [
         "鬼ババ"
       ],
-      "text_span": {
-        "start": 1259,
-        "end": 1306,
-        "text": "「鬼ババよ。わしの頼みを一つきいてくれたら坊主をお前にやるが、どうだ？」\nと、持ちかけました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -553,6 +556,11 @@
     },
     {
       "id": "0055701d-34dc-4017-a2a0-487292f0d3fc",
+      "text_span": {
+        "start": 1411,
+        "end": 1443,
+        "text": "　鬼ババは答えて体を小さくすると、豆粒のように小さくなりました。"
+      },
       "event_type": "COMPLICITY",
       "description": "鬼ババは答えて体を小さくすると、豆粒のように小さくなりました。",
       "agents": [
@@ -561,11 +569,6 @@
       "targets": [
         "和尚"
       ],
-      "text_span": {
-        "start": 1411,
-        "end": 1443,
-        "text": "　鬼ババは答えて体を小さくすると、豆粒のように小さくなりました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -589,6 +592,11 @@
     },
     {
       "id": "0af1510f-61e9-4b19-842a-92fba77f9907",
+      "text_span": {
+        "start": 1445,
+        "end": 1487,
+        "text": "和尚さんはその時、すかさず鬼ババをもちの中に丸め込むと一口で飲み込んでしまいました。"
+      },
       "event_type": "VICTORY",
       "description": "和尚さんはその時、すかさず鬼ババをもちの中に丸め込むと一口で飲み込んでしまいました。",
       "agents": [
@@ -597,11 +605,6 @@
       "targets": [
         "鬼ババ"
       ],
-      "text_span": {
-        "start": 1445,
-        "end": 1487,
-        "text": "和尚さんはその時、すかさず鬼ババをもちの中に丸め込むと一口で飲み込んでしまいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -625,6 +628,11 @@
     },
     {
       "id": "d0382500-0544-47e7-8f45-23740d3b91db",
+      "text_span": {
+        "start": 1529,
+        "end": 1605,
+        "text": "和尚さんが便所でウンチをすると、ウンチの中からたくさんのハエが飛び出してきました。\n\n　ハエは鬼ババが生まれ変わって、日本中にふえていったものだそうです"
+      },
       "event_type": "TRANSFIGURATION",
       "description": "和尚さんが便所でウンチをすると、ウンチの中からたくさんのハエが飛び出してきました。\n\n　ハエは鬼ババが生まれ変わって、日本中にふえていったものだそうです",
       "agents": [
@@ -633,11 +641,6 @@
       "targets": [
         "鬼ババ"
       ],
-      "text_span": {
-        "start": 1529,
-        "end": 1605,
-        "text": "和尚さんが便所でウンチをすると、ウンチの中からたくさんのハエが飛び出してきました。\n\n　ハエは鬼ババが生まれ変わって、日本中にふえていったものだそうです"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -665,7 +668,10 @@
     "key_values": [
       "OBEDIENCE"
     ],
-    "motif_type": [],
+    "motif_type": [
+      "Motif D55.2: D55.2. Person becomes magically smaller. (D. Magic. > D0–D699. Transformation. > D10–D99. Transformation: man to different man.)",
+      "Motif D631.4: D631.4. Supernatural creatures change size at will. (D. Magic. > D0–D699. Transformation. > D600–D699. Miscellaneous transformation incidents.)"
+    ],
     "atu_categories": [],
     "obstacle_thrower": [
       "鬼ババ"
@@ -675,7 +681,18 @@
     ],
     "thinking_process": "",
     "atu_evidence": {},
-    "motif_evidence": {}
+    "motif_evidence": {
+      "Motif D55.2: D55.2. Person becomes magically smaller. (D. Magic. > D0–D699. Transformation. > D10–D99. Transformation: man to different man.)": {
+        "evidence_keys": [
+          "S1411-1443"
+        ]
+      },
+      "Motif D631.4: D631.4. Supernatural creatures change size at will. (D. Magic. > D0–D699. Transformation. > D600–D699. Miscellaneous transformation incidents.)": {
+        "evidence_keys": [
+          "S1411-1443"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

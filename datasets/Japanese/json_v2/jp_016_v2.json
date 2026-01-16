@@ -44,92 +44,63 @@
   "narrative_events": [
     {
       "id": "de8ada85-267a-41c4-8eb1-05d55b5e00de",
+      "text_span": {
+        "start": 3,
+        "end": 81,
+        "text": "むかし、むかし、ある所ところに、一人ひとりのおじいさんがありました。右みぎのほおにぶらぶら大きな瘤こぶをぶら下さげて、始終しじゅうじゃまそうにしていました。"
+      },
       "event_type": "Initial Situation",
       "description": "むかし、むかし、ある所ところに、一人ひとりのおじいさんがありました。右みぎのほおにぶらぶら大きな瘤こぶをぶら下さげて、始終しじゅうじゃまそうにしていました。",
       "agents": [
         "おじいさん"
       ],
       "targets": [],
-      "text_span": {
-        "start": 3,
-        "end": 81,
-        "text": "むかし、むかし、ある所ところに、一人ひとりのおじいさんがありました。右みぎのほおにぶらぶら大きな瘤こぶをぶら下さげて、始終しじゅうじゃまそうにしていました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 1,
-      "relationships": [
-        {
-          "agent": "おじいさん",
-          "target": "",
-          "relationship_level1": "",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
-      "action_layer": {
-        "category": "mental",
-        "type": "observe",
-        "context": "",
-        "status": "",
-        "function": "setup"
-      },
-      "narrative_function": "setup",
-      "relationship_multi": [
-        {
-          "agent": "おじいさん",
-          "target": "",
-          "relationship_level1": "",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "negative",
       "action_category": "mental",
       "action_type": "observe",
       "action_context": "",
-      "action_status": ""
+      "action_status": "",
+      "narrative_function": "setup"
     },
     {
       "id": "7d405cfa-a74d-4ae0-ae2f-793f893b4d3c",
+      "text_span": {
+        "start": 83,
+        "end": 107,
+        "text": "ある日、おじいさんは山へ木を切きりに行きました。"
+      },
       "event_type": "DEPARTURE",
       "description": "ある日、おじいさんは山へ木を切きりに行きました。",
       "agents": [
         "おじいさん"
       ],
       "targets": [],
-      "text_span": {
-        "start": 83,
-        "end": 107,
-        "text": "ある日、おじいさんは山へ木を切きりに行きました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 2,
-      "relationships": [],
-      "action_layer": {
-        "category": "physical",
-        "type": "travel",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "narrative_function": "",
-      "relationship_multi": [],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "physical",
       "action_type": "travel",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "023f2298-9875-4e93-b776-9cf80a8c4981",
+      "text_span": {
+        "start": 665,
+        "end": 746,
+        "text": "そっとうろの中から顔かおを出だしてのぞいてみますと、まあどうでしょう、それは人ではなくって、ふしぎな化ばけ物ものが、何なん十人にんとなくぞろぞろ出でてくるのです。"
+      },
       "event_type": "RECONNAISSANCE",
       "description": "そっとうろの中から顔かおを出だしてのぞいてみますと、まあどうでしょう、それは人ではなくって、ふしぎな化ばけ物ものが、何なん十人にんとなくぞろぞろ出でてくるのです。",
       "agents": [
@@ -138,51 +109,26 @@
       "targets": [
         "鬼たち"
       ],
-      "text_span": {
-        "start": 665,
-        "end": 746,
-        "text": "そっとうろの中から顔かおを出だしてのぞいてみますと、まあどうでしょう、それは人ではなくって、ふしぎな化ばけ物ものが、何なん十人にんとなくぞろぞろ出でてくるのです。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 3,
-      "relationships": [
-        {
-          "agent": "おじいさん",
-          "target": "鬼たち",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "enemy",
-          "sentiment": "negative"
-        }
-      ],
-      "action_layer": {
-        "category": "mental",
-        "type": "realize",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "おじいさん",
-          "target": "鬼たち",
-          "relationship_level1": "Adversarial",
-          "relationship_level2": "enemy",
-          "sentiment": "negative"
-        }
-      ],
       "relationship_level1": "Adversarial",
       "relationship_level2": "enemy",
       "sentiment": "negative",
       "action_category": "mental",
       "action_type": "realize",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "790b4ce8-e362-4d67-9762-76fd202ff036",
+      "text_span": {
+        "start": 850,
+        "end": 926,
+        "text": "おじいさんは肝きもをつぶして、またうろの中へ首くびを引ひっ込こめてしまいました。そしてぶるぶるふるえながら、小ちいさくなって息いきを殺ころしていました。"
+      },
       "event_type": "HERO_REACTION",
       "description": "おじいさんは肝きもをつぶして、またうろの中へ首くびを引ひっ込こめてしまいました。そしてぶるぶるふるえながら、小ちいさくなって息いきを殺ころしていました。",
       "agents": [
@@ -191,51 +137,26 @@
       "targets": [
         "鬼たち"
       ],
-      "text_span": {
-        "start": 850,
-        "end": 926,
-        "text": "おじいさんは肝きもをつぶして、またうろの中へ首くびを引ひっ込こめてしまいました。そしてぶるぶるふるえながら、小ちいさくなって息いきを殺ころしていました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 4,
-      "relationships": [
-        {
-          "agent": "おじいさん",
-          "target": "鬼たち",
-          "relationship_level1": "",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
-      "action_layer": {
-        "category": "physical",
-        "type": "flee",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "おじいさん",
-          "target": "鬼たち",
-          "relationship_level1": "",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "negative",
       "action_category": "physical",
       "action_type": "flee",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "8247e994-85ec-4c1f-90fa-32b019a4c8b9",
+      "text_span": {
+        "start": 2587,
+        "end": 2894,
+        "text": "ひょっこりおかしらの鬼おにの鼻先はなさきへ飛とび出だしました。\n　あんまり出だし抜ぬけだものですから、こんどはおじいさんよりは、鬼おにの方ほうがびっくりしてしまいました。\n「何なんだ。何なんだ。」\n「人間にんげんのじじいじゃないか。」\n　といいながら、みんなはそう立だちになって騒さわぎました。\n　おじいさんはもうすましたもので、一生懸命いっしょうけんめい、のびたり、ちぢんだり、縦たてになり、横よこになり、左ひだりへ行き、右みぎへ行き、くるりくるりと木きねずみのように、元気げんきよくはね回まわりながら、\n「よう、こりゃこりゃ。」\n　とお酒さけに酔よったような声こえを出だして、さもおもしろそうに踊おどりました。"
+      },
       "event_type": "STRUGGLE",
       "description": "ひょっこりおかしらの鬼おにの鼻先はなさきへ飛とび出だしました。\n　あんまり出だし抜ぬけだものですから、こんどはおじいさんよりは、鬼おにの方ほうがびっくりしてしまいました。\n「何なんだ。何なんだ。」\n「",
       "agents": [
@@ -245,51 +166,26 @@
         "鬼のおかしら",
         "鬼たち"
       ],
-      "text_span": {
-        "start": 2587,
-        "end": 2894,
-        "text": "ひょっこりおかしらの鬼おにの鼻先はなさきへ飛とび出だしました。\n　あんまり出だし抜ぬけだものですから、こんどはおじいさんよりは、鬼おにの方ほうがびっくりしてしまいました。\n「何なんだ。何なんだ。」\n「人間にんげんのじじいじゃないか。」\n　といいながら、みんなはそう立だちになって騒さわぎました。\n　おじいさんはもうすましたもので、一生懸命いっしょうけんめい、のびたり、ちぢんだり、縦たてになり、横よこになり、左ひだりへ行き、右みぎへ行き、くるりくるりと木きねずみのように、元気げんきよくはね回まわりながら、\n「よう、こりゃこりゃ。」\n　とお酒さけに酔よったような声こえを出だして、さもおもしろそうに踊おどりました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 5,
-      "relationships": [
-        {
-          "agent": "おじいさん",
-          "target": "鬼のおかしら",
-          "relationship_level1": "",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
-      "action_layer": {
-        "category": "physical",
-        "type": "interact",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "おじいさん",
-          "target": "鬼のおかしら",
-          "relationship_level1": "",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "physical",
       "action_type": "interact",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "a35a1cb7-216c-4462-9e35-c82df6280aea",
+      "text_span": {
+        "start": 3023,
+        "end": 3115,
+        "text": "踊おどりがすむと、おかしらも感心かんしんして、おじいさんに、\n「こんなおもしろい踊おどりははじめてだ。じいさん、明日あすの晩ばんも来きて、踊おどりを踊おどるのだぞ。」\n　といいました。"
+      },
       "event_type": "VICTORY",
       "description": "踊おどりがすむと、おかしらも感心かんしんして、おじいさんに、\n「こんなおもしろい踊おどりははじめてだ。じいさん、明日あすの晩ばんも来きて、踊おどりを踊おどるのだぞ。」\n　といいました。",
       "agents": [
@@ -298,35 +194,26 @@
       "targets": [
         "おじいさん"
       ],
-      "text_span": {
-        "start": 3023,
-        "end": 3115,
-        "text": "踊おどりがすむと、おかしらも感心かんしんして、おじいさんに、\n「こんなおもしろい踊おどりははじめてだ。じいさん、明日あすの晩ばんも来きて、踊おどりを踊おどるのだぞ。」\n　といいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 6,
-      "relationships": [],
-      "action_layer": {
-        "category": "communicative",
-        "type": "inform",
-        "context": "",
-        "status": "success",
-        "function": "resolution"
-      },
-      "narrative_function": "resolution",
-      "relationship_multi": [],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "communicative",
       "action_type": "inform",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "resolution"
     },
     {
       "id": "c0e956f0-9b5f-4cdf-aa37-f589c49aa12e",
+      "text_span": {
+        "start": 3636,
+        "end": 3864,
+        "text": "おじいさんは心こころの中なかでは、「しめた。」と思おもいながら、わざとびっくりした風ふうをして、\n「おやおや、とんでもないことをおっしゃいます。目玉めだまを抜ぬかれましても、鼻はなを切きられましても、この瘤こぶを取とることだけはどうかごかんべん下くださいまし。長年ながねんの間あいだ、わたくしが宝たからのようにしてぶら下さげている、だいじなだいじな瘤こぶでございますから、これを取とり上あげられましては、ほんとうに困こまってしまいます。」\n　といいました。"
+      },
       "event_type": "TRICKERY",
       "description": "おじいさんは心こころの中なかでは、「しめた。」と思おもいながら、わざとびっくりした風ふうをして、\n「おやおや、とんでもないことをおっしゃいます。目玉めだまを抜ぬかれましても、鼻はなを切きられましても、",
       "agents": [
@@ -335,51 +222,26 @@
       "targets": [
         "鬼のおかしら"
       ],
-      "text_span": {
-        "start": 3636,
-        "end": 3864,
-        "text": "おじいさんは心こころの中なかでは、「しめた。」と思おもいながら、わざとびっくりした風ふうをして、\n「おやおや、とんでもないことをおっしゃいます。目玉めだまを抜ぬかれましても、鼻はなを切きられましても、この瘤こぶを取とることだけはどうかごかんべん下くださいまし。長年ながねんの間あいだ、わたくしが宝たからのようにしてぶら下さげている、だいじなだいじな瘤こぶでございますから、これを取とり上あげられましては、ほんとうに困こまってしまいます。」\n　といいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 7,
-      "relationships": [
-        {
-          "agent": "おじいさん",
-          "target": "鬼のおかしら",
-          "relationship_level1": "",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
-      "action_layer": {
-        "category": "communicative",
-        "type": "deceive",
-        "context": "",
-        "status": "success",
-        "function": "trigger"
-      },
-      "narrative_function": "trigger",
-      "relationship_multi": [
-        {
-          "agent": "おじいさん",
-          "target": "鬼のおかしら",
-          "relationship_level1": "",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "positive",
       "action_category": "communicative",
       "action_type": "deceive",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "trigger"
     },
     {
       "id": "cac02a6a-4ba3-407d-b769-359f484df3a1",
+      "text_span": {
+        "start": 3884,
+        "end": 3937,
+        "text": "「それ見みろ。あのとおり惜おしがっている瘤こぶだ。あれに限かぎる、取とり上あげておけ。」\n　といいました。"
+      },
       "event_type": "COMPLICITY",
       "description": "「それ見みろ。あのとおり惜おしがっている瘤こぶだ。あれに限かぎる、取とり上あげておけ。」\n　といいました。",
       "agents": [
@@ -388,51 +250,26 @@
       "targets": [
         "鬼たち"
       ],
-      "text_span": {
-        "start": 3884,
-        "end": 3937,
-        "text": "「それ見みろ。あのとおり惜おしがっている瘤こぶだ。あれに限かぎる、取とり上あげておけ。」\n　といいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 8,
-      "relationships": [
-        {
-          "agent": "鬼のおかしら",
-          "target": "鬼たち",
-          "relationship_level1": "",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
-      "action_layer": {
-        "category": "communicative",
-        "type": "command",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "鬼のおかしら",
-          "target": "鬼たち",
-          "relationship_level1": "",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "positive",
       "action_category": "communicative",
       "action_type": "command",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "92309d54-bd7a-40a1-8b5c-b0b31d93d01c",
+      "text_span": {
+        "start": 3939,
+        "end": 4001,
+        "text": "手下てしたの鬼おにはすぐそばへ寄よってきて、\n「それ、とるぞ。」\n　といいながら、ぽきりと瘤こぶをねじ切きってしまいました。"
+      },
       "event_type": "LIQUIDATION",
       "description": "手下てしたの鬼おにはすぐそばへ寄よってきて、\n「それ、とるぞ。」\n　といいながら、ぽきりと瘤こぶをねじ切きってしまいました。",
       "agents": [
@@ -441,35 +278,26 @@
       "targets": [
         "おじいさん"
       ],
-      "text_span": {
-        "start": 3939,
-        "end": 4001,
-        "text": "手下てしたの鬼おにはすぐそばへ寄よってきて、\n「それ、とるぞ。」\n　といいながら、ぽきりと瘤こぶをねじ切きってしまいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 9,
-      "relationships": [],
-      "action_layer": {
-        "category": "existential",
-        "type": "transform",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "narrative_function": "",
-      "relationship_multi": [],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "existential",
       "action_type": "transform",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "bdbc763d-f9e0-406f-9ff9-23e639aa8415",
+      "text_span": {
+        "start": 4360,
+        "end": 4427,
+        "text": "おばあさんは、おじいさんの瘤こぶがきれいに取とれているので、びっくりして、\n「おや、瘤こぶをどこへやったのです。」\n　と聞ききました。"
+      },
       "event_type": "RECOGNITION",
       "description": "おばあさんは、おじいさんの瘤こぶがきれいに取とれているので、びっくりして、\n「おや、瘤こぶをどこへやったのです。」\n　と聞ききました。",
       "agents": [
@@ -478,86 +306,52 @@
       "targets": [
         "おじいさん"
       ],
-      "text_span": {
-        "start": 4360,
-        "end": 4427,
-        "text": "おばあさんは、おじいさんの瘤こぶがきれいに取とれているので、びっくりして、\n「おや、瘤こぶをどこへやったのです。」\n　と聞ききました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 10,
-      "relationships": [
-        {
-          "agent": "おばあさん",
-          "target": "おじいさん",
-          "relationship_level1": "",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
-      "action_layer": {
-        "category": "mental",
-        "type": "realize",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "おばあさん",
-          "target": "おじいさん",
-          "relationship_level1": "",
-          "relationship_level2": "",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "positive",
       "action_category": "mental",
       "action_type": "realize",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "3705fbbc-5bbb-4556-a518-2569a082ecbd",
+      "text_span": {
+        "start": 4506,
+        "end": 4561,
+        "text": "さてこのお隣となりのうちにも、これは左ひだりのほおに、やはり同おなじような瘤こぶのあるおじいさんがありました。"
+      },
       "event_type": "Initial Situation",
       "description": "さてこのお隣となりのうちにも、これは左ひだりのほおに、やはり同おなじような瘤こぶのあるおじいさんがありました。",
       "agents": [
         "隣のおじいさん"
       ],
       "targets": [],
-      "text_span": {
-        "start": 4506,
-        "end": 4561,
-        "text": "さてこのお隣となりのうちにも、これは左ひだりのほおに、やはり同おなじような瘤こぶのあるおじいさんがありました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 11,
-      "relationships": [],
-      "action_layer": {
-        "category": "mental",
-        "type": "observe",
-        "context": "",
-        "status": "success",
-        "function": "setup"
-      },
-      "narrative_function": "setup",
-      "relationship_multi": [],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "mental",
       "action_type": "observe",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "setup"
     },
     {
       "id": "bf95c257-bb14-47cc-9c49-e87da1896d5a",
+      "text_span": {
+        "start": 4729,
+        "end": 4933,
+        "text": "おじいさんは、\n「なあに、これはお医者いしゃさまに切きってもらったのではありません。ゆうべ山の中で鬼おにが取とっていったのです。」\n　といいました。\n　するとお隣となりのおじいさんはひざを乗のり出だして、\n「それはいったいどういうわけです。」\n　と、びっくりした顔かおをしました。\n　そこでおじいさんは、こういうわけで踊おどりを踊おどったら、後あとでしちに取とられたのだといって、くわしい話はなしをしました。"
+      },
       "event_type": "OTHER",
       "description": "おじいさんは、\n「なあに、これはお医者いしゃさまに切きってもらったのではありません。ゆうべ山の中で鬼おにが取とっていったのです。」\n　といいました。\n　するとお隣となりのおじいさんはひざを乗のり出だし",
       "agents": [
@@ -566,121 +360,78 @@
       "targets": [
         "隣のおじいさん"
       ],
-      "text_span": {
-        "start": 4729,
-        "end": 4933,
-        "text": "おじいさんは、\n「なあに、これはお医者いしゃさまに切きってもらったのではありません。ゆうべ山の中で鬼おにが取とっていったのです。」\n　といいました。\n　するとお隣となりのおじいさんはひざを乗のり出だして、\n「それはいったいどういうわけです。」\n　と、びっくりした顔かおをしました。\n　そこでおじいさんは、こういうわけで踊おどりを踊おどったら、後あとでしちに取とられたのだといって、くわしい話はなしをしました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 12,
-      "relationships": [
-        {
-          "agent": "おじいさん",
-          "target": "隣のおじいさん",
-          "relationship_level1": "Social & Alliance",
-          "relationship_level2": "colleague",
-          "sentiment": "positive"
-        }
-      ],
-      "action_layer": {
-        "category": "communicative",
-        "type": "inform",
-        "context": "",
-        "status": "success",
-        "function": "character_arc"
-      },
-      "narrative_function": "character_arc",
-      "relationship_multi": [
-        {
-          "agent": "おじいさん",
-          "target": "隣のおじいさん",
-          "relationship_level1": "Social & Alliance",
-          "relationship_level2": "colleague",
-          "sentiment": "positive"
-        }
-      ],
       "relationship_level1": "Social & Alliance",
       "relationship_level2": "colleague",
       "sentiment": "positive",
       "action_category": "communicative",
       "action_type": "inform",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "character_arc"
     },
     {
       "id": "14040808-a4d2-42c9-877a-1d0a6304b14a",
+      "text_span": {
+        "start": 4958,
+        "end": 4985,
+        "text": "ではわたしもさっそく行って踊おどりを踊おどりましょう。"
+      },
       "event_type": "UNFOUNDED_CLAIMS",
       "description": "ではわたしもさっそく行って踊おどりを踊おどりましょう。",
       "agents": [
         "隣のおじいさん"
       ],
       "targets": [],
-      "text_span": {
-        "start": 4958,
-        "end": 4985,
-        "text": "ではわたしもさっそく行って踊おどりを踊おどりましょう。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 13,
-      "relationships": [],
-      "action_layer": {
-        "category": "mental",
-        "type": "plot",
-        "context": "",
-        "status": "success",
-        "function": "trigger"
-      },
-      "narrative_function": "trigger",
-      "relationship_multi": [],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "mental",
       "action_type": "plot",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": "trigger"
     },
     {
       "id": "137ce04a-4a4b-4fe7-84f0-347c2fb50665",
+      "text_span": {
+        "start": 5077,
+        "end": 5108,
+        "text": "おじいさんは大たいそうよろこんで、あたふた山へ出ていきました。"
+      },
       "event_type": "DEPARTURE",
       "description": "おじいさんは大たいそうよろこんで、あたふた山へ出ていきました。",
       "agents": [
         "隣のおじいさん"
       ],
       "targets": [],
-      "text_span": {
-        "start": 5077,
-        "end": 5108,
-        "text": "おじいさんは大たいそうよろこんで、あたふた山へ出ていきました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 14,
-      "relationships": [],
-      "action_layer": {
-        "category": "physical",
-        "type": "travel",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "narrative_function": "",
-      "relationship_multi": [],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "physical",
       "action_type": "travel",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     },
     {
       "id": "5cfbac27-baff-4b20-9c2a-5deac0a40222",
+      "text_span": {
+        "start": 5594,
+        "end": 5654,
+        "text": "おじいさんは、おっかなびっくり立たち上あがって、見みるからぶきような手てつきをして、でたらめな踊おどりを踊おどりました。"
+      },
       "event_type": "STRUGGLE",
       "description": "おじいさんは、おっかなびっくり立たち上あがって、見みるからぶきような手てつきをして、でたらめな踊おどりを踊おどりました。",
       "agents": [
@@ -689,35 +440,26 @@
       "targets": [
         "おじいさん"
       ],
-      "text_span": {
-        "start": 5594,
-        "end": 5654,
-        "text": "おじいさんは、おっかなびっくり立たち上あがって、見みるからぶきような手てつきをして、でたらめな踊おどりを踊おどりました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 15,
-      "relationships": [],
-      "action_layer": {
-        "category": "physical",
-        "type": "interact",
-        "context": "",
-        "status": "failure",
-        "function": "trigger"
-      },
-      "narrative_function": "trigger",
-      "relationship_multi": [],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
       "action_category": "physical",
       "action_type": "interact",
       "action_context": "",
-      "action_status": "failure"
+      "action_status": "failure",
+      "narrative_function": "trigger"
     },
     {
       "id": "ce298c14-7d66-4f39-9b02-34bae5e2cc62",
+      "text_span": {
+        "start": 5787,
+        "end": 5861,
+        "text": "若わかい鬼おにが、あずかっていた瘤こぶを持もって出て、\n「それ、返かえすぞ。」\n　とわめきながら、瘤こぶのない右みぎのほおへぽんとたたきつけました。"
+      },
       "event_type": "PUNISHMENT",
       "description": "若わかい鬼おにが、あずかっていた瘤こぶを持もって出て、\n「それ、返かえすぞ。」\n　とわめきながら、瘤こぶのない右みぎのほおへぽんとたたきつけました。",
       "agents": [
@@ -726,48 +468,18 @@
       "targets": [
         "隣のおじいさん"
       ],
-      "text_span": {
-        "start": 5787,
-        "end": 5861,
-        "text": "若わかい鬼おにが、あずかっていた瘤こぶを持もって出て、\n「それ、返かえすぞ。」\n　とわめきながら、瘤こぶのない右みぎのほおへぽんとたたきつけました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 16,
-      "relationships": [
-        {
-          "agent": "鬼たち",
-          "target": "隣のおじいさん",
-          "relationship_level1": "",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
-      "action_layer": {
-        "category": "existential",
-        "type": "transform",
-        "context": "",
-        "status": "success",
-        "function": ""
-      },
-      "narrative_function": "",
-      "relationship_multi": [
-        {
-          "agent": "鬼たち",
-          "target": "隣のおじいさん",
-          "relationship_level1": "",
-          "relationship_level2": "",
-          "sentiment": "negative"
-        }
-      ],
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "negative",
       "action_category": "existential",
       "action_type": "transform",
       "action_context": "",
-      "action_status": "success"
+      "action_status": "success",
+      "narrative_function": ""
     }
   ],
   "themes_and_motifs": {
@@ -776,13 +488,27 @@
       "LUCK",
       "JUSTICE"
     ],
-    "motif_type": [],
+    "motif_type": [
+      "Motif F511.1: F511.1. Person unusual as to his face. (F. Marvels. > F200–F699. Marvelous creatures. > F500–F599. Remarkable persons.)",
+      "Motif G303.22.1: G303.22.1. Devil repays a kindness: returns coat lent him and brings the one who had shown him kindness back home when imprisoned. (G. Ogres. > G10–G399. Kinds of ogres. > G300–G399. Other ogres.)"
+    ],
     "atu_categories": [],
     "obstacle_thrower": [],
     "helper_type": [],
     "thinking_process": "",
     "atu_evidence": {},
-    "motif_evidence": {}
+    "motif_evidence": {
+      "Motif F511.1: F511.1. Person unusual as to his face. (F. Marvels. > F200–F699. Marvelous creatures. > F500–F599. Remarkable persons.)": {
+        "evidence_keys": [
+          "S665-746"
+        ]
+      },
+      "Motif G303.22.1: G303.22.1. Devil repays a kindness: returns coat lent him and brings the one who had shown him kindness back home when imprisoned. (G. Ogres. > G10–G399. Kinds of ogres. > G300–G399. Other ogres.)": {
+        "evidence_keys": [
+          "S5787-5861"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [

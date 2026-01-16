@@ -39,6 +39,11 @@
   "narrative_events": [
     {
       "id": "0aeb70fa-2e94-474f-8f38-971967e84812",
+      "text_span": {
+        "start": 0,
+        "end": 45,
+        "text": "むかしむかし、あるところに、まずしいけれど、心のやさしいおじいさんとおばあさんがいました。"
+      },
       "event_type": "Initial Situation",
       "description": "むかしむかし、あるところに、まずしいけれど、心のやさしいおじいさんとおばあさんがいました。",
       "agents": [
@@ -46,11 +51,6 @@
         "おばあさん"
       ],
       "targets": [],
-      "text_span": {
-        "start": 0,
-        "end": 45,
-        "text": "むかしむかし、あるところに、まずしいけれど、心のやさしいおじいさんとおばあさんがいました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -74,17 +74,17 @@
     },
     {
       "id": "42bceb1d-e84b-44c3-bdbf-e93bfeac7a27",
+      "text_span": {
+        "start": 74,
+        "end": 156,
+        "text": "「ハッケヨイ！　ノコッタ、ノコッタ」\nと、いう声がきこえてきます。\n「はて、なんの声だろう？」\n　おじいさんがのぞいてみると、二匹のネズミがすもうをとっていました。"
+      },
       "event_type": "RECONNAISSANCE",
       "description": "「ハッケヨイ！　ノコッタ、ノコッタ」\nと、いう声がきこえてきます。\n「はて、なんの声だろう？」\n　おじいさんがのぞいてみると、二匹のネズミがすもうをとっていました。",
       "agents": [
         "おじいさん"
       ],
       "targets": [],
-      "text_span": {
-        "start": 74,
-        "end": 156,
-        "text": "「ハッケヨイ！　ノコッタ、ノコッタ」\nと、いう声がきこえてきます。\n「はて、なんの声だろう？」\n　おじいさんがのぞいてみると、二匹のネズミがすもうをとっていました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -108,17 +108,17 @@
     },
     {
       "id": "dd079b18-e39b-4bce-bc7a-09b3b994aed5",
+      "text_span": {
+        "start": 203,
+        "end": 243,
+        "text": "やせネズミは、力がないため、なんどやっても、ふとっちょネズミにまけてしまいます。"
+      },
       "event_type": "LACK",
       "description": "やせネズミは、力がないため、なんどやっても、ふとっちょネズミにまけてしまいます。",
       "agents": [
         "やせネズミ"
       ],
       "targets": [],
-      "text_span": {
-        "start": 203,
-        "end": 243,
-        "text": "やせネズミは、力がないため、なんどやっても、ふとっちょネズミにまけてしまいます。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -142,6 +142,11 @@
     },
     {
       "id": "3e6eb197-e034-469c-a96d-378f1267b8f5",
+      "text_span": {
+        "start": 245,
+        "end": 321,
+        "text": "おじいさんは家にかえると、おばあさんにネズミのすもう話をしました。\n「あれじゃあ、かわいそうだ。なんとかして、うちのやせネズミに、かたせてやりたいねえ」"
+      },
       "event_type": "MEDIATION",
       "description": "おじいさんは家にかえると、おばあさんにネズミのすもう話をしました。\n「あれじゃあ、かわいそうだ。なんとかして、うちのやせネズミに、かたせてやりたいねえ」",
       "agents": [
@@ -150,11 +155,6 @@
       "targets": [
         "おばあさん"
       ],
-      "text_span": {
-        "start": 245,
-        "end": 321,
-        "text": "おじいさんは家にかえると、おばあさんにネズミのすもう話をしました。\n「あれじゃあ、かわいそうだ。なんとかして、うちのやせネズミに、かたせてやりたいねえ」"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -178,6 +178,11 @@
     },
     {
       "id": "7f837a6e-c5d4-4b5f-bb51-340ac5c8643f",
+      "text_span": {
+        "start": 326,
+        "end": 393,
+        "text": "おばあさんが、\n「それじゃあ、うちのやせネズミに、おもちを食べさせてやりましょうよ。きっと、力がつきますよ」\n「そうじゃ、それがええ」"
+      },
       "event_type": "BEGINNING_COUNTERACTION",
       "description": "おばあさんが、\n「それじゃあ、うちのやせネズミに、おもちを食べさせてやりましょうよ。きっと、力がつきますよ」\n「そうじゃ、それがええ」",
       "agents": [
@@ -186,11 +191,6 @@
       "targets": [
         "おじいさん"
       ],
-      "text_span": {
-        "start": 326,
-        "end": 393,
-        "text": "おばあさんが、\n「それじゃあ、うちのやせネズミに、おもちを食べさせてやりましょうよ。きっと、力がつきますよ」\n「そうじゃ、それがええ」"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -214,6 +214,11 @@
     },
     {
       "id": "2e712fc8-0335-49ad-9b1a-372a76463a55",
+      "text_span": {
+        "start": 395,
+        "end": 445,
+        "text": "おじいさんとおばあさんは、さっそくおもちをついて、やせネズミのすんでいる穴に、ころがしてやりました。"
+      },
       "event_type": "RECEIPT_OF_AGENT",
       "description": "おじいさんとおばあさんは、さっそくおもちをついて、やせネズミのすんでいる穴に、ころがしてやりました。",
       "agents": [
@@ -223,11 +228,6 @@
       "targets": [
         "やせネズミ"
       ],
-      "text_span": {
-        "start": 395,
-        "end": 445,
-        "text": "おじいさんとおばあさんは、さっそくおもちをついて、やせネズミのすんでいる穴に、ころがしてやりました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -251,6 +251,11 @@
     },
     {
       "id": "360d5e76-af11-48d2-b060-b1ae546a809b",
+      "text_span": {
+        "start": 447,
+        "end": 481,
+        "text": "さて次の日、やせネズミとふとっちょネズミは、またすもうをとりました。"
+      },
       "event_type": "STRUGGLE",
       "description": "さて次の日、やせネズミとふとっちょネズミは、またすもうをとりました。",
       "agents": [
@@ -259,11 +264,6 @@
       "targets": [
         "ふとっちょネズミ"
       ],
-      "text_span": {
-        "start": 447,
-        "end": 481,
-        "text": "さて次の日、やせネズミとふとっちょネズミは、またすもうをとりました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -287,6 +287,11 @@
     },
     {
       "id": "55595a2a-c896-4264-98d8-66029ac05675",
+      "text_span": {
+        "start": 485,
+        "end": 522,
+        "text": "、今日はおじいさんの家のやせネズミが、なんどやっても、すもうにかつのです。"
+      },
       "event_type": "VICTORY",
       "description": "、今日はおじいさんの家のやせネズミが、なんどやっても、すもうにかつのです。",
       "agents": [
@@ -295,11 +300,6 @@
       "targets": [
         "ふとっちょネズミ"
       ],
-      "text_span": {
-        "start": 485,
-        "end": 522,
-        "text": "、今日はおじいさんの家のやせネズミが、なんどやっても、すもうにかつのです。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -323,15 +323,15 @@
     },
     {
       "id": "a0882a78-2655-4df6-a183-4cbff7b3fc73",
-      "event_type": "DELIVERY",
-      "description": "ふしぎに思ったふとっちょネズミが、やせネズミにたずねました。\n「やせネズミくん、どうしてきゅうに、つよくなったんだい？」\n　やせネズミは、とくいそうにいいました。\n「えへへへっ、じつはね。きのう、おじ",
-      "agents": [],
-      "targets": [],
       "text_span": {
         "start": 524,
         "end": 659,
         "text": "ふしぎに思ったふとっちょネズミが、やせネズミにたずねました。\n「やせネズミくん、どうしてきゅうに、つよくなったんだい？」\n　やせネズミは、とくいそうにいいました。\n「えへへへっ、じつはね。きのう、おじいさんとおばあさんがおもちをくれたんだ。だから力がつよくなったんだよ」"
       },
+      "event_type": "DELIVERY",
+      "description": "ふしぎに思ったふとっちょネズミが、やせネズミにたずねました。\n「やせネズミくん、どうしてきゅうに、つよくなったんだい？」\n　やせネズミは、とくいそうにいいました。\n「えへへへっ、じつはね。きのう、おじ",
+      "agents": [],
+      "targets": [],
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -355,15 +355,15 @@
     },
     {
       "id": "25a0c774-874f-4715-a3ea-7bff8dc542ee",
-      "event_type": "RECEIPT_OF_AGENT",
-      "description": "おじいさんは、二匹分のおもちをネズミの穴に入れてやり、おばあさんは二匹のネズミに小さなまわしをぬってあげました。",
-      "agents": [],
-      "targets": [],
       "text_span": {
         "start": 780,
         "end": 836,
         "text": "おじいさんは、二匹分のおもちをネズミの穴に入れてやり、おばあさんは二匹のネズミに小さなまわしをぬってあげました。"
       },
+      "event_type": "RECEIPT_OF_AGENT",
+      "description": "おじいさんは、二匹分のおもちをネズミの穴に入れてやり、おばあさんは二匹のネズミに小さなまわしをぬってあげました。",
+      "agents": [],
+      "targets": [],
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -387,6 +387,11 @@
     },
     {
       "id": "0561cd1b-7d7c-4744-ad64-9b74f8b717ac",
+      "text_span": {
+        "start": 874,
+        "end": 944,
+        "text": "よろこんだふとっちょネズミは、おみやげにもってきた小判を、おじいさんとおばあさんにあげたので、おじいさんとおばあさんはお金もちになりました。"
+      },
       "event_type": "LIQUIDATION",
       "description": "よろこんだふとっちょネズミは、おみやげにもってきた小判を、おじいさんとおばあさんにあげたので、おじいさんとおばあさんはお金もちになりました。",
       "agents": [
@@ -396,11 +401,6 @@
         "おじいさん",
         "おばあさん"
       ],
-      "text_span": {
-        "start": 874,
-        "end": 944,
-        "text": "よろこんだふとっちょネズミは、おみやげにもってきた小判を、おじいさんとおばあさんにあげたので、おじいさんとおばあさんはお金もちになりました。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -428,13 +428,39 @@
     "key_values": [
       "OTHER"
     ],
-    "motif_type": [],
+    "motif_type": [
+      "Motif N135.2: N135.2. Possession of money brings luck. Nothing escapes a mouse as long as she has in her hole a purse of money. (N. Chance and fate. > N100–N299. The ways of luck and fate. > N100–N169. Nature of luck and fate.)",
+      "Motif B583: B583. Animal gives treasure to man. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)",
+      "Motif W11.15: W11.15. Generous person refuses no man anything. (Cf. C871.) (W. Traits of character. > W0–W99. Favorable traits of character.)",
+      "Motif N825.2: N825.2. Old man helper. (N. Chance and fate. > N800–N899. Helpers.)"
+    ],
     "atu_categories": [],
     "obstacle_thrower": [],
     "helper_type": [],
     "thinking_process": "",
     "atu_evidence": {},
-    "motif_evidence": {}
+    "motif_evidence": {
+      "Motif N135.2: N135.2. Possession of money brings luck. Nothing escapes a mouse as long as she has in her hole a purse of money. (N. Chance and fate. > N100–N299. The ways of luck and fate. > N100–N169. Nature of luck and fate.)": {
+        "evidence_keys": [
+          "S874-944"
+        ]
+      },
+      "Motif B583: B583. Animal gives treasure to man. (B. Animals. > B300–B599. Friendly animals. > B500–B599. Services of helpful animals.)": {
+        "evidence_keys": [
+          "S874-944"
+        ]
+      },
+      "Motif W11.15: W11.15. Generous person refuses no man anything. (Cf. C871.) (W. Traits of character. > W0–W99. Favorable traits of character.)": {
+        "evidence_keys": [
+          "S80-131"
+        ]
+      },
+      "Motif N825.2: N825.2. Old man helper. (N. Chance and fate. > N800–N899. Helpers.)": {
+        "evidence_keys": [
+          "S80-131"
+        ]
+      }
+    }
   },
   "analysis": {
     "propp_functions": [
