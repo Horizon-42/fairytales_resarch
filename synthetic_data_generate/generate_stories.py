@@ -62,23 +62,39 @@ def build_story_generation_prompt(json_data: Dict[str, Any]) -> str:
     
     events_text = "\n".join(event_summary)
     
-    # 确定语言：从 source_info 中获取语言信息
+    # 确定语言：优先根据 culture，其次根据 source_info.language
     source_info = json_data.get("source_info", {})
-    language = source_info.get("language", "en")
+    language_from_source = source_info.get("language", "en")
+
+    # 根据 culture 映射到对应语言
+    culture_to_language = {
+        "Chinese": "zh",
+        "Japanese": "ja",
+        "Indian": "en",  # 印度故事通常用英文（数据集中的情况）
+        "Persian": "fa",
+        "English": "en",
+    }
+
+    # 优先使用 culture 对应的语言，如果没有则使用 source_info 中的语言
+    language_code = culture_to_language.get(culture, language_from_source)
+
     language_map = {
         "zh": "中文",
         "en": "English",
         "ja": "Japanese",
         "fa": "Persian",
     }
-    story_language = language_map.get(language, "English")
+    story_language = language_map.get(language_code, "English")
     
     prompt = f"""You are a master storyteller with deep expertise in {culture} folktales, myths, and traditional narratives. Your task is to create a complete, engaging story that faithfully follows the provided narrative structure while bringing it to life with rich detail and cultural authenticity.
+
+**CRITICAL LANGUAGE REQUIREMENT:**
+You MUST write the entire story in {story_language}. This is not optional. Every word, sentence, and paragraph must be in {story_language}, not English or any other language.
 
 **STORY INFORMATION:**
 - Title: {title}
 - Cultural Origin: {culture}
-- Language: Write the story in {story_language}
+- Required Language: {story_language}
 
 **CHARACTERS:**
 {character_list}
@@ -87,11 +103,11 @@ Each character has an archetypal role. Develop them in a way that is consistent 
 
 **NARRATIVE STRUCTURE:**
 
-The story must follow these events in the exact order specified:
+The story must follow these {len(sorted_events)} events in the exact order specified. Each event must correspond to ONE paragraph in your output, wrapped in curly braces {{}}:
 
 {events_text}
 
-Each event represents a key plot point that must be included in your narrative. The event type (e.g., VILLAINY, DEPARTURE, VICTORY) indicates the narrative function, which should inform how you present and develop that moment in the story.
+Each event represents a key plot point that must be included in your narrative. The event type (e.g., VILLAINY, DEPARTURE, VICTORY) indicates the narrative function, which should inform how you present and develop that moment in the story. You must generate exactly {len(sorted_events)} paragraphs, each wrapped in {{}}, corresponding to these {len(sorted_events)} events in order.
 
 **STORY GENERATION REQUIREMENTS:**
 
@@ -114,17 +130,32 @@ Each event represents a key plot point that must be included in your narrative. 
 
 6. **Length**: Generate a substantial, well-developed story that fully explores each event. Aim for a length appropriate to the complexity of the narrative structure provided.
 
-**OUTPUT FORMAT:**
+**OUTPUT FORMAT - CRITICAL:**
 
-Generate ONLY the story text. Do not include:
-- Any introduction or explanation
-- Meta-commentary about the story
-- Notes or analysis
-- Title (start directly with the story)
+You must format the story as follows:
+- Each narrative event corresponds to ONE story paragraph
+- Each paragraph MUST be wrapped in curly braces {{}}
+- The paragraphs must appear in the exact order of the events (Event 1, Event 2, ..., Event {len(sorted_events)})
+- Each paragraph should be a self-contained narrative segment that develops the corresponding event
 
-Begin the story immediately with the first sentence. Write in {story_language} and maintain that language consistently throughout.
+Format example:
+{{First paragraph corresponding to Event 1}}
+{{Second paragraph corresponding to Event 2}}
+{{Third paragraph corresponding to Event 3}}
+...
 
-**BEGIN THE STORY NOW:**
+Requirements:
+- Each {{}} block should contain the story text for ONE narrative event only
+- Do NOT include any text outside the curly braces
+- Do NOT include the event numbers or labels inside the braces
+- Do NOT include any introduction, explanation, meta-commentary, notes, or analysis
+- Do NOT include the title
+- The story should flow naturally from one {{}} block to the next
+
+**LANGUAGE REMINDER:**
+CRITICAL: You must write the entire story in {story_language}, not in English. The story must be completely in {story_language} from the first word to the last word. Do not use English at all.
+
+**BEGIN THE STORY NOW (with proper formatting):**
 
 """
     
@@ -289,6 +320,9 @@ def main():
             sys.exit(1)
     else:
         json_files = list(groundtruth_dir.rglob("*.json"))
+
+    # sort jsonfiles
+    json_files.sort()
     
     print(f"Found {len(json_files)} JSON files to process")
     print(f"Model: {args.model}, Temperature: {args.temperature}, Stories per file: {args.num_stories}")
