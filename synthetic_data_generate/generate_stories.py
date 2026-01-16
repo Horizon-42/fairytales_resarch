@@ -2,7 +2,7 @@
 """
 根据清洗后的 JSON v3 标注数据生成故事文本。
 
-使用 Gemini 3 Flash 和 GPT-3（或其他模型），调高温度，
+使用 Gemini 1.5 Flash 和 GPT-3（或其他模型），调高温度，
 为每个 JSON 生成 10 篇故事。
 """
 
@@ -132,17 +132,17 @@ Begin the story immediately with the first sentence. Write in {story_language} a
 
 
 def generate_story_with_gemini(json_data: Dict[str, Any], temperature: float = 1.0) -> Optional[str]:
-    """使用 Gemini 3 Flash 生成故事。"""
+    """使用 Gemini 1.5 Flash 生成故事。"""
     try:
         api_key = os.getenv("GEMINI_API_KEY", "")
         if not api_key:
             print("Warning: GEMINI_API_KEY not set", file=sys.stderr)
             return None
         
-        # 尝试使用 gemini-2.0-flash-exp，如果不可用则回退到 gemini-1.5-flash 或 gemini-1.5-pro
+        # 使用 gemini-1.5-flash (用户选择，因为没有 gemini-3 flash token)
         config = GeminiConfig(
             api_key=api_key,
-            model="gemini-2.0-flash-exp",  # Gemini 3 Flash 或最新版本
+            model="gemini-2.5-flash",  # 使用 Gemini 1.5 Flash
             temperature=temperature,
             top_p=0.95,
             max_output_tokens=8192,

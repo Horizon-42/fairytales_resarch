@@ -17,3 +17,4 @@ Japanese_test2
 
 tmp/
 
+.env*
