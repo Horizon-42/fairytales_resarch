@@ -209,14 +209,49 @@ def generate_story_with_gpt3(json_data: Dict[str, Any], temperature: float = 1.0
     return None
 
 
+def check_existing_stories(output_dir: Path, story_name: str, num_stories: int) -> List[int]:
+    """检查已存在的故事文件，返回缺失的故事编号列表。
+    
+    Args:
+        output_dir: 输出目录
+        story_name: 故事名称
+        num_stories: 需要生成的故事总数
+    
+    Returns:
+        缺失的故事编号列表（从1开始）
+    """
+    missing_indices = []
+
+    if not output_dir.exists():
+        # 目录不存在，所有故事都需要生成
+        return list(range(1, num_stories + 1))
+
+    for i in range(1, num_stories + 1):
+        output_path = output_dir / f"{story_name}_gen_{i:02d}.txt"
+        if not output_path.exists():
+            missing_indices.append(i)
+
+    return missing_indices
+
+
 def generate_stories_for_json(
     json_path: Path,
     output_dir: Path,
     num_stories: int = 10,
     model: str = "gemini",
     temperature: float = 1.0,
+    resume: bool = True,
 ):
-    """为单个 JSON 文件生成多个故事。"""
+    """为单个 JSON 文件生成多个故事。
+    
+    Args:
+        json_path: JSON 文件路径
+        output_dir: 输出目录
+        num_stories: 需要生成的故事总数
+        model: 使用的模型名称
+        temperature: 生成温度
+        resume: 是否启用断点续生成（跳过已存在的文件）
+    """
     
     # 读取 JSON
     with open(json_path, "r", encoding="utf-8") as f:
@@ -224,11 +259,33 @@ def generate_stories_for_json(
     
     story_name = json_data.get("metadata", {}).get("id", json_path.stem)
     
-    print(f"Generating {num_stories} stories for: {story_name} (model: {model}, temp: {temperature})")
-    
-    # 生成故事
-    for i in range(num_stories):
-        print(f"  Generating story {i+1}/{num_stories}...", end=" ", flush=True)
+    # 检查已存在的故事
+    if resume:
+        missing_indices = check_existing_stories(
+            output_dir, story_name, num_stories)
+        existing_count = num_stories - len(missing_indices)
+
+        if existing_count > 0:
+            print(
+                f"Found {existing_count}/{num_stories} existing stories for: {story_name}")
+            if len(missing_indices) == 0:
+                print(f"  All stories already exist, skipping: {story_name}")
+                return
+
+        print(
+            f"Generating {len(missing_indices)}/{num_stories} stories for: {story_name} (model: {model}, temp: {temperature})")
+    else:
+        missing_indices = list(range(1, num_stories + 1))
+        print(
+            f"Generating {num_stories} stories for: {story_name} (model: {model}, temp: {temperature})")
+
+    # 确保输出目录存在
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    # 生成缺失的故事
+    for idx, story_num in enumerate(missing_indices):
+        print(
+            f"  Generating story {story_num}/{num_stories}...", end=" ", flush=True)
         
         if model.lower() in ["gemini", "gemini3", "flash"]:
             story_text = generate_story_with_gemini(json_data, temperature)
@@ -240,8 +297,7 @@ def generate_stories_for_json(
         
         if story_text:
             # 保存故事
-            output_path = output_dir / f"{story_name}_gen_{i+1:02d}.txt"
-            output_path.parent.mkdir(parents=True, exist_ok=True)
+            output_path = output_dir / f"{story_name}_gen_{story_num:02d}.txt"
             
             with open(output_path, "w", encoding="utf-8") as f:
                 f.write(story_text)
@@ -299,6 +355,11 @@ def main():
         type=str,
         help="Process only a specific JSON file (optional)",
     )
+    parser.add_argument(
+        "--no-resume",
+        action="store_true",
+        help="Disable resume mode (regenerate all stories even if they exist)",
+    )
     
     args = parser.parse_args()
     
@@ -342,6 +403,7 @@ def main():
                 num_stories=args.num_stories,
                 model=args.model,
                 temperature=args.temperature,
+                resume=not args.no_resume,  # 默认启用断点续生成
             )
         except Exception as e:
             print(f"Error processing {json_path}: {e}", file=sys.stderr)
