@@ -4,6 +4,7 @@ The rest of the repo was originally Ollama-only.
 This module makes it possible to switch between:
 - local Ollama (e.g., Qwen3 via `ollama`)
 - Google Gemini (cloud)
+- Hugging Face Transformers (e.g., Qwen models in Colab)
 
 without changing prompt-building logic.
 """
@@ -14,10 +15,11 @@ from dataclasses import dataclass
 from typing import Dict, List, Literal
 
 from .gemini_client import GeminiConfig, GeminiError
+from .huggingface_client import HuggingFaceConfig, HuggingFaceError
 from .ollama_client import OllamaConfig, OllamaError
 
 
-LLMProvider = Literal["ollama", "gemini"]
+LLMProvider = Literal["ollama", "gemini", "huggingface"]
 
 
 class LLMRouterError(RuntimeError):
@@ -31,7 +33,11 @@ def _normalize_provider(provider: str) -> LLMProvider:
         return "ollama"
     if p in ("gemini", "gemini3", "google"):
         return "gemini"
-    raise LLMRouterError(f"Unknown provider: {provider!r} (use 'ollama' or 'gemini')")
+    if p in ("huggingface", "hf", "transformers", "colab"):
+        return "huggingface"
+    raise LLMRouterError(
+        f"Unknown provider: {provider!r} (use 'ollama', 'gemini', or 'huggingface')"
+    )
 
 
 @dataclass(frozen=True)
@@ -41,6 +47,7 @@ class LLMConfig:
 
     ollama: OllamaConfig = OllamaConfig()
     gemini: GeminiConfig = GeminiConfig()
+    huggingface: HuggingFaceConfig = HuggingFaceConfig()
 
 
 def chat(
@@ -67,16 +74,29 @@ def chat(
         except OllamaError as exc:
             raise LLMRouterError(str(exc)) from exc
 
-    # provider == "gemini"
-    from .gemini_client import chat as gemini_chat
+    if provider == "gemini":
+        from .gemini_client import chat as gemini_chat
+
+        try:
+            return gemini_chat(
+                config=config.gemini,
+                messages=messages,
+                response_format_json=response_format_json,
+                timeout_s=timeout_s,
+                thinking=bool(config.thinking),
+            )
+        except GeminiError as exc:
+            raise LLMRouterError(str(exc)) from exc
+
+    # provider == "huggingface"
+    from .huggingface_client import chat as huggingface_chat
 
     try:
-        return gemini_chat(
-            config=config.gemini,
+        return huggingface_chat(
+            config=config.huggingface,
             messages=messages,
             response_format_json=response_format_json,
             timeout_s=timeout_s,
-            thinking=bool(config.thinking),
         )
-    except GeminiError as exc:
+    except HuggingFaceError as exc:
         raise LLMRouterError(str(exc)) from exc

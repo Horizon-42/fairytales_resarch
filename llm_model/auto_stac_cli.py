@@ -43,6 +43,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from llm_model.env import load_repo_dotenv
 from llm_model.gemini_client import GeminiConfig
+from llm_model.huggingface_client import HuggingFaceConfig
 from llm_model.llm_router import LLMConfig
 from llm_model.ollama_client import OllamaConfig
 from llm_model.stac_analyzer import STACAnalyzerConfig, analyze_stac
@@ -58,7 +59,7 @@ def main() -> int:
     parser.add_argument(
         "--provider",
         default=os.getenv("LLM_PROVIDER", "ollama"),
-        help="LLM provider: ollama (local) or gemini (cloud)",
+        help="LLM provider: ollama (local), gemini (cloud), or huggingface (Colab)",
     )
     parser.add_argument(
         "--thinking",
@@ -68,7 +69,7 @@ def main() -> int:
     parser.add_argument(
         "--model",
         default="qwen3:8b",
-        help="Model name (Ollama model or Gemini model, depends on --provider)",
+        help="Model name (Ollama/Gemini model name, or HF model ID like 'Qwen/Qwen2.5-7B-Instruct' for huggingface)",
     )
     parser.add_argument(
         "--base-url",
@@ -143,8 +144,10 @@ def main() -> int:
 
     provider = (args.provider or os.getenv("LLM_PROVIDER", "ollama")).strip().lower()
 
-    ollama_model = args.model if provider != "gemini" else os.getenv("OLLAMA_MODEL", "qwen3:8b")
+    ollama_model = args.model if provider not in ("gemini", "huggingface", "hf") else os.getenv("OLLAMA_MODEL", "qwen3:8b")
     gemini_model = args.model if provider == "gemini" else os.getenv("GEMINI_MODEL", "")
+    hf_model = args.model if provider in ("huggingface", "hf", "colab") else os.getenv("HF_MODEL", "Qwen/Qwen2.5-7B-Instruct")
+    hf_device = os.getenv("HF_DEVICE", "auto")  # "cuda", "cpu", or "auto"
 
     llm = LLMConfig(
         provider=provider,  # normalized inside router
@@ -157,6 +160,13 @@ def main() -> int:
             temperature=float(os.getenv("GEMINI_TEMPERATURE", "0.2")),
             top_p=float(os.getenv("GEMINI_TOP_P", "0.9")),
             max_output_tokens=int(os.getenv("GEMINI_MAX_OUTPUT_TOKENS", "8192")),
+        ),
+        huggingface=HuggingFaceConfig(
+            model=hf_model,
+            device=hf_device,
+            temperature=float(os.getenv("HF_TEMPERATURE", "0.2")),
+            top_p=float(os.getenv("HF_TOP_P", "0.9")),
+            max_new_tokens=int(os.getenv("HF_MAX_NEW_TOKENS", "2048")),
         ),
     )
 
