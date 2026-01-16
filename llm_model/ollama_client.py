@@ -77,6 +77,7 @@ def embed(
     base_url: str,
     model: str,
     inputs: Sequence[str],
+    instruction: str | None = None,
     timeout_s: float = 600.0,
 ) -> List[List[float]]:
     """Generate embeddings for one or more input strings.
@@ -91,6 +92,8 @@ def embed(
         base_url: Ollama server URL (e.g., http://localhost:11434)
         model: Embedding model name (e.g., qwen3-embedding:4b)
         inputs: Texts to embed.
+        instruction: Optional instruction to prepend to each input text for instruction-based
+                    embeddings. If provided, each input will be formatted as "{instruction} {text}".
         timeout_s: HTTP timeout.
 
     Returns:
@@ -100,13 +103,18 @@ def embed(
     if not inputs:
         return []
 
+    # Apply instruction if provided
+    processed_inputs = list(inputs)
+    if instruction:
+        processed_inputs = [f"{instruction} {text}" if text.strip() else text for text in inputs]
+
     base = base_url.rstrip("/")
 
     # 1) Prefer batch endpoint
     url_batch = f"{base}/api/embed"
     payload_batch: Dict[str, Any] = {
         "model": model,
-        "input": list(inputs),
+        "input": processed_inputs,
     }
     try:
         resp = requests.post(url_batch, json=payload_batch, timeout=timeout_s)
@@ -127,7 +135,7 @@ def embed(
     # 2) Fallback: single embedding endpoint
     url_single = f"{base}/api/embeddings"
     out: List[List[float]] = []
-    for text in inputs:
+    for text in processed_inputs:
         payload_single: Dict[str, Any] = {
             "model": model,
             "prompt": text,

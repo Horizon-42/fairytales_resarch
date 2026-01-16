@@ -147,6 +147,14 @@ def main() -> int:
         default=100,
         help="Number of texts to process in each batch (default: 100)",
     )
+    parser.add_argument(
+        "--instruction",
+        type=str,
+        default=os.getenv("EMBEDDING_INSTRUCTION", None),
+        help="Optional instruction to prepend to each text for instruction-based embeddings. "
+             "If provided, each input will be formatted as '{instruction} {text}'. "
+             "Can also be set via EMBEDDING_INSTRUCTION environment variable.",
+    )
     args = parser.parse_args()
 
     # Validate input file
@@ -187,6 +195,7 @@ def main() -> int:
                 provider=args.provider,
                 model=args.model,
                 base_url=args.base_url,
+                instruction=args.instruction,
             )
             all_embeddings.extend(batch_embeddings)
         except Exception as e:

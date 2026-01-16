@@ -22,6 +22,7 @@ def generate_embeddings(
     provider: str = "ollama",
     model: str | None = None,
     base_url: str | None = None,
+    instruction: str | None = None,
     timeout_s: float = 600.0,
 ) -> List[List[float]]:
     """Generate embeddings for a list of texts.
@@ -35,6 +36,9 @@ def generate_embeddings(
         model: Model name. If None, uses default from environment or "nomic-embed-text".
         base_url: Base URL for the provider. If None, uses default from environment or
                   "http://localhost:11434" for Ollama.
+        instruction: Optional instruction to prepend to each text for instruction-based
+                    embeddings. If provided, each input will be formatted as "{instruction} {text}".
+                    Useful for models that support instruction-based embeddings.
         timeout_s: Timeout in seconds for API requests.
 
     Returns:
@@ -54,11 +58,15 @@ def generate_embeddings(
             model = os.getenv("OLLAMA_EMBEDDING_MODEL", "nomic-embed-text")
         if base_url is None:
             base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+        if instruction is None:
+            # Allow instruction to be set via environment variable
+            instruction = os.getenv("EMBEDDING_INSTRUCTION")
 
         return ollama_embed(
             base_url=base_url,
             model=model,
             inputs=texts,
+            instruction=instruction,
             timeout_s=timeout_s,
         )
     else:

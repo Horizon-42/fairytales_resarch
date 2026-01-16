@@ -1,0 +1,68 @@
+story_name	story_id	title	culture	language	reference_uri	date_annotated	annotator	confidence
+CH_002_牛郎织女	CH_002_牛郎织女	牛郎织女	Chinese	zh	datasets/texts/CH_002_牛郎织女.txt	2025-12-15	Dongxu	0.8
+CH_003_孟姜女哭长城	CH_003_孟姜女哭长城	孟姜女哭长城	Chinese	zh	datasets/texts/CH_003_孟姜女哭长城.txt	2025-12-15		0.8
+CH_004_梁山伯与祝英台	CH_004_梁山伯与祝英台	梁山伯与祝英台	Chinese	zh	datasets/texts/CH_004_梁山伯与祝英台.txt	2025-12-18		0.8
+CH_005_白蛇传	CH_005_白蛇传	白蛇传	Chinese	zh	datasets/texts/CH_005_白蛇传.txt	2025-12-19		0.8
+CH_006_花木兰从军	CH_006_花木兰从军	花木兰从军	Chinese	zh	datasets/texts/CH_006_花木兰从军.txt	2025-12-21		0.8
+CH_007_嫦娥奔月	CH_007_嫦娥奔月	嫦娥奔月	Chinese	zh	datasets/texts/CH_007_嫦娥奔月.txt	2025-12-17		0.8
+CH_008_盘古开天	CH_008_盘古开天		Chinese	zh	datasets/ChineseTales/texts/CH_008_盘古开天.txt	2026-01-15		0.8
+CH_009_女娲补天	CH_009_女娲补天		Chinese	zh	datasets/ChineseTales/texts/CH_009_女娲补天.txt	2026-01-15		0.8
+CH_010_沉香救母	CH_010_沉香救母	沉香救母	Chinese	zh	datasets/texts/CH_010_沉香救母.txt	2025-12-21		0.8
+CH_011_精卫填海	CH_011_精卫填海		Chinese	zh	datasets/ChineseTales/texts/CH_011_精卫填海.txt	2026-01-15		0.8
+CH_012_后羿射日	CH_012_后羿射日	后羿射日	Chinese	zh	datasets/texts/CH_012_后羿射日.txt	2025-12-17		0.8
+CH_013_哪吒闹海	CH_013_哪吒闹海	哪吒闹海	Chinese	zh	datasets/texts/CH_013_哪吒闹海.txt	2025-12-21		0.8
+CH_014_武松打虎	CH_014_武松打虎	武松打虎	Chinese	en	datasets/texts/CH_014_武松打虎.txt	2025-12-22		0.8
+CH_015_大禹治水	CH_015_大禹治水		Chinese	en	datasets/ChineseTales/texts/CH_015_大禹治水.txt	2026-01-15		0.8
+CH_016_愚公移山	CH_016_愚公移山	愚公移山	Chinese	zh	datasets/texts/CH_016_愚公移山.txt	2025-12-23		0.8
+CH_017_田螺姑娘	CH_017_田螺姑娘	田螺姑娘	Chinese	zh	datasets/texts/CH_017_田螺姑娘.txt	2025-12-23		0.8
+CH_018_聚宝盆	CH_018_聚宝盆		Chinese	zh	datasets/ChineseTales/texts/CH_018_聚宝盆.txt	2026-01-15		0.8
+CH_019_七仙女和仙浴潭	CH_019_七仙女和仙浴潭		Chinese	zh	datasets/ChineseTales/texts/CH_019_七仙女和仙浴潭.txt	2026-01-15		0.8
+CH_021_叶限(中国灰姑娘)	CH_021_叶限(中国灰姑娘)	叶限(中国灰姑娘)	Chinese	zh	datasets/texts/CH_021_叶限(中国灰姑娘).txt	2025-12-17		0.8
+CH_022_画皮	CH_022_画皮		Chinese	zh	datasets/ChineseTales/texts/CH_022_画皮.txt	2026-01-15		0.8
+CH_023_劳山道士	CH_023_劳山道士		Chinese	zh	datasets/ChineseTales/texts/CH_023_劳山道士.txt	2026-01-15		0.8
+CH_024_促织(蟋蟀)	CH_024_促织(蟋蟀)		Chinese	zh	datasets/ChineseTales/texts/CH_024_促织(蟋蟀).txt	2026-01-15		0.8
+CH_025_东郭先生与狼	CH_025_东郭先生与狼		Chinese	zh	datasets/ChineseTales/texts/CH_025_东郭先生与狼.txt	2026-01-15		0.8
+CH_026_聂小倩	CH_026_聂小倩		Chinese	zh	datasets/ChineseTales/texts/CH_026_聂小倩.txt	2026-01-15		0.8
+CH_027_成仙	CH_027_成仙		Chinese	zh	datasets/ChineseTales/texts/CH_027_成仙.txt	2026-01-15		0.8
+CH_028_侠女	CH_028_侠女		Chinese	zh	datasets/ChineseTales/texts/CH_028_侠女.txt	2026-01-15		0.8
+CH_198_董永与七仙女	CH_198_董永与七仙女	董永与七仙女	Chinese	zh	datasets/texts/CH_198_董永与七仙女.txt	2025-12-17		0.8
+CH_301_神犬盘瓠	CH_301_神犬盘瓠	神犬盘瓠	Chinese	zh	datasets/ChineseTales/texts/CH_301_神犬盘瓠.txt	2026-01-15		0.8
+IndEN_002_How_the_Raja's_Son_won_the_Princess_Labam	EN_002_How_the_Raja's_Son_won_the_Princess_Labam	How_the_Raja's_Son_won_the_Princess_Labam	Indian		datasets/IndianTales/texts/EN_002_How_the_Raja's_Son_won_the_Princess_Labam.txt	2026-01-12	Deb	0.85
+IndEN_003_The Lambikin	EN_003_The Lambikin	The Lambikin	Indian		datasets/IndianTales/texts/EN_003_The Lambikin.txt	2026-01-12	Deb	0.9
+EN_004_Punchkin	EN_004_Punchkin	Punchkin	Indian		datasets/IndianTales/texts/EN_004_Punchkin.txt	2026-01-12	Deb	0.8
+EN_005_The_Broken_Pot	EN_005_The_Broken_Pot	The_Broken_Pot	Indian		datasets/IndianTales/texts/EN_005_The_Broken_Pot.txt	2026-01-12	Deb	0.9
+EN_006_The_Magic_Fiddle	EN_006_The_Magic_Fiddle	The_Magic_Fiddle	Indian		datasets/IndianTales/texts/EN_006_The_Magic_Fiddle.txt	2026-01-12	Deb	0.8
+EN_007_The_Cruel_Crane_Outwitted	EN_007_The_Cruel_Crane_Outwitted	The_Cruel_Crane_Outwitted	Indian		datasets/texts/EN_007_The_Cruel_Crane_Outwitted.txt	2026-01-14	Deb	0.95
+EN_008_The_Tiger_the_Brahman_and_the_Jackal	EN_008_The_Tiger_the_Brahman_and_the_Jackal	The_Tiger_the_Brahman_and_the_Jackal	Indian		datasets/texts/EN_008_The_Tiger_the_Brahman_and_the_Jackal.txt	2026-01-14	Deb	0.88
+EN_009_Harisarman	EN_009_Harisarman	Harisarman	Indian		datasets/texts/EN_009_Harisarman.txt	2026-01-14	Deb	0.85
+EN_010_The_Talkative_Tortoise	EN_010_The_Talkative_Tortoise	The_Talkative_Tortoise	Indian		datasets/texts/EN_010_The_Talkative_Tortoise.txt	2026-01-14	Deb	0.85
+EN_011_The_Gold_giving_Serpent	EN_011_The_Gold_giving_Serpent	The_Gold_giving_Serpent	Indian		datasets/texts/EN_011_The_Gold_giving_Serpent.txt	2026-01-14	Deb	0.8
+EN_012_A_Lesson_for_Kings	EN_012_A_Lesson_for_Kings	A_Lesson_for_Kings	Indian		datasets/texts/EN_012_A_Lesson_for_Kings.txt	2026-01-14	Deb	0.8
+EN_013_Pride_goeth_before_a_Fall	EN_013_Pride_goeth_before_a_Fall	Pride_goeth_before_a_Fall	Indian		datasets/texts/EN_013_Pride_goeth_before_a_Fall.txt	2026-01-14	Deb	0.8
+EN_014_The_Ass_in_the_Lion's_Skin	EN_014_The_Ass_in_the_Lion's_Skin	The_Ass_in_the_Lion's_Skin	Indian		datasets/texts/EN_014_The_Ass_in_the_Lion's_Skin.txt	2026-01-14	Deb	0.89
+EN_015_The_Farmer_and_the_Money_lender	EN_015_The_Farmer_and_the_Money_lender	The_Farmer_and_the_Money_lender	Indian		datasets/texts/EN_015_The_Farmer_and_the_Money_lender.txt	2026-01-14	Deb	0.85
+EN_016_The_Prince_and_the_Fakir	EN_016_The_Prince_and_the_Fakir	The_Prince_and_the_Fakir	Indian		datasets/texts/EN_016_The_Prince_and_the_Fakir.txt	2026-01-14	Deb	0.8
+EN_017_How_Sun_Moon_and_Wind_went_out_to_Dinner	EN_017_How_Sun_Moon_and_Wind_went_out_to_Dinner	How_Sun_Moon_and_Wind_went_out_to_Dinner	Indian		datasets/texts/EN_017_How_Sun_Moon_and_Wind_went_out_to_Dinner.txt	2026-01-14	Deb	0.8
+EN_018_How_the_Wicked_Sons_were_Duped	EN_018_How_the_Wicked_Sons_were_Duped	How_the_Wicked_Sons_were_Duped	Indian		datasets/texts/EN_018_How_the_Wicked_Sons_were_Duped.txt	2026-01-14	Deb	0.95
+EN_019_The_Pigeon_and_the_Crow	EN_019_The_Pigeon_and_the_Crow	The_Pigeon_and_the_Crow	Indian		datasets/texts/EN_019_The_Pigeon_and_the_Crow.txt	2026-01-14	Deb	0.8
+EN_020_The_Demon_with_the_Matted_Hair	EN_020_The_Demon_with_the_Matted_Hair	The_Demon_with_the_Matted_Hair	Indian		datasets/texts/EN_020_The_Demon_with_the_Matted_Hair.txt	2026-01-14	Deb	0.85
+jp_001	jp_001		Japanese	en	file://Japanese/texts/jp_001.txt	2025-12-18		0.8
+jp_002	jp_002		Japanese	en	datasets/texts/jp_002.txt	2025-12-18		0.8
+jp_003	jp_003		Japanese	en	datasets/texts/jp_003.txt	2025-12-18		0.8
+jp_004	jp_004		Japanese	en	datasets/texts/jp_004.txt	2025-12-19		0.8
+jp_005	jp_005		Japanese	en	datasets/Japanese/texts/jp_005.txt	2025-12-20		0.8
+jp_006	jp_006		Japanese	en	datasets/Japanese/texts/jp_006.txt	2025-12-21		0.8
+jp_007	jp_007		Japanese	en	datasets/Japanese/texts/jp_007.txt	2025-12-21		0.8
+jp_008	jp_008		Japanese	en	datasets/Japanese/texts/jp_008.txt	2025-12-22		0.8
+jp_009	jp_009		Japanese	en	datasets/Japanese/texts/jp_009.txt	2025-12-24		0.8
+jp_010	jp_010		Japanese	en	datasets/Japanese/texts/jp_010.txt	2026-01-04		0.8
+jp_011	jp_011		Japanese	en	datasets/Japanese/texts/jp_011.txt	2026-01-04		0.8
+jp_012	jp_012		Japanese	en	datasets/Japanese/texts/jp_012.txt	2026-01-06		0.8
+jp_013	jp_013		Japanese	en	datasets/Japanese/texts/jp_013.txt	2026-01-11		0.8
+jp_014	jp_014		Japanese	en	datasets/Japanese/texts/jp_014.txt	2026-01-11		0.8
+jp_015	jp_015		Japanese	en	datasets/Japanese/texts/jp_015.txt	2026-01-12		0.8
+jp_016	jp_016		Japanese	en	datasets/Japanese/texts/jp_016.txt	2026-01-12		0.8
+jp_017	jp_017		Japanese	en	datasets/Japanese/texts/jp_017.txt	2026-01-13		0.8
+jp_018	jp_018		Japanese	en	datasets/Japanese/texts/jp_018.txt	2026-01-12		0.8
+jp_019	jp_019		Japanese	en	datasets/Japanese/texts/jp_019.txt	2026-01-13		0.8
+jp_020	jp_020		Japanese	en	datasets/Japanese/texts/jp_020.txt	2026-01-14		0.8
