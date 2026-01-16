@@ -1,0 +1,545 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_018_聚宝盆.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 36,
+  "analyzed_sentences": 36,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "明朝初期，有一年山东发生了灾荒，当地百姓为了活命拖家带口的四处逃荒。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "山东",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the historical and geographical context of the story by describing a famine in Shandong during the early Ming dynasty, which sets the stage for the characters' subsequent actions and challenges."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "华良和妻子梁花正是其中的一员。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "山东",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence establishes the context of Hualiang and Lianghua's situation during the famine, setting the stage for their journey and subsequent events. The location '山东' (Shandong) is the narrative focus as it is where the famine occurred and the family's escape began."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "他们推着一辆破旧的独轮车，车上放着一床破被褥、几个陶制坛罐和黑粗瓷碗。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "华良",
+          "梁花"
+        ],
+        "receivers": [
+          "独轮车"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of pushing a broken wheelbarrow containing their belongings, with the couple as the doers and the wheelbarrow as the object being pushed."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "两个儿子摇摇晃晃地坐在独轮车上，嘴里不时的叫唤着“饿”。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the family's dire situation during their journey, highlighting the children's hunger as part of the broader context of famine and displacement. It sets the stage for subsequent events without introducing a new action, task, or consequence."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "经过几个月的流浪乞讨，一家人终于在潘村街废弃的财神庙里安了家。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "潘村街废弃的财神庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了华良一家在经历长期流浪乞讨后最终定居的具体地点，为后续故事发展（如聚宝盆的出现、家庭生活变化等）提供了背景设定，符合'Situation'分类中设置叙事舞台的要求。"
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "华良是个地道的庄稼汉，老实厚道，有一身使不完的力气，来了没有多久就在街上的潘老爷家做了伙计。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "华良"
+        ],
+        "receivers": [
+          "潘老爷家"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes华良's action of becoming a servant in潘老爷's household, indicating his active role in taking up the position."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "他的妻子梁花长了一双巧手，她做的馒头又白又软，擀出的面条又细又筋道。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "潘村街",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描述梁花的烹饪技艺，为后续情节（如面摊经营、聚宝盆使用等）提供背景信息，属于故事背景设定。"
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "有一次，她去潘老爷家帮忙，大家伙见识了她的手艺，便经常有人找她做面食。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "people started seeking her for noodles",
+        "explanation": "The sentence describes the outcome of梁花's action of helping at潘老爷's house, leading to people frequently requesting her noodle-making skills."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "这梁花是个热心肠的人，有求必应。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Liang Hua's character trait of being kind-hearted and helpful, establishing her personality which sets the stage for her subsequent interactions and the story's development. No specific location is mentioned in the sentence itself."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "时间久了，乡亲们也不好意思白麻烦她，面做好了就送她半碗面粉做工钱。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The villagers transitioned from freely taking梁花's help to offering half a bowl of flour as payment for her noodle-making services",
+        "explanation": "This sentence describes the outcome of梁花's consistent help to villagers, leading to a change in their behavior where they start providing flour as payment instead of being unpaid recipients. The state change reflects the shift from spontaneous gratitude to a formalized exchange system."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "后来，梁花干脆就在家门口摆了个摊子，每天用积攒下来的面粉擀面条，谁家要吃面条就上门来买或者用面粉换。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "梁花"
+        ],
+        "receivers": [
+          "乡亲们"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes梁花 actively setting up a stall and selling noodles, making her the doer of the action. The receivers are the villagers who come to buy or trade面粉 for noodles."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "因为梁花做的面条好吃，价格也公道合理，乡亲们都喜欢来她这里买面条。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "潘村街",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了梁花因面条美味且价格公道而受到乡亲欢迎的背景情况，为后续故事中聚宝盆的出现和家庭矛盾埋下伏笔，属于设定故事背景的情境描述。"
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "过了一年，梁花又生了一个儿子，家里的开销自然就大了，夫妻俩起早贪黑，干得更辛苦了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "家庭开销增加导致夫妻俩需要更加努力工作",
+        "explanation": "该句描述了梁花生育儿子这一事件导致的家庭经济压力增大，进而使夫妻俩不得不更加辛苦劳作的因果关系，属于前序事件（生育）引发的状态变化"
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "一天，梁花去财神庙后面的河里挑水打算做面条，碰见有个农民在捕捉青蛙，就上前劝阻说：“青蛙是保护庄稼的神物，不能随意捕杀，赶快放掉吧。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "梁花"
+        ],
+        "receivers": [
+          "农民"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes梁花 actively performing the action of劝阻 (advising) the farmer to release the frogs, making her the doer and the farmer the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "农民一脸愁苦地说：“这个俺也知道，可是一家老小断食好几天了，只好捉些青蛙煮了充饥。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "河里",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过农民的对话揭示其家庭因灾荒断食的困境，为后续梁花购买青蛙的情节提供背景，属于设定故事发展背景的Situation类别。"
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "梁花把农民带回面摊，取了些面条说：“这些青蛙就卖给我吧！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "梁花"
+        ],
+        "receivers": [
+          "农民"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes梁花 actively performing the action of taking noodles and offering to buy the frogs from the farmer, which directly involves her as the doer and the farmer as the receiver of the noodles and seller of the frogs."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "农民接过面条，把一串青蛙交给梁花就走了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "农民"
+        ],
+        "receivers": [
+          "梁花"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the farmer's action of transferring frogs to Liang Hua after receiving noodles, indicating an active exchange between the characters."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "就这样，那些青蛙又被梁花全部放回了河里。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "梁花"
+        ],
+        "receivers": [
+          "河里"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Liang Hua's action of releasing the frogs back into the river, making her the doer and the river the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "当天夜里，梁花梦见几个青衣人向他作揖说：“谢谢你救了我们的命，你的恩德我们一定会报答。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes a dream event that sets up future developments (the appearance of the magic pot). As a situation, it provides context for the story's progression without specifying a physical location."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "梦醒了，梁花感到很诧异。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Liang Hua felt surprised after waking from the dream",
+        "explanation": "The sentence describes Liang Hua's emotional reaction (surprise) upon waking from the dream, which is a direct consequence of the prior event (the dream about the Qingyi people)."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "这时，一旁的华良也醒了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Both Hualiang and Lianghua woke up, enabling them to discuss their respective dreams about the clay pot",
+        "explanation": "The sentence describes the outcome of the prior events (dreams) by indicating that both characters have awakened, leading to the subsequent dialogue about their dreams. This state change facilitates the next narrative developments involving the clay pot."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "他说：“我刚才做了个梦，梦见耕田时耕出个大瓦盆，还没等我拾起来，过来一个穿青衣的白胡子老头儿对我说，这是个宝盆，若往盆里放粒米，不一会儿就能变成一盆。还没等我说话，老头儿“就化作一阵烟飘走了。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes a dream experienced by Hua Liang, which introduces the concept of the treasure pot and its magical properties. This establishes background context for the subsequent discovery and use of the pot, fitting the 'situation' category as it sets the stage for future events."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "”两口子讨论了一下各自的梦，都觉得奇怪，却理不出个头绪来。 第二天下工后，华良怀里抱着一个瓦盆回家了。他指着瓦盆，高兴地对梁花说：“瞧，昨晚的梦应验了，我耕地时果然耕出了个盆，说不定还真是个宝贝呢。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "华良"
+        ],
+        "receivers": [
+          "梁花"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes华良's action of finding the clay pot after his dream and sharing this discovery with his wife梁花. The action involves both the physical act of bringing the pot home and the communication of the dream's fulfillment."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "” 梁花接过瓦盆一看，一个普通的不能再普通的瓦盆，与自己家和面的那个瓦盆没有什么不同，就说：“你呀，不要瞎想了，我看这个盆没有什么特别的。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "梁花"
+        ],
+        "receivers": [
+          "华良"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 梁花's action of examining the pot and speaking to her husband, which is an activity performed by her."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "”“要不咱试试？",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "华良",
+          "梁花"
+        ],
+        "receivers": [
+          "瓦盆"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents a decision to test the properties of the wa pot, with华良 and梁花 as the initiators of the action, and the wa pot as the object being tested."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "”说着，华良顺手抓了一把黄豆洒在盆里，只见盆里顿时起了层雾气，不一会儿竟变成了满满一盆黄豆。华良使劲揉了揉自己的眼睛，小心翼翼地从盆里面抓出一把黄豆看了又看，又捏了几粒黄豆放进嘴里嚼了嚼，没错，是黄豆的味道！他赶紧把盆里的黄豆倒进一旁的空罐里，又抓了一把黄豆放进盆子里，不一会儿又变了满满一盆。 “这下咱们有好日子过了！",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "华良"
+        ],
+        "receivers": [
+          "盆"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes华良's action of placing黄豆 into the聚宝盆 and the subsequent transformation of the黄豆, which is a direct activity performed by the character."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "”华良高兴地对梁花说，“你快去找个口袋来，咱们多变点儿，一会儿拿到街上去卖。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "华良",
+          "梁花"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a direct instruction from华良 to梁花, assigning them the responsibility of gathering a bag to prepare for selling the transformed goods, establishing a clear task with both characters involved."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "” “你说咱这不是不劳而获吗？",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "梁花"
+        ],
+        "receivers": [
+          "华良"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents梁花's verbal action of expressing her moral objection to华良's plan of using the magic pot for effortless gain, directly engaging华良 in their discussion about ethical labor practices."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "这样过日子你心里踏实吗？",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The couple's discussion about the ethics of using the magic pot leads to their decision to use it responsibly, which changes their approach to managing their resources.",
+        "explanation": "The sentence represents a consequence of their previous actions (using the magic pot) by prompting a moral discussion that alters their behavior and resource management strategy."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "不是咱们自己通过双手挣来的钱，用着能舒服吗？",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "华良",
+          "梁花"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "梁花通过提问表达对依赖聚宝盆的道德质疑，实质上是在设定夫妻二人需通过劳动获取财富的道德任务，要求双方共同遵守勤劳持家的原则。"
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "咱得勤劳持家才对。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "华良",
+          "梁花"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a directive from Liang Hua to Huāliáng about their responsibility to work hard and manage their household properly, establishing a task for both characters to fulfill."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "”梁花严肃地说。“",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "梁花"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents Liang Hua's action of speaking seriously, which is part of their discussion about managing their household and deciding how to use the magical pot. The action is performed by Liang Hua, with no direct receiver specified in the sentence."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "那你说咋办，俺全听你的。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "华良",
+          "梁花"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a mutual agreement between Hua Liang and Liang Hua to decide how to use the magic pot. It establishes their shared responsibility in making a plan about the pot's usage, fitting the 'task' category with both characters as task roles."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "”华良放下手中的瓦盆看着梁花说。最后夫妻俩商量出个结果：宝盆每天除和面外，不放任何东西。从那以后，华良还是干他的伙计，梁花还是卖她的面条。只是不用再买面粉了，她每天和完一盆面，擀完面条，抓把面粉放在盆里，第二天又是满满一盆面，就这样每天都能有面粉做面条。日子也一天天富裕起来了，一家人过得很幸福。 这年发生了蝗灾。方圆几百里，颗粒无收，十户人家有八户都在讨饭，就连路边的树皮都被剥下来充饥了。梁花和华良商量着，要向灾民发放馒头，每人每天两个。 当天夜里梁花就发了面，天还没亮就蒸起了馒头。她从蒸好的馒头里拿出一个放进了聚宝盆里，很快，一盆雪白的馒头就出现了。梁花叫华良准备了几个大箩筐，将变好的馒头都放进了箩筐里。天还没有亮，雪白的馒头就装满了几大箩筐。 华良让儿子们分头在路口通知过往讨饭的人来领馒头。很快，领馒头的人就在他们家门口排起了长队，华良和梁花两口子连忙将馒头分给了饥饿的人们。 蝗灾过去后，梁花又开始卖面条，不久，他们用积攒下来的钱盖了几间房子，小面摊也发展成了一家像样的面点店。梁花和华良商量了一下，决定先把聚宝盆收起来，并且互相约定谁也不能把聚宝盆这个秘密透露给三个儿子。 一转眼几十年过去了，华良和梁花都老了，三个儿子也都相继成了家。老大在街东开饭馆，老三在街西开布店，只有老二继承父业，耕种着家里的十几亩田。 一天，梁花突然得了急病，卧床不起，话也不会说，眼看着就要不行了，华良急得团团转。自打娶了梁花后，家里的事再没让他操过心，现在妻子就要撒手去了，他恨不得也跟着去。 梁花最放心不下的是那聚宝盆。她把华良叫到身边，用手指指盆，比划着手势交代后事。她想说的意思是，老大有饭店，老二有田种，老三有布店，三个都能过得去，这盆就把它埋入地下吧。可是华良却误把梁花的话理解成老大、老三做生意随时需要钱，老二种田每年需种子，但这盆谁也不给，由他管着应急。 梁花死后，华良给了老大、老三每人五十锭银子，给了老二一袋麦种，三个儿子就分家了。华良跟着老二一起过。过了一段时间，老大、老三想：自己每人得了五十锭银子，开着饭馆、布店，而老二两口子只分了一袋麦种，还得辛勤种田，为什么却不吭不响，还很乐意的服侍着老头子？是不是老头子另外留了家财给老二？ 兄弟俩越想越觉得不对劲，就去逼问华良，想知道他到底留了多少银子给老二？华良被逼急了，只得道出实情。三个儿子这才知道父亲有个聚宝盆。老大想：我要是有了这聚宝盆，不是想要什么就有什么？老二想：用聚宝盆变钱，不劳而获，那日子还有意思吗？老三心想：家里有这么个好东西，可不能让哥哥们占去了。当即，老大和老三为了聚宝盆吵了起来。见老大和老三为个瓦盆吵得越来越凶，老二什么话也没说，拽起老婆回屋睡觉了。 经过一番争论，老三勉强同意由老大先用聚宝盆，以后每家用一天。老大两口子立即把聚宝盆抱回家，取了一锭银子放进盆中，不一会儿就变成了一盆银子；他们把银子倒在地上，又变了一盆。两口子不停地忙活着，这间屋子堆满了就换一间接着变，直到三间屋子都堆满了银子，两口子的手还是停不下来。 老三两口子半夜没睡，一直守在老大家门口，想等天一亮就进去要聚宝盆，突然听到“轰”的一声，原来老大家的四面墙被银子挤坏了，屋顶塌了下来，老大两口子也被埋在了银子堆里。老三两口子先是一愣，紧接着大喊一声：“我们的聚宝盆啊！",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The polyvalent pot is destroyed, and the sons die due to their greed",
+        "explanation": "The sentence describes the outcome of the sons' greed and conflict over the polyvalent pot, resulting in its destruction and their deaths. This directly follows the prior action of the sons attempting to use the pot, fulfilling the 'consequence' category."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "”两人就发疯般向倒塌的房子冲了过去，在废墟里又扒又抠。 华良和老二听见动静连忙跑了出来，看到眼前的情形，他们立即明白了几分。 “大哥和大嫂还在那间房子里呢，赶快帮忙救人啊。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "老三两口子"
+        ],
+        "receivers": [
+          "大哥和大嫂"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of '老三两口子' rushing to the collapsed house and digging through the rubble (doers) to rescue the trapped '大哥和大嫂' (receivers). This action is a direct response to the previous consequence of the house collapsing and the siblings being buried."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "”老二焦急地喊道。可是，老三根本没有理会，继续在废墟里疯狂的刨着。老二无奈，只好和华良分头在废墟里扒老大夫妇。 天亮时，老二和华良终于从废墟里找到了老大两口子。可惜他们全身血肉模糊，早就断气了。而老三两口子仍旧在刨着，可是他们除了扒烂了自己的双手，什么也没有找到。 说也奇怪，那倒了的房子里，除了破砖碎瓦之外，根本就没有聚宝盆的影子，就连老大两口子变出来的银子也成了一块块狗头石。从此，聚宝盆再也没有出现过。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The polyglot pot disappeared, the transformed silver turned into dog head stones, and the brothers died in the collapsed house with no treasure remaining",
+        "explanation": "This sentence describes the outcome of the brothers' conflict over the polyglot pot, showing the irreversible loss of the magical object and the tragic fate of the characters involved."
+      }
+    }
+  ]
+}

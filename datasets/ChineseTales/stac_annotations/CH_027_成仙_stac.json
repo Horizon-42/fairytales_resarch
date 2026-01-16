@@ -1,0 +1,2276 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_027_成仙.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 152,
+  "analyzed_sentences": 152,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "文登县有个姓周的书生，与另一个姓成的书生从小就在一起读书，于是结为不计身份高低贵贱的好朋友。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "文登县",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the main characters (Zhou and Cheng) and their relationship as childhood friends, establishing the narrative context for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "成生家里很贫穷，一年到头依靠周生接济。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "文登县",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了成生家庭贫困的背景信息，为后续周生接济成生的情节发展奠定基础，属于情境设定。"
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "论年龄，周生的岁数大，成生就称呼周生的妻子为嫂嫂。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes background context about the age relationship between Zhou Sheng and Cheng Sheng, explaining why Cheng Sheng refers to Zhou Sheng's wife as 'sister-in-law'. This sets the stage for their subsequent interactions and social dynamics within the story."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "四时八节，成生就到周家拜见问候，亲密得如同一家人。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "周家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the routine of Cheng's visits to Zhou's household during festivals, setting the context for their close relationship and future interactions."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "后来，周生的妻子生孩子，产后得了暴病死去了，周生又续娶了一个妻子王氏，成生因为王氏年少，一直没有拜见过她。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "周生家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了周生妻子去世后续娶王氏的背景，为后续成生未拜见王氏及后续冲突埋下伏笔，属于设定故事背景的情境信息。"
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "有一天，王氏的弟弟来看望姐姐，周生便在内室设了酒宴招待他。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "王氏的弟弟"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Zhou's active action of setting a banquet in the inner chamber to entertain Wang's younger brother, making '周生' the doer and '王氏的弟弟' the receiver."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "这时成生正好来了，家人进来通报，周生让家人邀他进来一同饮酒。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生的家人"
+        ],
+        "receivers": [
+          "成生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the family members' action of inviting Chengsheng to join the drinking, initiated by Zhou Sheng's instruction. The doers are the family members executing the invitation, and the receiver is Chengsheng."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "成生没有进来，告辞走了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成生"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Chengsheng's action of refusing to enter and departing, which is a direct behavioral action performed by him. No explicit receiver is mentioned for his action."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "周生把酒席移到客厅里，把成生追了回来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "成生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes周生's active actions of moving the banquet to the hall and chasing成生 back, which are physical actions performed by周生 (doer) directed toward成生 (receiver)."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "两人刚刚坐定，就有人来报告说乡下田庄的仆人被知县下令重重鞭打了一顿。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "乡下田庄",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces a new contextual event (the servant being whipped) that sets the stage for subsequent conflicts, fitting the 'situation' category. The location '乡下田庄' is the narrative focus where the incident occurs."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "事情的原委是，在吏部做官的黄家有一个放牧的仆人，赶着牛践踏了周生家的农田，因此和周生家的仆人争吵辱骂起来。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence provides background context for the conflict between the Yellow family's servant and the Zhou family's servant, setting up the events that follow. It does not mention a specific location, so the location field is left empty."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "黄家的仆人跑回去告诉主人后，黄家就捉住周生家的仆人送到了官衙，于是周生家的仆人遭到了鞭打的处罚。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周生家的仆人遭到了鞭打的处罚",
+        "explanation": "该句描述了黄家仆人报告冲突后，周生家仆人被官府鞭打的处罚结果，属于前序事件（仆人践踏农田引发冲突）的直接后果。"
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "周生问明了事情的起因后，勃然大怒说：“黄家奴才，怎么敢这样！黄家上一辈子的人还在我祖父手下当差，突然间得了志，就目中无人了吗！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "黄家"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Zhou Sheng's immediate reaction to the incident, where he expresses anger and verbally confronts the Huang family. This constitutes an active action performed by Zhou Sheng directed at the Huang family."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "他满腔怒气，愤怒地跳起来要去找黄家论理。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "黄家"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes周生's immediate action of confronting the Huang family due to his anger, making it an 'action' category. The doer is周生, and the receiver is黄家 as the target of his confrontation."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "成生连忙按住他劝阻说：“现在这个强横世界，本来就不分青红皂白。又何况现在做官为宦的多半都是些不拿刀枪的强盗呢？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成生"
+        ],
+        "receivers": [
+          "周生"
+        ],
+        "changed_state": "",
+        "explanation": "成生主动劝阻周生不要采取报复行动，属于主动行为。'按住'和'劝阻'是具体动作，受事者为周生，施事者为成生。"
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "周生不听，成生又再三劝阻，以致流下眼泪哀求，周生才止步不去了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成生"
+        ],
+        "receivers": [
+          "周生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成生劝阻周生, which is an action performed by 成生 on 周生."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "但他心中的怒气到底没有消去，夜间在床上翻来覆去地睡不着。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "周生的家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述周生在遭受不公待遇后持续愤怒的情绪状态，为后续他采取法律行动埋下伏笔，属于叙事背景设定。"
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "天亮后，他对家人说：“黄家欺负我，是我的仇人，这暂且不说。那知县是朝廷任命的官员，又不是有权势人家任命的官员，即使互相有争执，也应该两面兼听，何至于像狗那样，主人一嗾使就去咬人呢？我现在也上个呈状要求惩治黄家的仆人，看他怎么处理。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "周生"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence shows Zhou Sheng taking responsibility to address the injustice by deciding to file a complaint against the Yellow family and the county official, which constitutes an explicit task."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "家人在一旁也都怂恿他去，于是周生打定了主意。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Zhou Sheng's decision to proceed with filing a complaint against the Yellow family, which is an active choice he makes. The doer is Zhou Sheng, and there is no explicit receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "他写了一份状子去见知县，知县见了状纸，一把撕破扔在了地上。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生",
+          "知县"
+        ],
+        "receivers": [
+          "知县",
+          "状纸"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes two actions: Zhou Sheng writing and presenting a petition (doer: 周生, receiver: 知县) and the magistrate tearing the petition (doer: 知县, receiver: 状纸). These actions directly depict the active behaviors of the characters."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "周生十分气愤，言语侵犯了知县。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "知县"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Zhou's action of verbally insulting the county magistrate, which directly leads to his arrest in the subsequent sentence. The action is performed by Zhou (周生) and directed at the magistrate (知县)."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "知县恼羞成怒，就下令把他逮捕起来投进了监狱。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周生被知县逮捕并投入监狱",
+        "explanation": "该句描述了周生因与知县冲突导致的直接后果，即被逮捕入狱，属于前文事件（周生言语侵犯知县）引发的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "这天辰时过后，成生前往周生家拜访，才知道周生进城告状辩理去了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成生"
+        ],
+        "receivers": [
+          "周生家"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Cheng Sheng's action of visiting Zhou Sheng's house, which is a direct activity performed by the character. The location '周生家' (Zhou Sheng's house) is the receiver of this action."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "他急忙追到城里去劝阻，但周生已经被投入大牢。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周生被投入大牢",
+        "explanation": "该句描述了周生因告状被知县逮捕入狱的直接结果，属于前文事件（周生写状纸被撕毁并被逮捕）的后果，改变了周生的自由状态。"
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "成生急得捶胸顿足，然而一时也想不出办法来。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Cheng's emotional reaction to the situation where Zhou is imprisoned and the conflict with the pirates, setting the stage for subsequent events. It provides context for the narrative progression without introducing a new action, task, or consequence."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "这时，县里捕获了三名海盗，知县与黄家于是用钱买通他们，让他们诬陷周生是同党。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "知县",
+          "黄家"
+        ],
+        "receivers": [
+          "三名海盗"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action taken by the知县 and 黄家 to bribe three pirates to frame 周生 as a co-conspirator. The doers are the知县 and 黄家, who actively performed the act of bribery, while the receivers are the pirates who were influenced to commit the诬陷."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "知县又根据他们的供词报请上级官府革去周生的生员功名，对他进行残酷拷打。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "知县"
+        ],
+        "receivers": [
+          "周生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the知县's active actions of reporting to higher authorities and subjecting周生 to cruel punishment based on false testimony, making it an 'action' category with the doer as the知县 and the receiver as周生."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "成生入狱探望，两人凄酸相对，商量把冤情直接向朝廷申诉。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成生",
+          "周生"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 成生 visiting 周生 in prison and discussing the appeal to the court. The doers are 成生 and 周生, as they are the ones actively engaging in the visit and discussion. No direct receivers are explicitly mentioned in the sentence."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "周生说：“我关在大牢里，好像鸟困在笼中，虽然有一个年少的弟弟，也只能够给我送送囚饭而已。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Zhou Sheng's current state of being imprisoned, which sets the context for his subsequent actions and the story's progression. No specific location is mentioned in this statement."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "成生毅然自荐，说：“这是我的责任呀。有了危难而不相救，还要朋友有什么用！”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "成生"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates Cheng Sheng's voluntary commitment to take responsibility for helping his friend Zhou Sheng, which constitutes an explicit task declaration. The task role is Cheng Sheng as he is the one undertaking the responsibility."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "说完就起程了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成生"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Chengsheng taking action by departing to appeal to the court, fulfilling his responsibility as a friend. The action is initiated by Chengsheng without a direct receiver specified."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "等到周生的弟弟来给他送盘缠时，他已经走了很久了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "成生在周生弟弟送盘缠前已离开，导致无法及时获得帮助",
+        "explanation": "该句描述了成生在周生弟弟送盘缠前已离开，这是成生起程后的一个结果，影响了后续事件的发展。"
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "成生到了京城，一直找不到门路去上诉。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "京城",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Chengsheng's arrival in the capital and his inability to find a way to appeal, establishing the contextual backdrop for his subsequent actions in the story."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "一天，听说皇帝将要出门行猎，他便预先躲藏在树林当中。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成生"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes 成生's action of hiding in the woods in response to hearing about the emperor's hunting trip, which is an active decision he makes."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "不久，皇帝的车驾经过这里，成生连忙出来伏地叩头，痛哭喊冤，于是皇帝准接了他的状纸，派邮驿把状纸送下，命令交付山东巡抚审理后再回奏。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the emperor accepted Cheng Sheng's petition and ordered it to be sent to the Shandong governor for review",
+        "explanation": "The sentence describes the outcome of Cheng Sheng's previous action (prostrating before the emperor) leading to the emperor's decision to accept the petition and forward it for review, which alters the state of the legal process."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "这时距离周生被关押起来已经过了十个多月，周生在县里已经被屈打成招，判处了死罪。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周生因被屈打成招而被判死刑，处境从被关押转变为面临死刑判决",
+        "explanation": "该句描述了周生被关押十个多月后被屈打成招并判处死刑的结局，这是对前文县令滥用职权、黄家诬陷等事件的直接结果，体现了因果关系链中的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "巡抚接到皇帝的御批后，大吃一惊，重新提调案犯亲自审定。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "巡抚"
+        ],
+        "receivers": [
+          "案犯"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the governor (巡抚) taking active steps to re-examine the case by recalling the suspects (案犯) for personal review, indicating a direct action performed by the governor towards the case suspects."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "黄家听到消息后，也十分恐慌，谋划杀了周生灭口。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the Huang family decided to kill Zhou Sheng to eliminate him",
+        "explanation": "The sentence describes the Huang family's reaction to the court's handling of Zhou Sheng's case, which is a direct consequence of the prior events involving the governor's re-examination and the injustice faced by Zhou Sheng. This decision to kill Zhou Sheng represents a state change resulting from the previous circumstances."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "于是黄家贿赂了监狱里的看守，不给周生吃喝，周生的弟弟前来送饭探监，也被拒绝在门外。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周生被囚禁期间遭受饥饿折磨，其弟探监被拒，导致周生身体状况恶化",
+        "explanation": "该句描述了黄家贿赂狱卒导致周生被囚禁期间遭受饥饿折磨，其弟探监被拒的直接结果，属于前文黄家灭口阴谋的后果，体现了周生处境的恶化和人际关系的破裂。"
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "成生又为此事往巡抚衙门喊冤，才争取到长官开始提审周生的案子，但周生已经饿得不能动弹了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成生"
+        ],
+        "receivers": [
+          "巡抚衙门",
+          "周生的案子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成生's active action of appealing to the governor's office to review the case, which is a direct action performed by 成生. The receivers include the governor's office (巡抚衙门) and the case (周生的案子) as the targets of his appeal."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "巡抚大人大怒，下令用乱棍打死监狱的那个看守。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "巡抚大人"
+        ],
+        "receivers": [
+          "监狱的那个看守"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the governor's active decision to order the beating death of a prison guard, which is a direct action performed by the governor as a response to the previous events."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "黄家极为恐惧，急忙拿出几千两银子，托人向上说情解脱，终于使自己蒙混脱了罪，免于被题奏参劾。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "黄家逃脱了被题奏参劾的罪责",
+        "explanation": "该句描述黄家因行贿而免于被题奏参劾的结局，属于前文知县贪赃枉法事件的后果。"
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "而知县则应为贪赃枉法罪被判处流放。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "知县因贪赃枉法被判处流放",
+        "explanation": "该句描述了知县因贪赃枉法罪被流放的结局，是周生冤案处理过程中对知县的惩罚结果，属于前文事件（诬陷周生、滥用职权）的直接后果。"
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "周生被放回家后，对成生更加推心置腹。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Zhou became more open-hearted and trusting towards Cheng",
+        "explanation": "This sentence describes the outcome of Zhou's release from prison, leading to a change in his relationship with Cheng. The prior event (Zhou's imprisonment and subsequent release) directly caused this shift in Zhou's attitude towards Cheng."
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "成生自从经过这场官司后，已经看破世情，心如死灰，便去邀周生一同到深山隐居。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成生"
+        ],
+        "receivers": [
+          "周生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成生's active decision to invite 周生 to retire to the mountains, making '成生' the doer and '周生' the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "周生因为溺爱年轻的妻子，就笑话成生迂腐。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "成生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Zhou's action of mocking Cheng for his decision to retire to the mountains, making Zhou the doer and Cheng the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "成生虽然没再说什么，但去意已决。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates Chengsheng's internal resolve to leave, establishing the context for his subsequent actions (e.g., abandoning worldly affairs and seeking asceticism). This sets the stage for future events without describing a specific location or action."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "这次分别后，成生有好几天没有再来周家。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "周家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述成生与周生分别后未再拜访周家的情境，为后续周生派人探望、成生失踪等情节提供背景，属于设定故事发展基础的'情况'类别。"
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "周生派人到他家去探望打听，成家人正在猜疑成生住在周生家里。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "成家人"
+        ],
+        "changed_state": "",
+        "explanation": "周生主动采取行动派家人到成生家中探望打听，这一行为直接导致成家人产生猜疑，属于主动实施的行动。"
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "两处都不见了成生，大家这才惊疑起来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Everyone was surprised and confused because Cheng Sheng could not be found in either location",
+        "explanation": "The sentence describes the outcome of prior search efforts (Zhou's search and Cheng's family's suspicion) leading to a state of collective confusion and surprise among the characters involved."
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "周生心里明白这事的情由，就派人去寻访他的踪迹，但佛寺道观、深山峡谷，几乎都找遍了，却仍然杳无音讯。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "成生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes周生's action of sending people to search for成生's whereabouts, which is an active pursuit initiated by周生. The doer is周生, and the receiver is成生 as the target of the search."
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "周生只好时常送银钱衣服去抚恤成生的儿子。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "成生的儿子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an active action performed by 周生 (Zhou Sheng) to send silver money and clothes to 成生的儿子 (Cheng Sheng's son), indicating a direct action with a clear doer and receiver."
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "又过了八九年，成生忽然自己回来了，只见他头戴道冠，身穿道袍，一副地道的道士模样。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the return of Cheng Sheng after eight and nine years, establishing the context for subsequent events. It sets the stage by indicating his transformation into a Taoist priest, which becomes significant for the narrative's progression."
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "周生十分高兴，拉着他的胳臂问：“你到哪里去了，让我到处都找了个遍？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "成生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Zhou Sheng actively engaging in an interaction by pulling Cheng Sheng's arm and asking about his whereabouts, which constitutes an action performed by Zhou Sheng towards Cheng Sheng."
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "成生笑着回答说：“我孤云野鹤，四处飘游，没有一定的栖身住处。所幸的是分别后身体还算健壮。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about 成生's state after their separation, explaining his decision to wander and his physical condition. It sets the stage for his subsequent actions without specifying a location."
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "周生立即命令家人摆上酒席，两人说了一会儿久别之后的闲话。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "家人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 周生's action of commanding his family to set up a banquet and engaging in conversation with 成生. The doer is 周生, and the receiver is the family who carry out the command."
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "周生想让成生换下道士服装，成生只是笑了笑不说话。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "成生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Zhou Sheng's action of requesting Cheng Sheng to change out of his Daoist robes, with Cheng Sheng's silent response indicating the interaction. The action is initiated by Zhou Sheng and directed toward Cheng Sheng."
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "周生说：“你太傻了！怎么能这样像扔破鞋子似的抛弃妻子儿女呢？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "成生"
+        ],
+        "changed_state": "",
+        "explanation": "周生通过言语表达对成生放弃家庭行为的批评，属于主动进行的言语交流行为。说话者周生是行动执行者，对话对象成生是接收者。"
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "成生又笑了笑回答说：“不是这样的呀。人世间要抛弃我，我哪里能抛弃什么人呢！”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a dialogue exchange between Chengsheng and Zhousheng that establishes their relationship dynamics and Chengsheng's philosophical stance on loyalty and sacrifice. This conversation sets the stage for Chengsheng's later decision to abandon worldly ties, functioning as narrative context rather than a direct action, task, or consequence."
+      }
+    },
+    {
+      "sentence_index": 60,
+      "sentence": "周生再问他住的地方，成生回答说在崂山的上清宫。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "崂山的上清宫",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句提供背景信息，说明成生的居所位置，为后续周生寻找成生的情节发展奠定基础。'崂山的上清宫'是故事中重要的地理坐标，属于叙事背景设定。"
+      }
+    },
+    {
+      "sentence_index": 61,
+      "sentence": "这一夜，两人就脚对脚地睡在一起，周生梦见成生赤裸着身子伏压在自己胸口上，压得他喘不过气来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生",
+          "成生"
+        ],
+        "receivers": [
+          "周生",
+          "成生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of sleeping together and the occurrence of a dream, which are activities actively performed by both characters. The dream is a mental state resulting from their physical proximity and shared sleep, making it an action involving both parties."
+      }
+    },
+    {
+      "sentence_index": 62,
+      "sentence": "他惊讶地问成生为什么要这样，成生一句也没有回答。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "成生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Zhou Sheng's action of questioning Cheng Sheng about his behavior during the dream sequence, with Cheng Sheng's non-response as the direct interaction. This dialogue constitutes an active exchange between the characters, fitting the 'action' category."
+      }
+    },
+    {
+      "sentence_index": 63,
+      "sentence": "周生一惊，忽然睁眼醒了过来，呼叫成生却没有应声，坐起身一摸，床上空空的，成生已经不知到哪里去了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周生意识到成生的幻术并决定前往寻找成生，导致他最终跟随成生进入山中修行",
+        "explanation": "该句描述周生在梦醒后发现成生已离开的结局，这是成生使用幻术劝说周生隐居的直接结果，导致周生改变原有计划并跟随成生进入山中，属于前行动作引发的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 64,
+      "sentence": "周生再定神坐了一段时间，才发现自己睡在成生床上。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周生发现自己睡在成生的床上",
+        "explanation": "该句描述了周生在经历前文事件后（成生突然离开、周生惊醒等）所处的新状态，属于前序行动（成生消失、周生惊醒）的直接结果，体现角色位置和认知状态的改变。"
+      }
+    },
+    {
+      "sentence_index": 65,
+      "sentence": "他不由得惊奇地自语：“昨天晚上没有喝醉，怎么神魂颠倒到这种地步？”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周生因梦境导致的生理变化和心理困惑，意识到自己与成生的神秘联系",
+        "explanation": "该句描述周生在经历梦境后产生的困惑心理，是其身体变化（胡须脱落）和超自然经历的直接结果，导致他产生对现实与幻境界限的困惑，属于前行动态引发的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 66,
+      "sentence": "于是他呼叫起了家人。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "家人"
+        ],
+        "changed_state": "",
+        "explanation": "该句描述周生主动采取行动呼叫家人，属于主动行为的执行。'周生'是执行动作的主体，'家人'是接受呼叫的对象。"
+      }
+    },
+    {
+      "sentence_index": 67,
+      "sentence": "家人拿着灯火一看，坐在这里的明明白白是成生。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the family recognized Cheng Sheng as the person sitting there",
+        "explanation": "The sentence describes the outcome of the family's action (calling for them) by stating they identified Cheng Sheng as the person present, marking a state change in the narrative."
+      }
+    },
+    {
+      "sentence_index": 68,
+      "sentence": "周生原来的胡须很浓密，现在自己用手一捋，只觉得稀稀拉拉地没有几根。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周生的胡须从浓密变得稀疏",
+        "explanation": "该句描述了周生因经历身体交换梦境后出现的生理变化，属于前序事件（梦境与幻术）导致的直接结果。"
+      }
+    },
+    {
+      "sentence_index": 69,
+      "sentence": "他又取来镜子自己对着照，立即惊叫起来：“成生在这里，那么我到哪里去了呢？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "周生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 周生 taking a mirror to examine himself and reacting to his changed appearance. The doer is 周生, and the receiver is himself as he observes his reflection."
+      }
+    },
+    {
+      "sentence_index": 70,
+      "sentence": "过了一会儿，他终于恍然大悟，知道这是成生在用幻术劝自己去隐居。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周生意识到成生的幻术劝说，并决定离开尘世跟随成生隐居",
+        "explanation": "该句描述了周生在经历梦境和幻术事件后的心理转变，属于前序行动（成生使用幻术）导致的状态变化，体现了认知层面的转变和后续行动的动机形成。"
+      }
+    },
+    {
+      "sentence_index": 71,
+      "sentence": "周生想回到自己的内室去，弟弟因为他的相貌与原来的周生大不相同，拦住他不让进。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生的弟弟"
+        ],
+        "receivers": [
+          "周生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the brother's active action of preventing周生 from entering his inner chamber due to his changed appearance, which is a direct physical interaction between the characters."
+      }
+    },
+    {
+      "sentence_index": 72,
+      "sentence": "周生自己也没有什么办法来说明一切，就命令仆人备马一同去寻找成生。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "仆人"
+        ],
+        "changed_state": "",
+        "explanation": "周生作为行动发起者（doers），命令仆人（receivers）准备马匹并一同寻找成生，属于主动执行的具体行为描述。"
+      }
+    },
+    {
+      "sentence_index": 73,
+      "sentence": "走了几天，他们进入了崂山。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生",
+          "成生"
+        ],
+        "receivers": [
+          "崂山"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of entering Laoshan Mountain after traveling for several days, with周生 and成生 as the doers and崂山 as the location being entered."
+      }
+    },
+    {
+      "sentence_index": 74,
+      "sentence": "马跑得快，仆人追不上。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "崂山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the physical condition of the horse and servant during their journey to崂山, establishing the context for the subsequent events involving their movement and the encounter with the Taoist priest."
+      }
+    },
+    {
+      "sentence_index": 75,
+      "sentence": "周生勒马停在树下休息，只见许多道士来来往往。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "树下",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence sets the scene for the subsequent interaction between Zhou Sheng and the道士, describing his position under a tree after stopping his horse. The location '树下' (under the tree) is the narrative focus for this contextual setup."
+      }
+    },
+    {
+      "sentence_index": 76,
+      "sentence": "其中有一个道士不住地注视着他，周生就上前去打听成生的下落。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "道士"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes周生 actively taking the initiative to approach the道士 and inquire about成生's whereabouts, making it an 'action' category. The doer is周生, and the receiver is the道士 who is being addressed."
+      }
+    },
+    {
+      "sentence_index": 77,
+      "sentence": "那个道士笑着说：“听说过这个名字，他好像在上清宫。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "上清宫",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过道士的对话提供了成生所在位置的信息，为后续寻找成生的情节发展奠定背景，属于设定情境的类别。"
+      }
+    },
+    {
+      "sentence_index": 78,
+      "sentence": "说完就径直走了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "道士"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the monk's action of leaving after speaking, indicating an activity actively performed by the monk."
+      }
+    },
+    {
+      "sentence_index": 79,
+      "sentence": "周生目送着他离去，见他刚走了一箭远的路，又与另外一个人谈话，也是说了没几句话就离去了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "道士"
+        ],
+        "receivers": [
+          "另外一个人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the道士's action of walking away and engaging in a brief conversation with another person, which is a specific activity performed by the道士 and directed towards the other individual."
+      }
+    },
+    {
+      "sentence_index": 80,
+      "sentence": "和道士说话的那人渐渐地走近了，一看，竟然是同乡的一个生员。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces a new character (the scholar) and clarifies the relationship between the道士 and this character, setting up contextual background for their interaction. No specific location is mentioned, so the location field remains empty."
+      }
+    },
+    {
+      "sentence_index": 81,
+      "sentence": "那人见了周生，惊愕地问道：“数年不见，别人都说你在名山里学道，难道现在你还在人间游戏吗？”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "山中",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过对话揭示周生与同乡生员的相遇场景，为后续情节发展（如身份混淆、幻术等）提供背景，叙事焦点位于山中环境。"
+      }
+    },
+    {
+      "sentence_index": 82,
+      "sentence": "周生知道他把自己当成了成生，于是又述说了一遍这件怪事。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about Zhou Sheng explaining to the scholar that he was mistaken for Cheng Sheng, setting up the narrative of their interaction and the strange events that follow."
+      }
+    },
+    {
+      "sentence_index": 83,
+      "sentence": "那个生员吃惊地说：“我刚才正好遇见他，还以为是周生你呢。他刚离去没多久，也许还没走远。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about a scholar mistaking someone for Zhou Sheng, setting up the confusion between characters and advancing the narrative's situational framework."
+      }
+    },
+    {
+      "sentence_index": 84,
+      "sentence": "周生也大为惊异，说：“真怪呀！怎么自己的面孔我对面碰见都不认识了呢！”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Zhou Sheng is confused about his own appearance, not recognizing it when he meets someone",
+        "explanation": "The sentence describes Zhou Sheng's reaction to an unexpected change in his appearance, which is a direct consequence of the prior events involving his transformation and the encounter with the scholar. This confusion marks a shift in his state of awareness about his physical form."
+      }
+    },
+    {
+      "sentence_index": 85,
+      "sentence": "这时，仆人已经找到了这里，周生急忙策马奔驰，前去追赶那个道士，但竟然毫无踪影。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "道士"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 周生 actively performing the action of chasing the道士, making him the doer. The道士 is the target of this pursuit, hence the receiver."
+      }
+    },
+    {
+      "sentence_index": 86,
+      "sentence": "追了一阵儿，周生四下一望，只见山势茫茫，辽阔无边，顿时感到不知所从，进退两难。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "山中",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述周生在追道士过程中所处的山势环境及心理状态，属于叙事背景设定，'山中'为故事发展的地理焦点。"
+      }
+    },
+    {
+      "sentence_index": 87,
+      "sentence": "他心中思忖，自己已经无家可归了，决定索性穷追到底。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "he decided to pursue despite being lost",
+        "explanation": "The sentence describes the internal decision made as a result of the prior situation of being lost and feeling homeless, leading to a change in his state of mind and course of action."
+      }
+    },
+    {
+      "sentence_index": 88,
+      "sentence": "但是山势越来越险峻，不能再骑马前行，他就把马交付给仆人让他回去，自己慢慢走着独身前往。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "仆人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 周生 handing over his horse to the servant and choosing to walk alone. The doer is 周生, and the receiver is the servant who is instructed to return."
+      }
+    },
+    {
+      "sentence_index": 89,
+      "sentence": "周生走了一会儿，远远地看见一个道童独自坐在那里，就上前去问路，并且告诉了他自己正在寻找成生的事。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "道童"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes周生 actively taking the action of approaching a boy monk to ask for directions and informing him of his search for成生. The doer is周生, and the receiver is the boy monk (道童)."
+      }
+    },
+    {
+      "sentence_index": 90,
+      "sentence": "道童自称是成师父的弟子，又代替周生背起干粮衣物，引导他一同前往。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "道童"
+        ],
+        "receivers": [
+          "周生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the道童 (boy monk) taking initiative to carry supplies and guide周生, which are active behaviors performed by the道童 for周生."
+      }
+    },
+    {
+      "sentence_index": 91,
+      "sentence": "两人一路上披星戴月，风餐露宿，走了很远。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生",
+          "成生"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the actions of 周生 and 成生 during their journey to the mountain, detailing their hardships of traveling through the night and enduring harsh conditions. This is an active description of their behavior without specifying a direct recipient of their actions."
+      }
+    },
+    {
+      "sentence_index": 92,
+      "sentence": "他们走到第三天才到，却不是人世间所说的那处上清宫。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "they arrived at a place different from the expected upper clear palace",
+        "explanation": "The sentence describes the outcome of their journey, revealing they did not reach the expected location (upper clear palace), which alters the narrative's progression by introducing an unexpected destination."
+      }
+    },
+    {
+      "sentence_index": 93,
+      "sentence": "这时已经是十月中旬，这里仍然是山花开满路边，一点儿也不像是初冬季节。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "崂山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the time (mid-October) and the unusual environmental condition (blooming flowers in what should be early winter) of the mountainous setting, establishing context for the narrative's journey to the mountain."
+      }
+    },
+    {
+      "sentence_index": 94,
+      "sentence": "道童进门报告说有客人来了，成生立即出门前来迎接，周生这才认出了自己的模样。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成生"
+        ],
+        "receivers": [
+          "周生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 成生 (Chengsheng) coming out to greet the guest, which leads to 周生 (Zhou Sheng) recognizing his own appearance. The doer is 成生, and the receiver is 周生 who experiences the consequence of recognizing his own模样."
+      }
+    },
+    {
+      "sentence_index": 95,
+      "sentence": "他们两人手拉着手进了屋里，一边饮酒一边交谈起来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生",
+          "成生"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the active behavior of 周生 and 成生 entering the room and engaging in drinking and conversation, which constitutes an action performed by the two characters."
+      }
+    },
+    {
+      "sentence_index": 96,
+      "sentence": "但见一只只身披奇光异彩羽毛的禽鸟，十分驯服，见人也不惊怕，叫声像笙簧一样悦耳动听，常常飞到座位前来鸣唱。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "上清宫",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述周生与成生在崂山寻找成生过程中进入的神秘场所上清宫内的奇异景象，通过描绘奇光异彩的禽鸟和悦耳鸣唱的环境，为后续情节发展营造超现实氛围，属于设定故事场景的背景信息。"
+      }
+    },
+    {
+      "sentence_index": 97,
+      "sentence": "周生心里十分惊异。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周生感到非常惊讶",
+        "explanation": "该句描述周生在目睹奇异禽鸟和超自然环境后的心理反应，属于对前文所描述超现实场景的直接情感回应，符合'consequence'类别中因先前事件引发的心理状态变化。"
+      }
+    },
+    {
+      "sentence_index": 98,
+      "sentence": "然而他还是念念不忘尘世，无意在这里久留。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Zhou Sheng's internal state of longing for the world, setting the context for his eventual decision to leave, which is part of the narrative's situation."
+      }
+    },
+    {
+      "sentence_index": 99,
+      "sentence": "地上放着两个蒲团，成生拉着周生盘腿并坐在了上面。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成生"
+        ],
+        "receivers": [
+          "周生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes a physical action where 成生 actively pulls 周生 to sit on the mats, making 成生 the doer and 周生 the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 100,
+      "sentence": "待到夜里二更以后，周生心中什么也不再想了，进入了一片沉寂，忽然好像突然打了个盹，周生觉得自己的身子又与成生的换了回来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周生的身子与成生的换了回来",
+        "explanation": "该句描述了周生在梦中因成生使用幻术导致的身体交换结果，是此前成生用剑制造幻象、周生进入梦境等行动的直接后果，体现了状态的突变。"
+      }
+    },
+    {
+      "sentence_index": 101,
+      "sentence": "他还有些怀疑，就自己摸了摸下巴，浓密的胡须已经和以前一样了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周生的胡须恢复了浓密状态，表明他身体已从成生的躯体中回归原状",
+        "explanation": "该句描述周生在梦中与成生身体互换后，醒来发现胡须恢复原状的生理变化，属于前文身体交换魔法效果的后续状态变化"
+      }
+    },
+    {
+      "sentence_index": 102,
+      "sentence": "天亮以后，周生又执意提出要回家去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Zhou Sheng's active decision to return home, making him the clear doer of the action. There is no explicit receiver mentioned in the sentence."
+      }
+    },
+    {
+      "sentence_index": 103,
+      "sentence": "成生坚决挽留他。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成生"
+        ],
+        "receivers": [
+          "周生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Chengsheng's active effort to prevent Zhou Sheng from returning home, representing an action taken by Chengsheng (doer) to retain Zhou Sheng (receiver)."
+      }
+    },
+    {
+      "sentence_index": 104,
+      "sentence": "过了三天，成生才说：“请稍微睡上一会儿休息休息，然后早早地送你回去。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "周生"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents Cheng Sheng assigning a task to Zhou Sheng to rest and return, making Zhou Sheng the primary task role."
+      }
+    },
+    {
+      "sentence_index": 105,
+      "sentence": "周生的眼睫毛刚刚合上，就听见成生在叫他：“行装已经准备好了。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生",
+          "成生"
+        ],
+        "receivers": [
+          "周生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of Zhou Sheng closing his eyes and hearing Cheng Sheng call him, which directly initiates their journey. Zhou Sheng performs the action of closing his eyes, while Cheng Sheng performs the action of calling, with Zhou Sheng as the receiver of the call."
+      }
+    },
+    {
+      "sentence_index": 106,
+      "sentence": "于是他就起身随成生上了路，所走的路途与来时的旧路截然不同。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "成生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Zhou Sheng physically following Chengsheng on a journey, indicating an active movement. The doer is Zhou Sheng, and the receiver is Chengsheng as the action involves accompanying him."
+      }
+    },
+    {
+      "sentence_index": 107,
+      "sentence": "觉得没过多久，自己住处的房屋已经遥遥可见了。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "周生的住处",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述周生在返回住所途中对周围环境的感知，为后续发现妻子与仆人私通的情节发展提供空间背景，属于叙事中的情境铺垫。"
+      }
+    },
+    {
+      "sentence_index": 108,
+      "sentence": "成生坐在路边等候，让周生自己回去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成生"
+        ],
+        "receivers": [
+          "周生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成生 actively performing the action of waiting by the roadside and instructing 周生 to return on his own, making it an 'action' category with 成生 as the doer and 周生 as the receiver."
+      }
+    },
+    {
+      "sentence_index": 109,
+      "sentence": "周生强拉他一同回家，但成生不去，周生只好独自慢慢地走到家门口。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "成生"
+        ],
+        "changed_state": "",
+        "explanation": "周生主动尝试拉成生一同回家，但成生拒绝同行，这一行为直接导致周生最终独自前往家门口。该句描述了周生的具体行动及其对成生的直接影响。"
+      }
+    },
+    {
+      "sentence_index": 110,
+      "sentence": "他敲了几下门没有人答应，刚想要爬墙进去，就觉得身子轻飘飘地像一片树叶，轻轻一跃就已经过了院墙。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "院墙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes周生's physical action of attempting to enter his home by knocking on the door and then leaping over the wall. The doer is周生, and the receiver is the院墙 (wall) as the object being interacted with."
+      }
+    },
+    {
+      "sentence_index": 111,
+      "sentence": "这样跃过了好几道墙，周生才到达了自己的卧室。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "墙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Zhou Sheng's action of jumping over walls to reach his bedroom, with '墙' (walls) as the object being jumped over."
+      }
+    },
+    {
+      "sentence_index": 112,
+      "sentence": "只见里面的灯火还亮着，妻子王氏还没有睡，听见她唧唧哝哝地在与人说话。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "卧室",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述周生回到卧室时观察到的场景，为后续他偷看妻子与仆人私通的情节提供背景信息，属于叙事中的情境铺垫。"
+      }
+    },
+    {
+      "sentence_index": 113,
+      "sentence": "周生用舌尖舔破窗纸偷偷一看，只见妻子正在与一个仆人同杯共饮，一副淫荡的模样。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "妻子王氏",
+          "仆人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes周生 actively performing the action of peeping through a torn window paper to observe his wife and a servant, making him the doer and the wife/serf the receivers of his observation."
+      }
+    },
+    {
+      "sentence_index": 114,
+      "sentence": "于是他不由得胸中怒火熊熊，想要把这两个人堵在屋里抓住，又怕自己孤掌难鸣。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "周生的家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述周生在发现妻子与仆人私通后的愤怒情绪，为后续行动（如寻求成生帮助）提供情感背景，属于情境设定。叙事焦点位于周生家中。"
+      }
+    },
+    {
+      "sentence_index": 115,
+      "sentence": "于是他悄悄地转回身子开启大门跑了出来，一直奔跑到成生那里，告诉了成生并请他帮忙。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "成生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 周生 actively performing the action of escaping the house and seeking 成生's assistance, making it an 'action' category. The doer is 周生, and the receiver is 成生 who is being asked for help."
+      }
+    },
+    {
+      "sentence_index": 116,
+      "sentence": "成生痛快地随他前去，一直进到了里面的卧室。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成生"
+        ],
+        "receivers": [
+          "卧室"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成生 actively following 周生 into the bedroom, indicating an action performed by 成生 (doer) with the bedroom (receiver) as the location where the action occurs."
+      }
+    },
+    {
+      "sentence_index": 117,
+      "sentence": "周生举起一块石头砸门，里面顿时乱作一团，但外面擂门擂得越急，里面就把门顶得越牢。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周生砸门导致屋内混乱且门被顶住无法打开",
+        "explanation": "该句描述周生砸门行为引发的直接结果，即屋内混乱且门被顶住无法打开，属于前行动作产生的后果。"
+      }
+    },
+    {
+      "sentence_index": 118,
+      "sentence": "于是成生用剑一拨，屋门就像被划破一样地敞开了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成生"
+        ],
+        "receivers": [
+          "屋门"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Cheng Sheng's direct action of using a sword to open the door, which is a physical action performed by the character. The door is the direct receiver of this action."
+      }
+    },
+    {
+      "sentence_index": 119,
+      "sentence": "周生冲了进去，仆人跳出窗户要逃，却被成生在门外挡住，用剑一砍，砍断了仆人的一只臂膀。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成生"
+        ],
+        "receivers": [
+          "仆人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 成生 using a sword to block and cut off the servant's arm, making 成生 the active performer and the servant the recipient of the action."
+      }
+    },
+    {
+      "sentence_index": 120,
+      "sentence": "周生抓住妻子拷打审讯，才知道自己那年被关在监狱里时，她就已经和这个仆人私通了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the wife's infidelity was discovered",
+        "explanation": "The sentence describes the outcome of the prior action (interrogation) where the wife's affair with the servant is revealed, marking a significant state change in the narrative."
+      }
+    },
+    {
+      "sentence_index": 121,
+      "sentence": "周生借来成生的剑砍下了她的头，又把她的肠子挂在庭院里的树上，这才随着成生出来，按原路上山。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "妻子",
+          "庭院里的树"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes周生's active actions of using成生's sword to kill his wife and hang her intestines on a tree, which are direct physical actions performed by周生."
+      }
+    },
+    {
+      "sentence_index": 122,
+      "sentence": "这时，周生蓦地醒了过来，一看自己还躺在床上。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周生从梦中醒来，意识到之前发生的杀妻事件只是梦境，而非现实",
+        "explanation": "该句描述周生从梦境中醒来的状态变化，表明他此前的极端行为（杀妻、挂肠）仅是梦中幻象，这一觉醒直接改变了其对现实的认知状态，符合'consequence'类别中因前序事件导致状态变化的定义。"
+      }
+    },
+    {
+      "sentence_index": 123,
+      "sentence": "他惊愕地说：“做了一个稀奇古怪的梦，真叫人又惊又怕！”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周生因梦境产生的震惊与恐惧情绪，揭示了现实与梦境的错位认知",
+        "explanation": "该句描述周生在经历一系列现实事件后，因梦境产生的震惊与恐惧情绪，属于前文事件（如被诬陷、隐居、幻术等）导致的心理状态变化，符合'consequence'类别中'描述前事件结果导致的状态变化'的定义。"
+      }
+    },
+    {
+      "sentence_index": 124,
+      "sentence": "成生笑着说：“梦中的事，兄长以为是真事，真事，兄长却以为是做梦。”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The realization that the events were a dream and the resolution of the conflict between Zhou Sheng's perceived reality and the actual truth",
+        "explanation": "The sentence represents the consequence of the prior events (Zhou Sheng's dream and the subsequent real-world actions). It clarifies the resolution where the dream's events and the real events are intertwined, leading to Zhou Sheng's understanding and the story's resolution."
+      }
+    },
+    {
+      "sentence_index": 125,
+      "sentence": "周生惊疑地问他这是什么意思。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "成生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Zhou Sheng's action of expressing confusion and asking for clarification about Cheng Sheng's meaning, which is a direct interaction between the two characters."
+      }
+    },
+    {
+      "sentence_index": 126,
+      "sentence": "成生就拿出剑来给他看，只见那剑上的血还在。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成生"
+        ],
+        "receivers": [
+          "周生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 成生 actively performing the action of taking out a sword and showing it to 周生, which is a direct physical action with a clear doer (成生) and receiver (周生)."
+      }
+    },
+    {
+      "sentence_index": 127,
+      "sentence": "周生害怕难过得要死，心里却怀疑这是成生用幻术制造出来的假象。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周生因怀疑成生的幻术而陷入极度恐惧和困惑，同时对现实与梦境的界限产生动摇",
+        "explanation": "该句描述周生在目睹成生展示带血之剑后产生的心理反应，是成生使用幻术制造假象这一前行动作导致的直接后果，体现了人物心理状态的转变"
+      }
+    },
+    {
+      "sentence_index": 128,
+      "sentence": "成生知道他的心思，于是收拾行装送他回去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成生"
+        ],
+        "receivers": [
+          "周生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Cheng's action of packing his belongings and sending Zhou Sheng back, indicating an active activity performed by Cheng (doer) with Zhou Sheng as the recipient of the action."
+      }
+    },
+    {
+      "sentence_index": 129,
+      "sentence": "两个人慢慢地走到了周生的村子口，成生说：“先前的那个夜里，我拿着宝剑等待你，不就是在这里吗？我讨厌看见人间的恶浊，请你让我还在这里等你。如果过了下午你还不来，我就自己走了。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "成生",
+          "周生"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the physical movement of both characters walking to the village entrance, which is an active action performed by them. The dialogue about waiting serves to contextualize their purpose but does not alter the classification as the primary focus is their movement."
+      }
+    },
+    {
+      "sentence_index": 130,
+      "sentence": "周生到了家，看见门户萧条冷落，似乎没有人居住在里面。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "周生的家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述周生回到家中后观察到的环境状态，为后续情节（如发现妻子通奸、弟弟讲述凶案等）提供场景背景，属于设定故事发展基础的情境描述。"
+      }
+    },
+    {
+      "sentence_index": 131,
+      "sentence": "他又进到弟弟的宅院。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "弟弟的宅院"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Zhou Sheng's physical action of entering his younger brother's courtyard, which is an active movement performed by him. The receiver is the courtyard itself as the location being entered."
+      }
+    },
+    {
+      "sentence_index": 132,
+      "sentence": "弟弟一见到他，就失声痛哭，说：“哥哥走了以后，突然有一天夜里强盗闯进来杀死了嫂嫂，挖出了她的肠子才走，实在太残忍了。到现在官府四处捕捉也没有拿获到凶手。”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The brother's emotional reaction to the unresolved murder of his嫂嫂 and the ongoing investigation",
+        "explanation": "This sentence describes the aftermath of the previous events where the wife was murdered and the crime remained unsolved. The brother's reaction and the unresolved case represent the consequence of the prior actions."
+      }
+    },
+    {
+      "sentence_index": 133,
+      "sentence": "周生这才如梦初醒，于是把实情详细地告诉了弟弟，又告诫他不要再追究这件事了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周生向弟弟揭示了妻子私通仆人并被杀害的真相，并劝阻弟弟不要追究，导致弟弟对事件有了新的认知并停止追查",
+        "explanation": "该句描述了周生在得知真相后向弟弟坦白并劝阻其追查的后果，属于前文事件（弟弟痛哭诉说强盗杀害嫂嫂）的连锁反应，导致弟弟停止追查并接受真相，因此属于'consequence'类别。"
+      }
+    },
+    {
+      "sentence_index": 134,
+      "sentence": "弟弟听后惊愕了很长时间。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "弟弟因听到周生揭示真相而长时间感到震惊",
+        "explanation": "该句描述了周生向弟弟揭示嫂嫂死亡真相后，弟弟产生的心理反应，属于前事件（真相揭露）导致的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 135,
+      "sentence": "周生又问起了自己的儿子。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [
+          "周生的儿子"
+        ],
+        "changed_state": "",
+        "explanation": "周生主动询问关于自己儿子的情况，属于主动发起的询问行为，因此归类为'行动'。执行者是周生，接收者是他的儿子。"
+      }
+    },
+    {
+      "sentence_index": 136,
+      "sentence": "弟弟于是让老妈子把孩子抱来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生的弟弟"
+        ],
+        "receivers": [
+          "孩子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the younger brother's action of instructing the maid to bring the child, making him the doer and the child the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 137,
+      "sentence": "周生对弟弟说：“这个在襁褓里的孩子，周家要靠他传宗接代，弟弟要好好照看他。为兄的要告别人世了。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "弟弟"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence contains an explicit directive from Zhou Sheng to his younger brother, assigning the responsibility of caring for their son. This constitutes a clear task with the brother as the designated role to fulfill it."
+      }
+    },
+    {
+      "sentence_index": 138,
+      "sentence": "说完，周生就起身径自出门去了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Zhou Sheng's action of leaving his home after speaking with his brother, making it an 'action' category. The doer is clearly Zhou Sheng, while no direct receiver is mentioned in the sentence."
+      }
+    },
+    {
+      "sentence_index": 139,
+      "sentence": "弟弟流着眼泪追上前挽留他，周生却笑着不回头。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "弟弟",
+          "周生"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the active behaviors of the brother (弟弟) attempting to stop Zhou Sheng (周生) and Zhou Sheng's refusal to turn back, which are direct actions performed by the characters."
+      }
+    },
+    {
+      "sentence_index": 140,
+      "sentence": "到了野外，周生见到在那里等候的成生，就与他一起前行。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生",
+          "成生"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes周生 and成生 taking the action of moving together in the wilderness, indicating their active decision to proceed together after their previous interactions."
+      }
+    },
+    {
+      "sentence_index": 141,
+      "sentence": "周生远远地又回头喊道：“做事能忍让，就是最大的快乐！”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "野外",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Zhou Sheng's reflective statement in the wilderness, establishing the narrative context for his philosophical realization and subsequent actions. The location '野外' (wilderness) is the narrative focus where this situation occurs."
+      }
+    },
+    {
+      "sentence_index": 142,
+      "sentence": "弟弟还想说些什么，但见成生的宽袖一甩，他们两人就立即不见了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周生和成生立即不见了",
+        "explanation": "该句描述了成生宽袖一甩后周生和成生瞬间消失的后果，属于前文行动（成生的袖子动作）导致的状态变化，符合Consequence分类。"
+      }
+    },
+    {
+      "sentence_index": 143,
+      "sentence": "弟弟在那里失意地站了半天，只得痛哭着回去了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周生的弟弟因失去兄长和成生的庇护，独自面对家庭困境和情感创伤，最终选择独自返回家中",
+        "explanation": "该句描述了周生弟弟在失去兄长和成生后的情感反应及后续行动，是前文成生与周生消失事件的直接结果，导致弟弟陷入孤独和家庭困境。"
+      }
+    },
+    {
+      "sentence_index": 144,
+      "sentence": "周生的弟弟为人朴实反应慢，不善于管理家人和家业，过了几年后，家里越来越穷。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "家里越来越穷",
+        "explanation": "该句描述了周生弟弟因不善管理家业导致家庭贫困的后果，属于前文事件（弟弟管理不善）引发的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 145,
+      "sentence": "周生的儿子渐渐长大了，也没有钱为他请老师，因而周生的弟弟只好自己教他读书。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the financial hardship of Zhou Sheng's brother and the resulting situation where he must personally educate his nephew, setting the stage for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 146,
+      "sentence": "一天，周生的弟弟早晨来到书斋里，看见桌子上放着一封信，封得很严实，信封上写着“贤弟亲启”，仔细一看，辨出是哥哥的笔迹。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生的弟弟"
+        ],
+        "receivers": [
+          "信"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 周生的弟弟 discovering a letter in the study, which is an active event performed by the brother and directed towards the letter."
+      }
+    },
+    {
+      "sentence_index": 147,
+      "sentence": "打开信封，里面竟然空空的什么都没有，只见到一片指甲，有两指多长。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The envelope contained an empty space with a fingernail, leading to the discovery of the magical transformation ability",
+        "explanation": "This sentence describes the outcome of opening the sealed letter, revealing an empty envelope with a fingernail that later transforms into gold. It directly follows the action of opening the letter and sets up the subsequent magical consequence."
+      }
+    },
+    {
+      "sentence_index": 148,
+      "sentence": "弟弟心中十分奇怪。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "弟弟因发现信件内容异常而感到困惑",
+        "explanation": "该句描述了周生弟弟在发现信件内容异常后的心理反应，属于前文事件（发现空信件和指甲）导致的状态变化，符合'consequence'分类。"
+      }
+    },
+    {
+      "sentence_index": 149,
+      "sentence": "他把指甲放在砚台上，出房去问家人信函是从哪里来的，却没有人知道。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "周生的弟弟"
+        ],
+        "receivers": [
+          "砚台",
+          "家人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the brother's actions of placing his fingernail on the inkstone and seeking information from his family about the letter's origin, which are active behaviors performed by the character."
+      }
+    },
+    {
+      "sentence_index": 150,
+      "sentence": "等他回到书斋再一看，砚台已经黄灿灿地化成了黄金。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "砚台化成了黄金",
+        "explanation": "该句描述了前文所述指甲点金术的直接结果，即砚台发生物质形态的改变，属于因先前行动（使用指甲）引发的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 151,
+      "sentence": "弟弟大吃一惊，再用那指甲试验铜和铁，都一样可以变成黄金，周家由此变得非常富有。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "周家由此变得非常富有",
+        "explanation": "该句描述了前文弟弟用指甲试验金属变黄金的行动导致的直接结果，即周家获得巨大财富的状态变化，属于因果关系中的后果描述。"
+      }
+    },
+    {
+      "sentence_index": 152,
+      "sentence": "周生的弟弟又拿出一千两金子送给成生的儿子，所以乡里都传说这两家会点金术。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "乡里都传说这两家会点金术",
+        "explanation": "该句描述了周生弟弟赠送金子给成生儿子后，导致乡里流传两家拥有点金术的后果，属于前文事件（指甲化金）引发的连锁反应，符合'consequence'类别中因先前事件导致状态变化的定义。"
+      }
+    }
+  ]
+}

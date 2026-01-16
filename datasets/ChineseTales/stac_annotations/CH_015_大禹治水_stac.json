@@ -1,0 +1,840 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_015_大禹治水.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 57,
+  "analyzed_sentences": 57,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "尧、舜、禹是继黄帝之后，黄河流域部落联盟的杰出首领。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "黄河流域",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the historical context by introducing尧、舜、禹 as leaders in the Yellow River basin tribal alliance, setting the stage for the subsequent narrative about their leadership and the flood治理 events."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "他们都博得了老百姓的爱戴和赞扬。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "黄河流域",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence establishes background context about尧、舜、禹三位首领受到百姓爱戴的情况，为后续治水事件的发生提供社会背景，属于'Situation'分类。"
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "尧在位的时候，黄河流域发生了严重的水灾，洪水淹没了庄稼，毁掉了房屋，老百姓流离失所，只能躲到山上，靠野菜充饥。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "黄河流域",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the context of severe flooding in the Yellow River basin during Yao's reign, establishing the background for the subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "于是，尧召开部落联盟会议，商量如何治理洪水。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "尧"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Yao taking the action of holding a tribal alliance meeting to discuss flood management, making it an 'action' category. The doer is Yao, and no specific receivers are mentioned."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "他向四方部落首领征求意见，最后各部落首领们一致推荐了一个人，这个人叫做鲧。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "各部落首领们"
+        ],
+        "receivers": [
+          "尧"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of tribal leaders recommending鲧 as the candidate for flood control, with the leaders as the doers and尧 as the receiver of their recommendation."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "尧对鲧并不信任，但是首领们都说：“现在已经没有比鲧更好的人才了，你就试试吧！”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes context about Yao's distrust of Gun and the leaders' recommendation, setting the stage for the subsequent appointment and actions. No specific location is mentioned in this sentence."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "就这样，尧任命鲧为治水官员。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "尧"
+        ],
+        "receivers": [
+          "鲧"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Yao actively performing the action of appointing Gun as the water control official, making Yao the doer and Gun the receiver of this action."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "鲧来到洪水泛滥的黄河边，巡视了一番，便开始了治水工程。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鲧"
+        ],
+        "receivers": [
+          "治水工程"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes鲧's active actions of arriving at the Yellow River, inspecting the area, and initiating the water control project. The doer is鲧, and the receiver is the治水工程 (water control project) as the action involves starting this endeavor."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "鲧是一个尽心尽职的官员，他率领老百姓用泥土和石块筑堤，把洪水围住来制服洪水。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鲧",
+          "老百姓"
+        ],
+        "receivers": [
+          "洪水"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes鲧 leading the people to build dikes against the flood, which is an active action performed by the doers (鲧 and the people) to control the receivers (the flood)."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "这就是传统的“水来土掩”的治水方法。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the traditional 'water comes, earth blocks' method used by GUN, setting the stage for the subsequent consequences of its failure. No specific location is mentioned in the sentence itself."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "可是，随着洪水越来越猛烈，土堤是不能挡住来势凶猛的洪水的，洪水终究是会将土堤冲垮的。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "土堤被洪水冲垮，治水失败导致洪水更加凶猛",
+        "explanation": "该句描述了鲧采用'水来土掩'方法治水的直接结果，即土堤无法抵御猛烈洪水最终被冲毁，导致治水失败并加剧水患，属于前文行动（鲧筑堤治水）的后果。"
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "因此在鲧治水期间，洪水没有得到治理，反而更凶了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the floods were not controlled and became more severe",
+        "explanation": "This sentence describes the outcome of鲧's failed flood control efforts, indicating that his methods led to worsening flood conditions rather than resolution."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "后来，尧死后舜成为部落联盟的首领。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the transition of leadership from Yao to Shun, setting the context for subsequent events in the story. It provides background information about the political succession without specifying a physical location."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "他看到洪水滔滔，房屋倒塌，田地淹没，百姓流离失所，便亲自来到鲧治水的地方察看。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "舜"
+        ],
+        "receivers": [
+          "鲧治水的地方"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes舜's action of personally inspecting the area where鲧 was managing water control. The doer is舜, and the receiver is the location where鲧's water management efforts were taking place."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "他看鲧用的是“用土筑堤，堵塞漏洞”的办法，老百姓都被围在一个小土城里生活。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "黄河",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the current state of flood control measures implemented by Gǔn, establishing context for subsequent events. It highlights the location (Yellow River) and the situation of people being confined to a small area by dikes, which sets the stage for舜's criticism."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "于是舜对鲧说：“你把洪水围在堤坝里面，就像把野兽圈在笼子里，它迟早都会出来祸害百姓的，你应该想想其他的办法。”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "鲧的治水方法被舜指出无效，导致其治水策略面临质疑和改变",
+        "explanation": "该句描述舜对鲧治水方法的批评，指出其'水来土掩'策略的弊端，这是鲧治水九年无果的直接后果，导致舜决定处死鲧并改任禹。"
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "可鲧想了又想，“水来土掩”，这不就是老祖宗留传下来的治水办法吗？",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes鲧's internal reflection on the traditional 'water comes, earth blocks it' method, providing background context on his mindset and approach to the flood problem, which sets the stage for his subsequent actions."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "他实在想不出别的好办法了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "He couldn't think of any other good methods",
+        "explanation": "The sentence describes the outcome of鲧's previous actions (building embankments) which failed to control the floods, leading to his inability to find a better solution. This sets up the consequence of his ineffective approach."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "于是，他率领百姓将所有的土堤继续增高和加固，他想，这样一来再大的洪水也会被制服的。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鲧",
+          "百姓"
+        ],
+        "receivers": [
+          "土堤"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes鲧 leading the people to reinforce the earth dikes, which is an active action performed by the doers (鲧 and the people) on the receivers (the earth dikes)."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "做完了增高和加固工作之后，鲧信誓旦旦地对舜说：“无论多大的洪水也冲不垮我的堤坝了！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鲧"
+        ],
+        "receivers": [
+          "舜"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes鲧's action of making a confident declaration to舜 after completing the embankment work, indicating his assertion of the堤坝's effectiveness."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "舜相信了鲧。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "舜"
+        ],
+        "receivers": [
+          "鲧"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes舜's action of believing in鲧, which is an active decision made by舜 (doer) towards鲧 (receiver)."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "可是没过多久，洪水依旧吞没田地，冲毁房屋，老百姓还是担惊受怕地躲在高山上。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "鲧的治水方法失败，洪水持续泛滥导致田地被毁、房屋倒塌，百姓仍处于恐惧中",
+        "explanation": "该句描述了鲧治水失败后的直接结果，即洪水未被治理反而加剧，导致百姓继续遭受灾害。这是对鲧治水行动的后果描述，符合'consequence'类别。"
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "舜发怒了，鲧治水九年，劳民伤财，却一事无成，他定了鲧的罪名并处死了他。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "鲧 was executed by舜 for his failed water management efforts",
+        "explanation": "The sentence describes the outcome of鲧's unsuccessful flood control efforts, leading to his execution by舜. This represents a state change resulting from prior events (the failed water management and舜's anger)."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "随后，在各部落首领的举荐下，舜任命鲧的儿子禹为治水官员。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "舜"
+        ],
+        "receivers": [
+          "禹"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes舜 actively appointing禹 as the治水官员, which is an action performed by舜 (doer) and directed towards禹 (receiver)."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "禹从小跟随鲧治水，他对黄河的地形、地势、泛滥周期了如指掌，九年的治水过程也让他积累了不少治水经验。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "黄河",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about Yu's prior experience with his father's flood control efforts, establishing his familiarity with the Yellow River's characteristics as a foundational context for his later role. The focus is on setting the stage for his qualification as a治水 candidate."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "禹无疑是最适合最好的治水人选。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes background context that Yu is the most suitable candidate for water control, setting the stage for subsequent events like his appointment and the task of flood management. No specific location is mentioned in this sentence."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "禹刚得到任命的消息，他的妻子就对禹说：“我不同意你去治水。爹爹就是因治水才被处死的，你不能再接收这样的任务了，黄河的洪水是止不住的，到时候，你也会和爹爹一样，被舜处死的。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the wife's concerns regarding禹's appointment as治水官员, setting the stage for his subsequent decision to proceed despite the risks. It establishes the narrative context of inherited responsibility and potential dangers, which is a key situational element."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "禹听完对妻子说：“黄河的洪水已经夺去了很多老百姓的生命，如果再不治理，老百姓面临的灾难会更大。爹爹死于治水，我是他的儿子，我一定要把他没有完成的事业做完，如果我不把洪水治理好，我就绝不回家。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides context about the current state of affairs (flood devastation and Yu's motivation to continue the task), which sets the stage for his subsequent actions. No specific location is mentioned, so the location field is left empty."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "第二天，禹就告别了妻子和年老母亲，开始了治理洪水的事业。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "禹"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes禹's action of departing from his family to commence his flood control efforts, indicating his active participation in the task."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "禹站在堤坝上，看见滚滚的洪水向四面八方涌去，思绪万千。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "堤坝",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes禹's observation of the flood from the embankment, establishing the context for his subsequent decision to adopt the疏导 method. This sets the stage for the action of implementing the new strategy."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "他想老办法只能暂时堵住洪水，时间一长，洪水积累的多了，力量变大，就会冲破堤坝，最好的办法就是把洪水引到其他的地方去。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes禹's realization that the old method of blocking floods is unsustainable, setting the context for the need to find a new solution. This establishes the situation leading to the subsequent action of implementing the疏导法 (diverting floods). No specific location is mentioned."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "可是滔滔洪水又要引到哪里去呢？",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "黄河",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了禹在思考如何解决洪水问题时面临的困境，即需要确定洪水的分流方向，为后续'引到大海里'的行动提供了背景和问题焦点，属于设定未来行动的情境。"
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "“引到大海里呀！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "禹"
+        ],
+        "receivers": [
+          "洪水"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents禹's decision to divert floodwaters to the sea, which is an active step in the process of solving the flood problem."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "禹突然叫了起来，“对，大海，老百姓都说大海是最大的，肯定会装得下洪水的。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "禹"
+        ],
+        "receivers": [
+          "洪水"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes禹 actively deciding to divert the flood to the sea, which is a key action in the process of solving the water problem. The doer is禹, and the receiver is the flood being redirected."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "古云：水往低处流。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context for禹's decision-making process by引用 a natural principle (water flows to lower places) that informs his strategy for flood control. This sets the stage for his subsequent actions of diverting floodwater to the sea."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "以这样的思想作指导，禹开始了治理洪水的准备工作。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "禹"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes禹 initiating the action of preparing for flood control based on the principle that water flows downward. The doer is clearly禹, and there is no direct receiver specified in the action."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "首先，禹率领百姓跋山涉水，将水流的源头、上游、下游粗略地考察一遍；其次，在考察的过程中，他在重要的地理位置上堆放了石块或者砍伐树木作下记号，以便于治水时参考用；最后，禹对各种水情都做了仔细认真的研究，制定出严密、完整的治水办法，即疏导法来治理黄河水患。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "禹",
+          "百姓"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes禹's active preparations for flood control, including surveying the river, marking locations, and studying water conditions. These actions are performed by禹 and the people under his leadership, with no explicit recipients of the actions."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "禹做完准备工作之后，就开始了规模宏大的治水工程。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "禹"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes禹 initiating the large-scale water control project after completing preparations, which is an active action performed by him."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "禹亲自带领百姓，拿着简陋的石斧、石刀、石铲等工具，风餐露宿，在风风雨雨中治理水患。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "禹",
+          "百姓"
+        ],
+        "receivers": [
+          "水患"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes禹 leading the people to combat the water disaster, indicating an active action performed by禹 and the commoners against the water issue."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "禹起早贪黑，腰累疼了，脚跑肿了，都从不敢懈怠，他常常因为过度疲劳而昏倒。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "禹"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes禹's active efforts during the flood control task, detailing his physical labor and dedication. The actions focus on his personal exertion rather than direct interaction with external receivers."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "老百姓被禹的敬业精神所感动，都让自己的孩子跟着禹治水。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the common people participated in the flood control efforts by sending their children to join禹",
+        "explanation": "The sentence describes the outcome of禹's dedicated work (prior action) leading to the common people's participation in the flood control project, which accelerated the engineering efforts."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "由于老百姓积极参与治水，工程比预期的快了很多。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the engineering project was completed faster than expected",
+        "explanation": "The sentence describes the outcome of the common people's participation in flood control, resulting in the project's completion being accelerated compared to expectations."
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "在治水过程中，禹曾经有三次经过自己的家门而没有进去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "禹"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes an action performed by Yu (大禹) during the water control process, specifically passing by his home three times without entering. The doer is clearly Yu, and there is no explicit receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "这就是传说的“三过家门而不入”。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "禹的家门",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句总结了禹三次经过家门而不入的传说，为后续描述禹舍小家为大家的奉献精神提供背景，属于叙事中的情境设定。"
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "第一次是禹经过自己的家门口时，听见了婴儿的哭声，他知道那是他刚出生不久的儿子，他多么想看看自己的儿子呀，可一想到老百姓还在受洪水危害，他便忍住眼泪匆匆离开了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "禹"
+        ],
+        "receivers": [
+          "儿子",
+          "百姓"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes禹's action of passing by his home, hearing his son's cry, and choosing to leave despite personal desires. The doer is禹, and the receivers include his son (the one crying) and the people (whom he prioritizes over personal time)."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "第二次是禹经过自己家门口时，他的妻子正抱着儿子站在家门口，妻子看见禹就赶紧让儿子喊爸爸。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "自己家门口",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了禹第二次经过自己家门口时的情景，为后续'三过家门而不入'的叙事提供场景背景，聚焦于'自己家门口'这一核心地点。"
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "禹多想抱抱自己的儿子啊！",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "禹"
+        ],
+        "receivers": [
+          "儿子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes禹's desire to perform an action (embrace his son), indicating his intention to take an action despite his circumstances."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "可他只是对妻子和儿子挥挥手，很快就消失在扬起的尘土中了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "禹"
+        ],
+        "receivers": [
+          "妻子",
+          "儿子"
+        ],
+        "changed_state": "",
+        "explanation": "该句描述了禹在经过家门时对妻子和儿子做出的具体行为，属于主动执行的动作。'禹'是行为执行者，'妻子'和'儿子'是行为的接收对象。"
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "第三次是禹经过自己家门口时，儿子抱住禹的腿说：“爹爹，娘病了，她想你了，你进去看看她吧。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "自己家门口",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了禹第三次经过自家门口时发生的场景，为后续禹选择继续治水、离开家庭的情节发展提供了背景铺垫，'自己家门口'是叙事聚焦的地点。"
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "禹想起柔弱的妻子心中一阵酸楚，可他推开儿子忍住眼泪又离开了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "禹"
+        ],
+        "receivers": [
+          "儿子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes禹's action of leaving his son despite emotional distress, demonstrating his commitment to the治水 task. The doer is禹, and the receiver is his son, as the action involves his interaction with his family."
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "在禹的指挥下，老百姓凿了一座又一座山，开了一条又一条河渠，他大公无私，把所有的心血都奉献在治理水患上了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "老百姓"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the physical actions taken by the common people under Yu's command to excavate mountains and dig canals as part of the flood control efforts. The focus is on the activity performed (凿山, 开渠) with the people as the primary actors."
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "经过十三年的艰苦努力，九条水渠全部开通了，堤坝的洪水开始流进大海，治水事业终于完成了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "治水事业完成，洪水被疏导至大海，九条水渠开通，水患得到治理",
+        "explanation": "该句描述了大禹治水行动的最终结果，即十三年努力后水渠建成、洪水被疏导至大海，标志着治水事业的成功完成，属于前序行动（开凿水渠等）的直接后果。"
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "这就是历史上“大禹治水”的故事。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the story of Yu controlling the waters is now part of history",
+        "explanation": "The sentence marks the culmination of the narrative, indicating that the successful flood control efforts by Yu have resulted in the story being recorded as part of historical legacy."
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "洪水得到治理后，禹并没有停下来，他又组织老百姓学习农耕技术，在洪水退去的土地上种上桑麻，撒下谷种。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "禹"
+        ],
+        "receivers": [
+          "老百姓"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes禹's active actions of organizing the people to learn farming techniques and planting crops after flood control, making it an 'action' category with禹 as the doer and the people as the receivers."
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "几年下来，桑麻遍地，禾谷飘香，老百姓过上了丰衣足食的生活。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "老百姓过上了丰衣足食的生活",
+        "explanation": "该句描述了大禹治水成功后，通过组织农耕技术推广和土地开发，使百姓生活条件发生根本性改善的结局，属于前序治水行动的直接结果。"
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "老百姓为了感激他，便尊敬地称他为“大禹”。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The people's respect for禹 led to him being called '大禹' (Great Yu), marking his legacy and recognition for his successful flood control efforts",
+        "explanation": "This sentence describes the outcome of禹's successful flood control and agricultural reforms, which resulted in the people's veneration and the name '大禹' being bestowed upon him. The consequence directly follows the prior actions of flood management and improving livelihoods."
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "舜死后，禹受禅让继承了帝位，大禹就成为了夏朝的第一位天子。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "禹 became the first king of the Xia dynasty",
+        "explanation": "This sentence describes the outcome of舜's death, leading to禹's succession as the first ruler of the Xia dynasty, which represents a state change in the political leadership structure."
+      }
+    }
+  ]
+}

@@ -1,0 +1,2342 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_005_白蛇传.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 158,
+  "analyzed_sentences": 158,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "很久很久以前，有一条小白蛇。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the main character (小白蛇) and establishes the temporal context of the story, which is typical for setting the stage in a narrative. No specific location is mentioned, so the location field remains empty."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "它吸天地之灵气得以长生不死，久而成精。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the white snake's transformation into a spirit through absorbing heavenly and earthly energies, establishing the background for its journey towards immortality and setting the stage for future events in the story."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "它向往着那些成仙的传说，一心向道，认真修炼，希望自己有一天可以蜕去这一身蛇皮，出尘成仙。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the background motivation of the white snake seeking immortality and transformation, setting up its later actions and the story's conflict. No specific location is mentioned in this context."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "转眼间，到了小白蛇修炼的第四百个年头。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the passage of time (400 years) since the white snake began its cultivation, setting the temporal context for the subsequent events in the story. It provides background information without introducing new actions, tasks, or consequences."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "初春的一天，它正在山间修炼，却不幸落入了一个捕蛇人的手里。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "山间",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the temporal and spatial context of the white snake's capture event, setting the stage for the subsequent conflict with the snake catcher. The location '山间' (mountainous area) is the narrative focus where the event occurs."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "那人死死捏住小白蛇的七寸之处，使它根本无法施展法力，小白蛇只得闭目等死。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "小白蛇因被捕蛇人抓住七寸而失去法力，陷入无法反抗的绝境",
+        "explanation": "该句描述了捕蛇人抓住小白蛇七寸导致其失去法力的直接结果，属于前序动作（被捕获）的后果，体现了小白蛇从主动修炼到被动受制的状态转变"
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "正在这个时候，一阵笛声传来，有个骑着牛的牧童向捕蛇者而来。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces a new contextual element (the arrival of a shepherd with a flute) that sets the stage for the subsequent interaction between the shepherd and the hunter. It provides background context for the impending rescue of the snake, fitting the 'situation' category as it establishes the narrative context without directly describing an action, task, or consequence."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "他看到捕蛇者手中的小白蛇，有些不忍心，便央求道：“叔叔，我看这蛇也怪可怜的，您行行好，放了它吧。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "牧童"
+        ],
+        "receivers": [
+          "捕蛇人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the shepherd boy's action of pleading with the snake catcher to release the white snake, making it an 'action' category with the doer as the牧童 and the receiver as the捕蛇人."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "捕蛇人自然不肯答应。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "捕蛇人"
+        ],
+        "receivers": [
+          "小白蛇"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the捕蛇人's refusal to release the小白蛇, which is an active decision made by the捕蛇人 as a response to the牧童's plea. The action directly affects the小白蛇's fate, making the snake the receiver of this action."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "牧童想了想，心中有了主意。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "牧童"
+        ],
+        "receivers": [
+          "捕蛇人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the shepherd's internal process of forming a plan to distract the capturer, which directly leads to his subsequent action of playing music. The 'doer' is the shepherd (牧童) and the 'receiver' is the capturer (捕蛇人) as the plan aims to influence their behavior."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "于是，他笑嘻嘻地说道：“您既然这么累了，不如坐下休息会儿，我给您吹首小曲儿听吧。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "牧童"
+        ],
+        "receivers": [
+          "捕蛇人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the牧童's active action of proposing to play a flute for the捕蛇人, which is a direct attempt to distract and loosen the捕蛇人's grip on the snake. This action is a key step in the plan to free the小白蛇."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "牧童说着便举起手中的笛子放在嘴边吹起曲子来，小曲儿悠扬婉转，捕蛇人听得入迷，忍不住坐了下来，就连手中捏着蛇的力度也松了几分。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "牧童"
+        ],
+        "receivers": [
+          "捕蛇人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the牧童's active action of playing the flute, which directly affects the捕蛇人 by causing him to relax his grip. This action is a key step in the sequence leading to the snake's escape."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "小白蛇见捕蛇人慢慢放松了警惕，便悄悄仰起头，趁着捕蛇者不备，一口咬住他的手背。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小白蛇"
+        ],
+        "receivers": [
+          "捕蛇人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the white snake actively performing the action of biting the hunter's hand, which is a direct physical interaction initiated by the snake."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "捕蛇人“哎哟”一声跳了起来，忙甩脱小白蛇。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "捕蛇人"
+        ],
+        "receivers": [
+          "小白蛇"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the capture person's active action of shaking off the white snake after being bitten, making it an 'action' category. The doer is the捕蛇人, and the receiver is the小白蛇."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "就这样，小白蛇化危为安，摇摇尾巴，迅速地钻入山林里不见了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小白蛇"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the white snake's active escape from the hunter after being bitten, which is a direct action performed by the snake. The doer is clearly the white snake, and there is no explicit receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "眼见小白蛇已经跑得没了踪影，自己又被咬了一口，捕蛇人无奈，只好自认倒霉，又去寻找新的目标了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "捕蛇人因失败的捕蛇行动而转向寻找新的目标",
+        "explanation": "该句描述了小白蛇逃脱后捕蛇人的反应和后续行动，属于前序事件（小白蛇逃脱）的直接结果，导致捕蛇人改变目标。"
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "由于害怕再被捕蛇人捉到，小白蛇前往峨眉山的白龙洞，开始潜心修炼。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小白蛇"
+        ],
+        "receivers": [
+          "白龙洞"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the小白蛇 moving to the White Dragon Cave in Mount Emei to begin its cultivation. The doer is the小白蛇, and the receiver is the location (白龙洞) where the action occurs."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "山中岁月容易过，世上繁华已千年。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "山中",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the passage of time in the mountains (山中) as part of the narrative context, setting the stage for the小白蛇's prolonged修炼 and eventual transformation. It provides background on the temporal progression of events."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "就这样，六百年的时光飞快过去了。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the passage of time as part of the narrative progression, setting context for the white snake's eventual transformation. While the surrounding context mentions 'mountains' (山中), the sentence itself does not explicitly state a location, so the location field remains empty."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "当小白蛇修满一千年，完成了上天给自己的所有考验后，它化身人形，变成一位白衣白裙、超凡脱俗的美丽女子，因前身系白蛇所化，故为自己取姓白，取名素贞。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "transformed into a human form and took the name 白素贞",
+        "explanation": "This sentence describes the outcome of the小白蛇 completing its millennium-long cultivation and passing divine trials, resulting in its transformation into a human form and adopting a new name. The state change reflects the consequence of its prior actions."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "她变成人后的第一件事情就是去找六百年前曾经救过自己的牧童，以报当年的救命之恩。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞"
+        ],
+        "receivers": [
+          "牧童"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 白素贞's action of seeking out the shepherd from six hundred years ago to repay his救命之恩, making her the doer and the shepherd the receiver of her action."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "在观世音菩萨的指点下，她来到了杭州。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "杭州",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the location '杭州' (Hangzhou) where subsequent events such as encountering the qing snake occur, setting the stage for future developments in the narrative."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "在途经钱塘江时，白素贞偶遇自己的同类，一条已经修炼了五百年的青蛇。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "钱塘江",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the setting where White Snake encounters the qing snake, setting the stage for the subsequent conflict. The location '钱塘江' is the narrative focus for this event."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "那青蛇的修炼时间尚短，定力不足，行事乖张，猖狂任性。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "钱塘江",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the state of the Qing snake, providing context for why White Snake decides to eliminate her. This sets the stage for the subsequent action of confrontation."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "白素贞怕她日后祸乱人间，决心除掉这个祸患。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context for White Snake's decision to eliminate the green snake, setting up the conflict and motivation for subsequent actions. It provides background on her fear of the green snake's potential harm, which leads to the upcoming confrontation."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "她祭出宝剑，与青蛇在山林里打得难解难分。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞"
+        ],
+        "receivers": [
+          "青蛇"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 白素贞 drawing her sword and fighting the 青蛇 in the woods, making her the doer and the 青蛇 the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "青蛇本不是白素贞的对手，很快就落了下风。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the young snake is losing the battle against White Suzhen",
+        "explanation": "This sentence describes the outcome of the prior action (White Suzhen fighting the young snake), indicating the snake's inability to withstand her attack, which directly leads to the consequence of the snake falling behind in the battle."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "眼见小青蛇就要命丧白素贞之手，白素贞心中念其五百年修炼不易，不忍就此杀死青蛇。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞"
+        ],
+        "receivers": [
+          "青蛇"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 白素贞's decision to spare 青蛇's life during their battle, which is an active choice she makes. The action is performed by 白素贞 and directly affects 青蛇's fate."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "青蛇感念白素贞对自己手下留情，决心改邪归正，一生跟随白素贞。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "青蛇决定改邪归正并终身跟随白素贞",
+        "explanation": "该句描述了白素贞因怜悯青蛇而未将其杀死这一先前行为所导致的后果，青蛇因此产生改过自新并追随白素贞的决定，属于因果关系的后果描述"
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "于是，化身为一青衣女子，名唤“小青”。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "青蛇"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the transformation of the Qing snake into a human form named Xiaoqing, which is an active action performed by the Qing snake. The doer is the Qing snake, and there is no explicit receiver mentioned in the sentence."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "此后，两人以姐妹相称，将清波门双茶坊巷裘王府废屋以法术变幻为新宅，暂时居住，寻找那位转世的牧童。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞",
+          "小青"
+        ],
+        "receivers": [
+          "清波门双茶坊巷裘王府废屋"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 白素贞 and 小青 transforming a ruined house into a new residence using magic. The doers are the two characters, and the receiver is the废屋 being transformed."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "水光潋滟晴方好，山色空濛雨亦奇。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "西湖",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the scenic beauty of West Lake, establishing the setting for the story's location. It sets the stage for the subsequent events involving the characters' activities in the area."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "欲把西湖比西子，淡妆浓抹总相宜。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "西湖",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the scenic beauty of West Lake, establishing the setting for the story's events and serving as background context for the narrative."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "西湖的美景总让人百看不厌，白素贞与小青姐妹俩每日便在这杭州西湖畔一边游山玩水，一边找寻白素贞的转世恩人。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "杭州西湖畔",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the setting where 白素贞 and 小青 spend their days, providing context for their ongoing activities and search for the reincarnated benefactor."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "三月初三，清明节这天，姐妹两人又漫步在西湖湖畔。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "西湖",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the specific time (Qingming Festival) and location (West Lake) for the upcoming event where the sisters encounter the scholar, setting the stage for the narrative progression."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "正当两人走至断桥之上时，迎面走来一位俊雅书生，与她们擦肩而过。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "断桥",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述白素贞与小青行走至断桥的场景，为后续书生出现并引发情感纠葛的情节发展建立空间背景，属于叙事背景设定。"
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "白素贞回眸看着书生背影，心生爱慕，不由得想：“这若就是自己救命恩人的转世该多好。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "断桥",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述白素贞在断桥上看到书生背影时产生的情感波动，为后续她追寻转世恩人的行动埋下伏笔，属于故事背景设定。"
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "小青看出白素贞的心思，忙劝她用法术看看那书生的前世究竟是何人。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小青"
+        ],
+        "receivers": [
+          "白素贞"
+        ],
+        "changed_state": "",
+        "explanation": "小青主动劝说白素贞使用法术查看书生的前世身份，属于主动发起的行动。'小青'是执行者，'白素贞'是接受劝说的对象。"
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "白素贞一查，竟真的就是那牧童转世，不由喜出望外，正欲追上前去相识，无奈那书生快了一步，已登上船准备离开。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "白素贞发现书生是牧童转世",
+        "explanation": "该句描述了白素贞使用法术查看书生前世的结果，即确认书生是牧童转世，这是前文行动（使用法术）的直接后果，导致角色认知和后续行动的改变。"
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "白素贞心中急切，暗暗做法让晴空万里突然阴云密布，眼看就要暴雨倾盆。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞"
+        ],
+        "receivers": [
+          "船"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 白素贞 actively performing an action (casting a spell) to alter the weather, which is intended to affect the boat. The doer is 白素贞, and the receiver is the boat, as the action's purpose is to influence its movement."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "小青向着湖中那条小舟大喊：“船家！船家！麻烦你把船靠靠岸，载我们去清波门。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小青"
+        ],
+        "receivers": [
+          "船家"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes小青 actively performing the action of shouting to the boatman (船家) to move the boat to the shore, making her the doer and the boatman the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "那书生眼见就要下雨，不忍岸上的两位姑娘淋雨，便要船家将船靠岸，接了白素贞与小青上船。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "许仙"
+        ],
+        "receivers": [
+          "船家",
+          "白素贞",
+          "小青"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the bookish man (许仙) requesting the boatman to bring the boat to shore to pick up the two girls (白素贞 and 小青)."
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "两位姑娘上船后，与书生互通了姓名。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞",
+          "小青"
+        ],
+        "receivers": [
+          "许仙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of exchanging names between the two girls (白素贞 and 小青) and the scholar (许仙) after they boarded the boat. The doers are the two girls who initiated the name exchange, and the receiver is the scholar who participated in the exchange."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "原来这位书生姓许，名仙，字汉文，家住钱塘门。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "钱塘门",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence provides background information about the bookish man (许仙) by revealing his full name and residence, establishing context for his role in the story and setting the stage for subsequent interactions."
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "清明节来祭拜亡父母后正欲坐船回家，顺便游览一下沿湖风光。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "湖",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the character's intention to take a boat home and tour the lake scenery, establishing the context for subsequent events. The location is inferred as '湖' (lake) based on the mention of '沿湖风光' (scenery along the lake)."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "不久，船到了清波门，眼见暴雨仍未停，许仙就拿出自己所携雨伞，借给白素贞，以免她被雨淋湿生病。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "许仙"
+        ],
+        "receivers": [
+          "白素贞"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes许仙 actively performing the action of giving his umbrella to白素贞 to protect her from the rain, making him the doer and白素贞 the receiver."
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "白素贞看出他是个忠厚老实之人，又加上是自己的救命恩人，心中不禁欢喜万分。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "白素贞因许仙的忠厚老实和救命之恩而欢喜万分",
+        "explanation": "该句描述了白素贞在得知许仙忠厚老实且是救命恩人后的心理变化，属于前文许仙借伞行为的后果，体现了人物情感状态的转变。"
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "几日后，许仙前来取伞。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "许仙"
+        ],
+        "receivers": [
+          "伞"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Xu Xian's action of retrieving the umbrella, making him the doer and the umbrella the receiver. This action is part of their ongoing interactions and sets up the subsequent revelation about his true intent."
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "其实他只是借取伞之由，想再见白素贞一面。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence explains许仙's motivation for taking the umbrella, providing background context for his actions and setting the stage for the subsequent marriage arrangement. It does not describe a location or involve task/action/consequence elements."
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "小青看出二人心意，于是牵线做媒，当日就在裘王府内拜堂成亲，自此结为夫妻，恩爱两不疑。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小青"
+        ],
+        "receivers": [
+          "许仙",
+          "白素贞"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes小青 actively taking the initiative to arrange the marriage between许仙 and白素贞, which constitutes a direct action performed by小青 with the receivers being the two characters involved in the marriage."
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "许仙本是个庸碌凡人，一心只望家有贤妻，平平安安，度此一生。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes background context about许仙's character as an ordinary man seeking a peaceful life with a virtuous wife, setting the stage for his later relationships and decisions in the story."
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "白素贞看他有志从医，就想为他筹集银两，开医馆营生。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "白素贞"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates白素贞's intention to take action (raising funds and opening a clinic) for许仙, establishing a clear task responsibility. The task is initiated by白素贞 as she recognizes许仙's medical aspirations."
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "她悄悄遣小青盗了官府的四十锭银元宝，交给许仙拿回家给家中的姐姐姐夫，顺便开一家医馆，自己也好同他一道回家。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小青"
+        ],
+        "receivers": [
+          "许仙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of Xiao Qing stealing silver ingots and delivering them to Xu Xian. '小青' is the direct actor performing the theft, while '许仙' is the recipient of the stolen silver."
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "谁料许仙的姐夫是官府的衙役，他看到许仙拿回的银锭上有官府烙下的标记，立刻认出正是从库房丢失的银锭，便将许仙带回衙门审问。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "许仙因持有官府丢失的银锭被衙役带走审问，导致其陷入法律纠纷",
+        "explanation": "该句描述了因白素贞让小青盗取官府银锭并交给许仙这一先前行为引发的后果，直接导致许仙被衙役带走审问，属于对前行动态结果的描述"
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "许仙体谅白素贞一心为己，不忍供出她来，只说这银子是自己在路上捡来的。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "许仙"
+        ],
+        "receivers": [
+          "官府"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes许仙's active decision to protect白素贞 by lying to the authorities, which is an action performed by许仙 (doer) with the authorities (receivers) as the target of his deception."
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "白素贞得知许仙被抓，忙命小青将剩下的银锭还回库房，自己则施法相助许仙，重案轻判，将许仙发配姑苏三年。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞",
+          "小青"
+        ],
+        "receivers": [
+          "库房",
+          "许仙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 白素贞's actions of ordering 小青 to return silver to the treasury and using magic to help 许仙, which led to his lighter sentence and exile to Gusu."
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "许仙别了姐姐姐夫，离开钱塘门前往姑苏。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "许仙"
+        ],
+        "receivers": [
+          "姑苏"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes许仙's action of departing from钱塘门 and traveling to姑苏. The doer is许仙, and the receiver is the destination location姑苏."
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "白素贞与小青一路追随至姑苏，终于与许仙夫妻团聚。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "白素贞与小青与许仙夫妻团聚",
+        "explanation": "该句描述了白素贞与小青追随许仙至姑苏后最终团聚的结果，属于前序行动（追随）导致的状态变化，符合'consequence'类别。"
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "白素贞为隐瞒真实身份，骗许仙说是有人栽赃陷害白家将银锭放在了白家，却连累了许仙。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞"
+        ],
+        "receivers": [
+          "许仙"
+        ],
+        "changed_state": "",
+        "explanation": "白素贞主动采取欺骗行动（隐瞒身份）并导致许仙被牵连，属于主动行为及其影响对象。"
+      }
+    },
+    {
+      "sentence_index": 60,
+      "sentence": "许仙深信妻子，从此两人更加恩爱。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "their relationship became more affectionate",
+        "explanation": "The sentence describes the outcome of Xu Xian's trust in his wife White Snake, leading to a strengthened bond between them. This is a consequence of the prior events where White Snake revealed her truth and Xu Xian chose to believe her."
+      }
+    },
+    {
+      "sentence_index": 61,
+      "sentence": "不久，白素贞与许仙在苏州开设“保安堂”，治病救人，行医布善。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞",
+          "许仙"
+        ],
+        "receivers": [
+          "病人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the active action of 白素贞 and 许仙 establishing a medical clinic and providing healthcare, with the receivers being the patients they treated."
+      }
+    },
+    {
+      "sentence_index": 62,
+      "sentence": "白素贞一心扶持丈夫，运用法术悄悄帮他处理各种疑难杂症，自此许仙医馆的生意越做越好，名声越来越大，大家说到许仙都称颂他是一个好大夫。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "许仙医馆的生意越做越好，名声越来越大，大家说到许仙都称颂他是一个好大夫",
+        "explanation": "该句描述了白素贞运用法术帮助许仙处理杂症后产生的结果，即许仙医馆的生意和声誉显著提升，属于前文行动（白素贞的法术帮助）导致的状态变化，符合'consequence'分类。"
+      }
+    },
+    {
+      "sentence_index": 63,
+      "sentence": "转眼间，他们婚后第一年的端午佳节就要到了。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence sets the context for the upcoming events by indicating the approach of the Dragon Boat Festival, which triggers the subsequent conflict involving the festival's customs and its impact on the story's characters."
+      }
+    },
+    {
+      "sentence_index": 64,
+      "sentence": "这令白素贞和小青忧心忡忡，因为她们蛇本是最畏酷暑的，而端午节正是一年中日头最毒的日子。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context explaining why 白素贞 and 小青 are worried about the Dragon Boat Festival, establishing the reason for their subsequent actions. It sets the stage for the conflict related to the festival's heat affecting their snake forms."
+      }
+    },
+    {
+      "sentence_index": 65,
+      "sentence": "白素贞担心小青修为不够，会变回原形，便让小青速回洞中躲避，待端午节过后再回来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞"
+        ],
+        "receivers": [
+          "小青"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 白素贞 actively instructing 小青 to return to the cave to avoid the heat of the Dragon Boat Festival, which is an action performed by 白素贞 with 小青 as the recipient."
+      }
+    },
+    {
+      "sentence_index": 66,
+      "sentence": "为不让许仙起疑，她自恃修为深厚，勉强留在家中陪他庆祝端午佳节。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞"
+        ],
+        "receivers": [
+          "许仙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes White Snake's active decision to stay and celebrate the Dragon Boat Festival with Xu Xian, making her the doer of the action and Xu Xian the recipient of her accompaniment."
+      }
+    },
+    {
+      "sentence_index": 67,
+      "sentence": "到了端午佳节那天，许仙带着雄黄酒回家。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "许仙"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Xu Xian's action of bringing realgar wine home on the Dragon Boat Festival, which is a key step in the sequence leading to the revelation of White Snake's true form. The action is performed by Xu Xian, with no explicit receiver mentioned in the sentence."
+      }
+    },
+    {
+      "sentence_index": 68,
+      "sentence": "雄黄可解毒辟邪，饮雄黄酒更是端午节必不可少的习俗。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the Dragon Boat Festival customs, establishing the cultural setting that leads to the subsequent events where Bai Suzhen drinks the realgar wine and reveals her true form. It sets the stage for the conflict without specifying a physical location."
+      }
+    },
+    {
+      "sentence_index": 69,
+      "sentence": "可这雄黄也是蛇最惧怕的东西，只是白素贞对此毫不知情。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the properties of realgar (雄黄) and 白素贞's ignorance of its effects, setting up the impending conflict during the Dragon Boat Festival celebration. This establishes a key element of the story's setup without specifying a location."
+      }
+    },
+    {
+      "sentence_index": 70,
+      "sentence": "于是两人在庆祝端午时，白素贞陪着许仙饮下了一杯又一杯的雄黄酒。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞",
+          "许仙"
+        ],
+        "receivers": [
+          "雄黄酒"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of White Snake and Xu Xian drinking realgar wine during the Dragon Boat Festival celebration. This act directly leads to the consequence of White Snake revealing her true form, which results in Xu Xian's death."
+      }
+    },
+    {
+      "sentence_index": 71,
+      "sentence": "这下可糟了，纵然白素贞法力深厚，终于还是现出原形，吓死了许仙。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "白素贞因饮用雄黄酒现出原形，导致许仙死亡，引发后续盗取仙草救夫的行动",
+        "explanation": "该句描述了饮用雄黄酒导致白素贞现出原形并吓死许仙的直接结果，这一事件成为后续白素贞盗取仙草救夫的关键转折点，符合'consequence'类别中因前序事件导致状态改变的定义"
+      }
+    },
+    {
+      "sentence_index": 72,
+      "sentence": "夜里，酒醒后变回人形的白素贞发现许仙已死，她料定是自己的原形吓死了他，顿时悔恨不已，决心前往南极仙翁的洞府盗来仙草救活许仙。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "White素贞因原形暴露导致许仙死亡而悔恨不已，并决定采取行动盗取仙草救活许仙",
+        "explanation": "该句描述了白素贞因自身原形暴露导致许仙死亡这一先前事件的直接后果，即她产生悔恨情绪并决定采取行动盗取仙草。这是对前文'雄黄酒导致白素贞现出原形吓死许仙'这一事件的后果描述，符合'consequence'分类。"
+      }
+    },
+    {
+      "sentence_index": 73,
+      "sentence": "白素贞腾云驾雾，很快来到紫薇山南极仙翁的洞府外。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞"
+        ],
+        "receivers": [
+          "紫薇山南极仙翁的洞府"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 白素贞 actively performing the action of traveling to the洞府 using her abilities. The doer is 白素贞, and the receiver is the洞府 as she arrives there to execute her plan to steal the仙草."
+      }
+    },
+    {
+      "sentence_index": 74,
+      "sentence": "她仔细一看，守护洞口的竟然是南极仙翁的二弟子仙鹤童子。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "洞口",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过揭示洞口守护者身份，为后续白素贞与仙鹤童子的冲突埋下伏笔，属于设定故事背景的情境描述。"
+      }
+    },
+    {
+      "sentence_index": 75,
+      "sentence": "仙鹤本是蛇的死对头，白素贞救夫心切，心想就算拼却千年道行不要，也要取得仙草。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context explaining White Snake's motivation to obtain the ginseng, establishing her determination to sacrifice her immortal status due to her love for her husband. This sets the stage for her subsequent actions without specifying a physical location."
+      }
+    },
+    {
+      "sentence_index": 76,
+      "sentence": "白素贞咬着牙与仙鹤童子周旋，诱他出洞后趁其不备钻入洞中，拔下了紫薇山镇山之宝——灵芝仙草。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞"
+        ],
+        "receivers": [
+          "灵芝仙草"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 白素贞 actively performing the action of tricking仙鹤童子 and stealing the灵芝仙草, making her the doer and the仙芝 the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 77,
+      "sentence": "仙鹤童子发现她已取得仙草，又气又急，攻势也凌厉起来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "仙鹤童子因发现白素贞取得仙草而愤怒，攻势变得更为凌厉",
+        "explanation": "该句描述了白素贞盗取灵芝仙草后，仙鹤童子的反应变化，属于前行动作导致的状态转变，符合'consequence'分类。状态变化体现在仙鹤童子由愤怒引发攻势增强。"
+      }
+    },
+    {
+      "sentence_index": 78,
+      "sentence": "白素贞此前已经是冒死闯洞，眼下再无力去抵挡仙鹤童子。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "白素贞因冒死闯洞而无力抵挡仙鹤童子",
+        "explanation": "该句描述了白素贞因先前冒死闯入洞府而消耗了力量，导致当前无法抵抗仙鹤童子的攻击，这是其先前行动的直接结果。"
+      }
+    },
+    {
+      "sentence_index": 79,
+      "sentence": "于是，她只得放下手中宝剑，闭目大声说道：“我夫君因我而死，所以才冒死来盗仙草。我自知不是童子对手，只求在我死后，愿童子能怜悯我千年修为不易，救我夫君一命。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞"
+        ],
+        "receivers": [
+          "仙鹤童子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes White Snake actively surrendering her sword and pleading with the仙鹤童子, which constitutes a direct action performed by her towards the仙鹤童子."
+      }
+    },
+    {
+      "sentence_index": 80,
+      "sentence": "仙鹤童子不肯听白素贞诉说，仍然要杀她。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "仙鹤童子"
+        ],
+        "receivers": [
+          "白素贞"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes仙鹤童子's action of refusing to listen to白素贞's plea and attempting to kill her, making it an active action performed by仙鹤童子 against白素贞."
+      }
+    },
+    {
+      "sentence_index": 81,
+      "sentence": "就在这千钧一发之际，南极仙翁与观世音菩萨双双赶到，阻止了仙鹤童子，救下白素贞一命。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "白素贞被救下，仙鹤童子的攻击被阻止，局势得以缓解",
+        "explanation": "该句描述了仙鹤童子欲杀白素贞时，南极仙翁与观世音菩萨及时赶到阻止冲突并救下白素贞的结局，属于前文冲突事件的直接后果。"
+      }
+    },
+    {
+      "sentence_index": 82,
+      "sentence": "观世音菩萨感念白素贞为报恩不惜粉身碎骨之情，便向南极仙翁讨要了一株灵芝仙草，让白素贞速速回去救活许仙。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "观世音菩萨"
+        ],
+        "receivers": [
+          "白素贞"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 观世音菩萨 taking action by requesting a ginseng plant from 南极仙翁 and instructing 白素贞 to return to save 许仙, making it an active action performed by the Bodhisattva."
+      }
+    },
+    {
+      "sentence_index": 83,
+      "sentence": "白素贞拜谢了观世音菩萨与南极仙翁后，便匆匆回到凡间，喂许仙吃下了灵芝仙草。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞"
+        ],
+        "receivers": [
+          "许仙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 白素贞 actively performing the action of returning to the mortal world and administering the灵芝仙草 to 许仙, making her the doer and 许仙 the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 84,
+      "sentence": "这灵芝仙草果然不同凡响，不一会儿，许仙就苏醒了过来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Xu Xian regained consciousness after consuming the ginseng herb",
+        "explanation": "The sentence describes the outcome of White Snake administering the ginseng herb, resulting in Xu Xian's recovery from his near-death state. This state change directly follows the prior action of giving the herb and sets up the subsequent conflict where Xu Xian fears White Snake is a snake spirit."
+      }
+    },
+    {
+      "sentence_index": 85,
+      "sentence": "许仙醒来之后恐惧不已，他怀疑白素贞是条蛇精。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "许仙因白素贞的原形而产生恐惧和怀疑",
+        "explanation": "该句描述了许仙在被灵芝仙草救醒后，因白素贞现出原形而产生的恐惧和怀疑，这是对前文白素贞饮雄黄酒现原形事件的直接后果。"
+      }
+    },
+    {
+      "sentence_index": 86,
+      "sentence": "于是，白素贞与小青做法制造幻象，让许仙以为家中真的有一条巨蟒，并已被杀，这才骗过许仙，令他不再惊恐担忧。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞",
+          "小青"
+        ],
+        "receivers": [
+          "许仙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the active action performed by 白素贞 and 小青 to create an illusion for 许仙, which is a specific activity they carried out to address the situation."
+      }
+    },
+    {
+      "sentence_index": 87,
+      "sentence": "自此，夫妻二人恩爱如初。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "夫妻二人关系恢复为恩爱如初",
+        "explanation": "该句描述了前文制造幻象事件后的结果，即许仙不再惊恐，夫妻关系恢复为恩爱如初，属于因果关系中的后果描述。"
+      }
+    },
+    {
+      "sentence_index": 88,
+      "sentence": "不久后，白素贞发现自己怀有了许仙的骨肉。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Bai Suzhen becomes pregnant with Xu Xian's child",
+        "explanation": "The sentence describes the outcome of the couple's reconciled relationship, leading to Bai Suzhen's pregnancy, which directly impacts the subsequent narrative developments."
+      }
+    },
+    {
+      "sentence_index": 89,
+      "sentence": "许仙知道许家即将有后大为高兴。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Xu Xian's emotional state shifts to happiness upon learning his family will have a child",
+        "explanation": "The sentence describes Xu Xian's emotional reaction to the news of his family's impending child, which is a direct consequence of the previous event where he learned about his wife's pregnancy. This represents a change in his emotional state and personal circumstances."
+      }
+    },
+    {
+      "sentence_index": 90,
+      "sentence": "正巧遇到朋友徐乾邀请自己同游镇江金山寺，许仙欣然前往，顺便替自己未出世的孩子祈福。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "镇江金山寺",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context for the upcoming encounter with法海禅师 by describing许仙's reason for visiting金山寺, setting the stage for the subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 91,
+      "sentence": "可巧，在他们礼佛完毕后，刚好遇上了云游归来的法海禅师。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "镇江金山寺",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of Xu Xian and his family's encounter with Fahai at the Jinshan Temple, setting the stage for the subsequent conflict and revelation about the White Snake's identity."
+      }
+    },
+    {
+      "sentence_index": 92,
+      "sentence": "那法海禅师一见许仙，立刻脸色一变，张口就说：“阿弥陀佛，这位施主，你家中的妻子和丫鬟都是蛇妖所化，你被美色所迷多时，还不快快醒悟！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "法海禅师"
+        ],
+        "receivers": [
+          "许仙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes法海禅师 actively confronting许仙 with accusations, making it an 'action' category. The doer is法海禅师, and the receiver is许仙, who is the target of the accusation."
+      }
+    },
+    {
+      "sentence_index": 93,
+      "sentence": "许仙见这和尚如此诋毁白素贞与小青，不禁大怒：“胡说八道，我家娘子心地善良，与人为善，你为何要如此诋毁我家娘子！”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "许仙因法海的诋毁而愤怒，并坚决捍卫白素贞与小青的清白",
+        "explanation": "该句描述了法海对白素贞与小青的诋毁导致许仙产生强烈反应，这是法海指控事件的直接后果，改变了许仙的态度和立场，属于Consequence类别。"
+      }
+    },
+    {
+      "sentence_index": 94,
+      "sentence": "法海禅师说：“老衲没有唬你。你应该知道，蛇怕雄黄。你也许还记得吧，白素贞因为在端午节那天饮了你准备的雄黄酒，故而现出原形，吓死了你。”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "许仙因白素贞现出原形而死亡",
+        "explanation": "该句子解释了白素贞因饮用雄黄酒现出原形导致许仙死亡的因果关系，属于对先前事件（端午节事件）结果的说明，符合'consequence'类别中描述先前事件结果导致状态变化的定义。"
+      }
+    },
+    {
+      "sentence_index": 95,
+      "sentence": "许仙猛然想起端午节时发生的事情，经法海如此一说，疑心又起。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "许仙因法海的解释而产生对白素贞的怀疑，导致夫妻关系出现裂痕",
+        "explanation": "该句描述了法海揭示白素贞饮用雄黄酒暴露原形的往事后，许仙产生怀疑的后果，属于因前序事件（雄黄酒事件）引发的心理状态变化，符合'consequence'类别。"
+      }
+    },
+    {
+      "sentence_index": 96,
+      "sentence": "可是他想起白素贞素日里对自己的好，就斥责法海说：“胡说，如果我被吓死了，怎么还会活生生站在这里？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "许仙"
+        ],
+        "receivers": [
+          "法海"
+        ],
+        "changed_state": "",
+        "explanation": "许仙因回忆白素贞的善意而主动对法海进行斥责，属于主动行为。动作执行者是许仙，行为对象是法海。"
+      }
+    },
+    {
+      "sentence_index": 97,
+      "sentence": "“那是你娘子找来灵芝仙草救了你。”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Xu Xian was saved from death after consuming the Lingzhi mushroom",
+        "explanation": "The sentence explains the outcome of the prior event (White Snake obtaining the Lingzhi mushroom) which directly caused Xu Xian's survival, representing a state change from near-death to recovery."
+      }
+    },
+    {
+      "sentence_index": 98,
+      "sentence": "法海说，“醒醒吧，施主，你见到的被杀死的白蛇不过是她们施展的法术而已。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context by explaining that the 'white snake' encountered by Xu Xian was an illusion created by the spirits, setting the stage for understanding the supernatural elements of the story."
+      }
+    },
+    {
+      "sentence_index": 99,
+      "sentence": "许仙有些相信了，又忍不住问道：“大师，如果我家娘子与小青是蛇妖所化，可为什么她们从来没有害过我，还一直帮助我，照顾我啊！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "许仙"
+        ],
+        "receivers": [
+          "法海"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents许仙's action of questioning法海 about the nature of his wife and小青. The doer is许仙, and the receiver is法海, as the question is directed towards him."
+      }
+    },
+    {
+      "sentence_index": 100,
+      "sentence": "法海摇了摇头：“你错了，她们是妖，是妖总会害人。现在之所以没有害你，只是因为时机未到。”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The revelation that 白素贞 and 小青 are demons who will eventually harm people, leading to the conflict and eventual water flood",
+        "explanation": "The sentence represents a consequence of the prior event (白素贞's exposure as a demon) by introducing the idea that the women are demons who will harm people when the time is right, directly leading to the conflict and the water flood incident."
+      }
+    },
+    {
+      "sentence_index": 101,
+      "sentence": "许仙一时哑口无言，他有些相信法海的说法，可又不愿意相信自己日夜相对的妻子竟然是蛇精所变。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "许仙在法海的指控下陷入矛盾心理，既部分相信法海的说法，又不愿接受妻子是蛇妖的事实，导致其后续被囚禁的处境",
+        "explanation": "该句描述了法海指控白素贞与小青为蛇妖后，许仙产生的心理矛盾状态。这是法海指控事件的直接后果，导致许仙陷入信仰危机，最终被法海囚禁。此状态变化是推动后续情节发展的关键因素。"
+      }
+    },
+    {
+      "sentence_index": 102,
+      "sentence": "法海见许仙执迷不悟，就命弟子将他强行关在了寺中的塔内。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "法海"
+        ],
+        "receivers": [
+          "许仙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes法海 actively ordering his disciple to imprison许仙 in the tower, making it an explicit action performed by法海 with许仙 as the recipient."
+      }
+    },
+    {
+      "sentence_index": 103,
+      "sentence": "傍晚时分，白素贞见许仙还没归来，就命小青四处打探消息，这才知道是金山寺的法海禅师扣留了许仙。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞"
+        ],
+        "receivers": [
+          "小青"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 白素贞 actively instructing 小青 to investigate the absence of 许仙, which constitutes an action performed by 白素贞 with 小青 as the recipient of the task."
+      }
+    },
+    {
+      "sentence_index": 104,
+      "sentence": "白素贞十分担心许仙的安危，立刻与小青同上金山寺，恳求法海放人。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞",
+          "小青"
+        ],
+        "receivers": [
+          "法海"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action taken by 白素贞 and 小青 to go to金山寺 and plead with 法海 to release 许仙, indicating their active effort to resolve the situation."
+      }
+    },
+    {
+      "sentence_index": 105,
+      "sentence": "没想到那法海一见面就斥责说：“你们本是妖物，不好好回深山修炼，却跑来羡慕人间生活，还妄想与凡人相配。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "法海"
+        ],
+        "receivers": [
+          "白素贞",
+          "小青"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Fa Hai's action of scolding White Snake and Xiao Qing upon their arrival at the temple, which is a direct response to their previous attempt to rescue Xu Xian. The doer is Fa Hai, and the receivers are the two snakes."
+      }
+    },
+    {
+      "sentence_index": 106,
+      "sentence": "“禅师，求你放了我官人！”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "法海禅师"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task where 白素贞 is directly requesting 法海禅师 to release her husband 许仙, establishing a clear responsibility for 法海 to fulfill."
+      }
+    },
+    {
+      "sentence_index": 107,
+      "sentence": "白素贞忍不住双膝跪下，诉说六百年前自己曾被许仙的前世所救，所以今世修行为人，特为报恩而来，绝无害人之意。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞"
+        ],
+        "receivers": [
+          "法海"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 白素贞 actively performing the action of kneeling and explaining her past to 法海, which is a direct interaction aimed at persuading him. The doer is 白素贞, and the receiver is 法海 as she is addressing him."
+      }
+    },
+    {
+      "sentence_index": 108,
+      "sentence": "可是法海始终不为所动，执意不肯放许仙出来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "许仙被法海扣留，导致白素贞不得不采取极端手段水漫金山救出许仙",
+        "explanation": "该句描述了法海拒绝释放许仙的决定，这是白素贞此前恳求无果后的直接结果，导致后续白素贞发动水漫金山的行动，属于前行动作引发的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 109,
+      "sentence": "白素贞忍无可忍，不顾眼下已经是八月中秋前后，正是钱塘江水位高涨之时，她同小青催动咒语，誓要水漫金山，救出许仙。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞",
+          "小青"
+        ],
+        "receivers": [
+          "金山"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action taken by 白素贞 and 小青 to cast spells and cause a flood (水漫金山) as a direct response to their desire to rescue 许仙. The doers are the two characters performing the action, and the receiver is the location (金山) affected by the spell."
+      }
+    },
+    {
+      "sentence_index": 110,
+      "sentence": "片刻间，只见海水倒灌，以排山倒海之势冲了出来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "海水倒灌导致钱塘江水位暴涨，引发洪水淹没家园农田，造成严重灾害",
+        "explanation": "该句描述了白素贞和小青施展法术水漫金山后，钱塘江水位暴涨导致的洪水灾害后果，属于前行动作（水漫金山）引发的直接结果，改变了镇江地区的自然状态和居民生活状态。"
+      }
+    },
+    {
+      "sentence_index": 111,
+      "sentence": "镇江百姓惊恐地望着前一刻还风平浪静，此刻已是波涛汹涌的钱塘江水，刹那间洪水漫过家园、农田。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "镇江百姓的家园和农田被洪水摧毁，导致哀鸿遍野的惨状",
+        "explanation": "该句描述了白素贞水漫金山寺导致的洪水灾害后果，直接呈现了镇江百姓遭受破坏的场景，属于前行动作（水漫金山）引发的连锁反应，符合'consequence'类别中对状态变化的描述要求。"
+      }
+    },
+    {
+      "sentence_index": 112,
+      "sentence": "一眼望去，水面漂浮着一具具尸体、家畜，哀鸿遍野，连天地也为之变色。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The flood caused widespread destruction, resulting in numerous deaths, livestock deaths, and environmental devastation.",
+        "explanation": "The sentence describes the aftermath of the flood caused by the water漫金山 event, detailing the devastation and its impact on the environment and people, which is a consequence of the prior action."
+      }
+    },
+    {
+      "sentence_index": 113,
+      "sentence": "法海忙祭出袈裟护住金山寺，边手持禅杖与白素贞斗法，边怒喝道：“孽畜，你竟敢水漫金山，你可知此举害死了多少无辜的百姓，你们真是罪恶滔天啊！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "法海"
+        ],
+        "receivers": [
+          "白素贞",
+          "金山寺"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 法海's active actions of using his袈裟 to protect金山寺 and fighting 白素贞 with his禅杖, along with his verbal confrontation. These actions directly involve both the temple and 白素贞 as recipients of his efforts."
+      }
+    },
+    {
+      "sentence_index": 114,
+      "sentence": "白素贞也毫不示弱道：“你一再苦苦相逼，不肯放过我们一家人，如今造成这种不可收拾的局面你也难逃责任。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞"
+        ],
+        "receivers": [
+          "法海"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 白素贞 actively engaging in dialogue during the fight with 法海, which is part of the ongoing conflict. Her speech is an action directed at 法海, expressing her stance on the consequences of their battle."
+      }
+    },
+    {
+      "sentence_index": 115,
+      "sentence": "两人打斗在一起，突然，白素贞觉得腹部一阵疼痛，知道应是过度使用法力，致使胎动。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "白素贞因过度使用法力导致腹部疼痛并引发胎动",
+        "explanation": "该句描述了白素贞在与法海斗法过程中因过度使用法力而出现的生理反应，属于前行动作导致的直接结果，符合'consequence'分类。"
+      }
+    },
+    {
+      "sentence_index": 116,
+      "sentence": "小青见白素贞体力不支，自己又不敌法海，只得咬牙带走白素贞。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小青"
+        ],
+        "receivers": [
+          "白素贞"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes小青 actively taking the action of '带走' (taking away)白素贞 due to her physical weakness and the threat from法海, making it an explicit action performed by小青 on白素贞."
+      }
+    },
+    {
+      "sentence_index": 117,
+      "sentence": "离开之时，两人眼见发动水患使得镇江居民流离失所，满目疮痍，心中十分不忍。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "镇江居民因水患流离失所，导致满目疮痍的破坏景象",
+        "explanation": "该句描述了白素贞与小青发动水患后造成的严重后果，即镇江居民遭受苦难的直接结果，属于前行动作引发的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 118,
+      "sentence": "白素贞又悔恨又自责地说道：“因我引水淹金山寺，竟使无辜百姓惨受其害。我真是罪该万死！”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the innocent civilians suffered harm due to the flood caused by 白素贞's actions",
+        "explanation": "This sentence describes the outcome of the prior event (water flooding金山寺), resulting in civilian casualties and 白素贞's guilt. The consequence is the harm inflicted on the people and her emotional response to it."
+      }
+    },
+    {
+      "sentence_index": 119,
+      "sentence": "小青想着那该死的法海，恨恨道：“姐姐，要不是那法海秃驴欺人太甚，我们又怎会犯下如此大错。可恨我们不能救出许仙。姐姐，我们先行离去，日后再想办法！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小青",
+          "白素贞"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Xiao Qing and Bai Suzhen's decision to leave and seek another way to save Xu Xian after the water flood incident, which constitutes an active plan or action they are taking."
+      }
+    },
+    {
+      "sentence_index": 120,
+      "sentence": "其实就在白素贞水漫金山寺之时，许仙已经被寺里一个小和尚悄悄放走。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Xu Xian was released from captivity by a small monk in the temple",
+        "explanation": "The sentence describes the outcome of the water flood event at金山寺, stating that Xu Xian was secretly released by a monk, which changes his state from being imprisoned to being freed."
+      }
+    },
+    {
+      "sentence_index": 121,
+      "sentence": "而许仙看到白素贞为自己所做的一切之后，更深感惭愧与不安。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "许仙因白素贞的牺牲和拯救行为而感到更加惭愧与不安",
+        "explanation": "该句描述了许仙在得知白素贞为救他所做的一切后产生的情感变化，属于因前序事件（白素贞水漫金山救夫、隐藏身份行医等行为）导致的心理状态转变，符合'consequence'类别。"
+      }
+    },
+    {
+      "sentence_index": 122,
+      "sentence": "他失魂落魄地走着，不知道该去哪里寻找白素贞。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "许仙因被法海囚禁而感到懊悔，失去方向，不知如何寻找白素贞",
+        "explanation": "该句描述了许仙在被法海囚禁后的心理状态和行动结果，是因法海囚禁事件导致的直接后果，体现了角色状态的转变。"
+      }
+    },
+    {
+      "sentence_index": 123,
+      "sentence": "恍恍惚惚中，他又来到了他们第一次相遇的断桥之上。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "断桥",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes许仙 arriving at the Broken Bridge, setting the stage for his reunion with白素贞 and小青. This establishes the location where the subsequent interaction occurs."
+      }
+    },
+    {
+      "sentence_index": 124,
+      "sentence": "也许是上天注定这段姻缘未断，此时白素贞与小青也一路寻找许仙至断桥处，两人意外重逢在断桥之上。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞",
+          "小青"
+        ],
+        "receivers": [
+          "许仙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the active pursuit by 白素贞 and 小青 to locate 许仙, which is an explicit action taken by the characters. The doers are 白素贞 and 小青, and the receiver is 许仙, as they are the target of the search."
+      }
+    },
+    {
+      "sentence_index": 125,
+      "sentence": "许仙万分悔恨道：“娘子，对不起，是我不该听别人挑拨误会娘子，更不应该到金山寺，害得娘子受了这么大的苦。”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Xu Xian's remorse leads to the resolution of marital conflict and renewed commitment to protect Bai Suzhen",
+        "explanation": "This sentence describes the outcome of Xu Xian's prior actions (going to金山寺) that caused Bai Suzhen's suffering. His apology marks a state change from conflict to reconciliation, demonstrating the consequence of his decision to listen to false accusations."
+      }
+    },
+    {
+      "sentence_index": 126,
+      "sentence": "白素贞哭泣着摇摇头说：“官人，我不怪你。过去的事情都已经过去了。”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "白素贞与许仙夫妻关系得到修复，双方达成和解",
+        "explanation": "该句是白素贞对许仙道歉的回应，表明两人已放下过往矛盾。这是金山寺事件后双方冲突的直接结果，导致夫妻关系从对立转向和解，符合'consequence'类别中描述前事件结果导致状态变化的定义。"
+      }
+    },
+    {
+      "sentence_index": 127,
+      "sentence": "在一旁的小青却不干了，她怒斥许仙道：“姐姐待你恩重如山，你却恩将仇报，这口气我咽不下。我非杀了你不可！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小青"
+        ],
+        "receivers": [
+          "许仙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Xiao Qing's action of scolding and threatening Xu Xian, making her the doer and Xu Xian the receiver of this verbal confrontation."
+      }
+    },
+    {
+      "sentence_index": 128,
+      "sentence": "白素贞忙阻拦小青，许仙也在一旁赌咒发誓，决不会再耳根软听信别人谗言，小青这才肯放过许仙。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞",
+          "许仙"
+        ],
+        "receivers": [
+          "小青"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 白素贞 and 许仙 actively taking measures to prevent 小青 from attacking 许仙. 白素贞 physically intervenes and 许仙 makes a vow, resulting in 小青 relenting. This constitutes an action performed by the doers with a clear receiver."
+      }
+    },
+    {
+      "sentence_index": 129,
+      "sentence": "许仙与白素贞夫妻二人雨过天晴，再一次夫妻团聚了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the couple is reunited after being separated",
+        "explanation": "The sentence describes the outcome of previous events (the fight with Fa Hai and the water flooding) leading to the couple's reconciliation and reunion, which represents a state change in their relationship status."
+      }
+    },
+    {
+      "sentence_index": 130,
+      "sentence": "许仙想到镇江水灾，他们家也受到牵连，便提议搬回钱塘门的姐姐家去住，于是三人高高兴兴地回到钱塘门。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "许仙",
+          "白素贞",
+          "小青"
+        ],
+        "receivers": [
+          "钱塘门的姐姐家"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of moving back to the sister's house after the water disaster. The doers are 许仙, 白素贞, and 小青, who collectively decide and execute the action. The receiver is the sister's house, which is the destination of their movement."
+      }
+    },
+    {
+      "sentence_index": 131,
+      "sentence": "姐姐看到许仙平安无事归来还带回一个知书达理的好媳妇，更是高兴不已。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "钱塘门",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence establishes the context of the sister's reaction to the family's return to Qiantang Gate, setting the stage for subsequent events in the narrative."
+      }
+    },
+    {
+      "sentence_index": 132,
+      "sentence": "经历了金山寺一事之后，白素贞心里始终惴惴不安，她不愿再欺瞒许仙，决定告诉许仙真相。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞"
+        ],
+        "receivers": [
+          "许仙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 白素贞's decision to reveal her true identity to 许仙, which is an active choice she intends to perform. The doer is 白素贞, and the receiver is 许仙 as she is the one she will disclose the truth to."
+      }
+    },
+    {
+      "sentence_index": 133,
+      "sentence": "“法海所言其实句句属实，我本来是一条小白蛇，有一天在修炼的时候不幸被一个捕蛇人捕获，差点儿丧命，幸亏被一位小牧童相救，才能继续在深山修炼。后来我经过修炼，终于可以蜕尽蛇身，化为人形。我一心想报答当日那小牧童的救命之恩，经观音大师指点，这才在西湖的断桥上找到了他。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "西湖的断桥",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about White Snake's past, explaining her origin as a white snake, her capture by a hunter, and her eventual transformation into human form. The location '西湖的断桥' (Broken Bridge on West Lake) is specified as the place where she found the herdsman, serving as the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 134,
+      "sentence": "“我就是救你的小牧童转世？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞"
+        ],
+        "receivers": [
+          "许仙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents White Snake's verbal confirmation of her identity as the shepherd's past-life savior, which is an action of speaking directed at 许仙."
+      }
+    },
+    {
+      "sentence_index": 135,
+      "sentence": "许仙有些迟疑地问。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "许仙"
+        ],
+        "receivers": [
+          "白素贞"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Xu Xian's action of hesitantly asking a question, with him as the doer and Bai Suzhen as the receiver of the question."
+      }
+    },
+    {
+      "sentence_index": 136,
+      "sentence": "白素贞望着许仙点点头。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞"
+        ],
+        "receivers": [
+          "许仙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an action performed by 白素贞 (White Suzhen) as she nods at 许仙 (Xu Xian), indicating her acknowledgment or agreement with his statement. This action directly involves the doer 白素贞 and the receiver 许仙."
+      }
+    },
+    {
+      "sentence_index": 137,
+      "sentence": "许仙也怔怔地看着白素贞，突然他弯腰向白素贞鞠躬，神色郑重地说：“我许仙何德何能，能娶到娘子这样贤惠温良的女子为妻，就算你身为异类，可你心地善良，又是为报恩而来。你我结为夫妻之后，你利人济世，行医布善，谁不称赞你是救苦救难的活菩萨，我感激你还来不及，怎么会畏惧你呢？以前不知道，所以听信了谗言就怀疑猜忌，现在我什么都知道了，我一定会好好保护你，保护我们将要出世的孩子。再没有人可以拆散我们了！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "许仙"
+        ],
+        "receivers": [
+          "白素贞"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes许仙 performing the action of bowing and speaking to白素贞, which represents his act of reconciliation and commitment after overcoming doubts. The action directly involves许仙 as the doer and白素贞 as the receiver of his gesture and words."
+      }
+    },
+    {
+      "sentence_index": 138,
+      "sentence": "白素贞感动得泪水涟涟，从此夫妻间再也没有间隙。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "白素贞与许仙夫妻间的关系完全修复，不再存在隔阂",
+        "explanation": "该句描述了许仙道歉并承诺保护白素贞后，两人关系彻底和解的结局，属于前序事件（许仙悔悟并承诺）导致的状态变化"
+      }
+    },
+    {
+      "sentence_index": 139,
+      "sentence": "不久，两人重开医馆，济世救人，钱塘门的百姓受到他们的恩惠，无人不赞他们夫妻是济世的活菩萨。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "钱塘门的百姓受到他们的恩惠，无人不赞他们夫妻是济世的活菩萨",
+        "explanation": "该句描述了白素贞与许仙重开医馆、济世救人的行为带来的社会影响，即钱塘门百姓对其的赞誉，属于前行动作（重开医馆）导致的状态变化，符合'consequence'分类。"
+      }
+    },
+    {
+      "sentence_index": 140,
+      "sentence": "不久后，白素贞生下麟儿，为儿子取名许仕林。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白素贞"
+        ],
+        "receivers": [
+          "麟儿"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Bai Suzhen giving birth to a son, which is an active action performed by her. The son (麟儿) is the direct recipient of this action."
+      }
+    },
+    {
+      "sentence_index": 141,
+      "sentence": "可是孩子还尚未满月，法海却突然出现。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the timing context (child not yet a month old) leading to Fa Hai's sudden appearance, setting the stage for the subsequent conflict. It provides background context without introducing new actions, tasks, or state changes."
+      }
+    },
+    {
+      "sentence_index": 142,
+      "sentence": "原来当日法海与白素贞斗法之时发现她已怀有身孕，而她肚中的婴儿正是天上的文曲星下凡转世。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about Bai Suzhen's pregnancy and the identity of her unborn child as the reincarnation of the heavenly scholar Wen Qu Star, which sets up the motivation for Fa Hai's later actions. No specific location is mentioned in the sentence."
+      }
+    },
+    {
+      "sentence_index": 143,
+      "sentence": "法海投鼠忌器，只得等待白素贞产下文曲星之后，再将其收服。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "法海决定等待白素贞产下文曲星后再收服她",
+        "explanation": "该句描述了法海因发现白素贞怀有文曲星转世的婴儿而改变策略，决定等待其出生后再收服她的后果。这是对前文（法海发现白素贞怀孕）事件的直接结果，导致法海调整了行动方案。"
+      }
+    },
+    {
+      "sentence_index": 144,
+      "sentence": "如今，他得知白素贞已产下婴儿，就趁机来收服这只千年蛇妖。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "法海"
+        ],
+        "receivers": [
+          "白素贞"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes法海's active action of capturing白素贞 as a千年蛇妖 after learning she has given birth to an infant, making him the doer and白素贞 the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 145,
+      "sentence": "白素贞刚刚产子，身子还很虚弱，根本斗不过法海。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes 白素贞's physical state after giving birth, establishing why she is unable to resist 法海's capture. This sets the context for the subsequent events (her capture) without introducing a new location."
+      }
+    },
+    {
+      "sentence_index": 146,
+      "sentence": "她几番拼力抗衡后，最终被法海所擒。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "白素贞被法海所擒",
+        "explanation": "该句描述了白素贞在与法海对抗后被擒的结局，是其先前拼力抗衡行动的直接结果，符合'consequence'类别中因前序事件导致状态变化的定义。"
+      }
+    },
+    {
+      "sentence_index": 147,
+      "sentence": "法海将白素贞强行收于金钵之中，压于雷峰塔下。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "法海"
+        ],
+        "receivers": [
+          "白素贞"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action taken by Fahai (doer) to imprison Bai Suzhen (receiver) in a golden basin and place her under the Leifeng Pagoda, which is a direct consequence of her prior capture."
+      }
+    },
+    {
+      "sentence_index": 148,
+      "sentence": "临进塔时，法海说：“白素贞，你若能彻底悔悟，虔心修行，二十年后，文曲星高中状元之日，就是你出塔之时。你千万不可再心系凡尘，擅离宝塔，否则西湖水干，雷峰塔倒，你也难出世。你好自为之，阿弥陀佛。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "雷峰塔",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the conditions set by Fahai for White Snake's release from the Leifeng Tower, establishing the narrative context for future events. The location is explicitly mentioned as the target location."
+      }
+    },
+    {
+      "sentence_index": 149,
+      "sentence": "许仙眼睁睁看着妻子被法海带走却无能为力，他伤心欲绝，只恨不能替妻子受罪。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "许仙因无法拯救妻子而陷入极度悲痛，决定独自前往金山寺出家赎罪",
+        "explanation": "该句描述了法海带走白素贞这一事件对许仙造成的直接后果，即他因无力拯救妻子而产生强烈悲痛情绪，并由此决定出家赎罪。这是对前文法海收服白素贞行动的直接结果描述。"
+      }
+    },
+    {
+      "sentence_index": 150,
+      "sentence": "他将儿子许仕林交予姐姐与姐夫抚养，自己则独自前往金山寺出家，同白素贞一起赎罪，希望以此弥补罪过，早日功德圆满放他妻子出塔。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "许仙"
+        ],
+        "receivers": [
+          "许仕林",
+          "姐姐",
+          "姐夫"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes许仙's active decision to entrust his son to his family and personally go to the temple to seek redemption, which are specific actions taken in response to his wife's capture."
+      }
+    },
+    {
+      "sentence_index": 151,
+      "sentence": "小青自知无法救白素贞出塔，懊恼不已。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "小青因无法救出白素贞而感到懊恼和沮丧",
+        "explanation": "该句描述了小青在意识到无法救出白素贞后的心理状态，是此前尝试救援失败后的直接结果，符合'consequence'类别中描述前事件结果导致状态变化的定义。"
+      }
+    },
+    {
+      "sentence_index": 152,
+      "sentence": "后来幸得观音菩萨点化，返回白龙洞潜心修炼。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Xiao Qing returns to White Dragon Cave to meditate",
+        "explanation": "This sentence describes the outcome of Xiao Qing's failure to rescue Bai Suzhen, leading her to seek spiritual guidance from Guanyin and retreat to her original cave for further cultivation."
+      }
+    },
+    {
+      "sentence_index": 153,
+      "sentence": "二十年后，许仕林长大成人。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates a passage of time (twenty years later) and marks the transition of Xu Shilin to adulthood, setting the stage for future events in the narrative. It provides temporal context without specifying a location."
+      }
+    },
+    {
+      "sentence_index": 154,
+      "sentence": "他聪敏过人，读书过目不忘。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Xu Shilin's intellectual traits as part of the narrative setup, establishing his capabilities that will later influence his actions. It provides background context for his subsequent determination to rescue his mother."
+      }
+    },
+    {
+      "sentence_index": 155,
+      "sentence": "当他得知自己的身世后，更加奋发图强，立誓要救母亲白素贞出塔。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "许仕林"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates许仕林's commitment to a specific responsibility (rescuing his mother白素贞 from the雷峰塔), classifying it as a 'task' with the primary role being许仕林."
+      }
+    },
+    {
+      "sentence_index": 156,
+      "sentence": "果然，他不负众望，考取状元归来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "许仕林考取状元归来",
+        "explanation": "该句描述了许仕林通过努力考取状元归来，这是他履行救母任务的关键成果，改变了他此前尚未取得功名的状态，为后续救出白素贞奠定了基础。"
+      }
+    },
+    {
+      "sentence_index": 157,
+      "sentence": "许状元祭拜于雷峰塔前，孝感动天，白素贞终于飘然出塔，一家人团聚在一起，喜极而泣。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "White Snake is released from the tower, leading to the family's reunion and emotional reunion",
+        "explanation": "The sentence describes the outcome of Xu Shilin's prayer at Leifeng Tower, resulting in White Snake's release from the tower and the family's emotional reunion. This is a consequence of the prior action (prayer) that directly alters the state of the characters involved."
+      }
+    },
+    {
+      "sentence_index": 158,
+      "sentence": "团聚后的白素贞与许仙二人感念此前一生，悟道成仙，双双飞升而去。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "白素贞与许仙达成圆满结局，通过悟道成仙并飞升成仙",
+        "explanation": "该句描述了白素贞与许仙在经历诸多磨难后最终获得圆满结局的因果结果，属于前文事件（如法海囚禁、许仕林祭拜等）导致的状态变化，体现人物从凡人到仙人的转变。"
+      }
+    }
+  ]
+}

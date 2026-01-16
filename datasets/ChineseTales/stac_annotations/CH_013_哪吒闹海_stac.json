@@ -1,0 +1,1753 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_013_哪吒闹海.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 115,
+  "analyzed_sentences": 115,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "商朝末年，陈塘关有一位总兵，名叫李靖。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "陈塘关",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过时间（商朝末年）和地点（陈塘关）的设定，为后续故事发展建立背景框架，引入核心人物李靖，属于叙事背景铺垫。"
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "他少年时诚心求道，上山寻仙学法，可是后来见成仙机会渺茫，便下山辅佐商纣王，统领兵将，守卫陈塘关，过着富庶的生活。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "陈塘关",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about Li Jing's past choices and career path, establishing his role as a general in Ointang Pass. This sets the stage for future events in the story."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "他还娶了个贤惠的妻子——殷氏。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "陈塘关",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence establishes the marital status of Li Jing in Chentang Pass, providing background context for his family life and setting the stage for subsequent events involving his wife Yinshi and their children."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "殷氏已经为他生了两个儿子，长子名叫金吒，次子名叫木吒，他们都早早上山拜了仙人学习法术。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "陈塘关",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描述李靖妻子殷氏已生育两个儿子并送他们学法术，为后续故事中哪吒的出生和成长提供了家庭背景，属于设定故事基础情境的'situation'类别。"
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "可是最近李靖却愁容满面，不知道如何是好。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "陈塘关",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述李靖因妻子怀孕三年多未生产而忧愁的状态，为后续哪吒降生及引发的冲突埋下伏笔，属于故事背景设定。"
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "原来他的妻子殷氏在三年零六个月前又一次怀孕，可是不知道什么原因，直到今天还没有生产。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "陈塘关",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过交代李靖妻子殷氏怀孕三年零六个月仍未生产的异常情况，为后续哪吒出生及引发的冲突埋下伏笔，属于故事背景设定。"
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "看着妻子挺着硕大的肚子，他越发担心，寻常孕妇一年即可分娩，可夫人怀孕已经三年多了，这肚子里的孩子肯定不是妖精就是鬼怪。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "陈塘关",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述李靖因妻子殷氏怀孕三年多迟迟未生产而产生的担忧，为后续哪吒出生及引发的冲突埋下伏笔，属于故事背景设定。"
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "一天夜里，殷氏刚刚入睡，却在梦中看见一个道士向自己而来，边走边说道：“夫人快快接住麟儿！”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Yinshi's dream of a Taoist priest approaching her, which sets the stage for the birth of Nezha. This establishes the context for the subsequent events leading to the birth and the divine intervention, fitting the 'situation' category as it provides background context for future developments."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "殷氏惊醒，只觉得肚子疼痛，正是要临盆的征兆，赶忙唤侍女进来帮忙。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "殷氏"
+        ],
+        "receivers": [
+          "侍女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes殷氏 taking active steps by calling for a servant after realizing she is about to give birth, which constitutes an action performed by her and directed towards the servant."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "李靖在房外焦急等待着殷氏生产，不一会儿一名侍女慌张跑出来跟李靖报告：“夫人产下了一个肉球！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "李靖",
+          "侍女"
+        ],
+        "receivers": [
+          "李靖"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes two actions: 李靖 waiting for his wife to give birth (action performed by 李靖) and the servant reporting the birth (action performed by 侍女). The receiver of the report is 李靖."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "李靖大骇，提着剑来到内室，只见房里一团红气，满屋异香，一个肉球滚到了李靖脚边。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "李靖"
+        ],
+        "receivers": [
+          "内室"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Li Jing's action of entering the inner chamber with his sword, which is an active behavior he performs in response to the situation. The 'receivers' field refers to the location (内室) he interacts with during this action."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "李靖心想：“这果然是个妖物。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "内室",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述李靖在看到肉球时的内心想法，为后续他挥剑斩杀肉球的行动提供心理背景，属于故事发展中的情境铺垫。"
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "挥剑便向着肉球砍去，肉球被劈开两半，霎时间满地红光，只见一个小男孩从里面跳了出来，他右手套一金镯，肚子上围着一块红绫，看起来可爱极了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "李靖"
+        ],
+        "receivers": [
+          "肉球"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Li Jing's active action of cutting the meat ball with his sword, which directly leads to the emergence of the baby. The action is performed by Li Jing and targets the meat ball as the receiver."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "李靖上前将他抱起，那孩子也不哭闹，就依偎在李靖怀中，睁着大大的眼睛好奇地瞅着李靖。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "李靖"
+        ],
+        "receivers": [
+          "哪吒"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Li Jing's action of picking up the newborn child (哪吒) and his subsequent behavior. The doer is Li Jing, and the receiver is the child."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "这时，下人禀报说外面有个道士求见。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "陈塘关",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过下人禀报的情节，为后续太乙真人求见李靖的情节发展提供背景信息，属于故事进展中的情境铺垫。叙事焦点位于陈塘关内发生的事件。"
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "李靖连忙请那名道士进屋来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "李靖"
+        ],
+        "receivers": [
+          "道士"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Li Jing actively performing the action of inviting the Taoist priest into the room, making him the doer and the priest the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "道士自称是金光洞中太乙真人。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "金光洞",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过揭示道士身份（太乙真人）及其所属洞府（金光洞），为后续哪吒的命名仪式和师徒关系建立提供背景信息，属于设定故事发展基础的情境描述。"
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "他看见李靖怀中的小孩儿，便笑着问他可取名字？",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "太乙真人"
+        ],
+        "receivers": [
+          "李靖"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 太乙真人 actively performing the action of asking 李靖 to name the child, making 太乙真人 the doer and 李靖 the receiver of the request."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "李靖回答说：“还没有取名字。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "李靖"
+        ],
+        "receivers": [
+          "太乙真人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Li Jing's action of responding to the Taoist priest's question about naming the child, indicating his agreement to the proposed task."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "太乙真人听后点点头笑着说道：“那贫道为他起个名字，让他拜贫道为师，可好？”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "李靖"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task where 太乙真人 proposes to name the child and have him become his disciple, requiring 李靖 to agree."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "李靖连忙替孩子拜谢道：“愿拜真人为师。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "李靖"
+        ],
+        "receivers": [
+          "太乙真人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 李靖's active response to 太乙真人的 offer, where he bows and expresses willingness to have the priest as his son's teacher. This is an action performed by 李靖 directed towards 太乙真人."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "太乙真人又摸了摸那小孩儿的头说道：“就为他取名哪吒吧。这孩子一出生就佩戴着的金镯是乾坤圈，腹上系着的红绫是混天绫，这都是贫道送他的见面礼。贫道今日还有事，就此别过。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "太乙真人"
+        ],
+        "receivers": [
+          "哪吒"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 太乙真人 performing the action of naming the child 哪吒 and gifting him the乾坤圈 and 混天绫. The doer is 太乙真人, and the receiver is the child 哪吒."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "李靖谢过了太乙真人的赠名赐宝，送走真人后，李靖抱着哪吒去看殷氏，夫妻俩对哪吒皆是疼爱不已。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "李靖"
+        ],
+        "receivers": [
+          "哪吒",
+          "殷氏"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 李靖's action of taking 哪吒 to visit his wife 殷氏, which directly leads to the couple's affection towards 哪吒. The action involves 李靖 as the doer and 哪吒 (the child) and 殷氏 (the wife) as the receivers of the action."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "白驹过隙，瞬息光阴，转眼已是七年过去。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "陈塘关",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过时间流逝的描述为后续情节发展（如哪吒成长、与四海龙王冲突等）建立时间背景，属于设定故事进展阶段的'情况'分类。"
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "小哪吒也已经七岁。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background information about Nezha's age, setting the context for his subsequent actions in the story. It establishes the timeline leading to his encounter with the sea general, but does not mention a specific location."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "这一年五月，天气燥热无比，哪吒便与同龄的小朋友一起来到九湾河东海口洗澡。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "九湾河东海口",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过时间（五月）和地点（九湾河东海口）的描述，为后续哪吒与小朋友洗澡引发冲突的事件建立背景场景，属于情境设定。"
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "他解下混天绫，将它蘸水擦身，这混天绫本是乾坤宝物，一入水便把水都映红了，摆一摆，便摇的江河晃动。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "混天绫",
+          "水"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒 actively performing the action of dipping his混天绫 in water, which directly affects both the混天绫 (the object being dipped) and the surrounding water. The resulting effect on the river is a consequence of this action."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "哪吒只是在河中洗澡，就搅得水浪翻滚，连那海底深处的水晶宫也剧烈晃动起来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "水浪翻滚，连那海底深处的水晶宫也剧烈晃动起来",
+        "explanation": "该句描述了哪吒在河中洗澡导致的直接后果，即水浪翻滚和水晶宫剧烈晃动，属于前序行动（使用混天绫）引发的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "东海龙王正在水晶宫中欣赏歌舞，忽然间只觉整个宫殿都在摇晃，他赶忙派遣巡海夜叉李艮前往海口查看到底是谁在兴风作浪。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "东海龙王"
+        ],
+        "receivers": [
+          "巡海夜叉李艮"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the东海龙王 taking an active step (sending巡海夜叉李艮) in response to the disturbance caused by哪吒's actions, which qualifies as an 'action' category."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "夜叉领命前往九湾河查看。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "夜叉"
+        ],
+        "receivers": [
+          "九湾河"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the night fork (李艮) performing the action of being sent to investigate at Jiuban River, making it an 'action' category with the doer as the night fork and the location as the receiver."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "只见一群小孩儿在水中嬉戏，为首的小男孩正用红绫蘸水洗澡。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "水"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the leading boy (哪吒) using the red silk (混天绫) to wash in the water, which directly leads to the subsequent conflict with the night叉. The action involves the doer (哪吒) interacting with the water as the receiver."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "那条红绫入水便发出红色光芒，映红了整片河水。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the entire river turned red",
+        "explanation": "The sentence describes the outcome of the prior action (which is the red silk being dipped in water), resulting in the river turning red. This is a consequence of the magical properties of the red silk."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "夜叉想上去看仔细，顺便吓吓他们，便浮出水面大喊道：“你这小孩儿耍的什么怪东西？把河水都映红了！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "夜叉"
+        ],
+        "receivers": [
+          "孩子们"
+        ],
+        "changed_state": "",
+        "explanation": "该句描述夜叉主动浮出水面并大喊的行为，属于角色主动实施的动作。夜叉是行为执行者，'孩子们'是其针对的对象，符合'action'类别中'doers'和'receivers'的标注要求。"
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "哪吒忽听背后有人说话，扭头去看却是一个红头发蓝脸庞，张着血盆大口，满口獠牙，手持大斧的妖怪站在身后。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "妖怪"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒 performing the action of turning around to look at the妖怪, which is a direct physical action initiated by哪吒 towards the妖怪."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "他反问道：“你这畜生，又是个什么东西？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "夜叉"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒's active response to the night叉's accusation, indicating an ongoing confrontation where哪吒 directly addresses the night叉's threat. This dialogue represents an active interaction driving the conflict."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "夜叉听到哪吒骂他，勃然大怒，“我乃是玉帝御笔钦点的巡海夜叉，你竟敢骂我是畜生？”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the night叉 becomes enraged due to being insulted by哪吒",
+        "explanation": "The sentence describes the consequence of哪吒's insult, leading to the night叉's anger, which directly precipitates his subsequent attack. This emotional reaction is a state change triggered by the prior action of verbal abuse."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "说着从水中跳起，往哪吒头顶上就是一斧劈来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "夜叉"
+        ],
+        "receivers": [
+          "哪吒"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes a physical attack action performed by the night叉 (a demon guard) against哪吒. The doer is the night叉 executing the attack, and the receiver is哪吒 who is the target of the axe strike."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "哪吒正赤身站在水中，见夜叉来得凶猛，忙侧身躲开，顺势把右手套的乾坤圈向空中一举，正砸在了夜叉头上。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "夜叉"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒 actively performing the action of dodging an attack and using the乾坤圈 to strike the night叉, making him the clear doer and the night叉 the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "夜叉哪里经得起乾坤圈这样的宝物一击，顿时脑浆迸流，一命呜呼。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the night叉 was killed by the乾坤圈's attack",
+        "explanation": "The sentence describes the outcome of the prior action where哪吒 used the乾坤圈 to strike the night叉, resulting in the night叉's death. This is a direct consequence of the earlier action."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "哪吒看到乾坤圈上染了夜叉的血迹，便又将乾坤圈置于水中用混天绫擦洗。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "乾坤圈"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒 actively performing the action of cleaning the乾坤圈 with the混天绫. The doer is哪吒, and the receiver is the乾坤圈, which is the object being cleaned."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "水晶宫如何经得起这两件宝物折腾，险些把宫殿都晃倒了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the palace almost collapsed due to the two treasures",
+        "explanation": "The sentence describes the outcome of the prior action (using乾坤圈 and混天绫 in the water), resulting in the水晶宫 being damaged. This is a consequence of the previous events."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "东海龙王看着自己的宫殿东倒西歪，人仰马翻，非常生气。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "东海龙王因宫殿受损而愤怒，导致后续追查哪吒并引发四海龙王围攻陈塘关的事件",
+        "explanation": "该句描述了哪吒攻击水晶宫导致宫殿受损后，东海龙王的愤怒反应，这是对前文哪吒使用法宝破坏宫殿的直接结果，触发了后续追查和冲突升级的连锁反应。"
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "他问起派去巡海的夜叉怎么还不回来，一个虾兵气喘吁吁地跑来报告：“巡海夜叉李艮已被一个孩童打死了。”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the East Sea Dragon King is informed that his patrol officer, Kui Gan, has been killed by a child, leading to his anger and the subsequent conflict with Nezha",
+        "explanation": "The sentence describes the outcome of the prior event (Nezha killing Kui Gan) by conveying the dragon king's awareness of the death, which triggers his anger and sets in motion the conflict with Nezha."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "东海龙王听后大惊道：“李艮可是灵霄殿御笔点差的巡海夜叉，谁敢打死？”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "东海水晶宫",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the East Sea Dragon King's reaction to the news of his night watchman's death, setting the stage for the subsequent conflict with哪吒. The location is specified as the东海水晶宫 where the dragon king resides."
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "这时龙王三太子敖丙站出来，请令愿前往九湾河将杀死夜叉之人捉回。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "敖丙"
+        ],
+        "receivers": [
+          "东海龙王"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes敖丙 taking initiative by requesting permission from the东海龙王 to pursue the killer of李艮, indicating an active action performed by敖丙 with the dragon king as the recipient of his request."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "哪吒尚不知水晶宫中情况，还跟小伙伴在水中玩得高兴，突然间浪如山倒，波涛横生，霎时间水涨数尺之高。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "九湾河",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the setting of the nine bends river where the subsequent conflict between Nezha and the sea dragon's son unfolds, establishing the context for the escalating events."
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "小伙伴们都禁不住水浪，有的被打上岸去，有的给卷入水中，哪吒忙将伙伴们一一救起。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "小伙伴们"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒 actively performing the action of rescuing his companions from the water surge, making it an 'action' category. The doer is 哪吒, and the receivers are the 小伙伴们."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "等哪吒回头看去，只见波浪中有一水兽踏水而出，兽上坐着一人，持戟大叫道：“是谁打死了巡海夜叉李艮？”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "九湾河东海口",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了哪吒在九湾河东海口遭遇敖丙的场景，为后续冲突埋下伏笔，属于背景情境的铺垫。"
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "哪吒回答说：“是我。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "敖丙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒's verbal response to敖丙's accusation, which is an active interaction where哪吒 takes responsibility for his actions. This dialogue directly contributes to the escalating conflict between哪吒 and the dragon kings."
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "敖丙见这小孩儿看到自己毫不惊恐，心中诧异。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "九湾河东海口",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述敖丙在九湾河东海口目睹哪吒不惧自己时的心理反应，为后续哪吒与敖丙的冲突埋下伏笔，属于情节发展的背景铺垫。"
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "便又问道：“你是谁？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "敖丙"
+        ],
+        "receivers": [
+          "哪吒"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents an action where敖丙 (the doer) directly addresses哪吒 (the receiver) by asking '你是谁？' (Who are you?), which is a key interaction in the narrative progression."
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "哪吒回答说：“我乃陈塘关李靖第三子哪吒。今天我在这里洗澡，是他先跑来打我，我才失手打死了他。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "敖丙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒's action of defending himself by explaining his actions to敖丙, which is part of the ongoing conflict between them."
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "敖丙大怒：“李艮乃是灵霄殿御笔钦点，你竟将他打死，还敢在这胡言乱语！”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "敖丙因哪吒杀死李艮而愤怒，准备攻击他",
+        "explanation": "该句描述了哪吒杀死李艮这一行为导致的直接后果，即敖丙的愤怒情绪及后续攻击意图的产生，属于事件的连锁反应。"
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "说罢提起画戟便刺向哪吒。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "敖丙"
+        ],
+        "receivers": [
+          "哪吒"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes敖丙 actively performing the action of lunging at哪吒 with a halberd, making him the doer and哪吒 the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "哪吒忙躲开画戟，扭身将七尺混天绫甩向敖丙。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "敖丙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒 actively performing the action of dodging a spear and throwing his混天绫 at敖丙, indicating a physical struggle between the two characters."
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "敖丙被混天绫缠绕，被逼滚到岸上。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "敖丙被混天绫缠绕并被逼滚到岸上，导致其失去战斗能力",
+        "explanation": "该句描述了哪吒使用混天绫攻击敖丙后产生的直接结果，属于前序动作（甩出混天绫）的后果，导致敖丙被束缚并被迫退至岸边，改变了战斗局势。"
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "哪吒抢先一步上岸，一脚踏住敖丙的颈项，提起乾坤圈照着他头顶打下去，直把敖丙的元神打出，变回了一条龙，在地上挺直。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "敖丙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒 actively performing physical actions against敖丙, including stepping on his neck and striking him with the乾坤圈, which directly affects敖丙's state."
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "哪吒看到笑着说道：“你这恶龙，与其留你在世间为恶，不如让我抽了你的筋回去给我父亲系盔甲用。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "敖丙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒's verbal declaration of intent to extract敖丙's dragon筋, which directly precedes the action of taking the筋. This statement is part of the active confrontation between哪吒 and敖丙, making it an 'action' with哪吒 as the doer and敖丙 as the receiver."
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "说着哪吒动手把敖丙的龙筋抽出，大摇大摆地带回了陈塘关。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "敖丙的龙筋"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒 actively performing the action of extracting敖丙's dragon tendons and bringing them back to Chantang Pass, making it an 'action' category with哪吒 as the doer and the dragon tendons as the receiver."
+      }
+    },
+    {
+      "sentence_index": 60,
+      "sentence": "哪吒年幼，不知自己已闯下弥天大祸。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes Nezha's youthful ignorance of his actions' severity, setting context for the impending conflict with the sea kings. It provides background on his state of mind without introducing new events, tasks, or direct consequences."
+      }
+    },
+    {
+      "sentence_index": 61,
+      "sentence": "他兴冲冲地将龙筋拿回家给李靖看，原以为父亲会夸赞自己，可谁知李靖一见龙筋大惊失色，待问清哪吒来龙去脉后，更是面如土色，狠狠地说道：“你这孽子，你犯下大错还不自知，我养你何用！”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "李靖因哪吒杀害东海龙王三太子敖丙并抽其龙筋而愤怒，质问哪吒的过错，导致父子关系恶化并引发后续冲突",
+        "explanation": "该句描述了哪吒杀害敖丙并抽其龙筋的行为导致李靖的强烈反应，这是先前行动（杀害夜叉和敖丙）的直接结果，引发家庭矛盾和后续事件，符合'consequence'分类。"
+      }
+    },
+    {
+      "sentence_index": 62,
+      "sentence": "且说水晶宫中，逃回的虾兵蟹将三太子敖丙也被哪吒所杀，还被抽了龙筋的消息带回给东海龙王。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "东海龙王得知三太子敖丙被哪吒所杀并被抽走龙筋后，愤怒至极，发誓要找李靖一家算账",
+        "explanation": "该句描述了哪吒杀死敖丙并抽走龙筋这一行为导致的直接后果，即东海龙王得知消息后的愤怒反应和复仇决心，符合'consequence'类别。状态变化体现在东海龙王由平静转为愤怒并采取报复行动。"
+      }
+    },
+    {
+      "sentence_index": 63,
+      "sentence": "东海龙王丧子心痛，更是勃然大怒，发誓一定要找李靖一家算账。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "东海龙王因丧子而愤怒，发誓要找李靖一家算账，导致四海龙王联合水淹陈塘关",
+        "explanation": "该句描述了哪吒杀害敖丙这一事件的直接后果，即东海龙王因丧子之痛而勃然大怒，并发誓要追究李靖一家责任，最终引发四海龙王联合水淹陈塘关的行动。这是对先前事件（哪吒杀敖丙）的直接结果描述。"
+      }
+    },
+    {
+      "sentence_index": 64,
+      "sentence": "他请来了西海龙王、南海龙王、北海龙王，让他们为自己做主，四海龙王一起兴风作浪，水淹陈塘关，要李靖交出哪吒。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "西海龙王",
+          "南海龙王",
+          "北海龙王",
+          "东海龙王"
+        ],
+        "receivers": [
+          "陈塘关",
+          "李靖"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action taken by the four sea kings (西海龙王, 南海龙王, 北海龙王, 东海龙王) to flood Chantang Pass and demand Li Jing to hand over Nezha, which is a direct consequence of their vengeful intent."
+      }
+    },
+    {
+      "sentence_index": 65,
+      "sentence": "李靖正要前往东海向龙王请罪，谁知四海龙王已经找上门来。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "东海",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of Li Jing's impending confrontation with the four sea kings (东海龙王) and sets the stage for the subsequent conflict, focusing on the location of the East Sea."
+      }
+    },
+    {
+      "sentence_index": 66,
+      "sentence": "他们不肯听李靖解释，引发洪水将陈塘关围困，天空阴云密布，不时传来雷声阵阵。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the four sea kings' refusal to listen to Li Jing's explanation led to a flood surrounding Chengtang Pass and stormy weather",
+        "explanation": "The sentence describes the outcome of the four sea kings ignoring Li Jing's explanation, resulting in a flood and stormy weather that surrounds Chengtang Pass, marking a significant state change in the narrative."
+      }
+    },
+    {
+      "sentence_index": 67,
+      "sentence": "哪吒想要出城还击，却被李靖阻拦。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "李靖"
+        ],
+        "receivers": [
+          "哪吒"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Li Jing's action of blocking Nezha from leaving the city to fight back, making Li Jing the doer and Nezha the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 68,
+      "sentence": "李靖怕他再惹是生非，便收了他的乾坤圈与混天绫，还将哪吒绑起来命家人好好看守。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "李靖"
+        ],
+        "receivers": [
+          "哪吒",
+          "家人"
+        ],
+        "changed_state": "",
+        "explanation": "李靖主动执行了收缴乾坤圈与混天绫、捆绑哪吒并命令家人看守的行动，直接作用对象为哪吒本人及其家人，属于典型的主动行为描述。"
+      }
+    },
+    {
+      "sentence_index": 69,
+      "sentence": "哪吒没有了武器，又见父亲这样对自己，他心里满是委屈。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "哪吒感到委屈",
+        "explanation": "该句描述了李靖收缴乾坤圈与混天绫并绑住哪吒这一行动导致的直接结果，即哪吒产生委屈情绪，属于前序事件（李靖的行动）引发的心理状态变化。"
+      }
+    },
+    {
+      "sentence_index": 70,
+      "sentence": "他向父亲大声辩解：“是他们先动手打我的！爹爹，你让我出去！打得过，我就一个人翻江倒海，保护陈塘关；打不过，我一个人拼了命也就算了，绝不连累陈塘关的无辜百姓，还有爹爹娘亲。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "四海龙王",
+          "陈塘关百姓"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒's decision to confront the sea dragons (四海龙王) and protect his family and the city (陈塘关百姓), which is an active choice he is about to take."
+      }
+    },
+    {
+      "sentence_index": 71,
+      "sentence": "李靖要将哪吒交给四海龙王处置，可是殷氏每日都哭着求他不要交出哪吒。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "陈塘关",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了李靖欲将哪吒交给四海龙王处置，但殷氏极力反对的冲突情境，为后续剧情发展（如哪吒逃亡、李靖追击等）奠定背景，属于情境类描述。"
+      }
+    },
+    {
+      "sentence_index": 72,
+      "sentence": "而他虽然憎恨哪吒闯下大祸，可也始终不忍心让哪吒去死。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "陈塘关",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述李靖在面对哪吒闯祸时的内心矛盾，为后续情节发展（如哪吒自尽、重生等）提供情感和心理背景，属于设定故事后续发展的场景基础。"
+      }
+    },
+    {
+      "sentence_index": 73,
+      "sentence": "就这样一日一日过去，围着陈塘关的洪水一直没有褪去，满城的百姓都日夜生活在恐惧与焦灼之中。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the flood persists around Chentang Pass, causing the citizens to live in fear and anxiety",
+        "explanation": "The sentence describes the ongoing impact of the prior conflict between Kaita and the sea kings, detailing the persistent flood and its effect on the citizens, which directly results from the earlier events."
+      }
+    },
+    {
+      "sentence_index": 74,
+      "sentence": "哪吒不忍心因为自己的过错而牵连陈塘关所有百姓遭殃，更不愿看母亲终日以泪洗面。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "陈塘关",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒's internal conflict and motivation regarding the plight of O塘关's citizens and his mother, establishing the emotional context that drives his subsequent actions. The location '陈塘关' is explicitly mentioned as the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 75,
+      "sentence": "终于有一日趁家人看守不备，他提起李靖的宝剑就跑出城去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "李靖的宝剑"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒 actively taking his father's sword and fleeing the city, which is a direct action performed by him. The receiver is the sword he took, and the location (陈塘关) is implied but not explicitly listed as a receiver."
+      }
+    },
+    {
+      "sentence_index": 76,
+      "sentence": "李靖和殷氏知道后也赶忙追了出去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "李靖",
+          "殷氏"
+        ],
+        "receivers": [
+          "哪吒"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Li Jing and Yin Shi actively pursuing Nezha after he fled, making it an 'action' category. The doers are the parents, and the receiver is Nezha, who is being chased."
+      }
+    },
+    {
+      "sentence_index": 77,
+      "sentence": "陈塘关外，四海龙王眼见哪吒出城，便祭出飓风将哪吒团团围住，唯恐他逃走，更不让李靖夫妇上前。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "四海龙王"
+        ],
+        "receivers": [
+          "哪吒",
+          "李靖夫妇"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action taken by the Four Sea Dragon Kings to surround Nezha with a hurricane and block Li Jing's family from approaching, representing a direct intervention in the conflict."
+      }
+    },
+    {
+      "sentence_index": 78,
+      "sentence": "只见哪吒以剑指天，大喊道：“老妖龙，你听着！我一人做事一人当，不许你们祸害别人！既然我杀了你的儿子，如今我愿一命抵一命，我死后你们便褪去洪水，不许再为难于陈塘关百姓和我爹爹！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "东海龙王"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒's direct action of pointing his sword at the sky and declaring his intent to take responsibility for his actions, addressing the东海龙王 as the primary receiver of his declaration."
+      }
+    },
+    {
+      "sentence_index": 79,
+      "sentence": "东海龙王隐在阴云密布处，听到哪吒的话后，也现身答应道：“好！只要你死了我就再不追究！”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "东海龙王决定停止追究哪吒的责任并撤回对陈塘关的洪水威胁",
+        "explanation": "该句描述了哪吒主动承担后果后，东海龙王做出的回应，属于前事件（哪吒的自我牺牲宣言）导致的状态变化，即龙王放弃复仇并解除对陈塘关的围困。"
+      }
+    },
+    {
+      "sentence_index": 80,
+      "sentence": "“哪吒！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "殷氏"
+        ],
+        "receivers": [
+          "哪吒"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents殷氏 calling out to哪吒, which is an active interaction where she attempts to stop him from committing suicide. This action directly involves殷氏 as the doer and哪吒 as the receiver."
+      }
+    },
+    {
+      "sentence_index": 81,
+      "sentence": "身后传来殷氏的大声呼唤，哪吒举起剑，回头望了父母一眼，含泪说道：“爹爹娘亲，你们的骨肉我还给你们，我不连累你们！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "殷氏",
+          "李靖"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒 performing the action of turning around, looking at his parents, and speaking to them. The doer is哪吒, and the receivers are his parents (殷氏 and李靖) as he addresses them directly."
+      }
+    },
+    {
+      "sentence_index": 82,
+      "sentence": "说完他用剑割下自己胳膊上的一片肉，殷氏心疼地大呼不要，李靖也不忍再看下去，他拉住殷氏扭开头不看哪吒。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "殷氏",
+          "李靖"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒 actively performing the action of cutting off his own arm with a sword, which directly involves the doer '哪吒' and the receivers '殷氏' and '李靖' who react to his action."
+      }
+    },
+    {
+      "sentence_index": 83,
+      "sentence": "哪吒又看向李靖，然后竟咬牙又剔下一段骨头，殷氏再也看不下去，大叫一声昏死过去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "殷氏",
+          "骨"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 哪吒 actively performing the action of removing a piece of his own bone, which directly causes殷氏 to faint. The doer is 哪吒, and the receivers are the bone (the object being removed) and殷氏 (who reacts to the action)."
+      }
+    },
+    {
+      "sentence_index": 84,
+      "sentence": "最后哪吒缓缓抬起头，将宝剑举起向着脖颈处划下，顿时血流不止。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒 performing the action of raising a sword and cutting his own neck, which is a direct physical act. The doer is clearly哪吒, and there is no explicit receiver as the action is self-inflicted."
+      }
+    },
+    {
+      "sentence_index": 85,
+      "sentence": "他用尽最后的力气，举起手伸向高空，大喊着：“师父！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "太乙真人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒's final action of raising his hand and shouting 'Teacher!' directed towards his mentor 太乙真人, indicating an active performance by哪吒 and a recipient of the action (太乙真人)."
+      }
+    },
+    {
+      "sentence_index": 86,
+      "sentence": "哪吒已死，四海龙王见报了仇，便不再为难李靖，围困陈塘关。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "四海龙王不再为难李靖，围困陈塘关被解除",
+        "explanation": "该句描述了哪吒死亡后四海龙王停止围困陈塘关的直接结果，属于因先前事件（哪吒之死）引发的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 87,
+      "sentence": "他们将洪水褪去，大摇大摆地回到东海摆宴来庆祝哪吒之死。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "四海龙王因报杀子之仇而撤去围困陈塘关的洪水，并在东海举行庆祝宴会",
+        "explanation": "该句描述了四海龙王在完成复仇后撤去洪水并庆祝的结局，属于前文事件（哪吒之死）引发的连锁反应，符合'consequence'类别。状态变化体现在洪水消退和庆祝宴会的举行。"
+      }
+    },
+    {
+      "sentence_index": 88,
+      "sentence": "可是哪吒虽死，他的魂魄却还滞留人间。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "哪吒的魂魄未随身体消亡而进入轮回，而是滞留在人间",
+        "explanation": "该句描述了哪吒肉体死亡后魂魄仍滞留人间的结局，是其死亡事件引发的直接结果，符合'consequence'类别中'描述前事件结果导致状态变化'的定义"
+      }
+    },
+    {
+      "sentence_index": 89,
+      "sentence": "他的魂魄飘飘荡荡，最后来到了金光洞寻找他的师父太乙真人。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "太乙真人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of Nezha's soul actively moving to the Golden Light Cave to seek out his teacher Taibai, indicating a deliberate activity performed by the soul (doer) with the intention of finding the teacher (receiver)."
+      }
+    },
+    {
+      "sentence_index": 90,
+      "sentence": "太乙真人早知哪吒会有此一劫。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "金光洞",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过揭示太乙真人对哪吒命运的预知，为后续哪吒神庙建造和重生情节提供背景设定，属于叙事中的情境铺垫。"
+      }
+    },
+    {
+      "sentence_index": 91,
+      "sentence": "他让哪吒给自己的母亲托梦，让她在陈塘关外翠屏山造一座哪吒神庙，受香火三载后哪吒便可再世为人。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "哪吒"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes 太乙真人 assigning a specific task to 哪吒: to make his mother dream, which will lead to the construction of a temple. The task is explicitly directed at 哪吒 as the one who must perform the action."
+      }
+    },
+    {
+      "sentence_index": 92,
+      "sentence": "殷氏梦醒后与李靖说起却被拒绝，她只好瞒着丈夫自己筹钱建起了哪吒神庙与哪吒神像一座。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "殷氏"
+        ],
+        "receivers": [
+          "哪吒神庙",
+          "哪吒神像"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes殷氏 actively taking the action of building a temple and statue for哪吒 after being refused by李靖, making her the doer and the temple/statue the receivers."
+      }
+    },
+    {
+      "sentence_index": 93,
+      "sentence": "庙宇修好之后，哪吒魂魄便常在翠屏山哪吒神庙里显灵，无论祈福消灾，只要百姓前来祈求，没有不灵验的。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "哪吒神庙成为百姓祈福消灾的灵验场所，其魂魄常在庙中显灵应验祈求",
+        "explanation": "该句描述了哪吒神庙建成后产生的灵验效果，是庙宇修建这一前行动作导致的后续状态变化，符合'consequence'类别中因先前事件引发状态改变的定义"
+      }
+    },
+    {
+      "sentence_index": 94,
+      "sentence": "后来四方的百姓都得知哪吒神庙灵验，便纷纷前来进香，香火络绎不绝。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "四方百姓因得知哪吒神庙灵验而纷纷前来进香，导致香火络绎不绝",
+        "explanation": "该句描述了哪吒神庙灵验这一前因导致的后续结果，即百姓大量进香形成持续不断的香火，属于前事件（神庙显灵）的直接后果。"
+      }
+    },
+    {
+      "sentence_index": 95,
+      "sentence": "可是半年后李靖也知道了这件事情，不由得勃然大怒，带人砸了哪吒神庙，损毁了哪吒金身，再不许百姓进香祭拜。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "李靖"
+        ],
+        "receivers": [
+          "哪吒神庙",
+          "哪吒金身"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 李靖 actively taking actions (smashing the temple and destroying the golden body) and enforcing a ban on worship, making it an 'action' category. The doer is 李靖, and the receivers are the temple and the golden body."
+      }
+    },
+    {
+      "sentence_index": 96,
+      "sentence": "哪吒魂魄得知，心中不快，只得又去找太乙真人想办法。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒魂魄"
+        ],
+        "receivers": [
+          "太乙真人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of哪吒魂魄 taking initiative to seek help from太乙真人 after his temple was destroyed, indicating an active activity performed by the soul."
+      }
+    },
+    {
+      "sentence_index": 97,
+      "sentence": "太乙真人得知李靖的所作所为后，也不禁感叹李靖心胸太过狭隘。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "太乙真人因李靖毁坏哪吒神庙而感叹其心胸狭隘，导致对李靖产生同情并决定帮助哪吒重生",
+        "explanation": "该句描述了李靖毁坏哪吒神庙这一前行动作引发的后果，即太乙真人对李靖的狭隘心胸产生感叹，这一反应改变了故事中人物关系的走向，为后续太乙真人帮助哪吒重生埋下伏笔。"
+      }
+    },
+    {
+      "sentence_index": 98,
+      "sentence": "他不忍哪吒自此化为孤魂，便从莲池中取来莲藕作为骨骼，荷叶作为肌肉，又将莲花花瓣铺下，摆成人型。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "太乙真人"
+        ],
+        "receivers": [
+          "哪吒"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action performed by 太乙真人 to create a new body for 哪吒's soul using lotus components, which is a direct physical action taken by the doer."
+      }
+    },
+    {
+      "sentence_index": 99,
+      "sentence": "最后将一粒金丹放置在中间，做法将哪吒魂魄推入莲花做的身体之中，大喝一声：“哪吒速速化身为人！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "太乙真人"
+        ],
+        "receivers": [
+          "哪吒魂魄",
+          "莲花身体"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 太乙真人 performing a ritual (placing the golden pill and using a spell) to transfer 哪吒's soul into a lotus-made body. This is an active action initiated by 太乙真人, with the soul and body as the recipients of the transformation."
+      }
+    },
+    {
+      "sentence_index": 100,
+      "sentence": "只听得一声巨响，莲藕做的哪吒活了过来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Nezha's soul is revived and his body comes to life",
+        "explanation": "The sentence describes the outcome of the prior ritual performed by太乙真人 to revive哪吒's soul, resulting in his physical resurrection and awakening."
+      }
+    },
+    {
+      "sentence_index": 101,
+      "sentence": "哪吒欣喜地看着自己的新身体，感激地跪下拜谢太乙真人再造之恩，太乙真人看到爱徒复生，心里也为哪吒高兴，于是他又将火尖枪、风火轮、乾坤圈、混天绫、金砖等一起传给了哪吒，并细细教授他各种法宝的使用方法。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "太乙真人"
+        ],
+        "receivers": [
+          "哪吒"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 太乙真人 actively transferring weapons (火尖枪, 风火轮, 乾坤圈, 混天绫, 金砖) and teaching法宝 usage to 哪吒, which constitutes a direct action performed by the doer (太乙真人) and received by the receiver (哪吒)."
+      }
+    },
+    {
+      "sentence_index": 102,
+      "sentence": "不一会儿哪吒便学会了神通，他再一次叩谢师父，然后脚踩风火轮，手舞火尖枪，急匆匆往东海去了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒 actively performing actions (learning神通, thanking his teacher, and moving towards the East Sea). The doer is clearly哪吒, while no specific receivers are mentioned in the context of receiving an action."
+      }
+    },
+    {
+      "sentence_index": 103,
+      "sentence": "东海水晶宫中，东海龙王正在宴请其他三海龙王，宫殿中歌舞升平好不热闹。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "东海水晶宫",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the setting of the East Sea Crystal Palace where the Dragon King is hosting a banquet, establishing the context for the impending conflict with Nezha."
+      }
+    },
+    {
+      "sentence_index": 104,
+      "sentence": "突然一个虾兵跑进来惊恐地大叫道：“不好啦！哪吒打进来了！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "虾兵"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the虾兵's action of running into the palace and shouting an alarm about哪吒's intrusion. The doer is the虾兵, and the action directly triggers subsequent events without a specified receiver."
+      }
+    },
+    {
+      "sentence_index": 105,
+      "sentence": "只听“砰”一声，水晶宫的大门被人踹开。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "水晶宫的大门"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Nezha's action of kicking open the Crystal Palace gates, making him the doer and the palace gates the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 106,
+      "sentence": "哪吒冲杀了进来，虾兵蟹将皆不是对手。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "虾兵蟹将"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒 actively performing the action of '冲杀了进来' (charging in) and the shrimp soldiers (虾兵蟹将) being his opponents. The doer is哪吒, and the receivers are the虾兵蟹将 who are unable to withstand his attack."
+      }
+    },
+    {
+      "sentence_index": 107,
+      "sentence": "不知何时哪吒竟变出三头六臂，越战越勇，丝毫不惧。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒 actively transforming into three heads and six arms during battle, which is a physical action he performs to enhance his combat ability. The focus is on his transformation and increased strength as an active response to the conflict."
+      }
+    },
+    {
+      "sentence_index": 108,
+      "sentence": "他祭起混天绫，挥动乾坤圈，火尖枪在手中游刃有余，直杀得东海水军落花流水，狼狈不堪。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "哪吒"
+        ],
+        "receivers": [
+          "东海水军"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes哪吒 actively using his weapons (混天绫, 乾坤圈, 火尖枪) to attack the East Sea Navy, which fits the 'action' category. The doer is哪吒, and the receiver is the East Sea Navy being defeated."
+      }
+    },
+    {
+      "sentence_index": 109,
+      "sentence": "四海龙王起初还与哪吒顽抗，渐渐发现都不是哪吒对手，他们不想落得个被剥皮抽筋的下场，便纷纷求饶。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "四海龙王放弃抵抗并乞求饶命，导致战斗结束和他们的失败",
+        "explanation": "该句描述了四海龙王在与哪吒交战后因无法取胜而投降求饶的结局，属于前行动作（哪吒战斗）引发的状态变化，符合'consequence'分类。"
+      }
+    },
+    {
+      "sentence_index": 110,
+      "sentence": "陈塘关百姓看到哪吒复活，而且变得如此骁勇善战，打赢了四海龙王，纷纷跑出来为他欢呼庆祝。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "陈塘关百姓因哪吒的胜利而欢呼庆祝",
+        "explanation": "该句描述了哪吒复活并击败四海龙王后，陈塘关百姓对他的反应，属于前文战斗事件的直接结果，体现了状态变化"
+      }
+    },
+    {
+      "sentence_index": 111,
+      "sentence": "这时太乙真人和燃灯古佛也赶了来，在他们的协调下，哪吒与李靖终于重修于好，恢复了父子情分。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "哪吒与李靖恢复了父子情分，关系得到修复",
+        "explanation": "该句描述了太乙真人和燃灯古佛协调后，哪吒与李靖因先前冲突而重修于好的结果，属于前事件（战斗与和解过程）的直接后果，体现人物关系的转变。"
+      }
+    },
+    {
+      "sentence_index": 112,
+      "sentence": "燃灯古佛又送给李靖一座玲珑宝塔，已防哪天哪吒不听话了，便可将他关在塔中。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "燃灯古佛"
+        ],
+        "receivers": [
+          "李靖"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of燃灯古佛 gifting a玲珑宝塔 to李靖, which is a direct activity performed by the doer (燃灯古佛) and received by the receiver (李靖)."
+      }
+    },
+    {
+      "sentence_index": 113,
+      "sentence": "哪吒忌惮李靖手中的宝塔，从此后再也不敢冒失冲撞。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "哪吒因忌惮李靖手中的宝塔而改变行为，从此不敢再冒失冲撞",
+        "explanation": "该句描述了李靖获得玲珑宝塔后对哪吒产生的约束效果，导致哪吒行为发生改变，属于前事件（宝塔赐予）的后果。"
+      }
+    },
+    {
+      "sentence_index": 114,
+      "sentence": "后来武王伐纣，哪吒凭借一身高强本领，做了姜子牙的先行官，屡建奇功。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "哪吒因先前复活并战胜四海龙王，得以参与武王伐纣，成为姜子牙的先行官并建立战功",
+        "explanation": "该句描述了哪吒在复活并击败四海龙王后，获得参与武王伐纣的机会并建立战功，这是对其先前行动的直接结果，符合'consequence'类别。"
+      }
+    },
+    {
+      "sentence_index": 115,
+      "sentence": "李靖的另外两个儿子金吒、木吒也学成下山，同父亲和弟弟一道帮助武王进行伐纣大业，他们立下不少丰功伟业，最后都被封神，成了神仙。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "李靖的另外两个儿子金吒、木吒因帮助武王伐纣立下丰功伟业，最终被封神成为神仙",
+        "explanation": "该句描述了金吒、木吒因参与伐纣大业而获得封神的结局，属于前文行动（帮助武王伐纣）导致的状态变化，符合'consequence'分类。"
+      }
+    }
+  ]
+}

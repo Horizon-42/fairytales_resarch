@@ -1,0 +1,849 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_009_女娲补天.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 59,
+  "analyzed_sentences": 59,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "相传盘古开天辟地，用自己的躯体创造了日月星辰、山川草木，为一片混沌的天地带来了生机。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "混沌的天地",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the primordial chaotic universe as the narrative's starting point, setting the stage for subsequent events involving Pangu's creation and Nuwa's interventions. This foundational context introduces the setting where all later actions and consequences unfold."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "后来盘古去世，人类的始祖女娲就出现了。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the transition from Pangu's death to Nuwa's emergence, setting up the narrative context for subsequent events. It provides background without introducing a specific location."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "传说女娲独自行走在原野上，看着那蜿蜒起伏的群山、繁盛茂密的花草树木、川流不息的河水，她发现尽管这个世界很美，却感到孤独和寂寞。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "原野",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述女娲独自在原野上观察自然景观时的孤独感，为后续她创造生物以消除孤独的行动建立情境背景。"
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "女娲黯然神伤地坐在河边，不断地问自己，怎么才能使自己没有孤寂感呢？",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "河边",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes female娲's emotional state and internal struggle with loneliness by the river, establishing the context for her subsequent decision to create humans. The location '河边' (by the river) is the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "忽然，一叶花瓣飘落在清澈的河水里，宁静的河水一下子泛起了一圈圈的涟漪，打破了原先的平静。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "河边",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes a natural occurrence (a petal falling into the river) that serves as a catalyst for Nuwa's realization about creating life. It sets the scene for her subsequent actions by introducing the river as the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "见此情景，女娲怦然心动。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Nuwa felt a sudden stir of emotion",
+        "explanation": "The sentence describes the emotional reaction (changed_state) to the prior event of the petal causing ripples, which is a consequence of the previous situation."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "对！",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女娲"
+        ],
+        "receivers": [
+          "世界"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence '对！' represents Nuwa's decision to proceed with creating living beings, which is an action she takes to address her loneliness. The doer is Nuwa, and the receiver is the world, as she is creating beings for the world."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "是生物，如果有了生物这个世界就会热闹起来，从此就没有孤独和寂寞。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a situational context that explains the motivation behind the upcoming action (creating beings). It describes the perceived problem (loneliness) and the proposed solution (introducing life), setting the stage for the task without directly stating a task, action, or consequence."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "想到这儿，女娲便决定造一些生物。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "女娲"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates Nuwa's decision to create life, which is a task she undertakes to address her loneliness. The task is explicitly stated as her responsibility to generate biological beings."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "她马上就动手了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女娲"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates the initiation of an action (starting to create beings) performed by 女娲. The receivers are not explicitly mentioned in the sentence, but the action is directly tied to her creation of lifeforms as described in the subsequent text."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "她在正月初一的时候创造出鸡，初二的时候创造出狗，初三的时候创造出羊，初四的时候创造出猪……等到初七这一天，女娲用黄土和水和了一大堆泥，然后仿照自己的样子捏造出一个小泥人。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女娲"
+        ],
+        "receivers": [
+          "鸡",
+          "狗",
+          "羊",
+          "猪",
+          "小泥人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes女娲's active creation of animals and a clay figure, making it an 'action' category. The doer is女娲, and the receivers are the animals and the clay figure she created."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "她把泥人放在地上，泥人居然活了起来，并且还唧唧喳喳地对女娲说话。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the clay figure came to life and began speaking to Nuwa",
+        "explanation": "This sentence describes the outcome of Nuwa's action of creating the clay figure, marking a significant change in the state of the figure transitioning from inanimate to sentient."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "女娲开心极了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Nuwa's happiness after successfully creating the clay figures, making the world lively",
+        "explanation": "The sentence describes Nuwa's emotional response to the successful creation of the clay figures, which directly resulted in the world becoming lively. This emotional state is a consequence of her prior action of creating the figures."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "接下来，她又捏了许许多多个小泥人，世界变得热闹起来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女娲"
+        ],
+        "receivers": [
+          "小泥人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes female娲 actively shaping more small clay figures, which is a direct action performed by her. The receivers of this action are the small clay figures, which come to life and contribute to the world becoming lively."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "但是，毕竟世界太大了，女娲这样一个一个地捏，既慢又累，于是她就从地上随便捡起一根绳子，沾满泥浆，向和好的黄泥抡去，结果那些大团小粒的黄泥全都飞溅起来，落到地上，变成了一个又一个大大小小的活人。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女娲"
+        ],
+        "receivers": [
+          "活人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes女娲's active action of using a rope to create humans from clay, making her the doer and the newly created humans the receivers of the action."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "女娲发现她的新方法既轻松又迅速，所以她使劲地抡绳子，直到世界到处都有了密密麻麻的人。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女娲"
+        ],
+        "receivers": [
+          "人们"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes女娲 actively performing the action of swinging a rope to create humans, making her the doer and the people the receivers of her action."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "女娲微笑地看着自己造出来的这些人，心中的孤独寂寞荡然无存。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "her loneliness and isolation are resolved",
+        "explanation": "The sentence describes the outcome of女娲's creation of humans, resulting in the resolution of her loneliness and isolation. This is a direct consequence of her prior action of creating humans."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "她伸了一下腰，锤了锤自己的背，打算四处走着，看看自己造的人都是怎么生活的。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女娲"
+        ],
+        "receivers": [
+          "自己造的人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes女娲 performing the physical action of stretching and hammering her back, and planning to walk around to observe her creations. The doer is女娲, and the receivers are the people she created, as the action involves checking on their lives."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "有一天，女娲走到一个地方，发现这里没有欢声笑语的人，感到十分奇怪。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女娲"
+        ],
+        "receivers": [
+          "人们"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes女娲 actively performing the action of going to a place and discovering the absence of joyful people, which is a direct action taken by her as the doer, with the people being the recipients of her observation."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "等仔细查看时，她发现原来人们都躺在了地上。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "人们因天塌地陷的灾难而死亡，导致女娲必须采取行动补天救世",
+        "explanation": "该句描述了女娲发现人们死亡的场景，这是天塌地陷灾难后的直接结果，触发了女娲补天的行动，属于前序事件（共工撞山引发的灾难）导致的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "她便呼唤这些人，可是他们居然毫无反应，于是女娲就用手去拨动那些人，可是他们还是一动不动。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女娲"
+        ],
+        "receivers": [
+          "人们"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes女娲 actively performing the action of calling out to and physically interacting with the people she created, which is a direct action taken by her towards the recipients."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "原来这些人都已经老死了，他们皮肤松弛、满脸皱纹、头发花白。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The created humans have aged and died, leading to female娲's realization about the impermanence of human life and the need for a solution to sustain humanity.",
+        "explanation": "The sentence describes the outcome of the prior event (humans not responding to女娲's calls), revealing that the people have aged and died. This state change prompts女娲's emotional response and subsequent problem-solving, fitting the 'consequence' category."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "这时，女娲突然心中感到一阵忧虑，原来人是会衰老的啊，那我不是要永远不停地辛苦造人吗？",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Nuwa's realization about human aging and the resulting problem of continuous creation, setting up the context for her subsequent task. No specific location is mentioned in this sentence."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "可我辛苦造人，人还是会死亡，到底怎么才能让人永远地繁衍下去呢？",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "女娲"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence expresses女娲's realization of a problem (people dying) and her need to find a solution for eternal human reproduction, which constitutes an explicit requirement or responsibility."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "最后，女娲冥思苦想，终于想出了一个办法。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女娲"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Nuwa's action of thinking and finding a solution to the problem of human reproduction, which is an active process leading to the next task."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "她把人分为男女，然后又让男女婚配，生儿育女，繁衍后代，让他们幸福地生活。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女娲"
+        ],
+        "receivers": [
+          "人类"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes女娲's active action of dividing humans into genders, establishing marriage practices, and enabling reproduction. The doer is女娲, and the receivers are the humans she created."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "婚姻制度就是女娲建立的，因此，女娲又被人们称为“婚姻女神”。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "女娲因建立婚姻制度而被人们称为‘婚姻女神’",
+        "explanation": "该句描述了女娲建立婚姻制度这一先前行动的直接结果，即她被赋予‘婚姻女神’的称号，属于因果关系的后果描述。"
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "然而，这样幸福的生活并没有延续多久，人类就迎来了一场灾难。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the transition from a peaceful, happy state to a disaster",
+        "explanation": "The sentence describes the outcome of prior events (establishment of marriage制度 and initial harmony) leading to a new state of disaster, fitting the 'consequence' category."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "因为水神共工和火神祝融不合，他们打起仗来。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence explains the cause of the conflict between water god Gonggong and fire god Zhurong, setting up the background for the subsequent disaster. It provides context for the events leading to the catastrophe without describing a task, action, or direct consequence."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "他们从天上打到地上，闹得鸡犬不宁。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "causing chaos and turmoil across the heavens and earth",
+        "explanation": "The sentence describes the outcome of the battle between water god Gonggong and fire god Zhurong, resulting in widespread chaos and disruption, which is a direct consequence of their conflict."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "最后祝融打败了共工，而气急败坏的共工竟用自己的脑袋去撞西方的不周山。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "共工"
+        ],
+        "receivers": [
+          "不周山"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 共工's active action of colliding with 不周山 after being defeated by 祝融, which directly leads to the mountain's collapse in the subsequent consequence."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "结果不周山崩塌了，这座撑天的大柱被折断了，天穹的四周也被撞毁，半边的天都塌了下来，天上出现了一个巨大的窟窿，就连大地都被震出很多裂缝，使得天不能再遮盖万物，地也不能承载万物了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "天穹出现巨大窟窿，大地出现裂缝，导致天无法遮盖万物、地无法承载万物",
+        "explanation": "该句描述了共工撞倒不周山后引发的直接结果，即天穹崩塌、大地裂开导致天地结构破坏，属于前序事件（共工撞山）的后果。"
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "更不幸的是，燃烧着的熊熊大火，从裂缝中爆发出来，将人们的房屋和农作物都烧着了，汹涌不断的洪水也开始不断地奔流，将两岸都漫过去，地上其他的缝隙中也不停地喷涌出地下的流水，将大地淹没。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "人们的房屋和农作物被烧毁，两岸被洪水淹没，大地被地下水淹没",
+        "explanation": "该句描述了共工撞倒不周山后引发的灾难性后果，具体表现为火灾摧毁人类居所和农田，洪水淹没土地，属于前文事件（山崩天塌）导致的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "人们昔日生活的地方变成了一望无际的大海。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The former inhabited land has been transformed into an expansive sea",
+        "explanation": "This sentence describes the outcome of the previous catastrophic events (sky collapse, floods) that altered the landscape, marking a significant state change from inhabited land to a vast sea."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "还有更为可怕的事情，那些凶猛的野兽也趁机出来伤人，凶暴的鸷鸟高高盘旋在空中，瞅准机会就会用锋利的爪子将那些跑不动的老人和孩子抓走。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Humans face additional threats from wild animals and birds, exacerbating their suffering during the disaster",
+        "explanation": "The sentence describes the escalating impact of the prior disaster (sky collapse, floods) by introducing new dangers from wild animals and birds attacking vulnerable humans, representing a consequence of the earlier catastrophic events."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "人类陷入了可怕的灾难里。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of humans facing a catastrophic disaster, setting the stage for subsequent events like Nuwa's intervention. No specific location is mentioned, so the location field remains empty."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "看到自己的孩子们在水深火热中奔走哭泣，备受煎熬，女娲痛苦万分，她流下了伤心的泪水，决定无论多么艰难都要将天补上。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "女娲"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes female娲's decision to take action (fixing the sky) in response to the disaster, which constitutes an explicit requirement or responsibility she commits to fulfill."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "于是，女娲来到黄河边，她挑选了许多红、黄、蓝、白、黑五种颜色的石块，然后架好火炉，把五色石放到炉中进行熔化，接着又用这些熔化的液体将天上的洞补上。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女娲"
+        ],
+        "receivers": [
+          "天上的洞"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes女娲 actively performing the action of gathering stones, melting them, and using the molten liquid to patch the sky's hole. The doer is女娲, and the receiver is the sky's hole being repaired."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "女娲不断地补啊补啊，整整用了九天九夜的时间，才将天空补好。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女娲"
+        ],
+        "receivers": [
+          "天空"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes女娲 actively performing the action of mending the sky with five-colored stones, specifying the duration (nine days and nights) and the completion of the task. The action's doer is女娲, and the receiver is the sky being mended."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "五色云霞出现在天边，大地也放晴了，人类欢呼起来，女娲欣慰地笑了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "天空恢复晴朗，人类摆脱灾难，女娲完成补天任务并感到欣慰",
+        "explanation": "该句描述女娲补天行动后的结果，包括天空恢复晴朗、人类脱离灾难困境以及女娲完成任务后的欣慰情绪，属于前行动作导致的状态变化，符合consequence分类。"
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "如今我们看到的雨过天晴后的彩霞，就是当年女娲用五彩石炼就而成的。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The existence of rainbows after rain is attributed to Nuwa's use of five-colored stones to mend the sky",
+        "explanation": "The sentence describes the outcome of Nuwa's previous action of mending the sky with five-colored stones, establishing a causal link between her action and the current natural phenomenon of rainbows"
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "天空虽然补好了，并且比以前更加灿烂绚丽，可是女娲还是不放心。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "天空被补好但女娲仍感到不安，导致她继续采取行动加固天地",
+        "explanation": "该句描述了女娲补天后仍存在未解决的问题（天地不稳），这是补天行动的直接结果，触发了后续的擎天柱行动。属于'consequence'类别，因为它是前序动作（补天）导致的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "于是，她又跑到东海，从东海捉来一只万年巨龟，并将它的四足斩下来，用它们当做擎天柱，竖在大地的四角，支撑住天地的四方。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女娲"
+        ],
+        "receivers": [
+          "东海",
+          "大地",
+          "天地"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes女娲 actively performing the action of capturing a giant turtle from the East Sea, cutting its legs, and using them as pillars to support the earth and heavens. The doer is女娲, and the receivers include the East Sea (source of the turtle), the earth, and the heavens."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "接下来她又将兴风作浪、不做好事的黑龙杀死，再将大量的芦葭烧成灰，把地上洪水泛流的沟壑填平。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女娲"
+        ],
+        "receivers": [
+          "黑龙",
+          "芦葭"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes female娲's active actions of killing the black dragon and burning reeds to fill flood gullies, making her the doer and the dragon/reeds the direct recipients of her actions."
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "这样，女娲才放下心来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Nuwa felt relieved and the disaster was resolved",
+        "explanation": "The sentence describes the outcome of Nuwa's previous actions (killing the dragon and filling the gullies) leading to the resolution of the disaster and her relief. This represents a state change from ongoing crisis to calm and resolution."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "经过女娲的一番辛劳之后，天地间的这场灾祸终于平息了，恶禽猛兽全都被诛杀干净，人们终于摆脱了灾难，过上了安居乐业的幸福生活。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "天地间的灾祸平息，恶禽猛兽被诛杀干净，人们摆脱灾难并过上安居乐业的幸福生活",
+        "explanation": "该句描述女娲补天治水后产生的结果，即灾难被平息、恶兽被清除、人类恢复安宁生活，属于前序行动（补天、斩龟、填平洪水）的直接后果。"
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "就连所有存活着的禽兽虫蛇，也纷纷隐藏起爪牙和毒蛰，性情变得温顺驯良。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the remaining animals and snakes became docile and hid their harmful traits",
+        "explanation": "The sentence describes the outcome of the prior events (女娲's disaster mitigation actions) where even surviving beasts and snakes changed their behavior to become tame, indicating a state change in the ecosystem post-catastrophe."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "这位伟大的母亲终于拯救了人类，并为人类再次创造了幸福的生活环境。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "人类被拯救并重新获得了幸福的生活环境",
+        "explanation": "该句描述女娲补天治水等行动后的结果，即人类摆脱灾难获得幸福生活，属于前序行动（补天、斩龟、填平洪水）导致的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "尽管这场灾难过去了，但却留下了它的痕迹。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The disaster left lasting traces, causing the sky to tilt northwest and rivers to flow eastward",
+        "explanation": "The sentence describes the lingering effects of the previous disaster, indicating a state change where the disaster's impact persists in geographical features, which is a consequence of the prior events."
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "从此以后，天空就向西北方向倾斜了，所以我们今天看到的太阳、月亮和繁星都很自然地归向西方。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "天空向西北方向倾斜，导致太阳、月亮和繁星自然归向西方",
+        "explanation": "该句描述了共工撞倒不周山导致天地崩塌后，天空倾斜的地理变化及其对天体运行方向的影响，属于灾难事件后的结果描述。"
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "还有，因为大地也向东南方塌陷了，从此河水就朝着东南方流去。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "河水开始朝着东南方流去",
+        "explanation": "该句描述了大地塌陷导致河水流向改变的直接结果，属于前文天塌地陷事件后的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "因此有诗句云：一江春水向东流。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The eastward flow of rivers became a permanent geographical feature due to the earth's tilt caused by the collapse of the sky and earth.",
+        "explanation": "The sentence describes the outcome of the prior event (earth's tilt) which led to the establishment of the eastward river flow as a natural phenomenon, hence classified as a consequence."
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "人类是女娲创造出来的，也是女娲拯救的，因此上至九天云霄，下至黄泉路上，女娲的丰功伟绩都被永世颂扬着。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Nuwa's achievements are forever praised across all realms",
+        "explanation": "The sentence describes the outcome of Nuwa's creation and salvation of humanity, resulting in her eternal veneration. This is a consequence of her prior actions described in the story."
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "她的光辉照耀着万物，她的伟绩为万世敬仰。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "女娲的丰功伟绩被永世颂扬，其光辉和伟绩成为后世永恒的敬仰对象",
+        "explanation": "该句描述女娲创造和拯救人类的功绩所带来的长期影响，属于前文补天造人等行动的后果，体现其伟绩被后世永恒铭记的状态变化"
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "传说女娲所乘坐的雷车，也是由长着翅膀的应龙驾驭着，旁边还有青色的虬龙一起帮着驾驶。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the chariot Nuwa rides and the dragons assisting her, providing background context about her divine transportation. This sets the stage for understanding her later actions without introducing a new task, action, or consequence."
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "女娲的手中还拿着世界上独一无二的瑞应宝物，坐着用萝图特制的席子，车身上也环绕着金黄色的云气，前方有白龙开路，后面跟着无足而飞的腾蛇，引导那四方浮游在云中的鬼神荣登九天，进入到众神所居住的灵门，朝见天帝。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the divine chariot and accompanying entities of Nuwa, establishing her celestial status and the grandeur of her divine procession. This serves as background context for her role as a deity, fitting the 'situation' category with no specific location mentioned."
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "然而，女娲总是端庄而不失威严地静坐在那里，从来不夸耀自己的丰功伟绩，也从不宣传自己的名声。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes female娲's demeanor and behavior, providing background context about her character traits and setting the stage for her subsequent recognition as '女娲娘娘'. It does not mention a specific location, task, action, or consequence."
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "于是，人们亲切地称她为“女娲娘娘”。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "People refer to her as '女娲娘娘' (Mother Nuwa), recognizing her contributions and humility",
+        "explanation": "The sentence describes the outcome of Nuwa's actions and character (humility, creation of humanity), resulting in her being honored with a respectful title by people. This is a consequence of her prior behavior and decisions."
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "伟大、善良的“女娲娘娘”永远被人们铭记在了心中。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "女娲娘娘的丰功伟绩被永世颂扬，其形象被人们永恒铭记",
+        "explanation": "该句描述女娲拯救人类后被永恒铭记的结局，属于前文补天造人等行为的后果，体现其功绩被后世传颂的最终状态变化"
+      }
+    }
+  ]
+}

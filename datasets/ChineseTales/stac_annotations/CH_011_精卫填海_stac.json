@@ -1,0 +1,337 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_011_精卫填海.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 23,
+  "analyzed_sentences": 23,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "相传炎帝有一个女儿，叫做女娃，非常乖巧可爱，就连黄帝见了，也都不由自主地去称赞她，炎帝更是把她当做掌上明珠，含在嘴里怕化了，顶在头上怕摔了。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes background context about the characters of炎帝 and女娃, their relationship, and their traits, which sets the stage for the subsequent narrative. No specific location is mentioned."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "父亲不在家的时候，女娃就自己玩耍，不过一直以来她都特别希望能够去一次东海——那个太阳升起的地方看看，可总是由于父亲公事太忙而耽搁。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "东海",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes background context about女娃's unfulfilled desire to visit the East Sea (东海), which is the narrative focus and sets the stage for her later actions. The location is explicitly mentioned as '东海' (the East Sea)."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "这一天，女娃没有告诉父亲，就一个人偷偷驾驶着小船向东海太阳升起的地方划去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女娃"
+        ],
+        "receivers": [
+          "东海"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 女娃's active decision to row her boat toward the East Sea, making it an 'action' category. The doer is 女娃, and the receiver is the East Sea as the destination of her movement."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "突然，海上刮起了狂风，掀起了巨浪，像小山的海浪狠狠地将女娃的小船掀翻，可怜的女娃落入到海水中，被无情的大海吞没，永远都没有办法回来了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "女娃因海浪翻船溺亡，被大海吞没，永远无法返回，导致炎帝悲痛欲绝且无法救回女儿",
+        "explanation": "该句描述了女娃因海上狂风巨浪导致小船翻覆而溺亡的直接结果，这是其私自出海行动的后果，引发后续炎帝的悲痛和精卫填海的传说，属于因果关系链中的后果阶段。"
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "尽管炎帝因为失去女儿而伤心不已，但是却没法让女儿死而复生，只能捶胸顿足地痛哭不止！",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "炎帝因失去女儿而陷入无法挽回的悲痛状态，只能通过痛哭表达绝望",
+        "explanation": "该句描述了女娃溺亡这一事件导致的直接后果，即炎帝无法救回女儿而陷入深切悲痛，属于前文事件（女娃死亡）引发的状态变化，符合consequence分类"
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "女娃死后，她的精魂变成了一只小鸟儿，花脑袋，白嘴壳，红脚爪，还会不断发出“精卫、精卫”的悲鸣，因此，人们称这只鸟儿为“精卫”。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "女娃的精魂转化为精卫鸟，并被赋予了特定的外貌特征和名称",
+        "explanation": "该句描述了女娃死亡后产生的直接结果——她的精魂转化为精卫鸟，这一转变是前文'女娃落入海中被大海吞没'事件的后果，属于consequence类别。"
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "精卫对夺取她年轻生命的大海非常痛恨，她决定要给自己报仇。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "精卫"
+        ],
+        "receivers": [
+          "大海"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 精卫's decision to take revenge against the sea, which is an active choice to pursue a course of action. The doer is 精卫, and the receiver is the sea (大海) as the target of her revenge."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "因此，她开始一刻也不停歇地从她所居住的发鸠山上衔起一粒粒小石子，展翅高飞，直到东海，扔进那汹涌的波涛中，接着不停地盘旋悲鸣。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "精卫"
+        ],
+        "receivers": [
+          "东海"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the active actions performed by Jingwei (精卫) as she begins her relentless effort to fill the sea. The doer is clearly '精卫', and the receiver of her actions (the target of her stone-throwing) is the '东海' (East Sea)."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "石子、树枝统统都被她投掷进去，目的就是想要把大海填平。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "精卫"
+        ],
+        "receivers": [
+          "大海"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 精卫 throwing stones and branches into the sea as part of her ongoing effort to fill the ocean. The doer is 精卫, and the receiver is the sea (大海)."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "大海奔腾着，咆哮着，面对精卫的行为，嘲笑着说：“小鸟儿，算了吧，你就是这样干上一百万年，也甭想把我填平！”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the sea mocks the swallow's efforts to fill it",
+        "explanation": "The sentence describes the sea's reaction to the swallow's ongoing task of filling the sea, which is a direct consequence of the swallow's actions. The sea's mockery represents the outcome of the swallow's persistent effort, highlighting the conflict and setting up future developments in the narrative."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "在高空中，精卫坚定地回答说：“即使干上一千万年，一万万年，直到宇宙的尽头、世界的末日，我也一定会将你填平的！”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "精卫"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents Jingwei's declaration of her commitment to the task of filling the sea, which is a stated responsibility she has taken on after her death. The task role is explicitly Jingwei herself."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "“为什么你会如此恨我呢？”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence is part of the dialogue that sets up the context for the conflict between Jingwei and the sea, providing background for the narrative."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "“因为你将我年轻的生命夺去了，将来的岁月里，你还会夺走更多的无辜生命。只要我坚持干下去，总有一天会将你填为平地的，你就等着瞧吧！”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Jingwei's determination to fill the sea as a consequence of her death and the loss of her life",
+        "explanation": "The sentence describes the outcome of the prior event (Jingwei's death) which led to her transformation into a bird and her vow to fill the sea. This is a consequence of the initial tragedy, driving her subsequent actions."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "精卫不断地飞翔着、鸣叫着离开了大海，接着飞回发鸠山去衔石子和树枝。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "精卫"
+        ],
+        "receivers": [
+          "石子",
+          "树枝"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the Jingwei bird flying and returning to the mountain to collect stones and branches, which are the objects she is actively gathering for her task."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "就这样，她不停地衔啊、扔啊，日复一日，年复一年，从未停息过。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "精卫"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the continuous action of Jingwei performing the task of picking up and throwing stones, which is an active behavior she engages in repeatedly. The doer is clearly '她' (Jingwei), and while the action involves objects like stones and branches, the sentence does not explicitly name them as receivers."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "后来，有一只海燕从东海飞过的时候，看见了精卫。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "东海",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces a new contextual element (a sea gull observing Jingwei) that sets the stage for subsequent events involving the sea gull's reaction to Jingwei's actions, establishing the location as the East Sea."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "起初对她的行为感到十分不解，可当他知道事情原委后，就被精卫大无畏的精神打动，与其结成了夫妻，并生出很多的小鸟儿，其中的雌鸟长得很像精卫，雄的则非常像海燕。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the sea gull is moved by Jingwei's spirit, marries her, and they have many offspring, with the female resembling Jingwei and the male resembling the sea gull",
+        "explanation": "The sentence describes the outcome of the sea gull's initial confusion and subsequent emotional response to Jingwei's actions, leading to marriage and offspring. This is a consequence of Jingwei's prior actions in the story."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "和他们的妈妈一样，小精卫们也不断地去衔来石子填海。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小精卫们"
+        ],
+        "receivers": [
+          "东海"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the ongoing action of the little Jingwings continuing their mother's task of carrying stones to fill the sea, making it an 'action' category with the doers as the young Jingwings and the receiver as the sea."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "一直到今天，她们都没有停止过这项工作。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The work of filling the sea has continued without interruption until the present day",
+        "explanation": "This sentence describes the ongoing outcome of the prior actions (Jingwei's填海 efforts), showing the persistent consequence of her determination which leads to the subsequent mention of people's admiration. The state change is the continuous execution of the task over time."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "精卫鸟们的这种锲而不舍的精神、善良的愿望、宏伟的志向，都受到了人们的无比尊敬。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "人们开始尊敬精卫鸟们的锲而不舍精神、善良愿望和宏伟志向",
+        "explanation": "该句描述了精卫填海行为引发的社会反响，属于前文行动（衔石填海）导致的后果，体现人们对精卫精神的敬佩，符合consequence类别"
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "晋代诗人陶潜曾经在诗文中写道：“精卫衔微木，将以填沧海”，以此来赞扬精卫敢于向大海抗争的悲壮战斗精神。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the creation of the poem and the praise for the Jingwei's spirit",
+        "explanation": "The sentence describes the outcome of the Jingwei's actions, as the poem was written to commemorate her efforts, representing a change in cultural recognition and legacy."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "人们对精卫的感情中，不但有同情，更有钦佩的成分，精卫鸟还有其他的名字，例如“冤禽”、“誓鸟”、“志鸟”、“帝女雀”，人们还为她在东海的边上立了一个古迹，叫做“精卫誓水处”。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "东海",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background on the cultural significance and legacy of the Jingwei bird, mentioning the location of the historical site '精卫誓水处' by the East Sea, which establishes the narrative context for understanding the story's impact."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "后世的人们经常会用“精卫填海”这个成语，来比喻仁人志士所从事的艰巨卓越的事业。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The use of the idiom '精卫填海' to symbolize the endeavors of benevolent and outstanding individuals",
+        "explanation": "The sentence describes the cultural impact and metaphorical significance of the Jingwei story, representing a consequence of the narrative's influence on later generations."
+      }
+    }
+  ]
+}

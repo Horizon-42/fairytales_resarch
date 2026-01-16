@@ -1,0 +1,469 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_301_神犬盘瓠.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 31,
+  "analyzed_sentences": 31,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "据说，在高辛王当朝的时侯, 有一年，皇后娘娘忽然得了耳痛病，整整痛了三年，百般医治，没有效验。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "高辛王当朝",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the historical context of the story during King Gaoxin's reign and introduces the central conflict of the Queen Consort's prolonged illness, setting the stage for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "后来从耳朵里挑出一条金虫，形状像蚕子，三寸 左右长。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [
+          "金虫"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of extracting the golden worm from the queen's ear, which is a key step leading to the consequence of her recovery. The doer is not explicitly identified in the sentence, and the receiver is the golden worm."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "虫一桃出来, 耳痛病居然刹那间就好了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "耳痛病被治愈",
+        "explanation": "该句描述了金虫被取出后耳痛病立即痊愈的结果，属于前文行动（取出金虫）导致的状态变化，符合consequence类别。"
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "皇后觉得奇怪，便用瓠篱盛着这条虫，又用盘子盖着。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "皇后"
+        ],
+        "receivers": [
+          "虫"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the queen's action of containing the worm with a瓠篱 and a盘子, indicating an active measure taken by the queen (doer) towards the worm (receiver)."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "哪知道盘子里的虫忽然变成一只龙狗，遍体锦纹，五色斑爛，毫光闪闪。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "盘子里的虫"
+        ],
+        "receivers": [
+          "龙狗"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the transformation of the worm into a dragon dog, which is an active action performed by the worm (doer) resulting in the creation of the dragon dog (receiver)."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "因为是从盘子和瓠篱里变出来的，所以取名叫做\"盘瓠\"。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context explaining the origin of the name '盘瓠' based on its emergence from the disk and gourd, which establishes part of the narrative's situational setup."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "高辛王见了这狗，非常欢喜，行坐随身，寸步 不离。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "高辛王"
+        ],
+        "receivers": [
+          "狗"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the high king's action of keeping the dog constantly by his side, indicating his behavior towards the dog as the receiver."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "那时忽有房王作乱，高辛王忧虑国家危亡，便向群臣说道：\"若是有人能斩房王的头来献，愿把公主嫁给他。\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence presents the king's task offer to behead Fang Wang, but no specific roles are identified as needing to fulfill the task."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "群臣看见房王兵强马壮，料难获胜，都不敢去冒这生命危除。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of ministers' reluctance to take on the dangerous task of defeating 房王 due to his strength, setting the stage for the subsequent events involving the盘瓠's intervention."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "说话这天，宫廷里忽然不见了盘瓠，大家都不知道这狗究竟跑到哪里去了，一连寻找了好几天，都无踪影，高辛王深以为怪。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "宫廷",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence establishes the context of盘瓠's disappearance from the palace, setting the stage for its subsequent actions. The location is explicitly stated as the palace (宫廷), which serves as the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "却说盘瓠离了宫廷，一直走到房王军中，见了房王，摇头摆尾。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "盘瓠"
+        ],
+        "receivers": [
+          "房王"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes盘瓠's active movement to the enemy's camp and his interaction with房王, indicating a physical action performed by盘瓠 directed towards房王."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "房王一见这狗 ，高兴非常，向左右臣僚说道：\"高辛氏怕快灭亡了吧！连他的狗都嫩下他跑来投奔我，看来我房王是当兴了。\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "房王军中",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence establishes the context of Fang Wang's reaction to the arrival of the dog, setting the stage for the subsequent events in his military camp."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "于是便高烧火炬，击鼓撞钟，举行宴会，为这 个好征兆作乐庆贺。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "房王"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the enemy king (房王) holding a banquet to celebrate the good omen of the dog's arrival, which is an active performance by the king."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "那天晚上，欢乐的房王喝得烂醉如泥，睡在中军帐中。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "中军帐",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the setting where King Fang Wang is drunk and sleeping in his military tent, establishing the context for the subsequent action where the dog attacks him."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "盘瓠便趁这时机，猛地咬下房王的头，叼着它飞快地跑回高辛王王宫。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "盘瓠"
+        ],
+        "receivers": [
+          "房王的头"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes盘瓠 performing the action of biting off房王's head and carrying it back to the palace. The doer is盘瓠, and the receiver is房王's head."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "高辛王看见爱犬衔了敌人的头跑回宫来，不禁大喜过望，便叫人多多拿些剁得细细的肉来喂他。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "高辛王"
+        ],
+        "receivers": [
+          "人们"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the high king's active action of ordering people to prepare meat for the dog, indicating a direct activity performed by the subject."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "哪知道盘瓠只把鼻头伸向盆边嗅了一嗅，便走开了，闷恹恹地去睡在屋角，不吃东西，也不活动，高辛王呼唤它也不起来，就这么过了两三天。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "盘瓠因未获公主而拒绝进食、停止活动，最终导致高辛王决定将其放入金钟中变化成人形",
+        "explanation": "该句描述了盘瓠在未获得公主后拒绝进食、停止活动的后果，以及高辛王因此采取的行动（将其放入金钟），属于前序行动（咬下房王头颅）的直接结果。"
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "高辛王心里难过，想了一想，便向盘輒说道；\"狗啊，你为什么既不吃东西，呼唤也不来呢？莫不是想要得到公主为妻，恨我不践诺言吗？并不是我不践诺言，实在是因为狗和人是不可以结婚的啊！”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the King's internal thoughts and dialogue in response to the dog's behavior, setting up the context for the subsequent transformation. It provides background for the narrative progression without initiating a new action or task."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "盘瓠登时口吐人言，说道：\"王啊，请不要忧虑，你只要将我放在金钟里面，七天七夜，我就可以变成人。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "盘瓠"
+        ],
+        "receivers": [
+          "高辛王"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes盘瓠 performing the action of speaking to the king, requesting to be placed in the golden bell. This is an active behavior initiated by盘瓠 and directed towards the king."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "高辛王听了这话，深觉途异；果然将盘瓠放在金钟里面，看它怎么变化。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "高辛王"
+        ],
+        "receivers": [
+          "金钟"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the high king actively performing the action of placing the disk瓠 into the golden bell, which is a direct response to the prior request. The doer is 高辛王 (the high king), and the receiver is 金钟 (the golden bell) as the object being acted upon."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "一天、两天、三天……到了第六天，期待结婚的多情的公主怕它饿死，悄悄打开金钟一看，盘靓全身都变成了人，只留一个狗头没有来得及变，从此再也不能变了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "盘瓠完成从狗到人的转变，仅剩狗头无法变回，永久保持半人半狗形态",
+        "explanation": "该句描述了公主打开金钟后盘瓠发生形态变化的直接结果，属于前序行动（公主开金钟）导致的状态改变，符合consequence类别。状态变化表现为盘瓠成功变为人形但保留狗头，且无法恢复原状。"
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "于是，盘瓠从金钟里跳出来，披上大衣，公主则戴了狗头帽，他俩就在皇宫里结了婚。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "盘瓠和公主在皇宫里结婚",
+        "explanation": "该句描述了盘瓠完成人身转变后与公主结婚的结果，这是公主打开金钟导致盘瓠变化的直接后果，改变了两人从人与狗到夫妻的关系状态。"
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "结婚以后，盘瓠带着妻子，到南山去，住在人迹罕至的深山岩洞中。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "南山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence establishes the new living environment of the married couple after their wedding, setting the stage for subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "公主脱下华贵的衣裳，穿上庶民百姓的服装，亲自劳作，毫无怨言。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "公主"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the princess actively performing the action of changing her clothing and working diligently. The doer is explicitly the princess, and there is no direct receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "盘瓠则毎天出去打猎，以此为生, 夫妻俩和睦幸福地过日子。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "盘瓠"
+        ],
+        "receivers": [
+          "夫妻俩"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes盘瓠's daily action of hunting to sustain their life, with the couple benefiting from this action."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "几年以后，生下三男一女。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The couple transitioned from being newlyweds to parents after several years of living together in the mountain cave",
+        "explanation": "This sentence describes the outcome of the prior event (the marriage ceremony) and the state change resulting from the couple's life together in the mountain cave, leading to the birth of their children."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "于是带着儿女们回家去看外公外婆。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "盘瓠",
+          "公主"
+        ],
+        "receivers": [
+          "儿女们"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of taking children to visit grandparents, with the parents (盘瓠 and 公主) as the doers and the children as the receivers."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "几个儿女都还没有姓氏，就请高辛王赐给他们姓。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "几个儿女"
+        ],
+        "receivers": [
+          "高辛王"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the children requesting the high king to grant them surnames, with the children as the doers and the high king as the receiver."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "大儿子生下来是用盘子装的，就赐姓为盘；二儿子生下来是用篮子装的，就赐姓为蓝；只有三儿子想不出赐什么姓好，适逢天上有轰轰的雷声响过，便赐姓为雷。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "高辛王"
+        ],
+        "receivers": [
+          "大儿子",
+          "二儿子",
+          "三儿子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of granting surnames to the three sons based on their birth circumstances. The High Emperor (高辛王) performs the action, and the receivers are the sons who receive the surnames."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "小女儿长大成人，招了个勇敢的兵士做女婿，跟着丈夫的姓姓了钟。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "小女儿通过婚姻获得丈夫的姓氏'钟'，使蓝、雷、盘、钟四姓形成完整的国族体系",
+        "explanation": "该句描述小女儿因婚姻获得姓氏'钟'，直接导致蓝、雷、盘、钟四姓的完整形成，构成国族基础，属于前文命名三子后的延续性结果"
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "蓝、雷、盘、钟四姓，互相婚配， 后来子孙繁衍，成为国族，大家都奉盘瓠为他们共同的老祖宗。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the four surnames formed a nation and worshipped Panhu as their common ancestor",
+        "explanation": "The sentence describes the long-term outcome of the prior events (Panhu's transformation, marriage to the princess, and their descendants), showing how the four surnames became a nation and established Panhu as their ancestral figure."
+      }
+    }
+  ]
+}

@@ -1,0 +1,438 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_007_嫦娥奔月.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 29,
+  "analyzed_sentences": 29,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "相传远古的时候，天上突然出现十个太阳，晒得老百姓民不聊生。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "天上",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the background context of the story by describing the initial problem of ten suns causing suffering, which sets the stage for the subsequent narrative. The location '天上' (the sky) is the setting where this situation occurs."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "有一个力大无比的壮汉名为后羿，他决心为老百姓解除这个苦难。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the character Hou Yi and his motivation to resolve the problem caused by the ten suns, establishing the narrative context for subsequent actions. It does not mention a specific location, so the location field is left empty."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "后羿登上昆仑山顶，运足气力，拉满神弓并一口气射下九个太阳。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "后羿"
+        ],
+        "receivers": [
+          "九个太阳"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes后羿's active action of climbing Mount Kunlun, drawing his bow, and shooting down nine suns. The doer is clearly后羿, and the receivers are the nine suns being targeted by his action."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "并且对天上最后一个太阳说：“从今以后，你每天必须按时升起，按时落下，为民造福。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "后羿"
+        ],
+        "receivers": [
+          "最后一个太阳"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Hou Yi actively speaking to the last remaining sun, which is an action performed by him (doer) directed at the sun (receiver). This action is part of his broader task to ensure the sun follows a schedule."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "后羿为老百姓除害，大伙都很敬重他。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "people respected Hou Yi",
+        "explanation": "The sentence describes the outcome of Hou Yi's previous action (eliminating the nine suns) leading to the people's respect, which is a state change resulting from his heroic deeds."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "皆拜他为师，跟他学习武艺。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "百姓"
+        ],
+        "receivers": [
+          "后羿"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the people (百姓) taking Hou Yi as their teacher and learning martial arts from him, making '百姓' the doers and '后羿' the receiver."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "有个叫逄蒙的人，为人奸诈贪婪，也随着众人拜在后羿门下。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the character逄蒙 and his traits (deceitful and greedy), establishing background context for his later actions. This sets the stage for the conflict with后羿 and嫦娥, fitting the 'situation' category as it provides narrative context without describing a specific action, task, or consequence."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "后羿妻子嫦娥是个美丽善良的女子。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces Chang'e's character traits (beautiful and kind) as part of the narrative background, establishing her personality which influences later events. No location is mentioned, so location is empty."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "她经常接济生活贫苦的乡亲，乡亲们都非常喜欢她。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about嫦娥's character and her relationship with villagers, establishing her traits and social standing before introducing subsequent events. No specific location is mentioned."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "一天，西王母送给后羿一颗仙药。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "西王母"
+        ],
+        "receivers": [
+          "后羿"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an action where the Queen Mother of the West (西王母) actively gives a pill of immortality to Hou Yi (后羿), constituting a transfer of object from doer to receiver."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "据说人吃了这种药，不但能长生不老，还可以升天成仙。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background information about the properties of the elixir, establishing its significance in the narrative. It sets the stage for subsequent events involving the pill's theft and its effects, fitting the 'situation' category as it offers contextual details without introducing new actions, tasks, or consequences."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "可后羿不愿意离开嫦娥，就让她将仙药藏在百宝匣里。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "后羿"
+        ],
+        "receivers": [
+          "嫦娥"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes后羿's action of letting嫦娥 hide the elixir, making him the doer and嫦娥 the receiver of the action. This action sets up the subsequent conflict with逄蒙."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "这件事不知怎么被逄蒙知道，他一心想仙药弄到手。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context explaining逄蒙's motivation to obtain the仙药, setting the stage for his subsequent actions. No specific location is mentioned."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "八月十五日清晨，后羿要带弟子出门去，逄蒙假装生病，留了下来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "逄蒙"
+        ],
+        "receivers": [
+          "后羿"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes逄蒙's action of pretending to be sick to stay behind while后羿 is about to leave, which is a key step in his plan to steal the elixir."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "到了晚上，逄蒙手提宝剑，迫不及待地闯进后羿家里，威逼嫦娥把仙药交出来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "逄蒙"
+        ],
+        "receivers": [
+          "嫦娥"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes逄蒙's active action of entering后羿's home with a sword and demanding嫦娥 hand over the elixir, making him the doer and嫦娥 the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "嫦娥心里想，让这样的人吃了长生不老药，不是要害更多的人吗。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "嫦娥意识到让逄蒙吃长生不老药会害更多人，因此决定吞下仙药",
+        "explanation": "The sentence describes the consequence of逄蒙's attempt to take the elixir, leading to嫦娥's decision to swallow it to prevent harm."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "于是便机智地与逄蒙周旋。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "嫦娥"
+        ],
+        "receivers": [
+          "逄蒙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes嫦娥 actively taking measures to counter逄蒙's threat, indicating an action performed by嫦娥 against逄蒙."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "逄蒙见嫦娥不肯交出仙药，就翻箱倒柜，四处搜寻。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "逄蒙"
+        ],
+        "receivers": [
+          "仙药"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes逄蒙's active search for the elixir, making it an 'action' performed by him with the elixir as the target object."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "眼看就要搜到百宝匣了，嫦娥疾步向前，取出仙药，一口吞了下去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "嫦娥"
+        ],
+        "receivers": [
+          "仙药"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes嫦娥 actively taking and swallowing the仙药, which is a direct action performed by her. The doer is嫦娥, and the receiver is the仙药 being consumed."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "嫦娥吃了仙药，突然飘飘悠悠地飞了起来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "嫦娥因服用仙药获得飞行能力，从地面升空飞向月亮",
+        "explanation": "该句描述了嫦娥服用仙药后的直接结果，即她获得飞行能力并升空，属于前序行动（吞食仙药）的后果，符合consequence分类"
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "她飞出了窗子，飞过了洒满银辉的郊野，越飞越高。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "嫦娥"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes嫦娥 actively performing the action of flying out of the window and ascending, making her the clear doer with no direct receivers mentioned."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "碧蓝碧蓝的夜空挂着一轮明月，嫦娥一直朝着月亮飞去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "嫦娥"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes嫦娥 actively flying towards the moon, which is an ongoing action. The doer is嫦娥, and there is no explicit receiver as the action focuses on her movement rather than an interaction with an object."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "后羿外出回来，不见嫦娥。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "后羿不见嫦娥，导致他焦急地前往月亮追她",
+        "explanation": "该句描述了嫦娥吞食仙药飞向月亮后，后羿返回不见嫦娥的直接结果，这一状态变化触发了后羿后续的追月行为，属于前事件（嫦娥飞向月亮）的后果。"
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "焦急冲出门外，只见皓月当空，月亮上树影婆娑，一只玉兔在树下跳来跳去。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "月亮",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述后羿在返回后发现嫦娥失踪后的场景，通过'皓月当空'和'月亮上树影婆娑'等意象构建了故事的时空背景，为后续后羿追寻嫦娥的情节发展奠定基础。"
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "看见妻子正站在一棵桂树旁深情地凝望着自己。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "桂树",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence sets the scene by describing Chang'e's location (by the osmanthus tree) as Hou Yi searches for her, establishing the spatial context for the subsequent action of him chasing the moon."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "“嫦娥，嫦娥”后羿连声呼唤，不顾一切地朝着月亮追去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "后羿"
+        ],
+        "receivers": [
+          "月亮"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes后羿's active pursuit of the moon, making it an 'action' category. The doer is后羿, and the receiver is the moon as the target of his chase."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "可是他向前追三步，月亮就向后退三步，怎么也追不上。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Huyi is unable to catch up to the moon",
+        "explanation": "This sentence describes the outcome of Huyi's pursuit of the moon, establishing that his attempts to reach嫦娥 result in an impossible chase where the moon recedes as he advances."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "乡亲们很想念好心的嫦娥，在院子里摆上嫦娥平日爱吃的食品，遥遥地为她祝福。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "乡亲们"
+        ],
+        "receivers": [
+          "嫦娥"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of villagers performing rituals (setting up food and offering blessings) as a direct response to the prior event of后羿's failed pursuit of嫦娥, which is part of the narrative leading to the establishment of the Mid-Autumn Festival."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "从此以后每年八月十五，就成为中秋节。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The establishment of the Mid-Autumn Festival as an annual tradition",
+        "explanation": "This sentence describes the outcome of the villagers' actions (offering food to Chang'e) leading to the creation of the Mid-Autumn Festival as a recurring annual celebration."
+      }
+    }
+  ]
+}

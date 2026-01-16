@@ -1,0 +1,1155 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_006_花木兰从军.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 79,
+  "analyzed_sentences": 79,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "古时候，有个叫花木兰的姑娘，她从小和父亲学了一身高超的武艺。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the character of Hua Mulan and her background, establishing the context for the story. It describes her upbringing and relationship with her father, which sets the stage for her later actions. No specific location is mentioned beyond the time period 'ancient times', so location is left empty."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "父亲对自己的这个女儿十分喜爱，总是称赞木兰有男子气概，只可惜是个女儿身，要不现在国难当头，木兰应该在战场上保家卫国。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes background context about the father's affection for his daughter and the societal constraints of her gender during a time of national crisis, setting up the conflict that drives the narrative."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "可是木兰才不喜欢父亲这样的话呢！",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence expresses Mulan's emotional reaction to her father's words, establishing her motivation and internal conflict as part of the narrative context leading to her decision to take action. It provides background on her mindset without directly describing an action, task, or consequence."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "她对父亲不服气地说：“我也可以保家卫国。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "木兰"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents木兰 declaring her intention to take on the task of defending the country, which was traditionally the responsibility of men. This statement reflects her commitment to fulfilling the duty despite her gender."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "那时候，中国的边境经常发生战乱，朝廷每年都要征兵，木兰所在村子的好多壮丁被拉去打仗。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "中国的边境",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描述中国边境战乱频发、朝廷征兵以及木兰所在村庄壮丁被征的情境，为后续木兰替父从军的决策提供了背景信息，属于设定故事背景的'Situation'类别。"
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "可是战争不停息，很多男子都战死在沙场上，而国家的壮丁已经越来越少了。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "中国的边境",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the ongoing war and its impact on the availability of conscripts, setting the stage for the conscription events in the story."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "有一天，官兵又一次来到木兰的村子征兵。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "木兰的村子",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了征兵事件发生的背景场景，为后续木兰替父从军的情节发展建立情境基础。'村子'是叙事焦点地点，符合situation分类中提供背景信息的特征。"
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "他们来到木兰家时，木兰正在织布，突然听见一阵急促的敲门声。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "木兰家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了士兵到达木兰家时的场景，为后续征兵任务的展开提供了背景设定，属于情境类信息。"
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "木兰忙放下手中的活儿，从织布机架上下来，打开门一看，官兵就交给木兰一份文书，说：“朝廷下令，每家每户必须出一位壮丁入伍抗敌，明天早上在村口集合。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "官兵"
+        ],
+        "receivers": [
+          "木兰"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the soldiers (doers) delivering a document to Mulan (receiver), which is a key action in the narrative. This action sets in motion Mulan's decision to take her brother's place in the military."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "说完他们就走了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "官兵"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the soldiers (官兵) leaving after delivering the conscription notice, which is a direct action performed by the soldiers."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "木兰拿着文书思前想后，这可怎么办啊？",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes Mu Lan's internal conflict upon receiving the draft notice, setting the stage for her decision-making process. It provides background context for her subsequent actions without introducing new events or state changes."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "父亲年老，弟弟年幼，都不能出征。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the family's inability to meet conscription requirements due to the father's age and the younger brother's youth, setting the stage for the decision to take the brother's place. No specific location is mentioned in the sentence."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "正在愁闷之时，一个大胆的想法在她脑海中浮现。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Mulan's emotional state (worry) and the emergence of an idea, which sets the stage for her subsequent decision to take action. It provides background context for her internal conflict and the development of her plan, fitting the 'situation' category."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "古时候，好多女子都征战在前线，自己为什么不能和她们一样呢？",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about historical women warriors, which influences木兰's decision-making process. It sets the stage for her internal conflict and rationale for taking action, fitting the 'situation' category as it establishes contextual background without introducing new events or outcomes."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "何况，自己的一身武艺并不比男孩子差呀。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents木兰's internal reasoning about her capabilities, which serves as background context for her decision to take her brother's place. It sets the stage for her subsequent actions without directly describing a location or event."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "木兰的姐姐看见妹妹满脸愁容，连声叹气，知道一定出了什么事情。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes context by describing the sister's observation of木兰's emotional state, setting the stage for the subsequent revelation about the conscription and family discussion. No specific location is mentioned."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "木兰就把征兵的事告诉了姐姐，姐妹俩商量了半天，也不知道怎么办才好。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "木兰"
+        ],
+        "receivers": [
+          "木兰的姐姐"
+        ],
+        "changed_state": "",
+        "explanation": "木兰主动将征兵事宜告知姐姐，属于主动采取的行动，直接导致姐妹俩展开讨论。行为主体是木兰，接收方是其姐姐。"
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "她们就把这件事情告诉了父母，花父觉得保家卫国，义不容辞，自己应当入伍抗敌。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "木兰",
+          "姐姐"
+        ],
+        "receivers": [
+          "父母"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the sisters (木兰 and her sister) informing their parents about the conscription issue, which is an active action performed by the sisters towards their parents."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "木兰和姐姐坚决不同意，花母也觉得丈夫年事已高，万万不可出征。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "村子",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了木兰家族面对征兵令时的家庭矛盾背景，为后续木兰替父从军的情节发展提供情境基础，属于故事背景设定。"
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "但木兰的弟弟年龄太小，自己都不会照顾自己，也不可能出征。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "村子",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过说明木兰弟弟年龄太小、无法自理的客观情况，为家庭面临的征兵困境提供背景信息，属于叙事中的情境铺垫。"
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "家里人正在为难之际，木兰突然对父母说：“父亲年老，弟弟年幼，我愿意顶替弟弟的名字，替父从军。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "木兰"
+        ],
+        "receivers": [
+          "父亲",
+          "母亲"
+        ],
+        "changed_state": "",
+        "explanation": "木兰主动提出顶替弟弟从军是明确的行动行为，她作为行动主体（doers）向父母（receivers）表达意愿，标志着故事关键转折点。"
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "大家听了木兰的话都吃惊不小，没有一个人同意木兰的做法，特别是母亲极力反对。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the family disapproves of Mulan's decision, with the mother being particularly opposed",
+        "explanation": "This sentence describes the outcome of Mulan's decision to take her brother's place in the army, showing the family's reaction as a consequence of her prior action."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "她认为女子应该在家纺线织布，哪能在战场上冲锋陷阵呢。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes societal norms and expectations about women's roles, providing context for the conflict and setting the stage for Mulan's decision to disguise herself. This background information falls under 'situation' as it sets the narrative context without introducing new actions or consequences."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "木兰看劝说不了父母，就提出要和父亲比剑，谁赢了谁就出征。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "木兰"
+        ],
+        "receivers": [
+          "花父"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes木兰 actively proposing a sword fight with her father to determine who will go to war, making it an 'action' performed by木兰 with花父 as the receiver."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "花父向来不服老，经女儿一说就答应了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "花父"
+        ],
+        "receivers": [
+          "木兰"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 花父 agreeing to the challenge proposed by 木兰, which is an active decision made by the father in response to his daughter's request. The action involves the father (doer) and the daughter (receiver) as the subject of his agreement."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "于是，父女俩就一起来到院中比剑。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "花父",
+          "木兰"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the father and daughter going to the courtyard to engage in a sword match, indicating their active participation in the duel."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "花父剑法熟练，木兰身手矫健，几个回合下来分不出高低。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "院中",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述花木兰与父亲比剑时的技能对比，为后续比剑情节提供背景信息，属于设定情境的类别。地点为院中，符合前文提到的比剑场景。"
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "但是到了后来，花父毕竟年龄大了，有点儿招架不住。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the father is no longer able to keep up with the duel due to his age",
+        "explanation": "The sentence describes the outcome of the prior duel between father and daughter, indicating the father's physical limitations due to age caused the duel's outcome to shift in favor of木兰."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "木兰却越战越勇，最后，花父终于招架不住，撇下剑，蹲在地上喘气。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "木兰"
+        ],
+        "receivers": [
+          "花父"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Mu Lan's active engagement in the sword fight with her father, detailing her increasing courage and the resulting defeat of her father. This constitutes an action performed by Mu Lan and affecting her father."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "木兰看见父亲身体这般虚弱，心意更加坚定，她一边扶起父亲，一边说道：“爹爹，你现在没有什么可以说的了吧，我胜了你，按照比剑前说的，我要替你去从军。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "木兰"
+        ],
+        "receivers": [
+          "父亲"
+        ],
+        "changed_state": "",
+        "explanation": "木兰主动扶起虚弱的父亲并明确表示要替父从军，这是她采取的具体行动。'doers'为执行动作的主体木兰，'receivers'为接受动作的对象父亲。"
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "父亲喘着粗气看着木兰不知该说什么！",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the father's physical state and emotional reaction after losing the sword fight, setting the context for the family's subsequent disagreement. It provides background for the narrative progression without introducing new actions or tasks."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "尽管木兰赢了父亲，可是家人还是不同意她去从军。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The family's disagreement with Mu Lan's decision to join the military persists despite her victory over her father",
+        "explanation": "The sentence describes the outcome of the prior event (Mu Lan's duel with her father) where the family's opposition to her joining the military remains unchanged, indicating a consequence of the previous action."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "木兰毕竟是个女儿身，万一被别人发现了，那可怎么办啊？",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "木兰的家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了木兰作为女性身份在从军过程中可能面临的暴露风险，为后续她采取伪装行动提供了背景情境，属于设定故事发展基础的'情况'类别。"
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "这时，木兰抿嘴一笑，说：“这个你们用不着担心，你们就在院子里等等我，我一会儿就来！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "木兰"
+        ],
+        "receivers": [
+          "家人"
+        ],
+        "changed_state": "",
+        "explanation": "木兰通过言语行动（承诺改变装扮）直接回应家庭担忧，属于主动采取的行动。她作为行为执行者（doer）向家人（receiver）传达信息，推动后续变装情节发展。"
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "说完，木兰一转身跑进屋里去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "木兰"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Hulan's action of running into the house to prepare for her disguise, which is a physical movement initiated by her as the doer. There is no clear receiver for the action since it focuses on her own activity."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "她洗净脸上的胭脂，脱掉身上的罗裙，穿上了一身铠甲。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "木兰"
+        ],
+        "receivers": [
+          "胭脂",
+          "罗裙",
+          "铠甲"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes木兰 actively performing physical actions (washing makeup, removing a skirt, and wearing armor) to transition from her female appearance to a male disguise, which is a key step in her plan to replace her brother and join the army."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "几分钟之后，她来到院子里，啊！",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "木兰"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Mulan's action of arriving at the courtyard after changing into armor, which is a key moment leading to the family's reaction."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "这哪是木兰啊！",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the family's shock and disbelief upon seeing Mulan in male attire",
+        "explanation": "The sentence represents the family's reaction to Mulan's transformation into male attire, which is a direct consequence of her previous action (changing clothes) and marks a shift in their perception of her identity."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "只见一个器宇轩昂、英气逼人的英武少年站在家人的面前。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "家中",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the current state of the family seeing a young man (Mulan in disguise), which sets the stage for their reaction and the subsequent events."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "家人都大吃一惊，不敢相信眼前的英俊少年就是木兰。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the family's disbelief and shock at recognizing the young man as Mu Lan",
+        "explanation": "The sentence describes the family's reaction to Mu Lan's disguised appearance, which is a direct consequence of her actions (changing into male attire) and the prior event (her successful deception). This outcome alters the family's perception and understanding of the situation."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "如果家人事先不知道，谁都看不出来这是女儿家。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes context for the family's reaction to木兰's disguise, explaining that her female identity would remain hidden if they were unaware. This sets the stage for the subsequent interactions and reinforces the narrative's premise."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "看到妹妹如此英姿飒爽，姐姐禁不住叫道：“好一个少年将军。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "姐姐"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the sister (姐姐) performing the action of speaking in response to her sister's appearance, which is an active behavior."
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "看到大家这样注视着自己，木兰不禁哑然失笑，她对家人神气地说：“你们这下可以放心了吧！我把你们都能唬住，更何况其他人呢。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "木兰"
+        ],
+        "receivers": [
+          "家人"
+        ],
+        "changed_state": "",
+        "explanation": "木兰通过言语回应家人的注视，主动与家人互动，这一行为属于主动采取的行动，因此归类为'行动'。"
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "父母看见木兰确实有男儿的气概，也实在想不出其他的办法，就答应木兰应征入伍。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "父母同意木兰应征入伍",
+        "explanation": "该句描述了父母在看到木兰展现出男儿气概后，因无法想出其他办法而同意她应征入伍的结果，这是木兰通过一系列行动（如比剑、女扮男装）导致的直接后果。"
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "木兰看见父母同意了，不由得上前感谢，这一感谢，就露出了破绽。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "木兰"
+        ],
+        "receivers": [
+          "父母"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes木兰's action of thanking her parents, which directly leads to the consequence of revealing her secret identity. The action is performed by木兰 and directed towards her parents."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "原来在古代，女子和男子在行礼方面有很多不同。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about ancient societal norms regarding gender-specific etiquette, which sets the stage for the conflict when Mulan's improper bow is revealed. This establishes the cultural situation that influences the story's events."
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "大家看见木兰穿着男装，却在行着女子礼，都大笑了起来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the people laughed at Mulan for her behavior",
+        "explanation": "The sentence describes the outcome of Mulan's actions (wearing male attire while performing a female bow), resulting in the people's laughter. This is a consequence of her previous actions and the cultural norms mentioned earlier."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "“你要学的东西很多呀，我的乖女儿。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "花木兰"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task assigned by the father to Mulan, requiring her to learn necessary skills and behaviors as a male soldier. The task role is explicitly Mulan as she must fulfill this responsibility."
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "花父一边扶起木兰，一边对木兰和蔼地说。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "花父"
+        ],
+        "receivers": [
+          "木兰"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the father actively performing the action of helping Mu Lan up and speaking kindly to her, making it an 'action' category. The doer is 花父 (the father), and the receiver is 木兰 (Mu Lan)."
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "接着花父就教木兰一些男子的行礼和军中的一些规矩。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "花父"
+        ],
+        "receivers": [
+          "木兰"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an active activity where 花父 (the father) is performing the action of teaching 木兰 (the daughter) about male etiquette and military rules. The doer is 花父, and the receiver is 木兰."
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "木兰一边学，一边牢记在心。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "木兰"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Mu Lan actively performing the action of learning and memorizing military etiquette and rules taught by her father, making her the clear doer of the action with no direct receiver specified."
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "第二天，一家人把木兰送到了村口，木兰和姐姐以及弟弟抱成一团，想到此后木兰就要开始军旅生活，大家都忍不住痛哭流涕。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "村口",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了木兰即将开始军旅生活前的家庭送别场景，通过'村口'这一地点设定为后续情节（木兰从军）提供背景铺垫，属于情境类描述。"
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "花父和花母拉着女儿的手，嘱咐道：“你虽是女儿家，但你的武艺不比男孩差，你应该奋勇杀敌，保家卫国。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "木兰"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task assigned to Mu Lan by her parents, instructing her to fight bravely and protect the country despite her female gender. The task role is explicitly Mu Lan as she is the one expected to fulfill this responsibility."
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "木兰答道：“爹和娘的话，木兰记住了，孩儿绝不会给你们丢脸的。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "木兰"
+        ],
+        "receivers": [
+          "父亲",
+          "母亲"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence shows Mulan committing to her parents' task of fighting bravely, which is an action where she addresses her parents as the receivers of her vow."
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "木兰说着，就含泪跨上战马，扬鞭而去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "木兰"
+        ],
+        "receivers": [
+          "战马"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Mu Lan's action of mounting her horse and departing, with her as the doer and the horse as the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "木兰昼夜兼程，快马加鞭，奔赴前线。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "木兰"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Mu Lan actively performing the action of traveling to the front lines, making her the clear doer. There is no explicit receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "一路上，想到自己就要远离家乡，远离亲人，木兰心里不免有些伤感，但想到自己可以为国效力，心里又高兴起来。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes木兰's internal emotional state during her journey to the front, providing background context for her motivations and setting the stage for her subsequent actions. It does not mention a specific location, so the location field is left empty."
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "经过三天三夜的跋山涉水，木兰终于来到了边关。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "边关",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence sets the stage for the subsequent events by describing Mulan's arrival at the border, which transitions the narrative from her journey to the conflict at the border fortress."
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "边关的镇守大将军让一起来的新兵比试武艺，结果木兰得了第一名。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "边关的镇守大将军",
+          "新兵"
+        ],
+        "receivers": [
+          "新兵"
+        ],
+        "changed_state": "",
+        "explanation": "该句描述了边关镇守大将军组织新兵比试武艺的行动，以及木兰在比试中获得第一名的结果。'边关的镇守大将军'作为组织者发起行动，'新兵'作为参与者执行比试，因此属于'行动'类别。"
+      }
+    },
+    {
+      "sentence_index": 60,
+      "sentence": "镇守大将军看到木兰英气逼人、气宇轩昂，便料定她不是一般人，就命令木兰为新兵的首领，让她带领新兵操练。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "镇守大将军"
+        ],
+        "receivers": [
+          "木兰"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the镇守大将军 giving a command to木兰 to lead new soldiers, which is an active action performed by the general and directed at Mulan."
+      }
+    },
+    {
+      "sentence_index": 61,
+      "sentence": "木兰每天和新兵一起操练，她不但把自己的武艺毫不保留地教给他们，而且还经常对他们进行爱国教育。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "木兰"
+        ],
+        "receivers": [
+          "新兵"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Mulan actively performing the actions of training new soldiers and educating them, making it an 'action' category with '木兰' as the doer and '新兵' as the receivers."
+      }
+    },
+    {
+      "sentence_index": 62,
+      "sentence": "没过多久，木兰带领的新兵就成了战场上最勇敢的一支队伍，他们战无不胜、攻无不克。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "木兰带领的新兵成为战场上最勇敢的队伍，具备战无不胜、攻无不克的能力",
+        "explanation": "该句描述了木兰训练新兵后的直接结果，即新兵队伍战斗力的显著提升，属于前文行动（训练新兵）导致的状态变化，符合consequence分类"
+      }
+    },
+    {
+      "sentence_index": 63,
+      "sentence": "敌人只要看见花木兰的队伍，就不战而败，落荒而逃。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Enemies now flee in defeat upon seeing Hu Mulan's troops, indicating the effectiveness of her leadership and the strength of her army",
+        "explanation": "The sentence describes the outcome of Mulan's successful military leadership and training of her troops, resulting in enemies fleeing without combat. This is a consequence of her actions and the prior establishment of her troops as invincible."
+      }
+    },
+    {
+      "sentence_index": 64,
+      "sentence": "木兰时刻铭记父母临别时的嘱托，战场上她永远都冲在最前面。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "木兰"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Mulan's active behavior during battle, specifying her consistent action of leading from the front. The doer is clearly Mulan, while no direct receiver is mentioned."
+      }
+    },
+    {
+      "sentence_index": 65,
+      "sentence": "她武艺高超，足智多谋，很快就立下了赫赫战功。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "木兰因武艺高超和足智多谋而立下赫赫战功",
+        "explanation": "该句描述木兰因自身能力获得军事成就的结果，属于前文战斗行动后的状态变化，符合consequence类别。changed_state具体说明其军事成就的改变"
+      }
+    },
+    {
+      "sentence_index": 66,
+      "sentence": "最英武的一次战斗是木兰竟然和敌人的头领大战五十回合，把敌人的头领从马上打了下来，并活捉了这位头领。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "木兰"
+        ],
+        "receivers": [
+          "敌人的头领"
+        ],
+        "changed_state": "",
+        "explanation": "该句描述木兰主动发起的战斗行为，明确指出她与敌方头领交战并将其俘虏，属于主动执行的军事行动，符合'action'类别中'doers'（执行者）和'receivers'（受事对象）的标注要求。"
+      }
+    },
+    {
+      "sentence_index": 67,
+      "sentence": "从此以后，花木兰的事迹就传遍大江南北，老百姓都知道前方战场上有一位年轻有为的花将军，老百姓们沿街走巷，歌颂花木兰的事迹。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "her story became widely known and celebrated by the people",
+        "explanation": "This sentence describes the outcome of木兰's military successes and her decision to return home, showing how her actions led to her legend spreading across the land and being honored by civilians and the emperor."
+      }
+    },
+    {
+      "sentence_index": 68,
+      "sentence": "皇上也知道了花木兰的事迹，常常奖励她。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The emperor recognized Mulan's deeds and began rewarding her, leading to her rising status and eventual return to her family.",
+        "explanation": "This sentence describes the outcome of Mulan's military achievements and her story spreading, resulting in the emperor's recognition and rewards. The state change involves her gaining imperial favor and the consequences of her actions being acknowledged at the highest level."
+      }
+    },
+    {
+      "sentence_index": 69,
+      "sentence": "一晃十二年过去了，在这十二年里，木兰的官职步步高升，已经成为统领一方的大将军，但木兰还是和普通的士兵一起操练，一起吃饭。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "木兰因长期军功积累晋升为统领一方的大将军，同时保持与士兵同吃同练的谦逊作风",
+        "explanation": "该句描述了木兰长期军旅生涯带来的结果，包括官职晋升和行为模式的延续，属于前行动作（从军作战）产生的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 70,
+      "sentence": "只有在夜幕降临的时候，木兰才会遥望故乡，想起年老的父母，姐姐和弟弟。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "故乡",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Mulan's routine of looking at her hometown and reflecting on her family during the night, establishing her emotional state and current circumstances as a key narrative context."
+      }
+    },
+    {
+      "sentence_index": 71,
+      "sentence": "每当这时，木兰就会禁不住流下眼泪来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "木兰因思念家乡和亲人而流泪，表现出她对家庭的深切眷恋",
+        "explanation": "该句描述木兰在思念家乡和亲人时的自然情感反应，是其长期思乡情绪的直接结果，符合'consequence'类别中因前序事件（思念亲人）导致的情感状态变化。"
+      }
+    },
+    {
+      "sentence_index": 72,
+      "sentence": "木兰每天都盼望着敌人尽早退兵，自己能回到家乡，陪在父母身边，侍奉二老。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "家乡",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述木兰对回归家乡的渴望，为后续敌人退兵和木兰返乡的情节发展提供背景，属于设定故事后续发展的背景情境。"
+      }
+    },
+    {
+      "sentence_index": 73,
+      "sentence": "这一天终于来到了，敌人宣布退兵，并声称永不来侵犯。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "敌人宣布退兵并承诺永不侵犯，标志着战争结束和和平的到来",
+        "explanation": "该句描述了木兰征战多年后敌军最终撤退的结局，这是其军事胜利带来的直接结果，改变了战争持续的状态，属于后果类别。"
+      }
+    },
+    {
+      "sentence_index": 74,
+      "sentence": "战士们欢欣鼓舞，都等着皇上赏赐，只有木兰在收拾衣服，希望能尽早回到家乡。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "战士们",
+          "木兰"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the actions of the soldiers (waiting for rewards) and Mu Lan (packing clothes to return home), which are active behaviors performed by the characters in response to the previous events."
+      }
+    },
+    {
+      "sentence_index": 75,
+      "sentence": "皇上派来的使者对木兰说：“花将军，皇上希望你回到朝廷，为你加官晋爵。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "木兰"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence presents the emperor's request for Mulan to return to the court as an explicit task requiring her to fulfill. The task is directed at Mulan, who must comply with the imperial summons."
+      }
+    },
+    {
+      "sentence_index": 76,
+      "sentence": "这令木兰左右为难，没有办法，她只好把女扮男装、替父从军的事情告诉使者，并希望使者转告皇帝，自己什么都不需要，只希望回到家乡，能尽孝道。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "木兰"
+        ],
+        "receivers": [
+          "使者",
+          "皇帝"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes木兰 actively taking the action of revealing her identity to the messenger and requesting to return home, which directly involves the messenger as the immediate receiver and the emperor as the ultimate recipient of her request."
+      }
+    },
+    {
+      "sentence_index": 77,
+      "sentence": "皇帝听了木兰的事情后，大呼惊奇，并为木兰的孝心所感动，就让她回到了家乡。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "木兰被允许返回家乡，结束了她十二年的军旅生涯，重新回到父母身边尽孝",
+        "explanation": "该句描述了木兰因孝心感动皇帝而获得返回家乡的结局，是其替父从军行动的直接结果，导致她从军旅状态转变为回归家庭生活。"
+      }
+    },
+    {
+      "sentence_index": 78,
+      "sentence": "从此，花木兰回到了阔别多年的家乡，她一心一意地侍奉父母。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "花木兰结束军旅生涯，回到家乡并开始侍奉年迈的父母",
+        "explanation": "该句描述了木兰因皇帝允许而返回家乡后的状态变化，属于前文'皇帝让她回到家乡'这一事件的后果，体现了她从军旅生活转向家庭生活的转变"
+      }
+    },
+    {
+      "sentence_index": 79,
+      "sentence": "花木兰“替父从军”的英雄故事也为人敬仰，万世流芳。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Hua Mulan's story of replacing her father to serve in the military is respected and celebrated, enduring for generations",
+        "explanation": "The sentence describes the lasting impact and legacy of Hua Mulan's actions, indicating a state change where her story becomes a celebrated and enduring legend."
+      }
+    }
+  ]
+}

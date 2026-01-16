@@ -1,0 +1,582 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_025_东郭先生与狼.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 38,
+  "analyzed_sentences": 38,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "晋国大夫赵简子率领众随从到中山去打猎，途中遇见一只像人一样直立的狼狂叫着挡住了去路。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "中山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the initial context of Hsieh Chien-tzu's hunting expedition in Zhongshan and his encounter with the upright wolf, setting the stage for subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "赵简子立即拉弓搭箭，只听得弦响狼嚎，飞箭射穿了狼的前腿。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "赵简子"
+        ],
+        "receivers": [
+          "狼"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Huan Zizǐ's active action of drawing his bow and shooting an arrow at the wolf, making him the doer and the wolf the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "那狼中箭不死、落荒而逃，使赵简子极为恼怒。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "赵简子因狼未死而逃感到极度恼怒，导致他决定穷追不舍",
+        "explanation": "该句描述了赵简子射箭后狼未死逃逸这一行动的直接结果，导致赵简子产生强烈愤怒情绪并采取进一步追击行动，属于前序动作（射箭）引发的状态变化"
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "他驾起猎车穷追不舍，车马扬起的尘土遮天蔽日。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "赵简子"
+        ],
+        "receivers": [
+          "狼"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Huanzi's active pursuit of the wolf, with '驾起猎车穷追不舍' indicating his action and '车马扬起的尘土' as the resulting effect. The doer is Huanzi, and the receiver is the wolf being chased."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "这时候，东郭先生正站在驮着一大袋书简的毛驴旁边向四处张望。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes East Tuo's position and state of looking around, establishing context for his subsequent interaction with the wolf. No specific location name is mentioned, so the location field remains empty."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "原来，他前往中山国求官，走到这里迷了路。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "中山国",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about East Tuo's journey to Zhongshan State and his current state of being lost, establishing the narrative focus for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "正当他面对岔路犹豫不决的时候，突然窜出了一只狼。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "岔路",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence sets up the context of East Tuo facing a forked path while lost, which initiates the subsequent interaction with the wolf. The location '岔路' (forked path) is the narrative focus where the critical event occurs."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "那狼哀怜地对他说：“现在我遇难了，请赶快把我藏进你的那条口袋吧！如果我能够活命，今后一定会报答您。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "狼"
+        ],
+        "receivers": [
+          "东郭先生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the wolf actively requesting to be hidden in East Tuo's bag, which constitutes an action performed by the wolf (doer) directed at East Tuo (receiver)."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "东郭先生看着赵简子的人马卷起的尘烟越来越近，惶恐地说：“我隐藏世卿追杀的狼，岂不是要触怒权贵？然而墨家兼爱的宗旨不容我见死不救，那么你就往口袋里躲吧！”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "中山国的岔路",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述东郭先生在赵简子追捕狼的过程中面临道德抉择的内心矛盾，为后续他将狼藏入袋中的行动提供背景。'中山国的岔路'是故事的关键地点，体现他迷路后的处境。"
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "说着他便拿出书简，腾空口袋，往袋中装狼。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "东郭先生"
+        ],
+        "receivers": [
+          "狼"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes East Tuo's action of physically placing the wolf into the bag, with him as the active performer and the wolf as the recipient of the action."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "他既怕狼的脚爪踩着狼颔下的垂肉，又怕狼的身子压住了狼的尾巴，装来装去三次都没有成功。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "东郭先生"
+        ],
+        "receivers": [
+          "狼"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes East Tuo's active attempt to contain the wolf in the bag, detailing his struggle and repeated failures. This constitutes an ongoing action performed by East Tuo (doer) with the wolf (receiver) as the target of his actions."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "危急之下，狼蜷曲起身躯，把头低弯到尾巴上，恳求东郭先生先绑好四只脚再装。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "狼"
+        ],
+        "receivers": [
+          "东郭先生"
+        ],
+        "changed_state": "",
+        "explanation": "该句描述狼在危急情况下主动蜷曲身体、低头弯尾并向东郭先生恳求的行动，属于角色主动实施的行为。狼是动作执行者，东郭先生是请求的接收方。"
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "这一次很顺利。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The wolf was successfully contained in the bag without further complications",
+        "explanation": "The sentence indicates the successful outcome of the previous action (binding the wolf and placing it in the bag), leading to the next sequence of events in the story."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "东郭先生把装狼的袋子扛到驴背上以后就退缩到路旁去了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "东郭先生"
+        ],
+        "receivers": [
+          "驴",
+          "路"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes East Tuo's action of moving the wolf-containing bag to his donkey's back and retreating to the roadside, which are physical actions he performed."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "不一会儿，赵简子来到东郭先生跟前，但是没有从他那里打听到狼的去向，因此愤怒地斩断了车辕，并威胁说：“谁敢知情不报，下场就跟这车辕一样！”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "赵简子因未找到狼而愤怒，采取极端措施威胁知情者，导致东郭先生陷入危险处境",
+        "explanation": "该句描述赵简子因未找到狼而愤怒地斩断车辕并威胁他人，这是对东郭先生藏匿狼行为的直接反应，导致新的冲突升级，属于前行动作的后果。"
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "东郭先生匍匐在地上说：“虽说我是个蠢人，但还认得狼。人常说岔道多了连驯服的羊也会走失。而这中山的岔道把我都搞迷了路，更何况一只不驯的狼呢？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "东郭先生"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes 东郭先生 actively performing the action of speaking to explain his dilemma, which is a direct narrative action. The speech itself is the activity, with no explicit receiver mentioned."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "赵简子听了这话，调转车头就走了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "赵简子"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Zhi Jizi's action of turning his carriage around and leaving after hearing East Tuo's explanation, indicating a direct physical action performed by the subject."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "当人唤马嘶的声音远去之后，狼在口袋里说：“多谢先生救了我。请放我出来，受我一拜吧！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "狼"
+        ],
+        "receivers": [
+          "东郭先生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the wolf's action of speaking to East Tuo after being trapped, which is an active activity performed by the wolf (doer) directed at East Tuo (receiver)."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "可是狼一出袋子却改口说：“刚才亏你救我，使我大难不死。现在我饿得要死，你为什么不把身躯送给我吃，将我救到底呢？”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The wolf betrays East Tuo by demanding to eat him, shifting from gratitude to hostility",
+        "explanation": "This sentence describes the outcome of East Tuo's action in saving the wolf, leading to the wolf's immediate betrayal and request for sustenance, which represents a state change in their relationship."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "说着它就张牙舞爪地向东郭先生扑去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "狼"
+        ],
+        "receivers": [
+          "东郭先生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the wolf actively attacking East Tuo, which is a physical action performed by the wolf (doer) against East Tuo (receiver)."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "东郭先生慌忙躲闪，围着毛驴兜圈子与狼周旋起来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "东郭先生"
+        ],
+        "receivers": [
+          "狼"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes East Tuo's active response to the wolf's attack, detailing his physical actions of dodging and circling around the donkey to evade the wolf. This constitutes an 'action' performed by East Tuo (doer) against the wolf (receiver)."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "太阳快下山的时候，东郭先生怕天黑遇到狼群，于是对狼说：“我们还是按民间的规矩办吧！如果有三位老人说你应该吃我，我就让你吃。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "中山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of East Tuo's dilemma at dusk in Zhongshan, setting the stage for the subsequent interaction with the wolf and the proposed resolution through the 'three elders' ritual."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "狼高兴地答应了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "狼"
+        ],
+        "receivers": [
+          "东郭先生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the wolf's action of agreeing to East Tuo's proposal, making the wolf the doer and East Tuo the receiver of this agreement."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "但前面没有行人，于是狼逼他去问杏树。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "狼"
+        ],
+        "receivers": [
+          "东郭先生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the wolf's action of forcing 东郭先生 to go ask the apricot tree, making '狼' the doer and '东郭先生' the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "老杏树说：“种树人只费一颗杏核种我，20年来他一家人吃我的果实、卖我的果实，享够了财利。尽管我贡献很大，到老了，却要被他卖到木匠铺换钱。你对狼恩德不重，它为什么不能吃你呢？”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the old peach tree's relationship with the farmer, establishing the moral dilemma and setting the stage for the wolf's justification of eating East Tuo. This falls under 'situation' as it sets narrative context without initiating a task, action, or consequence."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "狼正要扑向东郭先生，这时正好又看见了一头母牛，于是又逼东郭先生去问牛。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "狼"
+        ],
+        "receivers": [
+          "东郭先生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the wolf's action of attacking East Tuo and forcing him to seek the cow's opinion. The wolf (doer) directly interacts with East Tuo (receiver) through the act of threatening and compelling him to ask the cow."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "那牛说：“当初我被老农用一把刀换回。他用我拉车帮套、犁田耕地，养活了全家人。现在我老了，他却想杀我，从我的皮肉筋骨中获利。你对狼恩德不重，它为什么不能吃你呢？”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the cow's relationship with the farmer, which is part of the wolf's argument to justify its actions. This sets the stage for the moral dilemma in the story."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "狼听了又嚣张起来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The wolf's arrogance intensifies after being saved by East Tuo, leading to its decision to attack him",
+        "explanation": "The sentence describes the outcome of the wolf's previous interaction with East Tuo, showing how its behavior shifts from desperation to aggression, directly resulting in the impending conflict."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "就在这时来了一位拄着藜杖的老人。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces a new character (the elderly man with a staff) entering the narrative, setting up the situation for the subsequent conflict resolution. It establishes the context for the elder's role in judging the wolf and East Tuo's actions."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "东郭先生急忙请老人主持公道。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "东郭先生"
+        ],
+        "receivers": [
+          "老人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Dongguo先生 actively performing the action of requesting the old man to take charge of justice, making '东郭先生' the doer and '老人' the receiver."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "老人听了事情的经过，叹息地用藜杖敲着狼说：“你不是知道虎狼也讲父子之情吗？为什么还背叛对你有恩德的人呢？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "老人"
+        ],
+        "receivers": [
+          "狼"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man actively engaging with the wolf by using his staff to tap it and delivering a speech, which constitutes an action performed by the old man (doer) directed at the wolf (receiver)."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "狼狡辩地说：“他用绳子捆绑我的手脚，用诗书压住我的身躯，分明是想把我闷死在不透气的口袋里，我为什么不吃掉这种人呢？”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the wolf's betrayal and decision to eat East Tuo",
+        "explanation": "The sentence describes the outcome of East Tuo's previous action (saving the wolf) by showing the wolf's betrayal and justification for attempting to eat East Tuo, which directly follows the prior events and alters the narrative state."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "老人说：“你们各说各有理，我难以裁决。俗话说‘眼见为实’。如果你能让东郭先生再把你往口袋里装一次，我就可以依据他谋害你的事实为你作证，这样你岂不有了吃他的充分理由？”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "狼"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The old man proposes a task for the wolf to get East Tuo to re-enclose it in the bag, which would provide evidence of East Tuo's alleged harm. The wolf is the one who must initiate this action to fulfill the condition."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "狼高兴地听从了老人的劝说，然而却没有想到在束手就缚、落入袋中之后，等待它的是老人和东郭先生的利剑。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The wolf is killed by the old man and East Tuo, and the wolf realizes it was tricked.",
+        "explanation": "The sentence describes the outcome of the wolf's decision to comply with the old man's plan, resulting in its death and the exposure of the trick. This is a consequence of the prior action where the wolf was lured into the bag."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "老人立刻扎紧口袋，抡起藜杖使劲的打狼，狼这才知道自己上了老人的当。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "老人"
+        ],
+        "receivers": [
+          "狼"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the old man (老人) physically attacking the wolf (狼) with a staff, which is a direct activity performed by the doer towards the receiver."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "狼临死前说道：“不吃掉那个书呆子，我死也不会瞑目的。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "狼"
+        ],
+        "receivers": [
+          "东郭先生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the wolf's action of speaking, addressing East Tuo Xiansheng (东郭先生) with its dying words, which is an active communication directed at the scholar."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "但是已经迟了，老人用藜杖几下就把这只忘恩负义的狼打死了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The wolf was killed by the elder, resulting in its death and the resolution of the conflict",
+        "explanation": "The sentence describes the outcome of the prior events where the wolf's betrayal led to its demise at the hands of the elder. This marks a state change from the wolf's survival to its death, fulfilling the consequence category."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "然后老人指责东郭先生说道：“中山一带的狼非常凶恶，就算你救了它的命，它也会反过来害人。你真是太糊涂了！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "老人"
+        ],
+        "receivers": [
+          "东郭先生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the elder actively taking action by blaming Dong Guo Xiangshi for his decision to save the wolf, making the elder the doer and Dong Guo the receiver of the action."
+      }
+    }
+  ]
+}

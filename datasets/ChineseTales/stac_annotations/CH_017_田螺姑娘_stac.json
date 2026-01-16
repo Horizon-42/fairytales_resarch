@@ -1,0 +1,654 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_017_田螺姑娘.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 45,
+  "analyzed_sentences": 45,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "晋朝时，侯官县（今福州）有一个叫谢瑞的孤儿。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "侯官县",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the historical context (Jin dynasty) and primary location (侯官县) for the story, setting the stage for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "他从小就失去了父母，是好心的邻居们可怜他，为他送饭、送衣服，将他养大成人的。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "侯官县",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence establishes the background of Shexiu's early life, setting the stage for his later independence and the events that follow. The location is specified as 侯官县, which is the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "在他十七八岁的时候，不想再给邻居们添麻烦，就自己在山坡旁搭了一间屋子，开始独立生活。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "谢瑞"
+        ],
+        "receivers": [
+          "屋子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Shexiu's action of building a house on a hillside to live independently. The doer is Shexiu, and the receiver is the house he constructed."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "谢瑞忠厚老实，又能吃苦耐劳，靠着给地主种田为生，小日子倒也过得马马虎虎。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Shexiu's character traits and livelihood, establishing his circumstances as part of the narrative background. It does not mention a specific location, so the location field remains empty."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "只是由于家里一贫如洗，没有姑娘肯嫁给他。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the contextual background of谢瑞's poverty preventing him from marrying, setting the stage for the subsequent events involving the田螺 and水素女. It provides the socioeconomic situation that drives the narrative forward."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "不过，谢瑞并没有因此沮丧，每天依旧辛勤地耕作，早出晚归。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "谢瑞"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes谢瑞's active behavior of continuing to work hard and rise early/retire late, which is an action performed by him. No direct receiver is mentioned."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "一天，他去田里劳动，忽然看到地上有一只特别大的田螺，可谓世间少有。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "田里",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了谢瑞在田间劳动时发现特殊田螺的情境，为后续水素女现身的奇幻事件建立背景，属于故事发展的关键情境设定。"
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "他心里感到好奇，就小心翼翼地捡起来，兴冲冲地带回家，精心地把它养在水缸里。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "谢瑞"
+        ],
+        "receivers": [
+          "田螺"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Shexiu's active actions of picking up and caring for the large snail, making it an 'action' category. The doer is Shexiu, and the receiver is the snail being nurtured in the water jar."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "第二天清晨，谢瑞像往常一样早早起床去地里劳动，到了天黑时分才回家。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "谢瑞"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Shex瑞's daily action of going to the fields to work and returning home, which is an activity actively performed by him. No specific receiver is mentioned for the action."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "可是，令他意外的是，灶上竟放着香喷喷的米饭，壶里的热水正滋滋地冒着热气，不但如此，厨房里还摆了一桌美味可口的饭菜。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The unexpected appearance of cooked meals without any visible preparation or presence of a cook",
+        "explanation": "This sentence describes the outcome of the previous event (the giant snail's magical properties) by showing the sudden appearance of prepared food, which directly results from the water nymph's unseen assistance. The state change is the manifestation of cooked meals without any visible cause."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "他想，也许是邻居见他太辛苦，就好心地帮他烧火煮饭吧？",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "侯官县（今福州）",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述谢瑞对家中突然出现饭菜的疑惑和推测，属于故事背景设定，为后续揭示水素女身份的情节做铺垫。地点信息来自故事开篇的侯官县（今福州）背景。"
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "但是，邻居家都过得很苦，不可能做出这么丰盛的菜呀？",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "侯官县",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the neighbors' poverty, which contrasts with the unexpected abundance of food in Xie Rui's home, setting up the mystery of the supernatural helper. The location is specified as侯官县, the setting of the story."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "这时，他的肚子饿得直打鼓，索性不去想这些，先吃饱了再说。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "谢瑞"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Shexiu's decision to eat despite his confusion about the mysterious meals, which constitutes an action he takes to address his hunger."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "之后，一连几天，家里都出现了同样的情形。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The recurring appearance of cooked meals at home without any visible cook, continuing for several days",
+        "explanation": "This sentence describes the ongoing outcome of the prior event (the mysterious cooked meals), indicating a state change where the phenomenon persists for multiple days, revealing the supernatural assistance's continuous effect."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "谢瑞心里过意不去，就去向邻居道谢。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "谢瑞"
+        ],
+        "receivers": [
+          "邻居"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Xie Rui's active decision to thank the neighbors, making it an 'action' with him as the doer and the neighbors as the receivers of his gratitude."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "他走了许多家，邻居们却都说不是他们做的，有的还打趣道：“你暗地里娶了妻子，把她藏在家里，为你烧火煮饭，却不肯承认，搞什么神秘嘛！”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "侯官县",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the neighbors' denial of helping谢瑞 and their humorous remarks about his supposed hidden wife, establishing the social context and confusion surrounding the mysterious assistance. This sets the stage for谢瑞's decision to investigate further."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "谢瑞越想越觉得这事情奇怪，于是决定亲自去查个水落石出。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "谢瑞"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes谢瑞's decision to take action (investigating the mysterious situation), making him the active doer. There is no explicit receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "第二天，鸡叫头遍，他照例扛着锄头走出家门，装作去田地里劳动的样子。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "谢瑞"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Shex瑞 actively performing the action of leaving his home early with a hoe to pretend working in the fields, which is part of his investigation into the mysterious cooking phenomenon."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "到外面转了一会儿，他就悄悄地折回家，想看一看是谁在好心帮助他。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "谢瑞"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes谢瑞's action of returning home secretly to investigate the source of the mysterious help, which is a proactive step taken by him to uncover the truth."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "果然，他刚走到家门口附近，就看到自家屋顶的烟囱已经炊烟袅袅。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "he observed the chimney smoking, indicating someone was cooking for him",
+        "explanation": "The sentence describes the outcome of Shexiu's previous action (going home to investigate) by revealing the chimney was smoking, which directly relates to the consequence of his attempt to uncover who was helping him."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "于是，他加快脚步，要赶回去亲眼看个究竟。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "谢瑞"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Shexiu actively taking the action of speeding up to return home to investigate the mysterious cooking situation, indicating his proactive behavior to uncover the truth."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "然而，当他蹑手蹑脚，贴近门缝往里看时，却发现家里毫无动静。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "谢瑞"
+        ],
+        "receivers": [
+          "家"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Shexian's action of sneaking up to the door and peeking into his house, which is an active behavior performed by him. The receiver is the house as he is observing its state."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "推门一看，桌上饭菜飘香，灶中的火仍在熊熊燃烧，滚烫的开水在锅里沸腾着，只是不见这热心的烧饭人。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The kitchen is prepared with food and fire burning, but the cook (water spirit) is absent, revealing the supernatural nature of the assistance",
+        "explanation": "This sentence describes the outcome of Shexuan's investigation into the mysterious cooking, revealing that the food preparation occurs without a visible cook, indicating the presence of a supernatural entity. The state change shows the kitchen is fully prepared yet empty, confirming the prior actions of observation and the hidden cause."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "谢瑞更加觉得蹊跷，又过了一天，他故伎重施，又早早地出门，然后躲在屋檐下，全神贯注地盯着家里的一切。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "谢瑞"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Shex瑞's active action of leaving early, hiding under the eaves, and intently observing his home to investigate the mysterious cooking. This is a direct description of his behavior, making it an 'action' category with the doer being Shex瑞 and no explicit receiver mentioned."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "这会儿，烟囱里的炊烟还未升起，四周静悄悄地。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "谢瑞的家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描述烟囱无烟、环境寂静的状态，为后续水素女现身的场景建立背景，属于叙事中的情境铺垫。"
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "谢端把眼睛凑近门缝，屏息敛气，耐心地等待着。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "谢瑞"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Shexuan's active action of positioning himself near the door to observe the house, which is part of his effort to uncover the mystery of the unseen helper. The action is performed by Shexuan with no explicit receiver mentioned."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "不一会儿，从水缸里出来了一个年轻美丽的姑娘。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "水素女"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the water nymph (水素女) emerging from the water jar, which is a key event in the story's progression. The doer is the nymph, and there is no explicit receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "奇怪的是，她身上的衣裳并没有湿润。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "水缸",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描述水素女从水缸中出现时衣裳未湿的异常现象，为后续揭示其神灵身份和超自然能力埋下伏笔，属于故事背景设定中的异常情况说明。"
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "只见这姑娘缓缓来到厨房，轻巧地收拾起厨房，然后就生火做菜煮饭。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "水素女"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the water spirit (水素女) performing kitchen tasks, including cleaning and cooking. The doer is explicitly the girl (水素女), and there is no clear recipient of the action as the focus is on her activities."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "屋外的谢瑞把这情形看得真真切切。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "谢瑞"
+        ],
+        "receivers": [
+          "情况"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Shen Rui actively observing the situation (the girl's actions in the kitchen), which constitutes an action performed by him. The receiver is the situation he is witnessing."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "他连忙推开门，奔到水缸边，发现自己捡回的大田螺只剩下个空壳。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the large snail shell is now empty",
+        "explanation": "The sentence describes the result of the prior event (the water spirit's presence and action), where the snail shell is found empty, indicating a state change from being a living creature to an empty shell."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "他拿起空壳，惊奇地看了又看，然后走到灶前，向正在烧火煮饭的年轻姑娘说道：“请问这位姑娘，您从什么地方来？为什么要帮我烧饭？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "谢瑞"
+        ],
+        "receivers": [
+          "年轻姑娘"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Shex瑞's active action of picking up the empty shell and approaching the young girl to ask her questions, making him the doer and the girl the receiver of his action."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "姑娘没想到谢瑞会在这个时候突然出现，不由大吃一惊，又听他盘问自己的来历，急得不知如何是好，一张小脸也涨得通红。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the girl is caught by谢瑞 and panics, leading to her being unable to escape",
+        "explanation": "This sentence describes the outcome of谢瑞's sudden appearance, which causes the girl to panic and become trapped, marking a pivotal moment in the story where her secret is exposed."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "这时，年轻姑娘慌慌忙忙想跑到水缸中，却被挡住了去路。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "年轻姑娘"
+        ],
+        "receivers": [
+          "水缸"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young woman's active attempt to flee to the water缸, which is an action she performs. The doer is the young woman, and the receiver is the water缸 as she tries to reach it."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "谢瑞一再追问，年轻姑娘没有办法，只得把实情告诉了他。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "年轻姑娘"
+        ],
+        "receivers": [
+          "谢瑞"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young girl's action of revealing the truth to Xie Rui after being persistently questioned, which is a direct consequence of his prior actions and a pivotal moment in the narrative."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "原来，这位姑娘是天上的水素女，是奉天帝之命下凡来帮助谢瑞的。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "天上的",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence reveals the identity of the girl as a celestial being sent by the heavenly emperor, providing background context for her actions. The location refers to the heavenly realm mentioned in the sentence."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "水素女说道：“天帝知你从小父母双亡，孤苦伶仃，很是同情，又见你克勤克俭，安分守己，因此派我下凡，专门为你烧火煮饭，料理家务，想让你在十年内富裕起来，成家立业，娶个好妻子，那时我再回到天庭复命。可是，如今我的身份已经暴露，不能再继续留在人间了。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context explaining why the water nymph was sent to help Shie Rui, establishing the reason for her actions as part of the narrative setup."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "谢端听完水素女的一番话，感谢万分，心里也很懊悔，再三盛情挽留水素女。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "谢瑞"
+        ],
+        "receivers": [
+          "水素女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Shexuan's active attempt to persuade the water nymph to stay, which constitutes an action performed by him towards the nymph."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "但水素女去意已决，不肯留下。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "水素女决定离开人间，无法继续留在谢瑞身边帮助他",
+        "explanation": "该句描述了水素女在被谢瑞挽留后仍坚持离开的决定，这是对谢瑞先前恳求行为的直接结果，导致帮助关系终止并引发后续情节变化。"
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "临走前，水素女又对谢端说：“我走以后，你的处境可能会艰苦一些，但你只要辛勤干活，多打鱼，多砍柴，日子会一天一天好起来的。这个田螺壳你且留下，用它来贮藏粮食，可以保证家中谷米永远都不会用完。”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Shexian's future prosperity is secured through the water nymph's guidance and the magical snail shell, ensuring his household will never face famine",
+        "explanation": "This sentence describes the outcome of the water nymph's departure, detailing how her final instructions will transform Shexian's circumstances through both his labor and the magical properties of the snail shell"
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "正说话间，屋外忽然狂风大作，接着下起了大雨，在雨水空蒙之中，水素女讲完最后一句话，便飘然而去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "水素女"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 水素女 departing after her final words, which is an active performance by her as the doer. There is no direct receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "后来，谢瑞依靠勤劳的双手和水素女留下的旧螺壳的帮助，日子一天比一天红火起来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "his life became increasingly prosperous due to his hard work and the assistance of the water spirit's shell",
+        "explanation": "The sentence describes the outcome of Shex瑞's labor and the water spirit's aid, showing a state change from hardship to prosperity."
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "不久，他娶了妻子，并向仕途发展，最后当上了县令。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "谢瑞通过婚姻和仕途发展最终成为县令，实现了生活状况的根本改善",
+        "explanation": "该句描述了水素女帮助和谢瑞自身努力后的结果，体现生活状态的转变。属于consequence类别，changed_state描述了从贫困到成为县令的质变"
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "他特意在当地立了一座庙，就是今天的素女祠。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the establishment of the Su Nu Temple and the ongoing worship by the community",
+        "explanation": "The sentence describes the outcome of Shexian's success and gratitude towards Su Nu, leading to the construction of the temple and its continued veneration, which is a direct consequence of the prior events in the story."
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "每逢节日，谢瑞就和家人去庙里烧香祭祀，以感念水素女的恩德。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Shex瑞 and his family regularly visit the temple to burn incense and worship, expressing gratitude for the water goddess's help",
+        "explanation": "This sentence describes the ongoing practice of visiting the temple as a result of the prior events (the goddess's assistance and the temple's construction), representing a state change in Shex瑞's life where he maintains a ritual to honor the water goddess."
+      }
+    }
+  ]
+}

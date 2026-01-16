@@ -1,0 +1,994 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_023_劳山道士.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 67,
+  "analyzed_sentences": 67,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "本县有个姓王的书生，排行第七，是过去一个世家大族的子弟。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "本县",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence establishes the background context by introducing the protagonist Wang Sheng and his family background, setting the stage for his later journey to the mountains and encounters with the Daoist priest."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "他从小仰慕道家的方术，听说崂山上有很多神仙，就打点行李前去访仙学道。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "崂山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence establishes the background context for Wang Sheng's motivation to seek Daoist practices, specifying his early admiration for alchemy and the destination (Lao Mountain) where he intends to pursue spiritual cultivation."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "一天，他登上崂山的山顶，看见有一座道观，很是幽静。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "崂山的山顶",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述王生登上崂山山顶并发现道观的情景，为后续与道士相遇、学道等情节提供场景背景，属于设定故事发生的地理位置和初始情境。"
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "里面有个道士正端坐在蒲团上，一头白发披散在脖颈上，神态爽朗不俗。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "道观",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了崂山道观中道士的外貌特征和神态，为后续王生与道士的互动及学道情节提供了场景背景，属于设定故事发生的环境和基础情境。"
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "王生上前探问并与他交谈，觉得道士说的话很是玄微奥妙，便请求道士收他为徒。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "道士"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wang Sheng's active action of approaching the monk, engaging in conversation, and requesting to become his disciple. This constitutes a direct action performed by Wang Sheng (doer) directed toward the monk (receiver)."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "道士说：“恐怕你娇气懒惰惯了，吃不了苦。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "道观",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述道士对王生的评价，属于故事背景设定，为后续王生接受劳作任务和学习法术的情节铺垫。叙事焦点位于道观这一地点。"
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "王生回答说：“我能吃苦的。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "道士"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wang's verbal response to the monk's concern, which is an action performed by Wang towards the monk."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "道士的门徒很多，傍晚时全都来了。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "道观",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述道士的门徒数量及他们的到来时间，为后续情节（如砍柴任务、法术学习等）提供背景信息，属于设定故事场景的'情况'类别。"
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "王生和他们一一行礼后，就留在了道观中。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "道士的门徒"
+        ],
+        "changed_state": "",
+        "explanation": "王生主动向道士的门徒行礼，这是他主动执行的礼仪动作，属于主动行为，因此归类为'行动'。行礼的对象是道士的门徒，因此接收者为门徒。"
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "第二天天快亮的时候，道士把王生叫去，交给他一把斧子，让他同大家一起去砍柴。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "王生"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the assignment of a specific task (chopping firewood) to Wang Sheng by the Daoist priest, indicating an explicit requirement he must fulfill."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "王七小心谨慎地按着要求去做。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Wang Qi's action of carefully following the instructions given by the道士 to perform the task of chopping firewood. The action is performed by Wang Qi (doer) with no explicit receiver mentioned."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "这样过了一个多月，王生的手脚都磨出了厚厚的一层茧子，再也忍受不了这样的劳苦，暗暗产生了回家的念头。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "王生因长期劳作导致手脚生茧，最终无法忍受劳苦而产生回家念头",
+        "explanation": "该句描述了王生因持续砍柴劳作导致身体变化（手脚生茧）并产生心理转变（想回家），属于前序行动（砍柴任务）的直接结果，符合consequence类别。"
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "一天晚上，王生打柴回来，看见两位客人和师父坐着饮酒。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "崂山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Wang Sheng's return from chopping firewood and encountering the master and guests, setting the stage for the subsequent magical events at the mountain temple."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "这时天已经黑了，还没点上灯烛。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "道观",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了夜晚天黑且未点灯烛的环境状态，为后续道士展示法术（剪纸成月）的情节发展提供时间与场景背景，属于设定故事进展的背景信息。"
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "师父剪了一张如同镜子一样的圆纸，贴在墙壁上。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "师父"
+        ],
+        "receivers": [
+          "墙壁"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the teacher's action of cutting and pasting a round paper on the wall, which is an active performance by the teacher (doer) directed at the wall (receiver)."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "一会儿，那纸就变成了一轮明月照亮了整个屋子，亮堂堂的连毫毛都可以看得见。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The paper transformed into a luminous moon that illuminated the entire room, allowing visibility down to individual hairs",
+        "explanation": "This sentence describes the outcome of the previous action (the master pasting the paper on the wall), showing the paper's transformation into a moon that changes the room's lighting conditions."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "各位弟子都在周围听从吩咐，奔走侍候。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "各位弟子"
+        ],
+        "receivers": [
+          "客人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the disciples actively performing the action of obeying orders and serving, with the guests as the recipients of their service."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "一位客人说：“这么美好的夜晚，应该和大家一同享乐啊。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "崂山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence sets the context for the subsequent action of sharing wine among disciples, establishing the setting as崂山 (Lao Mountain) where the道士 and disciples are gathered."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "于是他从桌子上拿起酒壶，把酒分赏给众弟子，嘱咐他们一醉方休。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "客人"
+        ],
+        "receivers": [
+          "众弟子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the guest's active action of picking up a wine jar and distributing wine to the disciples, which is a direct physical activity performed by the guest (doer) and received by the disciples (receivers)."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "王生心想：七八个人，一壶酒怎么能够都摊到呢？",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "道观",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述王生在道观中观察到的异常现象（一壶酒供多人饮用），为后续揭示酒壶魔幻特性的情节发展提供背景，属于设定故事场景的'情况'类别。"
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "这时，大家各自找来杯子罐子，争先恐后地倒酒喝，唯恐酒壶空了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "门徒们"
+        ],
+        "receivers": [
+          "杯子罐子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the disciples actively performing the action of gathering cups and jars to pour wine, indicating their behavior during the shared drinking scene."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "然而众人从里面不断地往外倒，那壶里的酒竟一点儿也不见减少。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the amount of wine in the壶 remained unchanged despite continuous pouring",
+        "explanation": "The sentence describes the unexpected outcome of the disciples' action of pouring wine, where the quantity of wine in the壶 does not decrease, indicating a consequence of their prior actions."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "王七心里很是惊讶。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "王七感到惊讶",
+        "explanation": "该句描述了王生对前文酒壶中酒不断倒而总量不变现象的反应，属于对先前异常事件的直接心理后果。"
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "过了一会儿，一位客人说：“虽然承蒙您赐给我们月亮来照亮，但这么寂寞无声地饮酒，为什么不把嫦娥唤来呢？”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "房间",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句子描述了客人对当前饮酒场景的评论，属于故事中的情境设定，地点为饮酒的房间。"
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "于是他把筷子向月亮中一抛，随即看见一个美女，从月光中飘了出来，开始还不到一尺高，等落到地上时就和常人一样高了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "客人"
+        ],
+        "receivers": [
+          "月亮"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of throwing a chopstick into the moon, with the guest as the doer and the moon as the receiver. The subsequent appearance of嫦娥 is a consequence of this action but not directly part of the action itself."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "她腰身纤细脖颈秀美，风姿翩翩地跳起了《霓裳羽衣舞》。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "嫦娥"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of嫦娥 performing the《霓裳羽衣舞》 dance, indicating an activity actively carried out by her. The focus is on her movement and the dance itself, with no explicit mention of a receiver for the action."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "跳完舞又唱起了歌：“轻盈起舞呀！你快回来呀！你为什么幽闭我在广寒宫里呀！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "嫦娥"
+        ],
+        "receivers": [
+          "弟子们",
+          "道士"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes嫦娥 performing the action of singing after her dance, with the disciples and the道士 as the audience receiving the action. This fits the 'action' category as it details an active performance."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "她的歌声清脆高亢，嘹亮得像是吹箫管一样。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "嫦娥"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of嫦娥 singing, with her voice characterized as clear and resonant. The doer is explicitly嫦娥, while the receivers are not directly mentioned in the sentence."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "唱完了歌，嫦娥盘旋飘然而起，一下子跳到了桌子上，大家正惊奇地看着时，她又变成了筷子。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "嫦娥"
+        ],
+        "receivers": [
+          "大家"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes嫦娥's action of transforming into a chopstick after singing, with the audience (大家) observing the transformation. The action is performed by嫦娥 and received by the onlookers."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "道士和客人三人一齐开怀大笑起来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "道士",
+          "客人"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 'laughing heartily' performed by the Taoist priest and the three guests. The doers are explicitly stated as the priest and guests, with no direct receivers mentioned."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "又有一位客人说：“今夜最为快乐，但再也喝不下酒了。请把送别我的酒宴摆在月宫里吃可以吗？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "客人"
+        ],
+        "receivers": [
+          "道士",
+          "其他客人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes a guest making a request, which is an action performed by the guest (doer) and directed towards the道士 and other guests (receivers)."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "说完，三个人就带着酒席，慢慢飞进了月亮当中。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "道士",
+          "两位客人"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the three individuals (the道士 and two guests) flying into the moon with the wine feast, which is an active performance."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "大家看着他们三个人坐在月宫里饮酒，连胡须眉毛都看得清清楚楚，就好像形象照在了镜子中似的。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "月宫",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句通过描述道士与两位客人坐在月宫中饮酒的场景，为后续情节（如月亮暗淡、道士消失等）提供背景设定，月宫作为叙事焦点地点被明确提及。"
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "过了一会儿，月亮渐渐暗淡下去了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The moon's light faded, necessitating the use of candles to illuminate the room.",
+        "explanation": "The sentence describes the fading of the moon's light as a result of the guests departing the moon palace, leading to a state change that requires the disciples to light candles. This directly follows the prior action of the guests leaving and sets up the next event of the disciples using candlelight."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "弟子点上蜡烛来，只看见道士一个人坐在屋子里，客人们都已不见了踪影。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the guests have disappeared and the teacher remains alone in the room",
+        "explanation": "This sentence describes the outcome of the prior event where the guests vanished after the moon darkened. The state change involves the guests' disappearance and the teacher's continued presence, indicating a consequence of the magical occurrence."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "桌子上的菜肴、果品仍然残留在那里，再看看墙上的月亮，不过是一张像镜子一样的圆圆的纸片。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The table's remaining food and the moon's true nature as a paper illusion reveal the illusory nature of the previous supernatural scene",
+        "explanation": "This sentence describes the aftermath of the supernatural event where the guests vanished, showing the lingering physical evidence (food) and the revelation of the moon's true form (paper). It directly follows the disappearance of the guests and the道士's questioning of the disciples, indicating the consequence of the prior magical occurrence."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "道士问大家：“都喝够了吗？”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "弟子们"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "道士询问弟子们是否喝够，这是明确要求弟子们确认饮酒状态的任务，任务角色为全体弟子。"
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "众人一齐回答说：“够了。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "众人"
+        ],
+        "receivers": [
+          "道士"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the disciples' action of answering the master's question, indicating their response to the task of drinking."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "“喝够了就早些睡觉吧，不要耽误了明天打柴。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "弟子"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a directive from the Taoist priest to the disciples, assigning them the task of sleeping to ensure they are not late for the next day's labor. The task roles are the disciples who must comply with this instruction."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "大家答应着纷纷退下。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "弟子们"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the disciples' action of dispersing after being instructed by the master. The doers are the disciples, and there is no explicit receiver mentioned as the action focuses on their collective movement."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "王生心里暗暗惊喜羡慕，打消了回家的念头。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Wang Sheng decided to stay and continue his training instead of returning home",
+        "explanation": "The sentence describes a state change resulting from the previous magical demonstration. Wang Sheng's initial intention to return home is replaced by admiration for the supernatural events, leading to his decision to remain at the temple."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "又过了一个月，王生实在受不了劳苦了，而道士还是连一个法术也不传授。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the passage of time and Wang Sheng's growing frustration with his laborious situation, setting up the context for his subsequent request to the Taoist priest. It provides background on his prolonged hardship without receiving any magical teachings, which directly leads to his decision to ask for a small trick."
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "王生心里也不想再等待了，就向道士告辞说：“徒弟从几百里以外来向仙师您学习道术，即使不能学到长生不老的法术，哪怕能学到点儿小法术，也可以安慰我的一片求教之心了。现在过了两三个月，天天都不过是早上去砍柴晚上回来。徒弟在家里可从来没受过这种辛苦。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "道观",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes王生's internal state and decision to leave the道观, providing background context for his subsequent actions. The location is the道观 where the situation unfolds."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "道士笑着说：“我本来就认为你不能吃苦，现在果然如此。明天早晨就送你回去。”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "道士决定送王生回家，结束其学道过程",
+        "explanation": "该句描述了道士基于王生无法吃苦的判断，做出送其回家的决定，这是对王生长期劳作未能掌握法术这一前因的直接结果。"
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "王七说：“徒弟在这里劳作了多日，请师父稍微教我一点儿小本事，这次就不算白来了。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "道士"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents Wang Qi requesting the teacher to teach him a skill, which establishes a new task for the teacher to fulfill. The task_roles include the teacher (道士) as the one responsible for completing the task."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "道士问：“你想要学什么法术呢？”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "王生"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The Taoist priest is asking Wang Qi to specify which spell he wants to learn, which is a task requiring Wang Qi to state his desired skill."
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "王生说：“我常见师父行走的时候，墙壁也不能阻隔，能学到这个法术，我就知足了。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "道士"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents Wang Sheng's explicit request to learn the wall-piercing spell, which directly sets the task for the teacher (道士) to fulfill by teaching him the spell."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "道士笑着答应了他。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "道士"
+        ],
+        "receivers": [
+          "王生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Taoist priest's active response of agreeing to Wang Shen's request, making it an action performed by the priest (doer) towards Wang Shen (receiver)."
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "于是，道士就教他念口诀，让他自己念了咒以后，就招呼道：“进去！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "道士"
+        ],
+        "receivers": [
+          "王生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the道士 actively teaching the口诀 and instructing王生 to recite the咒, which constitutes an action performed by the道士 on王生."
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "王生面对着墙，不敢进去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "墙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wang Sheng actively facing the wall, which is a physical action he performs in response to the道士's instruction to '进去' (go in). The wall is the object he is facing, making it the receiver of his action."
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "道士又说：“你试着往里走一下。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "王生"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task assigned by the道士 to王生, instructing him to attempt walking through the wall. The task role is王生, who is required to perform the action."
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "王生果然慢慢地往前走，到了墙跟前却被阻挡住了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "墙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes王生's action of attempting to walk through the wall as instructed by the道士. The doer is王生, and the wall is the object interacting with his action."
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "道士说：“你低头快进，不要犹豫不前！”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "王生"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task given by the道士 to王生, instructing him to proceed through the wall. This directive sets the next action for王生, leading to his attempt to run into the wall."
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "王生果然在离墙几步远的地方，冲着墙跑了进去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "墙"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes王生's active action of running into the wall as instructed by the道士. '王生' is the doer performing the action, and the '墙' (wall) is the object receiving the action as he attempts to pass through it."
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "到了墙里时，好像空空的什么东西也没有，回头再一看，身子果然已经在墙外边了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Bingshen's body was found on the other side of the wall after attempting to pass through it",
+        "explanation": "This sentence describes the outcome of Bingshen's action of running through the wall, showing the result of his attempt to teleport. The state change is his physical presence on the opposite side of the wall, which directly follows his action."
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "王生大为惊喜，又回去拜谢师父。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "师父"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wang's active action of returning to thank the master, with '王生' as the doer and '师父' as the receiver of the gratitude."
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "道士说：“回去后要清白做人，否则法术就不会灵验。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "王生"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task assigned by the道士 to王生, requiring him to maintain moral integrity for the magic to take effect. This establishes a responsibility that must be fulfilled."
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "于是，送了他路费让他回家。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "道士"
+        ],
+        "receivers": [
+          "王生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the道士 performing the action of giving路费 (money for the journey) to王生, which is a direct action with a clear doer (道士) and receiver (王生)."
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "王生回到家里，自吹自擂地说遇见了仙人，学会了法术，坚固的墙壁也不能阻挡他过去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "妻子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wang Sheng's action of bragging about his supposed mastery of a supernatural ability to pass through walls, directed towards his wife who is the implied audience of his boast."
+      }
+    },
+    {
+      "sentence_index": 60,
+      "sentence": "妻子不相信。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The wife does not believe Wang Shen's claims",
+        "explanation": "The sentence describes the outcome of Wang Shen's previous action (boasting about his supposed ability to pass through walls), leading to his wife's disbelief as a state change."
+      }
+    },
+    {
+      "sentence_index": 61,
+      "sentence": "于是，王生仿效起那天的举动，离墙几尺远，往墙里跑去，不料一头撞到硬壁，猛地摔倒在地上。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "王生撞到硬壁并摔倒在地上",
+        "explanation": "该句描述了王生尝试使用法术时遭遇的失败结果，属于前文行动（模仿道士动作）的直接后果，导致其身体受伤并失去信心，符合'consequence'类别中因先前事件导致状态变化的定义。"
+      }
+    },
+    {
+      "sentence_index": 62,
+      "sentence": "妻子扶起他一看，只见额头上肿起了鸡蛋似的一个大包。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "王生额头出现了一个鸡蛋大小的肿包",
+        "explanation": "该句描述了王生撞墙后额头出现肿包的直接结果，属于前文'撞到硬壁'这一动作的后果，符合consequence类别中因先前事件导致状态变化的定义。"
+      }
+    },
+    {
+      "sentence_index": 63,
+      "sentence": "妻子讥笑他，王生觉得又惭愧又气愤，大骂老道士不是个好东西。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "王生感到惭愧和气愤，并大骂老道士不是好东西",
+        "explanation": "该句描述了王生因未能掌握法术而遭受妻子讥笑后的心理变化和行为反应，是其先前尝试穿越墙壁失败这一事件的直接结果，导致其情绪崩溃并咒骂道士。"
+      }
+    },
+    {
+      "sentence_index": 64,
+      "sentence": "异史氏说：听到了这件事的人没有不大笑的，但却不知像王生那样的人，世上真还有不少呢。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a narrative commentary by '异史氏' setting the stage for the story's moral lesson about human folly. It provides contextual background on societal attitudes toward the story's events rather than describing a specific location or action."
+      }
+    },
+    {
+      "sentence_index": 65,
+      "sentence": "现在有一种鄙陋粗野的人，喜欢像疾病毒药一样的坏东西，却畏惧治病疗伤的药物，于是便有一帮拍马屁的人，向他进献显威风、逞暴力的办法，以迎合他的心意，还骗他说：“掌握了这种法术去运用它，就可以横行天下而无可阻挡了。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence sets up a general scenario describing human behavior and societal dynamics as part of the narrative's thematic context, which falls under 'situation' as it provides background for the story's moral commentary without specifying a particular location."
+      }
+    },
+    {
+      "sentence_index": 66,
+      "sentence": "起初试行未必没有小效果，于是他就以为天下之大都可以任他这样干了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The person's belief that they can act without limits due to initial success with the spell",
+        "explanation": "This sentence describes the outcome of the prior event (initial success with the spell), leading to a change in the character's mindset where they overestimate their abilities and believe they can act freely. The consequence is their overconfidence and misguided assumption of power."
+      }
+    },
+    {
+      "sentence_index": 67,
+      "sentence": "这种人不到撞在硬壁上摔得头破血流的时候是绝不会停止的。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The person's persistent pursuit of power without understanding its limits leads to inevitable failure and a severe consequence (colliding with a hard wall and getting head injuries)",
+        "explanation": "This sentence describes the outcome of the prior event where the person's overconfidence in their abilities leads to a literal and metaphorical 'hard wall' collision. The consequence is both a physical injury and a realization of their misguided pursuit."
+      }
+    }
+  ]
+}

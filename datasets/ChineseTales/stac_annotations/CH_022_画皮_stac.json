@@ -1,0 +1,1706 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/ChineseTales/texts/CH_022_画皮.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 113,
+  "analyzed_sentences": 113,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "太原有个姓王的书生，早晨在路上行走，遇到了一个女郎，抱着个包袱，独自一人急急地奔走，步履似乎很吃力。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "太原",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the main characters (Wang the scholar and the female traveler) and sets the initial scenario of their encounter, establishing the narrative context for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "王生连忙快跑几步追上了她，原来是个十六七岁的秀美女子，心里很喜欢她。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "女子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wang Sheng's active action of running to catch up with the woman, with the woman as the recipient of his pursuit. This action directly advances the narrative by leading to their interaction."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "王生问她：“你为什么天不亮就孤零零地一个人在路上走呢？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "女子"
+        ],
+        "changed_state": "",
+        "explanation": "王生主动向女子提问，这是他采取的行动，直接作用于女子，属于典型的行动类叙述。"
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "那女子说：“你是一个过路行人，也不能替我分担忧愁，又何必要问呢？”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the woman's motivation for fleeing, revealing her plight as a victim of forced marriage and abuse. This provides background context for the narrative, setting up the conflict and eventual revelation of her true nature as a demon."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "王生说：“你有什么忧愁？我也许能出力帮忙，一定不推辞。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a dialogue exchange that establishes the context for the interaction between Wang Shen and the woman, setting the stage for the subsequent development of the story."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "女子脸色悲伤地说：“我的父母贪图钱财，把我卖给一个富贵人家当小老婆。那家的大老婆特别嫉妒，早晨骂晚上打地欺辱我，我实在忍受不了啦，想逃得远远的。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the woman's plight, explaining her motivation for fleeing. It sets up the narrative reason for her actions without specifying a physical location."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "王生问她：“你想到哪里去呢？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "女子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents an action where 王生 actively engages in asking the woman about her destination, which is a direct interaction driving the narrative forward."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "女子说：“我是一个正在逃亡的人，哪里有一定的去处。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the woman's situation of being an escaped person with no fixed destination, setting the stage for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "王生说：“我的家离这儿不远，就麻烦你到我那里委屈一下吧。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "女子"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "王生提出让女子到他家暂住的要求，明确指出了女子需要履行的义务，属于任务类别。任务角色为女子，她需接受邀请并前往王生家中。"
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "那女子很高兴地同意了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女子"
+        ],
+        "receivers": [
+          "王生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the woman's decision to agree to accompany Wang Sheng, which is an active choice made by her (doer) in response to his offer (receiver)."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "王生就替她携带着包袱物件，领着她一起回了家。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "女子",
+          "包袱物件"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wang Sheng's active action of carrying the woman's belongings and leading her back to his home, making him the doer and the woman/objects the recipients of his action."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "女子四下一看，见屋里没有别人，就问：“你家里怎么没有家小呢？”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "书房",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the woman's observation of her surroundings in the study, establishing the setting for subsequent events like the revelation of the ghostly presence and the道士's intervention."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "王生回答说：“这是我的书房。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "书房",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about Wang Sheng's living arrangement, establishing the location where the hidden woman will reside. This sets the stage for subsequent events involving their secret cohabitation and the revelation of the supernatural element."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "女子说：“这个地方太好了。如果先生怜爱我，让我活下去，请一定要保守秘密，不要泄露给别人。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "书房",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the woman's emotional state and her request to Wang, providing context about her situation within the study. The location '书房' (study) is the narrative focus where the interaction occurs."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "王生一口答应了下来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "女子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wang's action of agreeing to the woman's request to keep her secret. The doer is Wang, and the receiver is the woman, as he is fulfilling her explicit task."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "当晚王生就和她同床共枕了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生",
+          "女子"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the Wang scholar sleeping with the woman, indicating mutual participation. The doers are both characters involved, and there is no explicit receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "王生把她藏匿在密室当中，过了许多天别人都不知道。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "她"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wang Sheng's active action of hiding the woman in a secret room, making him the doer and the woman the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "后来，王生把这件事稍稍透露给了妻子。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "妻子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of Wang revealing information to his wife, making '王生' the doer and '妻子' the receiver."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "妻子陈氏听说后，怀疑那女子是豪门大族家逃亡的姬妾，劝王生打发她走。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "陈氏"
+        ],
+        "receivers": [
+          "王生",
+          "女子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Chen Shi's action of advising Wang Sheng to send the woman away. The doer is 陈氏, and the receivers are 王生 (the one being advised) and 女子 (the one to be sent away)."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "王生却执意不听。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "妻子陈氏"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the scholar's action of refusing to heed his wife's advice. The doer is the scholar (王生), and the receiver is his wife (妻子陈氏) whose suggestion he disregards."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "有一天，王生偶尔到街市上去，遇见了一个道士，那道士一见王生，就十分惊愕地问：“你最近遇见什么人了？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "道士"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wang Sheng's action of going to the market and encountering a Taoist priest, which initiates the interaction where the priest questions him. The doer is Wang Sheng, and the receiver is the Taoist priest who is addressed in the question."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "王生回答说：“没有呀。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "道士"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wang Shen's verbal response to the Taoist priest's question, which is an active communication action performed by Wang Shen directed at the priest."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "道士说：“你全身都被邪气缠绕着，怎么还说没有？”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "太原",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The道士's statement introduces the problem of evil spirits缠绕王生, setting up the central conflict and supernatural elements that drive the subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "王生极力辩白说是没有。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "道士"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wang's active response to the monk's accusation by vigorously denying the presence of evil spirits, making it an 'action' performed by Wang towards the monk."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "道士便叹息着走了，说：“真让人不明白啊！世界上居然有死到临头还执迷不悟的人！”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the道士's skepticism and sets the narrative context for the subsequent events, indicating a shift in the story's direction without directly describing an action, task, or consequence."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "王生觉得他的话非同寻常，就有些怀疑那个女子了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "王生开始怀疑那个女子",
+        "explanation": "该句描述了道士警告后王生产生的心理变化，属于前文道士警告事件的后果，导致王生对女子产生怀疑，改变了其先前的信任状态。"
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "他又转念一想，她明明白白地是个美丽的女郎，怎么会是个妖怪呢？",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "书房",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence establishes Wang Sheng's internal conflict and reasoning process regarding the mysterious woman, setting up his subsequent actions. The location '书房' (study room) is specified as the narrative focus where this mental activity occurs."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "心想道士没准是借口镇妖除怪来谋取钱财的。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence reflects Bingshen's internal doubt about the道士's motives, establishing his psychological state and reasoning process. This internal monologue sets the context for his subsequent actions and decisions, fitting the 'situation' category as it provides narrative background without describing an action, task, or consequence."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "不一会儿，他走到了书房门口，看见大门从里面插着，没法儿进去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "大门"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 王生's action of walking to the study door and finding it locked from the inside, which is an active movement and observation."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "他心里对这种做法有些怀疑，于是翻过一道破墙进了院子，只见内室门也关着。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "院子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 王生's action of flipping over a broken wall to enter the courtyard, which is a physical activity he actively performs. The courtyard is the location affected by his action, leading to the discovery of the closed inner door."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "他就蹑手蹑脚地走到窗前偷看，只见一个面目狰狞的恶鬼，脸色发青，牙齿又尖又长像锯齿一样，正把一张人皮铺在床上，手里拿着彩色画笔在描绘。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "恶鬼"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 王生 sneaking to the window to observe the demon, with the demon being the object of his observation."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "画完之后，恶鬼扔下画笔，举起人皮，像抖动衣服一样地把人皮披在身上，于是就变成了美丽的女子。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "恶鬼"
+        ],
+        "receivers": [
+          "人皮"
+        ],
+        "changed_state": "",
+        "explanation": "该句描述恶鬼通过穿戴人皮完成形态转变的具体行为，属于主动执行的动作。施动者为恶鬼，受动者为人皮，动作结果导致其形态变化。"
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "王生亲眼看见这个情形后，万分恐惧，像野兽一样四肢着地爬了出去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Wang Shen's action of fleeing in fear after witnessing the demon's transformation, with no clear receiver for his action."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "他急忙去追寻道士，但那道士已经不知去向了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "道士"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 王生 actively performing the action of '急忙去追寻道士' (hurriedly seeking the道士), making him the doer. The道士 is the target of this action, hence listed as the receiver."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "王生到处找了个遍，才在郊外遇见了道士，他跪在道士面前苦苦求救。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "道士"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wang Sheng actively performing the action of searching for the Taoist priest and seeking help, making him the doer. The Taoist priest is the receiver of his plea for assistance."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "道士说：“那就让我把它赶走吧。这东西修炼得也不容易，刚刚能找到顶替的人，可以投胎为人了，我也不忍心就伤了它的性命。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides context about the道士's plan to drive away the creature, setting up the narrative progression without specifying a location."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "于是把手里的拂尘交给王生，让他挂在卧室的门口。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "道士"
+        ],
+        "receivers": [
+          "王生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the Taoist priest handing over a whisk to Wang Sheng and instructing him to hang it at the bedroom door. The doer is the道士 performing the action, and the receiver is王生 who is given the object and instruction."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "临到分手的时候，道士又与王生约定以后在青帝庙见面。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "青帝庙",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述道士与王生约定未来在青帝庙见面，属于为后续情节发展建立背景情境，明确后续事件发生的地点。"
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "王生回去以后，不敢进书斋，就睡在家里的内室，悬挂起了拂尘。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "拂尘"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wang Sheng actively performing the action of hanging the拂尘 in his inner room, which is a direct consequence of the道士's earlier instruction. The doer is clearly Wang Sheng, and the receiver of the action is the拂尘."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "到了夜里一更时分，他忽然听见门外响起了嘁嘁嚓嚓的声音。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "王生的家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "该句描述了深夜屋外出现异常声响的情境，为后续妻子被派去查看的行动提供了背景，属于设定故事发展的情境。"
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "王生吓得连偷看也不敢，就让妻子去悄悄看一看。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王生"
+        ],
+        "receivers": [
+          "妻子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wang Sheng's action of delegating the task to his wife to check the situation, making him the doer and his wife the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "只见那个女子走了过来，望见挂在门口的拂尘不敢进门，站在那里咬牙切齿，过了很久才离去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女子"
+        ],
+        "receivers": [
+          "拂尘"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the woman's active behavior of approaching the location, reacting to the拂尘, and departing after a prolonged stay. This constitutes an action performed by the woman (doer) in response to the拂尘 (receiver)."
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "但是过了一会儿她又来了，厉声骂道：“那道士想吓唬我。我才不甘罢休呢，难道要我把吃到口的肉吐出来吗？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女子"
+        ],
+        "receivers": [
+          "道士"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the female ghost's active action of scolding the道士, which is a direct verbal action performed by the woman (doer) directed at the道士 (receiver)."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "说完，取下拂尘就撕成了碎片，又撞坏卧室的门冲了进来。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼"
+        ],
+        "receivers": [
+          "拂尘",
+          "卧室的门"
+        ],
+        "changed_state": "",
+        "explanation": "句子描述了鬼撕毁拂尘并撞坏卧室门冲进房间的动作，属于主动行为。执行者是鬼，受事者包括被撕毁的拂尘和被撞坏的门。"
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "那鬼直接爬上王生的床，把王生的胸腹抓裂，挖出心脏就离开了。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "那鬼"
+        ],
+        "receivers": [
+          "王生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the ghost (那鬼) actively performing the action of climbing onto the scholar's bed and attacking his chest to remove his heart. The doer is the ghost, and the receiver is the scholar (王生) as the target of the physical assault."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "妻子尖声哭号起来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the wife screamed in grief as a result of her husband's death",
+        "explanation": "The sentence describes the wife's emotional reaction to the prior event of her husband's death, which is a direct consequence of the demon's attack. The scream signifies the change in the narrative state following the traumatic event."
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "丫环拿着蜡烛来一照，见王生已经死去，腹腔里血肉模糊乱七八糟的。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "王生因被恶鬼攻击导致死亡，腹腔内血肉模糊、混乱不堪",
+        "explanation": "该句描述了恶鬼攻击王生后导致的直接后果，即王生死亡且腹部遭受严重伤害，属于前行动作（恶鬼攻击）引发的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "妻子陈氏吓得不敢声张，只能忍气吞声地流眼泪。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "陈氏因丈夫被恶鬼杀害而陷入恐惧与沉默，无法公开声张真相",
+        "explanation": "该句描述了王生被恶鬼杀害后，妻子陈氏因恐惧而选择沉默的直接结果，属于前序事件（恶鬼袭击）导致的心理与行为状态变化。"
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "第二天早晨，陈氏让王生的弟弟二郎跑去告诉道士。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "陈氏"
+        ],
+        "receivers": [
+          "王生的弟弟二郎"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Lady Chen's action of sending her brother-in-law to inform the Taoist priest, which is an active activity performed by her."
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "道士愤怒地说：“我本来还可怜它，这恶鬼竟敢如此猖狂！”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "道士因恶鬼的猖狂行为而愤怒，决定采取行动驱除恶鬼",
+        "explanation": "该句描述了道士在目睹恶鬼杀害王生后产生的愤怒情绪及后续行动意图，属于因前序事件（恶鬼杀害王生）导致的状态变化，符合'consequence'分类。"
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "立即随着王生的弟弟来到王生家里。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "道士"
+        ],
+        "receivers": [
+          "王生家里"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Taoist priest taking action by moving to Wang Sheng's home, with the priest as the doer and the home as the receiver."
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "那女子已经不见了踪影。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The woman (ghost) has disappeared, leading to the道士's pursuit and eventual confrontation",
+        "explanation": "The sentence describes the disappearance of the woman, which is a direct consequence of the prior events involving the道士's investigation and the ghost's actions. This state change triggers subsequent developments in the story, such as the道士's pursuit and the final confrontation."
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "道士抬起头来四下张望，说：“幸亏它还没有逃远。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the道士's observation of the demon's current state, providing narrative context about its lingering presence. This sets the stage for subsequent developments without introducing a new task, action, or direct consequence."
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "道士又问：“南院是谁家？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "道士"
+        ],
+        "receivers": [
+          "王二郎"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Taoist priest actively performing the action of questioning Wang Erlang about the identity of the south courtyard's occupant, which is a direct interaction driving the narrative forward."
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "王二郎说：“是我的房舍。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "南院",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence provides background context by identifying the location (南院) associated with Wang Erlang, which becomes significant for the subsequent revelation that the ghost is present in this location."
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "道士说：“现在那鬼就在你家里。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "南院",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The Taoist priest's statement about the demon's location in Bao'er's house sets the stage for the subsequent confrontation, establishing the narrative focus on the south courtyard as the key location."
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "王二郎感到十分愕然，以为没有这回事儿。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Wang Erlang believed there was nothing to it",
+        "explanation": "The sentence describes the consequence of the道士's assertion that the ghost was in Wang Erlang's house, leading to his disbelief and surprise. This state change reflects the impact of the prior event (the道士's claim) on Wang Erlang's perception."
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "道士问他：“是否曾经有一个不认识的人来过？”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "王二郎"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task where the道士 (priest) explicitly asks王二郎 to confirm if an unknown person had visited, which is part of the investigation into the supernatural events."
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "王二郎说：“我一大早就跑到青帝庙去找您，实在不知道。让我回家去问问。”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王二郎"
+        ],
+        "receivers": [
+          "道士"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 王二郎's action of going to the Qingdi Temple to find the道士, with the receiver being the道士 he sought out."
+      }
+    },
+    {
+      "sentence_index": 60,
+      "sentence": "说完就离去了，过了一会儿，他回来说：“果然是有。早晨来了一个老太太，想受雇在我家做仆人，我的妻子把她留了下来，现在还在我家里没走。”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "南院",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the presence of an old lady in Bawang'er's home, which is part of the narrative setup for the道士's subsequent identification of her as the demon. The location '南院' (south courtyard) is explicitly mentioned as the setting for this situation."
+      }
+    },
+    {
+      "sentence_index": 61,
+      "sentence": "道士说：“就是这家伙了。”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The Taoist priest identifies the old lady as the demon, leading to the group's decision to confront her",
+        "explanation": "The sentence represents a consequence of prior events (the priest's investigation and the revelation about the old lady). This identification directly leads to the next action of going to Wang Erlang's house and confronting the demon."
+      }
+    },
+    {
+      "sentence_index": 62,
+      "sentence": "于是大家一起到了王二郎家。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "道士",
+          "陈氏",
+          "王二郎"
+        ],
+        "receivers": [
+          "王二郎家"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes a group of characters (the道士, 陈氏, and 王二郎) actively performing the action of moving to 王二郎家, which is the destination location."
+      }
+    },
+    {
+      "sentence_index": 63,
+      "sentence": "道士手持木剑，站在庭院当中，高声叫道：“造孽的恶鬼，赔我的拂尘来！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "道士"
+        ],
+        "receivers": [
+          "恶鬼"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the道士 actively performing an action by wielding a wooden sword and confronting the evil spirit, directly addressing it as the receiver of his action."
+      }
+    },
+    {
+      "sentence_index": 64,
+      "sentence": "那老太太在屋子里大惊失色，出了门就要逃跑。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "老太太"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the old lady's action of fleeing from the monk's confrontation, indicating her active response to the situation."
+      }
+    },
+    {
+      "sentence_index": 65,
+      "sentence": "道士追上前去用木剑击打她。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "道士"
+        ],
+        "receivers": [
+          "老太太"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Taoist priest actively performing the action of chasing and striking the woman with a wooden sword. The doer is the道士 (Taoist priest), and the receiver is the老太太 (old woman)."
+      }
+    },
+    {
+      "sentence_index": 66,
+      "sentence": "老太太跌倒了，人皮哗的一声裂开脱落在地上，现出了恶鬼的原形，它卧在地上像猪一样嚎叫着。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the evil spirit's true form is revealed, and it嚎叫s like a pig",
+        "explanation": "This sentence describes the outcome of the道士's attack on the老太太, revealing the evil spirit's true form and its grotesque behavior, which directly follows the prior action of the道士 striking her."
+      }
+    },
+    {
+      "sentence_index": 67,
+      "sentence": "道士用木剑砍下恶鬼的头，它的身子又变成一股浓烟，环绕在地上聚成了一堆。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "道士"
+        ],
+        "receivers": [
+          "恶鬼"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the道士 actively performing the action of decapitating the恶鬼 with a wooden sword, which directly involves the doer (道士) and the receiver (恶鬼)."
+      }
+    },
+    {
+      "sentence_index": 68,
+      "sentence": "道士拿出一个葫芦，拔去塞子，然后放在烟堆当中，只听得“嗖嗖”直响，像是有人用口吸气似的，转眼之间烟就被葫芦吸得干干净净。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "道士"
+        ],
+        "receivers": [
+          "烟"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the道士 actively performing the action of using a葫芦 to absorb smoke from the smoke pile, which is the core activity depicted."
+      }
+    },
+    {
+      "sentence_index": 69,
+      "sentence": "道士把葫芦塞上口，放进行囊里。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "道士"
+        ],
+        "receivers": [
+          "行囊"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Taoist priest's action of sealing the葫芦 and placing it into his bag. The doer is the Taoist priest, and the receiver is the bag."
+      }
+    },
+    {
+      "sentence_index": 70,
+      "sentence": "大家再去看地上的那张人皮，只见眉毛、眼睛、手、脚，没有一样不具备。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The human skin on the ground is fully intact with all body parts present, indicating the complete defeat of the evil spirit",
+        "explanation": "The sentence describes the outcome of the道士's previous actions where he defeated the evil spirit, showing the state change of the human skin being fully intact with all body parts."
+      }
+    },
+    {
+      "sentence_index": 71,
+      "sentence": "道士卷起那张人皮，像卷画轴一样“哗哗”作响，也放在行囊里，然后告别大家准备离去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "道士"
+        ],
+        "receivers": [
+          "人皮",
+          "行囊"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the道士 actively performing the action of rolling up the human skin and placing it in his bag, which are physical actions taken by the character. The receivers are the human skin and the bag, which are the objects directly affected by the action."
+      }
+    },
+    {
+      "sentence_index": 72,
+      "sentence": "陈氏跪拜在门前，哭着哀求道士用回生之法救活王生。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "陈氏"
+        ],
+        "receivers": [
+          "道士"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes陈氏 actively performing the action of kneeling and pleading with the道士 to use a resurrection method, making her the doer and the道士 the receiver of her request."
+      }
+    },
+    {
+      "sentence_index": 73,
+      "sentence": "道士表示自己无能无力。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The priest is unable to revive Wang Sheng, leading to Oucheng seeking another solution",
+        "explanation": "The sentence describes the outcome of the prior event (Oucheng's plea for revival) by stating the priest's inability, which directly impacts the narrative progression and leads to subsequent actions."
+      }
+    },
+    {
+      "sentence_index": 74,
+      "sentence": "陈氏更加悲痛，跪伏在地上不肯起来。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Chen Shi became more sorrowful and refused to rise from the ground",
+        "explanation": "The sentence describes the emotional and physical reaction of Chen Shi following the death of her husband and the道士's failure to revive him, representing the consequence of these prior events."
+      }
+    },
+    {
+      "sentence_index": 75,
+      "sentence": "道士沉思了片刻说：“我的法术疏浅，实在是不能起死回生。我指给你一个人，他或许能，你前去求他试试，应当会有效果。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "陈氏"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates a task assignment where the道士 instructs陈氏 to seek the疯子 for help, making her the primary role responsible for fulfilling this request."
+      }
+    },
+    {
+      "sentence_index": 76,
+      "sentence": "陈氏问：“是什么人？”",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "陈氏的家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a situation where Chen氏 is seeking clarification about the identity of the person mentioned by the道士, setting the stage for her subsequent actions."
+      }
+    },
+    {
+      "sentence_index": 77,
+      "sentence": "道士说：“街市上有一个疯子，时常躺在粪土当中。你试着去对他叩头哀求。如果他发狂侮辱夫人，夫人你也不要生气。”",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "陈氏"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes a directive from the道士 assigning a specific responsibility to陈氏 to seek out the madman and perform an action, which qualifies as a 'task' category."
+      }
+    },
+    {
+      "sentence_index": 78,
+      "sentence": "王二郎也熟识那个疯子，于是他告别道士后，与嫂嫂陈氏一同去找那个疯子。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "王二郎",
+          "陈氏"
+        ],
+        "receivers": [
+          "疯子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action taken by Wang Erlang and his嫂嫂 Chen Shi to find the madman, specifying their roles as doers and the madman as the receiver of their action."
+      }
+    },
+    {
+      "sentence_index": 79,
+      "sentence": "到了那里，只见一个要饭的乞丐在路上疯疯颠颠地唱着歌，鼻涕拖得三尺长，身上污秽腥臭得让人无法靠近。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "那里",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the arrival at a specific location where the madman is found, setting the stage for the subsequent interaction. The location '那里' is the narrative focus as it introduces the setting for the next events."
+      }
+    },
+    {
+      "sentence_index": 80,
+      "sentence": "陈氏跪着用膝盖挪到他面前。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "陈氏"
+        ],
+        "receivers": [
+          "乞丐"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Chen氏 actively performing the action of kneeling and moving towards the beggar, making her the doer and the beggar the receiver of her action."
+      }
+    },
+    {
+      "sentence_index": 81,
+      "sentence": "乞丐笑着说：“美人爱我吗？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "乞丐"
+        ],
+        "receivers": [
+          "陈氏"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the beggar's active action of speaking to Ouch, directly addressing her and asking if she loves him. The doer is the beggar, and the receiver is Ouch (陈氏)."
+      }
+    },
+    {
+      "sentence_index": 82,
+      "sentence": "陈氏告诉了他事情的原委。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "陈氏"
+        ],
+        "receivers": [
+          "乞丐"
+        ],
+        "changed_state": "",
+        "explanation": "陈氏主动向乞丐传达了关于丈夫死亡事件的详细经过，属于主动传递信息的行为，符合'行动'分类。"
+      }
+    },
+    {
+      "sentence_index": 83,
+      "sentence": "乞丐又大笑说：“人人都可以做你的丈夫，把他救活做什么？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "乞丐"
+        ],
+        "receivers": [
+          "陈氏"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the beggar's verbal action of speaking to O氏, rejecting her plea to revive her husband. The beggar's words constitute an active response to her request, making it an 'action' category with the doer as the beggar and the receiver as O氏."
+      }
+    },
+    {
+      "sentence_index": 84,
+      "sentence": "陈氏还是一再地哀求。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "陈氏"
+        ],
+        "receivers": [
+          "乞丐"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Chen Shi's ongoing act of pleading, which is an active action performed by her towards the beggar. The action is directed at the beggar, who is the receiver of her pleas."
+      }
+    },
+    {
+      "sentence_index": 85,
+      "sentence": "乞丐就说：“真是怪事！人死了还来求我救活他。我难道是阎罗王吗？”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "乞丐"
+        ],
+        "receivers": [
+          "陈氏"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the beggar's verbal action of rejecting陈氏's plea, which is an active response to her previous request. The doer is the beggar, and the receiver is陈氏, as he addresses her directly."
+      }
+    },
+    {
+      "sentence_index": 86,
+      "sentence": "说完就恼怒地用讨饭棍击打陈氏，陈氏忍着痛捱他的痛打。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "乞丐"
+        ],
+        "receivers": [
+          "陈氏"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes a physical action where the beggar (doer) actively hits Chen Shi (receiver), fitting the 'action' category with clear doer and receiver identification."
+      }
+    },
+    {
+      "sentence_index": 87,
+      "sentence": "这时，街市上围观的人渐渐已经挤得像一堵墙了。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "街市",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the crowd's density at the street market, establishing the environmental context for the subsequent events involving the beggar and Chen Shi."
+      }
+    },
+    {
+      "sentence_index": 88,
+      "sentence": "乞丐又咳出痰和口水来，吐了满满的一把，举向陈氏的嘴边说：“吃了它！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "乞丐"
+        ],
+        "receivers": [
+          "陈氏"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the beggar's action of coughing up phlegm and saliva, then offering it to Chen Shi. The doer is the beggar, and the receiver is Chen Shi who is instructed to eat it."
+      }
+    },
+    {
+      "sentence_index": 89,
+      "sentence": "陈氏的脸涨得通红，面有难色，但又想起道士嘱咐她不要怕侮辱，就强忍着恶心一口口吞吃下去。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "陈氏"
+        ],
+        "receivers": [
+          "phlegm and saliva"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Chen Shi's action of swallowing the phlegm and saliva despite her discomfort, which is a direct consequence of the道士's instruction and the previous interaction with the beggar."
+      }
+    },
+    {
+      "sentence_index": 90,
+      "sentence": "只觉得那痰咽到喉咙中，硬得像一团棉絮，“格格”地响着往下走，聚结在胸口停住了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the phlegm felt hard like a cotton ball, made a 'gurgling' sound as it moved downward, and stopped at the chest",
+        "explanation": "This sentence describes the physiological consequence of Ouchie swallowing the phlegm, detailing how it felt and behaved in her body before moving to her husband's chest."
+      }
+    },
+    {
+      "sentence_index": 91,
+      "sentence": "乞丐又大笑着说：“美人爱我呀！”",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "乞丐"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the beggar's action of laughing and speaking, which is a direct behavioral response to the previous interaction with陈氏. The action is performed by the beggar (doer) and does not explicitly mention a direct receiver."
+      }
+    },
+    {
+      "sentence_index": 92,
+      "sentence": "于是起身便走，不再理睬陈氏。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "乞丐"
+        ],
+        "receivers": [
+          "陈氏"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the beggar's action of leaving and ignoring Lady Chen, with the beggar as the doer and Lady Chen as the receiver of his disregard."
+      }
+    },
+    {
+      "sentence_index": 93,
+      "sentence": "陈氏和二郎又尾随他到了庙里。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "陈氏",
+          "二郎"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Chen氏 and Erlang actively following someone to the temple, which is an action performed by them. The receivers field is empty as the action does not explicitly mention an object receiving the action."
+      }
+    },
+    {
+      "sentence_index": 94,
+      "sentence": "想靠近前去哀求，却找不到他。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "they couldn't find him",
+        "explanation": "The sentence describes the outcome of the prior action (searching for the madman) where the characters failed to locate him, resulting in their return home. This is a consequence of their failed search."
+      }
+    },
+    {
+      "sentence_index": 95,
+      "sentence": "他们前前后后都搜遍，也毫无踪影，只好又羞愧又气恨地回了家。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "陈氏和二郎因未能找到疯子而返回家中，感到羞愧和气恨",
+        "explanation": "该句描述了陈氏和二郎在搜寻疯子无果后返回家中的结果，体现了前序行动（搜寻）后的状态变化，符合'consequence'类别中因先前事件导致状态改变的定义。"
+      }
+    },
+    {
+      "sentence_index": 96,
+      "sentence": "陈氏回到家里，既哀痛丈夫死得这样悲惨，又悔恨自己舔吃了别人痰唾的羞辱，呼天抢地地哀啼，只求自己立即死去。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "陈氏因丈夫死亡而陷入极度悲痛与悔恨，产生自我毁灭的念头",
+        "explanation": "该句描述陈氏在丈夫被恶鬼杀害后的心理状态变化，属于前文事件（王生被杀）的直接后果。其悲痛、悔恨情绪及求死意愿均源于丈夫死亡这一核心事件，符合'consequence'类别中'描述前事件导致的状态变化'的定义。"
+      }
+    },
+    {
+      "sentence_index": 97,
+      "sentence": "她想给丈夫抹干血污收敛尸体，但家人都吓得远远地站着，没有人敢靠近。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the family members are too scared to approach the husband's body",
+        "explanation": "This sentence describes the outcome of the husband's death and the subsequent supernatural events, leading to the family's fear and inability to assist in the recovery process."
+      }
+    },
+    {
+      "sentence_index": 98,
+      "sentence": "陈氏只好自己抱起王生的尸身，收拾流在肚子外面的肠子，一边清理一边号啕大哭。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "陈氏"
+        ],
+        "receivers": [
+          "王生的尸身"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 陈氏 actively performing the action of cleaning her husband's corpse and crying, making her the doer and the corpse the direct receiver of her actions."
+      }
+    },
+    {
+      "sentence_index": 99,
+      "sentence": "当她哭到声嘶力竭的时候，顿时觉得想要呕吐，感到聚结在胸腹间的那个硬块，突然从喉咙中涌出，她来不及转过头去，那东西已经一下子落到了王生的胸腔中。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the hard mass (heart) is transferred from Chen Shi's throat to Wang Sheng's chest, initiating his recovery",
+        "explanation": "This sentence describes the direct outcome of the prior events where the demon's heart is transferred to Wang Sheng's chest, leading to his miraculous revival. The state change involves the heart moving from Chen Shi's throat to Wang Sheng's chest, which is a critical consequence of the demon's actions and the subsequent interventions."
+      }
+    },
+    {
+      "sentence_index": 100,
+      "sentence": "陈氏吃惊地一看，竟然是一颗人心，在王生胸腔里“突突”地跳动着，冒着像烟雾一样的腾腾热气。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "王生的胸腔内出现一颗跳动的心脏，并伴随热气，导致其逐渐恢复生命体征",
+        "explanation": "该句描述了陈氏发现王生胸腔内心脏跳动的场景，这是道士用法术将人皮鬼的心脏重新植入王生体内的直接结果，导致王生从死亡状态逐渐恢复，属于前序行动（道士施法）的后果。"
+      }
+    },
+    {
+      "sentence_index": 101,
+      "sentence": "陈氏大为惊奇，急忙用两手合起王生的胸腔，极力向一起挤合，稍稍一松动，就看见一缕缕的热气从缝隙里冒出来，于是撕开丝绸，急忙把王生的胸腹裹紧。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "陈氏"
+        ],
+        "receivers": [
+          "王生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 陈氏 actively performing the action of closing and wrapping Wang Sheng's chest cavity, which is a physical action taken by her on his body."
+      }
+    },
+    {
+      "sentence_index": 102,
+      "sentence": "这时，她再用手抚摸尸体，已经觉得渐渐有些温热了，就又给王生盖上一床棉被。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "陈氏"
+        ],
+        "receivers": [
+          "王生"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 陈氏 actively performing the action of touching the corpse and covering it with a quilt, making her the doer and 王生 the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 103,
+      "sentence": "半夜，她起来探视，发现王生的鼻孔里已经有了些气息。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "王生开始恢复呼吸，显示出生命迹象",
+        "explanation": "该句描述了妻子陈氏给王生盖上棉被后，王生在夜间出现呼吸迹象的转变，这是妻子舔食痰唾这一行动导致的直接结果，符合'consequence'类别中描述先前事件结果导致状态变化的定义。"
+      }
+    },
+    {
+      "sentence_index": 104,
+      "sentence": "到第二天天亮，王生竟然活过来了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Wang Sheng was revived after the wife consumed the madman's phlegm and the道士's spell",
+        "explanation": "The sentence describes the outcome of the prior events where the wife ingested the madman's phlegm and the道士's spell, resulting in Wang Sheng's miraculous recovery from death."
+      }
+    },
+    {
+      "sentence_index": 105,
+      "sentence": "他只说：“恍恍惚惚好像做梦一样，只觉得肚子那儿在隐隐作痛。”",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "王生在被恶鬼攻击后幸存并恢复意识，但腹部仍感到隐痛",
+        "explanation": "该句描述了王生在被恶鬼袭击导致重伤后，经道士和疯子的干预得以存活并恢复意识的状态，属于前序事件（恶鬼袭击、人皮剥落、道士施法）的直接结果。"
+      }
+    },
+    {
+      "sentence_index": 106,
+      "sentence": "再一看被抓破的地方，结了个铜钱那么大的硬痂，过了不久，王生就痊愈了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "王生痊愈了",
+        "explanation": "该句描述了王生在被恶鬼攻击后，通过道士和疯子的治疗最终痊愈的结果，属于前序事件（恶鬼袭击、道士施法、疯子吐痰）的直接后果。"
+      }
+    },
+    {
+      "sentence_index": 107,
+      "sentence": "异史氏说：世界上的人真愚蠢啊！",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a narrative commentary by the Strange Historian, providing a moral reflection on the story's events. It serves as a concluding context for the narrative, fitting the 'situation' category as it sets the stage for the story's thematic resolution."
+      }
+    },
+    {
+      "sentence_index": 108,
+      "sentence": "明明是妖怪，他却以为是美女。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context for the story's moral critique, establishing the mistaken perception of the demon as a beauty. It sets the stage for the subsequent events and consequences without specifying a physical location."
+      }
+    },
+    {
+      "sentence_index": 109,
+      "sentence": "愚蠢的人也真执迷不悟啊！",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The moral consequence of the characters' ignorance and misjudgment, leading to the tragic outcome and the author's commentary on human folly.",
+        "explanation": "The sentence represents a consequence of the prior events in the story, where the characters' failure to recognize the supernatural and their stubbornness lead to tragic results. The author's commentary reflects the outcome of these actions, highlighting the moral lesson about human ignorance."
+      }
+    },
+    {
+      "sentence_index": 110,
+      "sentence": "明明是忠告，他却认为是欺妄。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The husband's misinterpretation of the道士's warning led to the wife's humiliation and his eventual death, highlighting the consequences of ignoring moral guidance.",
+        "explanation": "The sentence describes the outcome of the husband's failure to heed the道士's warning, which directly caused the wife's actions and the tragic events that followed. This aligns with the 'consequence' category as it illustrates the result of a prior decision or action."
+      }
+    },
+    {
+      "sentence_index": 111,
+      "sentence": "然而，他爱别人的美色而去贪得无厌地猎取，自己的妻子也将会去舔吃别人的痰唾，并把它当成美味。",
+      "analysis": null,
+      "error": "Failed to reach Ollama at http://127.0.0.1:11434/api/chat: HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=300.0)"
+    },
+    {
+      "sentence_index": 112,
+      "sentence": "人的善恶，都会按照天理得到相应的回报，只不过又蠢又浑的人始终不悟罢了。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The moral outcome of the story's events, where human actions are judged by heaven's principles, and foolishness leads to tragic consequences",
+        "explanation": "The sentence serves as the concluding moral reflection on the story's events, describing the consequence of the characters' actions and the ultimate judgment of heaven's principles. It encapsulates the story's resolution and its broader moral implications."
+      }
+    },
+    {
+      "sentence_index": 113,
+      "sentence": "真是可哀啊！",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the author expresses pity for the foolishness of the characters",
+        "explanation": "The sentence represents the author's final reflection on the story's events, expressing pity for the characters' foolishness and their failure to recognize the supernatural elements, which is the consequence of the prior events leading to the moral conclusion."
+      }
+    }
+  ]
+}
