@@ -8,6 +8,11 @@ requests>=2.32.0
 # Note: env.py handles missing python-dotenv gracefully, but it's recommended for .env file support
 python-dotenv>=1.0.0
 
+# LangChain for LLM-based sentence splitting
+langchain>=0.1.0
+langchain-ollama>=0.1.0
+langchain-core>=0.1.0
+
 # Note: Additional optional dependencies:
 # - For text_segmentation: see llm_model/text_segmentation/requirements.txt
 # - For vector_database: see llm_model/vector_database/requirements.txt
