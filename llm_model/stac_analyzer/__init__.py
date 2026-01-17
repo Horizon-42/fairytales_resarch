@@ -11,6 +11,7 @@ from .stac_analyzer import (
     STACAnalyzerConfig,
     STACCategory,
     analyze_stac,
+    analyze_stac_batch,
 )
 
 __all__ = [
@@ -18,4 +19,5 @@ __all__ = [
     "STACAnalyzerConfig",
     "STACCategory",
     "analyze_stac",
+    "analyze_stac_batch",
 ]
