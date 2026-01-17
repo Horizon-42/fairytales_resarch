@@ -235,13 +235,35 @@ def chat(
             outputs = model.generate(
                 **inputs,
                 **generation_kwargs,
+                return_dict_in_generate=False,  # Ensure we get tensor, not dict
             )
     except Exception as e:
         raise HuggingFaceError(f"Generation failed: {e}") from e
     
     # Decode response
-    # Remove input tokens from output
-    generated_ids = outputs[0][inputs.input_ids.shape[1]:]
+    # model.generate() returns a tensor: [batch_size, seq_len]
+    # We need to extract only the newly generated tokens (excluding input tokens)
+    input_length = inputs.input_ids.shape[1]
+    
+    # Handle outputs: should be a tensor with shape [batch_size, seq_len]
+    if isinstance(outputs, torch.Tensor):
+        if len(outputs.shape) == 2:
+            # [batch_size, seq_len] -> take first batch and skip input tokens
+            generated_ids = outputs[0][input_length:]
+        elif len(outputs.shape) == 1:
+            # Already 1D, just skip input tokens
+            generated_ids = outputs[input_length:]
+        else:
+            raise HuggingFaceError(f"Unexpected tensor shape: {outputs.shape}")
+    elif isinstance(outputs, (list, tuple)):
+        # If it's a list/tuple, take first element
+        if len(outputs) > 0:
+            generated_ids = torch.tensor(outputs[0][input_length:])
+        else:
+            raise HuggingFaceError("Empty generation output")
+    else:
+        raise HuggingFaceError(f"Unexpected output type: {type(outputs)}. Expected torch.Tensor, got {type(outputs)}")
+    
     response = tokenizer.decode(generated_ids, skip_special_tokens=True)
     
     return response.strip()
