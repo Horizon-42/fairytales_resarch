@@ -24,6 +24,10 @@ class OllamaConfig:
     temperature: float = 0.2
     top_p: float = 0.9
     num_ctx: int = 8192
+    
+    # Control thinking mode for models that support it (e.g., qwen3)
+    # Set to False to disable thinking mode, True to enable, None to use model default
+    think: Optional[bool] = None
 
 
 class OllamaError(RuntimeError):
@@ -194,6 +198,10 @@ def chat(
         "top_p": config.top_p,
         "num_ctx": config.num_ctx,
     }
+    
+    # Add think parameter if explicitly set (for qwen3 and other thinking models)
+    if config.think is not None:
+        options["think"] = config.think
 
     payload: Dict[str, Any] = {
         "model": config.model,

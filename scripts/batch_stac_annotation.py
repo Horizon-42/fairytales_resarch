@@ -20,6 +20,13 @@
         --input-dir datasets/ChineseTales/texts \
         --output-dir datasets/ChineseTales/stac_annotations \
         --no-context
+
+    # 关闭 thinking 模式（针对 qwen3 等模型）
+    python scripts/batch_stac_annotation.py \
+        --input-dir datasets/ChineseTales/texts \
+        --output-dir datasets/ChineseTales/stac_annotations \
+        --no-thinking \
+        --model qwen3:8b
 """
 
 from __future__ import annotations
@@ -29,7 +36,7 @@ import json
 import os
 import sys
 from pathlib import Path
-from typing import List
+from typing import List, Optional
 
 # Add project root to path
 project_root = Path(__file__).parent.parent
@@ -202,6 +209,11 @@ def main() -> int:
         help="启用思考模式（Gemini 使用 GEMINI_MODEL_THINKING）",
     )
     parser.add_argument(
+        "--no-thinking",
+        action="store_true",
+        help="显式关闭 Ollama 模型的思考模式（例如 qwen3）",
+    )
+    parser.add_argument(
         "--model",
         default=os.getenv("OLLAMA_MODEL", "qwen3:8b"),
         help="模型名称（Ollama 模型或 Gemini 模型，取决于 --provider）",
@@ -262,10 +274,20 @@ def main() -> int:
     ollama_model = args.model if provider != "gemini" else os.getenv("OLLAMA_MODEL", "qwen3:8b")
     gemini_model = args.model if provider == "gemini" else os.getenv("GEMINI_MODEL", "")
     
+    # 确定 Ollama 的 thinking 模式
+    # 如果 --no-thinking 被设置，显式关闭 thinking
+    # 如果 --thinking 被设置，启用 thinking（主要用于 Gemini，对 Ollama 可能无影响）
+    # 否则，使用模型默认值（None）
+    ollama_think: Optional[bool] = None
+    if args.no_thinking:
+        ollama_think = False
+    elif args.thinking:
+        ollama_think = True  # 显式启用（虽然对 Ollama 可能不需要）
+    
     llm = LLMConfig(
         provider=provider,
-        thinking=bool(args.thinking),
-        ollama=OllamaConfig(base_url=args.base_url, model=ollama_model),
+        thinking=bool(args.thinking),  # 用于 Gemini
+        ollama=OllamaConfig(base_url=args.base_url, model=ollama_model, think=ollama_think),
         gemini=GeminiConfig(
             api_key=os.getenv("GEMINI_API_KEY", ""),
             model=gemini_model,

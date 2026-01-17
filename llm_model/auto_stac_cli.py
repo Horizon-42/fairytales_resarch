@@ -37,6 +37,7 @@ import json
 import os
 import sys
 from pathlib import Path
+from typing import Optional
 
 # Add parent directory to path to import sentence_splitter
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
@@ -65,6 +66,11 @@ def main() -> int:
         "--thinking",
         action="store_true",
         help="Enable thinking mode (Gemini uses GEMINI_MODEL_THINKING)",
+    )
+    parser.add_argument(
+        "--no-thinking",
+        action="store_true",
+        help="Explicitly disable thinking mode for Ollama models (e.g., qwen3)",
     )
     parser.add_argument(
         "--model",
@@ -149,10 +155,20 @@ def main() -> int:
     hf_model = args.model if provider in ("huggingface", "hf", "colab") else os.getenv("HF_MODEL", "Qwen/Qwen2.5-7B-Instruct")
     hf_device = os.getenv("HF_DEVICE", "auto")  # "cuda", "cpu", or "auto"
 
+    # Determine thinking mode for Ollama
+    # If --no-thinking is set, explicitly disable thinking
+    # If --thinking is set, enable thinking (for Gemini, has no effect on Ollama)
+    # Otherwise, use model default (None)
+    ollama_think: Optional[bool] = None
+    if args.no_thinking:
+        ollama_think = False
+    elif args.thinking:
+        ollama_think = True  # Explicitly enable (though may not be needed for Ollama)
+    
     llm = LLMConfig(
         provider=provider,  # normalized inside router
-        thinking=bool(args.thinking),
-        ollama=OllamaConfig(base_url=args.base_url, model=ollama_model),
+        thinking=bool(args.thinking),  # Used for Gemini
+        ollama=OllamaConfig(base_url=args.base_url, model=ollama_model, think=ollama_think),
         gemini=GeminiConfig(
             api_key=os.getenv("GEMINI_API_KEY", ""),
             model=gemini_model,
