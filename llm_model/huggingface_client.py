@@ -218,11 +218,13 @@ def chat(
     
     # Tokenize
     inputs = tokenizer(prompt, return_tensors="pt")
-    if inputs.input_ids.device.type != _get_device(config.device):
-        inputs = {k: v.to(_get_device(config.device)) for k, v in inputs.items()}
     
     # Generate
     actual_device = _get_device(config.device)
+    
+    # Move inputs to the correct device (keep as BatchEncoding object)
+    if inputs.input_ids.device.type != actual_device:
+        inputs = inputs.to(actual_device)
     generation_kwargs = {
         "temperature": config.temperature,
         "top_p": config.top_p,
