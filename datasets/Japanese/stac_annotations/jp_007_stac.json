@@ -1,0 +1,675 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_007.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 44,
+  "analyzed_sentences": 44,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "むかし、むかし、あるところに、おじいさんとおばあさんがありました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the setting and main characters (old man and old woman) at the beginning of the story, establishing the narrative context without specifying a particular location."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "正直（しょうじき）な、人のいいおじいさんとおばあさんどうしでしたけれど、子どもがないので、飼犬（かいいぬ）の白（しろ）を、ほんとうの子どものようにかわいがっていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the background of the honest old man and woman who have no children, setting up their relationship with the dog White as a central element of the story. This context introduces the narrative focus without advancing action or stating explicit tasks."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "白も、おじいさんとおばあさんに、それはよくなついていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes White's attachment to the grandparents as part of the story's background setup, establishing their relationship without introducing a new action, task, or consequence."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "すると、おとなりにも、おじいさんとおばあさんがありました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the existence of another old man and old woman next door, setting up the context for the story's conflict between the two families."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "このほうは、いけない、欲（よく）ばりのおじいさんとおばあさんでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the characteristics of the neighboring old man and woman as greedy, establishing their role in the story's conflict and setting the stage for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "ですから、おとなりの白をにくらしがって、きたならしがって、いつもいじのわるいことばかりしていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of the greedy old couple's resentment towards the neighbor's dog, setting up their subsequent malicious actions. It provides background for the story's conflict without introducing a specific location."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "ある日、正直おじいさんが、いつものようにくわをかついで、畑をほりかえしていますと、白も一緒（いっしょ）についてきて、そこらをくんくんかぎまわっていましたが、ふと、おじいさんのすそをくわえて、畑のすみの、大きなえのきの木の下までつれて行って、前足で土をかき立てながら、 　　　「ここほれ、ワン、ワン。 　　　　ここほれ、ワン、ワン」 となきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "正直おじいさん",
+          "白"
+        ],
+        "receivers": [
+          "畑",
+          "土"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the honest old man and his dog Shiro digging in the field, leading to the discovery of gold. The doers are the old man and the dog, and the receivers are the field and soil where the digging occurs."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "「なんだな、なんだな」 と、おじいさんはいいながら、くわを入れてみますと、かちりと音がして、穴のそこできらきら光るものがありました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of inserting his hoe into the ground, which triggers the sound and glowing object. This action directly leads to the discovery of the coins in the subsequent sentence."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "ずんずんほって行くと、小判（こばん）がたくさん、出てきました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the old man discovered a large amount of coins, making them wealthy",
+        "explanation": "The sentence describes the outcome of the prior action (digging with the hoe) where coins emerged, resulting in the old man and his wife becoming wealthy. This directly follows the action and alters their financial state."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "おじいさんはびっくりして、大きな声でおばあさんをよびたてて、えんやら、えんやら、小判をうちのなかへはこび込みました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "おばあさん",
+          "うち"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the grandfather's action of calling his grandmother and bringing the coins into their home. The doer is the grandfather, and the receivers are the grandmother (called) and the house (where the coins are brought)."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "正直（しょうじき）なおじいさんとおばあさんは、きゅうにお金持ちになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "became rich overnight",
+        "explanation": "The sentence describes the outcome of the prior action (finding gold coins) which caused the honest old man and old woman to transition from poverty to sudden wealth."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "すると、おとなりの欲（よく）ばりおじいさんが、それをきいてたいへんうらやましがって、さっそく白（しろ）をかりにきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "欲ばりおじいさん"
+        ],
+        "receivers": [
+          "白"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the greedy old man taking the dog (白) as an active action. The doer is the greedy old man, and the receiver is the dog."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "正直おじいさんは、人がいいものですから、うっかり白をかしてやりますと、欲ばりおじいさんは、いやがる白の首（くび）になわをつけて、ぐんぐん、畑のほうへひっぱって行きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "欲ばりおじいさん"
+        ],
+        "receivers": [
+          "白"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the greedy old man's action of tying a rope around the dog's neck and pulling him to the field, which is an active activity performed by the character."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "「おれの畑にも小判がうまっているはずだ。さあ、どこだ、どこだ」 といいながら、よけいつよくひっぱりますと、白は苦しがって、やたらに、そこらの土をひっかきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白"
+        ],
+        "receivers": [
+          "土"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes White's action of digging the soil as the greedy old man drags him, indicating the action performed by White."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "欲（よく）ばりおじいさんは、 「うん、ここか。しめたぞ、しめたぞ」 といいながら、ほりはじめましたが、ほっても、ほっても出てくるものは、石ころやかわらのかけらばかりでした。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "欲ばりおじいさんは石ころやかわらのかけらばかりを掘り出しました",
+        "explanation": "この文は欲ばりおじいさんが掘り始めた行動の結果として、期待していた小判ではなく石ころやかわらのかけらしか出ないという状態変化を記述しています。これは前段の行動（掘る行為）の結果として生じた出来事に該当します。"
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "それでもかまわず、やたらにほって行きますと、ぷんとくさいにおいがして、きたないものが、うじゃうじゃ、出てきました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The greedy old man's continued digging resulted in a foul smell and the emergence of dirty, unpleasant substances.",
+        "explanation": "The sentence describes the outcome of the greedy old man's persistent digging, which leads to the emergence of a foul odor and dirty objects, directly resulting from his previous actions."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "欲ばりおじいさんは、「くさい」とさけんで、鼻（はな）をおさえました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "欲ばりおじいさん"
+        ],
+        "receivers": [
+          "鼻"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the greedy old man covering his nose in response to the unpleasant smell, which is a direct physical reaction to the prior event of digging up contaminated soil."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "そうして、腹立（はらだ）ちまぎれに、いきなりくわをふり上げて、白（しろ）のあたまから打ちおろしますと、かわいそうに、白はひと声（こえ）、「きゃん」とないたなり、死んでしまいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the dog (白) dies",
+        "explanation": "The sentence describes the outcome of the greedy old man's anger and action, resulting in the dog's death. This is a direct consequence of the prior event where the old man hit the dog with the hoe."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "正直（しょうじき）おじいさんとおばあさんは、あとでどんなにかなしがったでしょう。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the honest old man and woman felt very sad",
+        "explanation": "The sentence describes the emotional outcome of the prior event (White's death), indicating a state change in the characters' emotional state."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "けれども死んでしまったものはしかたがありませんから、涙（なみだ）をこぼしながら、白の死骸（しがい）を引きとって、お庭のすみに穴をほって、ていねいにうずめてやって、お墓（はか）の代（かわ）りにちいさいまつの木を一本、その上にうえました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "正直おじいさん",
+          "おばあさん"
+        ],
+        "receivers": [
+          "白の死骸",
+          "ちいさいまつの木"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the actions taken by the honest old man and woman after White's death, including burying the body and planting a tree. These are direct actions performed by the characters, making it an 'action' category with the doers as the elderly couple and the receivers as the dog's body and the tree."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "するとそのまつが、みるみるそだって行って、やがてりっぱな大木（たいぼく）になりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the small pine tree grew into a large tree",
+        "explanation": "The sentence describes the outcome of the previous action (cutting down the small pine tree to make rice), showing the tree growing into a large tree as a result."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "「これは白の形見（かたみ）だ」 　こうおじいさんはいって、そのまつを切って、うすをこしらえました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "まつ",
+          "うす"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of cutting the tree (まつ) and making a sieve (うす), indicating the doer is the old man and the receivers are the tree and the sieve."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "そうして、 「白（しろ）はおもちがすきだったから」 といって、うすのなかにお米を入れて、おばあさんとふたりで、 「ぺんたらこっこ、ぺんたらこっこ」 と、つきはじめますと、ふしぎなことには、いくらついてもついても、あとからあとから、お米がふえて、みるみるうすにあふれて、そとにこぼれ出して、やがて、台所（だいどころ）いっぱいお米になってしまいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん",
+          "おばあさん"
+        ],
+        "receivers": [
+          "うす",
+          "台所"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the grandparents putting rice into the pot and stirring it, which leads to the rice filling the pot and spilling into the kitchen."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "するとこんども、おとなりの欲（よく）ばりおじいさんとおばあさんがそれを知ってうらやましがって、またずうずうしくうすをかりにきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "欲ばりおじいさん",
+          "欲ばりおばあさん"
+        ],
+        "receivers": [
+          "うす"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the envious neighbors taking the rice mortar (うす), which is an active action performed by them. The doers are the envious old man and woman, and the receiver is the rice mortar."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "人のいいおじいさんとおばあさんは、こんどもうっかりうすをかしてやりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "人のいいおじいさん",
+          "おばあさん"
+        ],
+        "receivers": [
+          "欲ばりおじいさん",
+          "おばあさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the kind old man and woman giving rice flour to the greedy neighbor, with the doers being the kind old man and woman, and the receivers being the greedy old man and woman."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "うすをかりるとさっそく、欲ばりおじいさんは、うすのなかにお米を入れて、おばあさんをあいてに、 「ぺんたらこっこ、ぺんたらこっこ」 と、つきはじめましたが、どうしてお米がわき出すどころか、こんどもぷんといやなにおいがして、なかからうじゃうじゃ、きたないものが出てきて、うすにあふれて、そとにこぼれ出して、やがて、台所（だいどころ）いっぱい、きたないものだらけになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the kitchen became filled with dirty things and unpleasant odors",
+        "explanation": "The sentence describes the negative outcome of the greedy old man's attempt to replicate the magic mortar's effect, resulting in the kitchen being contaminated with filthy substances and bad smells."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "欲（よく）ばりおじいさんは、またかんしゃくをおこして、うすをたたきこわして、薪（まき）にしてもしてしまいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "欲ばりおじいさん"
+        ],
+        "receivers": [
+          "うす",
+          "薪"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the greedy old man's action of destroying the rice porridge and converting it into firewood. The doer is the greedy old man, and the receivers are the rice porridge (destroyed) and firewood (created)."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "正直（しょうじき）おじいさんは、うすを返してもらいに行きますと、灰になっていましたから、びっくりしました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The rice (うす) had turned into ash (灰) due to the greedy old man's actions, resulting in the honest old man's surprise",
+        "explanation": "This sentence describes the outcome of the prior event where the greedy old man destroyed the rice, causing it to become ash. The honest old man's reaction to this transformation constitutes the consequence of the previous action."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "でも、もしてしまったものはしかたがありませんから、がっかりしながら、ざるのなかに、のこった灰をかきあつめて、しおしおうちへ帰りました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "正直おじいさん"
+        ],
+        "receivers": [
+          "灰"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the honest old man's action of collecting the remaining ash from the bowl and returning home. The doer is the honest old man, and the receiver is the ash being collected."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "「おばあさん、白（しろ）のまつの木が、灰になってしまったよ」 　こういっておじいさんは、お庭のすみの白のお墓（はか）のところまで、灰をかかえて行ってまきますと、どこからか、すうすうあたたかい風が吹いてきて、ぱっと、灰をお庭いっぱいに吹きちらしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "お庭",
+          "うめの木",
+          "さくらの木"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of taking ash to the grave and spreading it, which directly leads to the wind scattering the ash and transforming the trees. The doer is the old man, and the receivers are the garden and the trees that undergo the transformation."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "するとどうでしょう、そこらに枯れ木のまま立っていたうめの木や、さくらの木が、灰をかぶると、みるみるそれが花になって、よそはまだ冬のさなかなのに、おじいさんのお庭ばかりは、すっかり春げしきになってしまいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the withered trees bloomed into flowers, transforming the old man's garden into a spring-like scene despite the winter outside",
+        "explanation": "The sentence describes the outcome of the ash being scattered, causing withered trees to bloom and the garden to become spring-like, which is a direct consequence of the prior action."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "おじいさんは、手をたたいてよろこびました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of clapping his hands and expressing happiness, which is a direct physical and emotional response to the previous event of his garden blooming with flowers."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "「これはおもしろい。ついでに、いっそ、ほうぼうの木に花を咲かせてやりましょう」 　そこで、おじいさんは、ざるにのこった灰をかかえて、 「花咲かじじい、花咲かじじい、日本一の花咲かじじい、枯れ木に花を咲かせましょう」 と、往来（おうらい）をよんであるきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "枯れ木"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the grandfather actively using ash to cause flowers to bloom on dead trees, making him the doer and the dead trees the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "すると、むこうから殿（との）さまが、馬にのって、おおぜい家来（けらい）をつれて、狩（かり）から帰ってきました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the arrival of the emperor and his retinue, setting up the context for the subsequent interaction between the emperor and the old man. This establishes the narrative context for the next events without introducing a new action, task, or consequence."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "殿さまは、おじいさんをよんで、 「ほう、めずらしいじじいだ。ではそこのさくらの枯れ木に、花を咲かせて見せよ」 といいつけました。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "おじいさん"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the emperor (殿さま) issuing a direct command to the old man (おじいさん) to make a withered cherry tree bloom, which constitutes an explicit task requirement."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "おじいさんは、さっそくざるをかかえて、さくらの木に上がって、 　　　「金のさくら、さらさら。 　　　　銀のさくら、さらさら」 といいながら、灰をつかんでふりまきますと、みるみる花が咲き出して、やがていちめん、さくらの花ざかりになりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "さくらの木"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of using ash to make the cherry tree bloom, with the tree as the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "殿さまはびっくりして、 「これはみごとだ。これはふしぎだ」 といって、おじいさんをほめて、たくさんにごほうびをくださいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The daimyo praised the old man and gave him generous rewards for his miraculous ability to make the cherry tree bloom",
+        "explanation": "The sentence describes the outcome of the old man's action with the ash, leading to the daimyo's admiration and reward, which represents a state change caused by the prior event."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "するとまた、おとなりの欲（よく）ばりおじいさんが、それをきいて、うらやましがって、のこっている灰をかきあつめてざるに入れて、正直（しょうじき）おじいさんのまねをして、 「花咲かじじい、花咲かじじい、日本一の花咲かじじい、枯れ木に花を咲かせましょう」 と、往来（おうらい）をどなってあるきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "欲ばりおじいさん"
+        ],
+        "receivers": [
+          "往来"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the greedy old man's action of collecting ash, imitating the honest old man's method, and shouting to passersby. The doer is the greedy old man, and the receivers are the passersby he addresses."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "するとこんども、殿（との）さまがとおりかかって、 「こないだの花咲かじじいがきたな。また花を咲かせて見せよ」 といいました。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "正直おじいさん"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the daimyo's explicit command to the honest old man to make the cherry blossom tree bloom again, which constitutes a task requiring the old man's action."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "欲（よく）ばりおじいさんは、とくいらしい顔をしながら、灰を入れたざるをかかえて、さくらの木に上がって、おなじように、 　　　「金のさくら、さらさら。 　　　　銀のさくら、さらさら」 ととなえながら、やたらに灰をふりまきましたが、いっこうに花は咲きません。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "欲ばりおじいさん"
+        ],
+        "receivers": [
+          "さくらの木"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the greedy old man's action of using a bamboo basket filled with ash to attempt to make the cherry tree bloom, performing the same ritual as the honest old man. The doer is the greedy old man, and the receiver is the cherry tree."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "するうち、どっとひどい風が吹いてきて、灰は遠慮（えんりょ）なしに四方八方（しほうはっぽう）へ、ばらばら、ばらばらちって、殿さまやご家来（けらい）の目や鼻（はな）のなかへはいりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "灰が四方八方へ飛散し、殿さまやご家来の目や鼻の中に入り、たいへんなさわぎになった",
+        "explanation": "この文は、欲ばりおじいさんが灰を振りまいた行動の結果として発生した状態変化を記述しています。灰が風に乗って広がり、人々の目に鼻に飛散することで混乱が生じた結果を示しています。"
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "そこでもここでも、目をこするやら、くしゃみをするやら、あたまの毛をはらうやら、たいへんなさわぎになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "殿さまやご家来の目や鼻に灰が入り、目をこするやらくしゃみをするやらあたまの毛をはらうやらというたいへんなさわぎになりました",
+        "explanation": "この文は、欲ばりおじいさんが灰をふりまいた行動の結果として生じた状態変化を記述しています。灰が人々の目に鼻に飛ばされ、混乱と騒ぎを引き起こすという結果が明確に述べられています。"
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "殿さまはたいそうお腹立（はらだ）ちになって、 「にせものの花咲かじじいにちがいない。ふとどきなやつだ」 といって、欲ばりおじいさんを、しばらせてしまいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The greedy old man is punished by being tied up by the emperor due to his deceptive actions",
+        "explanation": "The sentence describes the outcome of the prior event where the greedy old man's failed attempt to mimic the old man's magic causes the emperor to angrily punish him, resulting in his arrest."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "おじいさんは、「ごめんなさい。ごめんなさい」といいましたが、とうとうろう屋へつれて行かれました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "欲ばりおじいさんはろう屋へつれていかれ、処罰を受けた",
+        "explanation": "この文は、欲ばりおじいさんが失敗した行為（灰をふりまいて花を咲かせること）の結果として、殿さまに叱られ、ろう屋へつれていかれるという状態変化を記述しています。これは前段の行動（偽装した花咲かしの試み）の直接的な結果として発生する出来事です。"
+      }
+    }
+  ]
+}
