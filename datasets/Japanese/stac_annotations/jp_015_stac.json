@@ -1,0 +1,400 @@
+{
+  "source_file": "/content/drive/MyDrive/FairytalesResearch/datasets/Japanese/texts/jp_015.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "model": "Qwen/Qwen3-8B",
+  "total_sentences": 27,
+  "analyzed_sentences": 27,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "むかしむかし、木こりのおじいさんは、お昼になったので、切りかぶに腰をかけて、お弁当を食ベることにしました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the main character (woodcutter) and establishes the time (noon) as the narrative's starting point, setting the context for subsequent events without specifying a physical location."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "「うちのおばあさんがにぎってくれたおむすびは、まったくおいしいからな」 　ひとりごとをいいながら、タケの皮の包みを広げたときです。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the old man's motivation (appreciation for his grandmother's rice balls) and his current action (opening a bamboo bundle), setting up the context for the subsequent events involving the rice balls falling into the hole. No explicit location is mentioned in this sentence itself."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "コロリンと、おむすびが一つ地面に落ちて、コロコロと、そばの穴ヘころがりこんでしまいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "そばの穴"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the rice ball falling and rolling into the hole, which is initiated by the old man's action of opening the bundle. The doer is the old man, and the receiver is the hole where the rice ball ends up."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "「おやおや、もったいないことをした」 　おじいさんが穴をのぞいてみますと、深い穴の中から、こんな歌が聞こえてきました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "a song is heard from the hole",
+        "explanation": "The sentence describes the consequence of the rice ball falling into the hole, which triggers the emergence of a song from the hole. This outcome directly follows the prior action of the rice ball falling and sets up the subsequent interaction with the mice."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "♪おむすびコロリン　コロコロリン。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the song was heard from the hole",
+        "explanation": "The sentence represents the consequence of the rice ball falling into the hole, triggering the mice to sing. The song's emergence is a direct result of the prior action (dropping the rice ball), altering the narrative state by introducing the magical element of the mice's song."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "♪コロリンころげて　穴の中。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "穴の中",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the magical element of the song originating from the hole, establishing the mysterious context that drives the narrative forward."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "「ふしぎだなあ。だれが歌っているんだろう？」 　こんなきれいな歌声は、今まで聞いたことがありません。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "「どれ、もう一つ」 　おじいさんは、おむすびをもう一つ、穴の中へ落としてみました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "穴"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the grandfather actively dropping another rice ball into the hole, which is a physical action performed by the grandfather (doer) and directed towards the hole (receiver)."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "するとすぐに、歌が返ってきました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the song came back immediately after the rice ball was dropped into the hole",
+        "explanation": "The sentence describes the outcome of the old man dropping a rice ball into the hole, which resulted in the song returning. This is a direct consequence of the prior action."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "♪おむすびコロリン　コロコロリン。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the song was heard from the hole",
+        "explanation": "The sentence represents the consequence of the old man dropping a rice ball into the hole, resulting in the song being heard from within the hole. This outcome directly follows the prior action of dropping the rice ball."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "♪コロリンころげて　穴の中。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the song is heard by the old man",
+        "explanation": "The sentence is part of the song that the mice sing, which is a direct consequence of the old man dropping the rice ball into the hole. The song's emergence represents a change in the narrative state, transitioning from a simple action to an interactive encounter with the mice."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "「これは、おもしろい」 　おじいさんは、すっかりうれしくなって、自分は一つも食ベずに、おむすびをぜんぶ穴へ入れてしまいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "穴"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of putting all the onigiri into the hole. The doer is おじいさん, and the receiver is the hole where the onigiri are placed."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "つぎの日、おじいさんは、きのうよりももっとたくさんのおむすびをつくってもらって、山へ登っていきました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "お昼になるのを待って、コロリン、コロリンと、おむすびを穴へ入れてやりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "穴"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of placing rice balls into the hole, with 'おじいさん' as the doer and '穴' as the receiver."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "そのたびに、穴の中からは、きのうと同じかわいい歌が聞こえました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the same lovely song from yesterday was heard from the hole",
+        "explanation": "The sentence describes the outcome of the old man's prior action of dropping rice balls into the hole, resulting in the recurring song from the mice. This is a consequence of his actions, as the song's repetition directly follows his behavior."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "「やれやれ、おむすびがおしまいになってしまった。だけど、もっと聞きたいなあ。・・・そうだ、穴の中へ入って、たのんでみることにしよう」 　おじいさんは、おむすびのようにコロコロころがりながら、穴の中へ入っていきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "穴"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of entering the hole, which is a physical activity performed by him. The receiver of this action is the hole, as he moves into it."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "するとそこには、かぞえきれないほどの、おおぜいのネズミたちがいたのです。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the old man encounters a large number of mice",
+        "explanation": "The sentence describes the outcome of the old man entering the hole, revealing the presence of numerous mice, which is a direct consequence of his prior action."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "「ようこそ、おじいさん。おいしいおむすびをたくさん、ごちそうさま」 　ネズミたちは、小さな頭をさげて、おじいさんにお礼をいいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "ネズミたち"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the mice performing the action of bowing and thanking the old man, indicating an active interaction between the mice and the old man."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "「さあ、今度はわたしたちが、お礼におもちをついてごちそうしますよ」 　ネズミたちは、うすときねを持ち出してきて、 ♪ペッタン　ネズミの　おもちつき。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "ネズミたち"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "ネズミたちはおじいさんへのお礼としておもちをつくる行動を開始しており、この行為は前段階の「おむすびを穴へ入れる」行為に対する反応として発生したアクションを表しています。"
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "♪ペッタン　ペッタン　穴の中。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "ネズミたち"
+        ],
+        "receivers": [
+          "穴の中"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence is part of the song sung by the mice while performing the action of making rice cakes in the hole. The doers are the mice, and the receivers are the hole where the action takes place."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "と、歌いながら、もちつきを始めました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "ネズミたち"
+        ],
+        "receivers": [
+          "おもち"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the mice starting the mochi-making process while singing, indicating an active action performed by the mice (doers) with the mochi (receivers) as the object of their action."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "「これはおいしいおもちだ。歌もおもちも、天下一品(てんかいっぴん)」 　おじいさんはごちそうになったうえに、ほしい物をなんでも出してくれるという、打ち出の小づちをおみやげにもらって帰りました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "おじいさんがほしい物をなんでも出してくれるという打ち出の小づちを獲得し、その力を使うことが可能になった",
+        "explanation": "この文はネズミたちからもらった打ち出の小づちによる結果を記述しており、前の行動（おむすびを穴に落とす行為）の結果としておじいさんが新たな能力を得た状態の変化を示しています。"
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "「おばあさんや、おまえ、なにがほしい？」 と、おじいさんは聞きました。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "おばあさん",
+          "おまえ"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents an explicit question posed by the old man to the grandmother and the mice, establishing a task for them to state their desires. The task roles are the grandmother and the mice (referred to as 'おまえ')."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "「そうですねえ。いろいろとほしい物はありますけれど、かわいいあかちゃんがもらえたら、どんなにいいでしょうねえ」 と、おばあさんは答えました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "「よし、やってみよう」 　おじいさんが、小づちをひとふりしただけで、おばあさんのひざの上には、もうあかちゃんがのっていました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the baby appears on the grandmother's knee",
+        "explanation": "The sentence describes the outcome of the old man's action (swinging the hammer) leading to the baby's appearance, which changes the state of the narrative."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "もちろん、ちゃんとした人間のあかちゃんです。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The baby is confirmed to be a real human child",
+        "explanation": "The sentence confirms the nature of the baby that appeared after the grandfather used the stick, describing the outcome of the previous action as a state change from an ambiguous entity to a real human child."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "おじいさんとおばあさんはあかちゃんを育てながら、仲よく楽しくくらしましたとさ。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The grandfather and grandmother began living happily and harmoniously together while raising the baby.",
+        "explanation": "The sentence describes the outcome of the prior events (receiving the baby through the magical stick) leading to a new state of living together happily. This fits the 'consequence' category as it shows the result of the previous actions."
+      }
+    }
+  ]
+}

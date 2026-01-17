@@ -1,0 +1,215 @@
+{
+  "source_file": "/content/drive/MyDrive/FairytalesResearch/datasets/Japanese/texts/jp_019.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "model": "Qwen/Qwen3-8B",
+  "total_sentences": 14,
+  "analyzed_sentences": 14,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "むかしむかし、あるところに、まずしいけれど、心のやさしいおじいさんとおばあさんがいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "あるところ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the main characters (old man and old woman) and their traits, establishing the story's background context. The location 'あるところ' (a place) is mentioned as the narrative setting."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "ある日のこと、おじいさんがいつものように山へ行くと、 「ハッケヨイ！　ノコッタ、ノコッタ」 と、いう声がきこえてきます。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces a specific event ('one day') and sets the scene of the old man going to the mountain, establishing the context for the subsequent story developments."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "「はて、なんの声だろう？」 　おじいさんがのぞいてみると、二匹のネズミがすもうをとっていました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "二匹のネズミ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of looking into the hole and observing the mice wrestling. The doer is the old man, and the receivers are the two mice being observed."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "「あれは、うちのやせネズミと、金もちの家のふとっちょネズミだ」 　おじいさんの家にすんでいるやせネズミは、力がないため、なんどやっても、ふとっちょネズミにまけてしまいます。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "おじいさんの家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the two mice (thin mouse from the old man's house and the fat mouse from the rich family) and their current situation of the thin mouse losing repeatedly to the fat mouse, establishing context for the story's conflict."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "おじいさんは家にかえると、おばあさんにネズミのすもう話をしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "おばあさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the grandfather's action of informing the grandmother about the mice's sumo match. The doer is the grandfather, and the receiver is the grandmother."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "「あれじゃあ、かわいそうだ。なんとかして、うちのやせネズミに、かたせてやりたいねえ」 　するとおばあさんが、 「それじゃあ、うちのやせネズミに、おもちを食べさせてやりましょうよ。きっと、力がつきますよ」 「そうじゃ、それがええ」 　おじいさんとおばあさんは、さっそくおもちをついて、やせネズミのすんでいる穴に、ころがしてやりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん",
+          "おばあさん"
+        ],
+        "receivers": [
+          "やせネズミ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the grandfather and grandmother making and rolling mochi into the thin mouse's hole. The doers are the two elderly characters, and the receiver is the thin mouse."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "さて次の日、やせネズミとふとっちょネズミは、またすもうをとりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "やせネズミのすんでいる穴",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence sets up the next event by indicating the next day and the location where the sumo match occurs, providing context for the subsequent action."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "でも、今日はおじいさんの家のやせネズミが、なんどやっても、すもうにかつのです。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "やせネズミがすもうに勝つようになった",
+        "explanation": "前文の「おじいさんとおばあさんがおもちをついてやりました」の行動により、やせネズミが力をつけた結果、すもうで勝つようになったという状態変化を示しています。"
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "ふしぎに思ったふとっちょネズミが、やせネズミにたずねました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "ふとっちょネズミ"
+        ],
+        "receivers": [
+          "やせネズミ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an action where the little mouse (ふとっちょネズミ) performs the act of questioning the thin mouse (やせネズミ). The verb 'たずねました' (asked) indicates an active action with a clear doer and receiver."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "「やせネズミくん、どうしてきゅうに、つよくなったんだい？」 　やせネズミは、とくいそうにいいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "「えへへへっ、じつはね。きのう、おじいさんとおばあさんがおもちをくれたんだ。だから力がつよくなったんだよ」 「いいなあ、ぼくの家はお金持ちだけど、ケチだから、おもちをついてくれないんだ」 「それなら家へおいでよ。おじいさんはきっと、こんやもおもちをついてくれるから、きみにもはんぶん、わけてあげるよ」 「ほんとうに！　うれしいなあ」 　それをきいたおじいさんは、二匹分のおもちをネズミの穴に入れてやり、おばあさんは二匹のネズミに小さなまわしをぬってあげました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん",
+          "おばあさん"
+        ],
+        "receivers": [
+          "やせネズミ",
+          "ふとっちょネズミ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man and woman actively giving rice cakes and a toy to the mice, which is a clear action performed by the doers (おじいさん, おばあさん) and received by the mice (やせネズミ, ふとっちょネズミ)."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "家にかえった二匹のネズミは、おもちとまわしを見つけて大よろこびです。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the two mice found the rice cakes and the toy and were happy",
+        "explanation": "The sentence describes the outcome of the prior action where the old man and woman provided the mice with rice cakes and toys, resulting in the mice's happiness and discovery of the items."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "よろこんだふとっちょネズミは、おみやげにもってきた小判を、おじいさんとおばあさんにあげたので、おじいさんとおばあさんはお金もちになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "おじいさんとおばあさんはお金もちになりました",
+        "explanation": "The sentence describes the outcome of the prior event where the fat mouse gave a coin to the old man and old woman, resulting in them becoming wealthy. This is a consequence of the action described in the previous sentences."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "まずしくても、やさしい心をもって、人にしんせつにしてあげれば、いつか、きっと、しあわせがやってきます。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "しあわせがやってきます",
+        "explanation": "The sentence concludes the story by stating the moral outcome of the old couple's kindness, indicating that their compassionate actions lead to happiness. This is a consequence of the prior events where they helped the mice and received rewards."
+      }
+    }
+  ]
+}

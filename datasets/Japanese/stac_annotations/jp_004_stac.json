@@ -1,0 +1,557 @@
+{
+  "source_file": "/content/drive/MyDrive/FairytalesResearch/datasets/Japanese/texts/jp_004.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "model": "Qwen/Qwen3-8B",
+  "total_sentences": 37,
+  "analyzed_sentences": 37,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "むかしむかし、貧しいけれど、心のやさしいおじいさんとおばあさんがいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the main characters (old man and old woman) and their traits (poverty and kindness), establishing the narrative context without specifying a location. This sets the stage for subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "ある寒い冬の日、おじいさんは町へたきぎを売りに出かけました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of going to sell firewood, which is an activity actively performed. The doer is the old man, and there is no explicit receiver mentioned in the sentence."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "すると途中の田んぼの中で、一羽のツルがワナにかかってもがいていたのです。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "途中の田んぼ中",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "この文は、物語の舞台となる場所を提示し、後の展開（ツルの救助）の背景を設定しています。場所は「途中の田んぼ中」で、物語の重要な出来事の発生場所として焦点となっています。"
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "「おお、おお、かわいそうに」 　おじいさんは、かわいそうに思って、ツルを逃がしてやりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "ツル"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of releasing the crane, making it an 'action' category. The doer is the old man (おじいさん), and the receiver is the crane (ツル)."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "するとツルは、おじいさんの頭の上を三ベん回って、 「カウ、カウ、カウ」 と、さもうれしそうに鳴いて、飛んでいきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "ツル"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the heron's action of circling the old man's head and flying away, indicating an active behavior performed by the heron (doer) with the old man as the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "その夜、日ぐれごろから降りはじめた雪が、コンコンとつもって大雪になりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "おじいさんとおばあさんの家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "この文は、物語の舞台となる場所（おじいさんとおばあさんの家）と、その後の出来事（大雪の夜）を背景として提示しています。雪の降り始めは物語の展開を促す状況を設定するため、'situation'カテゴリに分類されます。"
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "おじいさんがおばあさんに、ツルを助けた話をしていると、表の戸を、トントン、トントンと、たたく音がします。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "「ごめんください。開けてくださいまし」 　若い女の人の声です。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若い女の人"
+        ],
+        "receivers": [
+          "おばあさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young woman performing the action of requesting entry by knocking on the door, directly addressing the grandmother. The doer is the young woman, and the receiver is the grandmother who will respond to the request."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "おばあさんが戸を開けると、頭から雪をかぶった娘が立っていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "おばあさんはおどろいて、 「まあ、まあ、寒かったでしょう。さあ、早くお入り」 と、娘を家に入れてやりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おばあさん"
+        ],
+        "receivers": [
+          "娘"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the grandmother's action of letting the snow-covered girl into the house. The doer is the grandmother (おばあさん), and the receiver is the girl (娘). This action directly follows the situation of the girl arriving at the house."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "「わたしは、このあたりに人をたずねてきましたが、どこをさがしても見あたらず、雪はふるし、日はくれるし、やっとのことで、ここまでまいりました。ご迷惑でしょうが、どうか一晩、泊めてくださいまし」 　娘は、ていねいに手をついて頼みました。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "おじいさん",
+          "おばあさん"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents the girl's explicit request to stay overnight, which constitutes a task for the old man and woman to fulfill. The task_roles are the characters who must respond to this request."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "「それはそれは、さぞ、お困りじゃろう。こんなところでよかったら、どうぞ、お泊まりなさい」 「ありがとうございます」 　娘は喜んで、その晩は食事の手伝いなどをして、働いてやすみました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘"
+        ],
+        "receivers": [
+          "おじいさん",
+          "おばあさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the girl (娘) performing actions (working and helping with dinner) for the old man (おじいさん) and old woman (おばあさん). The doers are explicitly the girl, and the receivers are the elderly couple who benefit from her labor."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "あくる朝、おばあさんが目をさますと、娘はもう起きて働いていました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter's action of waking up and working, with '娘' as the doer. No specific receiver is mentioned, so receivers are left empty."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "いろりには火が燃え、なべからは湯気があがっています。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "おじいさんとおばあさんの家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "この文は、娘が起きて働いている状況を背景として、家の内装（いろりの火、なべの湯気）を描写することで、物語の舞台となる場所を設定しています。"
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "そればかりか、家中がきれいに掃除されているのです。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the house is clean",
+        "explanation": "The sentence describes the outcome of the young woman's actions (cleaning the house) as a result of her prior task, indicating a state change in the household environment."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "「まあ、まあ、ごはんばかりか、お掃除までしてくれたのかね。ありがとう。」 　次の日も、その次の日も大雪で、戸を開けることもできません。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "娘は、おじいさんの肩をもんでくれました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter actively performing the action of holding the old man's shoulder, indicating a physical interaction between the characters."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "「おお、おお、なんてよく働く娘さんじゃ。なんてよく気のつくやさしい娘さんじゃ。こんな娘がうちにいてくれたら、どんなにうれしいじゃろう」 　おじいさんとおばあさんは、顔を見あわせました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "すると娘が、手をついて頼みました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘"
+        ],
+        "receivers": [
+          "おじいさん",
+          "おばあさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the girl actively performing the action of bowing and begging, with the doer being the girl and the receivers being the grandparents who are being asked to let her stay."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "「身寄りのない娘です。どうぞ、この家においてくださいませ」 「おお、おお」 「まあ、まあ」 　おじいさんとおばあさんは喜んで、それから三人、貧しいけれど、楽しい毎日をすごしました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "おじいさんとおばあさんは三人で貧しいけれど楽しい毎日を過ごすようになった",
+        "explanation": "娘の願いに応じておじいさんとおばあさんが彼女を受け入れ、三人で生活を始めたという結果を示しています。これは前の行動（娘の頼み）の結果としての状態変化を表しています。"
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "さて、ある日の事。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces a new temporal context ('One day') that sets the stage for the subsequent events involving the girl weaving cloth. It provides background context without specifying a location."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "娘が機(はた)をおりたいから、糸を買ってくださいと頼みました。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "おじいさん"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates a request from the daughter to the old man to purchase thread, establishing an explicit requirement for the old man to fulfill."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "おじいさんが糸を買ってくると、娘は機の回りにびょうぶを立てて、 「機をおりあげるまで、決してのぞかないでください」 と、いって、機をおりはじめました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘"
+        ],
+        "receivers": [
+          "おじいさん",
+          "おばあさん",
+          "機"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter's actions of setting up a screen around the loom, instructing the grandfather and grandmother not to peek, and beginning to weave. The doer is the daughter, and the receivers include the grandfather and grandmother (addressed in the instruction) and the loom (the object being worked on)."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "キコバタトン、キコバタトン。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "娘が機をおって、三日がたちました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "ようやく機をおりおえた娘は、 「おじいさま、おばあさま、この綾錦(あやにしき→美しい布の事)を町へ売りに行って、帰りにはまた、糸を買ってきてください」 と、娘は空のくものように軽い、美しいおり物を二人に見せました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘"
+        ],
+        "receivers": [
+          "おじいさま",
+          "おばあさま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter (娘) actively performing the action of displaying the finished silk fabric (綾錦) to her grandparents (おじいさま, おばあさま). The action involves presenting the woven cloth as a result of her labor."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "「これは、素晴らしい」 　おじいさんが町へ売りに行くと、それを殿さまが高い値段で買ってくれました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "おじいさんは喜んで、糸を買って帰りました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "糸"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the grandfather's action of purchasing thread, making him the doer and the thread the receiver."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "すると娘はまた、機をおりはじめました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘"
+        ],
+        "receivers": [
+          "機"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter initiating the action of weaving again, specifying the doer as '娘' (the daughter) and the receiver as '機' (the loom)."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "「ねえ、おじいさん。あの娘は、いったいどうして、あんな見事な布をおるのでしょうね。・・・ほんの少し、のぞいてみましょう」 　おばあさんが、びょうぶのすきまからのぞいてみると、そこに娘はいなくて、やせこけた一羽のツルが、長いくちばしで自分の羽毛を引きぬいては、糸にはさんで機をおっていたのです。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the girl is revealed to be a crane (the original crane that was rescued)",
+        "explanation": "The sentence describes the outcome of the grandmother's action (looking through the screen), revealing the girl's true identity as the rescued crane. This revelation changes the state of the story by exposing the magical transformation and the girl's true nature."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "「おじいさん、おじいさんや」 　おどろいたおばあさんは、おじいさんに、この事を話しました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おばあさん"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The grandmother (おばあさん) performs the action of informing the old man (おじいさん) about the girl's secret, which is a key narrative event revealing the girl's true identity as a crane."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "キコバタトン、キコバタトン・・・。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "girl"
+        ],
+        "receivers": [
+          "loom"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents the sound of the loom being used during the girl's weaving action. The girl is the active doer performing the weaving, and the loom is the object receiving the action as the tool being used."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "機の音がやんで、前よりもやせ細った娘が、布をかかえて出てきました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "「おじいさま、おばあさま。もう、かくしていても仕方ありませんね。わたしは、いつか助けられたツルでございます。ご恩をお返ししたいと思って娘になってまいりました。けれど、もうお別れでございます。どうぞ、いつまでもおたっしゃでいてくださいませ」 　そういったかと思うと、おじいさんとおばあさんが止めるのも聞かず、たちまち一羽のツルになって空へまいあがりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The girl, revealed as the crane she had been helped years ago, transforms back into a crane and departs, leaving the old man and woman forever.",
+        "explanation": "The sentence describes the outcome of the prior event where the girl's secret is discovered. The state change involves her transformation into a crane and her departure, altering the story's dynamics."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "そして、家の上を三ベん回って、 「 カウ、カウ、カウ」 と、鳴きながら、山の向こうへ飛んでいってしまいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "「ツルや。いや、娘や。どうか、お前もたっしゃでいておくれ。・・・今まで、ありがとう」 　おじいさんとおばあさんは、いつまでもいつまでも、ツルを見送りました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The old man and old woman are left alone but continue to live happily, while the crane (who was actually the daughter) departs and flies away.",
+        "explanation": "The sentence describes the outcome of the crane's departure after it reveals its true identity and leaves the old couple. The state change involves the crane's departure and the couple's continued happiness despite being alone."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "それからのち、二人は娘のおった布を売ったお金で、しあわせに暮らしました",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the old man and old woman lived happily using the money from selling the cloth",
+        "explanation": "The sentence describes the outcome of the prior event where the old couple received the cloth made by the crane girl (who was actually a transformed human). The consequence is their transition to a happy life through the financial benefit of selling the cloth."
+      }
+    }
+  ]
+}

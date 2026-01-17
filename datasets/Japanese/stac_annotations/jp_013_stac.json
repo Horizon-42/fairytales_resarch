@@ -1,0 +1,363 @@
+{
+  "source_file": "/content/drive/MyDrive/FairytalesResearch/datasets/Japanese/texts/jp_013.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "model": "Qwen/Qwen3-8B",
+  "total_sentences": 25,
+  "analyzed_sentences": 25,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "むかしむかし、あるところに、びんぼうだけど心優しいおじいさんとおばあさんがいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the main characters (old man and old woman) and their traits (poor but kind-hearted), establishing the narrative context. It sets the stage for the story without specifying a location beyond a general 'place', which is not explicitly named."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "ある年の大晦日(おおみそか)のことです。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the specific time context (New Year's Eve) for the story, which sets the stage for the subsequent events without introducing a location."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "おじいさんとおばあさんは二人でかさを作りました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん",
+          "おばあさん"
+        ],
+        "receivers": [
+          "かさ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of making umbrellas, with the old man and old woman as the doers and the umbrellas as the receivers."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "それを町へ持って行って売り、お正月のおもちを買うつもりです。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "おじいさん",
+          "おばあさん"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence states the old man and old woman's intention to sell the umbrellas in town to purchase New Year mochi, which represents an explicit task they need to fulfill."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "「かさは五つもあるから、もちぐらい買えるだろう」 「おねがいしますね。それから、今夜は雪になりますから、気をつけて下さいよ」 　おじいさんは五つのかさを持って出かけました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "家を出てまもなく、雪が降ってきました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the immediate context of the old man leaving home and the onset of snow, establishing the environmental conditions that set up subsequent events in the narrative."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "雪はだんだん激しくなったので、おじいさんはせっせと道を急ぎました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "村はずれまで来ると、お地蔵様(おじぞう(→詳細)さま)が六つならんで立っています。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "村はずれ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the location where the Jizo statues are found, setting the stage for the subsequent interaction between the old man and the statues."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "お地蔵様の頭にも肩にも、雪が積もっています。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "村はずれ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the environmental condition (snow accumulation) at the location where the old man encounters the Bodhisattvas, establishing the setting for the subsequent interaction."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "これを見たおじいさんは、そのまま通り過ぎることが出来ませんでした。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the old man could not pass by the statues",
+        "explanation": "The sentence describes the outcome of the old man seeing the snow-covered statues, leading to his inability to proceed, which directly influences his subsequent action of offering his umbrella."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "「お地蔵様。雪が降って寒かろうな。せめて、このかさをかぶってください」 　おじいさんはお地蔵様に、売るつもりのかさをかぶせてやりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "お地蔵様"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of giving his umbrella to the Bodhisattva, which is a direct activity performed by the character."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "でも、お地蔵様は六つなのにかさは五つしかありません。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "村はずれ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes a contextual conflict by highlighting the discrepancy between the number of Bodhisattvas (six) and available umbrellas (five), creating narrative tension that drives the subsequent action of the old man giving his own umbrella."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "そこでおじいさんは、自分のかさを脱いで、最後のお地蔵様にかぶせてやりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "最後のお地蔵様"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of removing his own umbrella and giving it to the last statue. The doer is the old man (おじいさん), and the receiver is the last statue (最後のお地蔵様)."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "家へ帰ると、おばあさんがビックリして言いました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "「まあまあ、ずいぶん早かったですねぇ。それに、おじいさんのかさはどうしました？」 　おじいさんは、お地蔵様のことを話してやりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "おばあさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the grandfather (doer) explaining his actions to the grandmother (receiver), which constitutes an active communication of events."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "「まあまあ、それはよいことをしましたねえ。おもちなんてなくてもいいですよ」 　おばあさんはニコニコして言いました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the grandmother approves of the grandfather's action, leading to a positive outcome",
+        "explanation": "The sentence represents the consequence of the grandfather's action (giving his umbrella to the statues). The grandmother's approval signifies a positive outcome and sets the stage for the subsequent events (the mysterious song and gifts)."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "その夜、夜中だと言うのに、ふしぎな歌が聞こえてきました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the arrival of the statues and the gifts (お正月用のおもちやごちそう)",
+        "explanation": "The sentence describes the outcome of the grandfather's prior action of giving his umbrella to the statues, leading to the supernatural consequence of the statues arriving with New Year's rice cakes and delicacies."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "♪じいさんの家はどこだ。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The mysterious song is heard, leading to the arrival of the statues and the delivery of gifts",
+        "explanation": "The sentence is part of the consequence following the old man's act of giving his umbrella to the statues. The song signifies the statues' gratitude and results in the delivery of gifts, marking a state change in the narrative."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "♪かさのお礼を届けに来たぞ。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The oni (demon) arrived to deliver thanks for the old man's kindness, bringing gifts of mochi and food to his house.",
+        "explanation": "The sentence is part of the consequence following the old man's act of giving his umbrella to the statues. The song signifies the outcome where the statues (represented by the oni) return the favor with gifts, changing the state of the narrative by resolving the situation through kindness."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "♪じいさんの家はどこだ。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "お地蔵様"
+        ],
+        "receivers": [
+          "じいさんの家"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence is part of a song sung by the statues (お地蔵様) as they deliver thanks to the old man (じいさんの家). This represents an active action performed by the statues to locate the old man's house as part of their task."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "♪かさのお礼を届けに来たぞ。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The song of gratitude and the delivery of New Year's rice cakes and feast appear at the old man's house as a result of the statues receiving the umbrella",
+        "explanation": "The sentence is part of the consequence following the old man's action of giving his umbrella to the statues. The changed_state describes the outcome where the statues deliver gratitude through song and bring gifts, altering the narrative state."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "歌声はどんどん近づいて、とうとうおじいさんの家の前まで来ると、ズシーン！",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "song"
+        ],
+        "receivers": [
+          "おじいさんの家"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the song approaching the old man's house, with the song as the doer and the house as the receiver."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "と、何かをおく音がして、そのまま消えてしまいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the Bodhisattvas arrived and the offerings appeared",
+        "explanation": "The sentence describes the outcome of the prior event (the song) leading to the Bodhisattvas arriving at the old man's house and the appearance of the New Year offerings."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "おじいさんがそっと戸を開けてみると、おじいさんのあげたかさをかぶったお地蔵様の後ろ姿が見えました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "そして家の前には、お正月用のおもちやごちそうが、山のようにおいてありました",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "a mountain of New Year's mochi and feast items were placed in front of the house",
+        "explanation": "The sentence describes the outcome of the prior event where the old man gave his umbrella to the statues, resulting in the statues bringing food as a thank you gesture."
+      }
+    }
+  ]
+}

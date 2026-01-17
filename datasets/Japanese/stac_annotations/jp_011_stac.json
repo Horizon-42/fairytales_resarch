@@ -1,0 +1,1082 @@
+{
+  "source_file": "/content/drive/MyDrive/FairytalesResearch/datasets/Japanese/texts/jp_011.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "model": "Qwen/Qwen3-8B",
+  "total_sentences": 70,
+  "analyzed_sentences": 70,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "むかし、金太郎きんたろうという強つよい子供こどもがありました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the main character, Kintaro, and sets the stage for the story. It does not mention a specific location, so the location field remains empty. This is classified as 'situation' because it provides background context for the narrative."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "相模国さがみのくに足柄山あしがらやまの山奥やまおくに生うまれて、おかあさんの山うばといっしょにくらしていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "足柄山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context by stating where JinTarou was born and where he lived with his mother, establishing the setting for the story."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "金太郎きんたろうは生うまれた時ときからそれはそれは力ちからが強つよくって、もう七つ八つのころには、石臼いしうすやもみぬかの俵たわらぐらい、へいきで持もち上あげました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "大抵たいていの大人おとなを相手あいてにすもうを取とっても負まけませんでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Goldfish's inherent strength and ability to defeat adults in wrestling, establishing his character's capabilities as background context. No specific location is mentioned, so the location field remains empty."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "近所きんじょにもう相手あいてがなくなると、つまらなくなって金太郎きんたろうは、一日にち森もりの中をかけまわりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "金太郎きんたろう"
+        ],
+        "receivers": [
+          "森もり"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 金太郎's action of running around the forest daily after becoming bored with no opponents. The doer is 金太郎, and the receiver is the forest where the action takes place."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "そしておかあさんにもらった大きなまさかりをかついで歩あるいて、やたらに大きな杉すぎの木や松まつの木をきり倒たおしては、きこりのまねをしておもしろがっていました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "金太郎きんたろう"
+        ],
+        "receivers": [
+          "杉すぎの木",
+          "松まつの木"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes JinTarou actively performing the action of cutting down large cypress and pine trees with his axe while imitating a woodcutter. The doer is clearly JinTarou, and the receivers are the trees being cut down."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "ある日森もりの奥おくのずっと奥おくに入はいって、いつものように大きな木を切きっていますと、のっそり大きな熊くまが出て来きました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "熊くまは目を光ひからせながら、 「だれだ、おれの森もりをあらすのは。」 　と言いって、とびかかって来きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "熊"
+        ],
+        "receivers": [
+          "金太郎きんたろう"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the bear's action of approaching the protagonist (金太郎きんたろう) after appearing in the forest. The bear is the active doer performing the action of jumping towards the protagonist, making this an 'action' category."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "すると金太郎きんたろうは、 「何なんだ、熊くまのくせに。金太郎きんたろうを知しらないか。」 　と言いいながら、まさかりをほうり出だして、いきなり熊くまに組くみつきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "金太郎きんたろう"
+        ],
+        "receivers": [
+          "熊くま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes JinTarou's active response to the bear's challenge, including speaking defiantly and physically attacking the bear with an axe. This constitutes a direct action performed by JinTarou against the bear."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "そして足あしがらをかけて、どしんと地じびたに投なげつけました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "金太郎きんたろう"
+        ],
+        "receivers": [
+          "熊くま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes JinTarou's physical action of throwing the bear to the ground, which is an active activity performed by him and directly affecting the bear."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "熊くまはへいこうして、両手りょうてをついてあやまって、金太郎きんたろうの家来けらいになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the bear became a retainer of KinTarou",
+        "explanation": "The sentence describes the outcome of the bear's defeat by KinTarou, resulting in the bear becoming a retainer. This is a consequence of the prior event where KinTarou defeated the bear in a fight."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "森もりの中で大将たいしょうぶんの熊くまがへいこうして金太郎きんたろうの家来けらいになったのを見みて、そのあとからうさぎだの、猿さるだの、鹿しかだのがぞろぞろついて来きて、 「金太郎きんたろうさん、どうぞわたくしも御家来ごけらいにして下ください。」 　と言いいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "金太郎きんたろうは、「よし、よし。」とうなずいて、みんな家来けらいにしてやりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "金太郎きんたろう"
+        ],
+        "receivers": [
+          "うさぎ",
+          "猿さる",
+          "鹿しか"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Gold-Tan's action of agreeing to the animals' requests and making them his retainers. The doer is Gold-Tan, and the receivers are the animals (rabbit, monkey, deer) who were previously seeking to become retainers."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "それからは金太郎きんたろうは、毎朝まいあさおかあさんにたくさんおむすびをこしらえて頂いただいて、森もりの中へ出でかけて行きました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "金太郎きんたろうが口笛くちぶえを吹ふいて、 「さあ、みんな来こい。みんな来こい。」 　と呼よびますと、熊くまを頭かしらに、鹿しかや猿さるやうさぎがのそのそ出て来きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "金太郎きんたろう"
+        ],
+        "receivers": [
+          "熊くま",
+          "鹿しか",
+          "猿さる",
+          "うさぎ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes JinTarou actively performing the action of blowing a whistle and calling his retainers, which directly results in the animals emerging. The doer is JinTarou, and the receivers are the bear, deer, monkey, and rabbit."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "金太郎きんたろうはこの家来けらいたちをお供ともに連つれて、一日にち山の中を歩あるきまわりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "ある日方々ほうぼう歩あるいて、やがてやわらかな草くさの生はえている所ところへ来きますと、みんなは足あしを出だしてそこへごろごろ寝ねころびました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "金太郎きんたろう",
+          "熊くま",
+          "鹿しか",
+          "猿さる",
+          "うさぎ"
+        ],
+        "receivers": [
+          "やわらかな草くさの生はえている所ところ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the group of characters (JinTarou and his companions) performing the action of lying down on a grassy area. The doers are the characters involved, and the receivers are the location where the action occurs."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "日がいい心持こころもちそうに当あたっていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "森",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the pleasant weather and atmosphere in the forest where the characters are lying on soft grass, setting the scene for the subsequent wrestling event."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "金太郎きんたろうが、 「さあ、みんなすもうを取とれ。ごほうびにはこのおむすびをやるぞ。」 　と言いいますと、熊くまがむくむくした手てで地ちを掘ほって、土俵どひょうをこしらえました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "熊くま"
+        ],
+        "receivers": [
+          "土俵どひょう"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the bear's action of digging the ground to create a dohyo (sumo ring) in response to JinTarou's command. The bear is the active doer, and the dohyo is the object being created as the receiver."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "はじめに猿さるとうさぎが取とり組くんで、鹿しかが行司ぎょうじになりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "猿さる",
+          "うさぎ"
+        ],
+        "receivers": [
+          "鹿しか"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the monkey and rabbit engaging in a wrestling match, with the deer assuming the role of referee. The doers are the monkey and rabbit performing the wrestling action, while the deer is the receiver of the referee role."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "うさぎが猿さるのしっぽをつかまえて、土俵どひょうの外そとへ持もち出だそうとしますと、猿さるがくやしがって、むちゃくちゃにうさぎの長ながい耳みみをつかんでひっぱりましたから、うさぎはいたがって手てをはなしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "うさぎ",
+          "猿さる"
+        ],
+        "receivers": [
+          "猿さる",
+          "うさぎ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the physical actions taken by the rabbit and monkey during a sumo match. The rabbit attempts to remove the monkey from the ring by grabbing its tail, prompting the monkey to retaliate by grabbing the rabbit's ear, leading to the rabbit releasing its grip. This sequence of actions directly involves both characters as doers and receivers."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "それで勝負しょうぶがつかなくなって、どちらもごほうびがもらえませんでした。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Neither the rabbit nor the monkey received their reward because the match could not be decided.",
+        "explanation": "The sentence describes the outcome of the prior sumo match between the rabbit and monkey, where the inability to determine a winner resulted in neither participant receiving their promised reward."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "こんどはうさぎが行司ぎょうじになって、鹿しかと熊くまが取とり組くみましたが、鹿しかはすぐ角つのごと熊くまにひっくり返かえされてしまいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "熊"
+        ],
+        "receivers": [
+          "鹿"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an action where the bear (熊) performs the act of flipping the deer (鹿), making the bear the doer and the deer the receiver."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "金太郎きんたろうは、 「おもしろい、おもしろい。」 　と言いって手てをたたきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "金太郎きんたろう"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Kintaro's action of clapping hands after finding the sumo match interesting. The doer is explicitly Kintaro, and there is no direct receiver mentioned for the action."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "とうとういちばんおしまいに金太郎きんたろうが土俵どひょうのまん中につっ立たって、 「さあ、みんなかかって来こい。」 　と言いいながら、大手おおでをひろげました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "金太郎きんたろう"
+        ],
+        "receivers": [
+          "うさぎ",
+          "猿",
+          "鹿",
+          "熊"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 金太郎's active action of standing in the center of the dohyo and spreading his hands to initiate a confrontation with the animals, directly targeting them as receivers."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "そこでうさぎと、猿さると、鹿しかと、いちばんおしまいに熊くまがかかっていきましたが、片かたっぱしからころころ、ころがされてしまいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The rabbit, monkey, deer, and bear were all thrown down and rolled around as a result of the attack.",
+        "explanation": "The sentence describes the outcome of the prior action where the animals attacked Gold-Tiger. The consequence is that all the animals were defeated and thrown down, changing the state of the interaction from an attack to a clear victory for Gold-Tiger."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "「何なんだ。弱虫よわむしだなあ。みんないっぺんにかかって来こい。」 　と金太郎きんたろうが言いいますと、くやしがってうさぎが足あしを持もつやら猿さるが首くびに手てをかけるやら、大おおさわぎになりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "うさぎ",
+          "猿さる",
+          "鹿しか",
+          "熊くま"
+        ],
+        "receivers": [
+          "金太郎きんたろう"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the animals (うさぎ, 猿さる, 鹿しか, 熊くま) taking physical actions (holding feet, necks) against 金太郎きんたろう in response to his challenge, which constitutes an active action performed by the animals toward him."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "そして鹿しかが腰こしを押おして熊くまが胸むねに組くみついて、みんな総そうがかりでうんうんいって、金太郎きんたろうを倒たおそうとしましたが、どうしても倒たおすことができませんでした。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The animals' attempt to defeat Kumataro failed as they could not overcome him",
+        "explanation": "The sentence describes the outcome of the animals' collective effort to throw Kumataro down, stating that they were unable to succeed. This directly follows the prior action of the animals attacking and establishes the result of their failed attempt."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "金太郎きんたろうはおしまいにじれったくなって、からだを一振ひとふりうんと振ふりますと、うさぎも猿さるも鹿しかも熊くまもみんないっぺんにごろごろ、ごろごろ土俵どひょうの外そとにころげ出だしてしまいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the animals rolled out of the ring",
+        "explanation": "The sentence describes the outcome of Gold-Taro's action where he shakes his body, causing all the animals to be thrown out of the ring. This is a consequence of the prior action taken by Gold-Taro."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "「ああ、いたい。ああ、いたい。」 　とみんな口々くちぐちに言いって、腰こしをさすったり、肩かたをもんだりしていました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The animals are in pain and are rubbing their waist and shoulders after being thrown out of the ring by JinTarou",
+        "explanation": "The sentence describes the aftermath of JinTarou's action where the animals are physically reacting to the impact, indicating a state change caused by the prior event of being thrown out of the ring."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "金太郎きんたろうは、 「さあ、おれにまけてかわいそうだから、みんなに分わけてやろう。」 　と言いって、うさぎと猿さると鹿しかと熊くまをまわりにぐるりに並ならばせて、自分じぶんがまん中に座すわって、おむすびを分わけてみんなで食たべました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "金太郎きんたろう"
+        ],
+        "receivers": [
+          "うさぎ",
+          "猿さる",
+          "鹿しか",
+          "熊くま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Gold-Taro taking the action of sharing rice balls with the animals (rabbit, monkey, deer, bear) after a sumo match. The doer is clearly Gold-Taro, and the receivers are the animals who receive the rice balls."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "しばらくすると金太郎きんたろうは、 「ああ、うまかった。さあ、もう帰かえろう。」 　と言いって、またみんなを連つれて帰かえっていきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "金太郎きんたろう"
+        ],
+        "receivers": [
+          "みんな"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes JinTarou actively leading the group (including animals) to return home, which is a direct action performed by him. The action involves both the doer (JinTarou) and the receivers (the group)."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "二",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence '二' serves as a chapter divider in the story, marking the beginning of a new section. It does not describe a specific situation, task, action, or consequence but indicates a structural transition. Since no location is explicitly mentioned in the sentence itself, the 'location' field remains empty."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "帰かえって行いく道々みちみちも、森もりの中でかけっくらをしたり、岩いわの上で鬼おにごっこをしたりして遊あそび遊あそび行いくうちに、大きな谷川たにがわのふちへ出ました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "大きな谷川たにがわのふち",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence sets the scene for the journey back home, describing the characters' activities in the forest and their arrival at the edge of a large valley. This establishes the narrative context for subsequent events involving the river and bridge."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "水はごうごうと音おとを立たてて、えらい勢いきおいで流ながれて行いきますが、あいにく橋はしがかかっていませんでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "谷川",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the environmental context of a roaring river with strong current but no bridge, setting the stage for the group's subsequent dilemma about crossing. The location '谷川' (valley river) is the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "みんなは、 「どうしましょう。あとへ引ひき返かえしましょうか。」 　と言いいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "川かわの岸きし",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the group's discussion about their next course of action when faced with the problem of no bridge, establishing the context of their dilemma at the riverbank."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "金太郎きんたろうはひとりへいきな顔かおをして、 「なあにいいよ。」 　と言いいながら、そこらを見みまわしますと、ちょうど川かわの岸きしに二ふたかかえもあるような大きな杉すぎの木が立たっていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "川かわの岸きし",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes JinTarou's determined demeanor and the location (riverbank) where the subsequent action of cutting the cedar tree to build a bridge will occur, setting the stage for the upcoming event."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "金太郎きんたろうはまさかりをほうり出だして、いきなり杉すぎの木に両手りょうてをかけました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "金太郎きんたろう"
+        ],
+        "receivers": [
+          "杉すぎの木"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 金太郎's physical action of throwing his axe and placing both hands on a cedar tree, which directly initiates the subsequent event of the tree falling. This fits the 'action' category as it depicts a specific activity performed by a character."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "そして二、三度どぐんぐん押おしたと思おもうと、めりめりとひどい音おとがして、木は川かわの上にどっさりと倒たおれかかって、りっぱな橋はしができました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "a bridge was built across the river",
+        "explanation": "The sentence describes the outcome of金太郎's action of cutting the tree, resulting in the creation of a bridge over the river. This is a consequence of the prior action where the tree was felled."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "金太郎きんたろうはまたまさかりを肩かたにかついで、先さきに立たって渡わたっていきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "金太郎きんたろう"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Kintaro actively performing the action of carrying the axe and crossing the bridge. The doer is explicitly Kintaro, and there is no clear receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "みんなは顔かおを見合みあわせて、てんでんに、 「えらい力ちからだなあ。」 　とささやき合あいながら、ついて行きました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "その時とき向むこうの岩いわの上にきこりが一人ひとりかくれていて、この様子ようすを見みていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "金太郎きんたろうがむぞうさに、大きな木をおし倒たおしたのを見みて、目をまるくしながら、 「どうもふしぎな子供こどもだな。どこの子供こどもだろう。」 　と独ひとり言ごとを言いいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the carpenter recognizes JinTarou as an extraordinary child from somewhere",
+        "explanation": "The sentence describes the consequence of JinTarou felling the large tree, leading to the carpenter's realization of his unusual strength and origin. This marks a turning point where the carpenter acknowledges JinTarou's exceptional nature."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "そして立たち上あがって、そっと金太郎きんたろうのあとについて行きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "きこり"
+        ],
+        "receivers": [
+          "金太郎きんたろう"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the logger (きこり) performing the action of following KinTarou (金太郎きんたろう) after being impressed by his strength. The doer is the logger, and the receiver is KinTarou as he is the target of the following action."
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "うさぎや熊くまに別わかれると、金太郎きんたろうは一人ひとりで、また身軽みがるにひょいひょいと谷たにを渡わたったり、崖がけを伝つたわったりして、深ふかい深ふかい山奥やまおくの一軒家けんやに入はいっていきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "金太郎きんたろう"
+        ],
+        "receivers": [
+          "谷たに",
+          "崖がけ",
+          "一軒家けんや"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Gold-Tan's actions of moving through the valley and cliff, and entering a house in the deep mountain. The doer is clearly Gold-Tan, and the receivers are the valley, cliff, and house as the objects interacting with his actions."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "そこいらには白しろい雲くもがわき出だしていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the atmospheric environment (white clouds rising) around the mountain house, establishing the setting for the narrative. It provides background context without introducing new events, characters, or actions."
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "きこりはそのあとからやっと木の根ねをよじたり、岩角いわかどにつかまったりして、ついて行きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "きこり"
+        ],
+        "receivers": [
+          "金太郎きんたろう"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the logger's action of climbing and following the boy, making 'きこり' the doer and '金太郎きんたろう' the implicit receiver as the target of the following action."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "やっとうちの前まえまで来きて、きこりが中をのぞきますと、金太郎きんたろうはいろりの前まえに座すわって、おかあさんの山うばに、熊くまや鹿しかとすもうを取とった話はなしをせっせとしていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "金太郎きんたろうの家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "この文は金太郎が家の中で話している状況を描写しており、物語の舞台となる場所を示しています。"
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "おかあさんもおもしろそうに、にこにこ笑わらって聞きいていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "屋敷",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the mother's reaction to Goldfish Boy's storytelling, establishing the setting of the house where the narrative action is taking place. This provides background context for the subsequent interaction with the woodcutter."
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "その時とききこりは出だしぬけに窓まどから首くびをぬっと出だして、 「これこれ、坊ぼうや。こんどはおじさんとすもうを取とろう。」 　と言いいながら、のこのこ入はいって行いきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "きこり"
+        ],
+        "receivers": [
+          "金太郎きんたろう"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the woodcutter (きこり) initiating an action by entering the house and challenging JinTarou (金太郎きんたろう) to a sumo match. The woodcutter is the doer of the action, and JinTarou is the direct receiver of the challenge."
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "そしていきなり金太郎きんたろうの前まえに毛けむくじゃらな手を出だしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "きこり"
+        ],
+        "receivers": [
+          "金太郎きんたろう"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the carpenter (きこり) performing the action of suddenly extending a fluffy hand in front of Kumataro (金太郎きんたろう). This is an active physical interaction initiated by the carpenter towards Kumataro."
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "山うばは「おや。」といってふしぎそうな顔かおつきをしましたけれど、金太郎きんたろうはおもしろがって、 「ああ、取とろう。」 　と、すぐむくむく肥ふとったかわいらしい手てを出だしました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "そこで二人ふたりはしばらく真まっ赤かな顔かおをして押おし合あいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "きこり",
+          "金太郎きんたろう"
+        ],
+        "receivers": [
+          "きこり",
+          "金太郎きんたろう"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the mutual wrestling action between the carpenter (きこり) and JinTarou (金太郎きんたろう), where both actively engage in pushing each other with intense effort."
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "そのうちきこりはふいと、 「もう止よそう。勝負しょうぶがつかない。」 　と言いって、手てを引ひっ込こめてしまいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "それから改あらためて座すわりなおして、山うばに向むかって、ていねいにおじぎをして、 「どうも、だしぬけに失礼しつれいしました。じつはさっきぼっちゃんが、谷川たにがわのそばで大きな杉すぎの木を押おし倒たおしたところを見みて、おどろいてここまでついて来きたのです。今いままた腕うでずもうを取とって、いよいよ大力だいりきなのにおどろきました。どうしてこの子は今いまにえらい勇士ゆうしになりますよ。」 　こう言いって、こんどは金太郎きんたろうに向むかって、 「どうだね、坊ぼうやは都みやこへ出てお侍さむらいにならないかい。」 　と言いいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "きこり"
+        ],
+        "receivers": [
+          "金太郎きんたろう"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the woodcutter (きこり) performing the action of speaking to JinTarou (金太郎きんたろう) about his potential as a samurai. This dialogue is an active interaction that drives the narrative forward."
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "金太郎きんたろうは目をくりくりさせて、 「ああ、お侍さむらいになれるといいなあ。」 　と言いいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "このきこりと見みせたのはじつは碓井貞光うすいのさだみつといって、その時分じぶん日本一にほんいちのえらい大将たいしょうで名高なだかい源頼光みなもとのらいこうの家来けらいでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background information about the logger's true identity as a renowned general, establishing context for his later interactions with the story's characters. This falls under 'situation' as it sets the stage for future narrative developments without introducing a new location."
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "そして御主人ごしゅじんから強つよい侍さむらいをさがして来こいという仰おおせを受うけて、こんな風ふうをして日本にほんの国中くにじゅうをあちこちと歩あるきまわっているのでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "日本",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about碓井貞光 receiving an order from his master to find a strong samurai and traveling across Japan, establishing the narrative setting for his actions."
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "山うばもそう聞きくと、たいそう喜よろこんで、 「じつはこの子の亡なくなりました父ちちも、坂田さかたというりっぱな氏うじを持もった侍さむらいでございました。わけがございましてこのとおり山の中に埋うもれておりますものの、よいつてさえあれば、いつか都みやこへ出だして侍さむらいにして、家いえの名なをつがせてやりたいと思おもっておりました。そういうことでしたら、このとおりの腕白者わんぱくものでございますが、どうぞよろしくお願ねがい申もうします。」 　とさもうれしそうに言いいました。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "きこり"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the mountain wife requesting the carpenter to take JinTarou as his apprentice, which establishes a task for the carpenter to fulfill."
+      }
+    },
+    {
+      "sentence_index": 60,
+      "sentence": "金太郎きんたろうはそばで二人ふたりの話はなしを聞きいて、 「うれしいな、うれしいな。おれはお侍さむらいになるのだ。」 　と言いって、小踊こおどりをしていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 61,
+      "sentence": "金太郎きんたろうがいよいよ碓井貞光うすいのさだみつに連つれられて都みやこへ上のぼるということを聞きいて、熊くまも鹿しかも猿さるもうさぎもみんな連つれ立だってお別わかれを言いいに来きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "熊くま",
+          "鹿しか",
+          "猿さる",
+          "うさぎ"
+        ],
+        "receivers": [
+          "金太郎きんたろう"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the animals (bear, deer, monkey, rabbit) actively coming to say goodbye to Gold Boy, which is an action performed by the animals (doers) and directed towards Gold Boy (receiver)."
+      }
+    },
+    {
+      "sentence_index": 62,
+      "sentence": "金太郎きんたろうはみんなの頭あたまを代かわりばんこになでてやって、 「みんな仲なかよく遊あそんでおくれ。」 　と言いいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "金太郎きんたろう"
+        ],
+        "receivers": [
+          "熊くま",
+          "鹿しか",
+          "猿さる",
+          "うさぎ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 金太郎 performing the action of combing the heads of the animals (熊くま, 鹿しか, 猿さる, うさぎ) and giving them a farewell message. This is an active physical interaction with clear doers and receivers."
+      }
+    },
+    {
+      "sentence_index": 63,
+      "sentence": "みんなは、 「金太郎きんたろうさんがいなくなってさびしいなあ。早はやくえらい大将たいしょうになって、また顔かおを見みせて下ください。」 　と言いって、名残なごり惜おしそうに帰かえっていきました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The animals express sadness and longing for Gold-Taro's return, wishing he would become a great general and reappear.",
+        "explanation": "The sentence describes the emotional outcome of Gold-Taro's departure, showing the animals' reaction and their hope for his future return as a great general. This is a consequence of his leaving, altering their emotional state and creating a new narrative dynamic."
+      }
+    },
+    {
+      "sentence_index": 64,
+      "sentence": "金太郎きんたろうはおかあさんの前まえに手てをついて、 「おかあさん、では行ってまいります。」 　と言いいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "金太郎きんたろう"
+        ],
+        "receivers": [
+          "おかあさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 金太郎 performing the action of bowing to his mother and announcing his departure. The doer is 金太郎, and the receiver is his mother."
+      }
+    },
+    {
+      "sentence_index": 65,
+      "sentence": "そして、貞光さだみつのあとについて、とくいらしく出ていきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "金太郎きんたろう"
+        ],
+        "receivers": [
+          "貞光さだみつ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 金太郎's action of following 贞光 and departing, with 金太郎 as the doer and 贞光 as the object being followed."
+      }
+    },
+    {
+      "sentence_index": 66,
+      "sentence": "それから幾日いくにちも幾日いくにちもかかって、貞光さだみつは金太郎きんたろうを連つれて都みやこへ帰かえりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "貞光さだみつ"
+        ],
+        "receivers": [
+          "金太郎きんたろう"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 貞光さだみつ bringing 金太郎きんたろう to the capital (都みやこ). The doer is 貞光, and the receiver is 金太郎."
+      }
+    },
+    {
+      "sentence_index": 67,
+      "sentence": "そして頼光らいこうのおやしきへ行って、 「足柄山あしがらやまの奥おくで、こんな子供こどもを見みつけてまいりました。」 　と、金太郎きんたろうを頼光らいこうのお目にかけました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "貞光"
+        ],
+        "receivers": [
+          "頼光"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of presenting 金太郎 to 頼光, performed by 贞光. The doer is 贞光, and the receiver is 頼光."
+      }
+    },
+    {
+      "sentence_index": 68,
+      "sentence": "「ほう、これはめずらしい、強つよそうな子供こどもだ。」 　と頼光らいこうは言いいながら、金太郎きんたろうの頭あたまをさすりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "頼光らいこう"
+        ],
+        "receivers": [
+          "金太郎きんたろう"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Lord Raikou's actions of speaking and touching Kintarou's head, which are active physical and verbal interactions performed by Raikou towards Kintarou."
+      }
+    },
+    {
+      "sentence_index": 69,
+      "sentence": "「だが金太郎きんたろうという名なは侍さむらいにはおかしい。父親ちちおやが坂田さかたというのなら、今いまから坂田金時さかたのきんときと名乗なのるがいい。」 　そこで金太郎きんたろうは坂田金時さかたのきんときと名乗なのって、頼光らいこうの家来けらいになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Gold-Taro changed his name to Sakata Kintoki and became a retainer of Raitoku",
+        "explanation": "The sentence describes the outcome of Raitoku's suggestion to rename Gold-Taro, resulting in his adoption of the new name and becoming a retainer, which alters his status and role in the narrative."
+      }
+    },
+    {
+      "sentence_index": 70,
+      "sentence": "そして大きくなると、えらいお侍さむらいになって、渡辺綱わたなべのつな、卜部季武うらべのすえたけ、碓井貞光うすいのさだみつといっしょに、頼光らいこうの四天王てんのうと呼よばれるようになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "金太郎 became a renowned samurai and was recognized as one of the Four Heavenly Kings under Ryokou",
+        "explanation": "The sentence describes the outcome of JinTarou's growth and training, resulting in his recognition as a prominent samurai and member of Ryokou's elite group. This is a consequence of his prior development and achievements."
+      }
+    }
+  ]
+}

@@ -1,0 +1,645 @@
+{
+  "source_file": "/content/drive/MyDrive/FairytalesResearch/datasets/Japanese/texts/jp_008.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "model": "Qwen/Qwen3-8B",
+  "total_sentences": 42,
+  "analyzed_sentences": 42,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "むかし、むかし、あるところにおじいさんとおばあさんがありました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "子供こどもがないものですから、おじいさんはすずめの子を一羽わ、だいじにして、かごに入いれて飼かっておきました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the background context of the old man and old woman's childlessness, which explains their decision to care for the sparrow. It sets the stage for subsequent events without specifying a location."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "ある日おじいさんはいつものように山へしば刈かりに行って、おばあさんは井戸いどばたで洗濯せんたくをしていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "井戸いどばた",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the daily routine of the grandfather and grandmother, setting the context for the subsequent events where the sparrow's actions occur at the well. The well is the narrative focus as it directly relates to the critical event of the sparrow consuming the paste."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "その洗濯せんたくに使つかうのりをおばあさんが台所だいどころへ忘わすれていった留守るすに、すずめの子がちょろちょろかごから歩あるき出だして、のりを残のこらずなめてしまいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "すずめの子"
+        ],
+        "receivers": [
+          "のり"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the baby sparrow eating all the glue while the grandmother was away. The sparrow is the doer, and the glue is the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "おばあさんはのりを取とりに帰かえって来きますと、お皿さらの中にはきれいにのりがありませんでした。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The dashi in the bowl was completely eaten by the sparrow, leading to the old woman's discovery and subsequent punishment.",
+        "explanation": "The sentence describes the outcome of the sparrow eating the dashi, which directly leads to the old woman's anger and the action of cutting the sparrow's tongue. This is a consequence of the prior event (the sparrow consuming the dashi)."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "そののりはみんなすずめがなめてしまったことが分わかかると、いじのわるいおばあさんはたいへんおこって、かわいそうに、小さなすずめをつかまえて、むりに口をあかせながら、 「この舌したがそんなわるさをしたのか。」 　と言いって、はさみで舌したをちょん切ぎってしまいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おばあさん"
+        ],
+        "receivers": [
+          "すずめ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the grandmother actively cutting the sparrow's tongue, making it an action performed by the grandmother (doer) on the sparrow (receiver)."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "そして、 「さあ、どこへでも出ていけ。」 　と言いって放はなしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おばあさん"
+        ],
+        "receivers": [
+          "すずめ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the grandmother (doer) releasing the sparrow (receiver) after cutting off its tongue. This action directly follows the consequence of the grandmother's anger and is a specific activity performed by the character."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "すずめは悲かなしそうな声こえで、「いたい、いたい。」と鳴なきながら、飛とんでいきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "すずめ"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the sparrow's action of flying away after being harmed, indicating an active behavior performed by the sparrow. The doer is clearly the sparrow, and there is no direct receiver specified in the action."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "夕方ゆうがたになって、おじいさんはしばを背負せおって、山から帰かえって来きて、 「ああくたびれた、すずめもおなかがすいたろう。さあさあ、えさをやりましょう。」 　と言いい言いい、かごの前まえへ行いってみますと、中にはすずめはいませんでした。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the sparrow is no longer in the cage",
+        "explanation": "The sentence describes the consequence of the grandmother's prior action (cutting the sparrow's tongue) by stating that the sparrow is missing from the cage when the grandfather returns."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "おじいさんはおどろいて、 「おばあさん、おばあさん、すずめはどこへ行ったろう。」 　と言いいますと、おばあさんは、 「すずめですか、あれはわたしのだいじなのりをなめたから、舌したを切きっておい出だしてしまいましたよ。」 　とへいきな顔かおをして言いいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the sparrow left after its tongue was cut off",
+        "explanation": "The sentence describes the consequence of the grandmother cutting the sparrow's tongue, which resulted in the sparrow leaving. This outcome directly follows the prior action of the grandmother's punishment."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "「まあ、かわいそうに。ひどいことをするなあ。」 　とおじいさんは言いって、がっかりした顔かおをしていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "おじいさんは、すずめが舌したを切きられてどこへ行ったか心配しんぱいでたまりませんので、あくる日は、夜よがあけるとさっそく出かけていきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "すずめ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of departing to find the sparrow after its tongue was cut off. The doer is the old man, and the receiver is the sparrow, as he is seeking it."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "おじいさんは道々みちみち、つえをついて、 「舌切したきりすずめ、 お宿やどはどこだ、 チュウ、チュウ、チュウ。」 　と呼よびながら、あてもなくたずねて歩あるきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "すずめ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the grandfather actively performing the action of searching for the swallow by calling out to it while walking. The doer is the grandfather, and the receiver is the swallow, as he is addressing it directly."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "野のを越こえて、山を越こえて、また野のを越こえて、山を越こえて、大きなやぶのある所ところへ出ました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "大きなやぶ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man actively moving through fields and mountains to reach the thicket, which is an action performed by him. The thicket is the destination location where the next significant event occurs."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "するとやぶの中から、 「舌切したきりすずめ、 お宿やどはここよ。 チュウ、チュウ、チュウ。」 　という声こえが聞きこえました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "やぶ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the location (thicket) where the subsequent interaction between the old man and the wounded sparrow occurs, setting the stage for the next events in the story."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "おじいさんは喜よろこんで、声こえのする方ほうへ歩あるいていきますと、やがてやぶの陰かげにかわいらしい赤あかいおうちが見みえて、舌したを切きられたすずめが門もんをあけて、お迎むかえに出ていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "「まあ、おじいさん、よくいらっしゃいました。」 「おお、おお、ぶじでいたかい。あんまりお前まえがこいしいので、たずねて来きましたよ。」 「まあ、それはそれは、ありがとうございました。さあ、どうぞこちらへ。」 　こう言いってすずめはおじいさんの手てをとって、うちの中へ案内あんないしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "すずめ"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the swallow actively guiding the grandfather into the house, which is a physical action performed by the swallow (doer) towards the grandfather (receiver)."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "すずめはおじいさんの前まえに手てをついて、 「おじいさん、だまってだいじなのりをなめて、申もうしわけがございませんでした。それをおおこりもなさらずに、ようこそたずねて下くださいました。」 　と言いいますと、おじいさんも、 「何なんの、わたしがいなかったばかりに、とんだかわいそうなことをしました。でもこうしてまた会あわれたので、ほんとうにうれしいよ。」 　と言いいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "すずめ",
+          "おじいさん"
+        ],
+        "receivers": [
+          "おじいさん",
+          "すずめ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the dialogue between the swallow and the old man, where the swallow apologizes for eating the dashi and the old man responds with regret. This is an action involving both characters performing and receiving the dialogue."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "すずめはきょうだいやお友ともだちのすずめを残のこらず集あつめて、おじいさんのすきなものをたくさんごちそうをして、おもしろい歌うたに合わせて、みんなですずめ踊おどりを踊おどって見みせました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "すずめ"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the sparrow's active actions of gathering siblings/friends, preparing a feast, and performing a dance for the old man. The sparrow is the primary doer, and the old man is the receiver of these actions."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "おじいさんはたいそうよろこんで、うちへ帰かえるのも忘わすれていました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "おじいさんはうちへ帰かえるのを忘れていた",
+        "explanation": "前の出来事（すずめの歓迎とごちそう）の結果として、おじいさんが喜びすぎて帰宅を忘れるという状態変化を示しています。"
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "そのうちにだんだん暗くらくなってきたものですから、おじいさんは、 「今日きょうはお陰かげで一日にちおもしろかった。日の暮くれないうちに、どれ、おいとまとしましょう。」 　と言いって、立たちかけました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of standing up to leave after a day at the sparrow's home. The doer is explicitly the old man, and there is no direct receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "すずめは、 「まあ、こんなむさくるしいところですけれど、今夜こんやはここへとまっていらっしゃいましな。」 　と言いって、みんなで引ひきとめました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "すずめ",
+          "みんな"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the swallow and the group persuading the old man to stay, indicating an active action performed by the swallow and others with the old man as the receiver."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "「せっかくだが、おばあさんも待まっているだろうから、今日きょうは帰かえることにしましょう。またたびたび来きますよ。」 「それは残念ざんねんでございますこと、ではおみやげをさし上あげますから、しばらくお待まち下くださいまし。」 　と言いって、すずめは奥おくからつづらを二つ持もってきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "すずめ"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the swallow (すずめ) actively bringing two baskets (つづら) as a gift for the old man (おじいさん), which constitutes a clear action performed by the swallow and received by the old man."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "そして、 「おじいさん、重おもいつづらに、軽かるいつづらです。どちらでもよろしい方ほうをお持もち下ください。」 　と言いいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "すずめ"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The swallow (すずめ) actively performs the action of offering the two baskets (重いつづら and 軽いつづら) to the old man (おじいさん), presenting a choice as part of the interaction."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "「どうもごちそうになった上、おみやげまでもらってはすまないが、せっかくだからもらって帰かえりましょう。だがわたしは年としをとっているし、道みちも遠とおいから、軽かるい方ほうをもらっていくことにしますよ。」 　こう言いっておじいさんは、軽かるいつづらを背負せおわせてもらって、 「じゃあ、さようなら。また来きますよ。」 「お待まち申もうしております。どうか気きをつけてお帰かえり下くださいまし。」 　と言いって、すずめは門口かどぐちまでおじいさんを送おくって出ました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "軽かるいつづら"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man taking the light bundle and departing, with the sparrow accompanying him to the gate. The action is performed by the old man (doer) and involves the light bundle (receiver)."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "日が暮くれてもおじいさんがなかなかもどらないので、おばあさんは、 「どこへ出かけたのだろう。」 　とぶつぶつ言いっているところへ、おみやげのつづらを背負せおって、おじいさんが帰かえって来きました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "「おじいさん、今いまごろまでどこに何なにをしていたんですね。」 「まあ、そんなにおおこりでないよ。今日きょうはすずめのお宿やどへたずねて行いって、たくさんごちそうになったり、すずめ踊おどりを見みせてもらったりした上に、このとおりりっぱなおみやげをもらって来きたのだよ。」 　こう言いってつづらを下おろすと、おばあさんは急きゅうににこにこしながら、 「まあ、それはようございましたねえ。いったい何なにが入はいっているのでしょう。」 　と言いって、さっそくつづらのふたをあけますと、中から目のさめるような金銀きんぎんさんごや、宝珠ほうじゅの玉たまが出てきました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the grandmother discovers gold and jewels inside the bag",
+        "explanation": "The sentence describes the outcome of the grandmother opening the bag (prior action), resulting in the discovery of valuable treasures. This represents a state change from an unknown contents to a revealed treasure trove."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "それを見みるとおじいさんは、とくいらしい顔かおをして言いいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the old man showed a peculiar expression upon seeing the treasures",
+        "explanation": "The sentence describes the old man's reaction to the contents of the bag, which is a direct consequence of the grandmother's prior action of opening the bag and discovering the treasures."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "「なにね、すずめは重おもいつづらと軽かるいつづらと二つ出だして、どちらがいいというから、わたしは年としはとっているし、道みちも遠とおいから、軽かるいつづらにしようといってもらってきたのだが、こんなにいいものが入はいっていようとは思おもわなかった。」 　するとおばあさんは急きゅうにまたふくれっ面つらをして、 「ばかなおじいさん。なぜ重おもい方ほうをもらってこなかったのです。その方ほうがきっとたくさん、いいものが入はいっていたでしょうに。」 「まあ、そう欲よくばるものではないよ。これだけいいものが入はいっていれば、たくさんではないか。」 「どうしてたくさんなものですか。よしよし、これから行いって、わたしが重おもいつづらの方ほうももらってきます。」 　と言いって、おじいさんが止とめるのも聞きかず、あくる日の朝あさになるまで待またれないで、すぐにうちをとび出だしました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "もう外そとはまっ暗くらになっていましたが、おばあさんは欲よくばった一心いっしんでむちゃくちゃにつえをつき立たてながら、 「舌切したきりすずめ、 お宿やどはどこだ、 チュウ、チュウ、チュウ。」 　と言いい言いいたずねて行きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おばあさん"
+        ],
+        "receivers": [
+          "すずめ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the grandmother actively performing the action of calling out to the injured dove to locate its home. The doer is the grandmother, and the receiver is the dove, as she is the target of the call."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "野のを越こえ、山を越こえて、また野のを越こえて、山を越こえて、大きな竹たけやぶのある所ところへ来きますと、やぶの中から、 「舌切したきりすずめ、 お宿やどはここよ。 チュウ、チュウ、チュウ。」 　という声こえがしました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "おばあさんは「しめた。」と思おもって、声こえのする方ほうへ歩あるいて行きますと、舌したを切きられたすずめがこんども門もんをあけて出てきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おばあさん"
+        ],
+        "receivers": [
+          "すずめ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the grandmother's action of walking towards the sound, which directly leads to the previously cut-tongued sparrow opening the gate. The action is performed by the grandmother and affects the sparrow."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "そしてやさしく、 「まあ、おばあさんでしたか。よくいらっしゃいました。」 　と言いって、うちの中へ案内あんないをしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "すずめ"
+        ],
+        "receivers": [
+          "おばあさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the swallow actively performing the action of welcoming and guiding the old woman into the house. The swallow (すずめ) is the doer, and the old woman (おばあさん) is the receiver of this action."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "そして、 「さあ、どうぞお上あがり下くださいまし。」 　とおばあさんの手てを取とっておざしきへ上あげようとしましたが、おばあさんは何なんだかせわしそうにきょときょと見みまわしてばかりいて、おちついて座すわろうともしませんでした。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おばあさん"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the grandmother's action of nervously looking around and refusing to sit down, which is an active behavior performed by her."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "「いいえ、お前まえさんのぶじな顔かおを見みればそれで用ようはすんだのだから、もうかまっておくれでない。それよりか早はやくおみやげをもらって、おいとましましょう。」 　いきなりおみやげのさいそくをされたので、すずめはまあ欲よくの深ふかいおばあさんだとあきれてしまいましたが、おばあさんはへいきな顔かおで、 「さあ、早はやくして下くださいよ。」 　と、じれったそうに言いうものですから、 「はい、はい、それではしばらくお待まち下くださいまし。今いまおみやげを持もってまいりますから。」 　と言いって、奥おくからつづらを二つ出だしてきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おばあさん"
+        ],
+        "receivers": [
+          "つづら"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old woman taking the heavy bundle (つづら) from the sparrow's house, which is an active action performed by her. The action directly leads to the consequence of her being trapped by magical creatures in the subsequent text."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "「さあ、それでは重おもい方ほうと軽かるい方ほうと二つありますから、どちらでもよろしい方ほうをお持もち下ください。」 「それはむろん、重おもい方ほうをもらっていきますよ。」 　と言いうなりおばあさんは、重おもいつづらを背中せなかにしょい上あげてあいさつもそこそこに出ていきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おばあさん"
+        ],
+        "receivers": [
+          "重おもいつづら"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the grandmother actively performing the action of taking the heavy bag and leaving. The doer is the grandmother, and the receiver is the heavy bag she carries."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "おばあさんは重おもいつづらを首尾しゅびよくもらったものの、それでなくっても重おもいつづらが、背負せおって歩あるいて行くうちにどんどん、どんどん重おもくなって、さすがに強情ごうじょうなおばあさんも、もう肩かたが抜ぬけて腰こしの骨ほねが折おれそうになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The grandmother's physical state deteriorates due to the weight of the heavy basket, causing her shoulders and hips to strain severely.",
+        "explanation": "The sentence describes the outcome of the grandmother taking the heavy basket, detailing her physical struggle and injury as a direct consequence of her prior action. This fits the 'consequence' category as it shows the result of a prior event altering the narrative state."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "それでも、 「重おもいだけに宝たからがよけい入はいっているのだから、ほんとうに楽たのしみだ。いったいどんなものが入はいっているのだろう。ここらでちょいと一休ひとやすみして、ためしに少すこしあけてみよう。」 　こう独ひとり言ごとを言いいながら、道みちばたの石いしの上に「どっこいしょ。」と腰こしをかけて、つづらを下おろして、急いそいでふたをあけてみました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おばあさん"
+        ],
+        "receivers": [
+          "つづら"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the grandmother actively performing the action of opening the heavy bundle. The doer is the grandmother, and the receiver is the bundle (つづら)."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "するとどうでしょう、中を目のくらむような金銀きんぎんさんごと思おもいの外ほか、三みつ目め小僧こぞうだの、一ひとつ目め小僧こぞうだの、がま入道にゅうどうだの、いろいろなお化ばけがにょろにょろ、にょろにょろ飛とび出だして、 「この欲よくばりばばあめ。」と言いいながら、こわい目をしてにらめつけるやら、気味きみの悪わるい舌したを出だして顔かおをなめるやらするので、もうおばあさんは生いきた空そらはありませんでした。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the old woman is terrified and unable to escape due to the monsters emerging from the bag",
+        "explanation": "The sentence describes the outcome of the old woman opening the heavy bag, leading to monsters appearing and her being scared. This is a consequence of her prior action of taking the heavy bag."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "「たいへんだ、たいへんだ。助たすけてくれ。」 　とおばあさんは金切かなきり声ごえを上あげて、一生懸命いっしょうけんめい逃にげ出だしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おばあさん"
+        ],
+        "receivers": [
+          "お化けたち"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old woman actively fleeing from the monsters that emerged from the chest, making it an action performed by her. The receivers are the monsters she is escaping from."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "そしてやっとのことで、半分はんぶん死しんだようにまっ青さおになって、うちの中にかけ込こみますと、おじいさんはびっくりして、 「どうした、どうした。」 　と言いいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The old woman is severely injured and distressed after encountering the magical creatures in the chest, prompting the old man's concern and reaction.",
+        "explanation": "The sentence describes the outcome of the old woman's greedy actions (opening the heavy chest) which resulted in her being attacked by magical creatures. This directly leads to her physical and emotional state change, triggering the old man's response."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "おばあさんはこれこれの目にあったと話はなして、「ああもう、こりごりだ。」と言いいますと、おじいさんは気きの毒どくそうに、 「やれやれ、それはひどい目にあったな。だからあんまりむじひなことをしたり、あんまり欲よくばったりするものではない。」と言いいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The grandmother's greedy actions resulted in her being attacked by supernatural creatures, leading to her severe injury and the grandfather's moral reprimand about greed.",
+        "explanation": "The sentence describes the outcome of the grandmother's prior action of taking the heavy trunk, which caused her to be attacked by monsters and led to the grandfather's admonition about greed. This directly follows the prior event and alters the narrative state by showing the consequences of her actions."
+      }
+    }
+  ]
+}

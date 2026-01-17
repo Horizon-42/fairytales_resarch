@@ -1,0 +1,1387 @@
+{
+  "source_file": "/content/drive/MyDrive/FairytalesResearch/datasets/Japanese/texts/jp_005.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "model": "Qwen/Qwen3-8B",
+  "total_sentences": 95,
+  "analyzed_sentences": 95,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "むかし、いつの頃ころでありましたか、竹取たけとりの翁おきなといふ人ひとがありました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the main character, Taketori no Okina, setting the stage for the story. It provides background context without specifying a location, as the narrative focus is on the character's introduction rather than a physical setting."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "ほんとうの名なは讃岐さぬきの造麻呂みやつこまろといふのでしたが、毎日まいにちのように野山のやまの竹藪たけやぶにはひつて、竹たけを切きり取とつて、いろ／＼の物ものを造つくり、それを商あきなふことにしてゐましたので、俗ぞくに竹取たけとりの翁おきなといふ名なで通とほつてゐました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "野山のやま",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the background of the bamboo cutter's daily life and reputation, setting the stage for the story's events. The location '野山のやま' (mountains) is the narrative focus where his activities take place."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "ある日ひ、いつものように竹藪たけやぶに入いり込こんで見みますと、一本いつぽん妙みように光ひかる竹たけの幹みきがありました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "竹藪たけやぶ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the setting where the protagonist enters the bamboo thicket, establishing the location for the subsequent discovery of the magical bamboo pole. This sets the stage for the story's central event."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "不思議ふしぎに思おもつて近寄ちかよつて、そっと切きつて見みると、その切きつた筒つゝの中なかに高たかさ三寸さんずんばかりの美うつくしい女をんなの子こがゐました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "竹取たけとりの翁おきな"
+        ],
+        "receivers": [
+          "竹たけ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the old man approaching and cutting the glowing bamboo, which is an active activity performed by him. The bamboo is the direct receiver of the cutting action, while the discovery of the girl inside is a consequence of this action."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "いつも見慣みなれてゐる藪やぶの竹たけの中なかにゐる人ひとですから、きっと、天てんが我わが子ことして與あたへてくれたものであらうと考かんがへて、その子こを手ての上うへに載のせて持もち歸かへり、妻つまのお婆ばあさんに渡わたして、よく育そだてるようにいひつけました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "竹取たけとりの翁おきな"
+        ],
+        "receivers": [
+          "妻つまのお婆ばあさん",
+          "子こ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the bamboo cutter's action of taking the child found in the bamboo and entrusting her to his wife for raising. The doer is the bamboo cutter, and the receivers are his wife and the child."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "お婆ばあさんもこの子この大たいそう美うつくしいのを喜よろこんで、籠かごの中なかに入いれて大切たいせつに育そだてました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "お婆ばあさん"
+        ],
+        "receivers": [
+          "この子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the grandmother actively performing the action of raising the child in a cage, indicating her role as the doer and the child as the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "このことがあつてからも、翁おきなはやはり竹たけを取とつて、その日ひ／＼を送おくつてゐましたが、奇妙きみようなことには、多おほくの竹たけを切きるうちに節ふしと節ふしとの間あひだに、黄金おうごんがはひつてゐる竹たけを見みつけることが度々たび／＼ありました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "それで翁おきなの家いへは次第しだいに裕福ゆうふくになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the old man's house became prosperous",
+        "explanation": "The sentence describes the outcome of the prior event (finding gold bamboo) which caused the old man's household to become wealthy over time. This is a direct consequence of the previous action."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "ところで、竹たけの中なかから出でた子こは、育そだて方かたがよかつたと見みえて、ずん／＼大おほきくなつて、三月みつきばかりたつうちに一人前いちにんまへの人ひとになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the child grew up to become an adult within three months",
+        "explanation": "The sentence describes the outcome of the prior action of raising the child in the bamboo grove, resulting in her rapid growth and attainment of adulthood within three months."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "そこで少女をとめにふさはしい髮飾かみかざりや衣裳いしようをさせましたが、大事だいじの子こですから、家いへの奧おくにかこつて外そとへは少すこしも出ださずに、いよ／＼心こゝろを入いれて養やしなひました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "お婆ばあさん"
+        ],
+        "receivers": [
+          "少女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of raising the girl with meticulous care, including keeping her indoors and providing appropriate attire. The grandmother (お婆ばあさん) is the primary doer, and the girl (少女) is the receiver of this nurturing action."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "大おほきくなるにしたがつて少女をとめの顏かほかたちはます／＼麗うるはしくなり、とてもこの世界せかいにないくらゐなばかりか、家いへの中なかが隅すみから隅すみまで光ひかり輝かゞやきました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The girl's beauty became radiantly extraordinary, causing the entire house to glow from corner to corner",
+        "explanation": "The sentence describes the outcome of the girl's growth (prior event) resulting in her extraordinary beauty and the house's illumination, fitting the 'consequence' category."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "翁おきなにはこの子こを見みるのが何なによりの藥くすりで、また何なによりの慰なぐさみでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "翁おきなの家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the emotional context of the old man's daily life and his deep affection for his adopted daughter, setting the stage for future events related to their relationship and the daughter's eventual departure."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "その間あひだに相變あひかはらず竹たけを取とつては、黄金おうごんを手てに入いれましたので、遂つひには大たいした身代しんだいになつて、家屋敷いへやしきも大おほきく構かまへ、召めし使つかひなどもたくさん置おいて、世間せけんからも敬うやまはれるようになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The bamboo cutter became wealthy, built a large mansion, hired many servants, and gained respect from society",
+        "explanation": "The sentence describes the outcome of the bamboo cutter's continued bamboo harvesting activities, which led to significant wealth and social status. This is a consequence of his prior actions of collecting golden bamboo."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "さて、これまでつい少女をとめの名なをつけることを忘わすれてゐましたが、もう大おほきくなつて名なのないのも變へんだと氣きづいて、いゝ名なづけ親おやを頼たのんで名なをつけて貰もらひました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "その名なは嫋竹なよたけの赫映姫かぐやひめといふのでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context by introducing the name 'Kaguya-hime' for the protagonist, which is part of establishing the narrative framework for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "その頃ころの習慣ならはしにしたがつて、三日みつかの間あひだ、大宴會だいえんかいを開ひらいて、近所きんじよの人ひとたちや、その他ほか、多おほくの男女なんによをよんで祝いはひました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "翁おきな",
+          "婆ばあさん"
+        ],
+        "receivers": [
+          "近所の人たち",
+          "多くの男女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of holding a grand banquet (大宴會) as part of a traditional custom. The doers are the parents (翁おきな and 婆ばあさん) who organized the event, and the receivers are the invited guests (近所の人たち and 多くの男女). This action sets the stage for subsequent events where people attempt to glimpse the princess."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "この美うつくしい少女をとめの評判ひようばんが高たかくなつたので、世間せけんの男をとこたちは妻つまに貰もらひたい、又また見みるだけでも見みておきたいと思おもつて、家いへの近ちかくに來きて、すき間まのようなところから覗のぞかうとしましたが、どうしても姿すがたを見みることが出來できません。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "せめて家いへの人ひとに逢あつて、ものをいはうとしても、それさへ取とり合あつてくれぬ始末しまつで、人々ひと／″＼はいよ／＼氣きを揉もんで騷さわぐのでした。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "人々は不満を抱きながら騒ぎ立たせた",
+        "explanation": "前文で人々が赫映姫に会うことができず不満を抱いている状況が述べられた後、この文はその結果として人々が気を揉み騒ぐ様子を描写しています。これは人々の不満が具体的な行動（騒ぎ）に発展した状態変化を表しています。"
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "そのうちで、夜よるも晝ひるもぶっ通とほしに家いへの側そばを離はなれずに、どうにかして赫映姫かぐやひめに逢あつて志こゝろざしを見みせようと思おもふ熱心家ねつしんかが五人ごにんありました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "家いへ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the situation where five determined individuals are persistently surrounding the house to meet Kaguya-hime, setting the stage for their subsequent attempts to win her favor. The location is specified as the house where Kaguya-hime resides."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "みな位くらゐの高たかい身分みぶんの尊たふとい方かたで、一人ひとりは石造いしつくりの皇子みこ、一人ひとりは車持くらもちの皇子みこ、一人ひとりは右大臣うだいじん阿倍御主人あべのみうし、一人ひとりは大納言だいなごん大伴御行おほとものみゆき、一人ひとりは中納言ちゆうなごん石上麻呂いそのかみのまろでありました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the five high-status men (皇子, 右大臣, 大納言, 中納言) who are determined to win the princess's affection, establishing their roles and social standing as part of the narrative context leading to future conflicts."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "この人ひとたちは思おもひ／＼に手てだてをめぐらして姫ひめを手てに入いれようとしましたが、誰たれも成功せいこうしませんでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "翁おきなもあまりのことに思おもつて、ある時とき、姫ひめに向むかつて、 「たゞの人ひとでないとはいひながら、今日けふまで養やしなひ育そだてたわしを親おやと思おもつて、わしのいふことをきいて貰もらひたい」 　と、前置まへおきして、 「わしは七十しちじゆうの阪さかを越こして、もういつ命いのちが終をはるかわからぬ。今いまのうちによい婿むこをとつて、心殘こゝろのこりのないようにして置おきたい。姫ひめを一いつしよう懸命けんめいに思おもつてゐる方かたがこんなにたくさんあるのだから、このうちから心こゝろにかなつた人ひとを選えらんではどうだらう」 　と、いひますと、姫ひめは案外あんがいの顏かほをして答こたへ澁しぶつてゐましたが、思おもひ切きつて、 「私わたしの思おもひどほりの深ふかい志こゝろざしを見みせた方かたでなくては、夫をつとと定さだめることは出來できません。それは大たいしてむづかしいことでもありません。五人ごにんの方々かた／″＼に私わたしの欲ほしいと思おもふ物ものを註文ちゆうもんして、それを間違まちがひなく持もつて來きて下くださる方かたにお仕つかへすることに致いたしませう」 　と、いひました。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "五人ごにんの男たち"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Kaguya-hime setting a task for the five suitors to complete her requests to choose a husband, which is an explicit requirement for them to fulfill."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "翁おきなも少すこし安心あんしんして、例れいの五人ごにんの人ひとたちの集あつまつてゐるところに行いつて、そのことを告つげますと、みな異存いぞんのあらうはずがありませんから、すぐに承知しようちしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "翁おきな"
+        ],
+        "receivers": [
+          "五人ごにんの人ひとたち"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the old man (翁おきな) going to the gathering place of the five men and informing them, which directly involves the doer (翁おきな) and the receivers (the five men)."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "ところが姫ひめの註文ちゆうもんといふのはなか／＼むづかしいことでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the challenging nature of the princess's orders as part of the narrative setup, indicating the difficulty of the task the five men must undertake. This sets the stage for the subsequent actions and consequences without introducing a new task or action."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "それは五人ごにんとも別々べつ／＼で、石造皇子いしつくりのみこには天竺てんじくにある佛ほとけの御石みいしの鉢はち、車持皇子くらもちのみこには東海とうかいの蓬莱山ほうらいさんにある銀ぎんの根ね、金きんの莖くき、白玉しらたまの實みをもつた木きの枝えだ一本いつぽん、阿倍あべの右大臣うだいじんには唐土もろこしにある火鼠ひねずみの皮衣かはごろも、大伴おほとも［＃ルビの「おほとも」は底本では「おもとも」］の大納言だいなごんには龍たつの首くびについてゐる五色ごしきの玉たま、石上いそのかみの中納言ちゆうなごんには燕つばめのもつてゐる子安貝こやすがひ一ひとつといふのであります。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "石造皇子",
+          "車持皇子",
+          "阿倍右大臣",
+          "大伴大納言",
+          "石上中納言"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence outlines the specific tasks assigned to each of the five men (石造皇子, 車持皇子, 阿倍右大臣, 大伴大納言, 石上中納言) as part of Kaguya-hime's challenge, requiring them to retrieve rare and mythical items from distant locations."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "そこで翁おきなはいひました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "翁おきな"
+        ],
+        "receivers": [
+          "五人ごにん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence indicates the bamboo cutter (翁おきな) is about to perform the action of speaking, addressing the five men (五人ごにん) who had failed to retrieve the requested items. The action is the initiation of communication to explain the tasks."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "「それはなか／＼の難題なんだいだ。そんなことは申まをされない」 　しかし、姫ひめは、 「たいしてむづかしいことではありません」と、いひ切きつて平氣へいきでをります。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "翁おきなは仕方しかたなしに姫ひめの註文ちゆうもん通どほりを傳つたへますと、みなあきれかへつて家いへへ引ひき取とりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "翁おきな"
+        ],
+        "receivers": [
+          "五人ごにん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the old man (翁おきな) transmitting the princess's (姫ひめ) orders to the five men, who then react by taking the items home. The doer is the old man, and the receivers are the five men."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "それでも、どうにかして赫映姫かぐやひめを自分じぶんの妻つまにしようと覺悟かくごした五人ごにんは、それ／″＼いろいろの工夫くふうをして註文ちゆうもんの品しなを見みつけようとしました。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "石造皇子",
+          "車持皇子",
+          "阿倍右大臣",
+          "大伴大納言",
+          "石上中納言"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence states that the five men resolved to make various efforts to find the items specified in the order, indicating an explicit requirement or responsibility they must fulfill."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "第一番だいいちばんに、石造皇子いしつくりのみこはずるい方ほうに才さいのあつた方かたですから、註文ちゆうもんの佛ほとけの御石みいしの鉢はちを取とりに天竺てんじくへ行いつたように見みせかけて、三年さんねんばかりたつて、大和やまとの國くにのある山寺やまでらの賓頭廬樣びんずるさまの前まへに置おいてある石いしの鉢はちの眞黒まつくろに煤すゝけたのを、もったいらしく錦にしきの袋ふくろに入いれて姫ひめのもとにさし出だしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "石造皇子"
+        ],
+        "receivers": [
+          "赫映姫"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action taken by the first suitor (石造皇子) to present a fake Buddha stone basin to Kaguya-hime as part of his attempt to win her hand. The doer is the suitor, and the receiver is Kaguya-hime."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "ところが、立派りつぱな光ひかりのあるはずの鉢はちに螢火ほたるびほどの光ひかりもないので、すぐに註文ちゆうもんちがひといつて跳はねつけられてしまひました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The first suitor's fake vase was rejected as it did not meet the required standard of light, leading to his failure in the competition.",
+        "explanation": "The sentence describes the outcome of the first suitor's failed attempt to present a fake vase that did not meet Kaguya's requirements, resulting in his immediate rejection. This is a consequence of his action, as the inadequate light of the vase caused the order to be invalidated."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "第二番だいにばんに、車持皇子くらもちのみこは、蓬莱ほうらいの玉たまの枝えだを取とりに行ゆくといひふらして船出ふなでをするにはしましたが、實じつは三日目みつかめにこっそりと歸かへつて、かね／″＼たくんで置おいた通とほり、上手じようずの玉職人たましよくにんを多おほく召めし寄よせて、ひそかに註文ちゆうもんに似にた玉たまの枝えだを作つくらせて、姫ひめのところに持もつて行ゆきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "車持皇子くらもちのみこ"
+        ],
+        "receivers": [
+          "姫ひめ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the carriagemaster's son actively performing the action of hiring craftsmen to create a fake jade branch and delivering it to Kaguya-hime. The doer is the carriagemaster's son, and the receiver is Kaguya-hime."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "翁おきなも姫ひめもその細工さいくの立派りつぱなのに驚をどろいてゐますと、そこへ運うんわるく玉職人たましよくにんの親方おやかたがやつて來きて、千日せんにちあまりも骨折ほねをつて作つくつたのに、まだ細工賃さいくちんを下くださるといふ御沙汰ごさたがないと、苦情くじようを持もち込こみましたので、まやかしものといふことがわかつて、これも忽たちまち突つっ返かへされ、皇子みこは大恥おほはぢをかいて引ひきさがりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The prince's attempt to deceive was exposed, resulting in his public humiliation and retreat",
+        "explanation": "The sentence describes the outcome of the prince's failed attempt to create a fake jade branch. The discovery of the deception leads to his embarrassment and withdrawal, marking a significant change in the narrative state."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "第三番だいさんばんの阿倍あべの右大臣うだいじんは財産家ざいさんかでしたから、あまり惡わるごすくは巧たくまず、ちょうど、その年としに日本につぽんに來きた唐船とうせんに誂あつらへて火鼠ひねずみの皮衣かはごろもといふ物ものを買かつて來くるように頼たのみました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "阿倍の右大臣"
+        ],
+        "receivers": [
+          "唐船の商人"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Right Minister Abe (阿倍の右大臣) actively requesting a merchant (唐船の商人) to purchase a fire rat skin garment, which constitutes an explicit action performed by the Right Minister directed at the merchant."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "やがて、その商人あきうどは、やう／＼のことで元もとは天竺てんじくにあつたのを求もとめたといふ手紙てがみを添そへて、皮衣かはごろもらしいものを送おくり、前まへに預あづかつた代金だいきんの不足ふそくを請求せいきゆうして來きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "商人"
+        ],
+        "receivers": [
+          "阿倍の右大臣"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the merchant's action of sending a letter and the fire rat's skin coat to the right minister, along with requesting payment. The merchant (doer) performs the action of sending items and a letter, which are received by the right minister (receiver)."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "大臣だいじんは喜よろこんで品物しなものを見みると、皮衣かはごろもは紺青色こんじよういろで毛けのさきは黄金色おうごんしよくをしてゐます。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "阿倍あべの右大臣うだいじん"
+        ],
+        "receivers": [
+          "皮衣かはごろも"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the Right Minister examining the fake fur coat he received. The minister (doer) performs the action of inspecting the item (receiver), which is part of his attempt to fulfill the task set by Kaguya-hime."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "これならば姫ひめの氣きに入いるに違ちがひない、きっと自分じぶんは姫ひめのお婿むこさんになれるだらうなどゝ考かんがへて、大おほめかしにめかし込こんで出でかけました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "阿倍御主人"
+        ],
+        "receivers": [
+          "姫ひめ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the right minister (阿倍御主人) taking the action of departing to present the item to the princess (姫ひめ). The doer is explicitly the right minister, and the receiver is the princess as the target of his action."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "姫ひめも一時いちじは本物ほんものかと思おもつて内々ない／＼心配しんぱいしましたが、火ひに燒やけないはずだから、試ためして見みようといふので、火ひをつけさせて見みると、一ひとたまりもなくめら／＼と燒やけました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "そこで右大臣うだいじんもすっかり當あてが外はづれました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "右大臣の偽物の皮衣の試験で失敗し、恥をかいた",
+        "explanation": "この文は右大臣が偽物の皮衣を提出した結果、試験で失敗し恥をかいたという結果を示しています。前の文脈では右大臣が火鼠の皮衣を偽造しようとしたが、焼けた結果本物ではなかったことが判明したため、この文はその結果としての状態変化を表しています。"
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "四番よばんめの大伴おほともの大納言だいなごんは、家來けらいどもを集あつめて嚴命げんめいを下くだし、必かならず龍たつの首くびの玉たまを取とつて來こいといつて、邸内やしきうちにある絹きぬ、綿わた、錢ぜにのありたけを出だして路用ろようにさせました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "大伴おほともの大納言だいなごん"
+        ],
+        "receivers": [
+          "家來けらいども"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Dainagon's action of issuing a strict order to his retainers to retrieve the dragon's jewel, using his estate's resources. The doer is the Dainagon, and the receivers are his retainers who are commanded to execute the task."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "ところが家來けらいたちは主人しゆじんの愚おろかなことを謗そしり、玉たまを取とりに行ゆくふりをして、めい／＼の勝手かつてな方ほうへ出でかけたり、自分じぶんの家いへに引ひき籠こもつたりしてゐました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "家來けらいたち"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the retainers' actions of mocking their master's plan and abandoning their duty, which is an active behavior performed by the retainers."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "右大臣うだいじんは待まちかねて、自分じぶんでも遠とほい海うみに漕こぎ出だして、龍たつを見みつけ次第しだい矢先やさきにかけて射落いおとさうと思おもつてゐるうちに、九州きゆうしうの方ほうへ吹ふき流ながされて、烈はげしい雷雨らいうに打うたれ、その後のち、明石あかしの濱はまに吹ふき返かへされ、波風なみかぜに揉もまれて死人しにんのようになつて磯端いそばたに倒たふれてゐました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "右大臣因遭遇暴风雨被海浪冲走致死，未能完成获取龙首玉的任务",
+        "explanation": "该句描述右大臣因冒失行动导致的失败结局，属于前文'伪造玉枝'行为的后果。其死亡结果改变了原有任务状态，符合consequence分类。"
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "やう／＼のこと、國くにの役人やくにんの世話せわで手輿てごしに乘のせられて家いへに着つきました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "そこへ家來けらいどもが駈かけつけて、お見舞みまひを申まをし上あげると、大納言だいなごんは杏すもゝのように赤あかくなつた眼めを開ひらいて、 「龍たつは雷かみなりのようなものと見みえた。あれを殺ころしでもしたら、この方ほうの命いのちはあるまい。お前まへたちはよく龍たつを捕とらずに來きた。うい奴やつどもぢや」 　とおほめになつて、うちに少々しよう／＼殘のこつてゐた物ものを褒美ほうびに取とらせました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "大納言"
+        ],
+        "receivers": [
+          "家來"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Dainagon's action of giving remaining items as a reward to his retinue after they visited him. The doer is the Dainagon, and the receiver is the retinue (家來)."
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "もちろん姫ひめの難題なんだいには怖おじ氣けを振ふるひ、「赫映姫かぐやひめの大おほがたりめ」と叫さけんで、またと近寄ちかよらうともしませんでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "五番ごばんめの石上いそのかみの中納言ちゆうなごんは燕つばめの子安貝こやすがひを獲とるのに苦心くしんして、いろ／＼と人ひとに相談そうだんして見みた後のち、ある下役したやくの男をとこの勸すゝめにつくことにしました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "そこで、自分じぶんで籠かごに乘のつて、綱つなで高たかい屋やの棟むねにひきあげさせて、燕つばめが卵たまごを産うむところをさぐるうちに、ふと平ひらたい物ものをつかみあてたので、嬉うれしがつて籠かごを降おろす合圖あひずをしたところが、下したにゐた人ひとが綱つなをひきそこなつて、綱つながぷっつりと切きれて、運うんわるくも下したにあつた鼎かなへの上うへに落おちて眼めを廻まはしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "石上麻呂"
+        ],
+        "receivers": [
+          "燕つばめの卵"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the fifth suitor (石上麻呂) actively performing the action of climbing to retrieve the swallow's egg (子安貝), which is the central activity in this part of the narrative. The doer is the suitor, and the receiver is the object he attempts to obtain (the swallow's egg)."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "水みづを飮のませられて漸やうやく正氣しようきになつた時とき、 「腰こしは痛いたむが子安貝こやすがひは取とつたぞ。それ見みてくれ」 　といひました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The servant falsely claims to have obtained the 子安貝 despite the failed attempt",
+        "explanation": "The sentence describes the outcome of the servant's failed attempt to acquire the 子安貝, resulting in him falsely asserting success after regaining consciousness. This false claim represents a state change from the failed action."
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "皆みながそれを見みると、子安貝こやすがひではなくて燕つばめの古糞ふるくそでありました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The Fifth Minister's attempt to obtain the 子安貝 failed, as the item he received was actually pigeon droppings rather than the desired object.",
+        "explanation": "The sentence reveals the outcome of the Fifth Minister's failed effort to acquire the 子安貝, demonstrating the consequence of his deceptive actions. The state change involves the failure of his task and the revelation of the incorrect item."
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "中納言ちゆうなごんはそれきり腰こしも立たたず、氣病きやみも加くははつて死しんでしまひました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "中納言ちゆうなごんは死しんでしまひました",
+        "explanation": "The sentence describes the outcome of the 中納言's failed attempt to obtain the child's egg, resulting in his death. This is a direct consequence of his previous action of trying to deceive the princess with a fake item."
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "五人ごにんのうちであまりものいりもしなかつた代かはりに、智慧ちえのないざまをして、一番いちばん慘むごい目めを見みたのがこの人ひとです。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The middle suitor (石上麻呂) failed in his attempt and died as a result of his failed endeavor",
+        "explanation": "The sentence describes the outcome of the middle suitor's failed attempt to fulfill Kaguya-hime's impossible request, resulting in his death. This is a direct consequence of his actions and the narrative's prior events."
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "そのうちに、赫映姫かぐやひめが並ならぶものゝないほど美うつくしいといふ噂うはさを、時ときの帝みかどがお聞ききになつて、一人ひとりの女官じよかんに、 「姫ひめの姿すがたがどのようであるか見みて參まゐれ」 　と仰おほせられました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of the Emperor becoming aware of Kaguya's beauty through rumors, setting the stage for subsequent events involving his order to a female attendant. No specific location is mentioned, so the location field remains empty."
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "その女官じよかんがさっそく竹取たけとりの翁おきなの家いへに出向でむいて勅旨ちよくしを述のべ、ぜひ姫ひめに逢あひたいといふと、翁おきなはかしこまつてそれを姫ひめにとりつぎました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女官",
+          "翁おきな"
+        ],
+        "receivers": [
+          "翁おきな",
+          "姫ひめ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the actions of the female attendant delivering an imperial decree to the bamboo cutter and the bamboo cutter relaying the message to the princess. The doers are the female attendant and the bamboo cutter, while the receivers are the bamboo cutter (for the decree) and the princess (for the message)."
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "ところが姫ひめは、 「別べつによい器量きりようでもありませぬから、お使つかひに逢あふことは御免ごめんを蒙かうむります」 　と拗すねて、どうすかしても、叱しかつても逢あはうとしませんので、女官じよかんは面目めんぼくなさそうに宮中きゆうちゆうに立たち歸かへつてそのことを申まをし上あげました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The female attendant failed to persuade the princess to meet the envoy and returned to the palace empty-handed, resulting in the emperor's command being unfulfilled.",
+        "explanation": "The sentence describes the outcome of the princess's refusal to meet the envoy, leading to the female attendant's failure and her return to the palace. This is a consequence of the prior interaction where the princess resisted the request."
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "帝みかどは更さらに翁おきなに御命令ごめいれいを下くだして、もし姫ひめを宮仕みやづかへにさし出だすならば、翁おきなに位くらいをやらう。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "翁おきな"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the Emperor issuing a command (task) to the old man (翁おきな) regarding the princess's potential transfer to the palace, specifying a consequence (position) for fulfilling the task."
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "どうにかして姫ひめを説といて納得なつとくさせてくれ。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "翁おきな"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents the Emperor's explicit command to the old man (翁おきな) to persuade the princess (姫ひめ) to agree to being taken to the palace. This is a direct task assigned to the old man by the Emperor."
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "親おやの身みで、そのくらゐのことの出來できぬはずはなからうと仰おほせられました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "翁おきなはその通とほりを姫ひめに傳つたへて、ぜひとも帝みかどのお言葉ことばに從したがひ、自分じぶんの頼たのみをかなへさせてくれといひますと、 「むりに宮仕みやづかへをしろと仰おほせられるならば、私わたしの身みは消きえてしまひませう。あなたのお位くらゐをお貰もらひになるのを見みて、私わたしは死しぬだけでございます」 　と姫ひめが答こたへましたので、翁おきなはびっくりして、 「位くらゐを頂いたゞいても、そなたに死しなれてなんとしよう。しかし、宮仕みやづかへをしても死しなねばならぬ道理どうりはあるまい」 　といつて歎なげきましたが、姫ひめはいよ／＼澁しぶるばかりで、少すこしも聞ききいれる樣子ようすがありませんので、翁おきなも手てのつけようがなくなつて、どうしても宮中きゆうちゆうには上あがらぬといふことをお答こたへして、 「自分じぶんの家いへに生うまれた子供こどもでもなく、むかし山やまで見みつけたのを養やしなつただけのことでありますから、氣持きもちも世間せけん普通ふつうの人ひととはちがつてをりますので、殘念ざんねんではございますが……」 　と恐おそれ入いつて申まをし添そへました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Kaguya-hime refuses to comply with the emperor's command, leading to the old man's emotional reaction and the realization that she is not a human born in the country",
+        "explanation": "The sentence describes the outcome of the emperor's command (prior event) where Kaguya-hime explicitly refuses to become a palace servant, causing the old man to express his emotional distress and acknowledge her divine origin. This refusal changes the state of the narrative by highlighting her true nature and the impossibility of fulfilling the emperor's request."
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "帝みかどはこれを聞きこし召めされて、それならば翁おきなの家いへにほど近ちかい山邊やまべに御狩みかりの行幸みゆきをする風ふうにして姫ひめを見みに行ゆくからと、そのことを翁おきなに承知しようちさせて、きめた日ひに姫ひめの家いへにおなりになりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "帝みかど"
+        ],
+        "receivers": [
+          "姫ひめの家いへ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Emperor's action of visiting the Princess's home near the mountain side. The Emperor (doer) performs the action of visiting (action), with the Princess's home (receiver) as the target location."
+      }
+    },
+    {
+      "sentence_index": 60,
+      "sentence": "すると、まばゆいように照てり輝かゞやぐ女をんながゐます。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "竹取たけとりの翁おきなの家いへ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the princess's appearance when the Emperor arrives at the bamboo cutter's house, establishing the setting for the subsequent interaction. The location is explicitly the bamboo cutter's house where the scene unfolds."
+      }
+    },
+    {
+      "sentence_index": 61,
+      "sentence": "これこそ赫映姫かぐやひめに違ちがひないと思おぼし召めしてお近寄ちかよりになると、その女をんなは奧おくへ逃にげて行ゆきます。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "赫映姫かぐやひめ"
+        ],
+        "receivers": [
+          "帝みかど"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Kaguya-hime fleeing when the Emperor approaches, which is an active action performed by her in response to the Emperor's presence. The doer is Kaguya-hime, and the receiver is the Emperor's presence."
+      }
+    },
+    {
+      "sentence_index": 62,
+      "sentence": "その袖そでをおとりになると、顏かほを隱かくしましたが、初はじめにちらと御覽ごらんになつて、聞きいたよりも美人びじんと思おぼし召めされて、 「逃にげても許ゆるさぬ。宮中きゆうちゆうに連つれ行ゆくぞ」 　と仰おほせられました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 63,
+      "sentence": "「私わたしがこの國くにで生うまれたものでありますならば、お宮仕みやづかへも致いたしませうけれど、さうではございませんから、お連つれになることはかなひますまい」 　と姫ひめは申まをし上あげました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "姫ひめ"
+        ],
+        "receivers": [
+          "帝みかど"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the princess actively refusing the emperor's request to take her to the court, which is an explicit action taken by her. The doer is the princess, and the receiver is the emperor."
+      }
+    },
+    {
+      "sentence_index": 64,
+      "sentence": "「いや、そんなはずはない。どうあつても連つれて行ゆく」 　かねて支度したくしてあつたお輿こしに載のせようとなさると、姫ひめの形かたちは影かげのように消きえてしまひました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 65,
+      "sentence": "帝みかども驚おどろかれて、 「それではもう連つれては行ゆくまい。せめて元もとの形かたちになつて見みせておくれ。それを見みて歸かへることにするから」 　と、仰おほせられると、姫ひめはやがて元もとの姿すがたになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the princess returns to her original form",
+        "explanation": "The sentence describes the outcome of the Emperor's command, where the princess transforms back into her original form. This is a direct consequence of the Emperor's order to reveal her true appearance."
+      }
+    },
+    {
+      "sentence_index": 66,
+      "sentence": "帝みかども致いたし方かたがございませんから、その日ひはお歸かへりになりましたが、それからといふもの、今いままで、ずいぶん美うつくしいと思おもつた人ひとなども姫ひめとは比くらべものにならないと思おぼし召めすようになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "People who previously thought others were beautiful now recognize that no one can compare to the princess's unmatched beauty",
+        "explanation": "The sentence describes the outcome of the princess's return to the moon, resulting in a shift in societal perception of beauty. This state change occurs after the prior event of the princess leaving and the Emperor's failed attempt to retain her."
+      }
+    },
+    {
+      "sentence_index": 67,
+      "sentence": "それで、時々とき／″＼お手紙がみやお歌うたをお送おくりになると、それにはいち／＼お返事へんじをさし上あげますので、やう／＼お心こゝろを慰なぐさめておいでになりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 68,
+      "sentence": "さうかうするうちに三年さんねんばかりたちました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates the passage of time (three years) which sets the stage for the subsequent events where the princess begins to mourn the moon. As a situation, it provides background context without specifying a location."
+      }
+    },
+    {
+      "sentence_index": 69,
+      "sentence": "その年としの春先はるさきから、赫映姫かぐやひめは、どうしたわけだか、月つきのよい晩ばんになると、その月つきを眺ながめて悲かなしむようになりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces a new situation where Kaguya-hime begins to feel sadness and gaze at the moon, setting the stage for her eventual departure. No specific location is mentioned, and it serves as background context for future events."
+      }
+    },
+    {
+      "sentence_index": 70,
+      "sentence": "それがだん／＼つのつて、七月しちがつの十五夜じゆうごやなどには泣ないてばかりゐました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the princess continued to cry on the fifteenth night of the seventh month, leading to her eventual decision to return to the moon",
+        "explanation": "The sentence describes the ongoing consequence of the princess's emotional state (crying) as a result of her awareness of her celestial origin. This emotional state directly leads to her later decision to return to the moon, fulfilling the consequence of her initial actions."
+      }
+    },
+    {
+      "sentence_index": 71,
+      "sentence": "翁おきなたちが心配しんぱいして、月つきを見みることを止やめるようにと諭さとしましたけれども、 「月つきを見みずにはゐられませぬ」 　といつて、やはり月つきの出でる時分じぶんになると、わざ／＼縁先えんさきなどへ出でて歎なげきます。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 72,
+      "sentence": "翁おきなにはそれが不思議ふしぎでもあり、心こゝろがゝりでもありますので、ある時とき、そのわけを聞ききますと、 「今いままでに、度々たび／＼お話はなししようと思おもひましたが、御心配ごしんぱいをかけるのもどうかと思おもつて、打うち明あけることが出來できませんでした。實じつを申まをしますと、私わたしはこの國くにの人間にんげんではありません。月つきの都みやこの者ものでございます。ある因縁いんねんがあつて、この世界せかいに來きてゐるのですが、今いまは歸かへらねばならぬ時ときになりました。この八月はちがつの十五夜じゆうごやに迎むかへの人ひとたちが來くれば、お別わかれして私わたしは天上てんじように歸かへります。その時ときはさぞお歎なげきになることであらうと、前々まへ／＼から悲かなしんでゐたのでございます」 　姫ひめはさういつて、ひとしほ泣なき入いりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "月つきの都みやこ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence reveals Kaguya-hime's true origin as a celestial being from the Moon Palace, establishing the background context for her impending departure. This sets the stage for the subsequent events involving her return to the moon."
+      }
+    },
+    {
+      "sentence_index": 73,
+      "sentence": "それを聞きくと、翁おきなも氣違きちがひのように泣なき出だしました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "翁おきなが姫ひめの真実の身分を聞き、深い悲しみと絶望に打ちのめされる",
+        "explanation": "姫ひめが月の都の者であることを告白した後、翁おきながその真実を受け入れられずに気違のように泣き出すという感情的な変化を表しています。これは姫ひめの告白という前段階の出来事の結果として生じる状態変化に該当します。"
+      }
+    },
+    {
+      "sentence_index": 74,
+      "sentence": "「竹たけの中なかから拾ひろつてこの年月としつき、大事だいじに育そだてたわが子こを、誰だれが迎むかへに來こようとも渡わたすものではない。もし取とつて行いかれようものなら、わしこそ死しんでしまひませう」 「月つきの都みやこの父母ちゝはゝは少すこしの間あひだといつて、私わたしをこの國くにによこされたのですが、もう長ながい年月としつきがたちました。生うみの親おやのことも忘わすれて、こゝのお二人ふたりに馴なれ親したしみましたので、私わたしはお側そばを離はなれて行いくのが、ほんとうに悲かなしうございます」 　二人ふたりは大泣おほなきに泣なきました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "竹取たけとりの翁おきなの家いへ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the emotional context and relationship dynamics between the old man and Kaguya-hime, establishing the setting of their home and the impending separation. This sets the stage for subsequent events like the imperial envoy's arrival."
+      }
+    },
+    {
+      "sentence_index": 75,
+      "sentence": "家いへの者ものどもゝ、顏かほかたちが美うつくしいばかりでなく、上品じようひんで心こゝろだての優やさしい姫ひめに、今更いまさら、永ながのお別わかれをするのが悲かなしくて、湯水ゆみづも喉のどを通とほりませんでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "家いへ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the emotional state of the household members reacting to the impending separation from the princess, establishing the context of their sorrow and the setting of the house as the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 76,
+      "sentence": "このことが帝みかどのお耳みゝに達たつしましたので、お使つかひを下くだされてお見舞みまひがありました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the Emperor became aware of the situation and sent an attendant to visit",
+        "explanation": "The sentence describes the outcome of the previous events (the family's emotional state and the husband's plea) by indicating that the Emperor learned about the situation, leading to the dispatch of an attendant. This is a consequence of the prior narrative developments."
+      }
+    },
+    {
+      "sentence_index": 77,
+      "sentence": "翁おきなは委細いさいをお話はなしして、 「この八月はちがつの十五日じゆうごにちには天てんから迎むかへの者ものが來くると申まをしてをりますが、その時ときには人數にんずをお遣つかはしになつて、月つきの都みやこの人々ひと／″＼を捉つかまへて下くださいませ」 　と、泣なく／＼お願ねがひしました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 78,
+      "sentence": "お使つかひが立たち歸かへつてその通とほりを申まをし上あげると、帝みかどは翁おきなに同情どうじようされて、いよ／＼十五日じゆうごにちが來くると高野たかのの少將しようしようといふ人ひとを勅使ちよくしとして、武士ぶし二千人にせんにんを遣やつて竹取たけとりの翁おきなの家いへをまもらせられました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The Emperor sent a general and 2000 warriors to guard the old man's house.",
+        "explanation": "The sentence describes the consequence of the old man's request, where the Emperor decides to send a general and 2000 warriors to the old man's house as a result of his sympathy."
+      }
+    },
+    {
+      "sentence_index": 79,
+      "sentence": "さて、屋根やねの上うへに千人せんにん、家いへのまはりの土手どての上うへに千人せんにんといふ風ふうに手分てわけして、天てんから降おりて來くる人々ひと／″＼を撃うち退しりぞける手てはずであります。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "竹取たけとりの翁おきなの家いへ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the defensive setup around the bamboo cutter's house, setting the stage for the confrontation with the heavenly people. It provides context about the military arrangement as part of the narrative progression."
+      }
+    },
+    {
+      "sentence_index": 80,
+      "sentence": "この他ほかに家いへに召めし仕つかはれてゐるもの大勢おほぜい手てぐすね引ひいて待まつてゐます。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "家いへ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the setup of additional people waiting at the house as part of the preparations for the confrontation with the heavenly beings, establishing the context for the impending event."
+      }
+    },
+    {
+      "sentence_index": 81,
+      "sentence": "家いへの内うちは女をんなどもが番ばんをし、お婆ばあさんは、姫ひめを抱かゝへて土藏どぞうの中なかにはひり、翁おきなは土藏どぞうの戸とを締しめて戸口とぐちに控ひかへてゐます。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 82,
+      "sentence": "その時とき姫ひめはいひました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 83,
+      "sentence": "「それほどになさつても、なんの役やくにも立たちません。あの國くにの人ひとが來くれば、どこの戸ともみなひとりでに開あいて、戰たゝかはうとする人ひとたちも萎なえしびれたようになつて力ちからが出でません」 「いやなあに、迎むかへの人ひとがやつて來きたら、ひどい目めに遇あはせて追おっ返かへしてやる」 　と翁おきなはりきみました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "翁おきな"
+        ],
+        "receivers": [
+          "あの國くにの人ひと"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's declaration of intent to resist the people from the moon country, indicating an active resolve to take action against them."
+      }
+    },
+    {
+      "sentence_index": 84,
+      "sentence": "姫ひめも、年寄としよつた方々かた／″＼の老先おいさきも見屆みとゞけずに別わかれるのかと思おもへば、老おいとか悲かなしみとかのないあの國くにへ歸かへるのも、一向いつこうに嬉うれしくないといつてまた歎なげきます。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 85,
+      "sentence": "そのうちに夜よるもなかばになつたと思おもふと、家いへのあたりが俄にはかにあかるくなつて、滿月まんげつの十じつそう倍ばいぐらゐの光ひかりで、人々ひと／″＼の毛孔けあなさへ見みえるほどであります。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "家いへ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the transition into the night and the sudden brightening of the house area, setting the stage for the arrival of the moon people. This establishes the environmental context leading to the subsequent events."
+      }
+    },
+    {
+      "sentence_index": 86,
+      "sentence": "その時とき、空そらから雲くもに乘のつた人々ひと／″＼が降おりて來きて、地面じめんから五尺ごしやくばかりの空中くうちゆうに、ずらりと立たち列ならびました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "人々"
+        ],
+        "receivers": [
+          "地面"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the active arrival and alignment of celestial beings from the sky, which is an action performed by the people (celestial beings) and involves the ground as the location where they stand."
+      }
+    },
+    {
+      "sentence_index": 87,
+      "sentence": "「それ來きたっ」と、武士ぶしたちが得物えものをとつて立たち向むかはうとすると、誰だれもかれも物ものに魅おそはれたように戰たゝかふ氣きもなくなり、力ちからも出でず、たゞ、ぼんやりとして目めをぱち／＼させてゐるばかりであります。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The warriors are unable to fight, lose their strength, and become entranced by the objects, rendering them ineffective in battle.",
+        "explanation": "The sentence describes the outcome of the warriors' attempt to confront the descending beings, highlighting their inability to act and the resulting state of helplessness, which aligns with the 'consequence' category."
+      }
+    },
+    {
+      "sentence_index": 88,
+      "sentence": "そこへ月つきの人々ひと／″＼は空そらを飛とぶ車くるまを一ひとつ持もつて來きました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 89,
+      "sentence": "その中なかから頭かしららしい一人ひとりが翁おきなを呼よび出だして、 「汝なんぢ翁おきなよ、そちは少すこしばかりの善いいことをしたので、それを助たすけるために片時かたときの間あひだ、姫ひめを下くだして、たくさんの黄金おうごんを儲まうけさせるようにしてやつたが、今いまは姫ひめの罪つみも消きえたので迎むかへに來きた。早はやく返かへすがよい」 　と叫さけびます。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "頭かしららしい一人ひとり"
+        ],
+        "receivers": [
+          "翁おきな"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the head figure from the moon calling out to the old man (翁おきな) and explaining their purpose, which is an active interaction performed by the head figure and directed at the old man."
+      }
+    },
+    {
+      "sentence_index": 90,
+      "sentence": "翁おきなが少すこし澁しぶつてゐると、それには構かまはずに、 「さあ／＼姫ひめ、こんなきたないところにゐるものではありません」 　といつて、例れいの車くるまをさし寄よせると、不思議ふしぎにも堅かたく閉とざした格子こうしも土藏どぞうも自然しぜんと開あいて、姫ひめの體からだはする／＼と出でました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "leader from the moon"
+        ],
+        "receivers": [
+          "gates",
+          "Kaguya-hime"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the gates opening and Kaguya-hime exiting, which are direct results of the leader's command."
+      }
+    },
+    {
+      "sentence_index": 91,
+      "sentence": "翁おきなが留とめようとあがくのを姫ひめは靜しづかにおさへて、形見かたみの文ふみを書かいて翁おきなに渡わたし、また帝みかどにさし上あげる別べつの手紙てがみを書かいて、それに月つきの人々ひと／″＼の持もつて來きた不死ふしの藥くすり一壺ひとつぼを添そへて勅使ちよくしに渡わたし、天あまの羽衣はごろもを着きて、あの車くるまに乘のつて、百人ひやくにんばかりの天人てんにんに取とりまかれて、空高そらたかく昇のぼつて行ゆきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "姫ひめ"
+        ],
+        "receivers": [
+          "翁おきな",
+          "帝みかど",
+          "勅使"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Kaguya-hime's active actions of writing letters, giving the immortality medicine, and ascending to heaven. These are specific activities performed by Kaguya-hime (doer) that directly affect her parents, the Emperor, and the imperial envoy (receivers)."
+      }
+    },
+    {
+      "sentence_index": 92,
+      "sentence": "これを見送みおくつて翁おきな夫婦ふうふはまた一ひとしきり聲こゑをあげて泣なきましたが、なんのかひもありませんでした。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "翁おきな夫婦は Kaguya-hime の去りを嘆き、涙を流したが、その感情は止められなかった",
+        "explanation": "この文は、Kaguya-hime が天界へ昇る直前の出来事の結果として、翁おきな夫婦の感情変化を描写しています。前文の「天人達が車に乗せて去る」の行動に続く結果として、夫婦の悲しみが強まり、その感情を止められない状況が述べられています。"
+      }
+    },
+    {
+      "sentence_index": 93,
+      "sentence": "一方いつぽう勅使ちよくしは宮中きゆうちゆうに參上さんじようして、その夜よの一部始終いちぶしじゆうを申まをし上あげて、かの手紙てがみと藥くすりをさし上あげました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "勅使"
+        ],
+        "receivers": [
+          "宮中",
+          "手紙てがみ",
+          "藥くすり"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the imperial envoy (勅使) performing the action of reporting the night's events to the palace (宮中) and submitting the letter (手紙てがみ) and medicine (藥くすり). The doer is the envoy, and the receivers include the palace, the letter, and the medicine."
+      }
+    },
+    {
+      "sentence_index": 94,
+      "sentence": "帝みかどは、天てんに一番いちばん近ちかい山やまは駿河するがの國くににあると聞きこし召めして、使つかひの役人やくにんをその山やまに登のぼらせて、不死ふしの藥くすりを焚たかしめられました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "帝みかど"
+        ],
+        "receivers": [
+          "使つかひの役人やくにん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Emperor's action of sending messengers to climb the mountain and burn the immortal drug. The Emperor (doer) issues the command, and the messengers (receivers) are the ones who perform the task."
+      }
+    },
+    {
+      "sentence_index": 95,
+      "sentence": "それからはこの山やまを不死ふしの山やまと呼よぶようになつて、その藥くすりの煙けむりは今いまでも雲くもの中なかへ立たち昇のぼるといふことであります。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The mountain is now called the 'Mountain of Immortality' and the smoke from the immortality medicine continues to rise into the clouds to this day",
+        "explanation": "The sentence describes the lasting outcome of the Emperor's actions (burning the immortality medicine) and the subsequent naming of the mountain, indicating a state change in both the mountain's designation and the continued presence of the medicine's smoke."
+      }
+    }
+  ]
+}

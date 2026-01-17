@@ -1,0 +1,1119 @@
+{
+  "source_file": "/content/drive/MyDrive/FairytalesResearch/datasets/Japanese/texts/jp_003.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "model": "Qwen/Qwen3-8B",
+  "total_sentences": 78,
+  "analyzed_sentences": 78,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "武蔵の国のある村に茂作、巳之吉と云う二人の木こりがいた。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "武蔵の国のある村",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the setting and characters, establishing the village in Musashi Province as the narrative's starting point. It provides background context for the story without indicating a task, action, or consequence."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "この話のあった時分には、茂作は老人であった。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the temporal context of the story by stating that Mogaku was an old man during the time period of the narrative. It provides background information without introducing a specific location, task, action, or consequence."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "そして、彼の年季奉公人であった巳之吉は、十八の少年であった。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background information about the characters' roles and ages, establishing the context of their relationship and setting the stage for the story's events. No specific location is mentioned in this sentence."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "毎日、彼等は村から約二里離れた森へ一緒に出かけた。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "茂作",
+          "巳之吉"
+        ],
+        "receivers": [
+          "森"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of going to the forest, with 茂作 and 巳之吉 as the doers and the forest as the destination/receiver."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "その森へ行く道に、越さねばならない大きな河がある。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "森",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the path to the forest and the presence of a river that must be crossed, establishing the setting and context for the subsequent events. The location mentioned is the forest, which is the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "そして、渡し船がある。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "河",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the river as a key element of the journey to the forest, establishing the geographical context that necessitates the use of a ferry boat. This sets the stage for the subsequent events involving the ferry and the supernatural occurrences."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "渡しのある処にたびたび、橋が架けられたが、その橋は洪水のあるたびごとに流された。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "渡しのある処",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the ferry location and the recurring issue of bridges being washed away by floods, establishing the setting for the story's events."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "河の溢れる時には、普通の橋では、その急流を防ぐ事はできない。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the river's behavior during overflow, establishing the challenges faced by the characters. It sets the stage for the subsequent events involving the bridge and the supernatural encounter, but does not mention a specific location name."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "茂作と巳之吉はある大層寒い晩、帰り途で大吹雪に遇った。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the setting of a cold evening blizzard encountered on the characters' return journey, establishing context for subsequent events. No specific location is named, so the location field is left empty."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "渡し場に着いた、渡し守は船を河の向う側に残したままで、帰った事が分った。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "渡し守"
+        ],
+        "receivers": [
+          "船"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the ferryman's action of leaving the boat on the other side of the river and returning. The doer is the ferryman (渡し守), and the receiver is the boat (船) as the object being left behind."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "泳がれるような日ではなかった。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the weather conditions (not suitable for swimming) as part of the contextual setup for the characters' decision to seek shelter. It provides background information about the environmental circumstances without introducing a new action, task, or consequence."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "それで木こりは渡し守の小屋に避難した――避難処の見つかった事を僥倖に思いながら。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "茂作",
+          "巳之吉"
+        ],
+        "receivers": [
+          "渡し守の小屋"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the woodcutters taking shelter in the ferryman's house during a storm, which is an active action performed by the characters. The doers are the two woodcutters, and the receiver is the ferryman's house where they sought refuge."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "小屋には火鉢はなかった。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "渡し守の小屋",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "この文は、木こりたちが避難した小屋の状態を描写し、物語の舞台となる場所を具体的に示しています。小屋の設備（火鉢の有無）に関する情報は、後の展開（寒さによる死 etc.）に影響を与える重要な背景情報を提供しています。"
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "火をたくべき場処もなかった。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "渡し守の小屋",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the lack of a fire-making area in the hut, contributing to the setting of the scene where the two woodcutters take shelter during the blizzard. This establishes the physical conditions of their temporary location."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "窓のない一方口の、二畳敷の小屋であった。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "渡し守の小屋",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the physical characteristics of the ferryman's hut where the characters take shelter, establishing the setting for the subsequent events. The location is explicitly mentioned as the hut where the woodcutters seek refuge during the blizzard."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "茂作と巳之吉は戸をしめて、蓑をきて、休息するために横になった。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "茂作",
+          "巳之吉"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of closing the door, wearing蓑, and resting performed by 茂作 and 巳之吉. The doers are explicitly stated as the two characters, while no clear receiver is identified for the actions described."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "初めのうちはさほど寒いとも感じなかった。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "渡し守の小屋",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the initial state of the characters before the cold becomes severe, establishing the setting of their shelter in the ferryman's hut during the blizzard."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "そして、嵐はじきに止むと思った。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "渡し守の小屋",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the characters' anticipation of the storm ending, setting the context for the subsequent events in the ferryman's hut. The location is explicitly mentioned as the ferryman's hut where the characters took shelter."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "老人はじきに眠りについた。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "しかし、少年巳之吉は長い間、目をさましていて、恐ろしい風や戸にあたる雪のたえない音を聴いていた。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "渡し守の小屋",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the setting and state of the characters during the storm, establishing the environment where the supernatural event occurs. The location is the ferryman's hut where the woodcutters took shelter."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "河はゴウゴウと鳴っていた。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "河",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the river's roaring, which is part of the situation during the storm in the cabin. The location mentioned is the river."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "小屋は海上の和船のようにゆれて、ミシミシ音がした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "小屋",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the physical state of the hut during the blizzard, contributing to the atmospheric setting that frames the supernatural events. The location '小屋' (hut) is the narrative focus as it is where the characters are situated during the critical sequence."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "恐ろしい大吹雪であった。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "渡し守の小屋",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the severe blizzard as part of the environmental context in which the characters are situated, establishing the harsh conditions that contribute to the subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "空気は一刻一刻、寒くなって来た、そして、巳之吉は蓑の下でふるえていた。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "渡し守の小屋",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the worsening cold environment and the physical reaction of巳之吉, establishing the atmospheric conditions and setting the stage for the supernatural events that follow. The location is the cabin where the characters took shelter."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "しかし、とうとう寒さにも拘らず、彼もまた寝込んだ。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "巳之吉 fell asleep despite the cold",
+        "explanation": "The sentence describes the outcome of the cold environment and previous events (shivering, snowstorm) leading to the consequence of the boy falling asleep, indicating a state change from being awake to asleep."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "彼は顔に夕立のように雪がかかるので眼がさめた。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "小屋の戸は無理押しに開かれていた。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "そして雪明かりで、部屋のうちに女、――全く白装束の女、――を見た。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "渡し守の小屋",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "この文は、雪の夜の小屋内で出現した白装束の女性の存在を描写し、物語の新たな展開を導く状況を設定しています。場所は渡し守の小屋が明確に指定されています。"
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "その女は茂作の上に屈んで、彼に彼女の息をふきかけていた、――そして彼女の息はあかるい白い煙のようであった。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白衣の女"
+        ],
+        "receivers": [
+          "茂作"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the woman's active action of bending over and blowing her breath on the old man, which is a physical activity performed by the woman (doer) and directed towards the old man (receiver)."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "ほとんど同時に巳之吉の方へ振り向いて、彼の上に屈んだ。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "彼は叫ぼうとしたが何の音も発する事ができなかった。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "巳之吉无法发出声音",
+        "explanation": "该句描述了巳之吉在遭遇白衣女时尝试呼救却无法发声的结果，这是其遭遇超自然现象后的直接后果，属于前行动作（白衣女的接近与威胁）引发的状态变化。"
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "白衣の女は、彼の上に段々低く屈んで、しまいに彼女の顔はほとんど彼にふれるようになった、そして彼は――彼女の眼は恐ろしかったが――彼女が大層綺麗である事を見た。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白衣の女"
+        ],
+        "receivers": [
+          "巳之吉"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the white-clad woman's action of bending down toward巳之吉 and his observation of her. This fits the 'action' category as it details a physical activity performed by the woman and its effect on the recipient (巳之吉)."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "しばらく彼女は彼を見続けていた、――それから彼女は微笑した、そしてささやいた、――『私は今ひとりの人のように、あなたをしようかと思った。しかし、あなたを気の毒だと思わずにはいられない、――あなたは若いのだから。……あなたは美少年ね、巳之吉さん、もう私はあなたを害しはしません。しかし、もしあなたが今夜見た事を誰かに――あなたの母さんにでも――云ったら、私に分ります、そして私、あなたを殺します。……覚えていらっしゃい、私の云う事を』 　そう云って、向き直って、彼女は戸口から出て行った。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白衣の女"
+        ],
+        "receivers": [
+          "巳之吉"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the white-clad woman's action of approaching and speaking to巳之吉, including her threatening dialogue. The doer is the supernatural female entity, and the receiver is the young man, who is the target of her actions and threats."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "その時、彼は自分の動ける事を知って、飛び起きて、外を見た。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "巳之吉"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action taken by巳之吉 (the protagonist) as he regains mobility and looks outside, indicating a physical action performed by the character."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "しかし、女はどこにも見えなかった。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The woman disappeared and was no longer visible",
+        "explanation": "The sentence describes the outcome of the prior event where the white-clad woman interacted with the characters, resulting in her disappearance. This state change directly follows the action of the woman appearing in the hut and interacting with the characters."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "そして、雪は小屋の中へ烈しく吹きつけていた。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "小屋",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the environmental conditions (snow blowing into the hut) during the storm, establishing the setting for the subsequent events. The location is explicitly mentioned as the hut where the characters are sheltering."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "巳之吉は戸をしめて、それに木の棒をいくつか立てかけてそれを支えた。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "巳之吉"
+        ],
+        "receivers": [
+          "戸"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes巳之吉 actively securing the door against the storm by closing it and propping it with wooden sticks. This is a physical action taken by the character in response to the harsh weather conditions."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "彼は風が戸を吹きとばしたのかと思ってみた、――彼はただ夢を見ていたかもしれないと思った。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "he realized it might have been a dream instead of the white woman's presence",
+        "explanation": "The sentence describes the protagonist's realization that his experience might have been a dream, which is a direct consequence of the prior events involving the white woman's appearance and the storm. This realization marks a shift in his understanding of the events."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "それで入口の雪あかりの閃きを、白い女の形と思い違いしたのかもしれないと思った。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Yozukichi's realization that the flash of light might have been a mistaken interpretation of a dream or illusion",
+        "explanation": "The sentence reflects Yozukichi's internal doubt and confusion following the encounter with the white woman and the subsequent death of Mokko. This realization marks a shift in his psychological state, acknowledging the possibility that his experience was not real."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "しかもそれもたしかではなかった。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the initial assumption about the white woman's identity was not confirmed",
+        "explanation": "The sentence introduces uncertainty about the previous encounter with the white woman, indicating a shift from certainty to doubt as a consequence of the prior event."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "彼は茂作を呼んでみた。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "巳之吉"
+        ],
+        "receivers": [
+          "茂作"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an action performed by巳之吉 (the doer) attempting to call out to茂作 (the receiver). This action occurs in the context of a tense situation where the old man is unresponsive, indicating an active attempt to communicate."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "そして、老人が返事をしなかったので驚いた。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "巳之吉发现茂作没有回应，意识到老人可能已经死亡，导致他感到震惊",
+        "explanation": "该句描述了巳之吉因茂作未回应而感到惊讶的结果，这是对前文茂作死亡状态的直接反应，属于事件后果的描述。"
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "彼は暗がりへ手をやって茂作の顔にさわってみた。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "巳之吉"
+        ],
+        "receivers": [
+          "茂作"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of巳之吉 touching茂作's face in the dark, indicating a physical interaction performed by the character."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "そして、それが氷である事が分った。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "茂作被发现已冻死",
+        "explanation": "该句描述了触摸茂作面部后发现其身体已结冰的状态，这是此前行动（触摸茂作面部）的直接结果，导致发现茂作死亡的后果。"
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "茂作は固くなって死んでいた。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "茂作 died from freezing",
+        "explanation": "The sentence describes the outcome of the prior event where茂作 was found frozen, resulting in his death. This is a direct consequence of the freezing incident mentioned in the previous sentence."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "……",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The snowstorm stopped at dawn, and the ferryman returned to find Moshō's frozen body and Shigeyoshi unconscious.",
+        "explanation": "The ellipsis marks the transition between the previous event (Moshō's death) and the subsequent consequence of the snowstorm stopping, leading to the ferryman's discovery of the frozen body and Shigeyoshi's unconscious state."
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "あけ方になって吹雪は止んだ。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "渡し守の小屋",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates the cessation of the blizzard by dawn, setting the temporal context for the subsequent discovery of茂作's frozen body and巳之吉's unconscious state. The location is the boatman's hut where the characters were stranded."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "そして日の出の後少ししてから、渡し守がその小屋に戻って来た時、茂作の凍えた死体の側に、巳之吉が知覚を失うて倒れているのを発見した。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "茂作 is frozen dead and巳之吉 is unconscious",
+        "explanation": "The sentence describes the outcome of the previous events (the cold night) leading to the death of 茂作 and the unconscious state of 巳之吉, which directly results from the extreme cold and the supernatural encounter."
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "巳之吉は直ちに介抱された、そして、すぐに正気に帰った、しかし、彼はその恐ろしい夜の寒さの結果、長い間病んでいた。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "巳之吉因恐ろしい夜の寒さの結果、長い間病んでいた",
+        "explanation": "この文は、前文の「恐ろしい大吹雪」や「凍えた死体」などの出来事の結果として、巳之吉が寒さで長期間病気になるという状態変化を記述しています。これは過去の出来事（雪の夜の出来事）の結果としての後続の状態変化を示しており、'consequence'カテゴリに該当します。"
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "彼はまた老人の死によってひどく驚かされた。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "巳之吉因老人的死而受到极大震惊",
+        "explanation": "该句描述了茂作老人死亡这一先前事件对巳之吉产生的心理影响，属于因果关系中的结果描述。"
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "しかし、彼は白衣の女の現れた事については何も云わなかった。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "巳之吉选择保持沉默关于白衣女的出现，这一决定影响了后续故事发展",
+        "explanation": "该句描述了巳之吉因遭遇白衣女事件而保持沉默的后果，这一选择直接导致后续他与お雪的婚姻以及最终揭示雪女身份的情节发展，属于前事件（白衣女出现及茂作之死）的直接结果。"
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "再び、達者になるとすぐに、彼の職業に帰った、――毎朝、独りで森へ行き、夕方、木の束をもって帰った。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "巳之吉"
+        ],
+        "receivers": [
+          "森",
+          "木の束"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes巳之吉's actions of resuming his job as a woodcutter, specifically his daily routine of going to the forest and returning with bundles of wood. The doer is clearly巳之吉, and the receivers include the forest (location of activity) and the wood (object being gathered)."
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "彼の母は彼を助けてそれを売った。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "彼の母"
+        ],
+        "receivers": [
+          "彼"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an action where the mother actively helps the protagonist sell wood, indicating a direct activity performed by the mother (doer) for the protagonist (receiver)."
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "翌年の冬のある晩、家に帰る途中、偶然同じ途を旅している一人の若い女に追いついた。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "巳之吉"
+        ],
+        "receivers": [
+          "若い女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of '追いついた' (caught up with) where巳之吉 encounters a young woman while returning home. The doer is巳之吉, and the receiver is the young woman."
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "彼女は背の高い、ほっそりした少女で、大層綺麗であった。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the physical appearance of a female character, establishing her characteristics as part of the narrative context. No specific location is mentioned in the sentence itself, though the broader story context involves a village and forest. This falls under 'situation' as it provides descriptive background for future interactions."
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "そして巳之吉の挨拶に答えた彼女の声は歌う鳥の声のように、彼の耳に愉快であった。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the girl's voice as pleasant, contributing to the background context of her character and interaction with巳之吉. It sets the stage for their relationship development without introducing new events or actions."
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "それから、彼は彼女と並んで歩いた、そして話をし出した。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "巳之吉"
+        ],
+        "receivers": [
+          "彼女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of walking together and starting a conversation, with巳之吉 as the doer and the girl (彼女) as the receiver of the interaction."
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "少女は名は「お雪」であると云った。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces a character's name as part of the narrative background, establishing context for future interactions. No location is mentioned, so the 'location' field remains empty."
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "それからこの頃両親共なくなった事、それから江戸へ行くつもりである事、そこに何軒か貧しい親類のある事、その人達は女中としての地位を見つけてくれるだろうと云う事など。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "江戸",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the girl's circumstances, including her parents' death, her intention to go to Edo, and her relatives there. The narrative focus is on Edo as the destination and context for her plans."
+      }
+    },
+    {
+      "sentence_index": 60,
+      "sentence": "巳之吉はすぐにこの知らない少女になつかしさを感じて来た、そして見れば見るほど彼女が一層綺麗に見えた。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "巳之吉"
+        ],
+        "receivers": [
+          "少女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Shinokoji's action of feeling nostalgia and perceiving the girl as more beautiful, indicating an active emotional response."
+      }
+    },
+    {
+      "sentence_index": 61,
+      "sentence": "彼は彼女に約束の夫があるかと聞いた、彼女は笑いながら何の約束もないと答えた。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "巳之吉"
+        ],
+        "receivers": [
+          "お雪"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the act of asking a question (by巳之吉) and receiving an answer (fromお雪), which constitutes an interaction between the two characters. The dialogue is an active exchange that advances the narrative."
+      }
+    },
+    {
+      "sentence_index": 62,
+      "sentence": "それから、今度は、彼女の方で巳之吉は結婚しているか、あるいは約束があるかと尋ねた、彼は彼女に、養うべき母が一人あるが、お嫁の問題は、まだ自分が若いから、考えに上った事はないと答えた。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "巳之吉",
+          "お雪"
+        ],
+        "receivers": [
+          "巳之吉",
+          "お雪"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes a dialogue exchange between巳之吉 and お雪 discussing marriage prospects. Both characters actively participate in the conversation, making them doers, while the information exchanged is received by each other."
+      }
+    },
+    {
+      "sentence_index": 63,
+      "sentence": "……こんな打明け話のあとで、彼等は長い間ものを云わないで歩いた、しかし諺にある通り『気があれば眼も口ほどにものを云い』であった。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "巳之吉",
+          "お雪"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of walking in silence after their conversation, with both characters actively participating in the activity."
+      }
+    },
+    {
+      "sentence_index": 64,
+      "sentence": "村に着く頃までに、彼等はお互に大層気に入っていた。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "村",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of巳之吉 andお雪 developing mutual affection upon arriving at the village, setting the stage for their subsequent relationship development."
+      }
+    },
+    {
+      "sentence_index": 65,
+      "sentence": "そして、その時巳之吉はしばらく自分の家で休むようにとお雪に云った。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "巳之吉"
+        ],
+        "receivers": [
+          "お雪"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an action where巳之吉 (the doer) communicates withお雪 (the receiver) by telling her to rest at his house. This is an explicit activity performed by a character towards another."
+      }
+    },
+    {
+      "sentence_index": 66,
+      "sentence": "彼女はしばらくはにかんでためらっていたが、彼と共にそこへ行った。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 67,
+      "sentence": "そして彼の母は彼女を歓迎して、彼女のために暖かい食事を用意した。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "巳之吉の母"
+        ],
+        "receivers": [
+          "お雪"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the mother's active action of welcoming and preparing warm food for the girl, making it an 'action' category. The doer is '巳之吉の母' (巳之吉's mother) and the receiver is 'お雪' (the girl)."
+      }
+    },
+    {
+      "sentence_index": 68,
+      "sentence": "お雪の立居振舞は、そんなによかったので、巳之吉の母は急に好きになって、彼女に江戸への旅を延ばすように勧めた。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "巳之吉の母"
+        ],
+        "receivers": [
+          "お雪"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of巳之吉's mother advising お雪 to delay her journey to Edo, indicating an active decision made by the mother towards the girl."
+      }
+    },
+    {
+      "sentence_index": 69,
+      "sentence": "そして自然の成行きとして、お雪は江戸へは遂に行かなかった。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "お雪は江戸へ行くのではなく、その家にとどまった",
+        "explanation": "前文の「江戸への旅を延ばすように勧めた」の結果として、お雪が江戸へ行かなかったという状態変化を示している。これは人物の行動転換を表す結果として分類される。"
+      }
+    },
+    {
+      "sentence_index": 70,
+      "sentence": "彼女は「お嫁」としてその家にとどまった。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "お雪决定的にその家に留まり、江戸への旅を断念した",
+        "explanation": "この文は、お雪が江戸へ行く予定だったが実際にその家にとどまったという結果を示しており、前の文脈における自然な流れとしての決定の結果を表しています。"
+      }
+    },
+    {
+      "sentence_index": 71,
+      "sentence": "お雪は大層よい嫁である事が分った。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "It became clear that お雪 is a good wife",
+        "explanation": "The sentence describes the outcome of the prior events (the encounter with the snow woman and subsequent marriage) leading to the recognition of お雪's goodness as a wife. This is a consequence of the narrative developments that preceded it."
+      }
+    },
+    {
+      "sentence_index": 72,
+      "sentence": "巳之吉の母が死ぬようになった時――五年ばかりの後――彼女の最後の言葉は、彼女の嫁に対する愛情と賞賛の言葉であった、――そしてお雪は巳之吉に男女十人の子供を生んだ、――皆綺麗な子供で色が非常に白かった。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "巳之吉の母の死後、お雪は巳之吉に十人の白い子供を生み、母の最後の言葉は嫁に対する愛情と賞賛であった",
+        "explanation": "この文は、巳之吉の母の死という過去の出来事の結果として生じた状態変化を記述しています。母の死後、お雪が十人の子供を産み、母の最後の言葉が嫁への愛情を示したという事実が述べられています。これは母の死という原因によって引き起こされた結果（changed_state）を表しています。"
+      }
+    },
+    {
+      "sentence_index": 73,
+      "sentence": "田舎の人々はお雪を、生れつき自分等と違った不思議な人と考えた。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "村",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes background context about the villagers' perception of Okuyuki, setting the stage for understanding her role in the story. The location is specified as '村' (village), which is the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 74,
+      "sentence": "大概の農夫の女は早く年を取る、しかしお雪は十人の子供の母となったあとでも、始めて村へ来た日と同じように若くて、みずみずしく見えた。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "村",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about Oshiro's unique physical characteristics compared to other villagers, establishing her exceptional youthfulness as part of the narrative setting."
+      }
+    },
+    {
+      "sentence_index": 75,
+      "sentence": "ある晩子供等が寝たあとで、お雪は行燈の光で針仕事をしていた。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "お雪"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes Oyuki actively performing the action of needlework by the light of a hanging lamp. The doer is clearly identified as お雪, and there is no explicit receiver mentioned for the action."
+      }
+    },
+    {
+      "sentence_index": 76,
+      "sentence": "そして巳之吉は彼女を見つめながら云った、―― 『お前がそうして顔にあかりを受けて、針仕事をしているのを見ると、わしが十八の少年の時遇った不思議な事が思い出される。わしはその時、今のお前のように綺麗なそして色白な人を見た。全く、その女はお前にそっくりだったよ』…… 　仕事から眼を上げないで、お雪は答えた、―― 『その人の話をしてちょうだい。……どこでおあいになったの』 　そこで巳之吉は渡し守の小屋で過ごした恐ろしい夜の事を彼女に話した、――そして、にこにこしてささやきながら、自分の上に屈んだ白い女の事、――それから、茂作老人の物も云わずに死んだ事。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "巳之吉"
+        ],
+        "receivers": [
+          "お雪"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of巳之吉 recounting his past experience with the snow spirit toお雪. The doer is巳之吉, who performs the act of speaking, and the receiver isお雪, who listens to his story."
+      }
+    },
+    {
+      "sentence_index": 77,
+      "sentence": "そして彼は云った、―― 『眠っている時にでも起きている時にでも、お前のように綺麗な人を見たのはその時だけだ。もちろんそれは人間じゃなかった。そしてわしはその女が恐ろしかった、――大変恐ろしかった、――がその女は大変白かった。……実際わしが見たのは夢であったかそれとも雪女であったか、分らないでいる』…… 　お雪は縫物を投げ捨てて立ち上って巳之吉の坐っている処で、彼の上に屈んで、彼の顔に向って叫んだ、―― 『それは私、私、私でした。……それは雪でした。そしてその時あなたが、その事を一言でも云ったら、私はあなたを殺すと云いました。……そこに眠っている子供等がいなかったら、今すぐあなたを殺すのでした。でも今あなたは子供等を大事に大事になさる方がいい、もし子供等があなたに不平を云うべき理由でもあったら、私はそれ相当にあなたを扱うつもりだから』…… 　彼女が叫んでいる最中、彼女の声は細くなって行った、風の叫びのように、――それから彼女は輝いた白い霞となって屋根の棟木の方へ上って、それから煙出しの穴を通ってふるえながら出て行った。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The revelation of Oyuki's true identity as the snow spirit and the resolution of the threat she posed, with her departing as a white mist after issuing a warning.",
+        "explanation": "The sentence describes the outcome of the prior encounter with the snow spirit, including the revelation of Oyuki's identity and the resolution of the conflict, which alters the narrative state by resolving the supernatural threat."
+      }
+    },
+    {
+      "sentence_index": 78,
+      "sentence": "……もう再び彼女は見られなかった。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The snow spirit (雪女) is no longer visible or present in the story world",
+        "explanation": "The sentence indicates the final outcome of the snow spirit's departure after her warning to巳之吉. This marks a permanent change in the narrative state, as she disappears completely from the story's reality."
+      }
+    }
+  ]
+}

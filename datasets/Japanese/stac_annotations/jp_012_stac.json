@@ -1,0 +1,983 @@
+{
+  "source_file": "/content/drive/MyDrive/FairytalesResearch/datasets/Japanese/texts/jp_012.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "model": "Qwen/Qwen3-8B",
+  "total_sentences": 65,
+  "analyzed_sentences": 65,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "むかし越後国えちごのくに松まつの山家やまがの片田舎かたいなかに、おとうさんとおかあさんと娘むすめと、おやこ三人にん住すんでいるうちがありました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "越後国えちごのくに松まつの山家やまがの片田舎かたいなか",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the setting of the story by introducing the location and the family living there, which serves as the narrative context for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "ある時ときおとうさんは、よんどころない用事ようじが出来できて、京都きょうとへ上のぼることになりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "京都",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the father's decision to travel to Kyoto for an important errand, establishing the narrative context of his departure and the subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "昔むかしのことで、越後えちごから都みやこへ上のぼるといえば、幾日いくにちも、幾日いくにちも旅たびを重かさねて、いくつとなく山坂やまさかを越こえて行いかなければなりません。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "越後えちご",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the arduous journey from Echigo to the capital (Kyoto), establishing the difficulty of travel that sets up the father's absence and the family's concerns."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "ですから立たって行くおとうさんも、あとに残のこるおかあさんも心配しんぱいでなりません。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "越後国松山家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the emotional context of the father's departure and the mother's worry, setting the stage for the subsequent narrative about the family's situation in their village."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "それで支度したくが出来できて、これから立たとうというとき、おとうさんはおかあさんに、 「しっかり留守るすを頼たのむよ。それから子供こどもに気きをつけてね。」 　といいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "おかあさんも、 「大丈夫だいじょうぶ、しっかりお留守居るすいをいたしますから、気きをつけて、ぶじに早はやくお帰かえりなさいまし。」 　といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "okaasan"
+        ],
+        "receivers": [
+          "otousan"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence is an action where the mother (okaasan) speaks to the father (otousan), agreeing to take care of the household. This dialogue is an active interaction that sets up the task for the mother."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "その中で娘むすめはまだ子供こどもでしたから、ついそこらへ出かけて、じきにおとうさんが帰かえって来くるもののように思おもって、悲かなしそうな顔かおもしずに、 「おとうさん、おとなしくお留守番るすばんをしますから、おみやげを買かってきて下くださいな。」 　といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘むすめ"
+        ],
+        "receivers": [
+          "おとうさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter's action of requesting her father to buy a gift, indicating her active participation in the narrative through speech."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "おとうさんは笑わらいながら、 「よしよし。その代かわり、おとなしく、おかあさんのいうことを聴きくのだよ。」 　といいました。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "娘むすめ"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task assigned by the father to the daughter, instructing her to be quiet and listen to the mother's words. The task role is the daughter, as she is the one required to fulfill the responsibility."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "おとうさんが立たって行いってしまうと、うちの中は急きゅうに寂さびしくなりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the house became suddenly lonely",
+        "explanation": "The sentence describes the outcome of the father's departure, which changes the state of the household from being lively to suddenly lonely."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "はじめの一日にちや二日ふつかは、娘むすめもおかあさんのお仕事しごとをしているそばでおとなしく遊あそんでおりましたが、三日みっか四日よっかとなると、そろそろおとうさんがこいしくなりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the daughter starts missing her father after the initial days of quiet behavior",
+        "explanation": "The sentence describes the emotional consequence of the father's absence, showing a shift from initial compliance to longing, which directly results from the prior event of the father leaving for Kyoto."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "「おとうさん、いつお帰かえりになるのでしょうね。」 「まだ、たんと寝ねなければお帰かえりにはなりませんよ。」 「おかあさん、京都きょうとってそんなに遠とおい所ところなの。」 「ええ、ええ、もうこれから百里りの余よもあって、行いくだけに十日とおかあまりかかって、帰かえりにもやはりそれだけかかるのですからね。」 「まあ、ずいぶん待まちどおしいのね。おとうさん、どんなおみやげを買かっていらっしゃるでしょう。」 「それはきっといいものですよ。楽たのしみにして待まっておいでなさい。」 　そんなことをいいいい、毎日まいにち暮くらしているうちに、十日とおかたち、二十日はつかたち、もうかれこれ一月ひとつきあまりの月日つきひがたちました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "越後国松山家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of the father's absence and the passage of time in the family's village home, setting the stage for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "「もうたんと、ずいぶん飽あきるほど寝ねたのに、まだおとうさんはお帰かえりにならないの。」 　と、娘むすめは待まち切きれなくなって、悲かなしそうにいいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "おかあさんは指ゆびを折おって日を数かぞえながら、 「ああ、もうそろそろお帰かえりになる時分じぶんですよ。いつお帰かえりになるか知しれないから、今いまのうちにおへやのおそうじをして、そこらをきれいにしておきましょう。」 　こういって散ちらかったおへやの中を片かたづけはじめますと、娘むすめも小さなほうきを持もって、お庭にわをはいたりしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おかあさん",
+          "娘むすめ"
+        ],
+        "receivers": [
+          "おへや",
+          "お庭にわ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the mother and daughter actively performing actions: the mother begins cleaning the room, and the daughter sweeps the garden. The doers are the mother and daughter, and the receivers are the room and garden."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "するとその日の夕方ゆうがた、おとうさんは荷物にもつをしょって、 「ああ、疲つかれた、疲つかれた。」 　といいながら、帰かえって来きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おとうさん"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the father's action of returning home after a long trip, which is an active performance by the father. No direct receivers are mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "その声こえを聞きくと、娘むすめはあわててとび出だして来きて、 「おとうさん、お帰かえりなさい。」 　といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘むすめ"
+        ],
+        "receivers": [
+          "おとうさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter's action of rushing out upon hearing her father's voice, directly addressing him. The action is performed by the daughter and directed towards her father."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "おかあさんもうれしそうに、 「まあ、お早はやいお帰かえりでしたね。」 　といいながら、背中せなかの荷物にもつを手伝てつだって下おろしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おかあさん"
+        ],
+        "receivers": [
+          "荷物にもつ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the mother actively helping the father with his luggage upon his return, which is a specific action performed by the mother (doer) and directed towards the father's luggage (receiver)."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "娘むすめはきっとこの中にいいおみやげが入はいっているのだろうと思おもって、にこにこしながら、おかあさんのお手伝てつだいをして、荷物にもつを奥おくまで運はこんで行きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘むすめ"
+        ],
+        "receivers": [
+          "おかあさん",
+          "荷物にもつ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter's action of helping her mother with the luggage, indicating she is the doer performing the action. The receivers are her mother (who is assisted) and the luggage (which is being carried to the back)."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "そのあとから、おとうさんは脚絆きゃはんのほこりをはたきながら、 「ずいぶん寂さびしかったろう。べつに変かわったことはなかったか。」 　といいいい奥おくへ通とおりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おとうさん"
+        ],
+        "receivers": [
+          "奥"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the father's action of brushing off his geta dust and moving into the back of the house. The doer is the father, and the receiver is the back (奥) as he moves towards it."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "おとうさんはやっと座すわって、お茶ちゃを一杯ぱいのむ暇ひまもないうちに、包つつみの中から細長ほそながい箱はこを出だして、にこにこしながら、 「さあ、お約束やくそくのおみやげだよ。」 　といって、娘むすめに渡わたしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おとうさん"
+        ],
+        "receivers": [
+          "娘むすめ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the father (おとうさん) actively performing the action of taking out a box from a package and giving it to his daughter (娘むすめ). This is a direct physical action with a clear doer and receiver."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "娘むすめは急きゅうにとろけそうな顔かおになって、 「おとうさん、ありがとう。」 　といいながら、箱はこをあけますと、中からかわいらしいお人形にんぎょうさんやおもちゃが、たんと出てきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘むすめ"
+        ],
+        "receivers": [
+          "箱はこ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter's action of opening the box given by her father. The doer is the daughter, and the receiver is the box, as she performs the action of opening it."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "娘むすめはだいじそうにそれを抱かかえて、 「うれしい、うれしい。」 　といって、はね回まわっていました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘むすめ"
+        ],
+        "receivers": [
+          "箱はこ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter's action of holding the gift box and spinning, indicating she is the doer performing the action, with the box as the object being interacted with."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "するとおとうさんは、また一つ平ひらたい箱はこを出だして、 「これはお前まえのおみやげだ。」 　といって、おかあさんに渡わたしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おとうさん"
+        ],
+        "receivers": [
+          "おかあさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the father (おとうさん) performing the action of taking out a box and giving it to his wife (おかあさん). This is an explicit action with a clear doer and receiver."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "おかあさんも、 「おや、それはどうも。」 　といいながら、開あけてみますと、中には金かねでこしらえた、まるい平ひらたいものが入はいっていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "おかあさんはそれが何なんにするものだか分わからないので、うらを返かえしたり、おもてを見みたり、ふしぎそうな顔かおばかりしていますので、おとうさんは笑わらい出だして、 「お前まえ、それは鏡かがみといって、都みやこへ行かなければ無ないものだよ。ほら、こうして見みてごらん、顔かおがうつるから。」 　といって、鏡かがみのおもてをおかあさんの顔かおにさし向むけました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おとうさん"
+        ],
+        "receivers": [
+          "おかあさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the father (おとうさん) actively explaining the purpose of the mirror and demonstrating it to the mother (おかあさん). This constitutes an action performed by the father towards the mother."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "おかあさんはその時とき鏡かがみの上にうつった自分じぶんの顔かおをしげしげとながめて、 「まあ、まあ。」 　といっていました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おかあさん"
+        ],
+        "receivers": [
+          "鏡かがみ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the mother actively performing the action of looking at her reflection in the mirror, which is the primary activity being conveyed."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "それから幾年いくねんかたちました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates the passage of time, setting the stage for future events in the story. It provides background context by showing how much time has elapsed since the mother's death and the daughter's continued use of the mirror."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "娘むすめもだんだん大きくなりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the daughter grew up gradually",
+        "explanation": "The sentence describes the outcome of the passage of time mentioned in the previous sentence, indicating the daughter's growth as a result of the elapsed years."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "ちょうど十五になった時とき、おかあさんはふと病気びょうきになって、どっと寝込ねこんでしまいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the mother falls ill and becomes bedridden",
+        "explanation": "The sentence describes the outcome of the daughter reaching fifteen years old, leading to the mother's sudden illness and bedridden state. This is a consequence of the prior event (the daughter's growth) and sets up subsequent actions in the story."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "おとうさんは心配しんぱいして、お医者いしゃにみてもらいましたが、なかなかよくなりません。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "娘むすめは夜よるも昼ひるもおかあさんのまくら元もとにつきっきりで、ろくろく眠ねむる暇ひまもなく、一生懸命いっしょうけんめいにかんびょうしましたが、病気びょうきはだんだん重おもるばかりで、もう今日きょう明日あすがむずかしいというまでになりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘むすめ"
+        ],
+        "receivers": [
+          "おかあさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter's active efforts to care for her ill mother, including staying by her side continuously and providing diligent care. This constitutes an action performed by the daughter towards the mother."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "その夕方ゆうがた、おかあさんは娘むすめをそばに呼よび寄よせて、やせこけた手で、娘むすめの手をじっと握にぎりながら、 「長ながい間あいだ、お前まえも親切しんせつに世話せわをしておくれだったが、わたしはもう長ながいことはありません。わたしが亡なくなったら、お前まえ、わたしの代かわりになって、おとうさんをだいじにして上あげて下ください。」 　といいました。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "娘むすめ"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task assignment where the mother explicitly instructs her daughter to take care of the father after her death. The task role is the daughter (娘むすめ) who must fulfill this responsibility."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "娘むすめは何なんということもできなくって、目にいっぱい涙なみだをためたまま、うつむいていました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The daughter is emotionally overwhelmed, unable to speak, and visibly grieving after her mother's death and the mother's final request.",
+        "explanation": "The sentence describes the daughter's emotional reaction to her mother's death and the mother's final instructions, which directly results from the prior events. This is a consequence of the mother's death and the emotional weight of her final words."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "その時ときおかあさんはまくらの下から鏡かがみを出だして、 「これはいつぞやおとうさんから頂いただいて、だいじにしている鏡かがみです。この中にはわたしの魂たましいが込こめてあるのだから、この後のちいつでもおかあさんの顔かおが見みたくなったら、出だしてごらんなさい。」 　といって鏡かがみを渡わたしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おかあさん"
+        ],
+        "receivers": [
+          "娘むすめ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the mother (おかあさん) actively giving a mirror to the daughter (娘むすめ) as an action. The mirror is the object transferred, with the mother as the doer and the daughter as the receiver."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "それから間まもなく、おかあさんはとうとう息いきを引ひき取とりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the mother's death, leading to the daughter taking care of the father",
+        "explanation": "The sentence describes the outcome of the mother's prolonged illness, which changes the family's state by leaving the daughter to care for the father. This event directly triggers subsequent actions in the narrative."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "あとに取とり残のこされた娘むすめは、悲かなしい心こころをおさえて、おとうさんの手助てだすけをして、おとむらいの世話せわをまめまめしくしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘むすめ"
+        ],
+        "receivers": [
+          "おとうさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter's active actions of providing care to her father after the mother's death, making it an 'action' category. The daughter (娘むすめ) is the doer, and the father (おとうさん) is the receiver of the care."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "おとむらいがすんでしまうと、急きゅうにうちの中がひっそりして、じっとしていると、寂さびしさがこみ上あげてくるようでした。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The house became quiet and a sense of loneliness began to creep in",
+        "explanation": "The sentence describes the outcome of the grandmother's death (prior event), resulting in the household becoming silent and the protagonist experiencing loneliness. This directly follows the grandmother's passing and illustrates the emotional state change."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "娘むすめはたまらなくなって、 「ああ、おかあさんに会あいたい。」 　と独ひとり言ごとをいいましたが、ふとあの時ときおかあさんにいわれたことを思おもい出だして、鏡かがみを出だしてみました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘むすめ"
+        ],
+        "receivers": [
+          "鏡かがみ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter taking out the mirror, which is an active action performed by the daughter (doer) and directed towards the mirror (receiver)."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "「ほんとうにおかあさんが会あいに来きて下くださるかしら。」 　娘むすめはこういいながら、鏡かがみの中をのぞきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘むすめ"
+        ],
+        "receivers": [
+          "鏡かがみ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter's active action of looking into the mirror, which is a physical activity performed by the daughter (doer) directed at the mirror (receiver)."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "するとどうでしょう、鏡かがみの向むこうにはおかあさんが、それはずっと若わかい美うつくしい顔かおで、にっこり笑わらっていらっしゃいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the daughter sees her deceased mother in the mirror, who appears youthful and smiling",
+        "explanation": "The sentence describes the outcome of the daughter looking into the mirror, revealing the consequence of her action: seeing her deceased mother's spirit in the mirror. This state change directly follows the prior action of gazing into the mirror."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "娘むすめはぼうっとしたようになって、 「あら、おかあさん。」 　と呼よびかけました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "そしていつまでもいつまでも、顔かおを鏡かがみに押おしつけてのぞき込こんでいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘むすめ"
+        ],
+        "receivers": [
+          "鏡かがみ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter's continuous action of pressing her face against the mirror and staring into it, making it an action performed by the daughter (娘むすめ) with the mirror (鏡かがみ) as the object being interacted with."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "その後のちおとうさんは人にすすめられて、二度どめのおかあさんをもらいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おとうさん"
+        ],
+        "receivers": [
+          "二度どめのおかあさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the father's action of receiving a second mother, with the father as the doer and the new mother as the receiver. This is an active event that changes the family dynamics."
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "おとうさんは娘むすめに、 「こんどのおかあさんもいいおかあさんだから、亡なくなったおかあさんと同おなじように、だいじにして、いうことを聴きくのだよ。」 　といいました。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "娘むすめ"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence explicitly states a responsibility (task) for the daughter to treat the new mother with the same care as the previous mother, indicating an explicit requirement that must be fulfilled."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "娘むすめはおとなしくおとうさんのいうことを聴きいて、 「おかあさん、おかあさん。」 　といって慕したいますと、こんどのおかあさんも、先せんのおかあさんのように、娘むすめをよくかわいがりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "おとうさんはそれを見みて、よろこんでいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the father felt happy upon seeing the current mother taking care of the daughter as the previous mother did",
+        "explanation": "The sentence describes the father's emotional reaction (being happy) to observing the current mother's care for the daughter, which is a direct outcome of the prior event where the current mother was taking care of the daughter similarly to the previous mother."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "それでも娘むすめはやはり時々ときどき、先せんのおかあさんがこいしくなりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter's emotional state of missing her former mother, establishing background context for her subsequent actions. This sets the stage for her later interaction with the mirror and the story's development."
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "そういう時とき、いつもそっと一間ひとまに入はいって、れいの鏡かがみを出だしてのぞきますと、鏡かがみの中にはそのたんびにおかあさんが現あらわれて、 「おや、お前まえ、おかあさんはこのとおり達者たっしゃですよ。」 　というように、にっこり笑わらいかけました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the mother appears in the mirror, smiling and assuring the daughter she is fine",
+        "explanation": "The sentence describes the outcome of the daughter's actions (looking into the mirror) by showing her mother's apparition, which alters the emotional state of the narrative by providing comfort and reassurance."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "こんどのおかあさんは、時々ときどき娘むすめが悲かなしそうな顔かおをしているのを見みつけて心配しんぱいしました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "そしてそういう時とき、いつも一間ひとまに入はいり込こんで、いつまでも出てこないのを知しって、よけい心配しんぱいになりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "そう思おもって娘むすめに聴きいても、 「いいえ、何なんでもありません。」 　と答こたえるだけでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "でもおかあさんは、何なんだか娘むすめが自分じぶんにかくしていることがあるように疑うたぐって、だんだん娘むすめがにくらしくなりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "それである時ときおとうさんにその話はなしをしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘むすめ"
+        ],
+        "receivers": [
+          "おとうさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter (娘むすめ) performing the action of telling her father (おとうさん) about the story, which is an active communication act."
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "おとうさんもふしぎがって、 「よしよし、こんどおれが見みてやろう。」 　といって、ある日そっと娘むすめの後あとから一間ひとまに入はいって行いきました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "そして娘むすめが一心いっしんに鏡かがみの中に見入みいっているうしろから、出だし抜ぬけに、 「お前まえ、何なにをしている。」 　と声こえをかけました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おとうさん"
+        ],
+        "receivers": [
+          "娘むすめ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the father (おとうさん) actively addressing the daughter (娘むすめ) by speaking to her from behind. This is an explicit action performed by the father towards the daughter."
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "娘むすめはびっくりして、思おもわずふるえました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the daughter involuntarily shivered",
+        "explanation": "The sentence describes the daughter's physical reaction (shivering) to the father's sudden question, which is a direct consequence of the prior action where the father unexpectedly spoke from behind her while she was staring at the mirror."
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "そして真まっ赤かな顔かおをしながら、あわてて鏡かがみをかくしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘むすめ"
+        ],
+        "receivers": [
+          "鏡かがみ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter hiding the mirror after being startled, which is an active action performed by her towards the mirror."
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "おとうさんはふきげんな顔かおをして、 「何なんだ、かくしたものは。出だしてお見みせ。」 　といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おとうさん"
+        ],
+        "receivers": [
+          "娘むすめ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the father (おとうさん) actively performing the action of speaking to his daughter (娘むすめ), directly addressing her and demanding she reveal the hidden item. This is an explicit action with a clear doer and receiver."
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "娘むすめは困こまったような顔かおをして、こわごわ鏡かがみを出だしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘むすめ"
+        ],
+        "receivers": [
+          "鏡かがみ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter's action of nervously taking out the mirror in response to her father's question. The doer is the daughter, and the receiver is the mirror."
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "おとうさんはそれを見みて、 「何なんだ。これはいつか死しんだおかあさんにわたしの買かってやった鏡かがみじゃないか。どうしてこんなものをながめているのだ。」 　といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おとうさん"
+        ],
+        "receivers": [
+          "娘むすめ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the father's action of speaking to his daughter, questioning her behavior of looking at the mirror. This is an active interaction where the father (doer) addresses his daughter (receiver)."
+      }
+    },
+    {
+      "sentence_index": 60,
+      "sentence": "すると娘むすめは、こうしておかあさんにお目にかかっているのだといいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The daughter is able to see her deceased mother through the magical mirror",
+        "explanation": "The sentence describes the outcome of the daughter's prior action of looking into the mirror, revealing the consequence that she can see her mother's spirit. This state change occurs as a result of the mirror's magical properties and the daughter's interaction with it."
+      }
+    },
+    {
+      "sentence_index": 61,
+      "sentence": "そしておかあさんは死しんでも、やはりこの鏡かがみの中にいらしって、いつでも会あいたい時ときには、これを見みれば会あえるといって、この鏡かがみをおかあさんが下くださったのだと話はなしました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 62,
+      "sentence": "おとうさんはいよいよふしぎに思おもって、 「どれ、お見みせ。」 　といいながら、娘むすめのうしろからのぞきますと、そこには若わかい時ときのおかあさんそっくりの娘むすめの顔かおがうつりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 63,
+      "sentence": "「ああ、それはお前まえの姿すがただよ。お前まえは小ちいさい時ときからおかあさんによく似にていたから、おかあさんはちっとでもお前まえの心こころを慰なぐさめるために、そうおっしゃったのだ。お前まえは自分じぶんの姿すがたをおかあさんだと思おもって、これまでながめてよろこんでいたのだよ。」 　こうおとうさんはいいながら、しおらしい娘むすめの心こころがかわいそうになりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おとうさん"
+        ],
+        "receivers": [
+          "娘むすめ"
+        ],
+        "changed_state": "",
+        "explanation": "The father explains the truth about the mirror to his daughter, which is an action performed by him towards her."
+      }
+    },
+    {
+      "sentence_index": 64,
+      "sentence": "するとその時ときまで次つぎの間まで様子ようすを見みていた、こんどのおかあさんが入はいって来きて、娘むすめの手を固かたく握にぎりしめながら、 「これですっかり分わかりました。何なんというやさしい心こころでしょう。それを疑うたぐったのはすまなかった。」 　といいながら、涙なみだをこぼしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "こんどのおかあさん"
+        ],
+        "receivers": [
+          "娘むすめ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the new mother (こんどのおかあさん) performing actions of entering the room, taking the daughter's hand, and speaking. These actions directly involve the daughter (娘むすめ) as the receiver of the interaction."
+      }
+    },
+    {
+      "sentence_index": 65,
+      "sentence": "娘むすめはうつむきながら、小声こごえで、 「おとうさんにも、おかあさんにも、よけいな御心配ごしんぱいをかけてすみませんでした。」 　といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "娘むすめ"
+        ],
+        "receivers": [
+          "おとうさん",
+          "おかあさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the daughter (娘むすめ) performing the action of apologizing (小声こごえで言っている) to her parents (おとうさん, おかあさん) for causing them unnecessary worry. This is an active communication act directed at the parents."
+      }
+    }
+  ]
+}

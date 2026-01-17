@@ -1,0 +1,1189 @@
+{
+  "source_file": "/content/drive/MyDrive/FairytalesResearch/datasets/Japanese/texts/jp_010.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "model": "Qwen/Qwen3-8B",
+  "total_sentences": 79,
+  "analyzed_sentences": 79,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "むかし、大和国やまとのくにに貧乏びんぼうな若者わかものがありました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "大和国やまとのくに",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the setting and the protagonist's initial state, establishing the narrative context of a poor young man in Yamato country. This sets the stage for the subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "一人ひとりぼっちで、ふた親おやも妻つまも子供こどももない上に、使つかってくれる主人しゅじんもまだありませんでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the protagonist's isolated and destitute circumstances, establishing his background as a poor, childless, and employerless young man. This sets the stage for his subsequent actions and the story's development."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "若者わかものはだんだん心細こころぼそくなったものですから、これは観音かんのんさまにお願ねがいをする外ほかはないと思おもって、長谷寺はせでらという大きなお寺てらのお堂どうにおこもりをしました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "長谷寺",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the young man's emotional state of loneliness and his decision to seek refuge in Hasedera Temple, setting the stage for his subsequent actions and the story's development."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "「こうしておりましては、このままあなたのお前まえでかつえ死じにに死しんでしまうかも知しれません。あなたのお力ちからでどうにかなるものでしたら、どうぞ夢ゆめででもお教おしえ下くださいまし。その夢ゆめを見みないうちは、死しぬまでここにこうしておこもりをしておりますから。」 　こういって、その男は観音かんのんさまの前まえにつっ伏ぷしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者わかもの"
+        ],
+        "receivers": [
+          "観音かんのんさま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man performing the action of prostrating himself before Kannon-sama as part of his prayer. The doer is the young man, and the receiver is Kannon-sama, who is the focus of his supplication."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "それなり幾日いくにちたっても動うごこうとはしませんでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "お堂",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man's prolonged stay in the temple's hall, establishing the context of his spiritual struggle and setting the stage for subsequent events. The location 'お堂' (hall) is explicitly mentioned in the sentence and serves as the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "するとお寺てらの坊ぼうさんがそれを見みて、 「あの若者わかものは毎日まいにちつっ伏ぷしたきり、物ものも食たべずにいる様子ようすだが、あのまま置おいてかつえ死じにに死しなれでもしたら、お寺てらの汚けがれになる。」 　とぶつぶつ口小言くちこごとをいいながら、そばへ寄よって来きて、 「お前まえはだれに使つかわれている者ものだ。いったいどこで物ものを食たべるのか。」 　と聞ききました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "坊ぼうさん"
+        ],
+        "receivers": [
+          "若者わかもの"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the monk's action of approaching the young man and questioning him about his employment and food source, which is a direct response to the young man's situation of fasting and praying."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "若者わかものはとろんとした目めを少すこしあけて、 「どうしまして、わたしのような運うんの悪わるい者ものは使つかってくれる人もありません。ごらんのとおり、もう幾日いくにちも何なにも食たべません。せめて観音かんのんさまにおすがり申もうして、生いきるとも死しぬとも、この体からだをどうにでもして頂いただこうと思おもうのです。」 　といいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "長谷寺はせでら",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man's dire circumstances and his plea to Kannon-sama, establishing the context of his poverty and spiritual desperation at the temple. This sets the stage for the subsequent actions taken by the monks."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "坊ぼうさんたちはそこで相談そうだんして、 「困こまったものだな。うっちゃっておくわけにもいかない。仮かりにも観音かんのんさまにお願ねがい申もうしているというのだから、せめて食たべ物ものだけはやることにしよう。」 　といって、みんなで代かわる代がわる、食たべ物ものを持もって行ってやりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "坊ぼうさんたち"
+        ],
+        "receivers": [
+          "若者わかもの"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the monks (坊ぼうさんたち) taking turns to bring food (食たべ物もの) to the young man (若者わかもの). The action is explicitly performed by the monks and directed towards the young man."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "若者わかものはそれをもらって食たべながら、とうとう三七二十一日にちの間あいだ、同おなじ所ところにつっ伏ぷしたまま、一生懸命いっしょうけんめいお祈いのりをしていました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者わかもの"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man's active action of praying for 21 days in the same place after receiving food. The doer is explicitly the young man, and while the prayer's recipient (Kannon) is implied contextually, the sentence does not directly mention a receiver, so it is left empty."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "いよいよ二十一日にちのおこもりをすませた明あけ方がたに、若者わかものはうとうとしながら、夢ゆめを見みました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "それは観音かんのんさまのまつられているお帳とばりの中から、一人ひとりのおじいさんが出でてきて、 「お前まえがこの世よで運うんの悪わるいのは、みんな前まえの世よで悪わるいことをしたむくいなのだ。それを思おもわないで、観音かんのんさまにぐちをいうのは間違まちがっている。けれども観音かんのんさまはかわいそうにおぼしめして、少すこしのことならしてやろうとおっしゃるのだ。それでとにかく早はやくここを出でていくがいい。ここを出でたら、いちばん先さきに手てにさわったものを拾ひろって、それはどんなにつまらないものでもだいじに持もっているのだ。そうすると今いまに運うんが開ひらけてくる。さあそれでは早はやく出でていくがいい。」 　と追おい立たてるようにいわれたと思おもうと、ふと目めを覚さましました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "長谷寺",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man's spiritual situation and the context of his prayer at the temple, establishing the narrative backdrop for his subsequent actions and the revelation from Kannon-sama."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "若者わかものはのそのそ起おき上あがって、いつものとおり坊ぼうさんの所ところへ行いって、食たべ物ものをもらって食たべると、すぐにお寺てらを出でていきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者わかもの"
+        ],
+        "receivers": [
+          "坊ぼうさん",
+          "食たべ物もの"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man performing actions of getting up, going to the monk's place, receiving food, eating it, and leaving the temple. The doer is the young man, and the receivers are the monk (as he goes to their place) and the food (as he receives it)."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "するとお寺てらの大門おおもんをまたぐひょうしに、若者わかものはひょいとけつまずいて、前まえへのめりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者わかもの"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man's action of tripping and falling forward as he crosses the temple gate. The doer is explicitly the young man, and while the action involves interacting with the gate, no clear receiver is specified beyond the physical consequence of the action."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "そしてころんだはずみに、見みると、路みちの上に落おちていた一本ぽんのわらを、思おもわず手につかんでいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者"
+        ],
+        "receivers": [
+          "一本ぽんのわら"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the young man picking up a bundle of straw after falling. The doer is the young man (若者), and the receiver is the straw (一本ぽんのわら)."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "若者わかものは、 「何なんだわらか。」 　といって、つい捨すてようとしましたが、さっきの夢ゆめに、「手にさわったものは何なんでもだいじに持もっておれ。」といわれたことを思おもい出だして、これも観音かんのんさまのおさずけものかも知しれないと思おもって、手の中でおもちゃにしながら持もっていきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者"
+        ],
+        "receivers": [
+          "わら"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the protagonist holding onto the straw after recalling the dream. The doer is the protagonist (若者), and the receiver is the straw (わら)."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "しばらく行くと、どこからかあぶが一匹ぴき飛とんできて、ぶんぶんうるさく顔かおのまわりを飛とび回まわりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "若者わかものはそばにある木の枝えだを折おって、はらいのけはらいのけして歩あるいていましたが、あぶはやはりどこまでもぶんぶん、ぶんぶん、うるさくつきまとってきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者わかもの"
+        ],
+        "receivers": [
+          "あぶ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man actively breaking a branch and using it to sweep away the persistent insect, indicating a direct action performed by the protagonist against the buzzing insect."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "若者わかものはがまんができなくなって、とうとうあぶをつかまえて、さっきのわらでおなかをしばって、木の枝えだの先さきへくくりつけて持もっていきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者わかもの"
+        ],
+        "receivers": [
+          "あぶ",
+          "木の枝えだ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man's active actions of catching the bird, tying it with straw, and attaching it to a branch. These are physical actions performed by the protagonist, making it an 'action' category with the doer as the young man and receivers as the bird and branch."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "あぶはもう逃にげることができなくなって、羽はねばかりあいかわらずぶんぶんやっていました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The bird is no longer able to escape and can only flap its wings continuously as a result of being caught.",
+        "explanation": "The sentence describes the outcome of the prior action where the protagonist caught the bird with straw. This state change reflects the bird's inability to escape, directly resulting from the previous action."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "すると向むこうから、身分みぶんのあるらしい様子ようすをした女の人が、牛車うしぐるまに乗のって長谷寺はせでらへおまいりにやって来きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女"
+        ],
+        "receivers": [
+          "長谷寺"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the woman's action of arriving at the temple, which is an active event performed by the woman (doer) and directed towards the temple (receiver)."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "その車くるまには小ちいさな男の子が乗のっていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the presence of a small boy in a carriage, establishing context for subsequent interactions. It provides background information about the characters present without specifying a location, which is typical for setting up narrative scenarios."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "男の子は車くるまのみすを肩かたにかついで、たいくつそうにきょろきょろ外そとのけしきをながめていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "すると若者わかものが木の枝えだの先さきにぶんぶんいうものをつけて持もって来くるのを見みて、ほしくなりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the woman becomes desirous of the branch with the bird",
+        "explanation": "The sentence describes the consequence of the young man holding the branch with the bird, leading to the woman's desire for it."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "そこで男の子は、 「あれをおくれよ。あれをおくれよ。」 　と、馬うまに乗のってお供ともについている侍さむらいにいいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "男の子"
+        ],
+        "receivers": [
+          "侍さむらい"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the boy's action of requesting the noisy object from the samurai, making it an 'action' category with the boy as the doer and the samurai as the receiver."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "侍さむらいは若者わかものに向むかって、 「若わかさまがそのぶんぶんいうものをほしいとおっしゃるから、気きの毒どくだがさし上あげてくれないか。」 　と頼たのみました。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "若者わかもの"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates a request (task) from the samurai to the young man to give up the object. The young man is the one required to fulfill the task."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "若者わかものは、 「これはせっかく仏ほとけさまからいただいたものですが、そんなにほしいとおっしゃるなら、お上あげ申もうしましょう。」 　といって、すなおにあぶのついた枝えだを渡わたしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者"
+        ],
+        "receivers": [
+          "侍"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the protagonist (若者) actively performing the action of giving a branch with a bird to the samurai (侍). The doer is the protagonist, and the receiver is the samurai, who is explicitly mentioned as the recipient of the branch."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "車くるまの中の女の人はそれを見みて、 「まあ、それはお気きの毒どくですね。ではその代かわりに、これを上あげましょう。のどがかわいたでしょう、お上あがりといって、上あげておくれ。」 　といって、大きな、いいにおいのするみかんを三つ、りっぱな紙かみにのせて、お供ともの侍さむらいに渡わたしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "車くるまの中の女"
+        ],
+        "receivers": [
+          "お供ともの侍さむらい"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the female passenger in the carriage giving three fragrant mandarins to the attendant samurai. The action is explicitly performed by the woman (doer) and received by the samurai (receiver)."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "若者わかものはそれをもらって、 「おやおや、一本ぽんのわらが大きなみかん三つになった。」 　とよろこびながら、それを木の枝えだにむすびつけて、肩かたにかついでいきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者"
+        ],
+        "receivers": [
+          "木の枝",
+          "みかん三つ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the protagonist actively performing the actions of tying the mandarins to a branch and carrying them, which fits the 'action' category. The doer is the 若者, and the receivers are the branch (木の枝) and the mandarins (みかん三つ)."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "するとまた向むこうから一つ、女車おんなぐるまが来きました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces a new event (arrival of a woman's carriage) that sets up future interactions in the story. It provides background context for the narrative progression without indicating a task, action, or direct consequence."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "こんどは前まえのよりもいっそう身分みぶんの高たかい人が、おしのびでおまいりに来きたものとみえて、大おおぜいの侍さむらいや、召使めしつかいの女などがお供ともについていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces a new character (a high-status person) and their entourage entering the narrative, setting up the context for subsequent interactions. It provides background context for future events without specifying a particular location, so the location field remains empty."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "するとそのお供ともの女の一人ひとりが、すっかり歩あるきくたびれて、 「もう一足ひとあしも歩あるけません。ああ、のどがかわく。水みずが飲のみたい。」 　といいながら、真まっ青さおな顔かおをして往来おうらいに倒たおれかかりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "お供ともの女"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the attendant collapsing due to exhaustion, which is an active action performed by the attendant. The action is the physical collapse, with the attendant as the doer and no explicit receiver mentioned."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "侍さむらいたちはびっくりして、どこかに水みずはないかとあわてて探さがし回まわりましたが、そこらには井戸いどもなし、流ながれもありませんでした。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "侍さむらいたち"
+        ],
+        "receivers": [
+          "水みず"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the samurai's action of searching for water, which is an active activity performed by them. The receivers are the water they were searching for."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "そこへ若者わかものがのそのそ通とおりかかりますと、みんなは、 「もし、もし、お前まえさん、この近所きんじょに水みずの出でる所ところを知しりませんか。」 　とたずねました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "若者わかものは、 「そうですね。まあこの辺へん、五町ちょうのうちには清水しみずのわいている所ところはないでしょうが、いったいどうなさったのです。」 　と聞ききました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者"
+        ],
+        "receivers": [
+          "人々"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the 若者 asking a question to the people about the water source, indicating an active interaction where the 若者 is engaging in dialogue."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "「ほら、あのとおり歩あるきくたびれて、暑あつさに当あたって、水みずをほしがって死しにそうになっている人があるのです。」 「おやおや、それはお気きの毒どくですね。ではさしあたりこれでも召めし上あがってはいかがでしょう。」 　若者わかものはそういって、みかんを三つとも出だしてやりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者わかもの"
+        ],
+        "receivers": [
+          "病人びょうにんの女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man giving three mandarins to the sick woman, which is an active action performed by him. The doer is the young man, and the receiver is the woman who receives the mandarins."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "みんなは大たいそうよろこんで、さっそくみかんをむいて、病人びょうにんの女にその汁しるを吸すわせました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "みんな"
+        ],
+        "receivers": [
+          "病人びょうにんの女"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an action where the group (みんな) actively peels mandarins and gives the juice to the sick woman, indicating a direct activity performed by the doers and received by the receivers."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "すると女はやっと元気げんきがついて、 「まあ、わたしはどうしたというのでしょう。」 　といいながら、そこらを見回みまわしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the woman actively performing the action of looking around her surroundings after regaining her strength. The doer is the woman, and there is no explicit receiver for the action."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "みんなは水みずがなくって困こまっていたところへ、往来おうらいの男がみかんをくれたので助たすかったことを話はなしますと、女はよろこんで、 「もしこの人がいなかったら、わたしはこの野原のはらの上で死しんでしまうところでしたね。」 　といって、真まっ白しろな上等じょうとうな布ぬのを三反さんたん出だして、 「どんなお礼れいでもして上あげたいところだけれど、途中とちゅうでどうすることもできないから、ほんのおしるしにさし上あげます。」 　といって、渡わたしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "女"
+        ],
+        "receivers": [
+          "若者わかもの"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the woman's action of giving three bolts of white silk to the young man as a token of gratitude. The doer is the woman, and the receiver is the young man."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "若者わかものはそれをもらって、 「おやおや、みかん三つが布ぬの三反たんになった。」 　と、ほくほくしながら布ぬのを小こわきにかかえて、また歩あるいて行きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者"
+        ],
+        "receivers": [
+          "布"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man's action of receiving and carrying the cloth after being given it by the woman. The doer is the young man, and the receiver is the cloth."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "その明あくる日ひ、若者わかものはまた昨日きのうのようにあてもなく歩あるいて行きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man's action of walking again the next day, continuing his journey. The doer is explicitly the young man, and there is no direct receiver mentioned for the action."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "するとお昼ひる近ちかくなって、向むこうから大たいそうりっぱないい馬うまに乗のった人が、二、三人にんのお供ともを連つれて、とくいらしくぽかぽかやって来きました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces a new event (arrival of a person on a fine horse) that sets the stage for subsequent developments in the narrative. It provides contextual background about the setting and characters involved without explicitly stating a task, action, or consequence."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "若者わかものはその馬うまを見みると、 「やあ、いい馬うまだなあ、ああいうのが千両馬せんりょううまというのだろう。」 　と、思おもわず独ひとり言ごとをいいながら、馬うまをながめていました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者わかもの"
+        ],
+        "receivers": [
+          "馬うま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man's action of observing the horse and muttering to himself, which directly involves the character performing an activity (gazing at the horse) and the horse being the object of his attention."
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "すると馬うまは若者わかものの前まえまで来きて、ふいにばったり倒たおれて、そのままそこで死しんでしまいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the horse died",
+        "explanation": "The sentence describes the outcome of the horse approaching the protagonist, resulting in its sudden death. This event changes the state of the narrative by introducing a new development that impacts the protagonist's journey."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "乗のっている主人しゅじんもお供ともの家来けらいたちも、真まっ青さおになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The master and attendants became pale due to the horse's sudden death",
+        "explanation": "The sentence describes the emotional reaction of the master and attendants to the horse's death, which is a direct consequence of the prior event where the horse unexpectedly died. This state change reflects their shock and distress."
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "馬うまのくらをはずして、水みずを飲のましたり、なでさすったり、いろいろにいたわっていましたが、馬うまはどうしても生いき返かえりませんでした。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The horse did not revive despite being cared for by the owner and attendants.",
+        "explanation": "The sentence describes the outcome of the prior event (attempting to revive the dead horse) resulting in the horse remaining lifeless, which represents a state change from the previous action of trying to save it."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "乗のり手てはがっかりして、泣なき出だしそうな顔かおをしながら、近所きんじょの百姓馬ひゃくしょううまを借かりて、それに乗のってしおしおと帰かえっていきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "乗のり手て"
+        ],
+        "receivers": [
+          "百姓馬"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the rider's action of borrowing a neighbor's horse and riding back home. The doer is the rider (乗のり手て), and the receiver is the borrowed horse (百姓馬)."
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "その後あとから、家来けらいたちが、馬うまのくらやくつわをはずして、ついていきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "家来"
+        ],
+        "receivers": [
+          "馬うま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the retainers' action of removing the horse's harness and following it, indicating an active activity performed by the retainers (doers) on the horse (receiver)."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "けれどいくらいい馬うまでも、死しんだ馬うまをかついでいくことはできないので、それには下男げなんを一人ひとり後あとに残のこして、死しんだ馬うまの始末しまつをさせることになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The dead horse's remains were left to be handled by a servant",
+        "explanation": "The sentence describes the outcome of the horse's death, detailing the decision to assign the servant to deal with the remains. This represents a state change resulting from the prior event of the horse dying."
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "さっきからこの様子ようすを見みていた若者わかものは、「昨日きのうは一本ぽんのわらがみかん三つになり、三つのみかんが布ぬの三反たんになった。こんどは三反たんの布ぬのが馬うま一匹ぴきになるかも知しれない。」と思おもいながら、下男げなんのそばに近ちかづいて、 「もし、もし、その馬うまはどうしたのです。大たいそうりっぱな、いい馬うまではありませんか。」 　といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者わかもの"
+        ],
+        "receivers": [
+          "下男げなん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man actively approaching the underling to inquire about the horse, which is a direct action taken based on his prior observations and beliefs about transformations. The doer is the young man, and the receiver is the underling."
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "下男げなんは、 「ええ、これは大金たいきんを出だして、はるばる陸奥国むつのくにから取とり寄よせた馬うまで、これまでもいろんな人がほしがって、いくらでも金かねは出だすから、ゆずってくれないかと、ずいぶんうるさく申もうし込こんできたものですが、殿とのさまが惜おしがって、手放てばなそうともなさらなかったのです。それがひょんなことで死しんでしまって、元もとも子こもありません。まあ、皮かわでもはいで、わたしがもらって、売うろうかと思うのですが、旅たびの途中とちゅうではそれもできないし、そうかといってこのまま往来おうらいに捨すてておくこともできないので、どうしたものか、困こまっているところです。」 　といいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "往来おうらい",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the dead horse and the foreman's dilemma, setting the stage for the protagonist's subsequent action of acquiring the horse. The location '往来おうらい' (village path) is the narrative focus where these events occur."
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "若者わかものは、 「それはお気きの毒どくですね。では馬うまはわたしが引ひき受うけて、何なんとか始末しまつして上あげますから、わたしにゆずって下くださいませんか。その代かわりにこれを上あげましょう。」 　といって、白しろい布ぬのを一反たん出だしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者わかもの"
+        ],
+        "receivers": [
+          "下男げなん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man performing the action of offering a white cloth to the servant in exchange for the dead horse. The doer is the young man, and the receiver is the servant."
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "下男げなんは死しんだ馬うまが布ぬの一反たんになれば、とんだもうけものだと思おもって、さっそく馬うまと取とりかえっこをしました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "その上、「もしか若者わかものの気きがかわって、馬うまの死骸しがいなんぞと取とりかえては損そんだと考かんがえて、布ぬのを取とり返かえしにでも来くると大たいへんだ。」と思おもって、後あとをも見返みかえらずに、さっさと駆かけて行ってしまいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "下男"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the lower servant's action of leaving quickly after considering the potential consequences of the young man's actions. The doer is the lower servant, and there is no direct receiver mentioned."
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "若者わかものは、下男げなんの姿すがたが遠とおくに見みえなくなるまで見送みおくりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者"
+        ],
+        "receivers": [
+          "下男"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the protagonist's action of seeing off the lower servant (下男) until he disappears from sight. The doer is the protagonist (若者), and the receiver is the lower servant (下男)."
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "それからそこの清水しみずで手てを洗あらいきよめて、長谷寺はせでらの観音かんのんさまの方ほうに向むいて手を合あわせながら、 「どうぞこの馬うまをもとのとおりに生いかして下くださいまし。」 　と、目めをつぶって一生懸命いっしょうけんめいにお祈いのりをしました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "そうすると死しんでいた馬うまがふと目をあいて、やがてむくむく起おき上あがろうとしました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the dead horse began to open its eyes and rise",
+        "explanation": "The sentence describes the outcome of the protagonist's prayer to revive the dead horse, marking a state change from lifelessness to the beginning of revival."
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "若者わかものは大たいそうよろこんで、さっそく馬うまの体からだに手てをかけて起おこしてやりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者わかもの"
+        ],
+        "receivers": [
+          "馬うま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man performing the action of lifting the horse's body, indicating a physical activity he actively carried out."
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "それから水みずを飲のませたり、食たべ物ものをやったりするうちに、すっかり元気げんきがついて、しゃんしゃん歩あるき出だしました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "馬うまが元気げんきを取り戻とりもどし、しゃんしゃん歩あるき出だした",
+        "explanation": "前文の若者わかものが馬うまに水みずを飲ませたり食たべ物ものを与えたりした行動の結果として、馬うまが元気を取り戻し歩き始めるという状態変化を記述しています。これは過去の行動（Action）の結果としての結果（Consequence）に該当します。"
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "若者わかものは、近所きんじょで布ぬの一反たんの代かわりに、手綱たづなとくつわを買かって馬うまにつけますと、さっそくそれに乗のって、またずんずん歩あるいて行きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者わかもの"
+        ],
+        "receivers": [
+          "馬うま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man's action of purchasing a bridle and reins for the horse and then riding it, indicating active performance of actions with the horse as the receiver."
+      }
+    },
+    {
+      "sentence_index": 60,
+      "sentence": "その晩ばんは宇治うじの近ちかくで日が暮くれました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "宇治",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the time (evening) and location (near Uji) for subsequent events in the narrative, providing contextual background for the story's progression."
+      }
+    },
+    {
+      "sentence_index": 61,
+      "sentence": "若者わかものはゆうべのようにまた布ぬの一反たんを出だして、一軒けんの家いえに泊とめてもらいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者わかもの"
+        ],
+        "receivers": [
+          "一軒けんの家いえ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man's action of taking out a bolt of cloth and staying at a house. The doer is the young man, and the receiver is the house where he stays. This action is part of his journey that leads to subsequent consequences in the story."
+      }
+    },
+    {
+      "sentence_index": 62,
+      "sentence": "その明あくる朝あさ早はやくから、若者わかものはまた馬うまに乗のって、ぽかぽか出でかけました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者わかもの"
+        ],
+        "receivers": [
+          "馬うま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man actively performing the action of riding a horse and setting off, which is a physical activity he undertakes. The doer is the young man, and the receiver is the horse as he mounts and rides it."
+      }
+    },
+    {
+      "sentence_index": 63,
+      "sentence": "もう間まもなく京都きょうとの町まちに近ちかい鳥羽とばという所ところまで来きかかりますと、一軒けんの家いえで、どこかうち中じゅうよそへ旅たびにでも立たつ様子ようすで、がやがやさわいでおりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "鳥羽",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the setting of approaching Toba near Kyoto and describes a house with people preparing to leave, establishing the context for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 64,
+      "sentence": "若者わかものはふと考かんがえました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 65,
+      "sentence": "「この馬うまをうかうか京都きょうとまで引ひっ張ぱって行いって、もし知しっている者ものにでも逢あって、盗ぬすんで来きたなぞと疑うたがわれでもしたら、とんだ迷惑めいわくな目めにあわなければならない。ちょうどこのうちの人たちはよそへ行くところらしいから、きっと馬うまが入いり用ようだろう。ここらで売うって行いく方ほうが安心あんしんだ。」 　こう思おもって、若者わかものは、 「もしもし、安やすくしておきますから、この馬うまを買かって下くださいませんか。」 　といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者わかもの"
+        ],
+        "receivers": [
+          "そこのうちの人たち"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man's action of deciding to sell the horse to the people in the nearby house. The doer is the young man, and the receiver is the house inhabitants who are potential buyers."
+      }
+    },
+    {
+      "sentence_index": 66,
+      "sentence": "するとそこのうちの人たちは、なるほどそれは有あり難がたいが、安やすく売うるといってもさしあたりお金かねがない。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "そこのうち",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides context about the people's financial situation in their house, setting the stage for the negotiation process. The location 'そこのうち' (that house) is the narrative focus where the interaction occurs."
+      }
+    },
+    {
+      "sentence_index": 67,
+      "sentence": "その代かわり田たとお米こめを分わけて上あげるから、それと取とりかえっこなら、馬うまをもらってもいいといいました。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "若者わかもの"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence states the requirement for the young man to accept the exchange of the horse for rice and fields, which is a proposed task he must fulfill."
+      }
+    },
+    {
+      "sentence_index": 68,
+      "sentence": "若者わかものは、 「わたしは旅たびの者ものですから、田たやお米こめをもらっても困こまりますが、せっかくおっしゃることですから、取とりかえっこをしましょう。」 　とふしょうぶしょうにいいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者わかもの"
+        ],
+        "receivers": [
+          "向むこうの男"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man's verbal agreement to exchange the horse for rice and land, which is an active decision made by him. The doer is the young man, and the receiver is the man from the house offering the trade."
+      }
+    },
+    {
+      "sentence_index": 69,
+      "sentence": "「そうですか。では馬うまをはいけんしよう。どれどれ。」 　と向むこうの男はいいながら、馬うまに乗のってみて、 「どうもこれはすばらしい馬うまだ。取とりかえっこをしてもけっして惜おしくはない。」 　といって、近ちかくにある稲田いなだを三町ちょうと、お米こめを少すこしくれました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "向むこうの男"
+        ],
+        "receivers": [
+          "稲田",
+          "お米"
+        ],
+        "changed_state": "",
+        "explanation": "この文は、向むこうの男が馬を引き換えに稲田とお米を受け取る行動を描写しています。行動の主体（doers）は向むこうの男で、受け手（receivers）は稲田とお米です。"
+      }
+    },
+    {
+      "sentence_index": 70,
+      "sentence": "そして、 「ついでにこの家いえもお前まえさんにあずけるから、遠慮えんりょなく住すまって下ください。わたしたちは当分とうぶん遠方えんぽうへ行って暮くらさなければなりません。まあ、寿命じゅみょうがあって、また帰かえって来くることがあったら、そのとき返かえしてもらえばいい。また向むこうで亡なくなってしまったら、そのまま、この家いえをお前まえさんのものにして下ください。べつに子供こどももないことだから、後あとでぐずぐずいうものはだれもないのです。」 　といって、家いえまであずけて立たって行きました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the young man receives the house, which becomes his property and contributes to his eventual wealth and prosperity",
+        "explanation": "The sentence describes the outcome of the prior event where the man traded the horse for rice and land. The consequence is the transfer of the house to him, which marks a pivotal state change leading to his financial success."
+      }
+    },
+    {
+      "sentence_index": 71,
+      "sentence": "若者わかものはとんだ拾ひろい物ものをしたと思おもって、いわれるままにその家いえに住すみました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若者わかもの"
+        ],
+        "receivers": [
+          "その家いえ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the young man moving into the house as instructed, with the doer being the young man and the receiver being the house."
+      }
+    },
+    {
+      "sentence_index": 72,
+      "sentence": "たった一人ひとりの暮くらしですから、当分とうぶんはもらったお米こめで、不自由ふじゆうなく暮くらしていきました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the young man's current living situation after receiving the house and rice, establishing the context for his subsequent actions. No specific location is mentioned in this sentence."
+      }
+    },
+    {
+      "sentence_index": 73,
+      "sentence": "そのうちに人ひとを使つかって田たを作つくらせて、三町ちょうの田たの半分はんぶんを自分じぶんの食料しょくりょうに、あとの半分はんぶんを人に貸かして、だんだんこの土地とちに落おち着つくようになりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 74,
+      "sentence": "秋あきになって刈かり入いれをするころになると、人に貸かした方ほうの田たはあたり前まえの出来できでしたが、自分じぶんの分ぶんに作つくった方ほうの田たは大たいそうよくみのりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The young man's own fields produced an exceptionally good harvest, leading to the accumulation of wealth and becoming a wealthy person.",
+        "explanation": "The sentence describes the outcome of the young man's farming efforts after he settled down. The contrast between the average yield of rented fields and the exceptional yield of his own fields directly leads to the consequence of accumulating wealth, which is a key turning point in his story."
+      }
+    },
+    {
+      "sentence_index": 75,
+      "sentence": "それからというものは、風かぜでちりを吹ふきためるように、どんどんお金かねがたまって、とうとう大金持おおがねもちになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "became a wealthy man (大金持)",
+        "explanation": "The sentence describes the outcome of the protagonist's prior actions (using the horse, receiving land, and farming) leading to his accumulation of wealth. This state change reflects the consequence of his earlier decisions and the magical items he obtained."
+      }
+    },
+    {
+      "sentence_index": 76,
+      "sentence": "家いえをあずけて行いった人ひとも、そのまま幾年いくねんたっても帰かえって来きませんでしたから、家いえもとうとう自分じぶんのものになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The house became the man's property as the original owner never returned.",
+        "explanation": "The sentence describes the outcome of the prior event where the man took over the house from its original owner, who never returned. This results in the house becoming his permanent possession."
+      }
+    },
+    {
+      "sentence_index": 77,
+      "sentence": "そのうちに、若者わかものはいいお嫁よめさんをもらって、子供こどもや孫まごがたくさん出来できました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "若者がいいお嫁さんをもらい、子供や孫がたくさん出来た",
+        "explanation": "この文は、若者が以前の行動（馬を引き受けてからの成功）の結果として、家庭を持つようになったことを述べています。これは状況の変化を示すため、'consequence'カテゴリに分類されます。"
+      }
+    },
+    {
+      "sentence_index": 78,
+      "sentence": "そしてにぎやかなおもしろい一生いっしょうをおくるようになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The young man began to live a lively and interesting life with a family and wealth",
+        "explanation": "The sentence describes the outcome of the protagonist's journey, indicating a significant positive change in his life after a series of events including receiving a horse, inheriting property, and marrying. This represents a consequence of the prior actions and developments in the story."
+      }
+    },
+    {
+      "sentence_index": 79,
+      "sentence": "一本ぽんのわらが、とうとう、これだけの福運ふくうんをかき寄よせてくれたのです。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The protagonist's life became prosperous with a happy, interesting life filled with good fortune",
+        "explanation": "The sentence describes the outcome of the protagonist's initial act of holding onto the straw, which led to a series of fortunate events resulting in wealth, family, and a fulfilling life. This is a consequence of the prior actions and decisions in the narrative."
+      }
+    }
+  ]
+}

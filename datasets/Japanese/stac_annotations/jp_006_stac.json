@@ -1,0 +1,934 @@
+{
+  "source_file": "/content/drive/MyDrive/FairytalesResearch/datasets/Japanese/texts/jp_006.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "model": "Qwen/Qwen3-8B",
+  "total_sentences": 62,
+  "analyzed_sentences": 62,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "むかし、むかし、あるところに、おじいさんとおばあさんがありました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "あるところ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the setting and characters (おじいさんとおばあさん) at the beginning of the story, establishing the narrative context. The location 'あるところ' (a place) serves as the general setting for the subsequent events."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "おじいさんがいつも畑はたけに出て働はたらいていますと、裏うらの山から一ぴきの古ふるだぬきが出てきて、おじいさんがせっかく丹精たんせいをしてこしらえた畑はたけのものを荒あらした上に、どんどん石いしころや土つちくれをおじいさんのうしろから投なげつけました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "おじいさんがおこって追おっかけますと、すばやく逃にげて行ってしまいます。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "たぬき"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man chasing the raccoon (action) and the raccoon escaping. The doer is the old man, and the receiver is the raccoon."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "しばらくするとまたやって来きて、あいかわらずいたずらをしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "たぬき"
+        ],
+        "receivers": [
+          "畑"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the raccoon (たぬき) performing the action of causing mischief (いたずら) again, targeting the old man's field (畑). The doer is clearly the raccoon, and the receiver is the field, which was previously ruined by the raccoon's actions."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "おじいさんも困こまりきって、わなをかけておきますと、ある日、たぬきはとうとうそのわなにかかりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "おじいさんは躍おどり上あがって喜よろこびました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the old man became happy",
+        "explanation": "The sentence describes the old man's emotional reaction to successfully trapping the raccoon, which is a direct consequence of the prior event where the raccoon was caught in the trap."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "「ああいい気味きみだ。とうとうつかまえてやった。」 　こう言いって、たぬきの四よつ足あしをしばって、うちへかついで帰かえりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "たぬき"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of tying up the raccoon's legs and carrying him home. The doer is おじいさん, and the receiver is たぬき."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "そして天井てんじょうのはりにぶら下さげて、おばあさんに、 「逃にがさないように番ばんをして、晩ばんにわたしが帰かえるまでにたぬき汁じるをこしらえておいておくれ。」 　と言いいのこして、また畑はたけへ出ていきました。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "obaasan"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man assigning a specific responsibility to the old woman: to watch over the tied raccoon and prepare the raccoon stew by his return. This constitutes an explicit task with the old woman as the designated role."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "たぬきがしばられてぶら下さげられている下で、おばあさんは臼うすを出だして、とんとん麦むぎをついていました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おばあさん"
+        ],
+        "receivers": [
+          "麦"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old woman actively grinding wheat using a mortar, which is an action performed by her. The wheat is the object being processed."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "そのうち、 「ああくたびれた。」 　とおばあさんは言いって、汗あせをふきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おばあさん"
+        ],
+        "receivers": [
+          "おばあさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old woman performing the action of wiping sweat after expressing fatigue, indicating a physical activity she actively carries out."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "するとそのときまで、おとなしくぶら下さがっていたたぬきが、上から声こえをかけました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "たぬき"
+        ],
+        "receivers": [
+          "おばあさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the tanuki's action of speaking to the old woman after being tied up. The doer is the tanuki, and the receiver is the old woman, as the tanuki addresses her."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "「もしもし、おばあさん、くたびれたら少すこしお手伝てつだいをいたしましょう。その代かわりこの縄なわをといて下ください。」 「どうしてどうして、お前まえなんぞに手伝てつだってもらえるものか。縄なわをといてやったら、手伝てつだうどころか、すぐ逃にげて行いってしまうだろう。」 「いいえ、もうこうしてつかまったのですもの、今いまさら逃にげるものですか。まあ、ためしに下おろしてごらんなさい。」 　あんまりしつっこく、殊勝しゅしょうらしくたのむものですから、おばあさんもうかうか、たぬきの言うことをほんとうにして、縄なわをといて下おろしてやりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "obaasan"
+        ],
+        "receivers": [
+          "tanuki"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the grandmother untying the rope that束缚s the tanuki, which is an active action performed by the grandmother (doer) on the tanuki (receiver)."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "するとたぬきは、 「やれやれ。」 　としばられた手足てあしをさすりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "たぬき"
+        ],
+        "receivers": [
+          "手足"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the raccoon (たぬき) performing the action of rubbing his bound hands and feet. The doer is 'たぬき', and the receivers are his '手足' (hands and feet)."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "そして、 「どれ、わたしがついてあげましょう。」 　と言いいながら、おばあさんのきねを取とり上あげて、麦むぎをつくふりをして、いきなりおばあさんの脳天のうてんからきねを打うち下おろしますと、「きゃっ。」という間まもなく、おばあさんは目をまわして、倒たおれて死しんでしまいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "たぬき"
+        ],
+        "receivers": [
+          "おばあさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the tanuki's active action of taking the sickle, pretending to grind wheat, and striking the grandmother on the head, which directly causes her death. The primary focus is on the physical act performed by the tanuki."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "たぬきはさっそくおばあさんをお料理りょうりして、たぬき汁じるの代かわりにばばあ汁じるをこしらえて、自分じぶんはおばあさんに化ばけて、すました顔かおをして炉ろの前まえに座すわって、おじいさんの帰かえりを待まちうけていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "夕方ゆうがたになって、なんにも知しらないおじいさんは、 「晩ばんはたぬき汁じるが食たべられるな。」 　と思おもって、一人ひとりでにこにこしながら、急いそいでうちへ帰かえって来きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "うち"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of rushing home in the evening, believing the stew is ready. The doer is the old man, and the receiver is his home."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "するとたぬきのおばあさんはさも待まちかねたというように、 「おや、おじいさん、おかいんなさい。さっきからたぬき汁じるをこしらえて待まっていましたよ。」 　と言いいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "たぬきのおばあさん"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the tanuki's grandmother speaking to the grandfather, which is an active activity performed by her and directed at him."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "「おやおや、そうか。それはありがたいな。」 　と言いいながら、すぐにお膳ぜんの前まえに座すわりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "お膳"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man sitting down at the table to eat, which is an active action performed by him. The receiver is the table (お膳) where he sits."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "そして、たぬきのおばあさんのお給仕きゅうじで、 「これはおいしい、おいしい。」 　と言いって、舌したつづみをうって、ばばあ汁じるのおかわりをして、夢中むちゅうになって食たべていました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おばあさん"
+        ],
+        "receivers": [
+          "ばばあ汁じる"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old woman (おばあさん) actively eating the stew (ばばあ汁じる), which is an action performed by the doer (おばあさん) on the receiver (ばばあ汁じる)."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "それを見みてたぬきのおばあさんは、思おもわず、「ふふん。」と笑わらうひょうしにたぬきの正体しょうたいを現あらわしました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "「ばばあくったじじい、 流ながしの下の骨ほねを見みろ。」 　とたぬきは言いいながら、大きなしっぽを出だして、裏口うらぐちからついと逃にげていきました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "おじいさんはびっくりして、がっかり腰こしをぬかしてしまいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The old man experienced disappointment and physical slumping as a result of the raccoon's escape",
+        "explanation": "The sentence describes the emotional and physical reaction of the old man to the raccoon's escape, which is a direct consequence of the prior event where the raccoon tricked them and escaped. The state change involves both emotional disappointment and physical posture."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "そして流ながしの下のおばあさんの骨ほねをかかえて、おいおい泣ないていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "すると、 「おじいさん、おじいさん、どうしたのです。」 　と言いって、これも裏うらの山にいる白しろうさぎが入はいって来きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白しろうさぎ"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the white rabbit entering the scene, which is an active action performed by the rabbit. The doer is explicitly the white rabbit, and there is no direct receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "「ああ、うさぎさんか。よく来きておくれだ。まあ聞きいておくれ。ひどい目にあったよ。」 　とおじいさんは言いって、これこれこういうわけだとすっかり話はなしをしました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "おじいさんの家",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man recounting the sequence of events involving the raccoon's mischief and the rabbit's subsequent intervention, establishing the context for the rabbit's planned revenge. The location is specified as the old man's house where the conversation takes place."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "うさぎはたいそう気きの毒どくがって、 「まあ、それはとんだことでしたね。けれどかたきはわたしがきっととって上あげますから、安心あんしんしていらっしゃい。」 　とたのもしそうに言いいました。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "うさぎ"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates the rabbit (うさぎ) takes on the responsibility to avenge the old man's misfortune, explicitly stating his commitment to fulfill this duty."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "おじいさんはうれし涙なみだをこぼしながら、 「ああ、どうか頼たのみますよ。ほんとうにわたしはくやしくってたまらない。」 　と言いいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the old man expresses his sadness and frustration, pleading for the rabbit to take revenge",
+        "explanation": "The sentence describes the emotional aftermath of the raccoon's previous deceptions and the death of the old man's wife, leading to his plea for the rabbit's intervention. This is a consequence of the prior events in the story."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "「大丈夫だいじょうぶ。あしたはさっそくたぬきを誘さそい出だして、ひどい目に合あわしてやります。しばらく待まっていらっしゃい。」 　とうさぎは言いって、帰かえっていきました。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "うさぎ"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence explicitly states the rabbit's responsibility to lure the raccoon and make it suffer, fulfilling the old man's request. The task is assigned to the rabbit (うさぎ) as the primary role."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "さてたぬきはおじいさんのうちを逃にげ出だしてから、何なんだかこわいものですから、どこへも出ずに穴あなにばかり引ひっ込こんでいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "たぬき"
+        ],
+        "receivers": [
+          "穴あな"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the raccoon (たぬき) hiding in a hole after escaping from the old man's house. The doer is 'たぬき' and the receiver is the hole ('穴あな') where the action is directed."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "するとある日、うさぎはかまを腰こしにさして、わざとたぬきのかくれている穴あなのそばへ行いって、かまを出だしてしきりにしばを刈かっていました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "うさぎ"
+        ],
+        "receivers": [
+          "しば"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the rabbit (うさぎ) actively performing the action of cutting grass (しば) near the raccoon's hiding hole. The location is specified as 'near the hole' (穴あなのそば), which is the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "そしてしばを刈かりながら、袋ふくろへ入いれて持もって来きたかち栗ぐりを出だして、ばりばり食たべました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "うさぎ"
+        ],
+        "receivers": [
+          "かち栗ぐり"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the rabbit's active actions of cutting grass, gathering chestnuts, and eating them. The rabbit (うさぎ) is the doer performing these actions, and the chestnuts (かち栗ぐり) are the object being consumed."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "するとたぬきはその音おとを聞ききつけて、穴あなの中からのそのそはい出だしてきました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "「うさぎさん、うさぎさん。何なにをうまそうに食たべているのだね。」 「栗くりの実みさ。」 「少すこしわたしにくれないか。」 「上あげるから、このしばを半分はんぶん向むこうの山までしょっていっておくれ。」 　たぬきは栗くりがほしいものですから、しかたなしにしばを背負せおって、先さきに立たって歩あるき出だしました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "向むこうの山まで行くと、たぬきはふり返かえって、 「うさぎさん、うさぎさん。かち栗ぐりをくれないか。」 「ああ、上あげるよ、もう一つ向むこうの山まで行ったら。」 　しかたがないので、またたぬきはずんずん先さきに立たって歩あるいていきました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "やがてもう一つ向むこうの山まで行くと、たぬきはふり返かえって、 「うさぎさん、うさぎさん。かち栗ぐりをくれないか。」 「ああ、上あげるけれど、ついでにもう一つ向むこうの山まで行っておくれ。こんどはきっと上あげるから。」 　しかたがないので、たぬきはまた先さきに立たって、こんどは何なんでも早はやく向むこうの山まで行きつこうと思おもって、うしろもふり向むかずにせっせと歩あるいていきました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "うさぎはそのひまに、ふところから火打ひうち石いしを出だして、「かちかち。」と火をきりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "うさぎ"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the rabbit (うさぎ) taking out a firestone and lighting a fire. The doer is explicitly stated as 'うさぎ', while no direct receiver is mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "たぬきはへんに思おもって、 「うさぎさん、うさぎさん、かちかちいうのは何なんだろう。」 「この山はかちかち山だからさ。」 「ああ、そうか。」 　と言いって、たぬきはまた歩あるき出だしました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "そのうちにうさぎのつけた火が、たぬきの背中せなかのしばにうつって、ぼうぼう燃もえ出だしました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the bundle of sticks on the fox's back catches fire",
+        "explanation": "The sentence describes the outcome of the fire spreading from the rabbit's fire sticks to the fox's bundle, resulting in the bundle catching fire. This is a direct consequence of the prior action where the rabbit's fire ignites the fox's bundle."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "たぬきはまたへんに思おもって、 「うさぎさん、うさぎさん、ぼうぼういうのは何なんだろう。」 「向むこうの山はぼうぼう山だからさ。」 「ああ、そうか。」 　とたぬきが言いううちに、もう火はずんずん背中せなかに燃もえひろがってしまいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The fire on the raccoon's back spreads rapidly, intensifying the danger and leading to severe burns.",
+        "explanation": "The sentence describes the escalating consequence of the fire spreading on the raccoon's back, resulting in intensified harm. This is a direct outcome of the prior action where the fire was transferred from the rabbit's fire-stone to the raccoon's bamboo."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "たぬきは、 「あつい、あつい、助たすけてくれ。」 　とさけびながら、夢中むちゅうでかけ出だしますと、山風やまかぜがうしろからどっと吹ふきつけて、よけい火が大きくなりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the fire grew larger due to the mountain wind",
+        "explanation": "The sentence describes the outcome of the prior event (tanuki's clothes catching fire) where the mountain wind exacerbates the fire, leading to a state change in the fire's intensity."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "たぬきはひいひい泣なき声ごえを上あげて、苦くるしがって、ころげまわって、やっとのことで燃もえるしばをふり落おとして、穴あなの中にかけ込こみました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "たぬき"
+        ],
+        "receivers": [
+          "燃えるしば",
+          "穴あなの中"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the tanuki's active actions of crying, suffering, rolling, shaking off burning straw, and crawling into a hole. The doer is the tanuki, and the receivers are the burning straw (being shaken off) and the hole (being entered)."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "うさぎはわざと大きな声こえで、 「やあ、たいへん。火事かじだ。火事かじだ。」 　と言いいながら帰かえっていきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "うさぎ"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the rabbit (うさぎ) deliberately announcing a fire and returning. The doer is explicitly the rabbit, while no specific receiver is mentioned in the sentence."
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "そのあくる日、うさぎはおみその中に唐とうがらしをすり込こんでこうやくをこしらえて、それを持もってたぬきのところへお見舞みまいにやって来きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "うさぎ"
+        ],
+        "receivers": [
+          "たぬき"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the rabbit (うさぎ) actively preparing a remedy (こうやく) by adding chili pepper to soup and visiting the raccoon (たぬき). The action is performed by the rabbit and directed towards the raccoon."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "たぬきは背中中せなかじゅう大おおやけどをして、うんうんうなりながら、まっくらな穴あなの中にころがっていました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "たぬきは背中中じゅう大やけどをし、うんうんうなりながらまっくらな穴の中にころがっていた",
+        "explanation": "この文は、うさぎがたぬきに唐辛子の薬を塗った行動の結果として生じた状態を描写しています。前の文脈では薬を塗った後、たぬきの背中が再び火照って痛み、穴の中に転がっている様子が記述されています。これは「consequence（結果）」カテゴリに該当します。"
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "「たぬきさん、たぬきさん。ほんとうにきのうはひどい目にあったねえ。」 「ああ、ほんとうにひどい目にあったよ。この大おおやけどはどうしたらなおるだろう。」 「うん、それでね、あんまり気きの毒どくだから、わたしがやけどにいちばん利きくこうやくをこしらえて持もって来きたのだよ。」 「そうかい。それはありがたいな。さっそくぬってもらおう。」 　こういってたぬきが火ぶくれになって、赤肌あかはだにただれている背中せなかを出だしますと、うさぎはその上に唐とうがらしみそをところかまわずこてこてぬりつけました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "うさぎ"
+        ],
+        "receivers": [
+          "背中せなか"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the rabbit (うさぎ) applying chili paste (唐とうがらしみそ) to the raccoon's (たぬき) burned back (背中せなか). This is an active performance of a physical action with a clear doer and receiver."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "すると背中せなかはまた火がついたようにあつくなって、 「いたい、いたい。」 　と言いいながら、たぬきは穴あなの中をころげまわっていました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "たぬきの背中が再び火照って痛み、穴の中で転がり回る状態になった",
+        "explanation": "前の行動（うさぎが唐辛子を塗る）の結果として、たぬきの背中が再び火照って痛み、穴の中で転がり回る状態が生じた。これは行動の結果としての状態変化を示すため、consequenceカテゴリに分類する。"
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "うさぎはその様子ようすを見みてにこにこしながら、 「なあにたぬきさん、ぴりぴりするのははじめのうちだけだよ。じきになおるから、少すこしの間あいだがまんおし。」 　と言いって帰かえっていきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "うさぎ"
+        ],
+        "receivers": [
+          "たぬき"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the rabbit (うさぎ) performing the action of observing the raccoon (たぬき)'s condition, making a comment, and returning. The doer is the rabbit, and the receiver is the raccoon as the comment is directed toward it."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "それから四、五日にちたちました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates the passage of time (four to five days) between events, setting the stage for the subsequent plot development where the rabbit plans to take the fox to the sea. It provides temporal context without specifying a location."
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "ある日うさぎは、 「たぬきのやつどうしたろう。こんどはひとつ海うみに連つれ出だして、ひどい目にあわせてやろう。」 　と独ひとり言ごとを言いっているところへ、ひょっこりたぬきがたずねて来きました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the rabbit's intention to take revenge on the raccoon by taking him to the sea, setting up the context for future events. No specific location is mentioned, so the location field remains empty."
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "「おやおや、たぬきさん、もうやけどはなおったかい。」 「ああ、お陰かげでたいぶよくなったよ。」 「それはいいな。じゃあまたどこかへ出かけようか。」 「いやもう、山はこりごりだ。」 「それなら山はよして、こんどは海うみへ行こうじゃないか、海うみはおさかながとれるよ。」 「なるほど、海うみはおもしろそうだね。」 　そこでうさぎとたぬきは連つれだって海うみへ出かけました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "うさぎ",
+          "たぬき"
+        ],
+        "receivers": [
+          "海うみ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the rabbit and raccoon traveling to the sea, with the doers being the two characters and the receiver being the sea as the destination."
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "うさぎが木の舟ふねをこしらえますと、たぬきはうらやましがって、まねをして土の舟ふねをこしらえました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "うさぎ",
+          "たぬき"
+        ],
+        "receivers": [
+          "木の舟ふね",
+          "土の舟ふね"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the actions of the rabbit and the raccoon in creating their respective boats. The doers are the characters performing the action (うさぎ and たぬき), and the receivers are the boats they made (木の舟ふね and 土の舟ふね)."
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "舟ふねができ上あがると、うさぎは木の舟ふねに乗のりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "うさぎ"
+        ],
+        "receivers": [
+          "木の舟ふね"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the rabbit (うさぎ) boarding the wooden boat (木の舟ふね), which is an active activity performed by a character."
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "たぬきは土つちの舟に乗のりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "たぬき"
+        ],
+        "receivers": [
+          "土の舟"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the raccoon's action of getting into the earth boat, which is an active activity performed by the character たぬき towards the object 土の舟."
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "べつべつに舟ふねをこいで沖おきへ出ますと、 「いいお天気てんきだねえ。」 「いいけしきだねえ。」 　とてんでんに言いいながら、めずらしそうに海うみをながめていましたが、うさぎは、 「ここらにはまだおさかなはいないよ。もっと沖おきの方ほうまでこいで行こう。さあ、どっちが早はやいか競争きょうそうしよう。」 　と言いいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "海うみ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence sets the scene for the upcoming race between the raccoon and the rabbit, establishing the location as the sea where their boat journey begins."
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "たぬきは、 「よし、よし、それはおもしろかろう。」 　と言いいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "たぬき"
+        ],
+        "receivers": [
+          "うさぎ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the raccoon (たぬき) performing the action of verbally agreeing to the race proposal, directed towards the rabbit (うさぎ). The doer is clearly the raccoon, and the receiver is implied as the rabbit, who initiated the suggestion."
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "そこで一、二、三とかけ声ごえをして、こぎ出だしました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "うさぎはかんかん舟ふなばたをたたいて、 「どうだ、木の舟ふねは軽かるくって速はやかろう。」 　と言いいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "するとたぬきも負まけない気きになって、舟ふなばたをこんこんたたいて、 「なあに、土つちの舟ふねは重おもくって丈夫じょうぶだ。」 　と言いいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "そのうちにだんだん水がしみて土つちの舟ふねは崩くずれ出だしました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the clay boat collapsed due to water seeping in",
+        "explanation": "The sentence describes the outcome of the prior event (the boat race) where the clay boat begins to break down, resulting in a state change from intact to collapsing."
+      }
+    },
+    {
+      "sentence_index": 60,
+      "sentence": "「やあ、たいへん。舟ふねがこわれてきた。」 　とたぬきがびっくりして、大おおさわぎをはじめました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "たぬき"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the tanuki's action of starting a commotion in response to the boat breaking. The doer is the tanuki, and there is no clear receiver specified in the action."
+      }
+    },
+    {
+      "sentence_index": 61,
+      "sentence": "「ああ、沈しずむ、沈しずむ、助たすけてくれ。」 　うさぎはたぬきのあわてる様子ようすをおもしろそうにながめながら、 「ざまを見みろ。おばあさんをだまして殺ころして、おじいさんにばばあ汁じるを食くわせたむくいだ。」 　と言いいますと、たぬきはもうそんなことはしないから助たすけてくれと言いって、うさぎをおがみました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "Error: Failed to parse model JSON: Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "sentence_index": 62,
+      "sentence": "そのうちどんどん舟ふねは崩くずれて、あっぷあっぷいうまもなく、たぬきはとうとう沈しずんでしまいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the raccoon sank",
+        "explanation": "The sentence describes the outcome of the prior event where the clay boat collapsed, resulting in the raccoon sinking. This is a direct consequence of the boat breaking and the raccoon's inability to prevent it."
+      }
+    }
+  ]
+}
