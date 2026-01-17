@@ -57,6 +57,10 @@ class HuggingFaceConfig:
     # Model loading options
     torch_dtype: Optional[str] = None  # "float16", "bfloat16", or None (auto)
 
+    # Use vLLM for faster inference (requires vllm package)
+    # vLLM is much faster on A100 but requires separate installation
+    use_vllm: bool = False
+
 
 # Global cache for loaded models (reuse across calls)
 _model_cache: Dict[str, Any] = {}
@@ -120,20 +124,52 @@ def _load_model_and_tokenizer(
         if tokenizer.pad_token is None:
             tokenizer.pad_token = tokenizer.eos_token
         
-        # Load model
+        # Load model with GPU optimization
         model_kwargs: Dict[str, Any] = {
             "trust_remote_code": True,
         }
+
         if dtype is not None:
             model_kwargs["torch_dtype"] = dtype
         
+        # Use device_map="auto" for better GPU utilization (especially on A100)
+        # This automatically distributes model across available GPUs
+        use_device_map = False
+        if actual_device == "cuda":
+            try:
+                # Try using device_map="auto" for optimal GPU usage
+                # This is faster than model.to() for large models
+                model_kwargs["device_map"] = "auto"
+                # Use low_cpu_mem_usage for faster loading
+                model_kwargs["low_cpu_mem_usage"] = True
+                use_device_map = True
+            except Exception:
+                # Fallback if device_map not supported
+                pass
+
         model = AutoModelForCausalLM.from_pretrained(
             model_id,
             **model_kwargs,
         )
-        model = model.to(actual_device)
+
+        # If device_map was not used, manually move to device
+        if not use_device_map:
+            model = model.to(actual_device)
+
         model.eval()
         
+        # Verify model is on correct device
+        if hasattr(model, "device"):
+            model_device = str(next(model.parameters()).device)
+        elif hasattr(model, "hf_device_map"):
+            model_device = "multiple (device_map)"
+        else:
+            model_device = "unknown"
+
+        print(f"✓ Model loaded on device: {model_device}")
+        print(
+            f"  Model dtype: {next(model.parameters()).dtype if hasattr(model, 'parameters') else 'unknown'}")
+
         # Cache for reuse
         _model_cache[cache_key] = model
         _tokenizer_cache[cache_key] = tokenizer
@@ -163,6 +199,24 @@ def chat(
         Assistant message content.
     """
     
+    # Try using vLLM if requested (much faster on A100)
+    if config.use_vllm:
+        try:
+            return _chat_with_vllm(
+                config=config,
+                messages=messages,
+                response_format_json=response_format_json,
+                timeout_s=timeout_s,
+            )
+        except ImportError:
+            raise HuggingFaceError(
+                "vLLM not installed. Install with: pip install vllm\n"
+                "Or set use_vllm=False to use transformers backend."
+            )
+        except Exception as e:
+            raise HuggingFaceError(
+                f"vLLM error: {e}. Try setting use_vllm=False.") from e
+
     if not HF_AVAILABLE:
         raise HuggingFaceError(
             "transformers and torch not installed. "
@@ -232,6 +286,13 @@ def chat(
         "do_sample": config.temperature > 0.0,
     }
     
+    # Add performance optimizations for GPU
+    if actual_device == "cuda":
+        # Use padding_side="left" for batch inference (if applicable)
+        # Disable pad_token_id warning if pad_token is None
+        if hasattr(tokenizer, "pad_token") and tokenizer.pad_token is None:
+            generation_kwargs["pad_token_id"] = tokenizer.eos_token_id
+
     try:
         with torch.no_grad():
             outputs = model.generate(
@@ -269,6 +330,96 @@ def chat(
     response = tokenizer.decode(generated_ids, skip_special_tokens=True)
     
     return response.strip()
+
+
+def _chat_with_vllm(
+    *,
+    config: HuggingFaceConfig,
+    messages: List[Dict[str, str]],
+    response_format_json: bool = True,
+    timeout_s: float = 300.0,
+) -> str:
+    """Chat using vLLM for faster inference (especially on A100)."""
+    try:
+        from vllm import LLM, SamplingParams
+    except ImportError:
+        raise ImportError("vLLM not installed. Install with: pip install vllm")
+
+    # Global cache for vLLM models
+    if not hasattr(_chat_with_vllm, "_vllm_cache"):
+        _chat_with_vllm._vllm_cache = {}
+
+    cache_key = f"vllm::{config.model}"
+
+    # Load model (cache it for reuse)
+    if cache_key not in _chat_with_vllm._vllm_cache:
+        try:
+            llm = LLM(
+                model=config.model,
+                trust_remote_code=True,
+                dtype="auto",  # vLLM handles dtype automatically
+                # Use 1 GPU by default (can increase for multi-GPU)
+                tensor_parallel_size=1,
+            )
+            _chat_with_vllm._vllm_cache[cache_key] = llm
+            print(f"✓ vLLM model loaded: {config.model}")
+        except Exception as e:
+            raise HuggingFaceError(f"Failed to load vLLM model: {e}") from e
+
+    llm = _chat_with_vllm._vllm_cache[cache_key]
+
+    # Convert messages to prompt format
+    # Use tokenizer's chat template if available
+    try:
+        from transformers import AutoTokenizer
+        tokenizer = AutoTokenizer.from_pretrained(
+            config.model, trust_remote_code=True)
+
+        system_prompt = ""
+        chat_messages = []
+        for msg in messages:
+            role = (msg.get("role") or "").strip().lower()
+            content = msg.get("content") or ""
+            if role == "system":
+                system_prompt = content
+                if response_format_json and "JSON" not in system_prompt.upper():
+                    if system_prompt:
+                        system_prompt += "\n\nYou must respond with valid JSON only (no markdown, no commentary)."
+                    else:
+                        system_prompt = "You must respond with valid JSON only (no markdown, no commentary)."
+            elif role in ("user", "assistant"):
+                chat_messages.append({"role": role, "content": content})
+
+        if hasattr(tokenizer, "apply_chat_template"):
+            prompt = tokenizer.apply_chat_template(
+                chat_messages,
+                tokenize=False,
+                add_generation_prompt=True,
+            )
+            if system_prompt:
+                prompt = f"<|im_start|>system\n{system_prompt}<|im_end|>\n{prompt}"
+        else:
+            prompt = _format_messages_manual(chat_messages, system_prompt)
+    except Exception:
+        prompt = _format_messages_manual(
+            [m for m in messages if m.get("role") != "system"],
+            next((m.get("content")
+                 for m in messages if m.get("role") == "system"), ""),
+        )
+
+    # Generate with vLLM
+    sampling_params = SamplingParams(
+        temperature=config.temperature,
+        top_p=config.top_p,
+        max_tokens=config.max_new_tokens,
+    )
+
+    try:
+        outputs = llm.generate([prompt], sampling_params)
+        response = outputs[0].outputs[0].text
+        return response.strip()
+    except Exception as e:
+        raise HuggingFaceError(f"vLLM generation failed: {e}") from e
 
 
 def _format_messages_manual(
