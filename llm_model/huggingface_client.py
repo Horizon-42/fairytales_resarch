@@ -124,51 +124,19 @@ def _load_model_and_tokenizer(
         if tokenizer.pad_token is None:
             tokenizer.pad_token = tokenizer.eos_token
         
-        # Load model with GPU optimization
+        # Load model (simple approach, no complex optimizations)
         model_kwargs: Dict[str, Any] = {
             "trust_remote_code": True,
         }
-
         if dtype is not None:
             model_kwargs["torch_dtype"] = dtype
         
-        # Use device_map="auto" for better GPU utilization (especially on A100)
-        # This automatically distributes model across available GPUs
-        use_device_map = False
-        if actual_device == "cuda":
-            try:
-                # Try using device_map="auto" for optimal GPU usage
-                # This is faster than model.to() for large models
-                model_kwargs["device_map"] = "auto"
-                # Use low_cpu_mem_usage for faster loading
-                model_kwargs["low_cpu_mem_usage"] = True
-                use_device_map = True
-            except Exception:
-                # Fallback if device_map not supported
-                pass
-
         model = AutoModelForCausalLM.from_pretrained(
             model_id,
             **model_kwargs,
         )
-
-        # If device_map was not used, manually move to device
-        if not use_device_map:
-            model = model.to(actual_device)
-
+        model = model.to(actual_device)
         model.eval()
-        
-        # Verify model is on correct device
-        if hasattr(model, "device"):
-            model_device = str(next(model.parameters()).device)
-        elif hasattr(model, "hf_device_map"):
-            model_device = "multiple (device_map)"
-        else:
-            model_device = "unknown"
-
-        print(f"✓ Model loaded on device: {model_device}")
-        print(
-            f"  Model dtype: {next(model.parameters()).dtype if hasattr(model, 'parameters') else 'unknown'}")
 
         # Cache for reuse
         _model_cache[cache_key] = model
