@@ -354,12 +354,19 @@ def _chat_with_vllm(
     # Load model (cache it for reuse)
     if cache_key not in _chat_with_vllm._vllm_cache:
         try:
+            # vLLM configuration optimized for single request latency
             llm = LLM(
                 model=config.model,
                 trust_remote_code=True,
                 dtype="auto",  # vLLM handles dtype automatically
-                # Use 1 GPU by default (can increase for multi-GPU)
-                tensor_parallel_size=1,
+                tensor_parallel_size=1,  # Use 1 GPU by default
+                # Optimize for latency (single requests) rather than throughput
+                enable_prefix_caching=False,  # Disable for single requests
+                # Reduce max model len if memory allows for faster initialization
+                max_model_len=None,  # Let vLLM auto-detect
+                # Use smaller worker thread pool for lower latency
+                # Disable Ray for single GPU (faster startup)
+                worker_use_ray=False,
             )
             _chat_with_vllm._vllm_cache[cache_key] = llm
             print(f"✓ vLLM model loaded: {config.model}")
