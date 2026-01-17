@@ -1,0 +1,138 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_017_How_Sun_Moon_and_Wind_went_out_to_Dinner.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 9,
+  "analyzed_sentences": 9,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "One day Sun, Moon, and Wind went out to dine with their uncle and aunts Thunder and Lightning.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the characters and their initial action of dining with relatives, establishing the context for the story's events. It sets the stage without specifying a physical location, so the location field remains empty."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "Their mother (one of the most distant Stars you see far up in the sky) waited alone for her children's return. Now both Sun and Wind were greedy and selfish. They enjoyed the great feast that had been prepared for them, without a thought of saving any of it to take home to their mother—but the gentle Moon did not forget her. Of every dainty dish that was brought round, she placed a small portion under one of her beautiful long finger-nails, that Star might also have a share in the treat. On their return, their mother, who had kept watch for them all night long with her little bright eye, said, \"Well, children, what have you brought home for me?\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the characters' traits and the initial scenario (Sun and Wind's selfishness vs. Moon's kindness) to set up the story's conflict and subsequent consequences. No specific location is mentioned, so location is left empty."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "Then Sun (who was eldest) said, \"I have brought nothing home for you. I went out to enjoy myself with my friends—not to fetch a dinner for my mother!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Sun"
+        ],
+        "receivers": [
+          "mother"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Sun's action of speaking to his mother, explaining his failure to bring her food. The doer is Sun, and the receiver is his mother."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "And Wind said, \"Neither have I brought anything home for you, mother. You could hardly expect me to bring a collection of good things for you, when I merely went out for my own pleasure.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Wind"
+        ],
+        "receivers": [
+          "mother"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Wind's action of speaking to his mother, explaining his lack of bringing food. The doer is Wind, and the receiver is his mother."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "But Moon said, \"Mother, fetch a plate, see what I have brought you.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Moon"
+        ],
+        "receivers": [
+          "Mother"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Moon actively performing the action of presenting her saved food to her mother by requesting her to fetch a plate. The doer is Moon, and the receiver is her mother."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "And shaking her hands she showered down such a choice dinner as never was seen before. Then Star turned to Sun and spoke thus, \"Because you went out to amuse yourself with your friends, and feasted and enjoyed yourself, without any thought of your mother at home—you shall be cursed. Henceforth, your rays shall ever be hot and scorching, and shall burn all that they touch. And men shall hate you, and cover their heads when you appear.\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "Sun is cursed with scorching rays and being hated by men",
+        "explanation": "The sentence describes the outcome of Sun's selfish actions, stating he is cursed with burning rays and being hated by humans, which is a direct consequence of his neglect of his mother."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "(And that is why the Sun is so hot to this day.) Then she turned to Wind and said, \"You also who forgot your mother in the midst of your selfish pleasures—hear your doom. You shall always blow in the hot dry weather, and shall parch and shrivel all living things. And men shall detest and avoid you from this very time.\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The Sun's rays are hot and scorching, and the Wind parches and shrivels living things, leading to men detesting and avoiding them",
+        "explanation": "The sentence describes the outcomes of the prior actions (Sun and Wind's selfishness) as decreed by Star, establishing the lasting effects on their behavior and human perception."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "(And that is why the Wind in the hot weather is still so disagreeable.) But to Moon she said, \"Daughter, because you remembered your mother, and kept for her a share in your own enjoyment, from henceforth you shall be ever cool, and calm, and bright. No noxious glare shall accompany your pure rays, and men shall always call you 'blessed.'\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The Wind is disagreeable in hot weather, and the Moon is cool, calm, and blessed.",
+        "explanation": "The sentence explains the consequences of the Wind's and Moon's actions, detailing their respective outcomes as a result of their behavior."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "(And that is why the moon's light is so soft, and cool, and beautiful even to this day.)",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The moon's light is now soft, cool, and beautiful",
+        "explanation": "This sentence explains the outcome of Moon's prior action of remembering her mother, describing the permanent change in the moon's light characteristics as a consequence."
+      }
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_015_The_Farmer_and_the_Money_lender.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 11,
+  "analyzed_sentences": 11,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "There was once a farmer who suffered much at the hands of a money-lender.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the foundational context of the story by introducing the farmer's ongoing struggle with the money-lender, setting the stage for subsequent events without advancing the narrative forward."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "Good harvests, or bad, the farmer was always poor, the money-lender rich.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the recurring problem of the farmer's poverty and the money-lender's wealth, setting up the central conflict of the story. It provides background context without introducing new actions, tasks, or consequences."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "At the last, when he hadn't a farthing left, farmer went to the money-lender's house, and said, \"You can't squeeze water from a stone, and as you have nothing to get by me now, you might tell me the secret of becoming rich.\" \"My friend,\" returned the money-lender, piously, \"riches come from Ram—ask him.\" \"Thank you, I will!\" replied the simple farmer; so he prepared three girdle-cakes to last him on the journey, and set out to find Ram. First he met a Brahman, and to him he gave a cake, asking him to point out the road to Ram; but the Brahman only took the cake and went on his way without a word. Next the farmer met a Jogi or devotee, and to him he gave a cake, without receiving any help in return. At last, he came upon a poor man sitting under a tree, and finding out he was hungry, the kindly farmer gave him his last cake, and sitting down to rest beside him, entered into conversation. \"And where are you going?\" asked the poor man, at length. \"Oh, I have a long journey before me, for I am going to find Ram!\" replied the farmer. \"I don't suppose you could tell me which way to go?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "farmer"
+        ],
+        "receivers": [
+          "money-lender's house"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the farmer's action of going to the money-lender's house to seek the secret of becoming rich."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "\"Perhaps I can,\" said the poor man, smiling, \"for I am Ram! What do you want of me?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "poor man"
+        ],
+        "receivers": [
+          "farmer"
+        ],
+        "changed_state": "",
+        "explanation": "The poor man's statement is an action where he reveals his identity as Ram, directly interacting with the farmer and setting up the subsequent exchange of the conch shell."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "Then the farmer told the whole story, and Ram, taking pity on him, gave him a conch shell, and showed him how to blow it in a particular way, saying, \"Remember! whatever you wish for, you have only to blow the conch that way, and your wish will be fulfilled. Only have a care of that money-lender, for even magic is not proof against their wiles!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Ram"
+        ],
+        "receivers": [
+          "farmer"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Ram actively giving the conch shell to the farmer and demonstrating its use, making it an 'action' with Ram as the doer and the farmer as the receiver."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "The farmer went back to his village rejoicing.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "farmer"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the farmer's active movement back to his village, which is a physical action performed by the farmer. The 'rejoicing' describes his emotional state rather than an action received by another entity."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "In fact the money-lender noticed his high spirits at once, and said to himself, \"Some good fortune must have befallen the stupid fellow, to make him hold his head so jauntily.\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the money-lender realized the farmer had good fortune, leading to his plan to steal the conch",
+        "explanation": "The sentence describes the outcome of the farmer's previous action (returning rejoicing) by showing the money-lender's realization of the farmer's good fortune, which directly leads to the money-lender's subsequent actions."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "Therefore he went over to the simple farmer's house, and congratulated him on his good fortune, in such cunning words, pretending to have heard all about it, that before long the farmer found himself telling the whole story—all except the secret of blowing the conch, for, with all his simplicity, the farmer was not quite such a fool as to tell that. Nevertheless, the money-lender determined to have the conch by hook or by crook, and as he was villain enough not to stick at trifles, he waited for a favourable opportunity and stole the conch. But, after nearly bursting himself with blowing the conch in every conceivable way, he was obliged to give up the secret as a bad job. However, being determined to succeed he went back to the farmer, and said, coolly, \"Look here; I've got your conch, but I can't use it; you haven't got it, so it's clear you can't use it either. Business is at a stand-still unless we make a bargain. Now, I promise to give you back your conch, and never to interfere with your using it, on one condition, which is this,—whatever you get from it, I am to get double.\" \"Never!\" cried the farmer; \"that would be the old business all over again!\" \"Not at all!\" replied the wily money-lender; \"you will have your share! Now, don't be a dog in the manger, for if you get all you want, what can it matter to you if I am rich or poor?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "money-lender"
+        ],
+        "receivers": [
+          "farmer"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the money-lender's active actions of stealing the conch and negotiating with the farmer, which are key steps in the story's progression. The money-lender (doer) interacts with the farmer (receiver) through these actions."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "At last, though it went sorely against the grain to be of any benefit to a money-lender, the farmer was forced to yield, and from that time, no matter what he gained by the power of the conch, the money-lender gained double. And the knowledge that this was so preyed upon the farmer's mind day and night, so that he had no satisfaction out of anything.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The farmer's satisfaction is destroyed due to the money-lender's double share of his gains, leading to constant mental distress",
+        "explanation": "This sentence describes the outcome of the farmer's agreement with the money-lender, where the farmer's ability to derive satisfaction from his gains is permanently compromised by the money-lender's exploitative arrangement."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "At last, there came a very dry season,—so dry that the farmer's crops withered for want of rain. Then he blew his conch, and wished for a well to water them, and lo! there was the well, but the money-lender had two!—two beautiful new wells! This was too much for any farmer to stand; and our friend brooded over it, and brooded over it, till at last a bright idea came into his head. He seized the conch, blew it loudly, and cried out, \"Oh, Ram! I wish to be blind of one eye!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "farmer"
+        ],
+        "receivers": [
+          "money-lender"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the farmer's active use of the conch to wish for a well, which directly leads to the money-lender gaining two wells. The farmer performs the action, and the money-lender is the recipient of the consequence."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "And so he was, in a twinkling, but the money-lender of course was blind of both, and in trying to steer his way between the two new wells, he fell into one, and was drowned. Now this true story shows that a farmer once got the better of a money-lender—but only by losing one of his eyes.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The farmer loses one eye, the money-lender becomes blind in both eyes and drowns in a well",
+        "explanation": "This sentence describes the outcome of the farmer's action of wishing to be blind in one eye, resulting in the money-lender's blindness and death. The state change involves both characters' physical transformations and the resolution of their conflict."
+      }
+    }
+  ]
+}

@@ -1,0 +1,1895 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_016.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 125,
+  "analyzed_sentences": 125,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "むかし、むかし、ある所ところに、一人ひとりのおじいさんがありました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "ある所ところ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the narrative's starting point by introducing the old man and the time setting ('むかし、むかし'), which sets the stage for the story's events. The location 'ある所ところ' is the general setting where the old man resides, serving as the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "右みぎのほおにぶらぶら大きな瘤こぶをぶら下さげて、始終しじゅうじゃまそうにしていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "ある所ところ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's physical condition (a large tumor on his right cheek) as part of the narrative setup, establishing his situation in the story's context."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "ある日、おじいさんは山へ木を切きりに行きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of going to the mountain to cut wood, indicating an activity actively performed by the character."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "にわかにひどい大あらしになって、稲光いなびかりがぴかぴか光ひかって、ごろごろ雷かみなりが鳴なり出だしました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the sudden onset of a severe storm with lightning and thunder, establishing the environmental context that leads to the subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "そのうち雨あめがざあざあ降ふってきて、うちへ帰かえるにも帰かえれなくなりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "木のうろ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the worsening weather conditions (heavy rain) that force the old man to seek shelter in the woods, establishing the context for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "どうしようかと思おもって見回みまわしますと、そこに大きな木のうろを見みつけました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "木のうろ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man actively searching for shelter during the storm and discovering a large tree hollow, which is an action he performs. The doer is the old man, and the receiver is the tree hollow."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "しかたがありませんから、その中に入はいって、雨あめの小こやみになるのを待まっているうちに、いつか日ひはとっぷりくれてしまいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "木のうろ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of entering the tree to wait for the rain to subside. The doer is the old man, and the receiver is the tree where he takes shelter."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "深ふかい山の中には、もうきこりの木を切きる音おともしません。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "深ふかい山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the current state of the mountain, establishing the setting by indicating that the usual sound of woodcutting has ceased, which contributes to the atmospheric context of the story."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "木のうろの外そとは、一面めん真まっ暗くらやみの中に、すさまじいあらしが、うなり声ごえを立たてて通とおっていくだけです。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "木のうろの外",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the stormy weather outside the tree hollow, setting the scene for the subsequent events involving the old man and the oni. This establishes the environmental context for the story's progression."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "おじいさんはこわくって、こわくって、たまらないので、夜通よどおし目めも合あわずに、うろの中に小ちいさくなっておりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of shrinking and staying in the tree due to fear. The doer is clearly the old man, and while the tree is the location, there is no explicit receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "夜中よなかになって、雨あめがだんだん小降こぶりになり、やがてあらしがぱったりやみますと、はるか高たかい山の上から、なんだか大おおぜいがやがや騒さわぎながら、下おりてくる声こえがしました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence describes the transition from a stormy night to calm, setting the stage for the arrival of the oni (demons) from the mountain. It establishes the environmental context that leads to the subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "おじいさんは今いままで一人ひとりぼっちで、寂さびしくってたまらなかったところですから、声こえを聞きくとやっと生いき返かえったような気きがしました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the old man's prior emotional state of loneliness, setting up his reaction to the subsequent events. It provides background context for his transformation when hearing the voices, fitting the 'situation' category with no specific location mentioned."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "「やれやれ、お連つれが出来できて有あり難がたい。」",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the old man feels relief and realizes he is no longer alone",
+        "explanation": "The sentence represents the emotional consequence of the old man hearing voices, which changes his state from loneliness to relief. This outcome directly follows the prior event of the oni arriving and interacting with him."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "といいながら、そっとうろの中から顔かおを出だしてのぞいてみますと、まあどうでしょう、それは人ではなくって、ふしぎな化ばけ物ものが、何なん十人にんとなくぞろぞろ出でてくるのです。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "化ばけ物もの"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of looking out from the tree hole and observing the strange creatures emerging, which is an active activity performed by him."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "青あおい着物きものを着きた赤鬼あかおにもいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "木のうろ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the presence of red ghosts wearing blue clothes in the forest, establishing the eerie setting where the old man is hiding. This sets the stage for the supernatural encounter."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "赤あかい着物きものを着きた黒鬼くろおにもいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "木のうろ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the presence of additional ghostly figures (black ghosts in red clothes) in the mountain forest setting, contributing to the background context of the supernatural gathering."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "それが山猫やまねこの目めのようにきらきら光ひかる明あかりを先さきに立たてて、どやどや下おりてくるのです。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "化ばけ物"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the ghosts (化ばけ物) moving down the mountain with a bright light, which is an active performance by the ghosts."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "おじいさんは肝きもをつぶして、またうろの中へ首くびを引ひっ込こめてしまいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "うろ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of hiding in the tree hole, making it an 'action' category. The doer is the old man, and the receiver is the tree hole."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "そしてぶるぶるふるえながら、小ちいさくなって息いきを殺ころしていました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "おじいさんは鬼おにどもの接近に怯え、体を小さくして息を殺すという恐れの状態に陥った",
+        "explanation": "鬼おにどもの接近という前段階の出来事の結果として、おじいさんが震えながら体を小さくし息を殺すという恐れの状態に変わっているため、consequenceカテゴリに分類。changed_stateはこの恐れの状態変化を表す。"
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "鬼おにどもはやがて、おじいさんの居いるうろの前まえまで来きますと、がやがやいいながら、みんなそこに立たち止どまってしまいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おにども"
+        ],
+        "receivers": [
+          "木のうろ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the oni approaching and stopping at the old man's location (the tree hollow), which is an active action performed by the oni towards the location."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "おじいさんは、「おやおや。」",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the old man reacts with surprise to the oni's arrival",
+        "explanation": "The sentence represents the old man's reaction to the oni approaching his hiding place, which is a direct consequence of their arrival. The emotional response indicates a state change from fear to a momentary reaction."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "と思おもいながら、いよいよ小ちいさくなっていますと、そのうちのおかしららしいのが、真まん中なかに座すわって、その右みぎと左ひだりへ外ほかの鬼おにたちがずらりと二ふたかわに並びました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おにたち"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the demons (鬼おにたち) arranging themselves in two rows around the central figure, which is an active action performed by the demons."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "よく見みると目めの一つしかないのや、口のまるでないのや、鼻はなの欠かけたのや、それはそれは何なんともいえない気味きみの悪わるい顔かおをした、いろいろな化ばけ物ものが押おしくらをしておりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "木のうろ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the appearance of the oni gathering in the wood, providing background context for the subsequent events. The location '木のうろ' (tree hollow) is explicitly mentioned as the setting where these creatures are assembled."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "そのうちお酒さけが出でますと、みんなお互たがいに土器かわらけのお杯さかずきをうけたり、さしたり、まるで人間にんげんのするとおりの、楽たのしそうなお酒盛さかもりがはじまりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [
+          "鬼おに"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of serving sake and initiating a lively party, which is performed by the oni (demons) as part of their gathering. The action involves both the doers (the oni) and the receivers (other oni participants)."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "お杯さかずきの数かずがだんだん重かさなるうちに、おかしららしい鬼おには、だれよりもよけいに酔よって、さもおもしろそうに笑わらいくずれていました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おかしららしい鬼おに"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the leader-like ghost's action of getting drunk and laughing excessively due to the increasing number of cups, which is an active behavior performed by the ghost."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "すると下座しもざの方ほうから、一人ひとりの若わかい鬼おにが立たってきて、お三方さんぼうの上に食たべ物ものをのせて、おそるおそるおかしらの鬼おにの前まえへ持もって出ました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若わかい鬼おに"
+        ],
+        "receivers": [
+          "おかしらの鬼おに"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes a young ghost (若わかい鬼おに) performing the action of bringing food to the main ghost (おかしらの鬼おに), indicating an active behavior directed towards another character."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "そして何なにかわけの分わからないことをしきりにいっているようです。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of talking incoherently, which is part of his interaction with the oni during the gathering. The doer is clearly the old man, but there is no explicit receiver mentioned in the sentence."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "おかしらの鬼おにもお杯さかずきを左ひだりの手に持もって、おもしろそうに笑わらいながら聞きいています。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おかしらの鬼おに"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the leader ghost (おかしらの鬼おに) actively performing the actions of holding a cup in his left hand and listening while laughing, which are specific activities carried out by the character."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "その様子ようすは少すこしも人間にんげんと違ちがったところはありません。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "木のうろ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the oni's behavior as completely different from humans, establishing the surreal and supernatural context of their gathering in the cave, which sets the stage for the subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "やがておかしらは、 「さあだれか歌うたを歌うたう者ものはないか。踊おどりを踊おどる者ものはないか。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おかしら"
+        ],
+        "receivers": [
+          "鬼おに"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the leader (oka shira) initiating an action by requesting someone to sing or dance, which is an active performance by the leader and directed towards the oni."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "といって、そこらを見回みまわしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the oni (鬼おに) performing the action of looking around everywhere, which is an active behavior initiated by the oni."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "やがておかしらのそばに座すわっていた鬼おにが、出だし抜ぬけに大きな声こえで歌うたを歌うたい出だしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the oni (鬼おに) performing the action of singing with a bold voice, which is an active activity carried out by the oni."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "するとさっきの若わかい鬼おにも、すその方ほうから前まえへ飛とび出だしてきて、さんざん踊おどりを踊おどって引ひっ込こみました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若わかい鬼おに"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the young ghost's action of jumping out and dancing, which is an active performance initiated by the young ghost. The action is performed by the young ghost without explicit mention of receivers."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "それから代かわる代がわる下座しもざの方ほうから、一人一人ひとりひとり違ちがった鬼おにが立たってきて、同おなじように踊おどりを踊おどりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the oni (鬼おに) performing dance actions as part of the ongoing festival. The doers are the oni themselves, and there is no explicit receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "中なかには上手じょうずに踊おどってほめられる者ものもあれば、ぶきような踊おどり方かたをして、みんなに笑わらわれる者ものもありました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [
+          "鬼おに",
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the actions of the ghosts (doers) performing dance (踊おどり) and the reactions from the audience (receivers) who either praise or laugh at their performances. The action focuses on the dancing activity and its immediate social consequences."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "踊おどりがすむたんびに、ひんながぱちぱち手をたたいて、 「よいよい。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of clapping (手をたたいて) performed by the oni (鬼おに) after the dance concludes. The action is a direct response to the dance performance, with no explicit receiver mentioned."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "とはやしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "crowd"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the crowd's action of cheering ('とはやしました') following the dance performance, indicating an active response to the event."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "おかしらの鬼おにはその時とき、さもゆかいそうに高笑たかわらいをして、 「あッは、あッは。おもしろい、おもしろい。今夜こんやのようなゆかいな宴会えんかいははじめてだ。だがついでにだれか、もっとめずらしい踊おどりを踊おどって見みせる者ものはないか。」",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "木のうろ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the leader ghost's reaction to the ongoing events in the mountain cave, setting the stage for subsequent interactions. The location '木のうろ' (tree cave) is the narrative focus where these events unfold."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [
+          "others"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence marks the end of the ghost leader's dialogue, which is an action of speaking. The doer is the ghost leader (鬼おに), and the receiver is the audience/listeners."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "おじいさんはさっきから、木のうろの中で体からだをこごめながら、それでもこわいもの見みたさに、首くびだけのばして外そとの様子ようすをのぞいていました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of peeking out of the tree hollow despite his fear, indicating his active behavior."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "そのうちに、いったいがひょうきんなおじいさんのことですから、いつかこわいのも何なにも忘わすれてしまって、見世物みせものでも見みている気きで、おもしろがって鬼おにの踊おどりを見物けんぶつしていました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "鬼おにの踊おどり"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man actively engaging in watching the oni's dance, which is an action performed by him. The receivers are the oni's dance as the focus of his observation."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "するうちに自分じぶんもだんだん浮うかれ出だしてきて、今いまのおかしらの鬼おにのいったことばが耳みみに入はいると、自分じぶんもひとつ飛とび出だして、踊おどりを踊おどってみたくなりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "鬼おに"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of wanting to join the oni's dance, indicating his active participation in their festivities. The doer is the old man, and the receivers are the oni as he joins their dance."
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "しかしうっかり飛とび出だしていって、一口ひとくちにあんぐりやられては大たいへんだと一度どは思おもい返かえして、一生懸命いっしょうけんめいがまんしていましたが、そのうち鬼おにどもがおもしろそうに手をたたいて、拍子ひょうしをとり出だしますと、もうたまらなくなって、 「ええ、かまうものか。出て踊おどってやれ。食くわれて死しんだらそれまでだ。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's decision to join the dance despite the danger, which is an active performance triggered by the oni's clapping. The doer is the old man, and there is no explicit receiver for the action."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "とすっかり度胸どきょうをきめて、腰こしにきこりの斧おのをさして、烏帽子えぼしをずるずるに鼻はなの頭あたままでかぶったまま、 「よう、こりゃこりゃ。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of overcoming his fear, equipping himself with an axe, and putting on his hat while preparing to dance with the oni. These are active steps he takes, with no direct recipient of the action specified."
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "といいながら、ひょっこりおかしらの鬼おにの鼻先はなさきへ飛とび出だしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "おかしらの鬼おに"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's active action of jumping towards the leader ghost's nose, indicating his movement as the doer and the leader ghost as the receiver of his action."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "あんまり出だし抜ぬけだものですから、こんどはおじいさんよりは、鬼おにの方ほうがびっくりしてしまいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "鬼おにたちはおじいさんの突然の行動に驚き、予想外の出来事に驚愕した",
+        "explanation": "この文は、おじいさんが突然鬼おにの前で踊り始めた行動（前の'action'）の結果として、鬼おにたちが驚きを露呈した状況を記述しています。これは直前の行動（おじいさんの踊り）の結果として生じた状態変化を表しています。"
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "「何なんだ。何なんだ。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents the oni's verbal reaction to the old man's sudden appearance, which is an active action performed by the oni characters."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "「人間にんげんのじじいじゃないか。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents the oni's verbal action of identifying the old man as a human, which is a direct interaction during their encounter. The doers are the oni, and the receivers are the old man."
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "といいながら、みんなはそう立だちになって騒さわぎました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おにども"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the ghosts (鬼おにども) standing up and causing a commotion, which is an active behavior performed by the characters."
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "おじいさんはもうすましたもので、一生懸命いっしょうけんめい、のびたり、ちぢんだり、縦たてになり、横よこになり、左ひだりへ行き、右みぎへ行き、くるりくるりと木きねずみのように、元気げんきよくはね回まわりながら、 「よう、こりゃこりゃ。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's active movement and dancing behavior, which is an action performed by him. The focus is on his physical actions and the manner in which he dances, with no explicit mention of recipients receiving the action."
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "とお酒さけに酔よったような声こえを出だして、さもおもしろそうに踊おどりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of dancing in a drunken manner, which is part of the festive interaction with the oni. The action is performed by the old man, with no explicit receiver mentioned."
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "だんだん鬼おにどももみんな釣つり込こまれて、いっしょに手拍子てびょうしを合あわせながら、 「うまいぞ、うまいぞ。」",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The oni were entertained and began clapping together, shifting from their intimidating presence to a more interactive and positive response to the old man's dance.",
+        "explanation": "The sentence describes the outcome of the old man's dance performance, showing the oni's reaction transitioning from hostility to engagement, which alters the dynamic of their interaction."
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "「しっかりやれ。」",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "おじいさん"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence 'しっかりやれ。' (Do your best.) is a direct instruction given by the ogres to the old man, explicitly requiring him to perform well during the dance. This qualifies as a 'task' with the old man as the role responsible for fulfilling it."
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "こんなことをいいながら、はちきれそうな大笑おおわらいをして、おじいさんの踊おどりに夢中むちゅうになっていました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the ghosts (鬼おに) actively laughing and becoming engrossed in the old man's dance, which constitutes an action performed by the ghosts and directed towards the old man's dance."
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "踊おどりがすむと、おかしらも感心かんしんして、おじいさんに、 「こんなおもしろい踊おどりははじめてだ。じいさん、明日あすの晩ばんも来きて、踊おどりを踊おどるのだぞ。」",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the ghosts request the old man to come again tomorrow",
+        "explanation": "The sentence describes the outcome of the dance performance, where the ghosts express admiration and set a new expectation for the old man to return, marking a state change in the narrative."
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence 'といいました。' marks the end of the ghosts' dialogue, indicating they have completed their speech action directed towards the old man. The doers are the ghosts, and the receivers are the old man."
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "おじいさんはとくいになって、 「へえへえ、おいいつけがなくともきっとまいりますよ。今晩こんばんは何なにしろ急きゅうなことで、おけいこをして来きませんでしたから、明日あすの晩ばんまでには、ゆっくりおさらいをしてまいりましょう。」",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "おじいさん"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence shows the old man committing to a responsibility (coming to the gathering tomorrow), which qualifies as a task. The task role is the old man himself."
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "こういうと、その時とき右手みぎての三ばんめに座すわっていた鬼おにが口を出だして、 「いいや、ああはいっても、その場ばになると横着おうちゃくをきめて出でてこないかも知しれません。約束やくそくを違ちがえさせないために、何なにか、しちに取とっておいてはどうでしょう。」",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "鬼おに",
+          "おじいさん"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence is the oni suggesting a task to take the old man's tumor to ensure he comes, so the task roles are the oni and the old man."
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "oka shira"
+        ],
+        "receivers": [
+          "ghosts"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence 'といいました。' (said) represents the action of speaking, performed by the leader (oka shira) as part of the dialogue exchange with the ghosts. The receiver is the group of ghosts involved in the interaction."
+      }
+    },
+    {
+      "sentence_index": 60,
+      "sentence": "おかしらは、 「なるほどそれはいいだろう。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おかしら"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents the leader (oka-shira) actively agreeing to the proposal of taking the old man's tumor, which is an action performed by the leader during the oni's discussion."
+      }
+    },
+    {
+      "sentence_index": 61,
+      "sentence": "とうなずきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おかしら",
+          "鬼おにども"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the act of nodding in agreement during a discussion among the leaders (oka shira) and the oni (ghosts). The doers are the characters involved in the conversation, with no explicit receiver identified."
+      }
+    },
+    {
+      "sentence_index": 62,
+      "sentence": "「それでは何なにがいいだろう。何なにを取とり上あげておいたものだろう。」",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "鬼おにども"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task discussion among the ghosts (鬼おにども) about what item to take as a precaution, setting up the subsequent action of selecting the old man's tumor."
+      }
+    },
+    {
+      "sentence_index": 63,
+      "sentence": "と鬼おにどもは、わいわい相談そうだんをはじめました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おにども"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the oni (鬼おにども) initiating a discussion (相談そうだんをはじめました), which is an active action performed by the oni group."
+      }
+    },
+    {
+      "sentence_index": 64,
+      "sentence": "「烏帽子えぼしがいい。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [
+          "鬼おにども"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents a suggestion made during the ogres' discussion about what item to take from the old man. The action is the act of proposing the hat as a target, with the speaker (an ogre) as the doer and the group of ogres as the receivers of the suggestion."
+      }
+    },
+    {
+      "sentence_index": 65,
+      "sentence": "という者ものもありました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence is part of a dialogue where characters discuss options (hat/axe), setting up the context for the subsequent decision-making process. It provides background on the group's deliberation without introducing a new location or action."
+      }
+    },
+    {
+      "sentence_index": 66,
+      "sentence": "「斧おのはどうだ。」",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "鬼おに"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence is part of the oni's discussion about what item to take from the old man, representing their collective decision-making process regarding the task of selecting something to steal."
+      }
+    },
+    {
+      "sentence_index": 67,
+      "sentence": "という者ものもありました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "木のうろ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates the ongoing discussion among the oni about what to take from the old man, setting the context for their decision-making process in the mountain cave."
+      }
+    },
+    {
+      "sentence_index": 68,
+      "sentence": "おかしらはみんなの騒さわぐのを止とめて、 「いや、何なによりもいちばん、あのじいさんのほおの瘤こぶを取とるのがいいだろう。瘤こぶは福ふくのあるものだから、じいさんのいちばんだいじなものに違ちがいない。」",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "鬼おにども"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates a decision made by the leader ghost (oka shira) to assign the task of taking the old man's tumor. The task_roles are the ghosts (鬼おにども) who are responsible for executing this decision."
+      }
+    },
+    {
+      "sentence_index": 69,
+      "sentence": "といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おにのおかしら"
+        ],
+        "receivers": [
+          "audience"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence 'といいました。' marks the end of the leader ghost's statement, indicating the completion of the action of speaking. The doer is the leader ghost (鬼おにのおかしら), and the receiver is the audience (implied by the dialogue context)."
+      }
+    },
+    {
+      "sentence_index": 70,
+      "sentence": "おじいさんは心こころの中なかでは、「しめた。」",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the old man realizes the tumor is gone and feels relieved",
+        "explanation": "The sentence indicates an internal realization following the removal of the tumor by the oni, marking a shift from fear to relief. This internal state change is a direct consequence of the prior action where the oni took the tumor."
+      }
+    },
+    {
+      "sentence_index": 71,
+      "sentence": "と思おもいながら、わざとびっくりした風ふうをして、 「おやおや、とんでもないことをおっしゃいます。目玉めだまを抜ぬかれましても、鼻はなを切きられましても、この瘤こぶを取とることだけはどうかごかんべん下くださいまし。長年ながねんの間あいだ、わたくしが宝たからのようにしてぶら下さげている、だいじなだいじな瘤こぶでございますから、これを取とり上あげられましては、ほんとうに困こまってしまいます。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "鬼おに"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man actively speaking to the oni, pretending to be surprised and refusing to have his tumor removed. This is an action performed by the old man (doer) directed at the oni (receiver)."
+      }
+    },
+    {
+      "sentence_index": 72,
+      "sentence": "といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "鬼おに"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence 'といいました。' marks the end of the old man's speech, indicating an action of verbal communication. The doer is the old man (おじいさん), and the receiver is the oni group (鬼おに)."
+      }
+    },
+    {
+      "sentence_index": 73,
+      "sentence": "鬼おにのおかしらはこれを聞きくと、 「それ見みろ。あのとおり惜おしがっている瘤こぶだ。あれに限かぎる、取とり上あげておけ。」",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the ogre decides to take the old man's tumor",
+        "explanation": "The sentence describes the ogre's decision to take the old man's tumor as a consequence of the old man's refusal, leading to the next action of the tumor being removed."
+      }
+    },
+    {
+      "sentence_index": 74,
+      "sentence": "といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おにのおかしら"
+        ],
+        "receivers": [
+          "手下てしたの鬼おに"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence marks the end of the ghost leader's instruction to take the tumor, which directly leads to the subordinate ghosts performing the action of removing the tumor. The dialogue action sets the stage for the subsequent action."
+      }
+    },
+    {
+      "sentence_index": 75,
+      "sentence": "手下てしたの鬼おにはすぐそばへ寄よってきて、 「それ、とるぞ。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "手下てしたの鬼おに"
+        ],
+        "receivers": [
+          "瘤こぶ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the subordinate ghosts (手下てしたの鬼おに) performing the action of taking (とる) the tumor (瘤こぶ), which is a direct physical action with a clear doer and receiver."
+      }
+    },
+    {
+      "sentence_index": 76,
+      "sentence": "といいながら、ぽきりと瘤こぶをねじ切きってしまいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "手下てしたの鬼おに"
+        ],
+        "receivers": [
+          "瘤こぶ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the subordinate ghosts performing the action of cutting off the old man's tumor. The doers are the subordinate ghosts, and the receiver is the tumor being cut."
+      }
+    },
+    {
+      "sentence_index": 77,
+      "sentence": "でも少すこしも痛いたくはありませんでした。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The tumor was removed without causing any pain",
+        "explanation": "The sentence describes the outcome of the prior action (the oni cutting off the tumor) by stating there was no pain, indicating a change from the previous state of discomfort caused by the tumor."
+      }
+    },
+    {
+      "sentence_index": 78,
+      "sentence": "ちょうどその時とき、夜よが明あけて、からすがかあかあ鳴なきました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the transition from night to dawn with crows cawing, establishing the temporal context and environmental setting for the subsequent events involving the oni's reaction. The location '山' (mountain) is the narrative focus where these events occur."
+      }
+    },
+    {
+      "sentence_index": 79,
+      "sentence": "「やあ、大たいへん。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents the oni's exclamation of surprise upon hearing the crow's call, indicating their active reaction to the preceding event."
+      }
+    },
+    {
+      "sentence_index": 80,
+      "sentence": "鬼おにどもはびっくりして、立たち上あがりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おにども"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the oni group's action of standing up in response to the old man's unexpected appearance, indicating a physical reaction to the situation."
+      }
+    },
+    {
+      "sentence_index": 81,
+      "sentence": "「明日あすの晩ばんはきっと来こい、瘤こぶを返かえしてやるから。」",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "鬼おにども"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task commitment by the oni to return the tumor, establishing their responsibility to fulfill this obligation."
+      }
+    },
+    {
+      "sentence_index": 82,
+      "sentence": "こういいながら、みんなあわててどこかへ消きえていきました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the ogres disappeared",
+        "explanation": "The sentence describes the outcome of the ogres' interaction with the old man, where they vanish after his statement, marking a change in their presence and the resolution of their temporary gathering."
+      }
+    },
+    {
+      "sentence_index": 83,
+      "sentence": "おじいさんはその後あとで、そっと顔かおをなでてみました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "顔かお"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man performing the action of gently touching his face, indicating a physical activity carried out by the character."
+      }
+    },
+    {
+      "sentence_index": 84,
+      "sentence": "そうすると、長年ながねんじゃまにしていた大きな瘤こぶがきれいに無なくなって、後あとはふいて取とったようにつるつるしていました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "おじいさんの右みぎのほおの大きな瘤こぶが無くなり、皮膚はつるつるしていた",
+        "explanation": "前文の鬼おにが瘤こぶを取った行動の結果として、おじいさんの体の状態が変化した。瘤こぶが消失し、皮膚が滑らかになったという状態変化を記述しているため、Consequenceカテゴリに分類する。"
+      }
+    },
+    {
+      "sentence_index": 85,
+      "sentence": "「これは有あり難がたい。ふしぎなこともあるものだ。」",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The old man expresses relief and acknowledges the occurrence of a supernatural event (the removal of his tumor by the oni).",
+        "explanation": "This sentence reflects the outcome of the prior event where the oni removed the old man's tumor. It describes his emotional response (relief) and the realization of the strange, supernatural occurrence, marking a state change from distress to relief and acknowledgment of the magical event."
+      }
+    },
+    {
+      "sentence_index": 86,
+      "sentence": "おじいさんはうれしくってたまらないので、早はやくおばあさんに見みせてよろこばしてやろうと、首くびを振ふり振ふり、急いそいでうちまで駆かけて帰かえりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "おばあさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of rushing home to show his wife the removal of his tumor. The doer is the old man, and the receiver is his wife as he intends to demonstrate the change."
+      }
+    },
+    {
+      "sentence_index": 87,
+      "sentence": "おばあさんは、おじいさんの瘤こぶがきれいに取とれているので、びっくりして、 「おや、瘤こぶをどこへやったのです。」",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The grandmother's surprise at the grandfather's tumor being removed, indicating the tumor is no longer present",
+        "explanation": "This sentence describes the outcome of the ogres removing the grandfather's tumor, resulting in the grandmother's reaction and the tumor's absence."
+      }
+    },
+    {
+      "sentence_index": 88,
+      "sentence": "と聞ききました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おばあさん"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents the grandmother (doer) performing the action of asking (listening/inquiring) directed at the grandfather (receiver) as part of their conversation about the tumor's disappearance."
+      }
+    },
+    {
+      "sentence_index": 89,
+      "sentence": "おじいさんはこういうわけで、鬼おにがしちに取とって行いったのだといいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "おじいさんの右みぎのほおの瘤こぶが取り去られ、無くなった",
+        "explanation": "この文は、鬼おにがしちに瘤こぶを取とり去った結果として、おじいさんの身体からだに生じた変化を述べています。瘤こぶが無くなったという状態変化が明確に記述されています。"
+      }
+    },
+    {
+      "sentence_index": 90,
+      "sentence": "おばあさんは、 「まあ、まあ。」",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the old woman reacts with surprise",
+        "explanation": "The sentence represents the old woman's reaction to the old man's story about the oni taking his tumor, which is a consequence of the prior events in the narrative."
+      }
+    },
+    {
+      "sentence_index": 91,
+      "sentence": "といって、目めをまるくしておりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the grandmother's eyes were wide with surprise",
+        "explanation": "The sentence describes the grandmother's reaction to the old man's story, which is a consequence of the prior events where the old man recounted his encounter with the oni. This state change reflects her emotional response to the narrative."
+      }
+    },
+    {
+      "sentence_index": 92,
+      "sentence": "さてこのお隣となりのうちにも、これは左ひだりのほおに、やはり同おなじような瘤こぶのあるおじいさんがありました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "お隣となりのうち",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence introduces a new character (an old man next door) with a similar condition to the previous old man, establishing a new context for the story's continuation."
+      }
+    },
+    {
+      "sentence_index": 93,
+      "sentence": "おじいさんの瘤こぶのいつの間まにか無なくなったのを見みて、ふしぎそうに、 「おじいさん、おじいさん、あなたの瘤こぶはどこへいきました。だれか上手じょうずなお医者いしゃさまに切きってもらったのですか。どこだかそのお医者いしゃさまのうちを教おしえて下ください。わたしも行いって取とってもらいましょう。」",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the neighbor's observation of the old man's tumor disappearing, setting up the context for the neighbor's subsequent curiosity and actions. This provides background for future events without directly stating a task, action, or consequence."
+      }
+    },
+    {
+      "sentence_index": 94,
+      "sentence": "とうらやましそうにたずねました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "隣のおじいさん"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the neighbor's action of asking the old man about the doctor, indicating the doer is the neighbor and the receiver is the old man."
+      }
+    },
+    {
+      "sentence_index": 95,
+      "sentence": "おじいさんは、 「なあに、これはお医者いしゃさまに切きってもらったのではありません。ゆうべ山の中で鬼おにが取とっていったのです。」",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the old man's tumor was removed by the oni",
+        "explanation": "The sentence describes the outcome of the prior event where the oni took the old man's tumor, explaining the cause of his tumor's disappearance. This is a consequence of the oni's action."
+      }
+    },
+    {
+      "sentence_index": 96,
+      "sentence": "といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "お隣のおじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence marks the completion of the old man's dialogue, indicating he has finished speaking to his neighbor. The action is the act of speaking, with the old man as the doer and his neighbor as the receiver of the speech."
+      }
+    },
+    {
+      "sentence_index": 97,
+      "sentence": "するとお隣となりのおじいさんはひざを乗のり出だして、 「それはいったいどういうわけです。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "お隣のおじいさん"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the neighbor's old man performing the action of standing up and asking about the situation, which is a direct response to the previous events."
+      }
+    },
+    {
+      "sentence_index": 98,
+      "sentence": "と、びっくりした顔かおをしました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the neighbor made a surprised face",
+        "explanation": "The sentence describes the neighbor's reaction to the previous explanation about the tumor being taken by the oni, indicating an emotional response to the prior event."
+      }
+    },
+    {
+      "sentence_index": 99,
+      "sentence": "そこでおじいさんは、こういうわけで踊おどりを踊おどったら、後あとでしちに取とられたのだといって、くわしい話はなしをしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "お隣のおじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man performing the action of recounting his experience (telling the story) to his neighbor, which is an active behavior within the narrative."
+      }
+    },
+    {
+      "sentence_index": 100,
+      "sentence": "お隣となりのおじいさんは、 「いいことを聞きいた。ではわたしもさっそく行って踊おどりを踊おどりましょう。おじいさん、その鬼おにの来くる所ところがどこだか、教おしえておくんなさい。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "お隣のおじいさん"
+        ],
+        "receivers": [
+          "鬼おにの来くる所"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the neighbor's intention to go to the oni's gathering place, which is an action initiated by the neighbor."
+      }
+    },
+    {
+      "sentence_index": 101,
+      "sentence": "といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "お隣のおじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence indicates that the old man spoke to his neighbor, which is an action performed by him towards his neighbor."
+      }
+    },
+    {
+      "sentence_index": 102,
+      "sentence": "「ああ、いいとも。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "お隣のおじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents the old man's verbal agreement to guide his neighbor, indicating an active response to the neighbor's request. The doer is the old man, and the receiver is the neighbor."
+      }
+    },
+    {
+      "sentence_index": 103,
+      "sentence": "とおじいさんはいって、くわしく道みちを教おしえてやりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "お隣のおじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man actively performing the action of instructing the neighbor about the path to the oni gathering. The doer is the old man, and the receiver is the neighbor who is being taught the route."
+      }
+    },
+    {
+      "sentence_index": 104,
+      "sentence": "おじいさんは大たいそうよろこんで、あたふた山へ出ていきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "山"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of going to the mountain, indicating his active movement toward the location. The doer is the old man, and the receiver is the mountain as the destination."
+      }
+    },
+    {
+      "sentence_index": 105,
+      "sentence": "そして教おそわった木のうろの中へ入はいって、こわごわ鬼おにの来くるのを待まっていました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "木のうろ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of entering the tree hollow and waiting for the oni. The doer is the old man, and the receiver is the tree hollow where he entered."
+      }
+    },
+    {
+      "sentence_index": 106,
+      "sentence": "なるほど、話はなしに聞きいたとおり、夜中よなかになると、何なん十人にんとなく青あおい着物きものを着きた赤鬼あかおにや、赤あかい着物きものを着きた黒鬼くろおにが、貂てんの目のようにきらきら光ひかる明あかりをつけて、がやがやいいながら出でてきました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "木のうろ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the arrival of the oni in the woods, establishing the setting for the subsequent interaction between the old man and the demons. The location '木のうろ' (woodland) is the narrative focus where these events unfold."
+      }
+    },
+    {
+      "sentence_index": 107,
+      "sentence": "やがてみんなはゆうべのように木のうろの前まえに座すわって、にぎやかなお酒盛さかもりをはじめました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the oni (鬼) initiating the action of starting a lively sake gathering around the tree hollow, which is a key event in the story's progression."
+      }
+    },
+    {
+      "sentence_index": 108,
+      "sentence": "その時ときおかしらの鬼おにが、 「どうした。ゆうべのじいさんはまだ来こないか。」",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "木のうろ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes a dialogue from the leader oni questioning the absence of the old man from the previous night, setting the context for the ongoing events in the wood. The location '木のうろ' (wood) is the narrative focus where these interactions occur."
+      }
+    },
+    {
+      "sentence_index": 109,
+      "sentence": "といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence 'といいました。' indicates the action of speaking, performed by the ghosts (doers) and directed towards the old man (receiver) as part of their dialogue exchange."
+      }
+    },
+    {
+      "sentence_index": 110,
+      "sentence": "「どうした、じじい、早はやく出でてこい。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents an action where the oni (鬼おに) are directly commanding the old man (おじいさん) to come out, indicating an active interaction between the characters."
+      }
+    },
+    {
+      "sentence_index": 111,
+      "sentence": "手下てしたの鬼おにどももわいわいいいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おにども"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the subordinates of the oni (鬼おにども) actively engaging in laughter and conversation, which constitutes an action performed by the doers."
+      }
+    },
+    {
+      "sentence_index": 112,
+      "sentence": "お隣となりのおじいさんは、それを聞きいて、「ここだ。」",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "木のうろ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates the neighbor's old man has identified the location (木のうろ) where the oni are gathering, setting the stage for his subsequent actions in the story."
+      }
+    },
+    {
+      "sentence_index": 113,
+      "sentence": "と思おもって、こわごわうろの中からはい出だしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "お隣のおじいさん"
+        ],
+        "receivers": [
+          "木のうろ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the neighbor old man's action of entering the tree hollow (木のうろ) after deciding to follow the demons' gathering location. The doer is the neighbor old man, and the receiver is the hollow where he enters."
+      }
+    },
+    {
+      "sentence_index": 114,
+      "sentence": "するとひとりの鬼おにが目めばやく見みつけて、 「やあ、来きました、来きました。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the oni's action of noticing the old man, which is a direct interaction triggered by the old man's previous action of emerging from the tree. The oni's observation and verbal response constitute an active behavior toward the old man."
+      }
+    },
+    {
+      "sentence_index": 115,
+      "sentence": "といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼"
+        ],
+        "receivers": [
+          "他の鬼"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence marks the end of a dialogue where a ghost (鬼) speaks, indicating the action of verbal communication. The doer is the ghost, and the receiver is the other ghosts present in the scene."
+      }
+    },
+    {
+      "sentence_index": 116,
+      "sentence": "おかしらは大おおよろこびで、 「おお、よく来きた。さあ、こっちへ出て、踊おどれ、踊おどれ。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おかしら"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the oni (おかしら) actively inviting the old man (おじいさん) to dance, which is an action performed by the oni towards the old man."
+      }
+    },
+    {
+      "sentence_index": 117,
+      "sentence": "と声こえをかけました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the ghosts (鬼おに) calling out to the old man (おじいさん), which directly prompts his subsequent action of dancing. The verb 'かけました' (called out) indicates an active performance by the ghosts towards the old man."
+      }
+    },
+    {
+      "sentence_index": 118,
+      "sentence": "おじいさんは、おっかなびっくり立たち上あがって、見みるからぶきような手てつきをして、でたらめな踊おどりを踊おどりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of standing up nervously and dancing clumsily, which is an activity actively performed by him. There is no explicit receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 119,
+      "sentence": "おかしらの鬼おにはふきげんな顔かおをして、 「今日きょうの踊おどりは何なんだ。まるでまずくって見みていられない。もういい。帰かえれ、帰かえれ。おい、じじいに、ゆうべのあずかりものを返かえしてやれ。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おかしらの鬼おに"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the oni's action of expressing frustration through their facial expression and dialogue, directly addressing the old man (おじいさん) and demanding the return of the tumor. This constitutes an active interaction within the narrative."
+      }
+    },
+    {
+      "sentence_index": 120,
+      "sentence": "とかんしゃく声ごえでいいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おかしらの鬼おに"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the leader ghost (おかしらの鬼おに) performing the action of speaking in a rage, which is a direct behavioral response to the old man's dance. The action is explicitly attributed to the ghost as the doer, with no clear receiver specified in the sentence."
+      }
+    },
+    {
+      "sentence_index": 121,
+      "sentence": "すると下座しもざの方ほうから若わかい鬼おにが、あずかっていた瘤こぶを持もって出て、 「それ、返かえすぞ。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若わかい鬼おに"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young oni taking the tumor and returning it to the old man, which is an action performed by the young oni on the old man."
+      }
+    },
+    {
+      "sentence_index": 122,
+      "sentence": "とわめきながら、瘤こぶのない右みぎのほおへぽんとたたきつけました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "若わかい鬼おに"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the young oni striking the old man's right cheek, indicating a physical act performed by the young oni (doer) against the old man (receiver)."
+      }
+    },
+    {
+      "sentence_index": 123,
+      "sentence": "お隣となりのおじいさんは、 「あっ。」",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the old man screamed in response to the demon's action",
+        "explanation": "The sentence represents the consequence of the prior event where the demon hit the old man's cheek, leading to his scream."
+      }
+    },
+    {
+      "sentence_index": 124,
+      "sentence": "とさけびましたが、もう追おっつきませんでした。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The demons ceased their pursuit of the old man after he cried out",
+        "explanation": "The sentence describes the outcome of the old man's cry, indicating the demons stopped chasing him, which is a direct consequence of his previous action."
+      }
+    },
+    {
+      "sentence_index": 125,
+      "sentence": "両方りょうほうのほおへ二つ瘤こぶをぶら下さげて、おいおい泣なきながら、山を下くだって行きました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The second old man ends up with two tumors on both cheeks, crying while descending the mountain.",
+        "explanation": "The sentence describes the outcome of the ogres taking the second old man's tumor, resulting in him having two tumors on both cheeks and crying as he descends the mountain."
+      }
+    }
+  ]
+}

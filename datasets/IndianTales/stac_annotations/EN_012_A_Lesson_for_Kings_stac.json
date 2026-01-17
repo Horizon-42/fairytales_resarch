@@ -1,0 +1,390 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_012_A_Lesson_for_Kings.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 24,
+  "analyzed_sentences": 24,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "Once upon a time, when Brahma-datta was reigning in Benares, the future Buddha returned to life as his son and heir.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "Benares",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the historical and geographical context of the story, introducing the setting in Benares where Brahma-datta is reigning, which sets the stage for the narrative."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "And when the day came for choosing a name, they called him Prince Brahma-datta.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "Benares",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of the naming event during the reign of Brahma-datta in Benares, setting the stage for subsequent developments in the story."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "He grew up in due course; and when he was sixteen years old, went to Takkasila, and became accomplished in all arts.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Prince Brahma-datta"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the prince's active actions of growing up, traveling to Takkasila, and achieving mastery in all arts. The doer is clearly the prince, and there is no explicit receiver for the actions described."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "And after his father died he ascended the throne, and ruled the kingdom with righteousness and equity.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Prince Brahma-datta"
+        ],
+        "receivers": [
+          "kingdom"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the prince's active actions of ascending the throne and ruling the kingdom, making him the doer and the kingdom the receiver of his rule."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "He gave judgments without partiality, hatred, ignorance, or fear.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "king of Benares"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the king's active action of administering judgments without bias, which is a key part of his rule. The doer is clearly the king, but no specific receiver is mentioned in the sentence."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "Since he thus reigned with justice, with justice also his ministers administered the law.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The ministers administered the law with justice as a result of the king's just reign",
+        "explanation": "The sentence describes the outcome of the king's just reign (prior event) leading to his ministers also administering the law with justice. This is a consequence of the preceding actions described in the story."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "Law-suits being thus decided with justice, there were none who brought false cases.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "no false cases were brought due to just resolution of lawsuits",
+        "explanation": "The sentence describes the outcome of the king's just legal system, showing that the previous action (administering justice) led to the consequence of no false cases being brought."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "And as these ceased, the noise and tumult of litigation ceased in the king's court. Though the judges sat all day in the court, they had to leave without any one coming for justice. It came to this, that the Hall of Justice would have to be closed! Then the future Buddha thought, \"It cannot be from my reigning with righteousness that none come for judgment; the bustle has ceased, and the Hall of Justice will have to be closed. I must, therefore, now examine into my own faults; and if I find that anything is wrong in me, put that away, and practise only virtue.\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The Hall of Justice closed due to lack of litigation, prompting the king to reflect on his own faults and seek self-examination",
+        "explanation": "The sentence describes the outcome of the king's righteous rule (prior situation) leading to the closure of the Hall of Justice and the king's introspection, fitting the 'consequence' category."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "Thenceforth he sought for some one to tell him his faults, but among those around him he found no one who would tell him of any fault, but heard only his own praise. Then he thought, \"It is from fear of me that these men speak only good things, and not evil things,\" and he sought among those people who lived outside the palace. And finding no fault-finder there, he sought among those who lived outside the city, in the suburbs, at the four gates. And there too finding no one to find fault, and hearing only his own praise, he determined to search the country places. So he made over the kingdom to his ministers, and mounted his chariot; and taking only his charioteer, left the city in disguise. And searching the country through, up to the very boundary, he found no fault-finder, and heard only of his own virtue; and so he turned back from the outer-most boundary, and returned by the high road towards the city. Now at that time the king of Kosala, Mallika by name, was also ruling his kingdom with righteousness; and when seeking for some fault in himself, he also found no fault-finder in the palace but only heard of his own virtue! So seeking in country places, he too came to that very spot. And these two came face to face in a low cart-track with precipitous sides, where there was no space for a chariot to get out of the way! Then the charioteer of Mallika the king said to the charioteer of the king of Benares, \"Take thy chariot out of the way!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "king of Benares"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the king's active pursuit of self-reflection by seeking fault-finders and leaving the city, which is an action performed by the king himself."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "But he said, \"Take thy chariot out of the way, O charioteer! In this chariot sitteth the lord over the kingdom of Benares, the great king Brahma-datta.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "charioteer of the king of Benares"
+        ],
+        "receivers": [
+          "charioteer of the king of Kosala"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents an action where the charioteer of the king of Benares directly instructs the charioteer of the king of Kosala to move their chariot, reflecting an active interaction between the two parties."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "Yet the other replied, \"In this chariot, O charioteer, sitteth the lord over the kingdom of Kosala, the great king Mallika. Take thy carriage out of the way, and make room for the chariot of our king!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "charioteer of the king of Kosala"
+        ],
+        "receivers": [
+          "charioteer of the king of Benares"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the charioteer of the king of Kosala performing the action of replying to the charioteer of the king of Benares, instructing him to move his carriage. This is an active interaction between the two charioteers."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "Then the charioteer of the king of Benares thought, \"They say then that he too is a king! What is now to be done?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "charioteer of Benares"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The charioteer of Benares is actively considering how to resolve the conflict with the other charioteer, indicating an action taken to address the situation."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "After some consideration, he said to himself, \"I know a way. I'll find out how old he is, and then I'll let the chariot of the younger be got out of the way, and so make room for the elder.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "charioteer of the king of Benares"
+        ],
+        "receivers": [
+          "king of Kosala"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the charioteer's decision to find out the age of the king of Kosala to determine who is younger, which is an active plan he is taking."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "And when he had arrived at that conclusion, he asked that charioteer what the age of the king of Kosala was. But on inquiry he found that the ages of both were equal. Then he inquired about the extent of his kingdom, and about his army, and his wealth, and his renown, and about the country he lived in, and his caste and tribe and family. And he found that both were lords of a kingdom three hundred leagues in extent; and that in respect of army and wealth and renown, and the countries in which they lived, and their caste and their tribe and their family, they were just on a par! Then he thought, \"I will make way for the most righteous.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "king of Benares"
+        ],
+        "receivers": [
+          "charioteer"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the king of Benares performing the action of inquiring about the king of Kosala's age and attributes, with the charioteer as the receiver of the inquiry."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "And he asked, \"What kind of righteousness has this king of yours?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "charioteer of Benares"
+        ],
+        "receivers": [
+          "charioteer of Kosala"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an action where the charioteer of Benares actively asks the charioteer of Kosala about the nature of his king's righteousness, initiating a dialogue that leads to the comparison of their respective virtues."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "Then the chorister of the king of Kosala, proclaiming his king's wickedness as goodness, uttered the First Stanza: \"The strong he overthrows by strength, The mild by mildness, does Mallika; The good he conquers by goodness, And the wicked by wickedness too. Such is the nature of this king! Move out of the way, O charioteer!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "chorister of the king of Kosala"
+        ],
+        "receivers": [
+          "charioteer of the king of Benares"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the chorister of the king of Kosala actively performing the action of uttering the First Stanza, which is directed towards the charioteer of the king of Benares as part of their verbal exchange."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "But the charioteer of the king of Benares asked him, \"Well, have you told all the virtues of your king?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "charioteer of the king of Benares"
+        ],
+        "receivers": [
+          "charioteer of the king of Kosala"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the charioteer of the king of Benares performing the action of asking a question to the charioteer of the king of Kosala, which is a direct interaction driving the dialogue between the two characters."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "\"Yes,\" said the other.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "charioteer of Kosala"
+        ],
+        "receivers": [
+          "charioteer of Benares"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents a verbal response (action) from the charioteer of Kosala to the charioteer of Benares, continuing the dialogue about the king's virtues."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "\"If these are his virtues, where are then his faults?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "charioteer of the king of Benares"
+        ],
+        "receivers": [
+          "charioteer of the king of Kosala"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents an action where the charioteer of the king of Benares poses a question to the charioteer of the king of Kosala, challenging the assessment of the king's virtues and faults as part of the ongoing dialogue about righteousness."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "replied he.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "charioteer of the king of Benares"
+        ],
+        "receivers": [
+          "charioteer of the king of Kosala"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence 'replied he' indicates a response in a dialogue between the charioteer of the king of Benares and the charioteer of the king of Kosala, representing an action of replying to a question about the king's virtues."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "The other said, \"Well, for the nonce, they shall be faults, if you like! But pray, then, what is the kind of goodness your king has?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "charioteer of Kosala's king"
+        ],
+        "receivers": [
+          "charioteer of Benares' king"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents a dialogue where the charioteer of Kosala's king actively engages in a conversation by asking for information about the nature of his king's goodness, directly addressing the charioteer of Benares' king."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "And then the charioteer of the king of Benares called unto him to hearken, and uttered the Second Stanza: \"Anger he conquers by calmness, And by goodness the wicked; The stingy he conquers by gifts, And by truth the speaker of lies. Such is the nature of this king! Move out of the way, O charioteer!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "charioteer of the king of Benares"
+        ],
+        "receivers": [
+          "charioteer of Mallika the king"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the charioteer of the king of Benares performing the action of uttering the Second Stanza to the charioteer of Mallika the king, which is a direct interaction addressing the prior task of determining righteousness."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "And when he had thus spoken, both Mallika the king and his charioteer alighted from their chariot.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Mallika the king",
+          "his charioteer"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of Mallika the king and his charioteer alighting from their chariot, which is a physical movement initiated by the doers without a direct receiver."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "And they took out the horses, and removed their chariot, and made way for the king of Benares!",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Mallika the king",
+          "his charioteer"
+        ],
+        "receivers": [
+          "horses",
+          "chariot"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of removing the chariot and horses, performed by Mallika the king and his charioteer, with the horses and chariot as the direct objects of the action."
+      }
+    }
+  ]
+}

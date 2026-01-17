@@ -82,6 +82,33 @@ def split_sentences(text: str) -> List[str]:
     return cleaned_sentences
 
 
+def is_cjk_char(char: str) -> bool:
+    """
+    检查字符是否是CJK（中日韩）字符
+    
+    Args:
+        char: 单个字符
+        
+    Returns:
+        如果是CJK字符返回True，否则返回False
+    """
+    if not char:
+        return False
+    code = ord(char)
+    # CJK统一表意文字：U+4E00-U+9FFF
+    # CJK扩展A：U+3400-U+4DBF
+    # CJK扩展B：U+20000-U+2A6DF (需要代理对处理，这里简化处理)
+    # 日文平假名：U+3040-U+309F
+    # 日文片假名：U+30A0-U+30FF
+    # 日文汉字：U+4E00-U+9FFF (与中文共享)
+    return (
+        (0x4E00 <= code <= 0x9FFF) or  # CJK统一表意文字
+        (0x3400 <= code <= 0x4DBF) or  # CJK扩展A
+        (0x3040 <= code <= 0x309F) or  # 日文平假名
+        (0x30A0 <= code <= 0x30FF)     # 日文片假名
+    )
+
+
 def split_sentences_with_quotes(text: str) -> List[str]:
     """
     智能句子切分，正确处理引号内的对话和破折号
@@ -186,6 +213,17 @@ def split_sentences_with_quotes(text: str) -> List[str]:
                             i = j + punct_length
                             continue
                         
+                        # 检查后面是否有小写字母或CJK字符开头的文本（可能是对话后的叙述/说明）
+                        has_narration = False
+                        if j < len(text):
+                            next_char = text[j]
+                            if next_char.islower() or is_cjk_char(next_char):
+                                has_narration = True
+                        
+                        if has_narration:
+                            i = j
+                            continue
+                        
                         if j < len(text):
                             sentence = ''.join(current_sentence).strip()
                             if sentence:
@@ -259,6 +297,25 @@ def split_sentences_with_quotes(text: str) -> List[str]:
                         i = j + punct_length
                         continue
 
+                    # 检查后面是否有小写字母或CJK字符开头的文本（可能是对话后的叙述/说明）
+                    # 例如："Who shall be my teacher?" the lad asked.
+                    # 例如："爹爹，我们拿这粪瓢来舀干天河的水。"小女儿終于揩干了眼泪
+                    # 例如：「ドンブラコッコ、スッコッコ。」と流ながれて来きました
+                    # 这种情况下，叙述部分应该和对话部分属于同一个句子
+                    has_narration = False
+                    if j < len(text):
+                        next_char = text[j]
+                        # 如果下一个字符是小写字母或CJK字符，可能是叙述文本
+                        if next_char.islower() or is_cjk_char(next_char):
+                            has_narration = True
+                            # 继续收集字符，直到遇到下一个句子结束标点
+                            # 不在这里切分，让后续的句子结束标点处理逻辑来切分
+                    
+                    # 如果有叙述文本，继续收集，不切分
+                    if has_narration:
+                        i = j
+                        continue
+
                     # 如果后面还有非空白字符，说明还有更多内容，应该切分当前句子
                     if j < len(text):
                         # 完成当前句子
@@ -325,6 +382,17 @@ def split_sentences_with_quotes(text: str) -> List[str]:
                             if j + k < len(text):
                                 current_sentence.append(text[j + k])
                         i = j + punct_length
+                        continue
+                    
+                    # 检查后面是否有小写字母或CJK字符开头的文本（可能是对话后的叙述/说明）
+                    has_narration = False
+                    if j < len(text):
+                        next_char = text[j]
+                        if next_char.islower() or is_cjk_char(next_char):
+                            has_narration = True
+                    
+                    if has_narration:
+                        i = j
                         continue
                     
                     if j < len(text):

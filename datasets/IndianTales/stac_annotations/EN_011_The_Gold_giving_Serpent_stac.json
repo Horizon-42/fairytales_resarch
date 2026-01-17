@@ -1,0 +1,119 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_011_The_Gold_giving_Serpent.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 8,
+  "analyzed_sentences": 8,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "Now in a certain place there lived a Brahman named Haridatta.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "a certain place",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the setting and introduces the main character, Haridatta, which sets the stage for the narrative."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "He was a farmer, but poor was the return his labour brought him.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background information about Haridatta's profession and his poor financial outcomes, establishing the context for his subsequent actions. No specific location is mentioned in this sentence."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "One day, at the end of the hot hours, the Brahman, overcome by the heat, lay down under the shadow of a tree to have a doze.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Brahman"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the Brahman's active decision to lie down under a tree to rest, which is a physical action performed by him."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "Suddenly he saw a great hooded snake creeping out of an ant-hill near at hand.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "ant-hill",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes an event that sets the stage for the Brahman's subsequent actions, establishing the context of the snake's presence at the ant-hill. This observation is part of the narrative setup leading to the task of offering respects to the serpent."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "So he thought to himself, \"Sure this is the guardian deity of the field, and I have not ever worshipped it. That's why my farming is in vain. I will at once go and pay my respects to it.\" When he had made up his mind, he got some milk, poured it into a bowl, and went to the ant-hill, and said aloud: \"O Guardian of this Field! all this while I did not know that you dwelt here. That is why I have not yet paid my respects to you; pray forgive me.\" And he laid the milk down and went to his house. Next morning he came and looked, and he saw a gold denar in the bowl, and from that time onward every day the same thing occurred: he gave milk to the serpent and found a gold denar. One day the Brahman had to go to the village, and so he ordered his son to take the milk to the ant-hill. The son brought the milk, put it down, and went back home. Next day he went again and found a denar, so he thought to himself: \"This ant-hill is surely full of golden denars; I'll kill the serpent, and take them all for myself.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Haridatta"
+        ],
+        "receivers": [
+          "serpent"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Haridatta's actions of preparing milk, traveling to the ant-hill, and offering it to the serpent. The doer is Haridatta, and the receiver is the serpent."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "So next day, while he was giving the milk to the serpent, the Brahman's son struck it on the head with a cudgel. But the serpent escaped death by the will of fate, and in a rage bit the Brahman's son with its sharp fangs, and he fell down dead at once.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the Brahman's son died after being bitten by the serpent, and the serpent escaped death",
+        "explanation": "The sentence describes the outcome of the Brahman's son striking the serpent, resulting in the son's death and the serpent surviving, which is a consequence of the prior action."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "His people raised him a funeral pyre not far from the field and burnt him to ashes.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The son's death led to his body being burned in a funeral pyre",
+        "explanation": "The sentence describes the outcome of the son's death (prior event) by detailing the funeral rites performed, which alters the state of the narrative by marking the son's demise as a resolved event."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "Two days afterwards his father came back, and when he learnt his son's fate he grieved and mourned. But after a time, he took the bowl of milk, went to the ant-hill, and praised the serpent with a loud voice. After a long, long time the serpent appeared, but only with its head out of the opening of the ant-hill, and spoke to the Brahman: \"'Tis greed that brings you here, and makes you even forget the loss of your son. From this time forward friendship between us is impossible. Your son struck me in youthful ignorance, and I have bitten him to death. How can I forget the blow with the cudgel? And how can you forget the pain and grief at the loss of your son?\" So speaking, it gave the Brahman a costly pearl and disappeared. But before it went away it said: \"Come back no more.\" The Brahman took the pearl, and went back home, cursing the folly of his son.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The serpent permanently severed its relationship with the Brahman, gifted him a costly pearl, and departed, leaving the Brahman to curse his son's folly.",
+        "explanation": "The sentence describes the outcome of the son's death and the subsequent interaction between the Brahman and the serpent, marking a state change in their relationship and the resolution of the conflict."
+      }
+    }
+  ]
+}

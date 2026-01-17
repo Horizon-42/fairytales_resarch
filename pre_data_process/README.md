@@ -87,3 +87,28 @@ python sentence_splitter.py ../datasets/PersianTales/texts/FA_001_en.txt
 - 标准库：`re`, `sys`, `pathlib`, `typing`
 
 无需安装额外依赖。
+
+### 运行测试
+
+项目包含完整的单元测试，使用 Python 标准库的 `unittest` 框架：
+
+```bash
+# 运行所有测试
+python3 test_sentence_splitter.py
+
+# 或者使用 unittest 模块
+python3 -m unittest test_sentence_splitter.py -v
+```
+
+测试覆盖以下场景：
+- ✅ CJK字符检测（中文、日文平假名、片假名、汉字）
+- ✅ 英文对话+叙述合并（原始bug修复）
+- ✅ 中文对话+叙述合并（英文引号和中文引号）
+- ✅ 日文对话+叙述合并
+- ✅ 破折号连接处理
+- ✅ 正常句子切分
+- ✅ 引号内句子处理
+- ✅ 边界情况（空文本、未闭合引号、数字、缩写等）
+- ✅ 真实世界例子
+
+当前测试套件包含 **40 个测试用例**，全部通过。

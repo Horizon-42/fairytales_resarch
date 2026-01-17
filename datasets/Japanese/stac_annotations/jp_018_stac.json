@@ -1,0 +1,645 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_018.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 40,
+  "analyzed_sentences": 40,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "むかしむかし、ある山寺の小坊主が、クリひろいに行きたくなりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "山寺",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the background context of the story by introducing the main character (a young monk at a mountain temple) and his desire to go on a chestnut gathering trip, setting the stage for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "「和尚(おしょう)さん、山へクリひろいに行ってもいいですか？」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小坊主"
+        ],
+        "receivers": [
+          "和尚(おしょう)さん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents the monk's action of requesting permission to go on a chestnut collection trip. The doer is the small monk (小坊主) performing the action of asking, and the receiver is the abbot (和尚(おしょう)さん) who is being addressed."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "小坊主が聞くと、和尚さんは答えました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "和尚"
+        ],
+        "receivers": [
+          "小坊主"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the monk (和尚) performing the action of answering (答えました) in response to the little monk's (小坊主) question. The doer is the monk, and the receiver is the little monk who asked the question."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "「クリひろいか。しかし、山には鬼ババが出るぞ」 「でも・・・」 　小坊主が、どうしても行きたいとだだをこねるので、和尚さんは三枚のお札を渡して、 「困った事があったら、このお札に願いをかけなさい。きっと、お前を助けてくれるじゃろう」 と、小坊主を送り出しました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of the young monk's desire to go chestnut picking in the mountains and the abbot's warning about the ghost Bakaba, setting up the narrative's central conflict and location."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "小坊主は山に入ると、あるわあるわ、大きなクリがたくさん落ちています。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "山",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence describes the environment the small monk encounters after entering the mountain, setting the stage for the subsequent interaction with the ghost babaa. The location '山' (mountain) is the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "小坊主が夢中でクリひろいをしていると、突然目の前に鬼ババが現れました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼ババ"
+        ],
+        "receivers": [
+          "小坊主"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the ghost (鬼ババ) actively appearing in front of the little monk (小坊主), which is an action performed by the ghost and directly affecting the monk."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "「うまそうな坊主じゃ。家に帰って食ってやろう」 　小坊主は身がすくんでしまい、叫ぶ事も逃げ出す事も出来ません。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼ババ"
+        ],
+        "receivers": [
+          "小坊主"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the ghost's action of threatening the monk, which is an active event leading to the monk's helplessness."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "そしてそのまま鬼ババの家へ、連れていかれました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼ババ"
+        ],
+        "receivers": [
+          "小坊主"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of being taken to the ghost babas' house, with the ghost babas as the doers and the little monk as the receiver."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "恐ろしさのあまり小坊主が小さくなっていると、鬼ババはキバをむいて大きな口を開けました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼ババ"
+        ],
+        "receivers": [
+          "小坊主"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the ogre (鬼ババ) performing the action of opening his mouth wide, targeting the little monk (小坊主) as the receiver of this action."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "(たっ、大変だ。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the monk's fear and the threat of being eaten intensifies",
+        "explanation": "The sentence represents the monk's reaction to the oni-baba's threat, which is a direct consequence of the prior action (oni-baba opening its mouth to eat him). The emotional state change reflects the escalating danger and the monk's distress."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "食われてしまうぞ！)",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The demon's threat intensifies the monk's fear and leads to the monk's desperate plan to use the bathroom as a distraction",
+        "explanation": "The sentence represents the consequence of the demon capturing the monk, escalating the tension and prompting the monk's subsequent action of feigning a need to go to the bathroom."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "小坊主はそう思うと、とっさに、 「ウンチがしたい！」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小坊主"
+        ],
+        "receivers": [
+          "鬼ババ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the little monk's spontaneous action of declaring his need to go to the bathroom, directed at the ghost. The doer is the little monk, and the receiver is the ghost who is the target of his statement."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "と、言いました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小坊主"
+        ],
+        "receivers": [
+          "鬼ババ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence indicates the small monk (doer) completed the action of speaking (implicit in the preceding dialogue), with the oni-baba (receiver) as the audience. The transition marker 'と、言いました' signifies the completion of the monk's verbal action directed at the oni-baba."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "「なに、ウンチだと。・・・うむ、あれはくさくてまずいからな。仕方ない、はやく行って出してこい」 　鬼ババは小坊主の腰になわをつけて、便所に行かせてくれました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼ババ"
+        ],
+        "receivers": [
+          "小坊主"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the oni-baba's action of tying the monk and sending him to the bathroom, making it an 'action' category with the doer as 鬼ババ and the receiver as 小坊主."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "中に入ると小坊主はさっそくなわをほどき、それを柱に結びつけると、お札をはりつけて、 「お札さん。おれの代わりに、返事をしておくれ」 と、言いつけると、窓から逃げ出しました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小坊主"
+        ],
+        "receivers": [
+          "柱",
+          "お札"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the little monk's active actions of removing the rope, tying it to a pillar, attaching the amulet, and escaping through the window. These are direct physical actions performed by the monk (doer) that involve interacting with the pillar and amulet (receivers)."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "「坊主、ウンチはまだか？」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼ババ"
+        ],
+        "receivers": [
+          "小坊主"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents the oni-baba's action of questioning the monk about finishing his stool, which is part of the ongoing interaction where the oni-baba is actively engaging with the monk."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "すると、お札が答えました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小坊主"
+        ],
+        "receivers": [
+          "鬼ババ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the amulet answering the demon's question, which is an action performed by the monk using the amulet, with the demon as the receiver."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "「もう少し、もう少し」 　しばらくして、鬼ババがまた聞きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼ババ"
+        ],
+        "receivers": [
+          "小坊主"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the demon (鬼ババ) repeatedly asking the monk (小坊主) about the state of his business, which is a direct interaction between the two characters."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "「坊主、ウンチはまだか？」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼ババ"
+        ],
+        "receivers": [
+          "小坊主"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents the oni-baba's action of questioning the monk about his stool, which is part of the interaction leading to the monk's escape using the talisman. The oni-baba (doer) is directly addressing the monk (receiver) through this verbal action."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "「もう少し、もう少し」 　またしばらくして、鬼ババが聞きましたが、 「もう少し、もう少し」 と、同じ事を言うので、 「もうガマン出来ん！　早く出ろ！」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小坊主"
+        ],
+        "receivers": [
+          "鬼ババ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the monk's action of using the scroll to respond to the Oni Baba's questions, which is part of the process leading to the Oni Baba's defeat."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "と、言って、便所のとびらを開けてみると、中は空っぽです。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the toilet is empty",
+        "explanation": "The sentence describes the outcome of the prior action where the monk used the incense stick to trick the Oni Baba into going to the toilet. The consequence is that when the monk opens the toilet door, it is empty, indicating the Oni Baba has already left."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "「ぬぬっ！　よくもいっぱい食わせたな。待てえ！」",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the demon begins chasing the monk after being tricked into going to the bathroom",
+        "explanation": "The sentence describes the outcome of the monk's previous action (using the scroll to trick the demon into going to the bathroom). The demon's reaction leads to him pursuing the monk, which changes the state of the narrative."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "鬼ババは叫びながら、夜道を走る小坊主を追いかけて行きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼ババ"
+        ],
+        "receivers": [
+          "小坊主"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the鬼ババ actively pursuing the小坊主 through the night road, indicating an action performed by the鬼ババ (doer) directed at the小坊主 (receiver)."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "それを知った小坊主は、二枚目の札を取り出すと、 「川になれ！」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小坊主"
+        ],
+        "receivers": [
+          "お札"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the little monk performing the action of taking out the second scroll and commanding it to become a river. The doer is the monk, and the receiver is the scroll (お札) as the object being acted upon."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "と、言って、後ろに投げました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小坊主"
+        ],
+        "receivers": [
+          "お札"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of throwing the second scroll, performed by the small monk. The doer is the small monk, and the receiver is the scroll (お札) being thrown."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "すると後ろに川が現れて、鬼ババは流されそうになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "鬼ババは川の流れに流されそうになった",
+        "explanation": "この文は小坊主が三枚目のお札を投げて山火事を起こした後の結果を記述しており、鬼ババが川に流されそうになった状態の変化を表しています。"
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "けれど鬼ババは大口を開けると川の水をガブガブと飲み干して、また追いかけてきます。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼ババ"
+        ],
+        "receivers": [
+          "川の水",
+          "小坊主"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the鬼ババ drinking river water and continuing to chase the small monk, with the doer being鬼ババ and receivers being the water (consumed) and the monk (chased)."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "小坊主は、三枚目の札を出すと、 「山火事になれ！」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小坊主"
+        ],
+        "receivers": [
+          "山火事"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the little monk actively performing the action of summoning a fire using the third scroll, making him the doer and the fire the receiver."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "と、言って、後ろに投げました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小坊主"
+        ],
+        "receivers": [
+          "お札"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the small monk performing the action of throwing the third scroll (お札) behind. The doer is the small monk, and the receiver is the scroll being thrown."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "すると後ろで山火事がおきて鬼ババを通せんぼうしましたが、鬼ババはさっき飲んだ川の水を吐き出すと、またたく間に山火事を消してしまいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "山火事が消され、鬼ババの追跡が再開される状態に変わりました",
+        "explanation": "前文の小坊主が三枚目の札で山火事を起こした行動の結果として、鬼ババが水を吐き出して火を消すという状態変化が記述されています。これは行動の結果生じた新たな状況を表すため、consequenceカテゴリに分類します。"
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "鬼ババは、また追いかけてきます。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼ババ"
+        ],
+        "receivers": [
+          "小坊主"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Oni-Baba's action of pursuing the little monk again, indicating an active behavior performed by the Oni-Baba (doer) directed towards the little monk (receiver)."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "小坊主は命からがらお寺にたどりつくと、和尚さんに助けを求めました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小坊主"
+        ],
+        "receivers": [
+          "和尚さん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the little monk (小坊主) actively seeking help from the monk (和尚さん) after escaping the oni-baba. The doer is the little monk, and the receiver is the monk."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "「和尚さん！　助けてください！　鬼ババです！」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小坊主"
+        ],
+        "receivers": [
+          "和尚さん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the small monk actively seeking help from the和尚, which is an action performed by the monk (doer) directed towards the和尚 (receiver)."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "「だから、やめておけといったのじゃ。まあ、まかせておけ」 　和尚さんは小坊主を後ろにかくすと、追いかけてきた鬼ババに言いました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "和尚さん"
+        ],
+        "receivers": [
+          "鬼ババ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the和尚さん taking active measures to protect the小坊主 by hiding him and confronting the鬼ババ, which constitutes an action performed by the和尚さん directed at the鬼ババ."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "「鬼ババよ。わしの頼みを一つきいてくれたら坊主をお前にやるが、どうだ？」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "和尚さん"
+        ],
+        "receivers": [
+          "鬼ババ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the abbot (和尚さん) actively proposing a deal to the ghost grandma (鬼ババ), which constitutes an action performed by the abbot towards the ghost."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "と、持ちかけました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "和尚"
+        ],
+        "receivers": [
+          "鬼ババ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the monk (和尚) actively proposing a request to the鬼ババ, which constitutes an action performed by the monk towards the鬼ババ."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "「いいだろう。何がのぞみだ」 「聞くところによると、お前は山のように大きくなる事も、豆粒のように小さくなる事も出来るそうだな」 「ああ、そうだ」 「よし、では豆粒のように小さくなってくれや」 「お安いご用」 　鬼ババは答えて体を小さくすると、豆粒のように小さくなりました。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "鬼ババ"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The monk is giving a task to the oni-baba to shrink to the size of a bean, which is the requirement for the monk to give him to the monk."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "和尚さんはその時、すかさず鬼ババをもちの中に丸め込むと一口で飲み込んでしまいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "和尚さん"
+        ],
+        "receivers": [
+          "鬼ババ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the和尚's active action of swallowing the鬼ババ, making it an 'action' category with the doer as the和尚 and the receiver as the鬼ババ."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "「おっほほほっ。ざっと、こんなもんじゃい。・・・うん、腹が痛いな。ちと便所に」 　和尚さんが便所でウンチをすると、ウンチの中からたくさんのハエが飛び出してきました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the demon transformed into flies and spread across Japan",
+        "explanation": "The sentence describes the outcome of the abbot swallowing the demon, resulting in the demon's transformation into flies that spread across Japan. This is a consequence of the prior action (swallowing the demon) and represents a state change in the narrative."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "ハエは鬼ババが生まれ変わって、日本中にふえていったものだそうです。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The transformation of the Oni-Baba into flies that spread across Japan",
+        "explanation": "This sentence describes the outcome of the prior events where the Oni-Baba is transformed into flies, leading to their widespread proliferation across Japan. It represents a consequence of the abbot's action in swallowing the Oni-Baba."
+      }
+    }
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_013_Pride_goeth_before_a_Fall.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 20,
+  "analyzed_sentences": 20,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "In a certain village there lived ten cloth merchants, who always went about together.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "a certain village",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the setting by introducing the village and the presence of ten cloth merchants, providing background context for the story."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "Once upon a time they had travelled far afield, and were returning home with a great deal of money which they had obtained by selling their wares.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "village",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the merchants' journey and their return home with money, setting the stage for the conflict with the robbers. The location is their village, which is the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "Now there happened to be a dense forest near their village, and this they reached early one morning.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "dense forest near their village",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the setting for the story's conflict by introducing the dense forest near the village as the location where the merchants encounter the robbers."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "In it there lived three notorious robbers, of whose existence the traders had never heard, and while they were still in the middle of it the robbers stood before them, with swords and cudgels in their hands, and ordered them to lay down all they had.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "robbers"
+        ],
+        "receivers": [
+          "traders"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the robbers actively confronting the traders by ordering them to surrender their belongings, which is an action performed by the robbers (doers) directed at the traders (receivers)."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "The traders had no weapons with them, and so, though they were many more in number, they had to submit themselves to the robbers, who took away everything from them, even the very clothes they wore, and gave to each only a small loin-cloth a span in breadth and a cubit in length.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The traders lost all their possessions, were stripped of their clothes, and forced to wear only small loin-cloths while being ordered to dance for the robbers.",
+        "explanation": "This sentence describes the outcome of the robbers' attack on the traders, detailing their loss of property and forced subjugation. The state change involves the traders' complete loss of belongings and their submission to the robbers' demands."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "The idea that they had conquered ten men and plundered all their property, now took possession of the robbers' minds. They seated themselves like three monarchs before the men they had plundered, and ordered them to dance to them before returning home. The merchants now mourned their fate. They had lost all they had, except their loin-cloth, and still the robbers were not satisfied, but ordered them to dance.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The robbers' victory over the merchants solidified, leading to the merchants being forced to dance and suffering further humiliation",
+        "explanation": "This sentence describes the outcome of the robbers' successful plundering of the merchants, detailing the robbers' arrogant mindset and the merchants' subsequent forced dance, which represents a state change from submission to enforced servitude."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "There was, among the ten merchants, one who was very clever.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "village",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces background context about the merchants' situation in their village, setting the stage for the subsequent events involving the robbers and the clever merchant's plan."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "He pondered over the calamity that had come upon him and his friends, the dance they would have to perform, and the magnificent manner in which the three robbers had seated themselves on the grass.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "forest",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of the clever merchant's contemplation of his predicament and the robbers' position, setting the stage for the subsequent plan. The forest is the key location where these events unfold."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "At the same time he observed that these last had placed their weapons on the ground, in the assurance of having thoroughly cowed the traders, who were now commencing to dance.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "dense forest",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the robbers' state of mind and their position in the dense forest, setting the context for the subsequent actions. It provides background on the robbers' confidence and the traders' vulnerability."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "So he took the lead in the dance, and, as a song is always sung by the leader on such occasions, to which the rest keep time with hands and feet, he thus began to sing: \"We are enty men, They are erith men: If each erith man, Surround eno men Eno man remains. Tâ, tai, tôm, tadingana.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "merchant"
+        ],
+        "receivers": [
+          "robbers"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the merchant's action of taking the lead in the dance and singing a coded song to communicate with the robbers. The doer is the merchant, and the receivers are the robbers who will eventually understand the message."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "The robbers were all uneducated, and thought that the leader was merely singing a song as usual.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "forest",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the robbers' uneducated state and their misunderstanding of the leader's song, providing background context for their subsequent actions and the story's development."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "So it was in one sense; for the leader commenced from a distance, and had sung the song over twice before he and his companions commenced to approach the robbers.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "leader",
+          "his companions"
+        ],
+        "receivers": [
+          "robbers"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the leader's actions of singing the song from a distance and approaching the robbers, which are active steps taken to execute the plan. The doers are the leader and his companions, and the receivers are the robbers as the target of their approach."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "They had understood his meaning, because they had been trained in trade.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "they understood the song's meaning",
+        "explanation": "The sentence explains the outcome of the merchants' prior training in trade language, which enabled them to comprehend the coded message in the song. This understanding was a critical step leading to their successful strategy against the robbers."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "When two traders discuss the price of an article in the presence of a purchaser, they use a riddling sort of language.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "village",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes background context about the traders' communication methods in their village, which sets the stage for their later use of coded language to outsmart the robbers."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "\"What is the price of this cloth?\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence is part of the situation that establishes the traders' use of coded language when discussing prices in the presence of a purchaser."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "one trader will ask another.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of traders using coded language to discuss prices, which is part of the broader situation involving their interactions and the secret trade language."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "\"Enty rupees,\" another will reply, meaning \"ten rupees.\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "village",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes context about the merchants' secret trade language, which is part of the broader situation in the village where the story unfolds."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "Thus, there is no possibility of the purchaser knowing what is meant unless he be acquainted with trade language.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence explains the secrecy of the trade language, which is part of the background context establishing how the merchants communicate covertly. It sets up the cultural/linguistic framework for their later plan against the robbers, but does not mention a specific location."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "By the rules of this secret language erith means \"three,\" enty means \"ten,\" and eno means \"one.\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the secret trade language used by the merchants, which is essential for understanding their later strategy to outwit the robbers. It sets up the cultural/linguistic framework for the subsequent actions."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "So the leader by his song meant to hint to his fellow-traders that they were ten men, the robbers only three, that if three pounced upon each of the robbers, nine of them could hold them down, while the remaining one bound the robbers' hands and feet. The three thieves, glorying in their victory, and little understanding the meaning of the song and the intentions of the dancers, were proudly seated chewing betel and tobacco. Meanwhile the song was sung a third time. Tâ tai tôm had left the lips of the singer; and, before tadingana was out of them, the traders separated into parties of three, and each party pounced upon a thief. The remaining one—the leader himself—tore up into long narrow strips a large piece of cloth, six cubits long, and tied the hands and feet of the robbers. These were entirely humbled now, and rolled on the ground like three bags of rice! The ten traders now took back all their property, and armed themselves with the swords and cudgels of their enemies; and when they reached their village, they often amused their friends and relatives by relating their adventure.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The robbers were entirely humbled, the traders took back all their property, and armed themselves with the robbers' weapons.",
+        "explanation": "The sentence describes the outcome of the traders' coordinated attack based on the leader's song, resulting in the robbers' defeat and the traders reclaiming their belongings. This is a consequence of the prior actions and planning described in the story."
+      }
+    }
+  ]
+}

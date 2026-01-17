@@ -1,0 +1,498 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_008_The_Tiger_the_Brahman_and_the_Jackal.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 31,
+  "analyzed_sentences": 31,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "nce upon a time, a tiger was caught in a trap.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the initial scenario of the tiger being caught in a trap, setting the stage for the story. No specific location is mentioned beyond the trap itself."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "He tried in vain to get out through the bars, and rolled and bit with rage and grief when he failed.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "tiger"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the tiger's active attempts to escape the trap and his emotional reaction, which are actions performed by the tiger. There is no explicit receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "By chance a poor Brahman came by.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the Brahman as a new character entering the story's context, establishing the scenario where the tiger's predicament will interact with the Brahman. No specific location is mentioned."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "\"Let me out of this cage, oh pious one!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Brahman"
+        ],
+        "receivers": [
+          "tiger"
+        ],
+        "changed_state": "",
+        "explanation": "The Brahman actively performs the action of requesting release from the tiger's cage, making him the doer, and the tiger is the recipient of this request."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "cried the tiger.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "tiger"
+        ],
+        "receivers": [
+          "Brahman"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the tiger performing the action of crying, directed at the Brahman as a response to being denied freedom. The tiger is the doer, and the Brahman is the receiver of the emotional expression."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "\"Nay, my friend,\" replied the Brahman mildly, \"you would probably eat me if I did.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Brahman"
+        ],
+        "receivers": [
+          "tiger"
+        ],
+        "changed_state": "",
+        "explanation": "The Brahman performs the action of replying to the tiger's request, directly addressing the tiger as the receiver of his response."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "\"Not at all!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "tiger"
+        ],
+        "receivers": [
+          "Brahman"
+        ],
+        "changed_state": "",
+        "explanation": "The tiger's denial of the Brahman's claim is an action performed by the tiger, directed at the Brahman as the receiver of the response."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "swore the tiger with many oaths; \"on the contrary, I should be for ever grateful, and serve you as a slave!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "tiger"
+        ],
+        "receivers": [
+          "Brahman"
+        ],
+        "changed_state": "",
+        "explanation": "The tiger actively vows to serve the Brahman, making this an action where the tiger (doer) directs the promise toward the Brahman (receiver)."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "Now when the tiger sobbed and sighed and wept and swore, the pious Brahman's heart softened, and at last he consented to open the door of the cage. Out popped the tiger, and, seizing the poor man, cried, \"What a fool you are! What is to prevent my eating you now, for after being cooped up so long I am just terribly hungry!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Brahman"
+        ],
+        "receivers": [
+          "cage"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Brahman's active decision to open the cage door, which is a direct action performed by the Brahman. The tiger's subsequent escape is a consequence of this action, but the primary focus of the sentence is the Brahman's action."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "In vain the Brahman pleaded for his life; the most he could gain was a promise to abide by the decision of the first three things he chose to question as to the justice of the tiger's action.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The Brahman's plea resulted in a promise to abide by the decisions of the first three entities he questioned regarding the tiger's action",
+        "explanation": "The sentence describes the outcome of the Brahman's failed plea, resulting in a specific agreement (promise to abide by three entities' decisions) which alters the state of the interaction between the Brahman and the tiger."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "So the Brahman first asked a pipal tree what it thought of the matter, but the pipal tree replied coldly, \"What have you to complain about? Don't I give shade and shelter to every one who passes by, and don't they in return tear down my branches to feed their cattle? Don't whimper—be a man!\" Then the Brahman, sad at heart, went further afield till he saw a buffalo turning a well-wheel; but he fared no better from it, for it answered, \"You are a fool to expect gratitude! Look at me! Whilst I gave milk they fed me on cotton-seed and oil-cake, but now I am dry they yoke me here, and give me refuse as fodder!\" The Brahman, still more sad, asked the road to give him its opinion. \"My dear sir,\" said the road, \"how foolish you are to expect anything else! Here am I, useful to everybody, yet all, rich and poor, great and small, trample on me as they go past, giving me nothing but the ashes of their pipes and the husks of their grain!\" On this the Brahman turned back sorrowfully, and on the way he met a jackal, who called out, \"Why, what's the matter, Mr. Brahman? You look as miserable as a fish out of water!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Brahman"
+        ],
+        "receivers": [
+          "pipal tree",
+          "buffalo",
+          "road"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Brahman actively performing the action of seeking opinions from the pipal tree, buffalo, and road, which are the receivers of his questions. This action is part of fulfilling his earlier promise to the tiger."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "The Brahman told him all that had occurred.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Brahman"
+        ],
+        "receivers": [
+          "jackal"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Brahman actively performing the action of recounting events to the jackal, making 'Brahman' the doer and 'jackal' the receiver."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "\"How very confusing!\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the jackal's confusion",
+        "explanation": "The sentence represents the consequence of the Brahman's repeated storytelling and the tiger's interruption, leading to the jackal's confusion and inability to grasp the situation."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "said the jackal, when the recital was ended; \"would you mind telling me over again, for everything has got so mixed up?\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "Brahman"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The jackal requests the Brahman to retell the story, creating a task for the Brahman to fulfill by repeating the narrative."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "The Brahman told it all over again, but the jackal shook his head in a distracted sort of way, and still could not understand.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Brahman"
+        ],
+        "receivers": [
+          "jackal"
+        ],
+        "changed_state": "",
+        "explanation": "The Brahman performs the action of retelling the story, with the jackal as the receiver of this action, leading to his confusion and inability to understand."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "\"It's very odd,\" said he, sadly, \"but it all seems to go in at one ear and out at the other! I will go to the place where it all happened, and then perhaps I shall be able to give a judgment.\" So they returned to the cage, by which the tiger was waiting for the Brahman, and sharpening his teeth and claws. \"You've been away a long time!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "jackal"
+        ],
+        "receivers": [
+          "cage"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the jackal's decision to go to the place where the events occurred (the cage), which is an action taken by the jackal. The tiger's sharpening teeth is part of the current state, but the main action is the jackal's movement to the cage."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "growled the savage beast, \"but now let us begin our dinner.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "tiger"
+        ],
+        "receivers": [
+          "Brahman"
+        ],
+        "changed_state": "",
+        "explanation": "The tiger initiates the attack by declaring they will begin their meal, actively targeting the Brahman as the receiver of this action."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "\"Our dinner!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "tiger"
+        ],
+        "receivers": [
+          "Brahman"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents the tiger's declaration of intent to eat the Brahman, which is an active action initiated by the tiger (doer) directed toward the Brahman (receiver)."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "thought the wretched Brahman, as his knees knocked together with fright; \"what a remarkably delicate way of putting it!\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The Brahman experiences intense fear and realizes the tiger's statement about 'dinner' is a veiled threat, leading to his panic and ironic observation about the wording.",
+        "explanation": "The sentence describes the Brahman's reaction to the tiger's statement, which is a direct consequence of the tiger's aggressive intent. The fear and realization about the wording represent the state change resulting from the prior interaction."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "\"Give me five minutes, my lord!\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "Brahman"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task where the Brahman requests time to explain matters to the jackal, indicating his responsibility to fulfill this obligation."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "he pleaded, \"in order that I may explain matters to the jackal here, who is somewhat slow in his wits.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Brahman"
+        ],
+        "receivers": [
+          "jackal"
+        ],
+        "changed_state": "",
+        "explanation": "The Brahman actively pleads for time to explain matters to the jackal, making him the doer of the action and the jackal the receiver of his plea."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "The tiger consented, and the Brahman began the whole story over again, not missing a single detail, and spinning as long a yarn as possible.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Brahman"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the Brahman's action of retelling the story, which is an active performance by the Brahman."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "\"Oh, my poor brain! oh, my poor brain!\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The jackal experiences confusion and frustration from being unable to comprehend the story's logic",
+        "explanation": "The sentence represents the emotional consequence of the jackal's failed attempts to understand the story, showing how the prior events led to its confusion and frustration."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "cried the jackal, wringing its paws.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "jackal"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The jackal performs the action of crying and wringing its paws, expressing frustration and confusion about the previous events. The action reflects the jackal's emotional response to the tangled narrative."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "\"Let me see! how did it all begin? You were in the cage, and the tiger came walking by——\" \"Pooh!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "jackal"
+        ],
+        "receivers": [
+          "Brahman"
+        ],
+        "changed_state": "",
+        "explanation": "The jackal is actively attempting to understand the sequence of events by asking the Brahman to recount the story, which constitutes an action with the jackal as the doer and the Brahman as the receiver."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "interrupted the tiger, \"what a fool you are! I was in the cage.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "tiger"
+        ],
+        "receivers": [
+          "jackal"
+        ],
+        "changed_state": "",
+        "explanation": "The tiger actively interrupts the jackal's attempt to recount the story, performing the action of interrupting and correcting the jackal's narrative."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "\"Of course!\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The jackal's confusion persists, leading to the tiger's frustration and the door being shut",
+        "explanation": "The sentence 'Of course!' is part of the jackal's ongoing confusion and misinterpretation of the events, which directly leads to the tiger's frustration and the resolution of the situation through the jackal shutting the door. This represents a consequence of the prior interactions."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "cried the jackal, pretending to tremble with fright; \"yes! I was in the cage—no I wasn't—dear! dear! where are my wits? Let me see—the tiger was in the Brahman, and the cage came walking by——no, that's not it, either! Well, don't mind me, but begin your dinner, for I shall never understand!\" \"Yes, you shall!\" returned the tiger, in a rage at the jackal's stupidity; \"I'll make you understand! Look here—I am the tiger——\" \"Yes, my lord!\" \"And that is the Brahman——\" \"Yes, my lord!\" \"And that is the cage——\" \"Yes, my lord!\" \"And I was in the cage—do you understand?\" \"Yes—no—— Please, my lord——\" \"Well?\" cried the tiger impatiently. \"Please, my lord!—how did you get in?\" \"How!—why in the usual way, of course!\" \"Oh, dear me!—my head is beginning to whirl again! Please don't be angry, my lord, but what is the usual way?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "jackal",
+          "tiger"
+        ],
+        "receivers": [
+          "tiger",
+          "jackal"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the jackal's confusion and the tiger's frustration through their dialogue exchange, which constitutes an active interaction between the characters."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "At this the tiger lost patience, and, jumping into the cage, cried, \"This way! Now do you understand how it was?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "tiger"
+        ],
+        "receivers": [
+          "cage"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the tiger's physical action of jumping into the cage, which is a direct activity performed by the tiger (doer) and involves the cage (receiver)."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "\"Perfectly!\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the jackal understood the situation",
+        "explanation": "The sentence represents the jackal's acknowledgment of understanding after the tiger's explanation, marking a change in the state of comprehension among the characters."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "grinned the jackal, as he dexterously shut the door, \"and if you will permit me to say so, I think matters will remain as they were!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "jackal"
+        ],
+        "receivers": [
+          "door"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the jackal actively performing the action of shutting the door, which is a physical activity completed by the jackal. The door is the direct receiver of this action."
+      }
+    }
+  ]
+}

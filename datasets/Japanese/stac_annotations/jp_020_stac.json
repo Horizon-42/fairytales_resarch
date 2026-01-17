@@ -1,0 +1,326 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_020.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 21,
+  "analyzed_sentences": 21,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "むかしむかし、ある村に、貧乏な男がいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "ある村",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the background setting of the story, introducing the main character (a poor man) and the location (a village) as the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "ある日の晩、その男のところへ、白いひげのおじいさんがやってきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "白いひげのおじいさん"
+        ],
+        "receivers": [
+          "その男のところ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man arriving at the man's place, which is an action performed by the old man with the location as the receiver."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "「道に迷ったので、一晩泊めてくだされ」 「ああ、それはお困りでしょう。いいですとも。さあどうぞ」 　男は親切に、おじいさんを泊めてやりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "男"
+        ],
+        "receivers": [
+          "おじいさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the male protagonist actively performing the action of hosting the old man, which is a key interaction driving the narrative. The doer is the poor man ('男'), and the receiver is the old man ('おじいさん')."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "次の日、おじいさんは男に小さな石うすをくれました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おじいさん"
+        ],
+        "receivers": [
+          "男"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes an action where the old man (doer) gives a stone to the man (receiver), representing the transfer of the magical stone as part of the narrative progression."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "「泊めてもらったお礼じゃよ。これは不思議な石うすでな、右へ回せば欲しい物が出て、左へ回せば止まるんじゃ。止めるまで出続けるから、気をつけるんじゃぞ」 　おじいさんはそう言って、出て行きました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "ある村",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "おじいさんが男に不思議な石うすを渡し、その使い方を説明する場面は、物語の背景設定としての役割を果たしており、後の出来事（石うすの盗難や塩の出来事）を引き起こす要因となるため、situationカテゴリに分類されます。"
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "男はためしに、石うすを回してみました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "男"
+        ],
+        "receivers": [
+          "石うす"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the man's active action of turning the stone, which initiates the subsequent event of rice emerging. The doer is '男' (the man), and the receiver is '石うす' (the stone) as the object being acted upon."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "「米出ろ、米出ろ」 　すると石うすから、まっ白い米がザクザクと出てきました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the stone produces white rice, changing the state from inaction to rice production",
+        "explanation": "The sentence describes the outcome of the man's action with the stone, resulting in rice being generated. This is a consequence of his prior action of turning the stone, altering the state from no rice to rice production."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "あわてて左へ回すと、米はピタリと止まります。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "男"
+        ],
+        "receivers": [
+          "石うす"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the man turning the stone to the left, which is an active performance by the man on the stone."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "「へー、こいつはすごいや！」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "男"
+        ],
+        "receivers": [
+          "石うす"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the male character's reaction to the stone's ability, which is an active expression of his experience with the stone's power. The 'doer' is the male character, and the 'receiver' is the stone, as the reaction is tied to its function."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "男は米や魚をたくさん出して、まわりの家にも分けてあげました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "男"
+        ],
+        "receivers": [
+          "まわりの家"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the man's active action of distributing rice and fish to surrounding houses, making it an 'action' category. The doer is the man, and the receivers are the surrounding households."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "さて男のとなりに、欲張りな兄さんが住んでいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the brother's residence as part of the background context, establishing the setting for subsequent events involving the brother's actions. No specific location is mentioned in the sentence itself."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "兄さんは弟が急にお金持ちになったのを不思議に思い、こっそりのぞきにきました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the brother's motivation and decision to investigate his brother's sudden wealth, establishing the context for his subsequent actions, which fits the 'situation' category."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "「そうか、なるほど。全ては、あの石うすのおかげだな。しめしめ」 　兄さんは夜になると弟の家に忍び込んで、石うすを盗みました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "兄さん"
+        ],
+        "receivers": [
+          "石うす"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the brother's action of stealing the stone. The doer is '兄さん' (the brother), and the receiver is '石うす' (the stone) as the object being stolen."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "そして舟にのって、海へ逃げました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "兄さん"
+        ],
+        "receivers": [
+          "海"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the brother's action of fleeing to the sea, making it an 'action' category. The doer is the brother, and the receiver is the sea as the destination."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "「よしよし、ここまで来れば大丈夫だろう」 　兄さんは一生懸命に舟をこいだので、おなかがペコペコになりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "兄さん"
+        ],
+        "receivers": [
+          "舟"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the brother actively rowing the boat (action) and the consequence of his hunger, but the primary focus is on the action of rowing. The doer is the brother, and the receiver is the boat."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "そこで、持ってきたおにぎりを取り出すと、 「そうだ、塩をつけて食べると、きっとうまいだろう。よーし、塩出ろ、塩出ろ」 と、石うすを回すと、石うすからは塩がザラザラとあふれ出して、たちまち舟いっぱいになりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "兄さん"
+        ],
+        "receivers": [
+          "舟"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the brother's action of using the magical stone to produce salt, which fills the boat. The doer is the brother, and the receiver is the boat that is filled with salt."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "「わっ、わっ、もう止まれ！　止まれ！　止まってくれー！」",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the boat is overwhelmed by salt and begins to sink",
+        "explanation": "The sentence represents the immediate outcome of the brother's failed attempt to stop the stone's effect, leading to the boat being filled with salt and the impending disaster."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "欲張り兄さんは、石うすから物を出す方法は見ていたのですが、止め方は見ていなかったのです。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the boat sank due to the excessive salt",
+        "explanation": "The sentence explains the consequence of the brother's actions, leading to the boat sinking."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "ついに舟は塩の重さに耐えられなくなり、そのまま海に沈んでしまいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "舟は海に沈み、塩の重さで破壊された",
+        "explanation": "この文は欲張り兄さんが石うすを誤って使い続けた結果、舟が塩の重さで耐えられなくなって沈没したという出来事を記述しており、前段の行動（石うすの使い方の誤り）の結果としての状態変化を表しています。"
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "ところであの石うすは、今でもグルグルと回って、塩を出しています。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the stone continues to produce salt, causing the sea to become salty",
+        "explanation": "The sentence describes the ongoing effect of the stone's action after the brother's theft, resulting in the sea's salinity. This is a consequence of the prior event (the brother stealing the stone and the boat sinking)."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "海の水がしょっぱいのは、こういうわけなのです。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The sea water became salty due to the continuous salt production from the stone",
+        "explanation": "The sentence explains the outcome of the brother's misuse of the stone, which caused the boat to sink and salt to spread, resulting in the sea's salinity. This is a consequence of the prior event where the stone's salt production overwhelmed the boat."
+      }
+    }
+  ]
+}

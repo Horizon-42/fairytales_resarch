@@ -1,0 +1,83 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_014_The_Ass_in_the_Lion's_Skin.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 5,
+  "analyzed_sentences": 5,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "At the same time, when Brahma-datta was reigning in Benares, the future Buddha was born one of a peasant family; and when he grew up, he gained his living by tilling the ground.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "Benares",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the historical and geographical context of the story by specifying the reign of Brahma-datta in Benares and introducing the future Buddha's early life, setting the stage for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "At that time a hawker used to go from place to place, trafficking in goods carried by an ass.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of the hawker's routine during the same timeframe as the Buddha's early life, setting the stage for subsequent events without specifying a particular location."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "Now at each place he came to, when he took the pack down from the ass's back, he used to clothe him in a lion's skin, and turn him loose in the rice and barley fields.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "hawker"
+        ],
+        "receivers": [
+          "ass"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the hawker's active actions of clothing the ass in a lion's skin and releasing it into the fields, which are specific activities performed by the hawker (doer) and directed toward the ass (receiver)."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "And when the watchmen in the fields saw the ass, they dared not go near him, taking him for a lion.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "fields",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of the watchmen's reaction to the ass in the fields, setting the stage for subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "So one day the hawker stopped in a village; and whilst he was getting his own breakfast cooked, he dressed the ass in a lion's skin, and turned him loose in a barley-field. The watchmen in the field dared not go up to him; but going home, they published the news. Then all the villagers came out with weapons in their hands; and blowing chanks, and beating drums, they went near the field and shouted. Terrified with the fear of death, the ass uttered a cry—the bray of an ass! And when he knew him then to be an ass, the future Buddha pronounced the First Verse: \"This is not a lion's roaring, Nor a tiger's, nor a panther's; Dressed in a lion's skin, 'Tis a wretched ass that roars!\" But when the villagers knew the creature to be an ass, they beat him till his bones broke; and, carrying off the lion's skin, went away. Then the hawker came; and seeing the ass fallen into so bad a plight, pronounced the Second Verse: \"Long might the ass, Clad in a lion's skin, Have fed on the barley green. But he brayed! And that moment he came to ruin.\" And even whilst he was yet speaking the ass died on the spot!",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "hawker",
+          "villagers"
+        ],
+        "receivers": [
+          "ass"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the hawker's action of dressing the ass in a lion's skin and releasing it, followed by the villagers' action of beating the ass. These actions directly impact the ass's fate, making it an 'action' category."
+      }
+    }
+  ]
+}

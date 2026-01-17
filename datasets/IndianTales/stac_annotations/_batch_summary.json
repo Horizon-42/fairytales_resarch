@@ -1,0 +1,155 @@
+{
+  "input_dir": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts",
+  "output_dir": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "provider": "ollama",
+  "model": "qwen3:8b",
+  "total_files": 20,
+  "results": {
+    "success": [
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_001_The_Lion_and_the_Crane.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations/EN_001_The_Lion_and_the_Crane_stac.json",
+        "total_sentences": 18,
+        "analyzed_sentences": 18
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_002_How_the_Raja's_Son_won_the_Princess_Labam.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations/EN_002_How_the_Raja's_Son_won_the_Princess_Labam_stac.json",
+        "total_sentences": 67,
+        "analyzed_sentences": 67
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_003_The Lambikin.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations/EN_003_The Lambikin_stac.json",
+        "total_sentences": 17,
+        "analyzed_sentences": 17
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_004_Punchkin.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations/EN_004_Punchkin_stac.json",
+        "total_sentences": 60,
+        "analyzed_sentences": 60
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_005_The_Broken_Pot.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations/EN_005_The_Broken_Pot_stac.json",
+        "total_sentences": 3,
+        "analyzed_sentences": 3
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_006_The_Magic_Fiddle.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations/EN_006_The_Magic_Fiddle_stac.json",
+        "total_sentences": 49,
+        "analyzed_sentences": 49
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_007_The_Cruel_Crane_Outwitted.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations/EN_007_The_Cruel_Crane_Outwitted_stac.json",
+        "total_sentences": 30,
+        "analyzed_sentences": 30
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_008_The_Tiger_the_Brahman_and_the_Jackal.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations/EN_008_The_Tiger_the_Brahman_and_the_Jackal_stac.json",
+        "total_sentences": 31,
+        "analyzed_sentences": 31
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_009_Harisarman.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations/EN_009_Harisarman_stac.json",
+        "total_sentences": 26,
+        "analyzed_sentences": 26
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_010_The_Talkative_Tortoise.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations/EN_010_The_Talkative_Tortoise_stac.json",
+        "total_sentences": 13,
+        "analyzed_sentences": 13
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_011_The_Gold_giving_Serpent.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations/EN_011_The_Gold_giving_Serpent_stac.json",
+        "total_sentences": 8,
+        "analyzed_sentences": 8
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_012_A_Lesson_for_Kings.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations/EN_012_A_Lesson_for_Kings_stac.json",
+        "total_sentences": 24,
+        "analyzed_sentences": 24
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_013_Pride_goeth_before_a_Fall.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations/EN_013_Pride_goeth_before_a_Fall_stac.json",
+        "total_sentences": 20,
+        "analyzed_sentences": 20
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_014_The_Ass_in_the_Lion's_Skin.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations/EN_014_The_Ass_in_the_Lion's_Skin_stac.json",
+        "total_sentences": 5,
+        "analyzed_sentences": 5
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_015_The_Farmer_and_the_Money_lender.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations/EN_015_The_Farmer_and_the_Money_lender_stac.json",
+        "total_sentences": 11,
+        "analyzed_sentences": 11
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_016_The_Prince_and_the_Fakir.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations/EN_016_The_Prince_and_the_Fakir_stac.json",
+        "total_sentences": 31,
+        "analyzed_sentences": 31
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_017_How_Sun_Moon_and_Wind_went_out_to_Dinner.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations/EN_017_How_Sun_Moon_and_Wind_went_out_to_Dinner_stac.json",
+        "total_sentences": 9,
+        "analyzed_sentences": 9
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_018_How_the_Wicked_Sons_were_Duped.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations/EN_018_How_the_Wicked_Sons_were_Duped_stac.json",
+        "total_sentences": 13,
+        "analyzed_sentences": 13
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_019_The_Pigeon_and_the_Crow.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations/EN_019_The_Pigeon_and_the_Crow_stac.json",
+        "total_sentences": 17,
+        "analyzed_sentences": 17
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_020_The_Demon_with_the_Matted_Hair.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/stac_annotations/EN_020_The_Demon_with_the_Matted_Hair_stac.json",
+        "total_sentences": 23,
+        "analyzed_sentences": 23
+      }
+    ],
+    "skipped": [],
+    "error": []
+  }
+}

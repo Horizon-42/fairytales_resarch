@@ -1,0 +1,2173 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_014.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 144,
+  "analyzed_sentences": 144,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "むかし、摂津国せっつのくにの難波なにわという所ところに、夫婦ふうふの者ものが住すんでおりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "難波なにわ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the setting of the story by introducing the location where the narrative unfolds, which is the village of Naniwa in the country of Settsu."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "子供こどもが一人ひとりも無ないものですから、住吉すみよしの明神みょうじんさまに、おまいりをしては、 「どうぞ子供こどもを一人ひとりおさずけ下くださいまし。それは指ゆびほどの小ちいさな子でもよろしゅうございますから。」",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "住吉すみよしの明神みょうじんさま",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the couple's situation of having no children and their prayer to the Suzunomiya Shrine for a child, providing background context for the narrative."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "と一生懸命いっしょうけんめいにお願ねがい申もうしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "夫婦"
+        ],
+        "receivers": [
+          "住吉すみよしの明神みょうじんさま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the couple's action of praying to the deity with all their effort. The doers are the couple (夫婦), and the receiver is the deity (住吉すみよしの明神みょうじんさま)."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "すると間まもなく、お上かみさんは身持みもちになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The deity (お上かみさん) transformed into a physical form (身持みもちになりました), changing from an abstract divine presence to a tangible entity.",
+        "explanation": "This sentence describes the outcome of the couple's prayer being answered, resulting in the deity manifesting a physical body. The transformation represents a state change from an intangible divine being to a corporeal form, directly following the deity's confirmation that the prayer was granted."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "「わたしどものお願ねがいがかなったのだ。」",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "住吉すみよしの明神みょうじんさま",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence describes the deity's confirmation that the couple's prayer for a child has been answered, establishing the context for the subsequent events in the story. The location is the shrine where the prayer was made."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "と夫婦ふうふはよろこんで、子供こどもの生うまれる日を、今日きょうか明日あすかと待まちかまえていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the couple's emotional state and their anticipation for the birth of their child, setting the context for the subsequent events in the story. It provides background information about their waiting period without specifying a location."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "やがてお上かみさんは小ちいさな男の赤あかちゃんを生うみました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "お上かみさん"
+        ],
+        "receivers": [
+          "小ちいさな男の赤あかちゃん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the deity giving birth to a small boy, which is an active event performed by the deity."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "ところがそれがまた小ちいさいといって、ほんとうに指ゆびほどの大きさしかありませんでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the child's physical size as a key aspect of the narrative setup, establishing the context of the story where the child remains exceptionally small. This is part of the situational background rather than an action, consequence, or task."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "「指ゆびほどの大きさの子供こどもでも、と申もうし上あげたら、ほんとうに指ゆびだけの子供こどもを明神みょうじんさまが下くださった。」",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the couple's prayer and the deity's response, establishing the origin of the small child. It sets the stage for the story's events without mentioning a specific location."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "と夫婦ふうふは笑わらいながら、この子供こどもをだいじにして育そだてました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "夫婦"
+        ],
+        "receivers": [
+          "子供"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the couple's active decision to raise and care for their small child despite societal mockery, indicating their nurturing action towards the child."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "ところがこの子は、いつまでたってもやはり指ゆびだけより大きくはなりませんでした。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The child remained small, never growing larger than a finger despite the parents' care",
+        "explanation": "This sentence describes the outcome of the prior event where the couple received a child who was initially the size of a finger. The consequence is that the child's size remained unchanged, establishing the character's defining trait."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "夫婦ふうふもあきらめて、その子に一寸法師いっすんぼうしと名前なまえをつけました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "夫婦"
+        ],
+        "receivers": [
+          "その子"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the couple giving up hope and naming their child '一寸法師', which is an active action performed by the couple (doers) and directed towards the child (receiver)."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "一寸法師いっすんぼうしは五つになっても、やはり背せいがのびません。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the ongoing condition of Ichibanshou's small stature despite reaching five years old, establishing background context for his character trait that influences subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "七つになっても、同おなじことでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the ongoing condition of 一寸法師's inability to grow, providing background context for his character. It does not mention a specific location, so the location field remains empty."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "十を越こしても、やはり一寸法師いっすんぼうしでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the ongoing state of the protagonist's physical condition (remaining small despite aging), establishing background context for subsequent events like the children's mockery. This falls under 'situation' as it sets the narrative stage without introducing new actions or consequences."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "一寸法師いっすんぼうしが往来おうらいを歩あるいていると、近所きんじょの子供こどもたちが集あつまってきて、 「やあ、ちびが歩あるいている。」",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "往来おうらい",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the setting where the protagonist is walking in a public area, establishing the context for the subsequent interaction with the children. This sets the stage for the teasing incident that follows."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "「ふみ殺ころされるなよ。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "近所の子供たち"
+        ],
+        "receivers": [
+          "一寸法師"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents the children's verbal taunting of 一寸法師, which is an active interaction where the children (doers) target 一寸法師 (receiver) with their mocking behavior."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "「つまんでかみつぶしてやろうか。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "子供たち"
+        ],
+        "receivers": [
+          "一寸法師"
+        ],
+        "changed_state": "",
+        "explanation": "この文は、近所の子供たちが一寸法師をからかう行動として「つまんでかみつぶしてやろうか」と提案する場面を表しています。doers（行動の実行者）は子供たち、receivers（行動の対象）は一寸法師です。"
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "「ちびやい。ちびやい。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "近所の子供たち"
+        ],
+        "receivers": [
+          "一寸法師"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents the action of children mocking the small boy (一寸法師) by repeatedly calling him 'ちびやい' (little guy), which is part of their teasing behavior described in the narrative."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "と口々くちぐちにいって、からかいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "子供たち"
+        ],
+        "receivers": [
+          "一寸法師"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of children teasing the small boy (一寸法師), with the children as the doers and the boy as the receiver of the teasing."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "一寸法師いっすんぼうしはだまって、にこにこしていました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師いっすんぼうし"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of '一寸法師' smiling quietly in response to being teased by children, indicating his behavior as the doer with no direct receiver mentioned."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "一寸法師いっすんぼうしは十六になりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates a temporal milestone (age 16) as part of the narrative setup, establishing context for subsequent events without describing an action, task, or direct consequence."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "ある日一寸法師いっすんぼうしは、おとうさんとおかあさんの前まえへ出て、 「どうかわたくしにお暇ひまを下ください。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "おとうさん",
+          "おかあさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 一寸法師's action of requesting permission from his parents to travel to Kyoto, making him the doer and the parents the receivers of the request."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "おとうさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence marks the end of the child's statement, indicating the action of speaking. The doer is 一寸法師 (the child) and the receiver is おとうさん (the father)."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "おとうさんはびっくりして、 「なぜそんなことをいうのだ。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おとうさん"
+        ],
+        "receivers": [
+          "一寸法師"
+        ],
+        "changed_state": "",
+        "explanation": "The father's question is an action where he responds to his son's statement, indicating his surprise and inquiry."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "と聞ききました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おとうさん"
+        ],
+        "receivers": [
+          "一寸法師いっすんぼうし"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents the father (おとうさん) performing the action of asking a question to the child (一寸法師いっすんぼうし) about their intention to go to Kyoto, which is part of their dialogue interaction."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "一寸法師いっすんぼうしはとくいらしい顔かおをして、 「これから京都きょうとへ上のぼろうと思おもいます。」",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "京都",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the protagonist's intention to travel to Kyoto, establishing the narrative context and setting the stage for his upcoming journey. Kyoto is the target location mentioned in the sentence."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "おとうさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence marks the end of a dialogue where 一寸法師 announces his intention to travel to Kyoto, which constitutes an action of verbal communication directed at his father."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "「京都きょうとへ上のぼってどうするつもりだ。」",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "一寸法師"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a question posed by the father to the protagonist, setting up the task for the protagonist to explain his intention to travel to Kyoto. The task role is the protagonist, as he is required to provide his plan."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "「京都きょうとは天子てんしさまのいらっしゃる日本一にっぽんいちの都みやこですし、おもしろいしごとがたくさんあります。わたくしはそこへ行って、運うんだめしをしてみようと思おもいます。」",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "一寸法師"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task declaration where 一寸法師 explicitly states his intention to travel to Kyoto to attempt his luck (運うんだめし), establishing his goal and responsibility."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "そう聞きくとおとうさんはうなずいて、 「よしよし、それなら行っておいで。」",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "一寸法師"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The father (おとうさん) explicitly grants permission for the son (一寸法師) to proceed to Kyoto, establishing the son's task to embark on this journey. The sentence directly states the requirement for the son to go to Kyoto."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "と許ゆるして下くださいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おとうさん"
+        ],
+        "receivers": [
+          "一寸法師いっすんぼうし"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the father granting permission for the child to embark on a journey, which is an active action performed by the father (doer) and directed towards the child (receiver)."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "一寸法師いっすんぼうしは大たいへんよろこんで、さっそく旅たびの支度したくにかかりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 一寸法師 immediately starting to prepare for his journey, indicating his proactive behavior without specifying direct recipients of the action."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "まずおかあさんにぬい針ばりを一本ぽん頂いただいて、麦むぎわらで柄えとさやをこしらえて、刀かたなにして腰こしにさしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "刀かたな"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the actions taken by 一寸法師 to prepare a sword, including receiving a needle from his mother, crafting the sword components, and attaching it to his waist. These actions are performed by 一寸法師 and involve the sword as the object receiving the action."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "それから新あたらしいおわんのお舟ふねに、新あたらしいおはしのかいを添そえて、住吉すみよしの浜はまから舟出ふなでをしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "お舟ふね"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of setting sail from the beach (住吉の浜) on a new boat, performed by 一寸法師. The boat is the object receiving the action of sailing."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "おとうさんとおかあさんは浜はまべまで見送みおくりに立たって下くださいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "おとうさん",
+          "おかあさん"
+        ],
+        "receivers": [
+          "一寸法師"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the parents' action of standing at the shore to see their child off. The doers are the parents, and the receiver is the child (一寸法師) being sent away on the boat."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "「おとうさん、おかあさん、では行ってまいります。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents the child's declaration of departing, which is the initiation of the action of leaving. The doer is 一寸法師, and there is no explicit receiver mentioned in the sentence."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "と一寸法師いっすんぼうしがいって、舟ふねをこぎ出だしますと、おとうさんとおかあさんは、 「どうか達者たっしゃで、出世しゅっせをしておくれ。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 一寸法師 starting to row the boat, which is the primary activity performed. The parents' subsequent words are a reaction to this action, but the core event is the action itself."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "といいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "難波",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence marks the end of the parents' dialogue, establishing the context of their blessing and setting the stage for the protagonist's journey to Kyoto. The location '難波' is the narrative focus as it is where the family resides and the story begins."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "「ええ、きっと出世しゅっせをいたします。」",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "一寸法師いっすんぼうし"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a commitment to a specific goal (achieving success in Kyoto), indicating the protagonist's task. The task is undertaken by the character '一寸法師いっすんぼうし' (One-Inch Samurai)."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "と、一寸法師いっすんぼうしはこたえました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "おとうさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of '一寸法師' responding to his father's question, indicating an active response directed towards the father."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "おわんの舟ふねは毎日まいにち少すこしずつ淀川よどがわを上のぼって行きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "淀川"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the boat (controlled by 一寸法師) sailing up the Yodo River, indicating an active movement performed by the hero."
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "しかし舟ふねが小ちいさいので、少すこし風かぜが強つよく吹ふいたり、雨あめが降ふって水みずかさが増ましたりすると、舟ふねはたびたびひっくり返かえりそうになりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "淀川",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the vulnerability of the boat due to its small size, setting up the challenge of navigating the Yodo River. This establishes context for subsequent events involving the boat's instability."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "そういう時ときには、しかたがないので、石垣いしがきの間あいだや、橋はしぐいの陰かげに舟ふねを止とめて休やすみました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [
+          "舟ふね"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of stopping the boat to rest, which was a response to the prior situation of the boat being small and prone to capsizing."
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "こんな風ふうにして、一月ひとつきもかかって、やっとのことで、京都きょうとに近ちかい鳥羽とばという所ところに着つきました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "After a month of travel, the boat finally arrived at Toba, a place near Kyoto.",
+        "explanation": "The sentence describes the outcome of the previous actions (traveling by boat) and the result of the journey, indicating a state change from being en route to arriving at a specific location."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "鳥羽とばで舟ふねから岸きしに上あがると、もうすぐそこは京都きょうとの町まちでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "京都きょうと",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the arrival at Toba and the proximity to Kyoto, setting the stage for the subsequent events in Kyoto. The narrative focus shifts to Kyoto as the key location."
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "五条ごじょう、四条しじょう、三条さんじょうと、にぎやかな町まちがつづいて、ひっきりなしに馬うまや車くるまが通とおって、おびただしい人が出ていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "京都",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the bustling environment of Kyoto's streets (五条, 四条, 三条) with continuous movement of horses and carriages, establishing the setting for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "「なるほど京都きょうとは日本一にっぽんいちの都みやこだけあって、にぎやかなものだなあ。」",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "京都きょうと",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the bustling nature of Kyoto as the capital of Japan, establishing the setting for the narrative's events."
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "と、一寸法師いっすんぼうしは往来おうらいの人の下駄げたの歯はをよけて歩あるきながら、しきりに感心かんしんしていました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes 一寸法師 actively performing the action of walking while avoiding people's sandals and expressing admiration, making him the sole doer with no direct receivers."
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "三条さんじょうまで来くると、たくさんりっぱなお屋敷やしきが立たち並ならんだ中に、いちばん目にたってりっぱな門構もんがまえのお屋敷やしきがありました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "三条さんじょう",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the arrival at Sanjō and the presence of a grand mansion, setting the stage for the protagonist's subsequent actions and interactions with the noble family."
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "一寸法師いっすんぼうしは、 「なんでも出世しゅっせをするには、まずだれかえらい人の家来けらいになって、それからだんだんにし上あげなければならない。これこそいちばんえらい人のお屋敷やしきに違ちがいない。」",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "三条さんじょう",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the protagonist's internal reasoning about his current location (三条さんじょう) and its significance as the residence of an important person, establishing context for his subsequent actions."
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "と思おもって、のこのこ門もんの中に入はいっていきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "門"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of entering the gate, with 一寸法師 as the doer and the gate as the receiver. This action marks the character's proactive step toward achieving his goal of gaining status."
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "広ひろい砂利道じゃりみちをさんざん歩あるいて、大きな玄関げんかんの前まえに立たちました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of walking along a gravel path and standing before a large entrance, which is performed by 一寸法師. There is no explicit receiver for the action."
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "なるほどここは三条さんじょうの宰相殿さいしょうどのといって、羽はぶりのいい大臣だいじんのお屋敷やしきでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "三条さんじょうの宰相殿さいしょうどの",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context by identifying the location where the protagonist arrives, setting the stage for subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "そのとき一寸法師いっすんぼうしは、ありったけの大きな声こえで、 「ごめん下ください。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 一寸法師 speaking loudly to apologize, which is an active behavior performed by the character."
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "とどなりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The minister heard the third shout and decided to investigate",
+        "explanation": "The sentence indicates the outcome of the prior action (repeated shouts) leading to the minister's awareness and response, marking a state change in the narrative."
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "でも聞きこえないとみえて、だれも出てくるものがないので、こんどはいっそう大きな声こえを出だして、 「ごめん下ください。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes 一寸法師 taking the action of increasing his shouting volume to get a response, indicating his active effort to communicate despite previous lack of success."
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "とどなりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the sound was heard, prompting the宰相殿 to respond",
+        "explanation": "The sentence indicates the outcome of the prior action (shouting) where the sound finally reached the intended recipient, leading to the宰相殿 emerging from the gate."
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "三度どめに一寸法師いっすんぼうしが、 「ごめん下ください。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "宰相殿"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of Ichikenshi calling out 'ごめん下ください' three times, which is an active performance by him directed towards the Saijo-dono at the mansion."
+      }
+    },
+    {
+      "sentence_index": 60,
+      "sentence": "とどなった時とき、ちょうどどこかへおでましになるつもりで、玄関げんかんまでおいでになった宰相殿さいしょうどのが、その声こえを聞ききつけて、出てごらんになりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宰相殿"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the宰相殿 (high-ranking official) coming out to investigate the sound, which is an active response to the previous event. The doer is clearly the宰相殿, and there is no explicit receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 61,
+      "sentence": "しかしだれも玄関げんかんには居いませんでした。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The minister discovered that no one was present at the gate, leading to the realization that the small man was hiding in the shadows.",
+        "explanation": "This sentence describes the outcome of the minister's arrival at the gate, revealing the absence of people and the presence of the hidden small man, which alters the situation by prompting further investigation."
+      }
+    },
+    {
+      "sentence_index": 62,
+      "sentence": "ふしぎに思おもってそこらをお見回みまわしになりますと、靴くつぬぎにそろえてある足駄あしだの陰かげに、豆粒まめつぶのような男おとこが一人ひとり、反そり身みになってつっ立たっていました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宰相殿"
+        ],
+        "receivers": [
+          "男おとこ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the宰相殿 checking around after being surprised, leading to the discovery of the small boy."
+      }
+    },
+    {
+      "sentence_index": 63,
+      "sentence": "宰相殿さいしょうどのはびっくりして、 「お前まえか、今いま呼よんだのは。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宰相殿"
+        ],
+        "receivers": [
+          "一寸法師"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the首相's action of speaking, addressing the small man."
+      }
+    },
+    {
+      "sentence_index": 64,
+      "sentence": "「はい、わたくしでございます。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "宰相殿"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents a spoken response by 一寸法師 to the question posed by 宰相殿, constituting an active communication action directed at the Saisyou-dou."
+      }
+    },
+    {
+      "sentence_index": 65,
+      "sentence": "「お前まえは何者なにものだ。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宰相殿"
+        ],
+        "receivers": [
+          "一寸法師"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents an action where the宰相殿 (a high-ranking official) actively engages in questioning the一寸法師 about their identity, which is a direct interaction within the narrative."
+      }
+    },
+    {
+      "sentence_index": 66,
+      "sentence": "「難波なにわからまいりました一寸法師いっすんぼうしでございます。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "宰相殿"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents the One-Inch Samurai actively introducing himself to the lord, which is an action performed by him and directed towards the lord."
+      }
+    },
+    {
+      "sentence_index": 67,
+      "sentence": "「なるほど一寸法師いっすんぼうしに違ちがいない。それでわたしの屋敷やしきに来きたのは何なんの用ようだ。」",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "一寸法師"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents the Saisyou-do's explicit question to Ichibanshou about his purpose for coming to the mansion, which creates a task for Ichibanshou to explain his intentions."
+      }
+    },
+    {
+      "sentence_index": 68,
+      "sentence": "「わたくしは出世しゅっせがしたいと思おもって、京都きょうとへわざわざ上のぼってまいりました。どうぞ一生懸命いっしょうけんめい働はたらきますから、お屋敷やしきでお使つかいなさって下くださいまし。」",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "宰相殿"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task request where 一寸法師 explicitly states his intention to seek promotion by coming to Kyoto and asks to be employed at the mansion, making the宰相殿 the task recipient."
+      }
+    },
+    {
+      "sentence_index": 69,
+      "sentence": "一寸法師いっすんぼうしはこういって、ぴょこんとおじぎをしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "宰相殿"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 一寸法師 speaking and bowing, which is a physical gesture directed towards the宰相殿. The doer is clearly 一寸法師, and the receiver is the宰相殿 as the bowing is performed in their presence."
+      }
+    },
+    {
+      "sentence_index": 70,
+      "sentence": "宰相殿さいしょうどのは笑わらいながら、 「おもしろい小僧こぞうだ。よしよし使つかってやろう。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宰相殿さいしょうど"
+        ],
+        "receivers": [
+          "一寸法師いっすんぼうし"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the宰相殿 deciding to employ一寸法師, with the doer being the宰相殿 and the receiver being一寸法師."
+      }
+    },
+    {
+      "sentence_index": 71,
+      "sentence": "とおっしゃって、そのままお屋敷やしきに置おいておやりになりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "宰相殿"
+        ],
+        "receivers": [
+          "一寸法師"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the宰相殿 placing the一寸法師 in the mansion, indicating the doer (宰相殿) and the receiver (一寸法師) of the action."
+      }
+    },
+    {
+      "sentence_index": 72,
+      "sentence": "一寸法師いっすんぼうしは宰相殿さいしょうどののお屋敷やしきに使つかわれるようになってから、体からだこそ小ちいさくても、まめまめしくよく働はたらきました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "一寸法師は小柄な体でも勤勉に働いたことで、周囲からの評価を獲得しました",
+        "explanation": "この文は、一寸法師が宰相殿の屋敷で働き始めてからの行動結果を記述しています。前文の「お屋敷に置かれた」事象が原因となり、彼が小柄な体でも勤勉に働いたという状態変化を示しています。これは結果（Consequence）カテゴリに該当します。"
+      }
+    },
+    {
+      "sentence_index": 73,
+      "sentence": "大たいへん利口りこうで、気きが利きいているものですから、みんなから、 「一寸法師いっすんぼうし、一寸法師いっすんぼうし。」",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "みんなから親しみを込めて「一寸法師いっすんぼうし、一寸法師いっすんぼうし」と呼ばれるようになった",
+        "explanation": "前文の「まめまめしくよく働いた」行動が原因となり、周囲からの親しみや評価の変化を示す結果として、人々が愛称で呼びかける様子が描かれている"
+      }
+    },
+    {
+      "sentence_index": 74,
+      "sentence": "といって、かわいがられました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "一寸法師は自分の知恵と働きによって人々からかわいがられるようになった",
+        "explanation": "前文で一寸法師の利口さと働きが紹介された後、この文はその結果として人々からかわいがられるようになった状態を示しており、原因となる行動（知恵と働き）の結果としての変化を表しています。"
+      }
+    },
+    {
+      "sentence_index": 75,
+      "sentence": "このお屋敷やしきに十三になるかわいらしいお姫ひめさまがありました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "お屋敷やしき",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the presence of a thirteen-year-old princess in the mansion, establishing the setting and context for subsequent interactions between the princess and Ichibanshou. This sets the stage for the story's development."
+      }
+    },
+    {
+      "sentence_index": 76,
+      "sentence": "一寸法師いっすんぼうしはこのお姫ひめさまが大好だいすきでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "お屋敷やしき",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the relationship between 一寸法師 and the princess as part of the story's background context, setting the stage for their interactions. The location is the princess's mansion where the narrative focus resides."
+      }
+    },
+    {
+      "sentence_index": 77,
+      "sentence": "お姫ひめさまも一寸法師いっすんぼうしが大たいそうお気きに入いりで、どこへお出かけになるにも、 「一寸法師いっすんぼうしや。一寸法師いっすんぼうしや。」",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the mutual affection between the princess and the little priest as part of the narrative context, setting the stage for their relationship development. No specific location is mentioned, so the location field remains empty."
+      }
+    },
+    {
+      "sentence_index": 78,
+      "sentence": "といって、お供ともにお連つれになりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "お姫ひめさま"
+        ],
+        "receivers": [
+          "一寸法師いっすんぼうし"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the princess taking the one-inch master as her companion, indicating an active action performed by the princess (doer) with the one-inch master as the receiver."
+      }
+    },
+    {
+      "sentence_index": 79,
+      "sentence": "だんだん仲なかがよくなるうち、何なんといっても二人ふたりとも子供こどもだものですから、いつかお友達ともだちのようになって、時々ときどきはけんかをしたり、いたずらをし合あって、泣ないたり笑わらったりすることもありました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the development of a relationship between two characters (一寸法師 and the princess) as part of the narrative background, establishing their dynamic as children who eventually become friends. This sets the stage for subsequent interactions and conflicts, fitting the 'situation' category."
+      }
+    },
+    {
+      "sentence_index": 80,
+      "sentence": "ある時ときまたけんかをして、一寸法師いっすんぼうしが負まけました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the One-Inch Samurai lost a fight",
+        "explanation": "The sentence describes the outcome of a prior event (the fight) that changes the state by indicating the One-Inch Samurai's loss, which directly leads to subsequent actions in the narrative."
+      }
+    },
+    {
+      "sentence_index": 81,
+      "sentence": "くやしまぎれに一寸法師いっすんぼうしは、そっとお姫ひめさまが昼寝ひるねをしておいでになるすきをうかがって、自分じぶんが殿とのさまから頂いただいたお菓子かしを残のこらず食たべてしまって、残のこった粉こなをお姫ひめさまの眠ねむっている口くちのはたになすりつけておきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "お姫ひめさま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action taken by 一寸法師 (the one-inch master) against お姫ひめさま (the princess), where he consumes all the sweets given by the lord and smears the remaining powder on her sleeping mouth. This directly depicts an active behavior performed by the doer towards the receiver."
+      }
+    },
+    {
+      "sentence_index": 82,
+      "sentence": "そして自分じぶんはからっぽになったお菓子かしの袋ふくろを手てに持もって、お庭にわの真まん中なかに出て、わざと大きな声こえでおいおい泣ないておりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 一寸法師 pretending to cry loudly in the garden center, which is an active behavior performed by the character."
+      }
+    },
+    {
+      "sentence_index": 83,
+      "sentence": "その声こえを聞ききつけて、殿とのさまが縁側えんがわへ出ていらしって、 「一寸法師いっすんぼうし、どうした。どうした。」",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the lord (殿とのさま) performing an action by coming out to the veranda to inquire about the one-inch master (一寸法師いっすんぼうし)."
+      }
+    },
+    {
+      "sentence_index": 84,
+      "sentence": "とお聞ききになりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "殿とのさま"
+        ],
+        "receivers": [
+          "一寸法師いっすんぼうし"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the daimyo's action of listening to the child's crying, making '殿とのさま' the doer and '一寸法師いっすんぼうし' the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 85,
+      "sentence": "すると一寸法師いっすんぼうしは、さも悲かなしそうな声こえをして、 「お姫ひめさまがわたくしをぶって、殿とのさまから頂いただいたお菓子かしをみんな取とって食たべておしまいになりました。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "殿のさま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes 一寸法師 actively speaking to the lord (殿のさま) in a fabricated manner, which constitutes an action performed by the character."
+      }
+    },
+    {
+      "sentence_index": 86,
+      "sentence": "といいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "殿のさま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence marks the conclusion of a dialogue where 一寸法師 is speaking to the lord, indicating the action of verbal communication. The doer is 一寸法師, and the receiver is the lord (殿のさま)."
+      }
+    },
+    {
+      "sentence_index": 87,
+      "sentence": "殿とのさまはびっくりして、お姫ひめさまのお部屋へやへ行ってごらんになりますと、お姫ひめさまは口くちのはたにいっぱいお菓子かしの粉こなをつけて、眠ねむっておいでになりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": ""
+      }
+    },
+    {
+      "sentence_index": 88,
+      "sentence": "殿とのさまは大たいそうおおこりになって、おかあさんを呼よんで、 「何なんだって、姫ひめにあんな行儀ぎょうぎの悪わるいまねをさせるのだ。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "殿とのさま"
+        ],
+        "receivers": [
+          "おかあさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the lord's action of scolding his wife in response to the princess's situation, indicating an active behavior performed by the lord directed at his wife."
+      }
+    },
+    {
+      "sentence_index": 89,
+      "sentence": "ときびしくおしかりになりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "殿とのさま"
+        ],
+        "receivers": [
+          "おかあさん"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the lord (殿とのさま) reprimanding the mother (おかあさん) severely, which is an active action performed by the lord towards the mother."
+      }
+    },
+    {
+      "sentence_index": 90,
+      "sentence": "するとこのおかあさんは、少すこしいじの悪わるい人だったものですから、お姫ひめさまのために自分じぶんがしかられたのを大たいそうくやしがりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The mother's resentment led her to fabricate false accusations against the princess, escalating the conflict",
+        "explanation": "This sentence describes the outcome of the father's reprimand, showing how the mother's resentment (changed_state) caused her to create false narratives about the princess, which directly influenced the subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 91,
+      "sentence": "そしてくやしまぎれに、ありもしないことをいろいろとこしらえて、お姫ひめさまが平生へいぜい大臣だいじんのお娘むすめに似合にあわず、行儀ぎょうぎの悪わるいことをさんざんに並ならべて、 「いくら止とめても、ばかにしていうことをちっとも聴きかないのです。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "お姫ひめさまの母親"
+        ],
+        "receivers": [
+          "お姫ひめさま"
+        ],
+        "changed_state": "",
+        "explanation": "この文は、お姫ひめさまの母親が虚偽の情報を作り上げ、お姫ひめさまに対して悪口を並べる行動を描写しています。実行者（doers）はお姫ひめさまの母親で、対象（receivers）はお姫ひめさまです。"
+      }
+    },
+    {
+      "sentence_index": 92,
+      "sentence": "とおいいつけになりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "okaasan"
+        ],
+        "receivers": [
+          "hime"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the mother-in-law's action of making false accusations against the princess, which are directed at her as the receiver. This action directly leads to the subsequent consequence of the princess being expelled."
+      }
+    },
+    {
+      "sentence_index": 93,
+      "sentence": "宰相殿さいしょうどのはなおなおおおこりになって、一寸法師いっすんぼうしにいいつけて、お姫ひめさまをお屋敷やしきから追おい出だして、どこか遠とおい所ところへ捨すてさせました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": ""
+      }
+    },
+    {
+      "sentence_index": 94,
+      "sentence": "一寸法師いっすんぼうしはとんだことをいい出だして、お姫ひめさまが追おい出だされるようになったので、すっかり気きの毒どくになってしまいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "一寸法師がお姫ひめさまの追放により気の毒になった",
+        "explanation": "前の文におけるお姫ひめさまの追放という行動の結果として、一寸法師がその状況に深い同情を抱くようになった感情変化を表しています。これは原因となる行動（追放）の結果として生じた心理的変化を記述しており、'consequence'カテゴリに該当します。"
+      }
+    },
+    {
+      "sentence_index": 95,
+      "sentence": "そこでどこまでもお姫ひめさまのお供ともをして行くつもりで、まず難波なにわのおとうさんのうちへお連つれしようと思おもって、鳥羽とばから舟ふねに乗のりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "舟ふね"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of getting on the boat (舟ふね) as 一寸法師 prepares to accompany the princess to his parents' house. The doer is 一寸法師, and the receiver is the boat."
+      }
+    },
+    {
+      "sentence_index": 96,
+      "sentence": "すると間まもなく、ひどいしけになって、舟ふねはずんずん川かわを下くだって海うみの方ほうへ流ながされました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the boat was carried down the river and towards the sea",
+        "explanation": "The sentence describes the outcome of the previous action (taking the boat), where the boat was swept by the current towards the sea, indicating a consequence."
+      }
+    },
+    {
+      "sentence_index": 97,
+      "sentence": "それから風かぜのまにまに吹ふき流ながされて、とうとう三日三晩みっかみばん波なみの上で暮くらして、四日よっかめに一つの島しまに着つきました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The boat arrived at an island after being carried by the wind and waves for three days and nights",
+        "explanation": "The sentence describes the outcome of the boat being blown downstream to the sea, resulting in its arrival at an island after three days and nights. This is a consequence of the prior action of the boat being carried by the wind."
+      }
+    },
+    {
+      "sentence_index": 98,
+      "sentence": "その島しまには今いままで話はなしに聞きいたこともないようなふしぎな花はなや木がたくさんあって、いったい人が住すんでいるのかいないのか、いっこうに人らしいものの姿すがたは見みえませんでした。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "島",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the island's environment, setting the stage for the subsequent encounter with the oni. It provides background context about the location's characteristics."
+      }
+    },
+    {
+      "sentence_index": 99,
+      "sentence": "一寸法師いっすんぼうしはお姫ひめさまを連つれて島しまに上あがって、きょろきょろしながら歩あるいて行きますと、いつどこから出てきたともなく、二匹ひきの鬼おにがそこへひょっこり飛とび出だしてきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [
+          "お姫ひめさま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the two oni suddenly appearing and approaching the princess, which is an active event performed by the oni and directed towards the princess."
+      }
+    },
+    {
+      "sentence_index": 100,
+      "sentence": "そしていきなりお姫ひめさまにとびかかって、ただ一口ひとくちに食たべようとしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [
+          "お姫ひめさま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the two demons suddenly attacking the princess and attempting to eat her in one bite, which is a direct physical action performed by the demons against the princess."
+      }
+    },
+    {
+      "sentence_index": 101,
+      "sentence": "お姫ひめさまはびっくりして、気きが遠とおくなってしまいました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the princess was startled and her mind wandered away",
+        "explanation": "The sentence describes the outcome of the oni's sudden attack on the princess, indicating a state change in her mental condition following the prior action."
+      }
+    },
+    {
+      "sentence_index": 102,
+      "sentence": "それを見みると、一寸法師いっすんぼうしは、例れいのぬい針ばりの刀かたなをきらりと引ひき抜ぬいて、ぴょこんと鬼おにの前まえへ飛とんで出ました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師いっすんぼうし"
+        ],
+        "receivers": [
+          "鬼おに"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action taken by 一寸法師 (the one-inch swordsman) as he pulls out his sword and moves toward the oni, indicating a direct physical action directed at the oni."
+      }
+    },
+    {
+      "sentence_index": 103,
+      "sentence": "そしてありったけの大きな声こえを振ふり立たてて、 「これこれ、このお方かたをだれだと思おもう。三条さんじょうの宰相殿さいしょうどのの姫君ひめぎみだぞ。うっかり失礼しつれいなまねをすると、この一寸法師いっすんぼうしが承知しょうちしないぞ。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "鬼おに"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes one-inch swordsman actively using his voice to challenge the oni, addressing them directly. This constitutes an action performed by the character towards the oni."
+      }
+    },
+    {
+      "sentence_index": 104,
+      "sentence": "とどなりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "鬼おに"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of shouting performed by 一寸法師, which is directed at the oni. The verb 'とどなりました' indicates the completion of the shouting action, with the oni as the target of the action."
+      }
+    },
+    {
+      "sentence_index": 105,
+      "sentence": "二匹ひきの鬼おにはこの声こえに驚おどろいて、よく見みますと、足あしもとに豆まめっ粒つぶのような小男こおとこが、いばり返かえって、つッ立たっていました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "島",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "この文は、鬼が一寸法師の声に驚き、足元に小男がいることに気づく場面を描写しています。これは物語の進行に向けた状況の設定であり、島という場所での出来事としての背景を提供しています。"
+      }
+    },
+    {
+      "sentence_index": 106,
+      "sentence": "鬼おにはからからと笑わらいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the oni's action of laughing in response to the boy's challenge, indicating an active behavior performed by the oni."
+      }
+    },
+    {
+      "sentence_index": 107,
+      "sentence": "「何なんだ。こんな豆まめっ粒つぶか。めんどうくさい、のんでしまえ。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼"
+        ],
+        "receivers": [
+          "一寸法師"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents the鬼's verbal action of issuing a command to swallow the small boy (一寸法師), making the鬼 the doer and the boy the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 108,
+      "sentence": "というが早はやいか、一匹ぴきの鬼おには、一寸法師いっすんぼうしをつまみ上あげて、ぱっくり一口ひとくちにのんでしまいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼"
+        ],
+        "receivers": [
+          "一寸法師"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the鬼 actively performing the action of grabbing and swallowing the一寸法師, making it an 'action' category. The doer is the鬼, and the receiver is the一寸法師."
+      }
+    },
+    {
+      "sentence_index": 109,
+      "sentence": "一寸法師いっすんぼうしは刀かたなを持もったまま、するすると鬼おにのおなかの中へすべり込こんでいきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "鬼おに"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 一寸法師 sliding into the demon's stomach, which is an active performance by the character against the demon."
+      }
+    },
+    {
+      "sentence_index": 110,
+      "sentence": "入はいるとおなかの中をやたらにかけずり回まわりながら、ちくりちくりと刀かたなでついて回まわりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "鬼"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 一寸法師 moving within the oni's stomach and using his knife, indicating his active engagement against the oni."
+      }
+    },
+    {
+      "sentence_index": 111,
+      "sentence": "鬼おには苦くるしがって、 「あッ、いたい。あッ、いたい。こりゃたまらん。」",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "鬼おにが痛みに苦しんで叫び、状況を悪化させた",
+        "explanation": "この文は、一寸法師が鬼おにの腹の中に刀で回りながら攻撃した行動の結果として、鬼おにが激しく痛み、叫ぶ様子を描写しています。これは前段の行動（Action）による結果（Consequence）として分類されます。"
+      }
+    },
+    {
+      "sentence_index": 112,
+      "sentence": "と地じびたをころげ回まわりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The ghost rolled around on the ground in pain after being attacked by the one-inch swordsman",
+        "explanation": "This sentence describes the outcome of the one-inch swordsman's attack on the ghost, showing the ghost's physical reaction to the pain inflicted, which is a direct consequence of the prior action."
+      }
+    },
+    {
+      "sentence_index": 113,
+      "sentence": "そして苦くるしまぎれにかっと息いきをするはずみに、一寸法師いっすんぼうしはまたぴょこりと口くちから外そとへ飛とび出だしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 一寸法師 jumping out of the demon's mouth as a result of the demon's suffering. The doer is clearly 一寸法師, and while the demon's mouth could be considered a receiver, the annotation guidelines prioritize explicit character/role identification, which is not directly stated here."
+      }
+    },
+    {
+      "sentence_index": 114,
+      "sentence": "そして刀かたなを振ふり上あげて、また鬼おにに切きってかかりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "鬼"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 一寸法師 swinging his sword and attacking the oni, making it an 'action' category with the doer being 一寸法師 and the receiver being the oni."
+      }
+    },
+    {
+      "sentence_index": 115,
+      "sentence": "するともう一匹ぴきの鬼おにが、 「生意気なまいきなちびだ。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [
+          "一寸法師いっすんぼうし"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the second oni speaking derogatorily to the one-inch swordsman, which constitutes an action performed by the oni (doer) directed at the swordsman (receiver)."
+      }
+    },
+    {
+      "sentence_index": 116,
+      "sentence": "といって、また一寸法師いっすんぼうしをつかまえて、あんぐりのんでしまいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "二匹ひきの鬼おに"
+        ],
+        "receivers": [
+          "一寸法師いっすんぼうし"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the two oni catching and swallowing the one-inch swordsman, making the oni the doer and the swordsman the receiver."
+      }
+    },
+    {
+      "sentence_index": 117,
+      "sentence": "のまれながら一寸法師いっすんぼうしは、こんどはすばやく躍おどり上あがって、のどの穴あなから鼻はなの穴あなへ抜けて、それから眼めのうしろへはい上あがって、さんざん鬼おにの目玉めだまをつッつきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師いっすんぼうし"
+        ],
+        "receivers": [
+          "鬼おに"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the active action taken by 一寸法師 against the oni, detailing his escape and attack on the oni's eyes. The doer is clearly 一寸法師, and the receiver is the oni."
+      }
+    },
+    {
+      "sentence_index": 118,
+      "sentence": "すると鬼おには思おもわず、 「いたい。」",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "鬼おにが痛みに悶絶し、逃げ出すことになった",
+        "explanation": "この文は、一寸法師が鬼おにの目玉をつッついた行動の結果として、鬼おにが痛みを訴える様子を描写しています。これは前段の行動（目玉をつッついた）による直接的な結果であり、状態の変化を示しています。"
+      }
+    },
+    {
+      "sentence_index": 119,
+      "sentence": "とさけんで、飛とび上あがったはずみに、一寸法師いっすんぼうしは、目めの中からひょいと地じびたに飛とび下おりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "地じびた"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 一寸法師 jumping down from the ogre's eye to the ground, indicating a physical movement performed by the character."
+      }
+    },
+    {
+      "sentence_index": 120,
+      "sentence": "鬼おには目玉めだまが抜ぬけ出だしたかと思おもって、びっくりして、 「大たいへん、大たいへん。」",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "鬼おには目玉めだまが抜け出たことに驚き、逃げ出しました",
+        "explanation": "この文は、一寸法師が鬼の目玉を抜き取った行動の結果として、鬼が驚き慌てて逃げる様子を描写しています。これは前段の行動（小槌で目玉を抜く）の結果として生じた状態変化を表しています。"
+      }
+    },
+    {
+      "sentence_index": 121,
+      "sentence": "と、後あとをも見みずに逃にげ出だしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the oni fleeing without looking back, which is performed by the oni (鬼おに) as a direct action without a specified receiver."
+      }
+    },
+    {
+      "sentence_index": 122,
+      "sentence": "するともう一匹ぴきの鬼おにも、 「こりやかなわん。逃にげろ、逃にげろ。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "鬼おに"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the one-inch warrior actively confronting the second oni, directing it to flee. The action is performed by 一寸法師 (doer) and directed at the oni (receiver)."
+      }
+    },
+    {
+      "sentence_index": 123,
+      "sentence": "と後あとを追おって行きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼おに"
+        ],
+        "receivers": [
+          "鬼おに"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the second oni following the first oni, indicating an action performed by the second oni towards the first oni."
+      }
+    },
+    {
+      "sentence_index": 124,
+      "sentence": "「はッは、弱虫よわむしめ。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "鬼"
+        ],
+        "receivers": [
+          "一寸法師"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents a taunting action performed by the ghost (鬼) directed at the small person (一寸法師), which is part of their interaction during the confrontation."
+      }
+    },
+    {
+      "sentence_index": 125,
+      "sentence": "と、一寸法師いっすんぼうしは、逃にげて行く鬼おにのうしろ姿すがたを気味きみよさそうにながめて、 「やれやれ、とんだことでした。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "鬼おに"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the one-inch warrior's action of looking at the fleeing oni and expressing relief, which is an action performed by him."
+      }
+    },
+    {
+      "sentence_index": 126,
+      "sentence": "といいながら、そこに倒たおれているお姫ひめさまを抱だき起おこして、しんせつに介抱かいほうしました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "お姫ひめさま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 一寸法師 picking up and caring for the fallen princess, indicating an active activity performed by the character."
+      }
+    },
+    {
+      "sentence_index": 127,
+      "sentence": "お姫ひめさまがすっかり正気しょうきがついて、立たち上あがろうとしますと、すそからころころと小ちいさな槌つちがころげ落おちました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "小ちいさな槌つちがすそからころげ落ちた",
+        "explanation": "この文は、お姫ひめさまが正気を取り戻して立ち上がろうとする際の結果として、小槌がすそからころげ落ちたという出来事を記述しています。これは前段の行動（一寸法師による小槌の使用）の結果として生じた状態変化を表しています。"
+      }
+    },
+    {
+      "sentence_index": 128,
+      "sentence": "「おや、ここにこんなものが。」",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": ""
+      }
+    },
+    {
+      "sentence_index": 129,
+      "sentence": "と、お姫ひめさまがそれを拾ひろってお見みせになりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "お姫ひめさま"
+        ],
+        "receivers": [
+          "一寸法師いっすんぼうし"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the princess (お姫ひめさま) performing the action of picking up and showing an object (the hammer) to the dwarf (一寸法師いっすんぼうし). The doer is the princess, and the receiver is the dwarf who is shown the object."
+      }
+    },
+    {
+      "sentence_index": 130,
+      "sentence": "一寸法師いっすんぼうしはその槌つちを手に持もって、 「これは鬼おにの忘わすれて行った打うち出での小槌こづちです。これを振ふれば、何なんでもほしいと思おもうものが出でてきます。ごらんなさい、今いまここでわたしの背せいを打うち出だしてお目にかけますから。」",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes 一寸法師 actively using the hammer to demonstrate its magical power, which directly affects his own body (making his back grow). This constitutes an action performed by the character on himself."
+      }
+    },
+    {
+      "sentence_index": 131,
+      "sentence": "こういって、一寸法師いっすんぼうしは、打うち出での小槌こづちを振ふり上あげて、 「一寸法師いっすんぼうしよ、大きくなれ。あたり前まえの背せいになれ。」",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師"
+        ],
+        "receivers": [
+          "小槌"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of shaking the magic hammer (小槌) performed by 一寸法師, which directly leads to his physical transformation. The action involves the doer (一寸法師) interacting with the object (小槌) to initiate the subsequent consequence."
+      }
+    },
+    {
+      "sentence_index": 132,
+      "sentence": "といいながら、一度ど振ふりますと背せいが一尺しゃくのび、二度ど振ふりますと三尺じゃくのび、三度どめには六尺しゃくに近ちかいりっぱな大男おおおとこになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "一寸法師が指ほどの小ちいさな体からだから、六尺しゃくに近ちかいりっぱな大男おおおとこへと成長し、体型が大きく変わった",
+        "explanation": "この文は、小槌こづちを振るという行動（前文の'action'）の結果として、一寸法師が体格的に大きく成長した状態変化を記述しています。これは「consequence（結果）」カテゴリに該当し、体型の変化が状態変化として記録されます。"
+      }
+    },
+    {
+      "sentence_index": 133,
+      "sentence": "お姫ひめさまはそのたんびに目めをまるくして、 「まあ、まあ。」",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the princess reacted with widened eyes and a surprised expression",
+        "explanation": "The sentence describes the princess's reaction to the transformation of the little monk, which is a direct consequence of the prior action (using the magic hammer to grow). This reaction marks a change in the narrative state by highlighting the impact of the magical transformation."
+      }
+    },
+    {
+      "sentence_index": 134,
+      "sentence": "といっておいでになりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": ""
+      }
+    },
+    {
+      "sentence_index": 135,
+      "sentence": "一寸法師いっすんぼうしは大きくなったので、もううれしくってうれしくって、立たったりしゃがんだり、うしろを振ふり向むいたり、前まえを見みたり、自分じぶんで自分じぶんの体からだをめずらしそうにながめていましたが、一通ひととおりながめてしまうと、急きゅうに三日三晩みっかみばんなんにも食たべないで、おなかのへっていることを思おもい出だしました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "一寸法師が成長した後、急に飢えたという状態に変わった",
+        "explanation": "前文の魔槌の使用による成長（行動）の結果として、一寸法師が自身の体型の変化に驚き、その後飢えたという状態変化を記述しているため、'consequence'カテゴリに分類。"
+      }
+    },
+    {
+      "sentence_index": 136,
+      "sentence": "そこでさっそく打うち出での小槌こづちを振ふって、そこへ食たべきれないほどのごちそうを振ふり出だして、お姫ひめさまと二人ふたりで仲なかよく食たべました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": ""
+      }
+    },
+    {
+      "sentence_index": 137,
+      "sentence": "ごちそうを食たべてしまうと、こんどは金銀きんぎん、さんご、るり、めのうと、いろいろの宝たからを打うち出だしました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the appearance of various treasures (gold, silver, coral, pearls, etc.)",
+        "explanation": "The sentence describes the outcome of the previous action (eating the feast) leading to the emergence of treasures, which is a state change resulting from the prior event."
+      }
+    },
+    {
+      "sentence_index": 138,
+      "sentence": "そしていちばんおしまいに、大きな舟ふねを打うち出だして、宝物たからものを残のこらずそれに積つみ込こんで、お姫ひめさまと二人ふたり、また舟ふねに乗のって、間まもなく日本にっぽんの国くにへ帰かえって来きました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "一寸法師",
+          "お姫ひめさま"
+        ],
+        "receivers": [
+          "舟",
+          "宝物"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of summoning a large boat, loading it with treasures, and sailing back to Japan. The doers are 一寸法師 and お姫ひめさま, while the receivers are the boat (for the treasures) and the treasures themselves."
+      }
+    },
+    {
+      "sentence_index": 139,
+      "sentence": "一寸法師いっすんぼうしが宰相殿さいしょうどののお姫ひめさまを連つれて、鬼おにが島しまから宝物たからものを取とって、めでたく帰かえって来きたといううわさが、すぐと世間せけんにひろまって、やがて天子てんしさまのお耳みみにまで入はいりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the emperor became aware of the events (一寸法師 and the treasures)",
+        "explanation": "The sentence describes the outcome of the prior events (returning with treasures) where the news spread and reached the emperor's ears, indicating a state change in the narrative."
+      }
+    },
+    {
+      "sentence_index": 140,
+      "sentence": "そこで天子てんしさまは、ある時とき、一寸法師いっすんぼうしをお召めしになってごらんになりますと、なるほど気高けだかい様子ようすをしたりっぱな若者わかものでしたから、これはただ者ものではあるまいと、よくよく先祖せんぞをお調しらべさせになりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": ""
+      }
+    },
+    {
+      "sentence_index": 141,
+      "sentence": "それで一寸法師いっすんぼうしのおじいさんが、堀河ほりかわの中納言ちゅうなごんというえらい人で、むじつの罪つみで田舎いなかに追おわれて出来できた子が、一寸法師いっすんぼうしのおとうさんで、それからおかあさんという人も、やはりもとは伏見ふしみの少将しょうしょうといった、これもえらい人の種たねだということが分わかりました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background information about the family lineage of 一寸法師, establishing his noble heritage through his grandfather and parents. This context sets the stage for understanding his later significance in the story."
+      }
+    },
+    {
+      "sentence_index": 142,
+      "sentence": "天子てんしさまはさっそく、一寸法師いっすんぼうしに位くらいをおさずけになって、堀河ほりかわの少将しょうしょうとお呼よばせになりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "天子が一寸法師に位を授け、堀河の少将として呼称されるようになった",
+        "explanation": "この文は、前文で述べた天子が一寸法師の功績を認めた結果として発生した状態変化を記述しています。天子が位を授け、新たな呼称を決定するという出来事は、前段階の調査・評価に基づく結果としての変化を表しています。"
+      }
+    },
+    {
+      "sentence_index": 143,
+      "sentence": "堀河ほりかわの少将しょうしょうは、改あらためて三条宰相殿さんじょうさいしょうどののお許ゆるしをうけて、お姫ひめさまをお嫁よめさんにもらいました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "堀河の少将"
+        ],
+        "receivers": [
+          "お姫さま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of 堀河の少将 marrying the princess after receiving permission, indicating an active performance by the doer (堀河の少将) and the receiver (princess)."
+      }
+    },
+    {
+      "sentence_index": 144,
+      "sentence": "そして摂津国せっつのくにの難波なにわから、おとうさんやおかあさんを呼よび寄よせて、うち中じゅうがみんな集あつまって、楽たのしく世よの中を送おくりました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the family and community gathered together to celebrate and send off the world happily",
+        "explanation": "The sentence describes the outcome of the prior events (the marriage of the princess to the Shogun), indicating a celebratory gathering of the family and community, which represents a state change following the successful resolution of the story's conflicts."
+      }
+    }
+  ]
+}

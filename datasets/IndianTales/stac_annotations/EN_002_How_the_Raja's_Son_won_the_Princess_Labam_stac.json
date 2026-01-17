@@ -1,0 +1,1033 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_002_How_the_Raja's_Son_won_the_Princess_Labam.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 67,
+  "analyzed_sentences": 67,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "In a country there was a Raja who had an only son who every day went out to hunt.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "country",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the background context by introducing the Raja and his son in a country, setting the stage for the story's events."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "One day the Rani, his mother, said to him, \"You can hunt wherever you like on these three sides; but you must never go to the fourth side.\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "son"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task assigned by the Rani to her son, restricting his hunting area. The task_roles include the son, who must adhere to the rule of not hunting on the fourth side."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "This she said because she knew if he went on the fourth side he would hear of the beautiful Princess Labam, and that then he would leave his father and mother and seek for the princess.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "fourth side",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "This sentence provides background context for the mother's warning, establishing the reason behind the restriction and introducing the key narrative focus (the fourth side) where the princess is located."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "The young prince listened to his mother, and obeyed her for some time; but one day, when he was hunting on the three sides where he was allowed to go, he remembered what she had said to him about the fourth side, and he determined to go and see why she had forbidden him to hunt on that side.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "young prince"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the young prince's decision to act on his mother's warning by determining to explore the forbidden fourth side. This is an active choice made by the prince, making it an 'action' category. The doer is the prince himself, and there is no explicit receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "When he got there, he found himself in a jungle, and nothing in the jungle but a quantity of parrots, who lived in it.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "jungle",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the prince's arrival at a new location (the jungle) which sets the stage for subsequent events involving the parrots. This establishes the context for the story's progression."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "The young Raja shot at some of them, and at once they all flew away up to the sky.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "young Raja"
+        ],
+        "receivers": [
+          "parrots"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the young Raja's active action of shooting at the parrots, which directly caused their flight. The doer is the young Raja, and the receiver is the group of parrots."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "All, that is, but one, and this was their Raja, who was called Hiraman parrot.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "jungle",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the remaining parrot being the Raja Hiraman, establishing the parrot's significance in the story's context within the jungle setting."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "When Hiraman parrot found himself left alone, he called out to the other parrots, \"Don't fly away and leave me alone when the Raja's son shoots. If you desert me like this, I will tell the Princess Labam.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Hiraman parrot"
+        ],
+        "receivers": [
+          "other parrots"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Hiraman parrot's active response to being left alone, directly depicting his action of calling out to the other parrots to warn them about the Raja's son's hunting."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "Then the parrots all flew back to their Raja, chattering.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "parrots"
+        ],
+        "receivers": [
+          "Raja"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the parrots actively flying back to their Raja (Hiraman parrot) after being called back by him, which is a direct action performed by the parrots toward their Raja."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "The prince was greatly surprised, and said, \"Why, these birds can talk!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "prince"
+        ],
+        "receivers": [
+          "parrots"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the prince's active response to the parrots' ability to talk, indicating an action performed by the prince (doer) directed towards the parrots (receivers)."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "Then he said to the parrots, \"Who is the Princess Labam? Where does she live?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "prince"
+        ],
+        "receivers": [
+          "parrots"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the prince actively performing the action of speaking to the parrots and asking them about the Princess Labam, making 'prince' the doer and 'parrots' the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "But the parrots would not tell him where she lived.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": ""
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "\"You can never get to the Princess Labam's country.\" That is all they would say. The prince grew very sad when they would not tell him anything more; and he threw his gun away, and went home. When he got home, he would not speak or eat, but lay on his bed for four or five days, and seemed very ill. At last he told his father and mother that he wanted to go and see the Princess Labam. \"I must go,\" he said; \"I must see what she is like. Tell me where her country is.\" \"We do not know where it is,\" answered his father and mother. \"Then I must go and look for it,\" said the prince. \"No, no,\" they said, \"you must not leave us. You are our only son. Stay with us. You will never find the Princess Labam.\" \"I must try and find her,\" said the prince. \"Perhaps God will show me the way. If I live and I find her, I will come back to you; but perhaps I shall die, and then I shall never see you again. Still I must go.\" So they had to let him go, though they cried very much at parting with him. His father gave him fine clothes to wear, and a fine horse. And he took his gun, and his bow and arrows, and a great many other weapons, \"for,\" he said, \"I may want them.\" His father, too, gave him plenty of rupees. Then he himself got his horse all ready for the journey, and he said good-bye to his father and mother; and his mother took her handkerchief and wrapped some sweetmeats in it, and gave it to her son. \"My child,\" she said to him, \"When you are hungry eat some of these sweetmeats.\" He then set out on his journey, and rode on and on till he came to a jungle in which were a tank and shady trees. He bathed himself and his horse in the tank, and then sat down under a tree. \"Now,\" he said to himself, \"I will eat some of the sweetmeats my mother gave me, and I will drink some water, and then I will continue my journey.\" He opened his handkerchief, and took out a sweetmeat. He found an ant in it. He took out another. There was an ant in that one too. So he laid the two sweetmeats on the ground, and he took out another, and another, and another, until he had taken them all out; but in each he found an ant. \"Never mind,\" he said, \"I won't eat the sweetmeats; the ants shall eat them.\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The prince decides to leave his family and start his journey despite their warnings, leading to his departure and the subsequent events of his quest.",
+        "explanation": ""
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "Then the Ant-Raja came and stood before him and said, \"You have been good to us. If ever you are in trouble, think of me and we will come to you.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Ant-Raja"
+        ],
+        "receivers": [
+          "Raja's son"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Ant-Raja actively performing the action of approaching the prince and speaking to him, offering assistance. The Ant-Raja is the doer, and the prince is the receiver of this action."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "The Raja's son thanked him, mounted his horse and continued his journey. He rode on and on until he came to another jungle, and there he saw a tiger who had a thorn in his foot, and was roaring loudly from the pain. \"Why do you roar like that?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Raja's son"
+        ],
+        "receivers": [
+          "tiger"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Raja's son actively performing actions (mounting his horse, continuing his journey, and encountering the tiger). The tiger is the recipient of his observation and interaction, making this an 'action' category."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "said the young Raja. \"What is the matter with you?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "young Raja"
+        ],
+        "receivers": [
+          "tiger"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents the young Raja actively engaging with the tiger by asking about its condition, which is an interaction initiated by the Raja and directed toward the tiger."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "\"I have had a thorn in my foot for twelve years,\" answered the tiger, \"and it hurts me so; that is why I roar.\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The tiger explains the reason for his prolonged pain and roaring, providing background context for the prince's subsequent decision to help him. This establishes the narrative situation that drives the story forward."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "\"Well,\" said the Raja's son, \"I will take it out for you.  But perhaps, as you are a tiger, when I have made you well, you will eat me?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Raja's son"
+        ],
+        "receivers": [
+          "tiger"
+        ],
+        "changed_state": "",
+        "explanation": "The Raja's son actively performs the action of removing the thorn from the tiger, with the tiger as the recipient of his action. The sentence captures the prince's decision to take action despite the potential risk."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "\"Oh, no,\" said the tiger, \"I won't eat you. Do make me well.\" Then the prince took a little knife from his pocket, and cut the thorn out of the tiger's foot; but when he cut, the tiger roared louder than ever—so loud that his wife heard him in the next jungle, and came bounding along to see what was the matter. The tiger saw her coming, and hid the prince in the jungle, so that she should not see him. \"What man hurt you that you roared so loud?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "prince"
+        ],
+        "receivers": [
+          "tiger's foot"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the prince actively performing the action of cutting the thorn from the tiger's foot. The doer is the prince, and the receiver is the tiger's foot. The subsequent consequences (tiger roaring, wife arriving) are outcomes of this action but not part of the classification itself."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "said the wife. \"No one hurt me,\" answered the husband; \"but a Raja's son came and took the thorn out of my foot.\" \"Where is he? Show him to me,\" said his wife. \"If you promise not to kill him, I will call him,\" said the tiger. \"I won't kill him; only let me see him,\" answered his wife. Then the tiger called the Raja's son, and when he came the tiger and his wife made him a great many salaams. Then they gave him a good dinner, and he stayed with them for three days. Every day he looked at the tiger's foot, and the third day it was quite healed. Then he said good-bye to the tigers, and the tiger said to him, \"If ever you are in trouble, think of me, and we will come to you.\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the tiger's foot was healed",
+        "explanation": "The sentence describes the outcome of the prince removing the thorn from the tiger's foot, resulting in the tiger's foot being fully healed after three days of care."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "The Raja's son rode on and on till he came to a third jungle. Here he found four fakirs whose teacher and master had died, and had left four things,—a bed, which carried whoever sat on it whithersoever he wished to go; a bag, that gave its owner whatever he wanted, jewels, food, or clothes; a stone bowl that gave its owner as much water as he wanted, no matter how far he might be from a tank; and a stick and rope, to which its owner had only to say, if any one came to make war on him, \"Stick, beat as many men and soldiers as are here,\" and the stick would beat them and the rope would tie them up. The four fakirs were quarrelling over these four things. One said, \"I want this;\" another said, \"You cannot have it, for I want it;\" and so on. The Raja's son said to them, \"Do not quarrel for these things. I will shoot four arrows in four different directions. Whichever of you gets to my first arrow, shall have the first thing—the bed. Whosoever gets to the second arrow, shall have the second thing—the bag. He who gets to the third arrow, shall have the third thing—the bowl. And he who gets to the fourth arrow, shall have the last things—the stick and rope.\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "third jungle",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the Raja's son's arrival at the third jungle and introduces the conflict among the fakirs over the magical items, setting the stage for the subsequent resolution through the arrow challenge."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "To this they agreed, and the prince shot off his first arrow. Away raced the fakirs to get it. When they brought it back to him he shot off the second, and when they had found and brought it to him he shot off his third, and when they had brought him the third he shot off the fourth. While they were away looking for the fourth arrow the Raja's son let his horse loose in the jungle, and sat on the bed, taking the bowl, the stick and rope, and the bag with him. Then he said, \"Bed, I wish to go to the Princess Labam's country.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Raja's son"
+        ],
+        "receivers": [
+          "fakirs",
+          "bed"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Raja's son actively performing actions: shooting arrows (which the fakirs receive) and using the bed to travel. These actions drive the narrative forward by enabling his journey toward the Princess Labam's country."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "The little bed instantly rose up into the air and began to fly, and it flew and flew till it came to the Princess Labam's country, where it settled on the ground. The Raja's son asked some men he saw, \"Whose country is this?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Raja's son"
+        ],
+        "receivers": [
+          "bed"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Raja's son commanding the bed to fly to the Princess Labam's country, which is an action performed by the bed as a result of his command."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "\"The Princess Labam's country,\" they answered. Then the prince went on till he came to a house where he saw an old woman. \"Who are you?\" she said. \"Where do you come from?\" \"I come from a far country,\" he said; \"do let me stay with you to-night.\" \"No,\" she answered, \"I cannot let you stay with me; for our king has ordered that men from other countries may not stay in his country. You cannot stay in my house.\" \"You are my aunty,\" said the prince; \"let me remain with you for this one night. You see it is evening, and if I go into the jungle, then the wild beasts will eat me.\" \"Well,\" said the old woman, \"you may stay here to-night; but to-morrow morning you must go away, for if the king hears you have passed the night in my house, he will have me seized and put into prison.\" Then she took him into her house, and the Raja's son was very glad. The old woman began preparing dinner, but he stopped her, \"Aunty,\" he said, \"I will give you food.\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "the old woman's house",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the prince's arrival at the old woman's house and the context of her refusal to let him stay, setting the stage for future interactions and challenges in the narrative."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "He put his hand into his bag, saying, \"Bag, I want some dinner,\" and the bag gave him instantly a delicious dinner, served up on two gold plates. The old woman and the Raja's son then dined together. When they had finished eating, the old woman said, \"Now I will fetch some water.\" \"Don't go,\" said the prince.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Raja's son"
+        ],
+        "receivers": [
+          "bag"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Raja's son actively using his magical bag to obtain dinner, which is a direct action performed by the prince. The bag is the receiver of his command and the provider of the dinner."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "\"You shall have plenty of water directly.\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "Raja's son"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents the Raja's son taking responsibility to provide water, establishing a task for him to fulfill."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "So he took his bowl and said to it, \"Bowl, I want some water,\" and then it filled with water.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "prince"
+        ],
+        "receivers": [
+          "bowl"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the prince actively commanding his bowl to fill with water, which is a direct action performed by the prince (doer) and directed at the bowl (receiver)."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "When it was full, the prince cried out, \"Stop, bowl,\" and the bowl stopped filling.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "prince"
+        ],
+        "receivers": [
+          "bowl"
+        ],
+        "changed_state": "",
+        "explanation": "The prince actively commands the bowl to stop filling, which is an action he performs. The bowl is the receiver of this command."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "\"See, aunty,\" he said, \"with this bowl I can always get as much water as I want.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "prince"
+        ],
+        "receivers": [
+          "aunt"
+        ],
+        "changed_state": "",
+        "explanation": "The prince is performing the action of speaking to his aunt, explaining the bowl's ability to provide unlimited water. This is a direct communication action with the aunt as the receiver."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "By this time night had come.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes a temporal context (night) that sets the stage for subsequent events involving the princess's nocturnal activities and the prince's actions. It provides background context without introducing new actions, tasks, or state changes."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "\"Aunty,\" said the Raja's son, \"why don't you light a lamp?\" \"There is no need,\" she said. \"Our king has forbidden the people in his country to light any lamps; for, as soon as it is dark, his daughter, the Princess Labam, comes and sits on her roof, and she shines so that she lights up all the country and our houses, and we can see to do our work as if it were day.\" When it was quite black night the princess got up. She dressed herself in her rich clothes and jewels, and rolled up her hair, and across her head she put a band of diamonds and pearls. Then she shone like the moon, and her beauty made night day. She came out of her room, and sat on the roof of her palace. In the daytime she never came out of her house; she only came out at night. All the people in her father's country then went about their work and finished it. The Raja's son watched the princess quietly, and was very happy. He said to himself, \"How lovely she is!\" At midnight, when everybody had gone to bed, the princess came down from her roof, and went to her room; and when she was in bed and asleep, the Raja's son got up softly, and sat on his bed. \"Bed,\" he said to it, \"I want to go to the Princess Labam's bed-room.\" So the little bed carried him to the room where she lay fast asleep. The young Raja took his bag and said, \"I want a great deal of betel-leaf,\" and it at once gave him quantities of betel-leaf. This he laid near the princess's bed, and then his little bed carried him back to the old woman's house. Next morning all the princess's servants found the betel-leaf, and began to eat it. \"Where did you get all that betel-leaf?\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "Princess Labam's country",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of the princess's nightly presence and the kingdom's customs, setting the stage for the prince's subsequent actions. The location is explicitly mentioned as the princess's country."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "asked the princess. \"We found it near your bed,\" answered the servants. Nobody knew the prince had come in the night and put it all there. In the morning the old woman came to the Raja's son. \"Now it is morning,\" she said, \"and you must go; for if the king finds out all I have done for you, he will seize me.\" \"I am ill to-day, dear aunty,\" said the prince; \"do let me stay till to-morrow morning.\" \"Good,\" said the old woman. So he stayed, and they took their dinner out of the bag, and the bowl gave them water. When night came the princess got up and sat on her roof, and at twelve o'clock, when every one was in bed, she went to her bed-room, and was soon fast asleep. Then the Raja's son sat on his bed, and it carried him to the princess. He took his bag and said, \"Bag, I want a most lovely shawl.\" It gave him a splendid shawl, and he spread it over the princess as she lay asleep. Then he went back to the old woman's house and slept till morning. In the morning, when the princess saw the shawl she was delighted. \"See, mother,\" she said; \"Khuda must have given me this shawl, it is so beautiful.\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The princess attributes the shawl's appearance to divine intervention (Khuda), believing it to be a gift, which alters her perception of the prince's intentions and strengthens her connection to him.",
+        "explanation": "This sentence describes the outcome of the prince's previous actions (placing the shawl on the princess). The princess's reaction and belief in divine intervention represent a state change in her perception and relationship with the prince."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "Her mother was very glad too. \"Yes, my child,\" she said; \"Khuda must have given you this splendid shawl.\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The princess's mother expresses joy and attributes the shawl's presence to divine intervention (Khuda), indicating a shift in the narrative towards the princess's acceptance of the prince's gift.",
+        "explanation": "The sentence describes the outcome of the prince's previous action (giving the shawl to the princess) by showing the princess's mother's reaction, which marks a change in the narrative state regarding the princess's relationship with the prince's gift."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "When it was morning the old woman said to the Raja's son, \"Now you must really go.\" \"Aunty,\" he answered, \"I am not well enough yet. Let me stay a few days longer. I will remain hidden in your house, so that no one may see me.\" So the old woman let him stay. When it was black night, the princess put on her lovely clothes and jewels, and sat on her roof. At midnight she went to her room and went to sleep. Then the Raja's son sat on his bed and flew to her bed-room. There he said to his bag, \"Bag, I want a very, very beautiful ring.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Raja's son"
+        ],
+        "receivers": [
+          "bag"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Raja's son actively using his magical bag to request a ring, which is a direct action performed by the prince to further his quest. The bag is the receiver of his command."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "The bag gave him a glorious ring. Then he took the Princess Labam's hand gently to put on the ring, and she started up very much frightened. \"Who are you?\" she said to the prince. \"Where do you come from? Why do you come to my room?\" \"Do not be afraid, princess,\" he said; \"I am no thief. I am a great Raja's son. Hiraman parrot, who lives in the jungle where I went to hunt, told me your name, and then I left my father and mother, and came to see you.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "prince"
+        ],
+        "receivers": [
+          "princess"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the prince's active actions of using the magical bag to obtain a ring and then interacting with the princess, which are direct actions he performs."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "\"Well,\" said the princess, \"as you are the son of such a great Raja, I will not have you killed, and I will tell my father and mother that I wish to marry you.\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the princess decides to help the prince and informs her parents that she wishes to marry him",
+        "explanation": "The princess's decision to protect the prince and pursue marriage is a direct consequence of the prince's prior action of placing the ring on her, which startled her. This sets up the next sequence of events involving the king's challenges."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "The prince then returned to the old woman's house; and when morning came the princess said to her mother, \"The son of a great Raja has come to this country, and I wish to marry him.\" Her mother told this to the king. \"Good,\" said the king; \"but if this Raja's son wishes to marry my daughter, he must first do whatever I bid him. If he fails I will kill him. I will give him eighty pounds weight of mustard seed, and out of this he must crush the oil in one day. If he cannot do this he shall die.\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "prince"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the king assigning a specific task to the prince, requiring him to crush oil from eighty pounds of mustard seed within one day. The prince is the clear task_role responsible for fulfilling this requirement."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "In the morning the Raja's son told the old woman that he intended to marry the princess.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Raja's son"
+        ],
+        "receivers": [
+          "old woman"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Raja's son actively communicating his intention to marry the princess to the old woman, which constitutes an action performed by the prince towards the old woman."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "\"Oh,\" said the old woman, \"go away from this country, and do not think of marrying her. A great many Rajas and Rajas' sons have come here to marry her, and her father has had them all killed. He says whoever wishes to marry his daughter must first do whatever he bids him. If he can, then he shall marry the princess; if he cannot, the king will have him killed. But no one can do the things the king tells him to do; so all the Rajas and Rajas' sons who have tried have been put to death. You will be killed too, if you try. Do go away.\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "Princess Labam's country",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The old woman provides background context about the king's demands and the fate of previous suitors, establishing the challenges the prince will face in his quest to marry the princess."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "But the prince would not listen to anything she said.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "prince"
+        ],
+        "receivers": [
+          "old woman"
+        ],
+        "changed_state": "",
+        "explanation": "The prince's refusal to listen to the old woman's warning is an active decision he makes, with the old woman as the recipient of his refusal."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "The king sent for the prince to the old woman's house, and his servants brought the Raja's son to the king's court-house to the king. There the king gave him eighty pounds of mustard seed, and told him to crush all the oil out of it that day, and bring it next morning to him to the court-house. \"Whoever wishes to marry my daughter,\" he said to the prince, \"must first do all I tell him. If he cannot, then I have him killed. So if you cannot crush all the oil out of this mustard seed, you will die.\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "Raja's son"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the king assigning a specific task to the prince: crushing mustard seed oil. This is an explicit requirement that must be fulfilled, fitting the 'task' category. The task role is the prince (Raja's son) who must complete the task."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "The prince was very sorry when he heard this. \"How can I crush the oil out of all this mustard seed in one day?\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the prince felt sorrowful upon hearing the task",
+        "explanation": "The sentence describes the emotional consequence of the king's task (crushing mustard seed oil) being imposed on the prince, marking a shift in his emotional state from determination to despair."
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "he said to himself; \"and if I do not, the king will kill me.\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the king will kill the prince if he fails to crush the oil",
+        "explanation": "The sentence describes the consequence of the prince's failure to complete the task of crushing the mustard seed oil, which is a direct outcome of the king's prior command. The threat of death serves as the consequence for not fulfilling the task."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "He took the mustard seed to the old woman's house, and did not know what to do.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "prince"
+        ],
+        "receivers": [
+          "old woman's house"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the prince taking the mustard seed to the old woman's house, which is an action performed by him. The old woman's house is the location where the action is directed."
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "At last he remembered the Ant-Raja, and the moment he did so, the Ant-Raja and his ants came to him.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the Ant-Raja and his ants came to him",
+        "explanation": "The sentence describes the outcome of the prince remembering the Ant-Raja, resulting in the Ant-Raja and his ants arriving to assist him, which changes the state by providing aid for the task of crushing the mustard seed oil."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "\"Why do you look so sad?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Ant-Raja"
+        ],
+        "receivers": [
+          "Raja's son"
+        ],
+        "changed_state": "",
+        "explanation": "The Ant-Raja is actively performing the action of questioning the Raja's son about his sadness, which is a direct interaction in the narrative."
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "said the Ant-Raja.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Ant-Raja"
+        ],
+        "receivers": [
+          "prince"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence indicates the Ant-Raja performing the action of speaking to the prince, which is a key moment in the narrative where the Ant-Raja offers assistance."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "The prince showed him the mustard seed, and said to him, \"How can I crush the oil out of all this mustard seed in one day? And if I do not take the oil to the king to-morrow morning, he will kill me.\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "prince"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the prince's task of crushing the oil from the mustard seed within a day, which is a requirement set by the king."
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "\"Be happy,\" said the Ant-Raja; \"lie down and sleep; we will crush all the oil out for you during the day, and to-morrow morning you shall take it to the king.\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "ants"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The Ant-Raja assigns the task of crushing the mustard seed oil to the ants, specifying that they will perform this work during the day so the prince can deliver the oil to the king the next morning."
+      }
+    },
+    {
+      "sentence_index": 50,
+      "sentence": "The Raja's son lay down and slept, and the ants crushed out the oil for him. The prince was very glad when he saw the oil. The next morning he took it to the court-house to the king. But the king said, \"You cannot yet marry my daughter. If you wish to do so, you must first fight with my two demons and kill them.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Raja's son",
+          "ants"
+        ],
+        "receivers": [
+          "oil"
+        ],
+        "changed_state": "",
+        "explanation": ""
+      }
+    },
+    {
+      "sentence_index": 51,
+      "sentence": "The king a long time ago had caught two demons, and then, as he did not know what to do with them, he had shut them up in a cage. He was afraid to let them loose for fear they would eat up all the people in his country; and he did not know how to kill them. So all the kings and kings' sons who wanted to marry the Princess Labam had to fight with these demons; \"for,\" said the king to himself, \"perhaps the demons may be killed, and then I shall be rid of them.\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context explaining the king's rationale for requiring the prince to fight demons, establishing the narrative setup for the prince's subsequent challenges. No specific location is mentioned."
+      }
+    },
+    {
+      "sentence_index": 52,
+      "sentence": "When he heard of the demons the Raja's son was very sad. \"What can I do?\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the Raja's son's emotional reaction to learning about the demons, establishing his internal state and the challenge he faces. This sets the stage for subsequent actions and is classified as 'situation' since it provides background context without introducing a new task, action, or consequence."
+      }
+    },
+    {
+      "sentence_index": 53,
+      "sentence": "he said to himself. \"How can I fight with these two demons?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Raja's son"
+        ],
+        "receivers": [
+          "demons"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Raja's son taking an action by internally contemplating how to confront the demons, which is a step toward fulfilling the task assigned by the king."
+      }
+    },
+    {
+      "sentence_index": 54,
+      "sentence": "Then he thought of his tiger: and the tiger and his wife came to him and said, \"Why are you so sad?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "tiger",
+          "tiger's wife"
+        ],
+        "receivers": [
+          "Raja's son"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the tiger and his wife actively approaching the Raja's son to inquire about his sadness, indicating their action of coming to him."
+      }
+    },
+    {
+      "sentence_index": 55,
+      "sentence": "The Raja's son answered, \"The king has ordered me to fight with his two demons and kill them. How can I do this?\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "Raja's son"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence states the task imposed by the king on the Raja's son, requiring him to fight and kill two demons. The task role is the Raja's son as he is the one obligated to fulfill this requirement."
+      }
+    },
+    {
+      "sentence_index": 56,
+      "sentence": "\"Do not be frightened,\" said the tiger.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "tiger"
+        ],
+        "receivers": [
+          "Raja's son"
+        ],
+        "changed_state": "",
+        "explanation": "The tiger performs the action of speaking and offering assistance to the Raja's son, addressing his fear about fighting the demons."
+      }
+    },
+    {
+      "sentence_index": 57,
+      "sentence": "\"Be happy. I and my wife will fight with them for you.\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "tiger",
+          "tiger's wife"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates the tiger and his wife volunteering to fight the king's demons on behalf of the prince, establishing a new responsibility or obligation."
+      }
+    },
+    {
+      "sentence_index": 58,
+      "sentence": "Then the Raja's son took out of his bag two splendid coats. They were all gold and silver, and covered with pearls and diamonds. These he put on the tigers to make them beautiful, and he took them to the king, and said to him, \"May these tigers fight your demons for me?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Raja's son"
+        ],
+        "receivers": [
+          "tigers",
+          "king"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Raja's son actively performing actions: retrieving coats from his bag, dressing the tigers in them, and presenting them to the king. These actions involve direct physical and verbal interactions, making it an 'action' category with the Raja's son as the doer and the tigers/king as receivers."
+      }
+    },
+    {
+      "sentence_index": 59,
+      "sentence": "\"Yes,\" said the king, who did not care in the least who killed his demons, provided they were killed. \"Then call your demons,\" said the Raja's son, \"and these tigers will fight them.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Raja's son"
+        ],
+        "receivers": [
+          "king"
+        ],
+        "changed_state": "",
+        "explanation": "The Raja's son initiates an action by instructing the king to call his demons, which directly leads to the tigers engaging in combat. The doer is the Raja's son, and the receiver is the king who is being asked to perform the action."
+      }
+    },
+    {
+      "sentence_index": 60,
+      "sentence": "The king did so, and the tigers and the demons fought and fought until the tigers had killed the demons.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "tigers"
+        ],
+        "receivers": [
+          "demons"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the tigers actively fighting and killing the demons, which is an action performed by the tigers (doers) against the demons (receivers)."
+      }
+    },
+    {
+      "sentence_index": 61,
+      "sentence": "\"That is good,\" said the king.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the king approved the tigers' victory over the demons",
+        "explanation": "The sentence represents a consequence of the prior event (tigers killing the demons), indicating the king's acknowledgment of their success and setting the stage for the next task."
+      }
+    },
+    {
+      "sentence_index": 62,
+      "sentence": "\"But you must do something else before I give you my daughter. Up in the sky I have a kettle-drum. You must go and beat it. If you cannot do this, I will kill you.\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "Raja's son"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence explicitly states a new requirement (beating the kettle-drum) that the Raja's son must fulfill before proceeding, classifying it as a 'task' with the primary role being the prince."
+      }
+    },
+    {
+      "sentence_index": 63,
+      "sentence": "The Raja's son thought of his little bed; so he went to the old woman's house and sat on his bed.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Raja's son"
+        ],
+        "receivers": [
+          "bed"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Raja's son performing the action of going to the old woman's house and sitting on his bed. The doer is the Raja's son, and the receiver is the bed."
+      }
+    },
+    {
+      "sentence_index": 64,
+      "sentence": "\"Little bed,\" he said, \"up in the sky is the king's kettle-drum. I want to go to it.\" The bed flew up with him, and the Raja's son beat the drum, and the king heard him. Still, when he came down, the king would not give him his daughter. \"You have,\" he said to the prince, \"done the three things I told you to do; but you must do one thing more.\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": ""
+      }
+    },
+    {
+      "sentence_index": 65,
+      "sentence": "\"If I can, I will,\" said the Raja's son. Then the king showed him the trunk of a tree that was lying near his court-house. It was a very, very thick trunk. He gave the prince a wax hatchet, and said, \"To-morrow morning you must cut this trunk in two with this wax hatchet.\" The Raja's son went back to the old woman's house. He was very sad, and thought that now the Raja would certainly kill him. \"I had his oil crushed out by the ants,\" he said to himself. \"I had his demons killed by the tigers. My bed helped me to beat his kettle-drum. But now what can I do? How can I cut that thick tree-trunk in two with a wax hatchet?\" At night he went on his bed to see the princess. \"Tomorrow,\" he said to her, \"your father will kill me.\" \"Why?\" asked the princess. \"He has told me to cut a thick tree-trunk in two with a wax hatchet. How can I ever do that?\" said the Raja's son. \"Do not be afraid,\" said the princess; \"do as I bid you, and you will cut it in two quite easily.\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "Raja's son"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the king assigning a specific task to the Raja's son: cutting a thick tree trunk with a wax hatchet. This is an explicit requirement that must be fulfilled, fitting the 'task' category."
+      }
+    },
+    {
+      "sentence_index": 66,
+      "sentence": "Then she pulled out a hair from her head, and gave it to the prince. \"To-morrow,\" she said, \"when no one is near you, you must say to the tree-trunk, 'The Princess Labam commands you to let yourself be cut in two by this hair.'",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "prince"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence instructs the prince to perform a specific action (speak to the tree-trunk) as part of a challenge set by the princess, classifying it as a 'task' with the prince as the required role to fulfill it."
+      }
+    },
+    {
+      "sentence_index": 67,
+      "sentence": "Then stretch the hair down the edge of the wax hatchet's blade.\" The prince next day did exactly as the princess had told him; and the minute the hair that was stretched down the edge of the hatchet-blade touched the tree-trunk it split into two pieces. The king said, \"Now you can marry my daughter.\" Then the wedding took place. All the Rajas and kings of the countries round were asked to come to it, and there were great rejoicings. After a few days the prince's son said to his wife, \"Let us go to my father's country.\" The Princess Labam's father gave them a quantity of camels and horses and rupees and servants; and they travelled in great state to the prince's country, where they lived happily. The prince always kept his bag, bowl, bed, and stick; only, as no one ever came to make war on him, he never needed to use the stick.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the tree-trunk split into two pieces, allowing the prince to marry the princess",
+        "explanation": "The sentence describes the outcome of the prince's prior action (using the hair to cut the tree), resulting in the tree splitting and the king granting permission for marriage, which marks a pivotal state change in the narrative."
+      }
+    }
+  ]
+}

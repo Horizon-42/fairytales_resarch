@@ -1,0 +1,196 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_018_How_the_Wicked_Sons_were_Duped.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 13,
+  "analyzed_sentences": 13,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "A very wealthy old man, imagining that he was on the point of death, sent for his sons and divided his property among them.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "old man"
+        ],
+        "receivers": [
+          "sons"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's action of sending for his sons and dividing his property among them, making it an active event performed by the old man with his sons as the recipients."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "However, he did not die for several years afterwards; and miserable years many of them were.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the old man's prolonged suffering after dividing his property, setting the stage for subsequent events. No specific location is mentioned."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "Besides the weariness of old age, the old fellow had to bear with much abuse and cruelty from his sons.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's ongoing suffering from his sons' abuse, establishing the context of his difficult circumstances. This sets the stage for the subsequent events in the story, fitting the 'situation' category as it provides background context without introducing new actions, tasks, or consequences."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "Wretched, selfish ingrates!",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence expresses the old man's emotional reaction to his sons' behavior, contributing to the background context of his deteriorating relationship with them. It sets the stage for the subsequent events without introducing a new action, task, or consequence."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "Previously they vied with one another in trying to please their father, hoping thus to receive more money, but now they had received their patrimony, they cared not how soon he left them—nay, the sooner the better, because he was only a needless trouble and expense.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes background context about the sons' prior behavior (vying for their father's favor) and their subsequent shift in attitude after receiving their inheritance, setting the stage for the story's conflict and resolution."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "And they let the poor old man know what they felt.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context on the sons' cruel treatment of their father, establishing their selfish behavior as part of the narrative setup."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "One day he met a friend and related to him all his troubles.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "old man"
+        ],
+        "receivers": [
+          "friend"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the old man's active action of meeting a friend and sharing his troubles, making it an 'action' category. The doer is the old man, and the receiver is the friend."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "The friend sympathised very much with him, and promised to think over the matter, and call in a little while and tell him what to do.",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "friend"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates the friend's commitment to address the old man's problem, establishing a clear responsibility for the friend to take action."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "He did so; in a few days he visited the old man and put down four bags full of stones and gravel before him.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "friend"
+        ],
+        "receivers": [
+          "old man"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the friend's action of visiting the old man and placing the bags of stones and gravel before him, making 'friend' the doer and 'old man' the receiver."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "\"Look here, friend,\" said he.",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "old man"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence marks the beginning of the friend's instructions to the old man, which constitute a explicit task for the old man to follow (pretending about the debt and keeping the bags). The task is directed at the old man, who must fulfill the requirements outlined by the friend."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "\"Your sons will get to know of my coming here to-day, and will inquire about it. You must pretend that I came to discharge a long-standing debt with you, and that you are several thousands of rupees richer than you thought you were. Keep these bags in your own hands, and on no account let your sons get to them as long as you are alive. You will soon find them change their conduct towards you. Salaam. I will come again soon to see how you are getting on.\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "old man"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence contains explicit instructions (task) for the old man to pretend the friend discharged a debt and keep the bags hidden. The task roles involve the old man as the one required to perform the actions."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "When the young men got to hear of this further increase of wealth they began to be more attentive and pleasing to their father than ever before.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The sons changed their conduct towards their father, becoming more attentive and pleasing than before",
+        "explanation": "This sentence describes the outcome of the friend's plan to manipulate the sons' behavior through the hidden bags of stones, showing the shift from cruelty to attentiveness"
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "And thus they continued to the day of the old man's demise, when the bags were greedily opened, and found to contain only stones and gravel!",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The sons discovered the bags contained only stones and gravel, revealing the old man's plan to teach them a lesson about greed",
+        "explanation": "This sentence describes the outcome of the friend's plan to reform the sons' behavior. The discovery of the bags' contents marks a pivotal change in the narrative state, revealing the old man's strategy and the sons' eventual realization of their greed."
+      }
+    }
+  ]
+}

@@ -1,0 +1,748 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_006_The_Magic_Fiddle.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 49,
+  "analyzed_sentences": 49,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "Once upon a time there lived seven brothers and a sister.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the main characters (seven brothers and a sister) and sets the story's context without specifying a location, fitting the 'situation' category as it establishes the narrative framework."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "The brothers were married, but their wives did not do the cooking for the family.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "home",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the family dynamics and setup for the conflict, indicating the brothers' marital status and the wives' refusal to cook, which sets the stage for the sister's role as provider."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "It was done by their sister, who stopped at home to cook.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "home",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of the sister's role in the family by specifying she stays at home to cook, setting the stage for the subsequent conflict with her嫂子s."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "The wives for this reason bore their sister-in-law much ill-will, and at length they combined together to oust her from the office of cook and general provider, so that one of themselves might obtain it.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the wives' resentment and their collective decision to act against their sister-in-law, setting up the conflict and motivation for subsequent events. It provides context for the story's progression without describing a specific action, task, or consequence."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "They said, \"She does not go out to the fields to work, but remains quietly at home, and yet she has not the meals ready at the proper time.\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context for the wives' motivation to act against the sister-in-law, establishing the conflict that drives subsequent events. No specific location is mentioned in this sentence."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "They then called upon their Bonga, and vowing vows unto him they secured his good-will and assistance; then they said to the Bonga, \"At midday when our sister-in-law goes to bring water, cause it thus to happen, that on seeing her pitcher the water shall vanish, and again slowly re-appear. In this way she will be delayed. Let the water not flow into her pitcher, and you may keep the maiden as your own.\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "wives"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the wives' explicit request to the Bonga to perform a specific action (causing water to vanish and reappear), which constitutes a task. The task roles are the wives as they are the ones initiating and assigning the task."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "At noon when she went to bring water, it suddenly dried up before her, and she began to weep.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the water dried up and the sister began to weep",
+        "explanation": "This sentence describes the outcome of the Bonga's earlier intervention (drying up the water) and the sister's reaction, marking a state change in the narrative progression."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "Then after a while the water began slowly to rise.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the water began to rise",
+        "explanation": "The sentence describes the outcome of the Bonga's spell, which caused the water to vanish and then rise, leading to the sister-in-law's prolonged struggle and eventual drowning. This is a direct consequence of the prior magical intervention."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "When it reached her ankles she tried to fill her pitcher, but it would not go under the water.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "sister-in-law"
+        ],
+        "receivers": [
+          "pitcher"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the sister-in-law's attempt to fill her pitcher with water, which is an active action she performs. The doer is the sister-in-law, and the receiver is the pitcher."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "Being frightened she began to wail and cry to her brother:",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "sister-in-law"
+        ],
+        "receivers": [
+          "brother"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the sister-in-law's action of wailing and crying to her brother in response to the rising water, indicating an active behavior performed by her towards her brother."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "\"Oh! my brother, the water reaches to my ankles, Still, Oh! my brother, the pitcher will not dip.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Bonga girl"
+        ],
+        "receivers": [
+          "brother"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Bonga girl's action of crying and calling out to her brother as the water rises, which is a direct response to the magical consequence initiated by the Bonga's spell."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "The water continued to rise until it reached her knee, when she began to wail again:",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the water rose to her knee and she began to wail again",
+        "explanation": "The sentence describes the outcome of the Bonga's spell, where the water continues to rise and the sister-in-law's distress escalates, marking a direct consequence of the prior magical intervention."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "\"Oh! my brother, the water reaches to my knee, Still, Oh! my brother, the pitcher will not dip.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Bonga girl"
+        ],
+        "receivers": [
+          "brother"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Bonga girl actively wailing and crying out to her brother as the water rises, which is an action performed by her with the brother as the recipient of her distress."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "The water continued to rise, and when it reached her waist, she cried again:",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [
+          "sister-in-law"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the ongoing action of the water rising, which affects the sister-in-law, making her cry. The action is caused by the Bonga's spell, but the doer is not explicitly mentioned in the sentence."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "\"Oh! my brother, the water reaches to my waist, Still, Oh! my brother, the pitcher will not dip.\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "tank",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the sister-in-law's plight as the water rises in the tank, establishing the context for her subsequent drowning and transformation. The tank is the narrative focus location for this situation."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "The water still rose, and when it reached her neck she kept on crying:",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the water continued to rise, leading to the sister-in-law's drowning and transformation into a bamboo fiddle",
+        "explanation": "The sentence describes the ongoing consequence of the Bonga's earlier spell, where the water's rising leads to the sister-in-law's drowning and eventual transformation into a bamboo fiddle, marking a pivotal state change in the narrative."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "\"Oh! my brother, the water reaches to my neck, Still, Oh! my brother, the pitcher will not dip.\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the sister-in-law's plight as the water rises, setting the stage for her drowning, which is part of the narrative's situation."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "At length the water became so deep that she felt herself drowning, then she cried aloud:",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "she drowned and was transformed into a Bonga",
+        "explanation": "The sentence describes the outcome of the Bonga's spell causing the water to rise, leading to the sister-in-law's drowning and subsequent transformation into a Bonga. This is a direct consequence of the prior action (the Bonga's magic) and marks a pivotal state change in the narrative."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "\"Oh! my brother, the water measures a man's height, Oh! my brother, the pitcher begins to fill.\" The pitcher filled with water, and along with it she sank and was drowned. The Bonga then transformed her into a Bonga like himself, and carried her off.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "she was drowned and transformed into a Bonga by the Bonga",
+        "explanation": "The sentence describes the outcome of the Bonga's magical intervention, resulting in the sister-in-law's death and transformation into a Bonga. This directly follows the prior action of the Bonga's spell and represents a state change in the narrative."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "After a time she re-appeared as a bamboo growing on the embankment of the tank in which she had been drowned.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "transformed into a bamboo",
+        "explanation": "This sentence describes the outcome of the sister's drowning and the Bonga's transformation, marking a state change from human to bamboo."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "When the bamboo had grown to an immense size, a Jogi, who was in the habit of passing that way, seeing it, said to himself, \"This will make a splendid fiddle.\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "embankment of the tank",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of the bamboo's growth and the Jogi's discovery of it, setting the stage for subsequent events. The location is specified as the embankment of the tank where the bamboo grows."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "So one day he brought an axe to cut it down; but when he was about to begin, the bamboo called out, \"Do not cut at the root, cut higher up.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Jogi"
+        ],
+        "receivers": [
+          "bamboo"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Jogi's action of bringing an axe to cut the bamboo, with the bamboo responding as a consequence."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "When he lifted his axe to cut high up the stem, the bamboo cried out, \"Do not cut near the top, cut at the root.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "bamboo"
+        ],
+        "receivers": [
+          "Jogi"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the bamboo actively performing an action (crying out) in response to the Jogi's attempt to cut it, directing instructions to him."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "When the Jogi again prepared himself to cut at the root as requested, the bamboo said, \"Do not cut at the root, cut higher up;\" and when he was about to cut higher up, it again called out to him, \"Do not cut high up, cut at the root.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "bamboo"
+        ],
+        "receivers": [
+          "Jogi"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the bamboo's action of giving conflicting instructions to the Jogi, which is an active response to his attempts to cut it. The bamboo (doer) communicates with the Jogi (receiver) through verbal instructions."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "The Jogi by this time felt sure that a Bonga was trying to frighten him, so becoming angry he cut down the bamboo at the root, and taking it away made a fiddle out of it.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Jogi"
+        ],
+        "receivers": [
+          "bamboo"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Jogi's action of cutting the bamboo at the root and transforming it into a fiddle, making him the doer and the bamboo the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "The instrument had a superior tone and delighted all who heard it.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The instrument's superior tone caused delight among all who heard it",
+        "explanation": "This sentence describes the outcome of the Jogi crafting the bamboo fiddle, highlighting the instrument's impact on listeners as a direct consequence of its creation."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "The Jogi carried it with him when he went a-begging, and through the influence of its sweet music he returned home every evening with a full wallet.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Jogi"
+        ],
+        "receivers": [
+          "fiddle"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Jogi's active action of carrying the fiddle while begging, which directly leads to the consequence of returning home with a full wallet. The primary focus is on the action performed by the Jogi."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "He now and then visited, when on his rounds, the house of the Bonga girl's brothers, and the strains of the fiddle affected them greatly. Some of them were moved even to tears, for the fiddle seemed to wail as one in bitter anguish. The elder brother wished to purchase it, and offered to support the Jogi for a whole year if he would consent to part with his wonderful instrument. The Jogi, however, knew its value, and refused to sell it.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Jogi"
+        ],
+        "receivers": [
+          "Bonga girl's brothers"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Jogi's action of visiting the Bonga girl's brothers and the fiddle's effects on them, which are direct consequences of his actions."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "It so happened that the Jogi some time after went to the house of a village chief, and after playing a tune or two on his fiddle asked for something to eat.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Jogi"
+        ],
+        "receivers": [
+          "village chief's house"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Jogi's action of traveling to the village chief's house and requesting food, making him the doer and the house the receiver of his action."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "They offered to buy his fiddle and promised a high price for it, but he refused to sell it, as his fiddle brought to him his means of livelihood.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the Jogi refused to sell his fiddle, leading to the villagers taking it later",
+        "explanation": "The sentence describes the consequence of the villagers' offer to buy the fiddle, resulting in the Jogi refusing to sell it, which ultimately leads to the fiddle being taken."
+      }
+    },
+    {
+      "sentence_index": 31,
+      "sentence": "When they saw that he was not to be prevailed upon, they gave him food and a plentiful supply of liquor.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "villagers"
+        ],
+        "receivers": [
+          "Jogi"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the villagers giving food and liquor to the Jogi after he refused to sell his fiddle, which is an active action performed by the villagers toward the Jogi."
+      }
+    },
+    {
+      "sentence_index": 32,
+      "sentence": "Of the latter he drank so freely that he presently became intoxicated.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "he became intoxicated",
+        "explanation": "The sentence describes the outcome of the villagers giving him liquor, resulting in his intoxication, which directly leads to the subsequent action of his fiddle being stolen."
+      }
+    },
+    {
+      "sentence_index": 33,
+      "sentence": "While he was in this condition, they took away his fiddle, and substituted their own old one for it.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "villagers"
+        ],
+        "receivers": [
+          "fiddle"
+        ],
+        "changed_state": "",
+        "explanation": "The villagers actively took the Jogi's fiddle as an action, with the fiddle being the object directly affected by the action."
+      }
+    },
+    {
+      "sentence_index": 34,
+      "sentence": "When the Jogi recovered, he missed his instrument, and suspecting that it had been stolen asked them to return it to him.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The Jogi becomes aware his fiddle was stolen and takes action to reclaim it",
+        "explanation": "This sentence describes the outcome of the villagers stealing the Jogi's fiddle, leading to his realization and request for its return. The state change involves his awareness of the theft and subsequent action."
+      }
+    },
+    {
+      "sentence_index": 35,
+      "sentence": "They denied having taken it, so he had to depart, leaving his fiddle behind him.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The Jogi had to depart, leaving his fiddle behind with the chief's people",
+        "explanation": "The sentence describes the outcome of the chief's people denying theft, resulting in the Jogi losing possession of his fiddle and having to leave without it."
+      }
+    },
+    {
+      "sentence_index": 36,
+      "sentence": "The chief's son, being a musician, used to play on the Jogi's fiddle, and in his hands the music it gave forth delighted the ears of all who heard it.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "chief's son"
+        ],
+        "receivers": [
+          "people"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the chief's son actively playing the Jogi's fiddle, which is an action performed by the doer (chief's son) and affects the receivers (people who heard the music)."
+      }
+    },
+    {
+      "sentence_index": 37,
+      "sentence": "When all the household were absent at their labours in the fields, the Bonga girl used to come out of the bamboo fiddle, and prepared the family meal.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Bonga girl"
+        ],
+        "receivers": [
+          "family"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Bonga girl's active action of preparing the family meal while the household is absent, making it an 'action' category. The doer is the Bonga girl, and the receiver is the family who benefits from the meal."
+      }
+    },
+    {
+      "sentence_index": 38,
+      "sentence": "Having eaten her own share, she placed that of the chief's son under his bed, and covering it up to keep off the dust, re-entered the fiddle. This happening every day, the other members of the household thought that some girl friend of theirs was in this manner showing her interest in the young man, so they did not trouble themselves to find out how it came about. The young chief, however, was determined to watch, and see which of his girl friends was so attentive to his comfort. He said in his own mind, \"I will catch her to-day, and give her a sound beating; she is causing me to be ashamed before the others.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Bonga girl"
+        ],
+        "receivers": [
+          "chief's son"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Bonga girl's action of placing the chief's son's meal under his bed and re-entering the fiddle, which are active behaviors she performs. The subsequent consequences (household members' reactions and the chief's plan) are outcomes of this action but not the focus of the classification."
+      }
+    },
+    {
+      "sentence_index": 39,
+      "sentence": "So saying, he hid himself in a corner in a pile of firewood. In a short time the girl came out of the bamboo fiddle, and began to dress her hair. Having completed her toilet, she cooked the meal of rice as usual, and having eaten some herself, she placed the young man's portion under his bed, as before, and was about to enter the fiddle again, when he, running out from his hiding-place, caught her in his arms.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "girl",
+          "chief"
+        ],
+        "receivers": [
+          "bed",
+          "fiddle",
+          "girl"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes active actions performed by the girl (dressing, cooking, placing meal, entering fiddle) and the chief (hiding, catching her). The receivers include the bed (where the meal is placed), the fiddle (she enters/exits), and the girl (caught by the chief)."
+      }
+    },
+    {
+      "sentence_index": 40,
+      "sentence": "The Bonga girl exclaimed, \"Fie! Fie! you may be a Dom, or you may be a Hadi of some other caste with whom I cannot marry.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Bonga girl"
+        ],
+        "receivers": [
+          "young man"
+        ],
+        "changed_state": "",
+        "explanation": "The Bonga girl performs the action of exclaiming her objection to the young man's caste, directly addressing him as the receiver of her words."
+      }
+    },
+    {
+      "sentence_index": 41,
+      "sentence": "He said, \"No. But from to-day, you and I are one.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "He"
+        ],
+        "receivers": [
+          "Bonga girl"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents an active declaration made by 'He' (the man) towards the Bonga girl, constituting an action where the speaker (doer) addresses the Bonga girl (receiver) with a statement of union."
+      }
+    },
+    {
+      "sentence_index": 42,
+      "sentence": "So they began lovingly to hold converse with each other.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Bonga girl",
+          "chief's son"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the mutual action of the Bonga girl and the chief's son beginning to converse lovingly, indicating their interaction as the primary activity."
+      }
+    },
+    {
+      "sentence_index": 43,
+      "sentence": "When the others returned home in the evening, they saw that she was both a human being and a Bonga, and they rejoiced exceedingly.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The brothers discovered the Bonga girl's true dual nature as both a human being and a Bonga, leading to their joy and acceptance of her identity.",
+        "explanation": "The sentence describes the outcome of the prior event where the Bonga girl's identity was revealed to her brothers, resulting in their emotional reaction of rejoicing. This is a consequence of the earlier actions and interactions in the story."
+      }
+    },
+    {
+      "sentence_index": 44,
+      "sentence": "Now in course of time the Bonga girl's family became very poor, and her brothers on one occasion came to the chief's house on a visit.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "chief's house",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the new context of the Bonga girl's family becoming poor, which sets the stage for the brothers' subsequent visit to the chief's house. The location is specified as 'chief's house' where the brothers are heading."
+      }
+    },
+    {
+      "sentence_index": 45,
+      "sentence": "The Bonga girl recognised them at once, but they did not know who she was.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Bonga girl"
+        ],
+        "receivers": [
+          "brothers"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Bonga girl actively recognizing her brothers during their visit, which is an action performed by her towards them."
+      }
+    },
+    {
+      "sentence_index": 46,
+      "sentence": "She brought them water on their arrival, and afterwards set cooked rice before them.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Bonga girl"
+        ],
+        "receivers": [
+          "her brothers"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Bonga girl actively performing the actions of providing water and cooked rice to her brothers, making it an 'action' category with the doer as the Bonga girl and the receivers as her brothers."
+      }
+    },
+    {
+      "sentence_index": 47,
+      "sentence": "Then sitting down near them, she began in wailing tones to upbraid them on account of the treatment she had been subjected to by their wives.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Bonga girl"
+        ],
+        "receivers": [
+          "her brothers"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Bonga girl actively performing the action of upbraiding her brothers for their failure to intervene in her mistreatment by their wives."
+      }
+    },
+    {
+      "sentence_index": 48,
+      "sentence": "She related all that had befallen her, and wound up by saying, \"You must have known it all, and yet you did not interfere to save me.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Bonga girl"
+        ],
+        "receivers": [
+          "her brothers"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Bonga girl actively performing the action of relating her experiences and accusing her brothers of not intervening, making her the doer and her brothers the receivers of her accusations."
+      }
+    },
+    {
+      "sentence_index": 49,
+      "sentence": "And that was all the revenge she took.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The Bonga girl's revenge was fully executed, and her brothers did not intervene to save her",
+        "explanation": "This sentence describes the outcome of the Bonga girl's actions following her confrontation with her brothers, marking the completion of her revenge and the brothers' failure to act."
+      }
+    }
+  ]
+}

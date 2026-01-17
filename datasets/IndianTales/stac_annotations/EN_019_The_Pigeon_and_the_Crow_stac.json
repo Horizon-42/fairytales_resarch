@@ -1,0 +1,273 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_019_The_Pigeon_and_the_Crow.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 17,
+  "analyzed_sentences": 17,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "Once upon a time the Bodhisatta was a Pigeon, and lived in a nest-basket which a rich man's cook had hung up in the kitchen, in order to earn merit by it. A greedy Crow, flying near, saw all sorts of delicate food lying about in the kitchen, and fell a-hungering after it. \"How in the world can I get some?\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "kitchen",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the initial context of the story, introducing the Pigeon's residence in the kitchen and the Crow's presence seeking food, setting the stage for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "thought he? At last he hit upon a plan. When the Pigeon went to search for food, behind him, following, following, came the Crow. \"What do you want, Mr. Crow? You and I don't feed alike.\" \"Ah, but I like you and your ways! Let me be your chum, and let us feed together.\" The Pigeon agreed, and they went on in company. The Crow pretended to feed along with the Pigeon, but ever and anon he would turn back, peck to bits some heap of cow-dung, and eat a fat worm. When he had got a bellyful of them, up he flies, as pert as you like: \"Hullo, Mr. Pigeon, what a time you take over your meal! One ought to draw the line somewhere. Let's be going home before it is too late.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Crow",
+          "Pigeon"
+        ],
+        "receivers": [
+          "Pigeon",
+          "cow-dung",
+          "worms"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Crow's actions of following the Pigeon, pretending to eat, and eating cow-dung/worms, while the Pigeon agrees to join. These are active behaviors performed by the characters."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "And so they did. The cook saw that his Pigeon had brought a friend, and hung up another basket for him. A few days afterwards there was a great purchase of fish which came to the rich man's kitchen.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "cook"
+        ],
+        "receivers": [
+          "Pigeon"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the cook's action of hanging another basket for the Pigeon, which is a direct activity performed by the cook. The Pigeon is the receiver of this action as the basket is provided for him."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "How the Crow longed for some!",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "kitchen",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the Crow's desire for food, which is part of the narrative's background context. The location is the kitchen where the fish was purchased, establishing the setting for the Crow's actions."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "So there he lay, from early morn, groaning and making a great noise.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Crow"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the Crow's active behavior of lying there and making noise, which is an action performed by the Crow. There is no clear receiver mentioned in the action."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "Says the Pigeon to the Crow: \"Come, Sir Crow, and get your breakfast!\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "Crow"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents the Pigeon issuing a direct instruction to the Crow to 'get your breakfast,' which constitutes an explicit task assigned to the Crow."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "\"Oh dear! oh dear! I have such a fit of indigestion!\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the Crow experiences indigestion as a result of his actions",
+        "explanation": "The sentence represents a consequence of the Crow's prior actions (eating worms and then attempting to eat fish), leading to his claimed indigestion. This state change is a direct outcome of his greedy behavior."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "says he.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Pigeon"
+        ],
+        "receivers": [
+          "Crow"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence indicates the Pigeon is speaking to the Crow, which is an action performed by the Pigeon with the Crow as the receiver."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "\"Nonsense! Crows never have indigestion,\" said the Pigeon.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Pigeon"
+        ],
+        "receivers": [
+          "Crow"
+        ],
+        "changed_state": "",
+        "explanation": "The Pigeon's statement is an action of communication directed at the Crow, addressing his claim of indigestion."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "\"If you eat a lamp-wick, that stays in your stomach a little while; but anything else is digested in a trice, as soon as you eat it. Now do what I tell you; don't behave in this way just for seeing a little fish.\" \"Why do you say that, master? I have indigestion.\" \"Well, be careful,\" said the Pigeon, and flew away. The cook prepared all the dishes, and then stood at the kitchen door, wiping the sweat off his body. \"Now's my time!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Pigeon",
+          "cook"
+        ],
+        "receivers": [
+          "Crow",
+          "dishes"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Pigeon's dialogue (directed at the Crow) and the cook's action of preparing dishes. These are active behaviors performed by the characters."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "thought Mr. Crow, and alighted on a dish containing some dainty food.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Mr. Crow"
+        ],
+        "receivers": [
+          "dish"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes Mr. Crow's action of alighting on a dish containing food, which is a direct physical action performed by the Crow."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "Click!",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the cook heard the sound and looked around",
+        "explanation": "The sentence 'Click!' represents the auditory cue that triggers the cook's reaction, marking the consequence of the Crow's prior action of landing on the dish. This sound leads to the cook's immediate awareness and subsequent action."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "The cook heard it, and looked round.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "cook"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the cook actively performing the actions of hearing and looking around, making it an 'action' category. The cook is the doer, and there is no explicit receiver mentioned."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "Ah!",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The cook realized he had caught the Crow.",
+        "explanation": "The sentence 'Ah!' represents the cook's realization upon catching the Crow, which is a consequence of the Crow's actions leading to his capture."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "he caught the Crow, and plucked all the feathers out of his head, all but one tuft; he powdered ginger and cummin, mixed it up with butter-milk, and rubbed it well all over the bird's body. \"That's for spoiling my master's dinner and making me throw it away!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "cook"
+        ],
+        "receivers": [
+          "Crow"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the cook's active actions of catching, plucking feathers, and applying a mixture to the Crow, making it an 'action' category. The cook is the doer, and the Crow is the receiver of these actions."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "said he, and threw him into his basket. Oh, how it hurt! By-and-by the Pigeon came in, and saw the Crow lying there, making a great noise. He made great game of him, and repeated a verse of poetry: \"Who is this tufted crane I see Lying where he's no right to be? Come out! my friend, the crow is near, And he may do you harm, I fear!\" To this the Crow answered with another: \"No tufted crane am I—no, no! I'm nothing but a greedy crow. I would not do as I was told, So now I'm plucked, as you behold.\" And the Pigeon rejoined with a third verse: \"You'll come to grief again, I know— It is your nature to do so; If people make a dish of meat, 'Tis not for little birds to eat.\" Then the Pigeon flew away, saying: \"I can't live with this creature any longer.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Pigeon"
+        ],
+        "receivers": [
+          "Crow"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Pigeon's actions of mocking the Crow, reciting poetry, and ultimately deciding to leave, which are direct behaviors performed toward the Crow."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "And the Crow lay there groaning till he died.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The Crow died after being punished by the cook",
+        "explanation": "The sentence describes the outcome of the cook's punishment on the Crow, resulting in his death, which represents a state change following the prior action."
+      }
+    }
+  ]
+}

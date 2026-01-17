@@ -1,0 +1,362 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_020_The_Demon_with_the_Matted_Hair.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 23,
+  "analyzed_sentences": 23,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "Once upon a time, when Brahmadatta was King of Benares, the Bodhisatta was born as son of his chief queen.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "Benares",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the historical and geographical context of the story by introducing the time period and location where the Bodhisatta's birth occurs, setting the stage for subsequent events."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "On his name-day they asked 800 Brahmans, having satisfied them with all their desires, about his lucky marks.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "Benares",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of the Bodhisatta's early life and the royal court's interest in his destiny, setting the stage for the Brahmans' prophecy about his future reign and skills."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "The Brahmans who had skill in divining from such marks beheld the excellence of his, and made answer: \"Full of goodness, great King, is your son, and when you die he will become king; he shall be famous and renowned for his skill with the five weapons, and shall be the chief man in all India.\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the Brahmans' prophecy regarding the prince's future, setting the stage for subsequent events. It does not describe a specific location, task, action, or consequence."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "On hearing what the Brahmans had to say, they gave him the name of the Prince of the Five Weapons, sword, spear, bow, battle-axe, and shield.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "King"
+        ],
+        "receivers": [
+          "Prince"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the King giving the Prince the name 'Prince of the Five Weapons' based on the Brahmans' prophecy, which is an active action performed by the King."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "When he came to years of discretion, and had attained the measure of sixteen years, the King said to him: \"My son, go and complete your education.\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "Prince of the Five Weapons"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The King explicitly assigns the task of completing education to the Prince of the Five Weapons, establishing a responsibility that must be fulfilled."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "\"Who shall be my teacher?\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "Prince of the Five Weapons"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents the prince's inquiry about his teacher, which is part of the task assigned by the King to complete his education. The task role is the prince himself, as he is responsible for fulfilling this requirement."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "the lad asked.",
+      "analysis": null,
+      "error": "Failed to reach Ollama at http://localhost:11434/api/chat: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300.0)"
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "\"Go, my son; in the kingdom of Candahar, in the city of Takkasila, is a far-famed teacher from whom I wish you to learn. Take this, and give it him for a fee.\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "son"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents a task assigned by the King to his son, instructing him to seek a teacher in Takkasila and provide a fee. The son is the primary role required to fulfill this task."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "With that he gave him a thousand pieces of money, and dismissed him.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "King"
+        ],
+        "receivers": [
+          "Prince of the Five Weapons"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the King's action of giving money to the Prince and dismissing him, making the King the doer and the Prince the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "The lad departed, and was educated by this teacher; he received the Five Weapons from him as a gift, bade him farewell, and leaving Takkasila, he began his journey to Benares, armed with the Five Weapons.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "lad"
+        ],
+        "receivers": [
+          "teacher",
+          "Benares"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the lad's active actions of departing, being educated, receiving the Five Weapons, and beginning his journey to Benares. The doers are the lad, and receivers include the teacher (from whom he received the weapons) and Benares (his destination)."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "On his way he came to a forest inhabited by the Demon with the Matted Hair.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "forest",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence introduces the setting where the main conflict occurs, establishing the forest as the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "At the entering in of the forest some men saw him, and cried out: \"Hullo, young sir, keep clear of that wood! There's a Demon in it called he of the Matted Hair: he kills every man he sees!\" And they tried to stop him. But the Bodhisatta, having confidence in himself, went straight on, fearless as a maned lion. When he reached mid-forest the Demon showed himself. He made himself as tall as a palm tree; his head was the size of a pagoda, his eyes as big as saucers, and he had two tusks all over knobs and bulbs; he had the face of a hawk, a variegated belly, and blue hands and feet. \"Where are you going?\" he shouted. \"Stop! You'll make a meal for me!\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "forest",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of the Bodhisatta entering a dangerous forest inhabited by a Demon, setting the stage for the subsequent confrontation. The forest is the narrative focus and location where critical events unfold."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "Said the Bodhisatta: \"Demon, I came here trusting in myself. I advise you to be careful how you come near me. Here's a poisoned arrow, which I'll shoot at you and knock you down!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Bodhisatta"
+        ],
+        "receivers": [
+          "Demon"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Bodhisatta's active threat to the Demon, involving the preparation to shoot a poisoned arrow. The Bodhisatta is the actor, and the Demon is the target of his threat."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "With this menace, he fitted to his bow an arrow dipped in deadly poison, and let fly.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Bodhisatta"
+        ],
+        "receivers": [
+          "Demon"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Bodhisatta's active action of preparing and launching a poisoned arrow at the Demon, making him the doer and the Demon the receiver."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "The arrow stuck fast in the Demon's hair. Then he shot and shot, till he had shot away fifty arrows; and they all stuck in the Demon's hair.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Bodhisatta"
+        ],
+        "receivers": [
+          "Demon's hair"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Bodhisatta actively shooting arrows at the Demon, with the arrows sticking in the Demon's hair. This is an action performed by the Bodhisatta (doer) targeting the Demon's hair (receiver)."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "The Demon snapped them all off short, and threw them down at his feet; then came up to the Bodhisatta, who drew his sword and struck the Demon, threatening him the while.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Demon",
+          "Bodhisatta"
+        ],
+        "receivers": [
+          "Bodhisatta",
+          "Demon"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Demon's active response to the arrows (snapping and throwing them) and the Bodhisatta's subsequent attack (drawing his sword and striking the Demon), both of which are physical actions taken by the characters."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "His sword—it was three-and-thirty inches long—stuck in the Demon's hair! The Bodhisatta struck him with his spear—that stuck too! He struck him with his club—and that stuck too! When the Bodhisatta saw that this had stuck fast, he addressed the Demon. \"You, Demon!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Bodhisatta"
+        ],
+        "receivers": [
+          "Demon"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Bodhisatta actively using his weapons (sword, spear, club) against the Demon, with the weapons sticking in the Demon's hair. This is a direct account of actions performed by the Bodhisatta (doer) and their target (receiver)."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "said he, \"did you never hear of me before—the Prince of the Five Weapons? When I came into the forest which you live in I did not trust to my bow and other weapons. This day will I pound you and grind you to powder!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Bodhisatta"
+        ],
+        "receivers": [
+          "Demon"
+        ],
+        "changed_state": "",
+        "explanation": "The Bodhisatta performs the action of declaring his identity and intent to defeat the Demon through speech, directly addressing the Demon as the receiver of his declaration."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "Thus did he declare his resolve, and with a shout he hit at the Demon with his right hand. It stuck fast in his hair! He hit him with his left hand—that stuck too! With his right foot he kicked him—that stuck too; then with his left—and that stuck too! Then he butted at him with his head, crying, \"I'll pound you to powder!\" and his head stuck fast like the rest. Thus the Bodhisatta was five times snared, caught fast in five places, hanging suspended: yet he felt no fear—was not even nervous. Thought the Demon to himself: \"Here's a lion of a man!  A noble man! More than man is he! Here he is, caught by a Demon like me; yet he will not fear a bit. Since I have ravaged this road, I never saw such a man. Now, why is it that he does not fear?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Bodhisatta"
+        ],
+        "receivers": [
+          "Demon"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the Bodhisatta's active combat actions against the Demon, including striking with his hands, feet, and head, which are performed by the Bodhisatta and directed at the Demon."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "He was powerless to eat the man, but asked him: \"Why is it, young sir, that you are not frightened to death?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Demon"
+        ],
+        "receivers": [
+          "Bodhisatta"
+        ],
+        "changed_state": "",
+        "explanation": "The Demon performs the action of asking the Bodhisatta a question, which is a direct interaction initiated by the Demon and directed at the Bodhisatta."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "\"Why should I fear, Demon?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Bodhisatta"
+        ],
+        "receivers": [
+          "Demon"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents the Bodhisatta's verbal action of questioning the Demon, which is part of his dialogue to explain his resolve. The doer is the Bodhisatta, and the receiver is the Demon."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "replied he. \"In one life a man can die but once. Besides, in my belly is a thunderbolt; if you eat me, you will never be able to digest it; this will tear your inwards into little bits, and kill you: so we shall both perish. That is why I fear nothing.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Bodhisatta"
+        ],
+        "receivers": [
+          "Demon"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence represents the Bodhisatta's verbal action of explaining his reasoning to the Demon, which is a direct response to the Demon's threat. The Bodhisatta (doer) is addressing the Demon (receiver) through his speech."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "(By this, the Bodhisatta meant the weapon of knowledge which he had within him.) When he heard this, the Demon thought: \"This young man speaks the truth. A piece of the flesh of such a lion-man as he would be too much for me to digest, if it were no bigger than a kidney-bean. I'll let him go!\" So, being frightened to death, he let go the Bodhisatta, saying: \"Young sir, you are a lion of a man! I will not eat you up. I set you free from my hands, as the moon is disgorged from the jaws of Rāhu after the eclipse. Go back to the company of your friends and relations!\" And the Bodhisatta said: \"Demon, I will go, as you say. You were born a Demon, cruel, blood-bibbing, devourer of the flesh and gore of others, because you did wickedly in former lives. If you still go on doing wickedly, you will go from darkness to darkness. But now that you have seen me you will find it impossible to do wickedly. Taking the life of living creatures causes birth, as an animal, in the world of Petas, or in the body of an Asura, or, if one is reborn as a man, it makes his life short.\" With this and the like monition he told him the disadvantage of the five kinds of wickedness, and the profit of the five kinds of virtue, and frightened the Demon in various ways, discoursing to him until he subdued him and made him self-denying, and established him in the five kinds of virtue; he made him worship the deity to whom offerings were made in that wood; and having carefully admonished him, departed out of it. At the entrance of the forest he told all to the people thereabout; and went on to Benares, armed with his five weapons. Afterwards he became king, and ruled righteously; and after giving alms and doing good he passed away according to his deeds.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The Demon releases the Bodhisatta, converts to self-denial and virtue, and is established in the five kinds of virtue, while the Bodhisatta departs the forest and later becomes a righteous king.",
+        "explanation": "The sentence describes the outcome of the Bodhisatta's dialogue with the Demon, resulting in the Demon's release, conversion, and the Bodhisatta's subsequent journey to Benares and ascension to kingship. This is a consequence of the prior action where the Bodhisatta used his weapon of knowledge."
+      }
+    }
+  ]
+}

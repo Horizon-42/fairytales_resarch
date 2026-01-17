@@ -1,0 +1,117 @@
+{
+  "input_dir": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts",
+  "output_dir": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/stac_annotations",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "provider": "ollama",
+  "model": "qwen3:8b",
+  "total_files": 20,
+  "results": {
+    "success": [
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_007.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/stac_annotations/jp_007_stac.json",
+        "total_sentences": 44,
+        "analyzed_sentences": 44
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_009.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/stac_annotations/jp_009_stac.json",
+        "total_sentences": 105,
+        "analyzed_sentences": 105
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_014.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/stac_annotations/jp_014_stac.json",
+        "total_sentences": 144,
+        "analyzed_sentences": 144
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_016.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/stac_annotations/jp_016_stac.json",
+        "total_sentences": 125,
+        "analyzed_sentences": 125
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_017.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/stac_annotations/jp_017_stac.json",
+        "total_sentences": 20,
+        "analyzed_sentences": 20
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_018.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/stac_annotations/jp_018_stac.json",
+        "total_sentences": 40,
+        "analyzed_sentences": 40
+      },
+      {
+        "status": "success",
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_020.txt",
+        "output_file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/stac_annotations/jp_020_stac.json",
+        "total_sentences": 21,
+        "analyzed_sentences": 21
+      }
+    ],
+    "skipped": [
+      {
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_001.txt",
+        "reason": "Output file already exists"
+      },
+      {
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_002.txt",
+        "reason": "Output file already exists"
+      },
+      {
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_003.txt",
+        "reason": "Output file already exists"
+      },
+      {
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_004.txt",
+        "reason": "Output file already exists"
+      },
+      {
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_005.txt",
+        "reason": "Output file already exists"
+      },
+      {
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_006.txt",
+        "reason": "Output file already exists"
+      },
+      {
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_008.txt",
+        "reason": "Output file already exists"
+      },
+      {
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_010.txt",
+        "reason": "Output file already exists"
+      },
+      {
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_011.txt",
+        "reason": "Output file already exists"
+      },
+      {
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_012.txt",
+        "reason": "Output file already exists"
+      },
+      {
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_013.txt",
+        "reason": "Output file already exists"
+      },
+      {
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_015.txt",
+        "reason": "Output file already exists"
+      },
+      {
+        "file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_019.txt",
+        "reason": "Output file already exists"
+      }
+    ],
+    "error": []
+  }
+}

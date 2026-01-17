@@ -1,0 +1,490 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_007_The_Cruel_Crane_Outwitted.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 30,
+  "analyzed_sentences": 30,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "Long ago the Bodisat was born to a forest life as the Genius of a tree standing near a certain lotus pond.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "lotus pond",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the setting by introducing the Bodisat's birth in a forest near a lotus pond, which serves as the narrative's focal location."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "Now at that time the water used to run short at the dry season in a certain pond, not over large, in which there were a good many fish.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "pond",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of the pond's water scarcity during the dry season, setting the stage for the crane's actions and the subsequent events in the story."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "And a crane thought on seeing the fish: \"I must outwit these fish somehow or other and make a prey of them.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "crane"
+        ],
+        "receivers": [
+          "fish"
+        ],
+        "changed_state": "",
+        "explanation": "The crane is actively planning to outwit the fish, which constitutes an action. The crane (doer) is targeting the fish (receivers) as the subject of his scheme."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "And he went and sat down at the edge of the water, thinking how he should do it.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "crane"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the crane's action of sitting down at the edge of the water to think about how to outwit the fish. The crane is the active doer, and there is no direct receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "When the fish saw him, they asked him, \"What are you sitting there for, lost in thought?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "fish"
+        ],
+        "receivers": [
+          "crane"
+        ],
+        "changed_state": "",
+        "explanation": "The fish initiate an action by asking the crane a question, which is a direct interaction driving the narrative forward."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "\"I am sitting thinking about you,\" said he.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "crane"
+        ],
+        "receivers": [
+          "fish"
+        ],
+        "changed_state": "",
+        "explanation": "The crane actively performs the action of speaking to the fish, explaining his intention to think about their situation. The doer is the crane, and the receiver is the fish."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "\"Oh, sir! what are you thinking about us?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "fish"
+        ],
+        "receivers": [
+          "crane"
+        ],
+        "changed_state": "",
+        "explanation": "The fish are actively performing the action of questioning the crane about his thoughts, directed at the crane as the receiver of the question."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "said they.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "fish"
+        ],
+        "receivers": [
+          "crane"
+        ],
+        "changed_state": "",
+        "explanation": "The fish are performing the action of speaking (responding to the crane's statement), with the crane as the receiver of their dialogue."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "\"Why,\" he replied; \"there is very little water in this pond, and but little for you to eat; and the heat is so great! So I was thinking, 'What in the world will these fish do now?'\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "pond",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the crane's reasoning about the pond's conditions, establishing the context for the fish's predicament and the crane's subsequent actions."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "\"Yes, indeed, sir!",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "fish"
+        ],
+        "receivers": [
+          "crane"
+        ],
+        "changed_state": "",
+        "explanation": "The fish's agreement to the crane's proposal represents an active response to the crane's plan, indicating their acceptance of the task. The fish (doer) are interacting with the crane (receiver) by affirming the plan."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "what are we to do?\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "lotus pond",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence represents the fish's dilemma in the lotus pond, establishing the context of their struggle with scarce water and heat, which sets up the subsequent interaction with the crane."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "said they.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "fish"
+        ],
+        "receivers": [
+          "crane"
+        ],
+        "changed_state": "",
+        "explanation": "The fish are actively responding to the crane's proposal by agreeing to follow his plan, which constitutes an action taken by the fish towards the crane."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "\"If you will only do as I bid you, I will take you in my beak to a fine large pond, covered with all the kinds of lotuses, and put you into it,\" answered the crane.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "crane"
+        ],
+        "receivers": [
+          "fish"
+        ],
+        "changed_state": "",
+        "explanation": "The crane is performing the action of proposing to take the fish to a large pond, which involves both the crane's initiative and the fish's potential compliance."
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "\"That a crane should take thought for the fishes is a thing unheard of, sir, since the world began. It's eating us, one after the other, that you're aiming at.\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "pond",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the fish's disbelief at the crane's apparent concern for their welfare, setting up the narrative context of their distrust and the impending conflict. The pond is the central location where the story's events unfold."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "\"Not I! So long as you trust me, I won't eat you. But if you don't believe me that there is such a pond, send one of you with me to go and see it.\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "fish"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The crane requests the fish to send a representative to verify the existence of the pond, establishing a task for the fish to fulfill."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "Then they trusted him, and handed over to him one of their number—a big fellow, blind of one eye, whom they thought sharp enough in any emergency, afloat or ashore.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "fish"
+        ],
+        "receivers": [
+          "crane"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the fish's action of trusting the crane and handing over one of their own to accompany him, which is a key step in the crane's plan to transport them to the pond."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "Him the crane took with him, let him go in the pond, showed him the whole of it, brought him back, and let him go again close to the other fish.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "crane"
+        ],
+        "receivers": [
+          "fish"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the crane's actions of taking the fish, showing him the pond, and returning him to the other fish. The crane is the active performer (doer), and the fish is the recipient (receiver) of these actions."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "And he told them all the glories of the pond.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "crane"
+        ],
+        "receivers": [
+          "fish"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the crane's action of informing the fish about the glories of the pond, which is a key step in the deception plot. The crane (doer) communicates with the fish (receivers) to manipulate their trust."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "And when they heard what he said, they exclaimed, \"All right, sir! You may take us with you.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "fish"
+        ],
+        "receivers": [
+          "crane"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the fish's active decision to agree to be taken by the crane, which directly leads to the crane's subsequent action of transporting them. The fish (doers) are responding to the crane's proposal, making the crane (receiver) the target of their agreement."
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "Then the crane took the old purblind fish first to the bank of the other pond, and alighted in a Varana-tree growing on the bank there.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "crane"
+        ],
+        "receivers": [
+          "fish"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the crane's action of taking the fish to the bank of the other pond and landing in the Varana-tree. The crane (doer) performs the action of transporting the fish (receiver)."
+      }
+    },
+    {
+      "sentence_index": 21,
+      "sentence": "But he threw it into a fork of the tree, struck it with his beak, and killed it; and then ate its flesh, and threw its bones away at the foot of the tree.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "crane"
+        ],
+        "receivers": [
+          "fish"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the crane's direct actions of killing the fish and disposing of its remains. The crane (doer) performs the action on the fish (receiver), which aligns with the 'action' category."
+      }
+    },
+    {
+      "sentence_index": 22,
+      "sentence": "Then he went back and called out: \"I've thrown that fish in; let another one come.\" And in that manner he took all the fish, one by one, and ate them, till he came back and found no more! But there was still a crab left behind there; and the crane thought he would eat him too, and called out: \"I say, good crab, I've taken all the fish away, and put them into a fine large pond. Come along. I'll take you too!\" \"But how will you take hold of me to carry me along?\" \"I'll bite hold of you with my beak.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "crane"
+        ],
+        "receivers": [
+          "fish",
+          "crab"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the crane's actions of taking and eating the fish, and then addressing the crab. The crane (doer) performs the action of consuming the fish (receiver) and initiating interaction with the crab (receiver)."
+      }
+    },
+    {
+      "sentence_index": 23,
+      "sentence": "\"You'll let me fall if you carry me like that. I won't go with you!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "crab"
+        ],
+        "receivers": [
+          "crane"
+        ],
+        "changed_state": "",
+        "explanation": "The crab is taking an action by refusing to go with the crane, which is a response to the crane's previous actions of taking the fish. The crab's refusal is an active statement directed at the crane."
+      }
+    },
+    {
+      "sentence_index": 24,
+      "sentence": "\"Don't be afraid! I'll hold you quite tight all the way.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "crane"
+        ],
+        "receivers": [
+          "fish"
+        ],
+        "changed_state": "",
+        "explanation": "The crane performs the action of holding the fish tightly while transporting them, with the fish as the recipients of this action."
+      }
+    },
+    {
+      "sentence_index": 25,
+      "sentence": "Then said the crab to himself, \"If this fellow once got hold of fish, he would never let them go in a pond! Now if he should really put me into the pond, it would be capital; but if he doesn't—then I'll cut his throat, and kill him!\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The crab decides to kill the crane if he doesn't put him in the pond",
+        "explanation": "The sentence describes the outcome of the crane's previous actions (eating the fish) by revealing the crab's plan to kill the crane, which directly follows from the crane's behavior. This represents a consequence of the prior events in the narrative."
+      }
+    },
+    {
+      "sentence_index": 26,
+      "sentence": "So he said to him: \"Look here, friend, you won't be able to hold me tight enough; but we crabs have a famous grip. If you let me catch hold of you round the neck with my claws, I shall be glad to go with you.\" And the other did not see that he was trying to outwit him, and agreed. So the crab caught hold of his neck with his claws as securely as with a pair of blacksmith's pincers, and called out, \"Off with you, now!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "crab"
+        ],
+        "receivers": [
+          "crane"
+        ],
+        "changed_state": "",
+        "explanation": "The crab performs the action of grabbing the crane's neck, demonstrating a physical interaction where the crab uses his claws to secure the crane, indicating a direct action taken by the crab against the crane."
+      }
+    },
+    {
+      "sentence_index": 27,
+      "sentence": "And the crane took him and showed him the pond, and then turned off towards the Varana-tree. \"Uncle!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "crane"
+        ],
+        "receivers": [
+          "crab"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the crane actively performing the action of taking the crab and showing him the pond, with the crab as the receiver of the action. The crane's actions are central to this event."
+      }
+    },
+    {
+      "sentence_index": 28,
+      "sentence": "cried the crab, \"the pond lies that way, but you are taking me this way!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "crab"
+        ],
+        "receivers": [
+          "crane"
+        ],
+        "changed_state": "",
+        "explanation": "The crab actively communicates to correct the crane's direction, indicating an interaction where the crab is trying to outwit the crane by pointing out the incorrect path."
+      }
+    },
+    {
+      "sentence_index": 29,
+      "sentence": "\"Oh, that's it, is it?\" answered the crane. \"Your dear little uncle, your very sweet nephew, you call me! You mean me to understand, I suppose, that I am your slave, who has to lift you up and carry you about with him! Now cast your eye upon the heap of fish-bones lying at the root of yonder Varana-tree. Just as I have eaten those fish, every one of them, just so I will devour you as well!\" \"Ah! those fishes got eaten through their own stupidity,\" answered the crab; \"but I'm not going to let you eat me. On the contrary, is it you that I am going to destroy. For you in your folly have not seen that I was outwitting you. If we die, we die both together; for I will cut off this head of yours, and cast it to the ground!\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "crab",
+          "crane"
+        ],
+        "receivers": [
+          "crab",
+          "crane"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence depicts an active exchange between the crab and crane where they engage in verbal confrontation and plan reciprocal actions (crane threatening to eat the crab, crab plotting to kill the crane). This dialogue represents their ongoing conflict as an active interaction."
+      }
+    },
+    {
+      "sentence_index": 30,
+      "sentence": "And so saying, he gave the crane's neck a grip with his claws, as with a vice. Then gasping, and with tears trickling from his eyes, and trembling with the fear of death, the crane beseeched him, saying, \"O my Lord! Indeed I did not intend to eat you. Grant me my life!\" \"Well, well! step down into the pond, and put me in there.\" And he turned round and stepped down into the pond, and placed the crab on the mud at its edge. But the crab cut through its neck as clean as one would cut a lotus-stalk with a hunting-knife, and then only entered the water! When the Genius who lived in the Varana-tree saw this strange affair, he made the wood resound with his plaudits, uttering in a pleasant voice the verse: \"The villain, though exceeding clever, Shall prosper not by his villainy. He may win indeed, sharp-witted in deceit, But only as the Crane here from the Crab!\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the crane's death and the Genius's response to the event",
+        "explanation": "The sentence describes the outcome of the crab's actions, resulting in the crane's death and the Genius's reaction, which marks a significant state change in the narrative."
+      }
+    }
+  ]
+}

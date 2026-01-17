@@ -1,0 +1,198 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/IndianTales/texts/EN_010_The_Talkative_Tortoise.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 13,
+  "analyzed_sentences": 13,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "The future Buddha was once born in a minister's family, when Brahma-datta was reigning in Benares; and when he grew up, he became the king's adviser in things temporal and spiritual.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "Benares",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes background context about the future Buddha's origins and early role, setting the stage for the story's central conflict involving the king's talkativeness. Benares is the primary location mentioned as the narrative focus."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "Now this king was very talkative; while he was speaking, others had no opportunity for a word.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "Benares",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the context of the king's talkativeness in the royal court of Benares, setting the stage for the subsequent narrative about the future Buddha's intervention."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "And the future Buddha, wanting to cure this talkativeness of his, was constantly seeking for some means of doing so.",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "future Buddha"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence indicates the future Buddha's responsibility to address the king's talkativeness, classifying it as a 'task' with the primary role being the future Buddha."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "At that time there was living, in a pond in the Himalaya mountains, a tortoise.",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "a pond in the Himalaya mountains",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the setting where the tortoise resides, providing background context for the subsequent events involving the tortoise and the wild ducks."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "Two young hamsas, or wild ducks, who came to feed there, made friends with him.",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "Two young hamsas"
+        ],
+        "receivers": [
+          "tortoise"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the two young hamsas (wild ducks) making friends with the tortoise, indicating an active interaction between the characters."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "And one day, when they had become very intimate with him, they said to the tortoise: \"Friend tortoise! the place where we live, at the Golden Cave on Mount Beautiful in the Himalaya country, is a delightful spot. Will you come there with us?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "two hamsas"
+        ],
+        "receivers": [
+          "tortoise"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the hamsas (doers) directly addressing and inviting the tortoise (receiver) to their location, which constitutes an active interaction driving the narrative forward."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "\"But how can I get there?\"",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "Golden Cave on Mount Beautiful in the Himalaya country",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence provides background context about the location the tortoise is invited to, establishing the narrative focus on the Golden Cave in the Himalaya mountains."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "\"We can take you, if you can only hold your tongue, and will say nothing to anybody.\"",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "tortoise"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence presents a task for the tortoise to 'hold his tongue' and remain silent in order to be transported by the hamsas, establishing the condition for the subsequent action."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "\"Oh! that I can do. Take me with you.\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "tortoise"
+        ],
+        "receivers": [
+          "hamsas"
+        ],
+        "changed_state": "",
+        "explanation": "The tortoise verbally agrees to the hamsas' offer to carry him, which constitutes an action where the tortoise (doer) accepts the proposal from the hamsas (receivers)."
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "\"That's right,\" said they. And making the tortoise bite hold of a stick, they themselves took the two ends in their teeth, and flew up into the air. Seeing him thus carried by the hamsas, some villagers called out, \"Two wild ducks are carrying a tortoise along on a stick!\" Whereupon the tortoise wanted to say, \"If my friends choose to carry me, what is that to you, you wretched slaves!\" So just as the swift flight of the wild ducks had brought him over the king's palace in the city of Benares, he let go of the stick he was biting, and falling in the open courtyard, split in two! And there arose a universal cry, \"A tortoise has fallen in the open courtyard, and has split in two!\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "The tortoise splits in two after letting go of the stick, causing a public outcry and leading to the king's realization about the dangers of excessive talking.",
+        "explanation": "The sentence describes the outcome of the tortoise's inability to hold his tongue, resulting in his death and the king's moral lesson. This directly follows the prior action of the tortoise speaking, making it a consequence."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "The king, taking the future Buddha, went to the place, surrounded by his courtiers; and looking at the tortoise, he asked the Bodisat, \"Teacher! how comes he to be fallen here?\"",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "king"
+        ],
+        "receivers": [
+          "Bodisat"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the king's action of going to the location and asking the Bodisat a question, indicating the king's active involvement in the narrative."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "The future Buddha thought to himself, \"Long expecting, wishing to admonish the king, have I sought for some means of doing so. This tortoise must have made friends with the wild ducks; and they must have made him bite hold of the stick, and have flown up into the air to take him to the hills. But he, being unable to hold his tongue when he hears any one else talk, must have wanted to say something, and let go the stick; and so must have fallen down from the sky, and thus lost his life.\"",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the tortoise fell from the sky and lost his life",
+        "explanation": "The sentence describes the outcome of the tortoise's inability to hold his tongue, leading to his death. This is a direct consequence of his prior actions (speaking when he shouldn't have), which aligns with the 'consequence' category."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "And saying, \"Truly, O king! those who are called chatter-boxes—people whose words have no end—come to grief like this,\" he uttered these Verses: \"Verily the tortoise killed himself Whilst uttering his voice; Though he was holding tight the stick, By a word himself he slew. \"Behold him then, O excellent by strength! And speak wise words, not out of season. You see how, by his talking overmuch, The tortoise fell into this wretched plight!\" The king saw that he was himself referred to, and said, \"O Teacher! are you speaking of us?\" And the Bodisat spake openly, and said, \"O great king! be it thou, or be it any other, whoever talks beyond measure meets with some mishap like this.\" And the king henceforth refrained himself, and became a man of few words.",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the king refrained from talking and became a man of few words",
+        "explanation": "The sentence describes the outcome of the tortoise's inability to hold his tongue, leading to his death, and the king's realization that excessive talking leads to mishap. This results in the king changing his behavior to speak less, marking a state change in his character."
+      }
+    }
+  ]
+}

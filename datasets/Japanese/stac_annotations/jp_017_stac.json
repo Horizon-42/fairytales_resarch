@@ -1,0 +1,309 @@
+{
+  "source_file": "/home/supercomputing/studys/fairytales_resarch/datasets/Japanese/texts/jp_017.txt",
+  "use_context": true,
+  "use_neighboring_sentences": true,
+  "total_sentences": 20,
+  "analyzed_sentences": 20,
+  "sentences": [
+    {
+      "sentence_index": 1,
+      "sentence": "むかしむかし、あるところに、貧乏な古道具屋がいました。",
+      "analysis": {
+        "stac_category": "situation",
+        "location": "あるところ",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence establishes the time ('むかしむかし') and general location ('あるところ') for the story, setting the stage for the narrative."
+      }
+    },
+    {
+      "sentence_index": 2,
+      "sentence": "ある日の事、古道具屋は一匹のタヌキが、ワナにかかっているのを見つけました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "古道具屋"
+        ],
+        "receivers": [
+          "タヌキ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the antique shop owner's active action of discovering the tanuki trapped in a trap, which directly leads to the subsequent task of rescuing it. The doer is the shop owner, and the receiver is the tanuki."
+      }
+    },
+    {
+      "sentence_index": 3,
+      "sentence": "古道具屋はかわいそうに思って、そのタヌキをワナから助けてやりました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "古道具屋"
+        ],
+        "receivers": [
+          "タヌキ"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action performed by the old shopkeeper (古道具屋) to rescue the raccoon (タヌキ) from the snare (ワナ). The doer is clearly the shopkeeper, and the receiver is the trapped raccoon."
+      }
+    },
+    {
+      "sentence_index": 4,
+      "sentence": "次の日の朝、昨日のタヌキが古道具屋の所へやってきて言いました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "タヌキ"
+        ],
+        "receivers": [
+          "古道具屋"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the raccoon's action of coming to the antique shop and speaking, which is an active activity performed by the raccoon (doer) directed towards the shop (receiver)."
+      }
+    },
+    {
+      "sentence_index": 5,
+      "sentence": "「昨日は、本当にありがとうございました。お礼に良い事をお教えしましょう。隣村の和尚(おしょう)さんが茶がまを欲しがっていますから、茶がまを持って行けば喜びますよ。わたしが茶がまに化けますから、持って行って売って下さい」 　そういうとタヌキは、くるりと宙返りをして、すばらしい金の茶がまに化けました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "タヌキ"
+        ],
+        "receivers": [
+          "茶がま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the raccoon's action of transforming into a tea pot, which is an active performance by the raccoon."
+      }
+    },
+    {
+      "sentence_index": 6,
+      "sentence": "さっそく古道具屋が茶がまを持って行くと、 「うーん、これは見事」 と、和尚さんはタヌキの化けた茶がまを大変気に入った様子で、とても高い値で買い取ってくれました。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the monk bought the tea caddy at a high price",
+        "explanation": "The sentence describes the outcome of the prior action (the dealer taking the tea caddy to the monk), resulting in the monk's purchase and the dealer's financial gain."
+      }
+    },
+    {
+      "sentence_index": 7,
+      "sentence": "さて、新しい茶がまを手に入れた和尚さんは、小坊主に、 「この茶がまを、洗ってきなさい」 と、言いました。",
+      "analysis": {
+        "stac_category": "task",
+        "location": "",
+        "task_roles": [
+          "小坊主"
+        ],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence explicitly states a task assigned by the monk to the novice monk (小坊主) to wash the tea kettle, making it a 'task' category with the primary role being the novice monk."
+      }
+    },
+    {
+      "sentence_index": 8,
+      "sentence": "「はい」 　小坊主はさっそく、裏の川へ行って茶がまをゴシゴシと洗いました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小坊主"
+        ],
+        "receivers": [
+          "茶がま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action performed by the 小坊主 (little monk) who washed the tea kettle as instructed. The doer is explicitly the 小坊主, and the receiver is the tea kettle being washed."
+      }
+    },
+    {
+      "sentence_index": 9,
+      "sentence": "すると茶がまは、 「おい小坊主、もっとやさしく洗ってくれ、尻が痛くてたまらん」 と、しゃべったのです。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "茶がまがしゃべるという不思議な状態が生じた",
+        "explanation": "小坊主が茶がまを洗う行動（前のアクション）の結果として、茶がまがしゃべるという非日常的な状態変化が発生したため、これは結果（consequence）に分類される"
+      }
+    },
+    {
+      "sentence_index": 10,
+      "sentence": "「うひゃー、茶がまがしゃべった！！」",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the apprentice is shocked by the tea kettle talking",
+        "explanation": "The sentence represents the reaction to the tea kettle's unexpected ability to speak, which is a consequence of the prior event (the kettle talking). This shock alters the narrative state by introducing disbelief and prompting further actions."
+      }
+    },
+    {
+      "sentence_index": 11,
+      "sentence": "びっくりした小坊主は、あわてて和尚さんにこの事を話しましたが、和尚さんは信じてくれません。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "和尚 does not believe the story about the talking tea kettle",
+        "explanation": "The sentence describes the outcome of the previous event (the tea kettle speaking) by showing the和尚's disbelief, which directly leads to the next action of boiling water."
+      }
+    },
+    {
+      "sentence_index": 12,
+      "sentence": "「なにを馬鹿な。茶がまがしゃべるはずなかろう」 「でも、本当なんです」 「まあ良い。それより、次はお湯をわかしておくれ」 　そこで小坊主は言われるままに、タヌキの化けた茶がまに水を入れて火にかけました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "小坊主"
+        ],
+        "receivers": [
+          "タヌキの化けた茶がま"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the small monk boiling water in the enchanted tea kettle as instructed by the monk, making it an 'action' category with the doer being the small monk and the receiver being the enchanted tea kettle."
+      }
+    },
+    {
+      "sentence_index": 13,
+      "sentence": "すると茶がまに化けたタヌキは、びっくりです。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "タヌキはお尻に火がつき、山へ逃げていく",
+        "explanation": "この文は、前の行動（茶がまを火にかける）の結果としてタヌキがお尻に火をつけて山へ逃げるという状態変化を記述しています。"
+      }
+    },
+    {
+      "sentence_index": 14,
+      "sentence": "「あちちちち！　お尻に火がついた！」",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "the raccoon's tail caught fire",
+        "explanation": "The sentence describes the direct outcome of the prior action (boiling the tea kettle), resulting in the raccoon's tail being burned. This consequence triggers its escape to the mountain in the following sentence."
+      }
+    },
+    {
+      "sentence_index": 15,
+      "sentence": "タヌキは一目散に、山へ逃げていきました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "タヌキ"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the raccoon's action of fleeing to the mountain, indicating an active behavior performed by the raccoon. No direct receiver is mentioned for the action."
+      }
+    },
+    {
+      "sentence_index": 16,
+      "sentence": "その夜、タヌキはまた、古道具屋の家にやってきて言いました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "タヌキ"
+        ],
+        "receivers": [
+          "古道具屋の家"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the raccoon's action of coming to the antique dealer's house, which is an active event performed by the raccoon."
+      }
+    },
+    {
+      "sentence_index": 17,
+      "sentence": "「二人で町へ行きましょう。私がつなわたりをしますから、人を集めて下さいな」 　次の日、古道具屋とタヌキは町へ出かけて、芝居屋を貸し切りました。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "古道具屋",
+          "タヌキ"
+        ],
+        "receivers": [
+          "芝居屋"
+        ],
+        "changed_state": "",
+        "explanation": "The sentence describes the action of the old shopkeeper and tanuki going to the town and renting a theater, with the doers being both characters and the theater as the receiver of the action."
+      }
+    },
+    {
+      "sentence_index": 18,
+      "sentence": "「さあさあ、世にも珍しい、タヌキのつなわたりだよ」 　入り口で古道具屋が大声で言うと、タヌキはつなの上を器用に渡りながら、腹づつみを打ったり歌ったりします。",
+      "analysis": {
+        "stac_category": "action",
+        "location": "",
+        "task_roles": [],
+        "doers": [
+          "古道具屋",
+          "タヌキ"
+        ],
+        "receivers": [],
+        "changed_state": "",
+        "explanation": "The sentence describes the actions performed by the old shopkeeper and the raccoon during their act in the theater. The shopkeeper announces the performance, and the raccoon executes the acrobatic routine, making them the primary doers of the action."
+      }
+    },
+    {
+      "sentence_index": 19,
+      "sentence": "「これはめずらしい。なんて面白いんだろう」 　タヌキのつなわたりは大評判となり、毎日押すな押すなの大にぎわいです。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "タヌキのつなわたりが大評判となり、毎日多くの人々が集まり賑わうようになった",
+        "explanation": "タヌキのつなわたりのパフォーマンスが成功し、その結果として人々の注目を集めるようになった状態変化を記述しているため、consequenceカテゴリに分類。"
+      }
+    },
+    {
+      "sentence_index": 20,
+      "sentence": "こうして古道具屋は、タヌキのお陰で大金持ちになったという事です。",
+      "analysis": {
+        "stac_category": "consequence",
+        "location": "",
+        "task_roles": [],
+        "doers": [],
+        "receivers": [],
+        "changed_state": "古道具屋は大金持ちになった",
+        "explanation": "この文はタヌキのつなわたりの成功により古道具屋が大金持ちになったという結果を示しており、前段の出来事の結果としての状態変化を表しています。"
+      }
+    }
+  ]
+}
