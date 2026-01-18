@@ -18,3 +18,5 @@ Japanese_test2
 tmp/
 
 .env*
+
+mock_test_results/
