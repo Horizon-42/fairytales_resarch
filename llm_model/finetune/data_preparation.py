@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import csv
 import json
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -75,12 +76,12 @@ def extract_character_examples(
         if not text or not text.strip():
             continue
         
-        # Build prompt
+        # Build prompt (no story_context to save memory)
         instruction = build_character_prompt_for_training(
             text_span=text,
             summary=summary or "",  # Empty if not provided
             existing_characters=current_characters,
-            story_context=story_text if story_text != text else None
+            story_context=None  # Always None to save memory
         )
         
         # Extract expected output
@@ -240,7 +241,7 @@ def extract_relationship_examples(
             summary=summary or "",
             doers=agents,
             receivers=targets,
-            story_context=story_text if story_text != text else None
+            story_context=None  # Always None to save memory
         )
         
         output_dict = {"relationships": relationships}
@@ -364,7 +365,7 @@ def extract_stac_examples(
         instruction = build_stac_prompt_for_training(
             text_span=text,
             summary=summary or "",
-            story_context=story_text if story_text != text else None
+            story_context=None  # Always None to save memory
         )
         
         output_dict = {
@@ -550,11 +551,40 @@ def validate_story_paragraphs(
     return len(generated_paragraphs) == len(narrative_events)
 
 
+def load_summaries_from_csv(csv_path: Path) -> Dict[str, str]:
+    """Load summaries from CSV file.
+    
+    Args:
+        csv_path: Path to story_summaries.csv file
+    
+    Returns:
+        Dictionary mapping relative_path to summary text
+    """
+    summaries = {}
+    
+    if not csv_path.exists():
+        return summaries
+    
+    try:
+        with open(csv_path, "r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                relative_path = row.get("relative_path", "").strip()
+                summary = row.get("summary", "").strip()
+                if relative_path and summary:
+                    summaries[relative_path] = summary
+    except Exception as e:
+        print(f"Warning: Failed to load summaries from {csv_path}: {e}", file=__import__("sys").stderr)
+    
+    return summaries
+
+
 def prepare_synthetic_training_data(
     groundtruth_dir: str,
     generated_stories_dir: str,
     output_dir: str,
     steps: Optional[List[str]] = None,
+    summaries_csv: Optional[str] = None,
     verbose: bool = True,
 ) -> Dict[str, int]:
     """Prepare training data from synthetic datasets.
@@ -564,6 +594,7 @@ def prepare_synthetic_training_data(
         generated_stories_dir: Root directory of generated stories
         output_dir: Output directory for training data files
         steps: List of steps to prepare data for (default: all steps)
+        summaries_csv: Optional path to story_summaries.csv file (default: auto-detect)
         verbose: Print progress information
     
     Returns:
@@ -576,6 +607,22 @@ def prepare_synthetic_training_data(
     generated_stories_path = Path(generated_stories_dir)
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
+    
+    # Load summaries from CSV if available
+    summaries_dict = {}
+    if summaries_csv:
+        summaries_csv_path = Path(summaries_csv)
+    else:
+        # Auto-detect: look for story_summaries.csv in synthetic_datasets directory
+        synthetic_datasets_dir = generated_stories_path.parent
+        summaries_csv_path = synthetic_datasets_dir / "story_summaries.csv"
+    
+    if summaries_csv_path.exists():
+        summaries_dict = load_summaries_from_csv(summaries_csv_path)
+        if verbose:
+            print(f"Loaded {len(summaries_dict)} summaries from {summaries_csv_path}")
+    elif verbose:
+        print(f"Warning: Summary CSV not found at {summaries_csv_path}, using empty summaries")
     
     # Find all groundtruth JSON files
     groundtruth_files = list(groundtruth_path.rglob("*.json"))
@@ -631,12 +678,23 @@ def prepare_synthetic_training_data(
                     modified_events = []
                     
                     for idx, event in enumerate(narrative_events):
+                        # Skip if event is None or empty
+                        if not event or not isinstance(event, dict):
+                            continue
+                        
                         modified_event = event.copy()
-                        text_span = modified_event.get("text_span", {})
+                        text_span = modified_event.get("text_span")
+                        
+                        # Ensure text_span is a dict (handle None case)
+                        if text_span is None:
+                            text_span = {}
+                        elif not isinstance(text_span, dict):
+                            # If text_span is not a dict, create a new dict
+                            text_span = {}
                         
                         # Fill text from generated paragraph
                         if idx < len(generated_paragraphs):
-                            text_span = text_span.copy()
+                            text_span = text_span.copy()  # Now safe to copy
                             text_span["text"] = generated_paragraphs[idx]
                             modified_event["text_span"] = text_span
                         
@@ -646,8 +704,29 @@ def prepare_synthetic_training_data(
                     modified_groundtruth["source_info"] = modified_groundtruth.get("source_info", {})
                     modified_groundtruth["source_info"]["text_content"] = full_story_text
                     
-                    # Extract examples for each step
-                    story_summary = None  # Empty summary for training
+                    # Get summary from CSV if available
+                    # Generate relative path for lookup: synthetic_datasets/generated_stories/...
+                    # CSV stores paths relative to project root, so we need to compute from project root
+                    try:
+                        # Try to get relative path from project root
+                        project_root = generated_stories_path.parent.parent
+                        relative_path = gen_file.relative_to(project_root)
+                        story_summary = summaries_dict.get(str(relative_path), "")
+                    except ValueError:
+                        # Fallback: try direct filename match or use empty
+                        story_summary = ""
+                    
+                    # Also try matching by filename as fallback
+                    if not story_summary:
+                        for csv_path, csv_summary in summaries_dict.items():
+                            if gen_file.name in csv_path or gen_file.stem in csv_path:
+                                story_summary = csv_summary
+                                break
+                    
+                    if verbose and story_summary:
+                        print(f"  Using summary from CSV ({len(story_summary)} chars)")
+                    elif verbose and not story_summary:
+                        print(f"  No summary found in CSV, using empty summary")
                     
                     # Generate a unique identifier for this story+generation combination
                     gen_id = gen_file.stem  # e.g., "CH_002_牛郎织女_gen_01"

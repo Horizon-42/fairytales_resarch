@@ -2,12 +2,14 @@
 
 from __future__ import annotations
 
-# Import unsloth first (required for optimizations)
+# Import unsloth FIRST before any other imports (required for optimizations)
+# This must be at the very top to ensure all optimizations are applied
 try:
     import unsloth  # noqa: F401
 except ImportError:
     pass  # Will raise error later if actually needed
 
+# Now import other modules
 import json
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -55,18 +57,119 @@ class BaseTrainer:
                 "pip install unsloth"
             )
         
-        print(f"Loading model: {self.model_name}")
-        print("Note: First-time download may take several minutes depending on network speed...")
+        print("=" * 60)
+        print("MODEL LOADING INFORMATION")
+        print("=" * 60)
+        print(f"Model name: {self.model_name}")
+        print(f"Step name: {self.step_name}")
+        print(f"Max sequence length: {self.config.max_seq_length}")
+        
+        # Check HuggingFace cache location
+        from pathlib import Path
+        import os
+        hf_cache = Path.home() / ".cache" / "huggingface" / "hub"
+        model_cache_name = f"models--{self.model_name.replace('/', '--')}"
+        model_cache_path = hf_cache / model_cache_name
+        print(f"HuggingFace cache: {hf_cache}")
+        print(f"Model cache path: {model_cache_path}")
+        if model_cache_path.exists():
+            # Calculate size
+            total_size = sum(f.stat().st_size for f in model_cache_path.rglob('*') if f.is_file())
+            size_gb = total_size / (1024**3)
+            print(f"✅ Model found in cache: {size_gb:.2f} GB")
+        else:
+            print(f"⚠️  Model not in cache, will download from HuggingFace")
+            print("Note: First-time download may take several minutes depending on network speed...")
+        print()
+        
+        # Check if model is already quantized (contains "bnb-4bit" or "4bit")
+        is_pre_quantized = "bnb-4bit" in self.model_name.lower() or "4bit" in self.model_name.lower()
+        
+        # Prepare loading parameters
+        load_kwargs = {
+            "model_name": self.model_name,
+            "max_seq_length": self.config.max_seq_length,
+            "dtype": None,  # Auto detection
+        }
+        
+        # For pre-quantized models, still set load_in_4bit=True (it's safe and ensures correct loading)
+        # For non-quantized models, enable 4-bit quantization
+        load_kwargs["load_in_4bit"] = True  # Always use 4-bit for memory efficiency
+        if is_pre_quantized:
+            print("📦 Model type: Pre-quantized 4-bit model (already quantized)")
+        else:
+            print("📦 Model type: Full precision (will be quantized to 4-bit during loading)")
+        
+        # Enable CPU offload if configured (for low GPU memory scenarios)
+        # For pre-quantized models, CPU offload may still be needed if GPU RAM is limited
+        if self.config.enable_cpu_offload:
+            load_kwargs["device_map"] = "auto"  # Auto device mapping
+            load_kwargs["llm_int8_enable_fp32_cpu_offload"] = True
+            print("💾 CPU offload: ENABLED (some modules will be offloaded to CPU)")
+        else:
+            print("💾 CPU offload: DISABLED (all modules on GPU)")
+        
+        print()
+        print("Loading parameters:")
+        for key, value in load_kwargs.items():
+            print(f"  - {key}: {value}")
+        print()
+        print("Starting model loading...")
+        print("-" * 60)
         
         try:
-            self.model, self.tokenizer = FastLanguageModel.from_pretrained(
-                model_name=self.model_name,
-                max_seq_length=self.config.max_seq_length,
-                dtype=None,  # Auto detection
-                load_in_4bit=True,  # 4bit quantization
-            )
-        except RuntimeError as e:
+            self.model, self.tokenizer = FastLanguageModel.from_pretrained(**load_kwargs)
+            
+            # Log model information after loading
+            print("-" * 60)
+            print("✅ Model loaded successfully!")
+            print()
+            print("Loaded model information:")
+            print(f"  - Model type: {type(self.model).__name__}")
+            print(f"  - Model name: {self.model_name}")
+            if hasattr(self.model, 'config'):
+                config = self.model.config
+                print(f"  - Model architecture: {getattr(config, 'model_type', 'unknown')}")
+                print(f"  - Hidden size: {getattr(config, 'hidden_size', 'unknown')}")
+                print(f"  - Number of layers: {getattr(config, 'num_hidden_layers', 'unknown')}")
+                print(f"  - Vocabulary size: {getattr(config, 'vocab_size', 'unknown')}")
+            if hasattr(self.tokenizer, 'vocab_size'):
+                print(f"  - Tokenizer vocab size: {self.tokenizer.vocab_size}")
+            print(f"  - Max sequence length: {self.config.max_seq_length}")
+            
+            # Check device
+            try:
+                import torch
+                if hasattr(self.model, 'device'):
+                    print(f"  - Device: {self.model.device}")
+                elif hasattr(self.model, 'hf_device_map'):
+                    print(f"  - Device map: {self.model.hf_device_map}")
+            except:
+                pass
+            
+            print()
+            print("=" * 60)
+        except (RuntimeError, ValueError) as e:
             error_msg = str(e)
+            
+            # Check for GPU memory issues
+            if "GPU RAM" in error_msg or "dispatched on the CPU" in error_msg or "device_map" in error_msg.lower() or "llm_int8_enable_fp32_cpu_offload" in error_msg:
+                # Auto-suggest CPU offload if not already enabled
+                cpu_offload_suggestion = ""
+                if not self.config.enable_cpu_offload:
+                    cpu_offload_suggestion = "\n💡 Try adding --enable-cpu-offload to your command"
+                
+                raise RuntimeError(
+                    f"GPU memory insufficient for model '{self.model_name}'. "
+                    f"Solutions:\n"
+                    f"1. Enable CPU offload: --enable-cpu-offload (slower but uses less GPU RAM){cpu_offload_suggestion}\n"
+                    f"2. Use 4-bit quantized model: --model-name unsloth/Qwen3-8B-unsloth-bnb-4bit\n"
+                    f"3. Use a smaller model: --model-name unsloth/Qwen2.5-7B-Instruct\n"
+                    f"4. Reduce batch size: --batch-size 2 (or smaller)\n\n"
+                    f"Error details: {error_msg}"
+                ) from e
+            
+            # Check for model not found
             if "No config file found" in error_msg or "model_name" in error_msg.lower():
                 raise RuntimeError(
                     f"Failed to load model '{self.model_name}'. "
@@ -76,13 +179,14 @@ class BaseTrainer:
                     f"3. Model path is incorrect (if using local path)\n\n"
                     f"Error details: {error_msg}\n\n"
                     f"Common model names:\n"
+                    f"  - unsloth/Qwen3-8B-unsloth-bnb-4bit (4-bit quantized, recommended)\n"
+                    f"  - unsloth/Qwen3-8B (full precision)\n"
                     f"  - unsloth/Qwen2.5-7B-Instruct\n"
-                    f"  - unsloth/Qwen2.5-14B-Instruct\n"
-                    f"  - unsloth/Llama-3.1-8B-Instruct\n"
-                    f"  - Qwen/Qwen2.5-7B-Instruct (if unsloth version unavailable)"
+                    f"  - Qwen/Qwen3-8B (original HuggingFace)"
                 ) from e
-            else:
-                raise
+            
+            # Re-raise other errors
+            raise
         
         # Apply LoRA adapters
         self.model = FastLanguageModel.get_peft_model(
@@ -258,6 +362,7 @@ class BaseTrainer:
         if self.model is None or self.tokenizer is None:
             raise ValueError("Model not loaded. Call load_model() first.")
         
+        # Import transformers after unsloth (already imported at top)
         try:
             from trl import SFTTrainer
             from transformers import TrainingArguments, TrainerCallback

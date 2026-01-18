@@ -56,7 +56,7 @@ def generate_story_summary(
     
     prompt = build_summary_prompt(
         text_span=segment_text,
-        story_context=story_text if segment_text != story_text else None
+        story_context=None  # Always None to save memory (summary generation doesn't need full context)
     )
     
     messages = [

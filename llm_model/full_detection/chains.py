@@ -195,7 +195,7 @@ def create_summary_chain(llm_config: LLMConfig) -> Runnable:
         
         prompt = build_summary_prompt(
             text_span=s.text_span.get("text", ""),
-            story_context=s.story_text if s.story_text else None
+            story_context=None  # Always None to save memory (summary generation doesn't need full context)
         )
         
         llm_runnable = LLMRouterRunnable(SYSTEM_PROMPT_SUMMARY, llm_config)
@@ -234,7 +234,7 @@ def create_character_recognition_chain(llm_config: LLMConfig) -> Runnable:
             text_span=s.text_span.get("text", ""),
             summary=s.summary or "",
             existing_characters=s.characters or [],
-            story_context=s.story_text if s.story_text else None
+            story_context=None  # Always None to save memory and speed up inference
         )
         
         llm_runnable = LLMRouterRunnable(SYSTEM_PROMPT_CHARACTER_RECOGNITION, llm_config)
@@ -340,7 +340,7 @@ def create_relationship_chain(llm_config: LLMConfig) -> Runnable:
             summary=s.summary or "",
             doers=s.doers or [],
             receivers=s.receivers or [],
-            story_context=s.story_text if s.story_text else None
+            story_context=None  # Always None to save memory and speed up inference
         )
         
         llm_runnable = LLMRouterRunnable(SYSTEM_PROMPT_RELATIONSHIP, llm_config)
@@ -424,7 +424,7 @@ def create_stac_chain(llm_config: LLMConfig) -> Runnable:
         prompt = build_stac_prompt(
             text_span=s.text_span.get("text", ""),
             summary=s.summary or "",
-            story_context=s.story_text if s.story_text else None
+            story_context=None  # Always None to save memory and speed up inference
         )
         
         llm_runnable = LLMRouterRunnable(SYSTEM_PROMPT_STAC, llm_config)

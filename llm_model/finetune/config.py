@@ -27,11 +27,13 @@ class FineTuneConfig:
     """
     
     # Model configuration
-    # Qwen3-8B: Latest Qwen model with thinking capability (disabled by default)
-    # Note: If unsloth/Qwen3-8B is unavailable, try:
-    # - Qwen/Qwen3-8B (original HuggingFace model)
+    # Qwen3-4B: Smaller model for lower GPU memory usage (7.71 GB GPU recommended)
+    # Use 4-bit quantized version for lower GPU memory usage
+    # Note: If unsloth/Qwen3-4B-unsloth-bnb-4bit is unavailable, try:
+    # - unsloth/Qwen3-8B-unsloth-bnb-4bit (larger model, requires more GPU RAM)
+    # - unsloth/Qwen3-8B (full precision, requires more GPU RAM)
     # - unsloth/Qwen2.5-7B-Instruct (previous generation)
-    model_name: str = "unsloth/Qwen3-8B"
+    model_name: str = "unsloth/Qwen3-4B-unsloth-bnb-4bit"
     max_seq_length: int = 2048
     
     # LoRA configuration
@@ -49,6 +51,9 @@ class FineTuneConfig:
     
     # Data type
     bf16: bool = True  # Use bfloat16
+    
+    # Memory optimization
+    enable_cpu_offload: bool = False  # Enable CPU offload for low GPU memory (slower but uses less GPU RAM)
     
     # Output
     output_dir: str = "./models"

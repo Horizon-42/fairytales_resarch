@@ -68,12 +68,13 @@ def get_extract_function(step: str):
 def train_step(
     step: str,
     data_dir: str,
-    model_name: str = "unsloth/Qwen2.5-7B-Instruct",
+    model_name: str = "unsloth/Qwen3-4B-unsloth-bnb-4bit",
     output_dir: str = "./models",
     config: Optional[FineTuneConfig] = None,
     train_split: float = 0.9,
     evaluate_after_training: bool = True,
     use_jsonl: bool = True,
+    enable_cpu_offload: bool = False,
 ):
     """Train a single pipeline step.
     
@@ -88,10 +89,11 @@ def train_step(
         use_jsonl: If True, load from JSONL training files; if False, extract from JSON stories
     """
     if config is None:
-        config = FineTuneConfig(model_name=model_name, output_dir=output_dir)
+        config = FineTuneConfig(model_name=model_name, output_dir=output_dir, enable_cpu_offload=enable_cpu_offload)
     else:
         config.model_name = model_name
         config.output_dir = output_dir
+        config.enable_cpu_offload = enable_cpu_offload
     
     # Get trainer class
     trainer_class = get_trainer_class(step)
@@ -232,8 +234,8 @@ Examples:
     parser.add_argument(
         "--model-name",
         type=str,
-        default="unsloth/Qwen2.5-7B-Instruct",
-        help="Base model name (default: unsloth/Qwen2.5-7B-Instruct)"
+        default="unsloth/Qwen3-4B-unsloth-bnb-4bit",
+        help="Base model name (default: unsloth/Qwen3-4B-unsloth-bnb-4bit, 4-bit quantized for lower GPU memory)"
     )
     parser.add_argument(
         "--output-dir",
@@ -277,6 +279,11 @@ Examples:
         default=True,
         help="Extract training data from JSON annotation files instead of JSONL (default: use JSONL)"
     )
+    parser.add_argument(
+        "--enable-cpu-offload",
+        action="store_true",
+        help="Enable CPU offload for low GPU memory scenarios (slower but uses less GPU RAM)"
+    )
     
     args = parser.parse_args()
     
@@ -301,6 +308,7 @@ Examples:
         num_epochs=args.num_epochs,
         batch_size=args.batch_size,
         learning_rate=args.learning_rate,
+        enable_cpu_offload=args.enable_cpu_offload,
     )
     
     # Train each step
@@ -321,6 +329,7 @@ Examples:
                 train_split=args.train_split,
                 evaluate_after_training=not args.no_evaluate,
                 use_jsonl=args.use_jsonl,
+                enable_cpu_offload=args.enable_cpu_offload,
             )
             print(f"\n✓ Successfully completed training for {step}\n")
         except Exception as e:

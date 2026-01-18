@@ -203,7 +203,13 @@ Examples:
         "--summary",
         type=str,
         default=None,
-        help="Optional summary text to use for all stories (default: empty)"
+        help="Optional summary text to use for all stories (default: empty, or load from CSV for synthetic)"
+    )
+    parser.add_argument(
+        "--summaries-csv",
+        type=str,
+        default=None,
+        help="Path to story_summaries.csv file (for synthetic extraction, auto-detected if not provided)"
     )
     parser.add_argument(
         "--synthetic",
@@ -242,6 +248,7 @@ Examples:
                 generated_stories_dir=str(generated_stories_path),
                 output_dir=args.output_dir,
                 steps=args.steps,
+                summaries_csv=args.summaries_csv,
                 verbose=not args.quiet,
             )
             
