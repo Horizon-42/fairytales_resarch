@@ -471,6 +471,279 @@ def load_all_annotated_stories(data_dir: str) -> List[Dict[str, Any]]:
     return stories
 
 
+def load_generated_story(file_path: str) -> List[str]:
+    """Load generated story from text file.
+    
+    Each line in the file is a paragraph wrapped in {}.
+    
+    Args:
+        file_path: Path to generated story text file
+    
+    Returns:
+        List of paragraph strings (with {} removed)
+    """
+    paragraphs = []
+    with open(file_path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            # Remove {} wrapper if present
+            if line.startswith("{") and line.endswith("}"):
+                line = line[1:-1]
+            paragraphs.append(line)
+    return paragraphs
+
+
+def find_generated_stories(groundtruth_path: Path, generated_stories_dir: str) -> List[Path]:
+    """Find all generated story files for a given groundtruth JSON.
+    
+    Args:
+        groundtruth_path: Path to groundtruth JSON file
+        generated_stories_dir: Root directory of generated stories
+    
+    Returns:
+        List of paths to generated story files
+    """
+    # Extract story ID from groundtruth filename
+    # e.g., "CH_002_牛郎织女_v3.json" -> "CH_002_牛郎织女_v3"
+    story_id = groundtruth_path.stem  # Removes .json
+    
+    # Find matching directory in generated_stories
+    generated_dir = Path(generated_stories_dir)
+    
+    # Search for matching story directory
+    # Structure: generated_stories/{Culture}/{story_id}/gemini/*.txt
+    story_files = []
+    
+    # Search in all culture directories
+    for culture_dir in generated_dir.iterdir():
+        if not culture_dir.is_dir():
+            continue
+        
+        story_dir = culture_dir / story_id
+        if not story_dir.exists():
+            continue
+        
+        # Look for gemini subdirectory
+        gemini_dir = story_dir / "gemini"
+        if gemini_dir.exists():
+            for txt_file in gemini_dir.glob("*.txt"):
+                story_files.append(txt_file)
+    
+    return sorted(story_files)
+
+
+def validate_story_paragraphs(
+    generated_paragraphs: List[str],
+    narrative_events: List[Dict[str, Any]]
+) -> bool:
+    """Validate that generated story has same number of paragraphs as narrative events.
+    
+    Args:
+        generated_paragraphs: List of generated story paragraphs
+        narrative_events: List of narrative events from groundtruth
+    
+    Returns:
+        True if counts match, False otherwise
+    """
+    return len(generated_paragraphs) == len(narrative_events)
+
+
+def prepare_synthetic_training_data(
+    groundtruth_dir: str,
+    generated_stories_dir: str,
+    output_dir: str,
+    steps: Optional[List[str]] = None,
+    verbose: bool = True,
+) -> Dict[str, int]:
+    """Prepare training data from synthetic datasets.
+    
+    Args:
+        groundtruth_dir: Directory containing groundtruth JSON v3 files
+        generated_stories_dir: Root directory of generated stories
+        output_dir: Output directory for training data files
+        steps: List of steps to prepare data for (default: all steps)
+        verbose: Print progress information
+    
+    Returns:
+        Dictionary mapping step names to total number of examples
+    """
+    if steps is None:
+        steps = ["character", "instrument", "relationship", "action", "stac", "event_type"]
+    
+    groundtruth_path = Path(groundtruth_dir)
+    generated_stories_path = Path(generated_stories_dir)
+    output_path = Path(output_dir)
+    output_path.mkdir(parents=True, exist_ok=True)
+    
+    # Find all groundtruth JSON files
+    groundtruth_files = list(groundtruth_path.rglob("*.json"))
+    
+    if verbose:
+        print(f"Found {len(groundtruth_files)} groundtruth JSON files")
+    
+    # Track all examples per step
+    all_examples_per_step = {step: [] for step in steps}
+    
+    # Process each groundtruth file
+    for gt_file in groundtruth_files:
+        try:
+            # Load groundtruth
+            groundtruth = load_annotated_story(str(gt_file))
+            story_id = groundtruth.get("metadata", {}).get("id", gt_file.stem)
+            narrative_events = groundtruth.get("narrative_events", [])
+            
+            if verbose:
+                print(f"\nProcessing: {story_id}")
+                print(f"  Groundtruth: {gt_file}")
+                print(f"  Narrative events: {len(narrative_events)}")
+            
+            # Find generated stories
+            generated_files = find_generated_stories(gt_file, generated_stories_dir)
+            
+            if not generated_files:
+                if verbose:
+                    print(f"  Warning: No generated stories found, skipping...")
+                continue
+            
+            if verbose:
+                print(f"  Found {len(generated_files)} generated story files")
+            
+            # Process each generated story
+            for gen_file in generated_files:
+                try:
+                    # Load generated story
+                    generated_paragraphs = load_generated_story(str(gen_file))
+                    
+                    # Validate paragraph count
+                    if not validate_story_paragraphs(generated_paragraphs, narrative_events):
+                        if verbose:
+                            print(f"  Warning: {gen_file.name} has {len(generated_paragraphs)} paragraphs, "
+                                  f"expected {len(narrative_events)}, skipping...")
+                        continue
+                    
+                    # Combine paragraphs into full story text
+                    full_story_text = "\n".join(generated_paragraphs)
+                    
+                    # Create a modified groundtruth with text_span.text filled from generated paragraphs
+                    modified_groundtruth = groundtruth.copy()
+                    modified_events = []
+                    
+                    for idx, event in enumerate(narrative_events):
+                        modified_event = event.copy()
+                        text_span = modified_event.get("text_span", {})
+                        
+                        # Fill text from generated paragraph
+                        if idx < len(generated_paragraphs):
+                            text_span = text_span.copy()
+                            text_span["text"] = generated_paragraphs[idx]
+                            modified_event["text_span"] = text_span
+                        
+                        modified_events.append(modified_event)
+                    
+                    modified_groundtruth["narrative_events"] = modified_events
+                    modified_groundtruth["source_info"] = modified_groundtruth.get("source_info", {})
+                    modified_groundtruth["source_info"]["text_content"] = full_story_text
+                    
+                    # Extract examples for each step
+                    story_summary = None  # Empty summary for training
+                    
+                    # Generate a unique identifier for this story+generation combination
+                    gen_id = gen_file.stem  # e.g., "CH_002_牛郎织女_gen_01"
+                    
+                    # Extract examples for each step
+                    step_examples = {}
+                    
+                    if "character" in steps:
+                        examples = extract_character_examples(
+                            modified_groundtruth, full_story_text, story_summary
+                        )
+                        step_examples["character"] = examples
+                    
+                    if "instrument" in steps:
+                        examples = extract_instrument_examples(
+                            modified_groundtruth, story_summary
+                        )
+                        step_examples["instrument"] = examples
+                    
+                    if "relationship" in steps:
+                        examples = extract_relationship_examples(
+                            modified_groundtruth, full_story_text, story_summary
+                        )
+                        step_examples["relationship"] = examples
+                    
+                    if "action" in steps:
+                        examples = extract_action_examples(
+                            modified_groundtruth, story_summary
+                        )
+                        step_examples["action"] = examples
+                    
+                    if "stac" in steps:
+                        examples = extract_stac_examples(
+                            modified_groundtruth, full_story_text, story_summary
+                        )
+                        step_examples["stac"] = examples
+                    
+                    if "event_type" in steps:
+                        examples = extract_event_type_examples(
+                            modified_groundtruth, story_summary
+                        )
+                        step_examples["event_type"] = examples
+                    
+                    # Save individual story file for each step
+                    for step, examples in step_examples.items():
+                        if not examples:
+                            continue
+                        
+                        # Create per-story file
+                        story_output_dir = output_path / step / "per_story"
+                        story_output_dir.mkdir(parents=True, exist_ok=True)
+                        
+                        story_file = story_output_dir / f"{gen_id}_{step}.jsonl"
+                        with open(story_file, "w", encoding="utf-8") as f:
+                            for example in examples:
+                                f.write(json.dumps(example, ensure_ascii=False) + "\n")
+                        
+                        # Also collect for final merge
+                        all_examples_per_step[step].extend(examples)
+                        
+                        if verbose:
+                            print(f"    {step}: {len(examples)} examples -> {story_file.name}")
+                    
+                except Exception as e:
+                    if verbose:
+                        print(f"  Error processing {gen_file.name}: {e}")
+                    continue
+        
+        except Exception as e:
+            if verbose:
+                print(f"Error processing {gt_file}: {e}")
+            continue
+    
+    # Merge all examples and save final files
+    if verbose:
+        print(f"\nMerging all examples...")
+    
+    for step, examples in all_examples_per_step.items():
+        if not examples:
+            if verbose:
+                print(f"  {step}: No examples, skipping...")
+            continue
+        
+        # Save merged file
+        merged_file = output_path / f"{step}_train.jsonl"
+        with open(merged_file, "w", encoding="utf-8") as f:
+            for example in examples:
+                f.write(json.dumps(example, ensure_ascii=False) + "\n")
+        
+        if verbose:
+            print(f"  {step}: {len(examples)} total examples -> {merged_file}")
+    
+    # Return counts
+    return {step: len(examples) for step, examples in all_examples_per_step.items()}
+
+
 def prepare_all_training_data(
     data_dir: str,
     steps: List[str] = None,

@@ -21,6 +21,7 @@ from ..data_preparation import (
     extract_stac_examples,
     load_annotated_story,
     load_all_annotated_stories,
+    prepare_synthetic_training_data,
 )
 
 
@@ -140,10 +141,17 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # Extract all steps from a directory
+  # Extract from regular annotation files
   python -m llm_model.finetune.scripts.extract_training_data \\
       --input-dir datasets/ChineseTales/json_v3 \\
       --output-dir ./training_data
+
+  # Extract from synthetic datasets
+  python -m llm_model.finetune.scripts.extract_training_data \\
+      --groundtruth-dir synthetic_datasets/groundtruth \\
+      --generated-stories-dir synthetic_datasets/generated_stories \\
+      --output-dir ./training_data \\
+      --synthetic
 
   # Extract specific steps only
   python -m llm_model.finetune.scripts.extract_training_data \\
@@ -162,8 +170,20 @@ Examples:
     parser.add_argument(
         "--input-dir",
         type=str,
-        required=True,
-        help="Input directory containing JSON v3 annotation files"
+        default=None,
+        help="Input directory containing JSON v3 annotation files (for regular extraction)"
+    )
+    parser.add_argument(
+        "--groundtruth-dir",
+        type=str,
+        default=None,
+        help="Directory containing groundtruth JSON v3 files (for synthetic extraction)"
+    )
+    parser.add_argument(
+        "--generated-stories-dir",
+        type=str,
+        default=None,
+        help="Root directory of generated stories (for synthetic extraction)"
     )
     parser.add_argument(
         "--output-dir",
@@ -186,6 +206,11 @@ Examples:
         help="Optional summary text to use for all stories (default: empty)"
     )
     parser.add_argument(
+        "--synthetic",
+        action="store_true",
+        help="Use synthetic dataset extraction mode"
+    )
+    parser.add_argument(
         "--quiet",
         action="store_true",
         help="Suppress progress output"
@@ -193,44 +218,95 @@ Examples:
     
     args = parser.parse_args()
     
-    # Validate input directory
-    input_path = Path(args.input_dir)
-    if not input_path.exists():
-        print(f"Error: Input directory does not exist: {args.input_dir}")
-        return 1
+    # Determine extraction mode
+    if args.synthetic:
+        # Synthetic dataset extraction
+        if not args.groundtruth_dir or not args.generated_stories_dir:
+            print("Error: --groundtruth-dir and --generated-stories-dir are required for synthetic extraction")
+            return 1
+        
+        groundtruth_path = Path(args.groundtruth_dir)
+        generated_stories_path = Path(args.generated_stories_dir)
+        
+        if not groundtruth_path.exists():
+            print(f"Error: Groundtruth directory does not exist: {args.groundtruth_dir}")
+            return 1
+        
+        if not generated_stories_path.exists():
+            print(f"Error: Generated stories directory does not exist: {args.generated_stories_dir}")
+            return 1
+        
+        try:
+            counts = prepare_synthetic_training_data(
+                groundtruth_dir=str(groundtruth_path),
+                generated_stories_dir=str(generated_stories_path),
+                output_dir=args.output_dir,
+                steps=args.steps,
+                verbose=not args.quiet,
+            )
+            
+            # Summary
+            if not args.quiet:
+                print("\n" + "="*60)
+                print("Extraction Summary:")
+                print("="*60)
+                total = sum(counts.values())
+                for step, count in counts.items():
+                    print(f"  {step:20s}: {count:5d} examples")
+                print(f"  {'Total':20s}: {total:5d} examples")
+                print("="*60)
+            
+            return 0
+            
+        except Exception as e:
+            print(f"Error: {e}", file=__import__("sys").stderr)
+            import traceback
+            traceback.print_exc()
+            return 1
     
-    if not input_path.is_dir():
-        print(f"Error: Input path is not a directory: {args.input_dir}")
-        return 1
-    
-    # Extract data
-    try:
-        counts = extract_data_from_directory(
-            input_dir=str(input_path),
-            output_dir=args.output_dir,
-            steps=args.steps,
-            summary=args.summary,
-            verbose=not args.quiet,
-        )
+    else:
+        # Regular extraction
+        if not args.input_dir:
+            print("Error: --input-dir is required for regular extraction (or use --synthetic)")
+            return 1
         
-        # Summary
-        if not args.quiet:
-            print("\n" + "="*60)
-            print("Extraction Summary:")
-            print("="*60)
-            total = sum(counts.values())
-            for step, count in counts.items():
-                print(f"  {step:20s}: {count:5d} examples")
-            print(f"  {'Total':20s}: {total:5d} examples")
-            print("="*60)
+        input_path = Path(args.input_dir)
+        if not input_path.exists():
+            print(f"Error: Input directory does not exist: {args.input_dir}")
+            return 1
         
-        return 0
+        if not input_path.is_dir():
+            print(f"Error: Input path is not a directory: {args.input_dir}")
+            return 1
         
-    except Exception as e:
-        print(f"Error: {e}", file=__import__("sys").stderr)
-        import traceback
-        traceback.print_exc()
-        return 1
+        # Extract data
+        try:
+            counts = extract_data_from_directory(
+                input_dir=str(input_path),
+                output_dir=args.output_dir,
+                steps=args.steps,
+                summary=args.summary,
+                verbose=not args.quiet,
+            )
+            
+            # Summary
+            if not args.quiet:
+                print("\n" + "="*60)
+                print("Extraction Summary:")
+                print("="*60)
+                total = sum(counts.values())
+                for step, count in counts.items():
+                    print(f"  {step:20s}: {count:5d} examples")
+                print(f"  {'Total':20s}: {total:5d} examples")
+                print("="*60)
+            
+            return 0
+            
+        except Exception as e:
+            print(f"Error: {e}", file=__import__("sys").stderr)
+            import traceback
+            traceback.print_exc()
+            return 1
 
 
 if __name__ == "__main__":

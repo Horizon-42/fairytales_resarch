@@ -90,7 +90,7 @@
         "type": "",
         "context": "",
         "status": "",
-        "function": ""
+        "function": "setup"
       }
     },
     {
@@ -121,11 +121,11 @@
         }
       ],
       "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": ""
+        "category": "physical",
+        "type": "attack",
+        "context": "abuse",
+        "status": "success",
+        "function": "setup"
       }
     },
     {
@@ -140,7 +140,7 @@
         "牛郎"
       ],
       "targets": [],
-      "target_type": "character",
+      "target_type": "object",
       "object_type": "",
       "instrument": "",
       "time_order": 4,
@@ -150,7 +150,7 @@
         "type": "",
         "context": "",
         "status": "",
-        "function": ""
+        "function": "setup"
       }
     },
     {
@@ -162,30 +162,31 @@
       "event_type": "OTHER",
       "description": "帮助;Help",
       "agents": [
+        "牛郎",
         "老牛"
       ],
       "targets": [
-        "牛郎"
+        "房子"
       ],
-      "target_type": "character",
-      "object_type": "",
+      "target_type": "object",
+      "object_type": "normal_object",
       "instrument": "",
       "time_order": 3,
       "relationships": [
         {
-          "agent": "老牛",
-          "target": "牛郎",
+          "agent": "牛郎",
+          "target": "",
           "relationship_level1": "Social & Alliance",
           "relationship_level2": "ally",
           "sentiment": "positive"
         }
       ],
       "action_layer": {
-        "category": "",
+        "category": "physical",
         "type": "",
         "context": "",
         "status": "",
-        "function": ""
+        "function": "setup"
       }
     },
     {
@@ -216,11 +217,11 @@
         }
       ],
       "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": ""
+        "category": "communicative",
+        "type": "command",
+        "context": "assign task",
+        "status": "success",
+        "function": "trigger"
       }
     },
     {
@@ -251,11 +252,11 @@
         }
       ],
       "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": ""
+        "category": "communicative",
+        "type": "promise",
+        "context": "marriage proposal",
+        "status": "success",
+        "function": "resolution"
       }
     },
     {
@@ -287,11 +288,11 @@
         }
       ],
       "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": ""
+        "category": "physical",
+        "type": "attack",
+        "context": "ambush",
+        "status": "success",
+        "function": "trigger"
       }
     },
     {
@@ -304,19 +305,20 @@
       "description": "夫妻生活美满, 养育子女",
       "agents": [
         "织女",
-        "牛郎"
-      ],
-      "targets": [
+        "牛郎",
         "一儿一女"
       ],
-      "target_type": "character",
-      "object_type": "",
+      "targets": [
+        "家"
+      ],
+      "target_type": "object",
+      "object_type": "normal_object",
       "instrument": "",
       "time_order": 7,
       "relationships": [
         {
           "agent": "织女",
-          "target": "一儿一女",
+          "target": "",
           "relationship_level1": "Family & Kinship",
           "relationship_level2": "parent_child",
           "sentiment": "positive"
@@ -327,7 +329,7 @@
         "type": "",
         "context": "",
         "status": "",
-        "function": ""
+        "function": "setup"
       }
     },
     {
@@ -337,16 +339,15 @@
         "end": 1549
       },
       "event_type": "STRUGGLE",
-      "description": "试图舀干天河水",
+      "description": "徒劳地尝试;试图舀干天河水",
       "agents": [
         "牛郎",
-        "一儿一女",
-        "小女儿"
+        "一儿一女"
       ],
       "targets": [
-        "王母娘娘"
+        "天河"
       ],
-      "target_type": "character",
+      "target_type": "object",
       "object_type": "normal_object",
       "instrument": "粪瓢",
       "time_order": 9,
@@ -356,7 +357,7 @@
         "type": "",
         "context": "",
         "status": "",
-        "function": ""
+        "function": "setup"
       }
     },
     {
@@ -366,7 +367,7 @@
         "end": 1055
       },
       "event_type": "VILLAINY",
-      "description": "阻止相见",
+      "description": "阻止相见;王母抬升银河阻止牛郎及儿女与织女相见",
       "agents": [
         "王母娘娘",
         "天神"
@@ -388,11 +389,11 @@
         }
       ],
       "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": ""
+        "category": "physical",
+        "type": "attack",
+        "context": "block",
+        "status": "success",
+        "function": "setup"
       }
     },
     {
@@ -402,7 +403,7 @@
         "end": 1212
       },
       "event_type": "RECEIPT_OF_AGENT",
-      "description": "受到帮助开始追击",
+      "description": "受到帮助开始追击;在老牛死去后的牛皮帮助下飞上天开始追击",
       "agents": [
         "老牛"
       ],
@@ -424,11 +425,11 @@
         }
       ],
       "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": ""
+        "category": "transaction",
+        "type": "give",
+        "context": "legacy",
+        "status": "success",
+        "function": "resolution"
       }
     },
     {
@@ -438,7 +439,7 @@
         "end": 1412
       },
       "event_type": "VILLAINY",
-      "description": "阻止相见",
+      "description": "阻止相见;王母将银河化为天河，阻止牛郎儿女继续追击",
       "agents": [
         "王母娘娘"
       ],
@@ -464,7 +465,7 @@
         "type": "",
         "context": "",
         "status": "",
-        "function": ""
+        "function": "climax"
       }
     },
     {
@@ -497,11 +498,11 @@
         }
       ],
       "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": ""
+        "category": "communicative",
+        "type": "persuade",
+        "context": "touched",
+        "status": "success",
+        "function": "resolution"
       }
     },
     {
@@ -511,7 +512,7 @@
         "end": 1959
       },
       "event_type": "SOLUTION",
-      "description": "隔河相望，传递相思",
+      "description": "隔河相望，传递相思; 牛郎织女隔着银行用梭和拐传递思念",
       "agents": [
         "牛郎"
       ],
@@ -532,11 +533,11 @@
         }
       ],
       "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": ""
+        "category": "communicative",
+        "type": "inform",
+        "context": "passing love",
+        "status": "success",
+        "function": "resolution"
       }
     }
   ],

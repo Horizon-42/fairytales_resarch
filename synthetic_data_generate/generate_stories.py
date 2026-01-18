@@ -307,7 +307,7 @@ def generate_stories_for_json(
             print("✗ Failed")
         
         # 避免 API 速率限制
-        time.sleep(1)
+        time.sleep(3)
     
     print(f"Completed: {story_name}")
 

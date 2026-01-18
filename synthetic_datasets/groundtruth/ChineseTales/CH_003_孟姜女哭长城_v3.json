@@ -618,7 +618,7 @@
         "end": 600
       },
       "event_type": "VILLAINY",
-      "description": "统治者出于荒诞的理由伤害人民, 英雄(未来的)家人也是潜在的受害者",
+      "description": "统治者出于荒诞的理由伤害人民, 英雄(未来的)家人也是潜在的受害者; 秦始皇筑长城，万喜良无辜遭殃",
       "agents": [
         "秦始皇"
       ],
@@ -633,17 +633,17 @@
         {
           "agent": "秦始皇",
           "target": "万喜良",
-          "relationship_level1": "Neutral",
-          "relationship_level2": "stranger",
+          "relationship_level1": "Hierarchy",
+          "relationship_level2": "ruler_subject",
           "sentiment": "neutral"
         }
       ],
       "action_layer": {
-        "category": "",
-        "type": "",
+        "category": "physical",
+        "type": "attack",
         "context": "",
-        "status": "",
-        "function": ""
+        "status": "attempt",
+        "function": "setup"
       }
     },
     {
