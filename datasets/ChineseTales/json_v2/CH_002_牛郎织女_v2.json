@@ -68,6 +68,12 @@
   ],
   "narrative_events": [
     {
+      "id": "05828210-380c-4e6f-936c-d5164c1524f6",
+      "text_span": {
+        "start": 0,
+        "end": 214,
+        "text": "相传织女是天帝的孙女，或说是王母娘娘的外孙女，这都用不着去管它了 ，总之，是有这么一个仙女，住在银河的东边，用了一种神奇的丝，在织布机上织出了层层叠叠的美丽云彩，随着时间和季节的不同而变幻它们的颜色，叫做\" 天衣\"，意思就是给天做的衣裳。天也和人一样,是要穿衣裳的，虽然碧蓝如洗的赤裸青天自有它的美丽。做这种工作，除了织女而外，还有别的六位年轻的仙女，都是织女的姐妹，也都是天上的织造能手；织女在他们当中，是最勤勉、努力的一个。"
+      },
       "event_type": "OTHER",
       "description": "织;neat",
       "agents": [
@@ -79,12 +85,6 @@
       "target_type": "object",
       "object_type": "normal_object",
       "instrument": "",
-      "text_span": {
-        "start": 0,
-        "end": 214,
-        "text": "相传织女是天帝的孙女，或说是王母娘娘的外孙女，这都用不着去管它了 ，总之，是有这么一个仙女，住在银河的东边，用了一种神奇的丝，在织布机上织出了层层叠叠的美丽云彩，随着时间和季节的不同而变幻它们的颜色，叫做\" 天衣\"，意思就是给天做的衣裳。天也和人一样,是要穿衣裳的，虽然碧蓝如洗的赤裸青天自有它的美丽。做这种工作，除了织女而外，还有别的六位年轻的仙女，都是织女的姐妹，也都是天上的织造能手；织女在他们当中，是最勤勉、努力的一个。"
-      },
-      "id": "05828210-380c-4e6f-936c-d5164c1524f6",
       "time_order": 1,
       "relationship_level1": "",
       "relationship_level2": "",
@@ -92,9 +92,16 @@
       "action_category": "",
       "action_type": "",
       "action_context": "",
-      "action_status": ""
+      "action_status": "",
+      "narrative_function": "setup"
     },
     {
+      "id": "38bb88d7-ed7a-402f-a2b1-6baa1c0f5840",
+      "text_span": {
+        "start": 215,
+        "end": 297,
+        "text": "隔着那条清浅的闪光的银河，就是人间。在那里住着一个牧牛郎，叫做牛郎，他的父母早死去了，常受哥嫂的虐待。終于，他被哥嫂不公平地分家出去，给了他一头老牛，叫他自立门户。"
+      },
       "event_type": "VILLAINY",
       "description": "虐待;abuse",
       "agents": [
@@ -103,40 +110,35 @@
       "targets": [
         "牛郎"
       ],
-      "text_span": {
-        "start": 215,
-        "end": 297,
-        "text": "隔着那条清浅的闪光的银河，就是人间。在那里住着一个牧牛郎，叫做牛郎，他的父母早死去了，常受哥嫂的虐待。終于，他被哥嫂不公平地分家出去，给了他一头老牛，叫他自立门户。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
-      "id": "38bb88d7-ed7a-402f-a2b1-6baa1c0f5840",
       "time_order": 2,
       "relationship_level1": "Family & Kinship",
       "relationship_level2": "sibling",
       "sentiment": "negative",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "action_category": "physical",
+      "action_type": "attack",
+      "action_context": "abuse",
+      "action_status": "success",
+      "narrative_function": "setup"
     },
     {
+      "id": "262880a0-126d-4734-9786-dcb806220381",
+      "text_span": {
+        "start": 363,
+        "end": 401,
+        "text": "可是，除了那头不会说话的老牛以外，冷清的家里只有他一个人，日子过得相当寂寞。"
+      },
       "event_type": "LACK",
       "description": "寂寞;get lonely",
       "agents": [
         "牛郎"
       ],
       "targets": [],
-      "text_span": {
-        "start": 363,
-        "end": 401,
-        "text": "可是，除了那头不会说话的老牛以外，冷清的家里只有他一个人，日子过得相当寂寞。"
-      },
-      "target_type": "character",
+      "target_type": "object",
       "object_type": "",
       "instrument": "",
-      "id": "262880a0-126d-4734-9786-dcb806220381",
       "time_order": 4,
       "relationship_level1": "",
       "relationship_level2": "",
@@ -144,37 +146,45 @@
       "action_category": "",
       "action_type": "",
       "action_context": "",
-      "action_status": ""
+      "action_status": "",
+      "narrative_function": "setup"
     },
     {
       "id": "317d5e4b-255a-4acb-a23d-206a5e4afeb2",
-      "event_type": "OTHER",
-      "description": "帮助;Help",
-      "agents": [
-        "老牛"
-      ],
-      "targets": [
-        "牛郎"
-      ],
       "text_span": {
         "start": 298,
         "end": 363,
         "text": "靠了老牛的帮助和他自己的努力劳动，他在荒野地上披荆斩棘，耕田种地，盖造屋子，一 两年后，居然菅建了一个小小的家，勉强可以维持生活。"
       },
-      "target_type": "character",
-      "object_type": "",
+      "event_type": "OTHER",
+      "description": "帮助;Help",
+      "agents": [
+        "牛郎",
+        "老牛"
+      ],
+      "targets": [
+        "房子"
+      ],
+      "target_type": "object",
+      "object_type": "normal_object",
       "instrument": "",
       "time_order": 3,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "ally",
-      "sentiment": "positive",
-      "action_category": "",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "physical",
       "action_type": "",
       "action_context": "",
-      "action_status": ""
+      "action_status": "",
+      "narrative_function": "setup"
     },
     {
       "id": "51923dc8-acf0-477d-b540-36baccc032fd",
+      "text_span": {
+        "start": 402,
+        "end": 514,
+        "text": "有一天，老牛忽然口吐人言，告诉他，织女和别的仙女将要到银河去洗澡,叫他趁她们洗澡的时候，夺取织女的衣裳，她就可以成为他的妻子了。惊异的牛郎终于听从了老牛的话，到时候悄悄便到银河岸边的芦牽丛里躲着，等候织女和她的女伴们的来临。"
+      },
       "event_type": "GUIDANCE",
       "description": "去河边, 去夺取织女的衣服",
       "agents": [
@@ -183,11 +193,6 @@
       "targets": [
         "牛郎"
       ],
-      "text_span": {
-        "start": 402,
-        "end": 514,
-        "text": "有一天，老牛忽然口吐人言，告诉他，织女和别的仙女将要到银河去洗澡,叫他趁她们洗澡的时候，夺取织女的衣裳，她就可以成为他的妻子了。惊异的牛郎终于听从了老牛的话，到时候悄悄便到银河岸边的芦牽丛里躲着，等候织女和她的女伴们的来临。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -195,13 +200,19 @@
       "relationship_level1": "Social & Alliance",
       "relationship_level2": "ally",
       "sentiment": "positive",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "action_category": "communicative",
+      "action_type": "command",
+      "action_context": "assign task",
+      "action_status": "success",
+      "narrative_function": "trigger"
     },
     {
       "id": "fbbacb08-5f24-480e-8fdb-3a9fed2da817",
+      "text_span": {
+        "start": 515,
+        "end": 753,
+        "text": "不一会儿，织女和美丽的仙女们果然来到银河洗操，脱下轻罗衣裳，纵身跃入清流，顷刻间，绿波荡漆的水面上就好像续开了朵朵的白莲。牛郎从芦苇里跑出来，从青草岸上仙女们的衣裳堆里夺取了织女的衣裳，惊骇的仙女们乱纷纷地急忙穿上自己的衣裳，像飞乌般地四下惊飞逃散,银河里就只剩下那个不能逃走的可怜织女。牛郎对她说，她要答应做他的妻子，他才能还给她衣裳。织女拿头发掩住她的胸脯，没法子只得含羞地点头（其实她对这虽然有点鲁莽可是却勇敢的少年也早已经动了一点爱念了）；这样，她就真的做了牛郎的妻。"
+      },
       "event_type": "LIQUIDATION",
       "description": "在非暴力强迫下, 女方同意嫁给男方",
       "agents": [
@@ -210,11 +221,6 @@
       "targets": [
         "织女"
       ],
-      "text_span": {
-        "start": 515,
-        "end": 753,
-        "text": "不一会儿，织女和美丽的仙女们果然来到银河洗操，脱下轻罗衣裳，纵身跃入清流，顷刻间，绿波荡漆的水面上就好像续开了朵朵的白莲。牛郎从芦苇里跑出来，从青草岸上仙女们的衣裳堆里夺取了织女的衣裳，惊骇的仙女们乱纷纷地急忙穿上自己的衣裳，像飞乌般地四下惊飞逃散,银河里就只剩下那个不能逃走的可怜织女。牛郎对她说，她要答应做他的妻子，他才能还给她衣裳。织女拿头发掩住她的胸脯，没法子只得含羞地点头（其实她对这虽然有点鲁莽可是却勇敢的少年也早已经动了一点爱念了）；这样，她就真的做了牛郎的妻。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
@@ -222,13 +228,19 @@
       "relationship_level1": "Romance",
       "relationship_level2": "lover",
       "sentiment": "romantic",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "action_category": "communicative",
+      "action_type": "promise",
+      "action_context": "marriage proposal",
+      "action_status": "success",
+      "narrative_function": "resolution"
     },
     {
       "id": "2865c3b3-8f6e-4247-afb4-ed81b0d3cd98",
+      "text_span": {
+        "start": 819,
+        "end": 908,
+        "text": "哪知道天帝和王母娘娘查明了这回事情，都非常震怒，马上派遣天神，把织女捉回天庭问罪。王母娘娘怕天神办事疏虞，还亲自跟来观察动静。\n织女和丈夫、孩子惨痛地分离，被天神押解着回天庭去。"
+      },
       "event_type": "VILLAINY",
       "description": "妻子被迫和丈夫、子女分开",
       "agents": [
@@ -238,53 +250,56 @@
         "牛郎",
         "织女"
       ],
-      "text_span": {
-        "start": 819,
-        "end": 908,
-        "text": "哪知道天帝和王母娘娘查明了这回事情，都非常震怒，马上派遣天神，把织女捉回天庭问罪。王母娘娘怕天神办事疏虞，还亲自跟来观察动静。\n织女和丈夫、孩子惨痛地分离，被天神押解着回天庭去。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 8,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "enemy",
-      "sentiment": "hostile",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "physical",
+      "action_type": "attack",
+      "action_context": "ambush",
+      "action_status": "success",
+      "narrative_function": "trigger"
     },
     {
       "id": "6317923a-117f-4f21-a69d-5dd96f69b92a",
-      "event_type": "LIQUIDATION",
-      "description": "夫妻生活美满, 养育子女",
-      "agents": [
-        "织女",
-        "牛郎"
-      ],
-      "targets": [
-        "一儿一女"
-      ],
       "text_span": {
         "start": 754,
         "end": 818,
         "text": "他们结婚以后，男耕女织，相亲相爱，生活过得非常美满幸福；不久生下了一儿一女，都是可爱的孩子。夫妻俩满以为能够終身厮守，白买到老。"
       },
-      "target_type": "character",
-      "object_type": "",
+      "event_type": "LIQUIDATION",
+      "description": "夫妻生活美满, 养育子女",
+      "agents": [
+        "织女",
+        "牛郎",
+        "一儿一女"
+      ],
+      "targets": [
+        "家"
+      ],
+      "target_type": "object",
+      "object_type": "normal_object",
       "instrument": "",
       "time_order": 7,
-      "relationship_level1": "Family & Kinship",
-      "relationship_level2": "parent_child",
-      "sentiment": "positive",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
       "action_category": "",
       "action_type": "",
       "action_context": "",
-      "action_status": ""
+      "action_status": "",
+      "narrative_function": "setup"
     },
     {
       "id": "57c3dded-bfbd-4335-aa4a-413524a8c7d5",
+      "text_span": {
+        "start": 1413,
+        "end": 1549,
+        "text": "\"爹爹，我们拿这粪瓢来舀干天河的水。\"小女儿終于揩干了眼泪，瞪着一对小眼睛, 这么天真而又倔强地提议。\n\"对 ,我们来舀干天河的水。\"悲愤的牛郎毫不犹豫地答应了。\n说着，他果然拿起粪瓢，奋勇地一瓢一瓢地去舀那天河的水。他舀得倦乏了，儿女们又合力用他们稚弱的小手来帮爹爹自。"
+      },
       "event_type": "STRUGGLE",
       "description": "试图舀干天河水",
       "agents": [
@@ -295,11 +310,6 @@
       "targets": [
         "王母娘娘"
       ],
-      "text_span": {
-        "start": 1413,
-        "end": 1549,
-        "text": "\"爹爹，我们拿这粪瓢来舀干天河的水。\"小女儿終于揩干了眼泪，瞪着一对小眼睛, 这么天真而又倔强地提议。\n\"对 ,我们来舀干天河的水。\"悲愤的牛郎毫不犹豫地答应了。\n说着，他果然拿起粪瓢，奋勇地一瓢一瓢地去舀那天河的水。他舀得倦乏了，儿女们又合力用他们稚弱的小手来帮爹爹自。"
-      },
       "target_type": "character",
       "object_type": "normal_object",
       "instrument": "粪瓢",
@@ -310,12 +320,18 @@
       "action_category": "",
       "action_type": "",
       "action_context": "",
-      "action_status": ""
+      "action_status": "",
+      "narrative_function": ""
     },
     {
       "id": "098695bb-91a7-4a58-b32d-46325ac17351",
+      "text_span": {
+        "start": 908,
+        "end": 1055,
+        "text": "牛郎见爱妻去了，悲痛万分，立刻用箩筐挑了儿女们，连夜跟踪追去。他原打算渡过那清浅的银河, 一直就到天庭，哪知道到了银河的地方，却早已消逝了银河的踪影,抬头一看, 原来银河已经被王母娘娘用法力搬到了天上。在苍蓝色的夜空中，银河，还是那么一秘清浅的闪光的水流，可是已经仙凡异路，再也不能够接近它了。"
+      },
       "event_type": "VILLAINY",
-      "description": "阻止相见",
+      "description": "阻止相见;王母天神用银河阻止夫妻相见",
       "agents": [
         "王母娘娘",
         "天神"
@@ -323,27 +339,28 @@
       "targets": [
         "牛郎"
       ],
-      "text_span": {
-        "start": 908,
-        "end": 1055,
-        "text": "牛郎见爱妻去了，悲痛万分，立刻用箩筐挑了儿女们，连夜跟踪追去。他原打算渡过那清浅的银河, 一直就到天庭，哪知道到了银河的地方，却早已消逝了银河的踪影,抬头一看, 原来银河已经被王母娘娘用法力搬到了天上。在苍蓝色的夜空中，银河，还是那么一秘清浅的闪光的水流，可是已经仙凡异路，再也不能够接近它了。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 9,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "enemy",
-      "sentiment": "hostile",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "physical",
+      "action_type": "attack",
+      "action_context": "block",
+      "action_status": "success",
+      "narrative_function": "climax"
     },
     {
       "id": "cdbee6a6-dc9b-4040-8ce9-1e48d382acb3",
+      "text_span": {
+        "start": 1056,
+        "end": 1212,
+        "text": "牛郎回到家里，和儿女们一样，插胸顿足，悲哀地号眺，爷儿三个哭做一团。老牛在牛圈里又第二次发出人声：\"牛郎，牛郎，我快要死了，我死以后，你剥下我的皮来披在身上，就可以上天堂去。”\n老牛说完话，便倒地死去，牛郎果然披了老牛的皮，仍旧挑着一对儿女，追上天去。为了使箩筐两头的重量均衡，他随意拿了个粪瓢来放在箩筐的一头。"
+      },
       "event_type": "RECEIPT_OF_AGENT",
-      "description": "受到帮助开始追击",
+      "description": "受到帮助开始追击;在老牛死去后的牛皮帮助下飞上天开始追击",
       "agents": [
         "老牛"
       ],
@@ -351,25 +368,26 @@
         "牛郎",
         "一儿一女"
       ],
-      "text_span": {
-        "start": 1056,
-        "end": 1212,
-        "text": "牛郎回到家里，和儿女们一样，插胸顿足，悲哀地号眺，爷儿三个哭做一团。老牛在牛圈里又第二次发出人声：\"牛郎，牛郎，我快要死了，我死以后，你剥下我的皮来披在身上，就可以上天堂去。”\n老牛说完话，便倒地死去，牛郎果然披了老牛的皮，仍旧挑着一对儿女，追上天去。为了使箩筐两头的重量均衡，他随意拿了个粪瓢来放在箩筐的一头。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "牛皮;Skin of the cow",
       "time_order": 10,
-      "relationship_level1": "Social & Alliance",
-      "relationship_level2": "ally",
-      "sentiment": "positive",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": ""
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
+      "action_category": "transaction",
+      "action_type": "give",
+      "action_context": "legacy",
+      "action_status": "success",
+      "narrative_function": "resolution"
     },
     {
       "id": "64e5afbc-b36a-4fda-a2ef-78bb6c13fa83",
+      "text_span": {
+        "start": 1213,
+        "end": 1412,
+        "text": "牛郎到了天上，风样地穿行在灿烂的群星之间，那银河，已经遥遥在望，隔河的织女，也仿佛可以看见。牛郎大喜过望，孩子们招着小手儿齐声欢呼：\"妈妈！妈妈！\" 哪知道刚跑到银河，正想要涉河过去的时候，从更高的天空中忽然伸下来一只女人的大手————原来是王母娘娘着了急，拨下她头上的金營，沿着银河这么一划，清浅的银河马上变成波满滚滚的天河。\n对着这天河，眼泪除了像天河里的水一样地满涌奔流，还有什么法子可想呢？"
+      },
       "event_type": "VILLAINY",
       "description": "阻止相见",
       "agents": [
@@ -379,25 +397,26 @@
         "牛郎",
         "一儿一女"
       ],
-      "text_span": {
-        "start": 1213,
-        "end": 1412,
-        "text": "牛郎到了天上，风样地穿行在灿烂的群星之间，那银河，已经遥遥在望，隔河的织女，也仿佛可以看见。牛郎大喜过望，孩子们招着小手儿齐声欢呼：\"妈妈！妈妈！\" 哪知道刚跑到银河，正想要涉河过去的时候，从更高的天空中忽然伸下来一只女人的大手————原来是王母娘娘着了急，拨下她头上的金營，沿着银河这么一划，清浅的银河马上变成波满滚滚的天河。\n对着这天河，眼泪除了像天河里的水一样地满涌奔流，还有什么法子可想呢？"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "金簪",
       "time_order": 11,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "enemy",
-      "sentiment": "hostile",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
       "action_category": "",
       "action_type": "",
       "action_context": "",
-      "action_status": ""
+      "action_status": "",
+      "narrative_function": "climax"
     },
     {
       "id": "1dcdf54d-0930-41fd-a1b4-b4c4d2113162",
+      "text_span": {
+        "start": 1549,
+        "end": 1692,
+        "text": "这坚强而执著的爱情，终于也稍稍感动了那威严的天帝和王母娘娘冷硬的心肠，允许他们每年七月七日的晚上相见一次，相见的时候，由喜鹤来替他们搭桥。夫妻俩就在鹤桥上相会，诉说衷情。织女见了牛郎，免不得悲哀哭泣，这时大地上往往就是一阵细雨纷纷，妇女们都忍不住带着同情和叹伤的口吻说：“姐姐又哭了！”"
+      },
       "event_type": "VICTORY",
       "description": "感动",
       "agents": [
@@ -408,25 +427,26 @@
         "天帝",
         "王母娘娘"
       ],
-      "text_span": {
-        "start": 1549,
-        "end": 1692,
-        "text": "这坚强而执著的爱情，终于也稍稍感动了那威严的天帝和王母娘娘冷硬的心肠，允许他们每年七月七日的晚上相见一次，相见的时候，由喜鹤来替他们搭桥。夫妻俩就在鹤桥上相会，诉说衷情。织女见了牛郎，免不得悲哀哭泣，这时大地上往往就是一阵细雨纷纷，妇女们都忍不住带着同情和叹伤的口吻说：“姐姐又哭了！”"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "",
       "time_order": 12,
-      "relationship_level1": "Adversarial",
-      "relationship_level2": "enemy",
-      "sentiment": "positive",
+      "relationship_level1": "",
+      "relationship_level2": "",
+      "sentiment": "",
       "action_category": "",
       "action_type": "",
       "action_context": "",
-      "action_status": ""
+      "action_status": "",
+      "narrative_function": ""
     },
     {
       "id": "e9a8526d-44ac-4793-a415-c1d4a526fa3e",
+      "text_span": {
+        "start": 1693,
+        "end": 1959,
+        "text": "牛郎和他的儿女从此就住在天上，隔着一道天河，和爱妻织女遥遥相望，假如他们为相思所苦的时候，他们也自有巧妙的方法，传书递信，互通消息。\n在秋夜天空的繁星中间，至今我们还可以看见有两颗较大的星，在那条白练样的天河两边，晶莹地闪烁着，那就是牵牛星和织女星。和牵牛星并列成直线的两颗小星，是他俩的小儿女。稍远地方有四颗像平行四边形的小星，据说就是织女投掷给牛郎的织布梭；距织女星不远有三颗小星，像等腰三角形，据说就是牛郎投掷给织女的牛拐子；他俩把书信缚在梭和牛拐子上，就用这种方法传达相思。————他们的爱情，真可算是海枯石烂，坚贞不移了。"
+      },
       "event_type": "SOLUTION",
       "description": "隔河相望，传递相思",
       "agents": [
@@ -435,11 +455,6 @@
       "targets": [
         "织女"
       ],
-      "text_span": {
-        "start": 1693,
-        "end": 1959,
-        "text": "牛郎和他的儿女从此就住在天上，隔着一道天河，和爱妻织女遥遥相望，假如他们为相思所苦的时候，他们也自有巧妙的方法，传书递信，互通消息。\n在秋夜天空的繁星中间，至今我们还可以看见有两颗较大的星，在那条白练样的天河两边，晶莹地闪烁着，那就是牵牛星和织女星。和牵牛星并列成直线的两颗小星，是他俩的小儿女。稍远地方有四颗像平行四边形的小星，据说就是织女投掷给牛郎的织布梭；距织女星不远有三颗小星，像等腰三角形，据说就是牛郎投掷给织女的牛拐子；他俩把书信缚在梭和牛拐子上，就用这种方法传达相思。————他们的爱情，真可算是海枯石烂，坚贞不移了。"
-      },
       "target_type": "character",
       "object_type": "",
       "instrument": "梭;拐子",
@@ -450,7 +465,8 @@
       "action_category": "",
       "action_type": "",
       "action_context": "",
-      "action_status": ""
+      "action_status": "",
+      "narrative_function": ""
     }
   ],
   "themes_and_motifs": {

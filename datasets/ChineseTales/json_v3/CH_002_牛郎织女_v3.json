@@ -92,7 +92,7 @@
         "type": "",
         "context": "",
         "status": "",
-        "function": ""
+        "function": "setup"
       }
     },
     {
@@ -124,11 +124,11 @@
         }
       ],
       "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": ""
+        "category": "physical",
+        "type": "attack",
+        "context": "abuse",
+        "status": "success",
+        "function": "setup"
       }
     },
     {
@@ -144,7 +144,7 @@
         "牛郎"
       ],
       "targets": [],
-      "target_type": "character",
+      "target_type": "object",
       "object_type": "",
       "instrument": "",
       "time_order": 4,
@@ -154,7 +154,7 @@
         "type": "",
         "context": "",
         "status": "",
-        "function": ""
+        "function": "setup"
       }
     },
     {
@@ -167,30 +167,31 @@
       "event_type": "OTHER",
       "description": "帮助;Help",
       "agents": [
+        "牛郎",
         "老牛"
       ],
       "targets": [
-        "牛郎"
+        "房子"
       ],
-      "target_type": "character",
-      "object_type": "",
+      "target_type": "object",
+      "object_type": "normal_object",
       "instrument": "",
       "time_order": 3,
       "relationships": [
         {
-          "agent": "老牛",
-          "target": "牛郎",
+          "agent": "牛郎",
+          "target": "",
           "relationship_level1": "Social & Alliance",
           "relationship_level2": "ally",
           "sentiment": "positive"
         }
       ],
       "action_layer": {
-        "category": "",
+        "category": "physical",
         "type": "",
         "context": "",
         "status": "",
-        "function": ""
+        "function": "setup"
       }
     },
     {
@@ -222,11 +223,11 @@
         }
       ],
       "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": ""
+        "category": "communicative",
+        "type": "command",
+        "context": "assign task",
+        "status": "success",
+        "function": "trigger"
       }
     },
     {
@@ -258,11 +259,11 @@
         }
       ],
       "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": ""
+        "category": "communicative",
+        "type": "promise",
+        "context": "marriage proposal",
+        "status": "success",
+        "function": "resolution"
       }
     },
     {
@@ -295,11 +296,11 @@
         }
       ],
       "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": ""
+        "category": "physical",
+        "type": "attack",
+        "context": "ambush",
+        "status": "success",
+        "function": "trigger"
       }
     },
     {
@@ -313,19 +314,20 @@
       "description": "夫妻生活美满, 养育子女",
       "agents": [
         "织女",
-        "牛郎"
-      ],
-      "targets": [
+        "牛郎",
         "一儿一女"
       ],
-      "target_type": "character",
-      "object_type": "",
+      "targets": [
+        "家"
+      ],
+      "target_type": "object",
+      "object_type": "normal_object",
       "instrument": "",
       "time_order": 7,
       "relationships": [
         {
           "agent": "织女",
-          "target": "一儿一女",
+          "target": "",
           "relationship_level1": "Family & Kinship",
           "relationship_level2": "parent_child",
           "sentiment": "positive"
@@ -336,7 +338,7 @@
         "type": "",
         "context": "",
         "status": "",
-        "function": ""
+        "function": "setup"
       }
     },
     {
@@ -377,7 +379,7 @@
         "text": "牛郎见爱妻去了，悲痛万分，立刻用箩筐挑了儿女们，连夜跟踪追去。他原打算渡过那清浅的银河, 一直就到天庭，哪知道到了银河的地方，却早已消逝了银河的踪影,抬头一看, 原来银河已经被王母娘娘用法力搬到了天上。在苍蓝色的夜空中，银河，还是那么一秘清浅的闪光的水流，可是已经仙凡异路，再也不能够接近它了。"
       },
       "event_type": "VILLAINY",
-      "description": "阻止相见",
+      "description": "阻止相见;王母天神用银河阻止夫妻相见",
       "agents": [
         "王母娘娘",
         "天神"
@@ -399,11 +401,11 @@
         }
       ],
       "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": ""
+        "category": "physical",
+        "type": "attack",
+        "context": "block",
+        "status": "success",
+        "function": "climax"
       }
     },
     {
@@ -414,7 +416,7 @@
         "text": "牛郎回到家里，和儿女们一样，插胸顿足，悲哀地号眺，爷儿三个哭做一团。老牛在牛圈里又第二次发出人声：\"牛郎，牛郎，我快要死了，我死以后，你剥下我的皮来披在身上，就可以上天堂去。”\n老牛说完话，便倒地死去，牛郎果然披了老牛的皮，仍旧挑着一对儿女，追上天去。为了使箩筐两头的重量均衡，他随意拿了个粪瓢来放在箩筐的一头。"
       },
       "event_type": "RECEIPT_OF_AGENT",
-      "description": "受到帮助开始追击",
+      "description": "受到帮助开始追击;在老牛死去后的牛皮帮助下飞上天开始追击",
       "agents": [
         "老牛"
       ],
@@ -436,11 +438,11 @@
         }
       ],
       "action_layer": {
-        "category": "",
-        "type": "",
-        "context": "",
-        "status": "",
-        "function": ""
+        "category": "transaction",
+        "type": "give",
+        "context": "legacy",
+        "status": "success",
+        "function": "resolution"
       }
     },
     {
@@ -477,7 +479,7 @@
         "type": "",
         "context": "",
         "status": "",
-        "function": ""
+        "function": "climax"
       }
     },
     {
