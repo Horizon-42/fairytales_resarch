@@ -2,6 +2,12 @@
 
 from __future__ import annotations
 
+# Import unsloth first (required for optimizations)
+try:
+    import unsloth  # noqa: F401
+except ImportError:
+    pass  # Will raise error later if actually needed
+
 import json
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -49,12 +55,34 @@ class BaseTrainer:
                 "pip install unsloth"
             )
         
-        self.model, self.tokenizer = FastLanguageModel.from_pretrained(
-            model_name=self.model_name,
-            max_seq_length=self.config.max_seq_length,
-            dtype=None,  # Auto detection
-            load_in_4bit=True,  # 4bit quantization
-        )
+        print(f"Loading model: {self.model_name}")
+        print("Note: First-time download may take several minutes depending on network speed...")
+        
+        try:
+            self.model, self.tokenizer = FastLanguageModel.from_pretrained(
+                model_name=self.model_name,
+                max_seq_length=self.config.max_seq_length,
+                dtype=None,  # Auto detection
+                load_in_4bit=True,  # 4bit quantization
+            )
+        except RuntimeError as e:
+            error_msg = str(e)
+            if "No config file found" in error_msg or "model_name" in error_msg.lower():
+                raise RuntimeError(
+                    f"Failed to load model '{self.model_name}'. "
+                    f"Possible reasons:\n"
+                    f"1. Model name is incorrect or doesn't exist on HuggingFace\n"
+                    f"2. Network connection issue (cannot download from HuggingFace)\n"
+                    f"3. Model path is incorrect (if using local path)\n\n"
+                    f"Error details: {error_msg}\n\n"
+                    f"Common model names:\n"
+                    f"  - unsloth/Qwen2.5-7B-Instruct\n"
+                    f"  - unsloth/Qwen2.5-14B-Instruct\n"
+                    f"  - unsloth/Llama-3.1-8B-Instruct\n"
+                    f"  - Qwen/Qwen2.5-7B-Instruct (if unsloth version unavailable)"
+                ) from e
+            else:
+                raise
         
         # Apply LoRA adapters
         self.model = FastLanguageModel.get_peft_model(
@@ -69,7 +97,9 @@ class BaseTrainer:
     
     
     def _format_chat_qwen(self, instruction: str, input_text: str, output_text: str) -> str:
-        """Format example for Qwen chat models.
+        """Format example for Qwen chat models (Qwen2.5 and Qwen3).
+        
+        For Qwen3, thinking mode is disabled (enable_thinking=False).
         
         Args:
             instruction: System/user prompt
@@ -79,9 +109,40 @@ class BaseTrainer:
         Returns:
             Formatted chat string
         """
+        # For Qwen3, try to use tokenizer.apply_chat_template if available
+        # This ensures thinking mode is properly disabled
+        if self.tokenizer is not None and "qwen3" in self.model_name.lower():
+            try:
+                # Use tokenizer's chat template with enable_thinking=False
+                messages = [
+                    {"role": "system", "content": "You are a helpful assistant."},
+                ]
+                
+                if input_text:
+                    user_content = f"{instruction}\n\n{input_text}"
+                else:
+                    user_content = instruction
+                
+                messages.append({"role": "user", "content": user_content})
+                
+                if output_text:
+                    messages.append({"role": "assistant", "content": output_text})
+                
+                # Apply chat template with thinking disabled
+                formatted = self.tokenizer.apply_chat_template(
+                    messages,
+                    tokenize=False,
+                    add_generation_prompt=(not bool(output_text)),
+                    enable_thinking=False  # Disable thinking mode for Qwen3
+                )
+                return formatted
+            except Exception as e:
+                # Fallback to manual formatting if tokenizer method fails
+                print(f"Warning: Failed to use tokenizer.apply_chat_template: {e}. Using manual formatting.")
+        
+        # Manual formatting (for Qwen2.5 or fallback)
         # Qwen format: <|im_start|>system\n{system}<|im_end|>\n<|im_start|>user\n{user}<|im_end|>\n<|im_start|>assistant\n{assistant}<|im_end|>
         
-        # Instruction contains both system and user prompts combined
         if input_text:
             user_content = f"{instruction}\n\n{input_text}"
         else:
@@ -119,10 +180,12 @@ class BaseTrainer:
         """Detect chat format based on model name.
         
         Returns:
-            "qwen" or "llama" or "generic"
+            "qwen" or "qwen3" or "llama" or "generic"
         """
         model_lower = self.model_name.lower()
-        if "qwen" in model_lower:
+        if "qwen3" in model_lower:
+            return "qwen3"
+        elif "qwen" in model_lower:
             return "qwen"
         elif "llama" in model_lower:
             return "llama"
@@ -131,6 +194,8 @@ class BaseTrainer:
     
     def format_example(self, example: Dict[str, Any]) -> str:
         """Format example using the appropriate chat format.
+        
+        For Qwen3, thinking mode is disabled (enable_thinking=False).
         
         Args:
             example: Training example dict
@@ -144,7 +209,7 @@ class BaseTrainer:
         input_text = example.get("input", "")
         output_text = example.get("output", "")
         
-        if chat_format == "qwen":
+        if chat_format in ("qwen", "qwen3"):
             return self._format_chat_qwen(instruction, input_text, output_text)
         elif chat_format == "llama":
             return self._format_chat_llama(instruction, input_text, output_text)
@@ -355,12 +420,42 @@ class BaseTrainer:
         
         for idx, example in enumerate(test_examples, 1):
             try:
-                # Format input
-                formatted_input = self.format_example({
-                    "instruction": example["instruction"],
-                    "input": example.get("input", ""),
-                    "output": "",  # Empty, we want model to generate
-                })
+                # Format input - for Qwen3, ensure thinking is disabled
+                # Use tokenizer.apply_chat_template if available for Qwen3
+                if "qwen3" in self.model_name.lower() and self.tokenizer is not None:
+                    try:
+                        messages = [
+                            {"role": "system", "content": "You are a helpful assistant."},
+                        ]
+                        
+                        input_text = example.get("input", "")
+                        if input_text:
+                            user_content = f"{example['instruction']}\n\n{input_text}"
+                        else:
+                            user_content = example["instruction"]
+                        
+                        messages.append({"role": "user", "content": user_content})
+                        
+                        # Apply chat template with thinking disabled
+                        formatted_input = self.tokenizer.apply_chat_template(
+                            messages,
+                            tokenize=False,
+                            add_generation_prompt=True,
+                            enable_thinking=False  # Disable thinking mode for Qwen3
+                        )
+                    except Exception:
+                        # Fallback to format_example if tokenizer method fails
+                        formatted_input = self.format_example({
+                            "instruction": example["instruction"],
+                            "input": example.get("input", ""),
+                            "output": "",  # Empty, we want model to generate
+                        })
+                else:
+                    formatted_input = self.format_example({
+                        "instruction": example["instruction"],
+                        "input": example.get("input", ""),
+                        "output": "",  # Empty, we want model to generate
+                    })
                 
                 # Generate prediction
                 inputs = self.tokenizer(
@@ -370,19 +465,45 @@ class BaseTrainer:
                     max_length=self.config.max_seq_length,
                 ).to(self.model.device)
                 
+                # For Qwen3 non-thinking mode, use recommended parameters:
+                # Temperature=0.7, TopP=0.8, TopK=20, MinP=0
+                # For other models, use more conservative settings
+                is_qwen3 = "qwen3" in self.model_name.lower()
+                
                 with self.model.inference_mode():
-                    outputs = self.model.generate(
-                        **inputs,
-                        max_new_tokens=512,
-                        temperature=0.1,
-                        do_sample=False,
-                    )
+                    if is_qwen3:
+                        # Qwen3 non-thinking mode parameters
+                        outputs = self.model.generate(
+                            **inputs,
+                            max_new_tokens=512,
+                            temperature=0.7,
+                            top_p=0.8,
+                            top_k=20,
+                            do_sample=True,  # Required for non-thinking mode
+                        )
+                    else:
+                        # Default parameters for other models
+                        outputs = self.model.generate(
+                            **inputs,
+                            max_new_tokens=512,
+                            temperature=0.1,
+                            do_sample=False,
+                        )
                 
                 # Decode output
+                # For Qwen3, skip thinking content if present
                 generated_text = self.tokenizer.decode(
                     outputs[0][inputs["input_ids"].shape[1]:],
                     skip_special_tokens=True
                 ).strip()
+                
+                # For Qwen3, remove any thinking content that might have been generated
+                # (should not happen with enable_thinking=False, but just in case)
+                if is_qwen3 and "<think>" in generated_text and "</think>" in generated_text:
+                    # Extract content after </think> tag
+                    think_end = generated_text.rfind("</think>")
+                    if think_end != -1:
+                        generated_text = generated_text[think_end + len("</think>"):].strip()
                 
                 # Parse expected output
                 expected_output = json.loads(example["output"])

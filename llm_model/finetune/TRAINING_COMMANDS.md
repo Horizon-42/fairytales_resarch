@@ -45,7 +45,7 @@ conda run -n nlp python -m llm_model.finetune.scripts.mock_train_step \
 conda run -n nlp python -m llm_model.finetune.scripts.train_step \
     --step character \
     --data-dir training_data \
-    --model-name unsloth/Qwen2.5-7B-Instruct \
+    --model-name unsloth/Qwen3-8B \
     --output-dir ./models \
     --num-epochs 3 \
     --batch-size 4 \
@@ -58,7 +58,7 @@ conda run -n nlp python -m llm_model.finetune.scripts.train_step \
 conda run -n nlp python -m llm_model.finetune.scripts.train_step \
     --step character action relationship \
     --data-dir training_data \
-    --model-name unsloth/Qwen2.5-7B-Instruct \
+    --model-name unsloth/Qwen3-8B \
     --output-dir ./models \
     --num-epochs 3 \
     --batch-size 4 \
@@ -71,7 +71,7 @@ conda run -n nlp python -m llm_model.finetune.scripts.train_step \
 conda run -n nlp python -m llm_model.finetune.scripts.train_step \
     --step all \
     --data-dir training_data \
-    --model-name unsloth/Qwen2.5-7B-Instruct \
+    --model-name unsloth/Qwen3-8B \
     --output-dir ./models \
     --num-epochs 3 \
     --batch-size 4 \
@@ -82,7 +82,7 @@ conda run -n nlp python -m llm_model.finetune.scripts.train_step \
 
 - `--step`: 要训练的 step(s)，可以是单个、多个或 `all`
 - `--data-dir`: 训练数据目录（包含 `{step}_train.jsonl` 文件）
-- `--model-name`: 基础模型名称（默认: `unsloth/Qwen2.5-7B-Instruct`）
+- `--model-name`: 基础模型名称（默认: `unsloth/Qwen3-8B`，thinking 模式已关闭）
 - `--output-dir`: 模型输出目录（默认: `./models`）
 - `--num-epochs`: 训练轮数（默认: 3）
 - `--batch-size`: 批次大小（默认: 4）
@@ -101,12 +101,23 @@ conda run -n nlp python -m llm_model.finetune.scripts.train_step \
 - `adapter_config.json`: LoRA 配置
 - 其他模型文件
 
+## 模型下载说明
+
+**重要**：Unsloth 使用的模型格式与 Ollama 不同：
+- **Unsloth**：使用 HuggingFace 格式（训练时）
+- **Ollama**：使用 GGUF 格式（推理时）
+
+**不能直接使用 Ollama 的模型进行训练**。首次运行时会自动从 HuggingFace 下载模型（约 7GB），下载后会缓存到本地，后续使用不需要重新下载。
+
+详细说明请参考：[MODEL_FORMAT_GUIDE.md](MODEL_FORMAT_GUIDE.md)
+
 ## 注意事项
 
-1. **GPU 内存**: 确保有足够的 GPU 内存。如果内存不足，可以减小 `--batch-size` 或使用更小的模型
-2. **训练时间**: 多个 step 会依次训练，总时间 = 单个 step 时间 × step 数量
-3. **数据准备**: 确保 `training_data/` 目录下有对应的 `{step}_train.jsonl` 文件
-4. **依赖安装**: 确保已安装 fine-tuning 依赖：
+1. **模型下载**: 首次运行会自动下载模型，确保网络连接正常。模型会缓存到 `~/.cache/huggingface/hub/`
+2. **GPU 内存**: 确保有足够的 GPU 内存。如果内存不足，可以减小 `--batch-size` 或使用更小的模型
+3. **训练时间**: 多个 step 会依次训练，总时间 = 单个 step 时间 × step 数量
+4. **数据准备**: 确保 `training_data/` 目录下有对应的 `{step}_train.jsonl` 文件
+5. **依赖安装**: 确保已安装 fine-tuning 依赖：
    ```bash
    pip install -r llm_model/finetune/requirements.txt
    ```

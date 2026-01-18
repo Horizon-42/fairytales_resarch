@@ -27,7 +27,11 @@ class FineTuneConfig:
     """
     
     # Model configuration
-    model_name: str = "unsloth/Qwen2.5-7B-Instruct"
+    # Qwen3-8B: Latest Qwen model with thinking capability (disabled by default)
+    # Note: If unsloth/Qwen3-8B is unavailable, try:
+    # - Qwen/Qwen3-8B (original HuggingFace model)
+    # - unsloth/Qwen2.5-7B-Instruct (previous generation)
+    model_name: str = "unsloth/Qwen3-8B"
     max_seq_length: int = 2048
     
     # LoRA configuration
@@ -53,9 +57,10 @@ class FineTuneConfig:
         """Auto-detect target modules if not specified."""
         if self.target_modules is None:
             # Default target modules based on model architecture
-            if "qwen" in self.model_name.lower() or "qwen2.5" in self.model_name.lower():
+            model_lower = self.model_name.lower()
+            if "qwen" in model_lower or "qwen2.5" in model_lower or "qwen3" in model_lower:
                 self.target_modules = ["q_proj", "k_proj", "v_proj", "o_proj"]
-            elif "llama" in self.model_name.lower():
+            elif "llama" in model_lower:
                 self.target_modules = ["q_proj", "k_proj", "v_proj", "o_proj"]
             else:
                 # Generic default
