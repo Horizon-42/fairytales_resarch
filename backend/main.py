@@ -858,8 +858,24 @@ def segment_text(req: TextSegmentationRequest) -> TextSegmentationResponse:
                     visualization["smoothed_forces"] = smoothed_forces
         elif req.algorithm == "graph":
             visualization["threshold"] = viz_data.get("threshold", req.threshold)
-            # Graph structure is too complex to serialize, skip for now
-            # Can add simplified version later if needed
+            # Serialize NetworkX graph to nodes and edges
+            if "graph" in viz_data:
+                import networkx as nx
+                graph = viz_data["graph"]
+                if isinstance(graph, nx.Graph):
+                    # Extract nodes (sentence indices)
+                    nodes = list(graph.nodes())
+                    # Extract edges as [source, target] pairs
+                    edges = [[int(u), int(v)] for u, v in graph.edges()]
+                    visualization["graph"] = {
+                        "nodes": nodes,
+                        "edges": edges
+                    }
+            # Include cliques if available
+            if "cliques" in viz_data:
+                cliques = viz_data["cliques"]
+                # Convert sets to lists for JSON serialization
+                visualization["cliques"] = [list(clique) for clique in cliques]
         
         return TextSegmentationResponse(
             ok=True,

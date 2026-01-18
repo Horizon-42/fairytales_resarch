@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './Segmentation.css'
 import SimilarityMatrixHeatmap from '../components/SimilarityMatrixHeatmap'
 import MagneticSignalChart from '../components/MagneticSignalChart'
+import GraphSegSMChart from '../components/GraphSegSMChart'
 import SegmentationComparison from '../components/SegmentationComparison'
 import { extractGroundTruthFromAnnotation } from '../utils/textSpanUtils'
 
@@ -234,6 +235,103 @@ export default function Segmentation({ story }) {
     })
   }
 
+  // Render text with predicted boundaries as dashed underlines
+  const renderTextWithPredictedBoundaries = () => {
+    if (!text || !result || !result.boundaries || result.boundaries.length === 0 || !sentences || sentences.length === 0) {
+      return <div className="text-with-highlights">{text}</div>
+    }
+
+    // Calculate character positions for each sentence end
+    // Use the sentences array to find positions in text
+    const sentenceEndPositions = []
+    let searchStart = 0
+    
+    for (let i = 0; i < sentences.length; i++) {
+      const sentenceText = sentences[i].trim()
+      if (!sentenceText) continue
+      
+      // Find the sentence in the original text
+      const sentenceStart = text.indexOf(sentenceText, searchStart)
+      if (sentenceStart === -1) {
+        // Fallback: estimate position
+        const estimatedEnd = searchStart + sentenceText.length
+        sentenceEndPositions.push(Math.min(estimatedEnd, text.length))
+        searchStart = estimatedEnd + 1
+        continue
+      }
+      
+      // Find the end of this sentence (including delimiter)
+      let sentenceEnd = sentenceStart + sentenceText.length
+      // Look for delimiter after the sentence
+      while (sentenceEnd < text.length && !/[。！？.!\?]/.test(text[sentenceEnd])) {
+        sentenceEnd++
+      }
+      // Include delimiter(s)
+      while (sentenceEnd < text.length && /[。！？.!\?\s]/.test(text[sentenceEnd])) {
+        sentenceEnd++
+      }
+      
+      sentenceEndPositions.push(Math.min(sentenceEnd, text.length))
+      searchStart = sentenceEnd
+    }
+
+    if (sentenceEndPositions.length === 0) {
+      return <div className="text-with-highlights">{text}</div>
+    }
+
+    // Map boundary indices (sentence indices) to character positions
+    // A boundary at index i means there's a break after sentence i (before sentence i+1)
+    const boundaryCharPositions = result.boundaries
+      .filter(boundary => boundary >= 0 && boundary < sentenceEndPositions.length)
+      .map(boundary => sentenceEndPositions[boundary])
+      .filter(pos => pos > 0 && pos < text.length) // Valid positions only
+      .sort((a, b) => a - b) // Sort ascending
+      .filter((pos, idx, arr) => idx === 0 || pos !== arr[idx - 1]) // Remove duplicates
+
+    if (boundaryCharPositions.length === 0) {
+      return <div className="text-with-highlights">{text}</div>
+    }
+
+    // Build rendering parts with boundary underlines
+    const parts = []
+    let lastPos = 0
+
+    boundaryCharPositions.forEach((boundaryPos) => {
+      // Text before boundary - with underline
+      if (boundaryPos > lastPos) {
+        parts.push({
+          text: text.substring(lastPos, boundaryPos),
+          type: 'with-boundary',
+          hasBoundary: true
+        })
+      }
+      lastPos = boundaryPos
+    })
+
+    // Remaining text after last boundary
+    if (lastPos < text.length) {
+      parts.push({
+        text: text.substring(lastPos),
+        type: 'normal',
+        hasBoundary: false
+      })
+    }
+
+    return (
+      <>
+        {parts.map((part, idx) => (
+          <span 
+            key={idx}
+            className={part.hasBoundary ? 'text-with-boundary-underline' : ''}
+            title={part.hasBoundary ? 'Predicted Boundary' : ''}
+          >
+            {part.text}
+          </span>
+        ))}
+      </>
+    )
+  }
+
   return (
     <div className="segmentation-page">
       <div className="segmentation-header">
@@ -306,23 +404,44 @@ export default function Segmentation({ story }) {
                 </div>
               ) : (
                 <>
-                  <textarea
-                    id="text-input"
-                    value={text}
-                    onChange={handleTextChange}
-                    placeholder={loading ? "Loading story text..." : story ? "Select a story to load text..." : "Please select a story from the dropdown above"}
-                    rows={12}
-                    readOnly={false}
-                  />
-                  <div className="text-info">
-                    {sentences.length} sentences detected
-                    {story?.annotation && (
-                      <span className="annotation-hint"> • Annotation loaded but no narrative events found</span>
-                    )}
-                    {text && !story?.annotation && (
-                      <span className="text-edit-hint">(Text can be edited if needed)</span>
-                    )}
-                  </div>
+                  {result && result.boundaries && result.boundaries.length > 0 ? (
+                    <div className="text-display-with-segments">
+                      {result.boundaries.length > 0 && (
+                        <div className="gt-segments-legend">
+                          <strong>Predicted Segmentation:</strong>
+                          <span className="legend-item" style={{ backgroundColor: '#fee' }}>
+                            Boundaries at: {result.boundaries.join(', ')}
+                          </span>
+                        </div>
+                      )}
+                      <div className="text-with-highlights" id="story-text-display">
+                        {renderTextWithPredictedBoundaries()}
+                      </div>
+                      <div className="text-info">
+                        {sentences.length} sentences detected • {result.segments.length} predicted segments
+                      </div>
+                    </div>
+                  ) : (
+                    <>
+                      <textarea
+                        id="text-input"
+                        value={text}
+                        onChange={handleTextChange}
+                        placeholder={loading ? "Loading story text..." : story ? "Select a story to load text..." : "Please select a story from the dropdown above"}
+                        rows={12}
+                        readOnly={false}
+                      />
+                      <div className="text-info">
+                        {sentences.length} sentences detected
+                        {story?.annotation && (
+                          <span className="annotation-hint"> • Annotation loaded but no narrative events found</span>
+                        )}
+                        {text && !story?.annotation && (
+                          <span className="text-edit-hint">(Text can be edited if needed)</span>
+                        )}
+                      </div>
+                    </>
+                  )}
                 </>
               )}
             </div>
@@ -463,29 +582,6 @@ export default function Segmentation({ story }) {
               </div>
             </div>
 
-            {/* Segments Display */}
-            <div className="segments-container">
-              {result.segments.map((segment, idx) => (
-                <div
-                  key={segment.segment_id}
-                  className="segment-card"
-                  style={{ backgroundColor: getSegmentColor(idx) }}
-                >
-                  <div className="segment-header">
-                    <h4>
-                      Segment {segment.segment_id} 
-                      <span className="segment-range">
-                        (Sentences {segment.start_sentence_idx} - {segment.end_sentence_idx})
-                      </span>
-                    </h4>
-                  </div>
-                  <div className="segment-text">
-                    {segment.text}
-                  </div>
-                </div>
-              ))}
-            </div>
-
             {/* Boundary Comparison */}
             {referenceBoundaries.length > 0 && result.meta.evaluation_score !== null && (
               <div className="comparison-section">
@@ -534,6 +630,21 @@ export default function Segmentation({ story }) {
                       smoothedForces={result.visualization.smoothed_forces}
                       predictedBoundaries={result.boundaries}
                       title="Magnetic Clustering Signal Analysis"
+                    />
+                  </div>
+                )}
+
+                {/* Graph Structure (for GraphSegSM) */}
+                {result.meta.algorithm === 'graph' && 
+                 result.visualization.graph && (
+                  <div className="viz-item">
+                    <h4>Graph Structure</h4>
+                    <GraphSegSMChart
+                      graph={result.visualization.graph}
+                      threshold={result.visualization.threshold || 0.7}
+                      cliques={result.visualization.cliques || null}
+                      predictedBoundaries={result.boundaries}
+                      title="GraphSegSM Structure"
                     />
                   </div>
                 )}

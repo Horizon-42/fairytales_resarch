@@ -272,7 +272,16 @@
   border-radius: 4px;
 }
 
-/* Segments Container */
+/* Predicted Boundary Underline */
+.text-with-boundary-underline {
+  border-bottom: 2px dashed #ef4444;
+  padding-bottom: 2px;
+  cursor: help;
+  display: inline;
+  position: relative;
+}
+
+/* Legacy segments container (kept for backward compatibility if needed) */
 .segments-container {
   display: flex;
   flex-direction: column;
