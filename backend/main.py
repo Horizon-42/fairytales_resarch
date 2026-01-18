@@ -53,6 +53,18 @@ from llm_model.ollama_client import OllamaConfig, OllamaError, list_local_models
 from llm_model.vector_database import FairyVectorDB, VectorDBPaths
 from llm_model.vector_database.db import QueryConfig, VectorDBNotBuiltError
 
+# Import visualization processing functions
+import sys
+from pathlib import Path
+# Add post_data_process to path for imports
+repo_root = Path(__file__).parent.parent
+sys.path.insert(0, str(repo_root))
+from post_data_process.process_json_for_viz import (
+    process_story_data,
+    process_directory,
+    load_story_from_file,
+)
+
 
 # Load repo-root .env early (so running uvicorn directly still works).
 load_repo_dotenv()
@@ -860,3 +872,134 @@ def segment_text(req: TextSegmentationRequest) -> TextSegmentationResponse:
     except Exception as exc:
         logger.exception("Text segmentation failed")
         raise HTTPException(status_code=500, detail=f"Segmentation failed: {str(exc)}") from exc
+
+
+class VisualizationProcessRequest(BaseModel):
+    """Request to process visualization data from story JSON."""
+    
+    story_data: Dict[str, Any] = Field(..., description="Story data in json_v3 format")
+
+
+class VisualizationProcessResponse(BaseModel):
+    """Response with processed visualization data."""
+    
+    ok: bool
+    relationship_data: Dict[str, Any]
+    ribbon_data: Dict[str, Any]
+
+
+class VisualizationProcessDirectoryRequest(BaseModel):
+    """Request to process all stories in a directory."""
+    
+    input_dir: str = Field(..., description="Path to directory containing json_v3 files (relative to repo root)")
+    output_dir: Optional[str] = Field(None, description="Optional output directory to write files")
+
+
+class VisualizationProcessDirectoryResponse(BaseModel):
+    """Response with all processed stories."""
+    
+    ok: bool
+    stories: List[Dict[str, Any]]
+    index: Dict[str, Any]
+
+
+@app.post("/api/visualization/process", response_model=VisualizationProcessResponse)
+def process_visualization(req: VisualizationProcessRequest) -> VisualizationProcessResponse:
+    """Process a single story's JSON data to generate visualization data.
+    
+    This endpoint processes json_v3 format story data and returns:
+    - relationship_data: Character graph data (nodes + edges)
+    - ribbon_data: Story ribbon timeline data
+    
+    The frontend can use this to process stories on-the-fly without pre-generating files.
+    """
+    
+    import time
+    start_time = time.time()
+    story_id = req.story_data.get("metadata", {}).get("id", "unknown")
+    story_title = req.story_data.get("metadata", {}).get("title", "unknown")
+    
+    logger.info(
+        "[VISUALIZATION] Processing story: id=%s, title=%s",
+        story_id,
+        story_title
+    )
+    
+    try:
+        relationship_data, ribbon_data = process_story_data(req.story_data)
+        
+        elapsed = time.time() - start_time
+        num_characters = len(relationship_data.get("nodes", []))
+        num_edges = len(relationship_data.get("edges", []))
+        num_events = ribbon_data.get("total_events", 0)
+        
+        logger.info(
+            "[VISUALIZATION] Successfully processed story: id=%s, "
+            "characters=%d, edges=%d, events=%d, elapsed=%.2fs",
+            story_id,
+            num_characters,
+            num_edges,
+            num_events,
+            elapsed
+        )
+        
+        return VisualizationProcessResponse(
+            ok=True,
+            relationship_data=relationship_data,
+            ribbon_data=ribbon_data,
+        )
+    except ValueError as exc:
+        elapsed = time.time() - start_time
+        logger.warning(
+            "[VISUALIZATION] Invalid story data: id=%s, error=%s, elapsed=%.2fs",
+            story_id,
+            str(exc),
+            elapsed
+        )
+        raise HTTPException(status_code=400, detail=f"Invalid story data: {str(exc)}") from exc
+    except Exception as exc:
+        elapsed = time.time() - start_time
+        logger.exception(
+            "[VISUALIZATION] Processing failed: id=%s, elapsed=%.2fs",
+            story_id,
+            elapsed
+        )
+        raise HTTPException(status_code=500, detail=f"Processing failed: {str(exc)}") from exc
+
+
+@app.post("/api/visualization/process-directory", response_model=VisualizationProcessDirectoryResponse)
+def process_visualization_directory(req: VisualizationProcessDirectoryRequest) -> VisualizationProcessDirectoryResponse:
+    """Process all JSON files in a directory and return visualization data.
+    
+    This endpoint processes all json_v3 files in a directory and returns:
+    - stories: List of all processed stories with relationship and ribbon data
+    - index: Metadata index for all stories
+    
+    Useful for batch processing or when frontend needs all stories at once.
+    """
+    
+    # Resolve input directory (relative to repo root)
+    input_path = repo_root / req.input_dir
+    if not input_path.exists():
+        raise HTTPException(status_code=404, detail=f"Input directory not found: {req.input_dir}")
+    
+    if not input_path.is_dir():
+        raise HTTPException(status_code=400, detail=f"Input path is not a directory: {req.input_dir}")
+    
+    # Resolve output directory if provided
+    output_path = None
+    if req.output_dir:
+        output_path = repo_root / req.output_dir
+    
+    try:
+        result = process_directory(str(input_path), str(output_path) if output_path else None)
+        return VisualizationProcessDirectoryResponse(
+            ok=True,
+            stories=result["stories"],
+            index=result["index"],
+        )
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except Exception as exc:
+        logger.exception("Directory processing failed")
+        raise HTTPException(status_code=500, detail=f"Processing failed: {str(exc)}") from exc

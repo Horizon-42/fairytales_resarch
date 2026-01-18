@@ -9,7 +9,8 @@ export default function StoryBrowser({
   onPickDirectory,
   onSelectStory,
   culture,
-  onCultureChange
+  onCultureChange,
+  isLoading = false
 }) {
   const [lastFolderPath, setLastFolderPath] = useState(null);
   const fileInputRef = useRef(null);
@@ -195,6 +196,11 @@ export default function StoryBrowser({
             type="button"
             className={`story-item ${idx === selectedIndex ? "active" : ""}`}
             onClick={() => onSelectStory(idx)}
+            disabled={isLoading}
+            style={{
+              opacity: isLoading && idx !== selectedIndex ? 0.5 : 1,
+              cursor: isLoading ? 'not-allowed' : 'pointer'
+            }}
           >
             <span className="story-item-name">{s.name}</span>
           </button>

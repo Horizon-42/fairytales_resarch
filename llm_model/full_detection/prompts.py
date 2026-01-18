@@ -167,7 +167,7 @@ def build_relationship_prompt(
         context_part = f"\n\nFull Story Context:\n{story_context}\n"
     
     relationship_guide = """
-Relationship Categories:
+Relationship Categories (MUST select from these exact options):
 - Family & Kinship: parent_child, sibling, spouse, extended_family
 - Romance: lover
 - Hierarchy: ruler_subject, master_servant, mentor_student, commander_subordinate
@@ -175,7 +175,12 @@ Relationship Categories:
 - Adversarial: enemy, rival
 - Neutral: stranger
 
-Sentiment:
+CRITICAL: 
+- relationship_level1 MUST be exactly one of: "Family & Kinship", "Romance", "Hierarchy", "Social & Alliance", "Adversarial", "Neutral"
+- relationship_level2 MUST be from the corresponding level1 options (e.g., if level1 is "Family & Kinship", level2 must be one of: parent_child, sibling, spouse, extended_family)
+- Do NOT invent new relationship types
+
+Sentiment (select one):
 - romantic (high positive), positive (friendly), neutral (indifferent)
 - negative (dislike), fearful (submissive), hostile (high negative)
 """
@@ -199,16 +204,18 @@ Output JSON:
     {{
       "agent": "doer name",
       "target": "receiver name",
-      "relationship_level1": "category name",
-      "relationship_level2": "specific relationship",
-      "sentiment": "emotional state"
+      "relationship_level1": "exact category name from list above",
+      "relationship_level2": "exact type from corresponding category options",
+      "sentiment": "one of: romantic, positive, neutral, negative, fearful, hostile"
     }},
     ...
   ]
 }}
 
-Note: Multiple relationships possible if there are multiple doer-receiver pairs.
-If receivers are not characters (are objects), return empty relationships array.
+CRITICAL: 
+- relationship_level1 and relationship_level2 MUST use exact strings from the guide above
+- If receivers are not characters (are objects), return empty relationships array []
+- Multiple relationships possible if there are multiple doer-receiver pairs
 """
 
 
@@ -236,18 +243,24 @@ def build_action_category_prompt(
         Prompt string
     """
     action_guide = """
-Action Categories (select one):
-- physical (Physical & Conflict): attack, defend, restrain, flee, travel, interact, steal
-- communicative (Social & Communicative): inform, request, promise, deceive, persuade, reject
-- transaction (Transaction & Exchange): give, receive, trade, bargain
-- cognitive (Cognitive & Mental): think, learn, remember, forget
-- existential (Existential & Supernatural): cast, transform, die, revive, cast_spell, express_emotion
+Action Categories (MUST select exactly one):
+- physical: attack, defend, restrain, flee, travel, interact, steal
+- communicative: inform, persuade, deceive, challenge, command, betray, reconcile, slander, promise
+- transaction: give, acquire, exchange, reward, punish, request, sacrifice
+- mental: resolve, plan, realize, hesitate, observe, investigate, plot, forget
+- existential: cast, transform, die, revive, cast_spell, express_emotion
 
-Status (outcome):
+CRITICAL CONSTRAINTS:
+- category MUST be exactly one of: "physical", "communicative", "transaction", "mental", "existential"
+- type MUST be selected from the corresponding category's options above (e.g., if category is "physical", type must be one of: attack, defend, restrain, flee, travel, interact, steal)
+- Do NOT invent new action types - use only the exact codes listed above
+- context can be freely generated or left empty, but prefer using recommended tags when applicable
+
+Status (select one):
 - attempt, success, failure, interrupted, backfire, partial
 
-Function (narrative role):
-- trigger (inciting incident), climax (peak conflict), resolution (resolving conflict), or empty
+Function (narrative role, or empty string):
+- trigger, climax, resolution, character_arc, setup, exposition, or empty string
 """
     
     instrument_part = f"\nInstrument used: {instrument}\n" if instrument else ""
@@ -267,12 +280,17 @@ Receivers: {', '.join(receivers) if receivers else 'None'}
 
 Output JSON:
 {{
-  "category": "action category code",
-  "type": "specific action type",
-  "context": "context tag (e.g., ambush, quest)",
-  "status": "execution status",
-  "function": "narrative function (or empty string)"
-}}"""
+  "category": "exact category code from: physical, communicative, transaction, mental, existential",
+  "type": "exact action type from the selected category's options (see guide above)",
+  "context": "context tag or empty string (can generate freely, but prefer recommended tags)",
+  "status": "one of: attempt, success, failure, interrupted, backfire, partial",
+  "function": "one of: trigger, climax, resolution, character_arc, setup, exposition, or empty string"
+}}
+
+CRITICAL:
+- category and type MUST use exact codes from the guide - do NOT invent new codes
+- type MUST match the selected category (e.g., if category="physical", type must be one of its options)
+- If unsure, check the category's allowed types in the guide above"""
 
 
 # Step 5: STAC Analysis (we'll reuse the existing STAC analyzer, but provide a prompt template here)

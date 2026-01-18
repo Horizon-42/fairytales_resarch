@@ -194,7 +194,25 @@ def analyze_character_relationships_with_levels(
         agents = [a for a in agents if a]
         targets = [t for t in targets if t]
         
+        # Extract sentiment from relationships array if available, otherwise from event level
         sentiment = event.get('sentiment', '').lower()
+        
+        # If sentiment not at event level, try to extract from relationships
+        if not sentiment:
+            relationships = event.get('relationships', [])
+            if relationships:
+                # Find sentiment from first relationship that involves hero or any participant
+                for rel in relationships:
+                    rel_agent = find_char_name(rel.get('agent', ''))
+                    rel_target = find_char_name(rel.get('target', ''))
+                    if rel_agent in agents and rel_target in targets:
+                        sentiment = rel.get('sentiment', '').lower()
+                        break
+                    # If hero is involved, use that relationship's sentiment
+                    if hero_matched and (rel_agent == hero_matched or rel_target == hero_matched):
+                        sentiment = rel.get('sentiment', '').lower()
+                        break
+        
         time_order = event.get('time_order', 0)
         friendly_level = get_friendly_level(sentiment)
         

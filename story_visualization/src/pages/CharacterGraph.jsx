@@ -70,6 +70,14 @@ function CharacterGraph({ story }) {
 
   // Load data
   useEffect(() => {
+    // Prefer processed data from story object (from backend API)
+    if (story?.relationshipData) {
+      setGraphData(story.relationshipData)
+      setLoading(false)
+      return
+    }
+    
+    // Fallback to loading from file (backward compatibility)
     if (!story?.relationship_file) return
     
     setLoading(true)

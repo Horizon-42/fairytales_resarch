@@ -212,6 +212,14 @@ function StoryRibbons({ story }) {
 
   // Load data
   useEffect(() => {
+    // Prefer processed data from story object (from backend API)
+    if (story?.ribbonData) {
+      setRibbonData(story.ribbonData)
+      setLoading(false)
+      return
+    }
+    
+    // Fallback to loading from file (backward compatibility)
     if (!story?.ribbon_file) return
     
     setLoading(true)
