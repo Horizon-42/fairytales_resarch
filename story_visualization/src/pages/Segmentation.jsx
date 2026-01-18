@@ -4,7 +4,7 @@ import SimilarityMatrixHeatmap from '../components/SimilarityMatrixHeatmap'
 import MagneticSignalChart from '../components/MagneticSignalChart'
 import GraphSegSMChart from '../components/GraphSegSMChart'
 import SegmentationComparison from '../components/SegmentationComparison'
-import { extractGroundTruthFromAnnotation } from '../utils/textSpanUtils'
+import { extractGroundTruthFromAnnotation, buildSegmentsFromBoundaries } from '../utils/textSpanUtils'
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000'
 
@@ -36,7 +36,7 @@ export default function Segmentation({ story }) {
   
   // Update display mode when result or gtSegments change
   useEffect(() => {
-    if (result && result.segments && result.segments.length > 0) {
+    if (result && result.boundaries && result.boundaries.length > 0) {
       // If user switched to 'gt' or 'both' but no GT segments, switch to 'predicted'
       if (gtSegments.length === 0 && (displayMode === 'both' || displayMode === 'gt')) {
         setDisplayMode('predicted')
@@ -248,69 +248,24 @@ export default function Segmentation({ story }) {
     })
   }
 
-  // Build predicted segments from result
+  // Helper: get number of segments from boundaries
+  const getPredictedSegmentsCount = () => {
+    if (!result || !result.boundaries) {
+      return 0
+    }
+    // If there are n boundaries, there are n+1 segments (unless no boundaries, then 1 segment)
+    return result.boundaries.length > 0 ? result.boundaries.length + 1 : 1
+  }
+
+  // Build predicted segments from boundaries (same structure as groundtruth)
   const buildPredictedSegments = () => {
-    if (!result || !result.segments || result.segments.length === 0) {
+    if (!result || !result.boundaries || !text || sentences.length === 0) {
       return []
     }
 
-    // Split text into sentences to find character positions
-    const sentenceMatches = []
-    let lastIndex = 0
-    const sentenceRegex = /[^。！？.!\?]+[。！？.!\?]+/g
-    let match
-    
-    while ((match = sentenceRegex.exec(text)) !== null) {
-      sentenceMatches.push({
-        start: match.index,
-        end: match.index + match[0].length
-      })
-      lastIndex = match.index + match[0].length
-    }
-    
-    if (lastIndex < text.length) {
-      sentenceMatches.push({
-        start: lastIndex,
-        end: text.length
-      })
-    }
-
-    // Build predicted segments
-    const predictedSegments = []
-    result.segments.forEach((segment, idx) => {
-      const startSentenceIdx = segment.start_sentence_idx
-      const endSentenceIdx = segment.end_sentence_idx
-      
-      // Try to find text positions using segment.text if available
-      if (segment.text && segment.text.trim()) {
-        const segmentText = segment.text.trim()
-        const charIndex = text.indexOf(segmentText)
-        
-        if (charIndex !== -1) {
-          predictedSegments.push({
-            segmentId: segment.segment_id,
-            startChar: charIndex,
-            endChar: charIndex + segmentText.length
-          })
-          return
-        }
-      }
-      
-      // Fallback: use sentence indices
-      if (startSentenceIdx >= 0 && startSentenceIdx < sentenceMatches.length &&
-          endSentenceIdx >= 0 && endSentenceIdx < sentenceMatches.length) {
-        const startChar = sentenceMatches[startSentenceIdx].start
-        const endChar = sentenceMatches[endSentenceIdx].end
-        
-        predictedSegments.push({
-          segmentId: segment.segment_id,
-          startChar: startChar,
-          endChar: endChar
-        })
-      }
-    })
-
-    return predictedSegments
+    // Build segments from boundaries (same as groundtruth approach)
+    const segments = buildSegmentsFromBoundaries(result.boundaries, text, sentences)
+    return segments
   }
 
   // Render text with both ground truth and predicted segments for comparison (split view)
@@ -385,11 +340,12 @@ export default function Segmentation({ story }) {
         <div className="comparison-text-upper">
           {predictedParts.map((part, idx) => {
             if (part.type === 'predicted') {
+              const bgColor = getSegmentColor(part.segmentId - 1)
               return (
                 <span
                   key={idx}
                   className="predicted-text-segment-bg"
-                  style={{ backgroundColor: '#fee2e2' }}
+                  style={{ backgroundColor: bgColor }}
                   title={`Predicted Segment ${part.segmentId}`}
                 >
                   {part.text}
@@ -422,56 +378,28 @@ export default function Segmentation({ story }) {
     )
   }
 
-  // Render text with predicted segments only (background color approach)
+  // Render text with predicted segments only (reuse same method as groundtruth)
   const renderTextWithPredictedBoundaries = () => {
-    if (!text || !result || !result.segments || result.segments.length === 0) {
-      return <div className="text-with-highlights">{text}</div>
-    }
-
-    // Split text into sentences to find character positions
-    const sentenceMatches = []
-    let lastIndex = 0
-    const sentenceRegex = /[^。！？.!\?]+[。！？.!\?]+/g
-    let match
-    
-    while ((match = sentenceRegex.exec(text)) !== null) {
-      sentenceMatches.push({
-        start: match.index,
-        end: match.index + match[0].length
-      })
-      lastIndex = match.index + match[0].length
-    }
-    
-    if (lastIndex < text.length) {
-      sentenceMatches.push({
-        start: lastIndex,
-        end: text.length
-      })
-    }
-
-    if (sentenceMatches.length === 0) {
-      return <div className="text-with-highlights">{text}</div>
-    }
-
     const predictedSegments = buildPredictedSegments()
-
-    if (predictedSegments.length === 0) {
-      return <div className="text-with-highlights">{text}</div>
+    
+    if (!text || predictedSegments.length === 0) {
+      return text
     }
 
-    // Sort by position
-    predictedSegments.sort((a, b) => a.startChar - b.startChar)
-
-    // Build rendering parts
+    // Create segments sorted by character position (same as renderTextWithSegments)
+    const sortedSegments = [...predictedSegments].sort((a, b) => a.startChar - b.startChar)
+    
+    // Build rendering parts (same logic as renderTextWithSegments)
     const parts = []
     let currentPos = 0
     
-    predictedSegments.forEach((segment) => {
+    sortedSegments.forEach((segment, idx) => {
       // Text before this segment
       if (segment.startChar > currentPos) {
         parts.push({
           text: text.substring(currentPos, segment.startChar),
-          type: 'normal'
+          type: 'normal',
+          segmentId: null
         })
       }
       
@@ -479,7 +407,8 @@ export default function Segmentation({ story }) {
       parts.push({
         text: text.substring(segment.startChar, segment.endChar),
         type: 'predicted',
-        segmentId: segment.segmentId
+        segmentId: segment.segmentId,
+        segment: segment
       })
       
       currentPos = segment.endChar
@@ -489,30 +418,27 @@ export default function Segmentation({ story }) {
     if (currentPos < text.length) {
       parts.push({
         text: text.substring(currentPos),
-        type: 'normal'
+        type: 'normal',
+        segmentId: null
       })
     }
-
-
-    return (
-      <>
-        {parts.map((part, idx) => {
-          if (part.type === 'predicted') {
-            return (
-              <span
-                key={idx}
-                className="predicted-text-segment-bg"
-                style={{ backgroundColor: '#fee2e2' }}
-                title={`Predicted Segment ${part.segmentId}`}
-              >
-                {part.text}
-              </span>
-            )
-          }
-          return <span key={idx}>{part.text}</span>
-        })}
-      </>
-    )
+    
+    return parts.map((part, idx) => {
+      if (part.type === 'predicted') {
+        const bgColor = getSegmentColor(part.segmentId - 1)
+        return (
+          <span
+            key={idx}
+            className="predicted-text-segment-bg"
+            style={{ backgroundColor: bgColor }}
+            title={`Predicted Segment ${part.segmentId}`}
+          >
+            {part.text}
+          </span>
+        )
+      }
+      return <span key={idx}>{part.text}</span>
+    })
   }
 
   return (
@@ -564,11 +490,11 @@ export default function Segmentation({ story }) {
           <div className="input-section">
             <div className="input-group">
               <label htmlFor="text-input">Story Text:</label>
-              {(gtSegments.length > 0 && !result) || (result && result.segments && result.segments.length > 0) ? (
+              {(gtSegments.length > 0 && !result) || (result && result.boundaries && result.boundaries.length > 0) ? (
                 <div className="text-display-with-segments">
                   <div className="gt-segments-legend">
                     {/* Display Mode Toggle - show when there's a result or both GT and result */}
-                    {result && result.segments && result.segments.length > 0 && (
+                    {result && result.boundaries && result.boundaries.length > 0 && (
                       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '0.5rem' }}>
                         <strong>Display Mode:</strong>
                         <div className="display-mode-toggle">
@@ -616,22 +542,23 @@ export default function Segmentation({ story }) {
                     )}
                     
                     {/* Show Predicted legend when displaying predicted or both */}
-                    {result && result.segments && result.segments.length > 0 && (displayMode === 'predicted' || displayMode === 'both') && (
+                    {result && result.boundaries && result.boundaries.length > 0 && (displayMode === 'predicted' || displayMode === 'both') && (
                       <>
-                        <strong style={{ marginTop: '0.5rem', display: 'block' }}>Predicted Segmentation:</strong>
-                        {result.boundaries && result.boundaries.length > 0 && (
-                          <span className="legend-item" style={{ backgroundColor: '#fee2e2', border: '1px dashed #ef4444' }}>
-                            Boundaries: {result.boundaries.join(', ')}
+                        <strong style={{ marginTop: '0.5rem', display: 'block' }}>Predicted Segments:</strong>
+                        {buildPredictedSegments().map((seg) => (
+                          <span 
+                            key={seg.segmentId} 
+                            className="legend-item"
+                            style={{ backgroundColor: getSegmentColor(seg.segmentId - 1) }}
+                          >
+                            Seg {seg.segmentId} (Sentences {seg.startSentenceIdx}-{seg.endSentenceIdx})
                           </span>
-                        )}
-                        <span className="legend-item" style={{ backgroundColor: '#fee2e2', border: '1px dashed #ef4444' }}>
-                          {result.segments.length} predicted segments
-                        </span>
+                        ))}
                       </>
                     )}
                   </div>
                   <div className="text-with-highlights" id="story-text-display">
-                    {result && result.segments && result.segments.length > 0
+                    {result && result.boundaries && result.boundaries.length > 0
                       ? (displayMode === 'gt' ? renderTextWithSegments() : 
                          displayMode === 'both' ? renderTextWithComparison() : 
                          renderTextWithPredictedBoundaries())
@@ -639,13 +566,13 @@ export default function Segmentation({ story }) {
                   </div>
                   <div className="text-info">
                     {sentences.length} sentences detected
-                    {result && result.segments && result.segments.length > 0 && (displayMode === 'predicted' || displayMode === 'both') ? ` • ${result.segments.length} predicted segments` : ''}
+                    {result && result.boundaries && result.boundaries.length > 0 && (displayMode === 'predicted' || displayMode === 'both') ? ` • ${getPredictedSegmentsCount()} predicted segments` : ''}
                     {(displayMode === 'gt' || displayMode === 'both' || !result) && gtSegments.length > 0 ? ` • ${gtSegments.length} ground truth segments` : ''}
                   </div>
                 </div>
               ) : (
                 <>
-                  {result && result.segments && result.segments.length > 0 ? (
+                  {result && result.boundaries && result.boundaries.length > 0 ? (
                     <div className="text-display-with-segments">
                       <div className="gt-segments-legend">
                         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
@@ -692,15 +619,16 @@ export default function Segmentation({ story }) {
                         ) : null}
                         {displayMode === 'predicted' || displayMode === 'both' ? (
                           <>
-                            <strong style={{ marginTop: '0.5rem', display: 'block' }}>Predicted:</strong>
-                            {result.boundaries && result.boundaries.length > 0 && (
-                              <span className="legend-item" style={{ backgroundColor: '#fee2e2', border: '1px dashed #ef4444' }}>
-                                Boundaries: {result.boundaries.join(', ')}
+                            <strong style={{ marginTop: '0.5rem', display: 'block' }}>Predicted Segments:</strong>
+                            {buildPredictedSegments().map((seg) => (
+                              <span 
+                                key={seg.segmentId} 
+                                className="legend-item"
+                                style={{ backgroundColor: getSegmentColor(seg.segmentId - 1) }}
+                              >
+                                Seg {seg.segmentId} (Sentences {seg.startSentenceIdx}-{seg.endSentenceIdx})
                               </span>
-                            )}
-                            <span className="legend-item" style={{ backgroundColor: '#fee2e2', border: '1px dashed #ef4444' }}>
-                              {result.segments.length} segments
-                            </span>
+                            ))}
                           </>
                         ) : null}
                       </div>
@@ -711,7 +639,7 @@ export default function Segmentation({ story }) {
                       </div>
                       <div className="text-info">
                         {sentences.length} sentences detected
-                        {displayMode === 'predicted' || displayMode === 'both' ? ` • ${result.segments.length} predicted segments` : ''}
+                        {displayMode === 'predicted' || displayMode === 'both' ? ` • ${getPredictedSegmentsCount()} predicted segments` : ''}
                         {displayMode === 'gt' || displayMode === 'both' ? ` • ${gtSegments.length} ground truth segments` : ''}
                       </div>
                     </div>
@@ -871,7 +799,7 @@ export default function Segmentation({ story }) {
               )}
               <div className="results-meta">
                 <span>Algorithm: {result.meta.algorithm}</span>
-                <span>Segments: {result.segments.length}</span>
+                <span>Segments: {getPredictedSegmentsCount()}</span>
                 <span>Boundaries: {result.boundaries.join(', ') || 'None'}</span>
               </div>
             </div>
@@ -944,11 +872,11 @@ export default function Segmentation({ story }) {
                 )}
 
                 {/* Segmentation Comparison */}
-                {referenceBoundaries.length > 0 && result.segments.length > 0 && (
+                {referenceBoundaries.length > 0 && result.boundaries && result.boundaries.length > 0 && (
                   <div className="viz-item">
                     <h4>Segmentation Comparison</h4>
                     <SegmentationComparison
-                      docLen={result.segments[result.segments.length - 1].end_sentence_idx + 1}
+                      docLen={sentences.length}
                       trueBoundaries={referenceBoundaries}
                       predBoundaries={result.boundaries}
                       metricScore={result.meta.evaluation_score}

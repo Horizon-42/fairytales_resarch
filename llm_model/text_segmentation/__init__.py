@@ -10,7 +10,15 @@ from .magnetic_clustering import MagneticClustering
 from .graph_segsm import GraphSegSM
 from .boundary_metric import BoundarySegmentationMetric
 from .segmenter import TextSegmenter
-from .visualization import SegmentationVisualizer, visualize_segmentation_result
+
+# Optional visualization imports (requires matplotlib/seaborn)
+try:
+    from .visualization import SegmentationVisualizer, visualize_segmentation_result
+except ImportError:
+    # If matplotlib/seaborn are not installed, visualization is not available
+    SegmentationVisualizer = None  # type: ignore
+    visualize_segmentation_result = None  # type: ignore
+
 from .visualization_hooks import (
     VisualizableMagneticClustering,
     VisualizableGraphSegSM,

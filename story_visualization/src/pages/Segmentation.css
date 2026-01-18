@@ -277,7 +277,7 @@
   display: inline;
   position: relative;
   cursor: help;
-  background-color: #fee2e2 !important;
+  /* background-color set inline by component */
   padding: 2px 4px;
   border-radius: 3px;
   transition: opacity 0.2s, box-shadow 0.2s;
@@ -293,7 +293,7 @@
 
 /* Ensure visible in text-with-highlights container */
 .text-with-highlights .predicted-text-segment-bg {
-  background-color: #fee2e2 !important;
+  /* background-color set inline by component */
   display: inline !important;
   line-height: 1.8;
   vertical-align: baseline;

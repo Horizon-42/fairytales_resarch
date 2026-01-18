@@ -422,6 +422,24 @@ class TextSegmentationResponse(BaseModel):
 
 app = FastAPI(title="Fairytales Auto-Annotation API", version="0.1.0")
 
+# CORS: allow your Vite dev servers (5177/5173/5174) and the Node save/load server.
+# For dev convenience, we also allow any localhost port.
+# Add CORS middleware early, before route handlers
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5177",
+        "http://localhost:5174",
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "http://localhost:3001",
+    ],
+    allow_origin_regex=r"^http://localhost:\d+$",
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 class GeminiModelItem(BaseModel):
     id: str
@@ -526,23 +544,6 @@ def _on_startup() -> None:
 @app.on_event("shutdown")
 def _on_shutdown() -> None:
     logger.info("Backend shutting down")
-
-# CORS: allow your Vite dev servers (5177/5173/5174) and the Node save/load server.
-# For dev convenience, we also allow any localhost port.
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5177",
-        "http://localhost:5174",
-        "http://localhost:5173",
-        "http://localhost:3000",
-        "http://localhost:3001",
-    ],
-    allow_origin_regex=r"^http://localhost:\d+$",
-    allow_credentials=False,
-    allow_methods=["*"] ,
-    allow_headers=["*"],
-)
 
 
 @app.get("/health")
