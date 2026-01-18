@@ -1,0 +1,18 @@
+# Project Memory: Testing Environment
+
+## Important Notes
+
+### Testing Environment
+- **ALWAYS run tests in conda nlp environment**: `conda run -n nlp python -m pytest ...`
+- Tests should be run from project root directory
+- Use pytest as the testing framework
+- Mock LLM calls in unit tests to avoid dependency on Ollama/Gemini services
+
+### Running Tests
+```bash
+# Activate conda environment first
+conda activate nlp
+
+# Or use conda run
+conda run -n nlp python -m pytest llm_model/full_detection/tests/
+```
