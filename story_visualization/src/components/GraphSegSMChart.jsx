@@ -54,6 +54,16 @@ export default function GraphSegSMChart({
       }
     })
 
+    // Initialize node positions within bounds
+    const padding = 30
+    nodes.forEach(node => {
+      // Random initial position within bounds
+      if (!node.x && !node.y) {
+        node.x = padding + Math.random() * (width - 2 * padding)
+        node.y = padding + Math.random() * (height - 2 * padding)
+      }
+    })
+
     // Create force simulation
     const simulation = d3.forceSimulation(nodes)
       .force("link", d3.forceLink(links).id(d => d.id).distance(50))
@@ -159,8 +169,50 @@ export default function GraphSegSMChart({
           .style("opacity", 0)
       })
 
-    // Update positions on simulation tick
+    // Update positions on simulation tick with boundary constraints
     simulation.on("tick", () => {
+      // Constrain node positions to stay within bounds (with padding)
+      const padding = 30
+      // Legend area: bottom-left, exclude from node placement
+      const legendX = 20
+      const legendY = height - 200
+      const legendWidth = 180
+      const legendHeight = 200
+      
+      nodes.forEach(d => {
+        // Only constrain if not fixed by drag
+        if (d.fx === null && d.fy === null) {
+          // Constrain x: avoid left side where legend is (if in legend y-range)
+          let minX = padding
+          if (d.y >= legendY - 20 && d.y <= legendY + legendHeight) {
+            // If in legend y-range, exclude legend area
+            minX = Math.max(minX, legendX + legendWidth + padding)
+          }
+          d.x = Math.max(minX, Math.min(width - padding, d.x))
+          
+          // Constrain y: avoid bottom where legend is (if in legend x-range)
+          let maxY = height - padding
+          if (d.x >= legendX - 20 && d.x <= legendX + legendWidth) {
+            // If in legend x-range, exclude legend area
+            maxY = Math.min(maxY, legendY - padding)
+          }
+          d.y = Math.max(padding, Math.min(maxY, d.y))
+        } else {
+          // If fixed, still ensure it's within bounds
+          let minX = padding
+          if ((d.y || d.fy) >= legendY - 20 && (d.y || d.fy) <= legendY + legendHeight) {
+            minX = Math.max(minX, legendX + legendWidth + padding)
+          }
+          d.x = Math.max(minX, Math.min(width - padding, d.x || d.fx))
+          
+          let maxY = height - padding
+          if ((d.x || d.fx) >= legendX - 20 && (d.x || d.fx) <= legendX + legendWidth) {
+            maxY = Math.min(maxY, legendY - padding)
+          }
+          d.y = Math.max(padding, Math.min(maxY, d.y || d.fy))
+        }
+      })
+
       link
         .attr("x1", d => d.source.x)
         .attr("y1", d => d.source.y)
@@ -184,8 +236,27 @@ export default function GraphSegSMChart({
     }
 
     function dragged(event, d) {
-      d.fx = event.x
-      d.fy = event.y
+      // Constrain dragged position to bounds, excluding legend area
+      const padding = 30
+      const legendX = 20
+      const legendY = height - 200
+      const legendWidth = 180
+      const legendHeight = 200
+      
+      let minX = padding
+      if (event.y >= legendY - 20 && event.y <= legendY + legendHeight) {
+        // If in legend y-range, exclude legend area
+        minX = Math.max(minX, legendX + legendWidth + padding)
+      }
+      
+      let maxY = height - padding
+      if (event.x >= legendX - 20 && event.x <= legendX + legendWidth) {
+        // If in legend x-range, exclude legend area
+        maxY = Math.min(maxY, legendY - padding)
+      }
+      
+      d.fx = Math.max(minX, Math.min(width - padding, event.x))
+      d.fy = Math.max(padding, Math.min(maxY, event.y))
     }
 
     function dragended(event, d) {
@@ -204,9 +275,9 @@ export default function GraphSegSMChart({
       .attr("fill", "#333")
       .text(title)
 
-    // Add legend
+    // Add legend (positioned at bottom-left to avoid node overlap)
     const legend = g.append("g")
-      .attr("transform", `translate(${width - 180}, 20)`)
+      .attr("transform", `translate(20, ${height - 200})`)
 
     let legendY = 0
 

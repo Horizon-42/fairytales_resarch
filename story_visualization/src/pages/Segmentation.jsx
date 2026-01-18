@@ -31,14 +31,14 @@ export default function Segmentation({ story }) {
   // Ground truth segments from annotation
   const [gtSegments, setGtSegments] = useState([])
   
-  // Display mode: 'gt', 'predicted', or 'both'
+  // Display mode: 'gt' or 'predicted'
   const [displayMode, setDisplayMode] = useState('predicted')
   
   // Update display mode when result or gtSegments change
   useEffect(() => {
     if (result && result.boundaries && result.boundaries.length > 0) {
-      // If user switched to 'gt' or 'both' but no GT segments, switch to 'predicted'
-      if (gtSegments.length === 0 && (displayMode === 'both' || displayMode === 'gt')) {
+      // If user switched to 'gt' but no GT segments, switch to 'predicted'
+      if (gtSegments.length === 0 && displayMode === 'gt') {
         setDisplayMode('predicted')
       }
     }
@@ -268,116 +268,6 @@ export default function Segmentation({ story }) {
     return segments
   }
 
-  // Render text with both ground truth and predicted segments for comparison (split view)
-  const renderTextWithComparison = () => {
-    if (!text) {
-      return <div className="text-with-highlights">{text}</div>
-    }
-
-    const predictedSegments = buildPredictedSegments()
-    
-    if (predictedSegments.length === 0 && gtSegments.length === 0) {
-      return <div className="text-with-highlights">{text}</div>
-    }
-
-    // Render predicted segments (upper half)
-    const predictedParts = []
-    let predCurrentPos = 0
-    
-    predictedSegments.forEach((segment) => {
-      if (segment.startChar > predCurrentPos) {
-        predictedParts.push({
-          text: text.substring(predCurrentPos, segment.startChar),
-          type: 'normal'
-        })
-      }
-      predictedParts.push({
-        text: text.substring(segment.startChar, segment.endChar),
-        type: 'predicted',
-        segmentId: segment.segmentId
-      })
-      predCurrentPos = segment.endChar
-    })
-    
-    if (predCurrentPos < text.length) {
-      predictedParts.push({
-        text: text.substring(predCurrentPos),
-        type: 'normal'
-      })
-    }
-
-    // Render ground truth segments (lower half)
-    const gtParts = []
-    let gtCurrentPos = 0
-    const sortedGtSegments = [...gtSegments].sort((a, b) => a.startChar - b.startChar)
-    
-    sortedGtSegments.forEach((segment) => {
-      if (segment.startChar > gtCurrentPos) {
-        gtParts.push({
-          text: text.substring(gtCurrentPos, segment.startChar),
-          type: 'normal'
-        })
-      }
-      gtParts.push({
-        text: text.substring(segment.startChar, segment.endChar),
-        type: 'ground-truth',
-        segmentId: segment.segmentId
-      })
-      gtCurrentPos = segment.endChar
-    })
-    
-    if (gtCurrentPos < text.length) {
-      gtParts.push({
-        text: text.substring(gtCurrentPos),
-        type: 'normal'
-      })
-    }
-
-    // Render both layers: predicted on top (upper half), GT on bottom (lower half)
-    return (
-      <div className="comparison-text-container">
-        {/* Upper half: Predicted segments */}
-        <div className="comparison-text-upper">
-          {predictedParts.map((part, idx) => {
-            if (part.type === 'predicted') {
-              const bgColor = getSegmentColor(part.segmentId - 1)
-              return (
-                <span
-                  key={idx}
-                  className="predicted-text-segment-bg"
-                  style={{ backgroundColor: bgColor }}
-                  title={`Predicted Segment ${part.segmentId}`}
-                >
-                  {part.text}
-                </span>
-              )
-            }
-            return <span key={idx}>{part.text}</span>
-          })}
-        </div>
-        {/* Lower half: Ground truth segments */}
-        <div className="comparison-text-lower">
-          {gtParts.map((part, idx) => {
-            if (part.type === 'ground-truth') {
-              const bgColor = getSegmentColor(part.segmentId - 1)
-              return (
-                <span
-                  key={idx}
-                  className="gt-text-segment"
-                  style={{ backgroundColor: bgColor }}
-                  title={`Ground Truth Segment ${part.segmentId}`}
-                >
-                  {part.text}
-                </span>
-              )
-            }
-            return <span key={idx}>{part.text}</span>
-          })}
-        </div>
-      </div>
-    )
-  }
-
   // Render text with predicted segments only (reuse same method as groundtruth)
   const renderTextWithPredictedBoundaries = () => {
     const predictedSegments = buildPredictedSegments()
@@ -493,7 +383,7 @@ export default function Segmentation({ story }) {
               {(gtSegments.length > 0 && !result) || (result && result.boundaries && result.boundaries.length > 0) ? (
                 <div className="text-display-with-segments">
                   <div className="gt-segments-legend">
-                    {/* Display Mode Toggle - show when there's a result or both GT and result */}
+                    {/* Display Mode Toggle - show when there's a result */}
                     {result && result.boundaries && result.boundaries.length > 0 && (
                       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '0.5rem' }}>
                         <strong>Display Mode:</strong>
@@ -513,20 +403,12 @@ export default function Segmentation({ story }) {
                           >
                             Predicted
                           </button>
-                          <button
-                            className={`mode-button ${displayMode === 'both' ? 'active' : ''}`}
-                            onClick={() => setDisplayMode('both')}
-                            disabled={gtSegments.length === 0}
-                            title="Show both Ground Truth and Predicted"
-                          >
-                            Both
-                          </button>
                         </div>
                       </div>
                     )}
                     
-                    {/* Show GT legend when displaying GT or both */}
-                    {(displayMode === 'gt' || displayMode === 'both' || !result) && gtSegments.length > 0 && (
+                    {/* Show GT legend when displaying GT */}
+                    {(displayMode === 'gt' || !result) && gtSegments.length > 0 && (
                       <>
                         <strong>Ground Truth Segments (from annotation):</strong>
                         {gtSegments.map((seg) => (
@@ -541,8 +423,8 @@ export default function Segmentation({ story }) {
                       </>
                     )}
                     
-                    {/* Show Predicted legend when displaying predicted or both */}
-                    {result && result.boundaries && result.boundaries.length > 0 && (displayMode === 'predicted' || displayMode === 'both') && (
+                    {/* Show Predicted legend when displaying predicted */}
+                    {result && result.boundaries && result.boundaries.length > 0 && displayMode === 'predicted' && (
                       <>
                         <strong style={{ marginTop: '0.5rem', display: 'block' }}>Predicted Segments:</strong>
                         {buildPredictedSegments().map((seg) => (
@@ -559,15 +441,13 @@ export default function Segmentation({ story }) {
                   </div>
                   <div className="text-with-highlights" id="story-text-display">
                     {result && result.boundaries && result.boundaries.length > 0
-                      ? (displayMode === 'gt' ? renderTextWithSegments() : 
-                         displayMode === 'both' ? renderTextWithComparison() : 
-                         renderTextWithPredictedBoundaries())
+                      ? (displayMode === 'gt' ? renderTextWithSegments() : renderTextWithPredictedBoundaries())
                       : renderTextWithSegments()}
                   </div>
                   <div className="text-info">
                     {sentences.length} sentences detected
-                    {result && result.boundaries && result.boundaries.length > 0 && (displayMode === 'predicted' || displayMode === 'both') ? ` • ${getPredictedSegmentsCount()} predicted segments` : ''}
-                    {(displayMode === 'gt' || displayMode === 'both' || !result) && gtSegments.length > 0 ? ` • ${gtSegments.length} ground truth segments` : ''}
+                    {result && result.boundaries && result.boundaries.length > 0 && displayMode === 'predicted' ? ` • ${getPredictedSegmentsCount()} predicted segments` : ''}
+                    {(displayMode === 'gt' || !result) && gtSegments.length > 0 ? ` • ${gtSegments.length} ground truth segments` : ''}
                   </div>
                 </div>
               ) : (
@@ -593,17 +473,9 @@ export default function Segmentation({ story }) {
                             >
                               Predicted
                             </button>
-                            <button
-                              className={`mode-button ${displayMode === 'both' ? 'active' : ''}`}
-                              onClick={() => setDisplayMode('both')}
-                              disabled={gtSegments.length === 0}
-                              title="Show both Ground Truth and Predicted"
-                            >
-                              Both
-                            </button>
                           </div>
                         </div>
-                        {displayMode === 'gt' || displayMode === 'both' ? (
+                        {displayMode === 'gt' ? (
                           <>
                             <strong style={{ marginTop: '0.5rem', display: 'block' }}>Ground Truth:</strong>
                             {gtSegments.map((seg) => (
@@ -617,7 +489,7 @@ export default function Segmentation({ story }) {
                             ))}
                           </>
                         ) : null}
-                        {displayMode === 'predicted' || displayMode === 'both' ? (
+                        {displayMode === 'predicted' ? (
                           <>
                             <strong style={{ marginTop: '0.5rem', display: 'block' }}>Predicted Segments:</strong>
                             {buildPredictedSegments().map((seg) => (
@@ -633,14 +505,12 @@ export default function Segmentation({ story }) {
                         ) : null}
                       </div>
                       <div className="text-with-highlights" id="story-text-display">
-                        {displayMode === 'gt' ? renderTextWithSegments() : 
-                         displayMode === 'both' ? renderTextWithComparison() : 
-                         renderTextWithPredictedBoundaries()}
+                        {displayMode === 'gt' ? renderTextWithSegments() : renderTextWithPredictedBoundaries()}
                       </div>
                       <div className="text-info">
                         {sentences.length} sentences detected
-                        {displayMode === 'predicted' || displayMode === 'both' ? ` • ${getPredictedSegmentsCount()} predicted segments` : ''}
-                        {displayMode === 'gt' || displayMode === 'both' ? ` • ${gtSegments.length} ground truth segments` : ''}
+                        {displayMode === 'predicted' ? ` • ${getPredictedSegmentsCount()} predicted segments` : ''}
+                        {displayMode === 'gt' ? ` • ${gtSegments.length} ground truth segments` : ''}
                       </div>
                     </div>
                   ) : (
