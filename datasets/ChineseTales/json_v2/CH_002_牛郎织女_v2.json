@@ -301,16 +301,15 @@
         "text": "\"爹爹，我们拿这粪瓢来舀干天河的水。\"小女儿終于揩干了眼泪，瞪着一对小眼睛, 这么天真而又倔强地提议。\n\"对 ,我们来舀干天河的水。\"悲愤的牛郎毫不犹豫地答应了。\n说着，他果然拿起粪瓢，奋勇地一瓢一瓢地去舀那天河的水。他舀得倦乏了，儿女们又合力用他们稚弱的小手来帮爹爹自。"
       },
       "event_type": "STRUGGLE",
-      "description": "试图舀干天河水",
+      "description": "徒劳地尝试;试图舀干天河水",
       "agents": [
         "牛郎",
-        "一儿一女",
-        "小女儿"
+        "一儿一女"
       ],
       "targets": [
-        "王母娘娘"
+        "天河"
       ],
-      "target_type": "character",
+      "target_type": "object",
       "object_type": "normal_object",
       "instrument": "粪瓢",
       "time_order": 9,
@@ -321,7 +320,7 @@
       "action_type": "",
       "action_context": "",
       "action_status": "",
-      "narrative_function": ""
+      "narrative_function": "setup"
     },
     {
       "id": "098695bb-91a7-4a58-b32d-46325ac17351",
@@ -331,7 +330,7 @@
         "text": "牛郎见爱妻去了，悲痛万分，立刻用箩筐挑了儿女们，连夜跟踪追去。他原打算渡过那清浅的银河, 一直就到天庭，哪知道到了银河的地方，却早已消逝了银河的踪影,抬头一看, 原来银河已经被王母娘娘用法力搬到了天上。在苍蓝色的夜空中，银河，还是那么一秘清浅的闪光的水流，可是已经仙凡异路，再也不能够接近它了。"
       },
       "event_type": "VILLAINY",
-      "description": "阻止相见;王母天神用银河阻止夫妻相见",
+      "description": "阻止相见;王母抬升银河阻止牛郎及儿女与织女相见",
       "agents": [
         "王母娘娘",
         "天神"
@@ -350,7 +349,7 @@
       "action_type": "attack",
       "action_context": "block",
       "action_status": "success",
-      "narrative_function": "climax"
+      "narrative_function": "setup"
     },
     {
       "id": "cdbee6a6-dc9b-4040-8ce9-1e48d382acb3",
@@ -389,7 +388,7 @@
         "text": "牛郎到了天上，风样地穿行在灿烂的群星之间，那银河，已经遥遥在望，隔河的织女，也仿佛可以看见。牛郎大喜过望，孩子们招着小手儿齐声欢呼：\"妈妈！妈妈！\" 哪知道刚跑到银河，正想要涉河过去的时候，从更高的天空中忽然伸下来一只女人的大手————原来是王母娘娘着了急，拨下她头上的金營，沿着银河这么一划，清浅的银河马上变成波满滚滚的天河。\n对着这天河，眼泪除了像天河里的水一样地满涌奔流，还有什么法子可想呢？"
       },
       "event_type": "VILLAINY",
-      "description": "阻止相见",
+      "description": "阻止相见;王母将银河化为天河，阻止牛郎儿女继续追击",
       "agents": [
         "王母娘娘"
       ],
@@ -434,11 +433,11 @@
       "relationship_level1": "",
       "relationship_level2": "",
       "sentiment": "",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "action_category": "communicative",
+      "action_type": "persuade",
+      "action_context": "touched",
+      "action_status": "success",
+      "narrative_function": "resolution"
     },
     {
       "id": "e9a8526d-44ac-4793-a415-c1d4a526fa3e",
@@ -448,7 +447,7 @@
         "text": "牛郎和他的儿女从此就住在天上，隔着一道天河，和爱妻织女遥遥相望，假如他们为相思所苦的时候，他们也自有巧妙的方法，传书递信，互通消息。\n在秋夜天空的繁星中间，至今我们还可以看见有两颗较大的星，在那条白练样的天河两边，晶莹地闪烁着，那就是牵牛星和织女星。和牵牛星并列成直线的两颗小星，是他俩的小儿女。稍远地方有四颗像平行四边形的小星，据说就是织女投掷给牛郎的织布梭；距织女星不远有三颗小星，像等腰三角形，据说就是牛郎投掷给织女的牛拐子；他俩把书信缚在梭和牛拐子上，就用这种方法传达相思。————他们的爱情，真可算是海枯石烂，坚贞不移了。"
       },
       "event_type": "SOLUTION",
-      "description": "隔河相望，传递相思",
+      "description": "隔河相望，传递相思; 牛郎织女隔着银行用梭和拐传递思念",
       "agents": [
         "牛郎"
       ],
@@ -462,11 +461,11 @@
       "relationship_level1": "Romance",
       "relationship_level2": "lover",
       "sentiment": "romantic",
-      "action_category": "",
-      "action_type": "",
-      "action_context": "",
-      "action_status": "",
-      "narrative_function": ""
+      "action_category": "communicative",
+      "action_type": "inform",
+      "action_context": "passing love",
+      "action_status": "success",
+      "narrative_function": "resolution"
     }
   ],
   "themes_and_motifs": {
