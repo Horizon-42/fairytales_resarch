@@ -57,38 +57,52 @@ def extract_character_relationships(data: dict) -> dict:
         })
     
     # Build relationship edges from narrative events
+    # V3 format: events can have multiple relationships, each with its own agent/target
+    # V2 fallback: event-level agents/targets with relationship_level1/level2
     edges = []
     edge_counts = defaultdict(lambda: defaultdict(int))
     edge_details = defaultdict(list)
     
     for event in narrative_events:
-        agents = event.get("agents", [])
-        targets = event.get("targets", [])
-        rel_level1 = event.get("relationship_level1", "")
-        rel_level2 = event.get("relationship_level2", "")
-        sentiment = event.get("sentiment", "")
         event_type = event.get("event_type", "")
         description = event.get("description", "")
         time_order = event.get("time_order", 0)
-        
-        # Create edges between agents and targets
-        for agent in agents:
-            agent_id = char_name_to_id.get(agent)
-            if not agent_id:
-                # Try to find by partial match
-                for name, cid in char_name_to_id.items():
-                    if agent in name or name in agent:
-                        agent_id = cid
-                        break
-            
-            for target in targets:
+
+        # V3 format: Extract relationships from relationships array
+        relationships = event.get("relationships", [])
+
+        if relationships and isinstance(relationships, list):
+            # V3 format: Process each relationship in the array
+            for rel in relationships:
+                if not isinstance(rel, dict):
+                    continue
+
+                agent = rel.get("agent", "")
+                target = rel.get("target", "")
+                rel_level1 = rel.get("relationship_level1", "")
+                rel_level2 = rel.get("relationship_level2", "")
+                sentiment = rel.get("sentiment", "")
+
+                # Skip if missing agent or target
+                if not agent or not target:
+                    continue
+
+                # Find character IDs
+                agent_id = char_name_to_id.get(agent)
+                if not agent_id:
+                    # Try to find by partial match
+                    for name, cid in char_name_to_id.items():
+                        if agent in name or name in agent:
+                            agent_id = cid
+                            break
+
                 target_id = char_name_to_id.get(target)
                 if not target_id:
                     for name, cid in char_name_to_id.items():
                         if target in name or name in target:
                             target_id = cid
                             break
-                
+
                 if agent_id and target_id and agent_id != target_id:
                     edge_key = tuple(sorted([agent_id, target_id]))
                     edge_counts[edge_key]["count"] += 1
@@ -102,6 +116,45 @@ def extract_character_relationships(data: dict) -> dict:
                         "description": description,
                         "time_order": time_order,
                     })
+        else:
+            # V2 fallback: Use event-level agents/targets and relationship fields
+            agents = event.get("agents", [])
+            targets = event.get("targets", [])
+            rel_level1 = event.get("relationship_level1", "")
+            rel_level2 = event.get("relationship_level2", "")
+            sentiment = event.get("sentiment", "")
+
+            # Create edges between agents and targets
+            for agent in agents:
+                agent_id = char_name_to_id.get(agent)
+                if not agent_id:
+                    # Try to find by partial match
+                    for name, cid in char_name_to_id.items():
+                        if agent in name or name in agent:
+                            agent_id = cid
+                            break
+
+                for target in targets:
+                    target_id = char_name_to_id.get(target)
+                    if not target_id:
+                        for name, cid in char_name_to_id.items():
+                            if target in name or name in target:
+                                target_id = cid
+                                break
+
+                    if agent_id and target_id and agent_id != target_id:
+                        edge_key = tuple(sorted([agent_id, target_id]))
+                        edge_counts[edge_key]["count"] += 1
+                        edge_details[edge_key].append({
+                            "source": agent_id,
+                            "target": target_id,
+                            "relationship_level1": rel_level1,
+                            "relationship_level2": rel_level2,
+                            "sentiment": sentiment,
+                            "event_type": event_type,
+                            "description": description,
+                            "time_order": time_order,
+                        })
     
     # Aggregate edges
     for edge_key, details in edge_details.items():
