@@ -18,9 +18,13 @@ from typing import List, Dict
 import sys
 
 
-def extract_from_v3(v3_path: Path) -> Dict[str, List[Dict]]:
+def extract_from_v3(v3_path: Path, subdir: str = "") -> Dict[str, List[Dict]]:
     """
     Extract relationships, action_layer, and actions from v3 JSON file.
+    
+    Args:
+        v3_path: Path to the JSON v3 file
+        subdir: Subdirectory name (e.g., "ChineseTales", "Japanese") to track source
     
     Returns:
         Dict with keys: 'relationships', 'action_layers', 'actions'
@@ -54,6 +58,7 @@ def extract_from_v3(v3_path: Path) -> Dict[str, List[Dict]]:
                     for rel in relationships:
                         if isinstance(rel, dict):
                             rel_record = {
+                                "subdir": subdir,
                                 "story_name": story_name,
                                 "event_id": event_id,
                                 "text_span_start": text_span.get("start", ""),
@@ -71,6 +76,7 @@ def extract_from_v3(v3_path: Path) -> Dict[str, List[Dict]]:
                 action_layer = event.get("action_layer", {})
                 if isinstance(action_layer, dict):
                     action_layer_record = {
+                        "subdir": subdir,
                         "story_name": story_name,
                         "event_id": event_id,
                         "text_span_start": text_span.get("start", ""),
@@ -91,6 +97,7 @@ def extract_from_v3(v3_path: Path) -> Dict[str, List[Dict]]:
                 instrument = event.get("instrument", "")
                 
                 action_record = {
+                    "subdir": subdir,
                     "story_name": story_name,
                     "event_id": event_id,
                     "text_span_start": text_span.get("start", ""),
@@ -109,17 +116,18 @@ def extract_from_v3(v3_path: Path) -> Dict[str, List[Dict]]:
     return result
 
 
-def process_directory(input_dir: Path, output_dir: Path):
+def process_directory(input_dir: Path, output_dir: Path, subdir: str = ""):
     """
     Process all JSON v3 files in the input directory.
+    
+    Args:
+        input_dir: Directory containing JSON v3 files
+        output_dir: Output directory for CSV files (not used here, kept for compatibility)
+        subdir: Subdirectory name to track source (e.g., "ChineseTales")
+    
+    Returns:
+        Tuple of (relationships, action_layers, actions) lists
     """
-    output_dir.mkdir(parents=True, exist_ok=True)
-    
-    # Output file paths
-    relationships_file = output_dir / "relationships.csv"
-    action_layer_file = output_dir / "action_layer.csv"
-    actions_file = output_dir / "actions.csv"
-    
     # Collect all data
     all_relationships = []
     all_action_layers = []
@@ -130,14 +138,14 @@ def process_directory(input_dir: Path, output_dir: Path):
     
     if not json_files:
         print(f"No JSON files found in {input_dir}")
-        return
+        return all_relationships, all_action_layers, all_actions
     
     print(f"Found {len(json_files)} JSON file(s) to process")
     
     for json_file in sorted(json_files):
         print(f"Processing: {json_file.name}")
         
-        extracted = extract_from_v3(json_file)
+        extracted = extract_from_v3(json_file, subdir=subdir)
         
         all_relationships.extend(extracted['relationships'])
         all_action_layers.extend(extracted['action_layers'])
@@ -147,8 +155,22 @@ def process_directory(input_dir: Path, output_dir: Path):
         print(f"  - {len(extracted['action_layers'])} action layers")
         print(f"  - {len(extracted['actions'])} actions")
     
+    return all_relationships, all_action_layers, all_actions
+
+
+def write_csv_files(output_dir: Path, all_relationships: List[Dict], all_action_layers: List[Dict], all_actions: List[Dict]):
+    """
+    Write all collected data to CSV files.
+    """
+    output_dir.mkdir(parents=True, exist_ok=True)
+    
+    relationships_file = output_dir / "relationships.csv"
+    action_layer_file = output_dir / "action_layer.csv"
+    actions_file = output_dir / "actions.csv"
+    
     # Write relationships CSV
     relationships_fields = [
+        "subdir",
         "story_name",
         "event_id",
         "text_span_start",
@@ -170,6 +192,7 @@ def process_directory(input_dir: Path, output_dir: Path):
     
     # Write action_layer CSV
     action_layer_fields = [
+        "subdir",
         "story_name",
         "event_id",
         "text_span_start",
@@ -191,6 +214,7 @@ def process_directory(input_dir: Path, output_dir: Path):
     
     # Write actions CSV
     actions_fields = [
+        "subdir",
         "story_name",
         "event_id",
         "text_span_start",
@@ -218,12 +242,72 @@ def process_directory(input_dir: Path, output_dir: Path):
     print(f"{'='*60}")
 
 
+def process_all_subdirs(project_root: Path, output_dir: Path):
+    """
+    Process all json_v3 directories from the four main subdirectories.
+    Iterates through ChineseTales, Japanese, IndianTales, and PersianTales.
+    """
+    # Define the four subdirectories to process
+    subdirs = ["ChineseTales", "Japanese", "IndianTales", "PersianTales"]
+    datasets_dir = project_root / "datasets"
+    
+    # Collect all data from all subdirectories
+    all_relationships = []
+    all_action_layers = []
+    all_actions = []
+    
+    print("=" * 60)
+    print("Processing all json_v3 directories")
+    print("=" * 60)
+    
+    for subdir_name in subdirs:
+        subdir_path = datasets_dir / subdir_name / "json_v3"
+        
+        if not subdir_path.exists():
+            print(f"\nSkipping {subdir_name}: json_v3 directory does not exist")
+            continue
+        
+        print(f"\n{'='*60}")
+        print(f"Processing subdirectory: {subdir_name}")
+        print(f"Path: {subdir_path}")
+        print(f"{'='*60}")
+        
+        relationships, action_layers, actions = process_directory(subdir_path, output_dir, subdir=subdir_name)
+        
+        all_relationships.extend(relationships)
+        all_action_layers.extend(action_layers)
+        all_actions.extend(actions)
+    
+    # Write all collected data to CSV files
+    print(f"\n{'='*60}")
+    print("Writing all data to CSV files...")
+    print(f"{'='*60}")
+    
+    write_csv_files(output_dir, all_relationships, all_action_layers, all_actions)
+
+
 def main():
     """Main function"""
     script_dir = Path(__file__).parent
     project_root = script_dir.parent
     
-    # Parse command line arguments
+    # Check for --all flag
+    if "--all" in sys.argv or "-a" in sys.argv:
+        # Remove the flag from argv for compatibility
+        sys.argv = [arg for arg in sys.argv if arg not in ["--all", "-a"]]
+        
+        # Run all mode: process all json_v3 directories
+        output_dir = script_dir / "finetune_data"
+        if len(sys.argv) >= 2:
+            output_dir = Path(sys.argv[1])
+        
+        if not output_dir.is_absolute():
+            output_dir = project_root / output_dir
+        
+        process_all_subdirs(project_root, output_dir)
+        return
+    
+    # Parse command line arguments for single directory mode
     if len(sys.argv) >= 3:
         input_dir = Path(sys.argv[1])
         output_dir = Path(sys.argv[2])
@@ -246,13 +330,24 @@ def main():
         print(f"Error: Input directory does not exist: {input_dir}")
         print("\nUsage:")
         print(f"  python {Path(__file__).name} [input_dir] [output_dir]")
+        print(f"  python {Path(__file__).name} --all [output_dir]  # Process all json_v3 directories")
         print(f"\nDefault: input_dir={input_dir}, output_dir={output_dir}")
         sys.exit(1)
     
-    print(f"Input directory: {input_dir}")
-    print(f"Output directory: {output_dir}\n")
+    # Extract subdir name from path (e.g., "ChineseTales" from ".../datasets/ChineseTales/json_v3")
+    subdir = ""
+    parts = input_dir.parts
+    if "datasets" in parts:
+        datasets_idx = parts.index("datasets")
+        if datasets_idx + 1 < len(parts):
+            subdir = parts[datasets_idx + 1]
     
-    process_directory(input_dir, output_dir)
+    print(f"Input directory: {input_dir}")
+    print(f"Output directory: {output_dir}")
+    print(f"Subdirectory: {subdir}\n")
+    
+    relationships, action_layers, actions = process_directory(input_dir, output_dir, subdir=subdir)
+    write_csv_files(output_dir, relationships, action_layers, actions)
 
 
 if __name__ == "__main__":

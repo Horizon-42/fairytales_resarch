@@ -25,6 +25,10 @@ class OllamaConfig:
     top_p: float = 0.9
     num_ctx: int = 8192
     
+    # Performance optimization options
+    num_predict: Optional[int] = None  # Max tokens to generate (None = default 128, -1 = unlimited)
+    num_thread: Optional[int] = None   # CPU threads (None = auto-detect)
+    
     # Control thinking mode for models that support it (e.g., qwen3)
     # Set to False to disable thinking mode, True to enable, None to use model default
     think: Optional[bool] = None
@@ -199,9 +203,20 @@ def chat(
         "num_ctx": config.num_ctx,
     }
     
+    # Add performance optimization options
+    if config.num_predict is not None:
+        options["num_predict"] = config.num_predict
+    
+    if config.num_thread is not None:
+        options["num_thread"] = config.num_thread
+    
     # Add think parameter if explicitly set (for qwen3 and other thinking models)
+    # Set to False by default for better performance
     if config.think is not None:
         options["think"] = config.think
+    elif config.model.startswith("qwen3"):
+        # Disable thinking mode for qwen3 by default for faster inference
+        options["think"] = False
 
     payload: Dict[str, Any] = {
         "model": config.model,

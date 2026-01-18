@@ -19,6 +19,14 @@ Usage:
         --provider ollama \
         --model qwen3:8b \
         --include-instrument
+    
+    # With performance optimizations (faster)
+    conda run -n nlp python scripts/run_full_pipeline_and_evaluate.py \
+        --story-file story.txt \
+        --ground-truth ground_truth.json \
+        --num-predict 512 \
+        --num-ctx 4096 \
+        --disable-thinking
 """
 
 from __future__ import annotations
@@ -263,6 +271,31 @@ def main() -> int:
         help="Ollama base URL (default: http://localhost:11434)",
     )
     
+    # Performance options
+    parser.add_argument(
+        "--num-predict",
+        type=int,
+        default=None,
+        help="Max tokens to generate (None = default 128). Lower = faster (default: None)",
+    )
+    parser.add_argument(
+        "--num-thread",
+        type=int,
+        default=None,
+        help="CPU threads for inference (None = auto-detect). Set to physical cores count (default: None)",
+    )
+    parser.add_argument(
+        "--num-ctx",
+        type=int,
+        default=4096,
+        help="Context window size (default: 4096). Lower = faster but less context",
+    )
+    parser.add_argument(
+        "--disable-thinking",
+        action="store_true",
+        help="Explicitly disable thinking mode (faster for qwen3)",
+    )
+    
     # Pipeline options
     parser.add_argument(
         "--include-instrument",
@@ -303,6 +336,10 @@ def main() -> int:
         ollama=OllamaConfig(
             base_url=args.base_url,
             model=args.model if args.provider == "ollama" else os.getenv("OLLAMA_MODEL", "qwen3:8b"),
+            num_ctx=args.num_ctx,
+            num_predict=args.num_predict,
+            num_thread=args.num_thread,
+            think=False if args.disable_thinking else None,  # Disable thinking by default for speed
         ),
         gemini=GeminiConfig(
             api_key=os.getenv("GEMINI_API_KEY", ""),
