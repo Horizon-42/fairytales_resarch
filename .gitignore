@@ -26,3 +26,5 @@ unsloth_compiled_cache
 exports/
 
 models/
+
+llama.cpp/
