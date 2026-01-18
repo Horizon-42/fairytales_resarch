@@ -1,0 +1,108 @@
+You are a master storyteller with deep expertise in Japanese folktales, myths, and traditional narratives. Your task is to create a complete, engaging story that faithfully follows the provided narrative structure while bringing it to life with rich detail and cultural authenticity.
+
+**CRITICAL LANGUAGE REQUIREMENT:**
+You MUST write the entire story in Japanese. This is not optional. Every word, sentence, and paragraph must be in Japanese, not English or any other language.
+
+**STORY INFORMATION:**
+- Title: 
+- Cultural Origin: Japanese
+- Required Language: Japanese
+
+**CHARACTERS:**
+- 若者 (Hero) - also known as: 貧乏な若者
+- 観音 (Mentor) - also known as: 観音さま
+- 坊さんたち (Sidekick/Helper) - also known as: お寺の坊ぼうさん
+- 夢の中の「おじいさん」 (Herald)
+- あぶ (Other)
+- 牛車の女の人 (Ruler) - also known as: 身分みぶんのあるらしい様子ようすをした女の人
+- 牛車の男の子 (Everyman) - also known as: 若さま
+- 侍 (Sidekick/Helper) - also known as: お供
+- お供ともの女の一人 (Everyman) - also known as: 病人びょうにんの女
+- 馬の主人 (Ruler)
+- 下男 (Everyman)
+- 鳥羽の家の人たち (Everyman) - also known as: 田と米と家を渡す側
+- お嫁 (Lover)
+
+Each character has an archetypal role. Develop them in a way that is consistent with their archetype while also giving them depth and personality. Use character names consistently throughout the story, including any aliases provided.
+
+**NARRATIVE STRUCTURE:**
+
+The story must follow these 24 events in the exact order specified. Each event must correspond to ONE paragraph in your output, wrapped in curly braces {}:
+
+Event 1: [Initial Situation] むかし、大和国やまとのくにに貧乏びんぼうな若者わかものがありました。一人ひとりぼっちで、ふた親おやも妻つまも子供こどももない上に、使つかってくれる主人しゅじんもまだありませんでした。 | Agents: 若者
+Event 2: [LACK] このままあなたのお前まえでかつえ死じにに死しんでしまうかも知しれません。 | Agents: 若者 | Targets: 観音
+Event 3: [MEDIATION] その夢ゆめを見みないうちは、死しぬまでここにこうしておこもりをしておりますから。」 | Agents: 若者 | Targets: 観音
+Event 4: [RECONNAISSANCE] 「お前まえはだれに使つかわれている者ものだ。いったいどこで物ものを食たべるのか。」 | Agents: 坊さんたち | Targets: 若者
+Event 5: [DELIVERY] わたしのような運うんの悪わるい者ものは使つかってくれる人もありません。
+Event 6: [BEGINNING_COUNTERACTION] せめて食たべ物ものだけはやることにしよう。」 | Agents: 坊さんたち | Targets: 若者
+Event 7: [FIRST_FUNCTION_DONOR] ここを出でたら、いちばん先さきに手てにさわったものを拾ひろって、それはどんなにつまらないものでもだいじに持もっているのだ。 | Agents: 夢の中の「おじいさん」 | Targets: 若者
+Event 8: [DEPARTURE] すぐにお寺てらを出でていきました。 | Agents: 若者 | Targets: 長谷寺
+Event 9: [RECEIPT_OF_AGENT] 路みちの上に落おちていた一本ぽんのわらを、思おもわず手につかんでいました。 | Agents: 若者 | Targets: 一本のわら
+Event 10: [HERO_REACTION] これも観音かんのんさまのおさずけものかも知しれないと思おもって、手の中でおもちゃにしながら持もっていきました。 | Agents: 若者
+Event 11: [TRICKERY] とうとうあぶをつかまえて、さっきのわらでおなかをしばって、木の枝えだの先さきへくくりつけて持もっていきました。 | Agents: 若者 | Targets: あぶ
+Event 12: [COMPLICITY] 若わかさまがそのぶんぶんいうものをほしいとおっしゃるから、気きの毒どくだがさし上あげてくれないか。 | Agents: 侍 | Targets: 若者
+Event 13: [OTHER] そんなにほしいとおっしゃるなら、お上あげ申もうしましょう。 | Agents: 若者 | Targets: 侍
+Event 14: [OTHER] 大きな、いいにおいのするみかんを三つ、りっぱな紙かみにのせて、お供ともの侍さむらいに渡わたしました。 | Agents: 牛車の女の人 | Targets: 若者
+Event 15: [OTHER] みかんを三つとも出だしてやりました。 | Agents: 若者 | Targets: お供ともの女の一人
+Event 16: [OTHER] 真まっ白しろな上等じょうとうな布ぬのを三反さんたん出だして、
+「どんなお礼れいでもして上あげたいところだけれど、途中とちゅうでどうすることもできないから、ほんのおしるしにさし上あげます。」
+　といって | Agents: 牛車の女の人
+Event 17: [VILLAINY] 馬うまは若者わかものの前まえまで来きて、ふいにばったり倒たおれて、そのままそこで死しんでしまいました。 | Agents: 馬 | Targets: 馬の主人
+Event 18: [OTHER] 馬うまはわたしが引ひき受うけて、何なんとか始末しまつして上あげますから、わたしにゆずって下くださいませんか。その代かわりにこれを上あげましょう。」 | Agents: 若者 | Targets: 下男
+Event 19: [MEDIATION] 「どうぞこの馬うまをもとのとおりに生いかして下くださいまし。」 | Agents: 若者 | Targets: 観音
+Event 20: [SOLUTION] 死しんでいた馬うまがふと目をあいて、やがてむくむく起おき上あがろうとしました。 | Agents: 観音 | Targets: 馬
+Event 21: [OTHER] この馬うまを買かって下くださいませんか。」 | Agents: 若者 | Targets: 鳥羽の家の人たち
+Event 22: [OTHER] 稲田いなだを三町ちょうと、お米こめを少すこしくれました。 | Agents: 鳥羽の家の人たち | Targets: 若者
+Event 23: [LIQUIDATION] どんどんお金かねがたまって、とうとう大金持おおがねもちになりました。 | Agents: 若者 | Targets: 若者
+Event 24: [WEDDING] 若者わかものはいいお嫁よめさんをもらって、子供こどもや孫まごがたくさん出来できました。 | Agents: 若者 | Targets: お嫁
+
+Each event represents a key plot point that must be included in your narrative. The event type (e.g., VILLAINY, DEPARTURE, VICTORY) indicates the narrative function, which should inform how you present and develop that moment in the story. You must generate exactly 24 paragraphs, each wrapped in {}, corresponding to these 24 events in order.
+
+**STORY GENERATION REQUIREMENTS:**
+
+1. **Narrative Flow**: The story must progress smoothly through all events in chronological order. Create natural transitions between events that feel organic and engaging.
+
+2. **Character Development**: Include all listed characters and develop their roles naturally. Characters should feel authentic to their archetypal roles while also having individual personalities.
+
+3. **Cultural Authenticity**: 
+   - Use appropriate cultural details, settings, and traditions for Japanese folktales
+   - Incorporate relevant cultural elements, motifs, and storytelling conventions
+   - Maintain the traditional narrative style typical of Japanese stories
+
+4. **Writing Style**:
+   - Use vivid, descriptive language that brings scenes to life
+   - Include sensory details (sights, sounds, emotions) where appropriate
+   - Balance dialogue and narration effectively
+   - Create tension and emotional resonance where the events suggest it
+
+5. **Completeness**: The story should be self-contained and readable as a standalone narrative. Do not include meta-commentary, explanations, or analysis—only the story itself.
+
+6. **Length**: Generate a substantial, well-developed story that fully explores each event. Aim for a length appropriate to the complexity of the narrative structure provided.
+
+**OUTPUT FORMAT - CRITICAL:**
+
+You must format the story as follows:
+- Each narrative event corresponds to ONE story paragraph
+- Each paragraph MUST be wrapped in curly braces {}
+- The paragraphs must appear in the exact order of the events (Event 1, Event 2, ..., Event 24)
+- Each paragraph should be a self-contained narrative segment that develops the corresponding event
+
+Format example:
+{First paragraph corresponding to Event 1}
+{Second paragraph corresponding to Event 2}
+{Third paragraph corresponding to Event 3}
+...
+
+Requirements:
+- Each {} block should contain the story text for ONE narrative event only
+- Do NOT include any text outside the curly braces
+- Do NOT include the event numbers or labels inside the braces
+- Do NOT include any introduction, explanation, meta-commentary, notes, or analysis
+- Do NOT include the title
+- The story should flow naturally from one {} block to the next
+
+**LANGUAGE REMINDER:**
+CRITICAL: You must write the entire story in Japanese, not in English. The story must be completely in Japanese from the first word to the last word. Do not use English at all.
+
+**BEGIN THE STORY NOW (with proper formatting):**
+

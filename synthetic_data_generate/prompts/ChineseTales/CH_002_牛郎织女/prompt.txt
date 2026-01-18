@@ -1,0 +1,93 @@
+You are a master storyteller with deep expertise in Chinese folktales, myths, and traditional narratives. Your task is to create a complete, engaging story that faithfully follows the provided narrative structure while bringing it to life with rich detail and cultural authenticity.
+
+**CRITICAL LANGUAGE REQUIREMENT:**
+You MUST write the entire story in 中文. This is not optional. Every word, sentence, and paragraph must be in 中文, not English or any other language.
+
+**STORY INFORMATION:**
+- Title: 牛郎织女
+- Cultural Origin: Chinese
+- Required Language: 中文
+
+**CHARACTERS:**
+- 织女 (Lover)
+- 天帝 (Villain)
+- 牛郎 (Hero)
+- 老牛 (Mentor)
+- 天神 (Villain)
+- 小女儿 (Sidekick/Helper)
+- 妇女们 (Everyman)
+- 哥嫂 (Everyman)
+- 一儿一女 (Everyman) - also known as: 孩子; 一对儿女;儿女们
+- 王母娘娘 (Villain) - also known as: 王母
+
+Each character has an archetypal role. Develop them in a way that is consistent with their archetype while also giving them depth and personality. Use character names consistently throughout the story, including any aliases provided.
+
+**NARRATIVE STRUCTURE:**
+
+The story must follow these 14 events in the exact order specified. Each event must correspond to ONE paragraph in your output, wrapped in curly braces {}:
+
+Event 1: [OTHER] 织;neat | Agents: 织女 | Targets: 天衣
+Event 2: [VILLAINY] 虐待;abuse | Agents: 哥嫂 | Targets: 牛郎
+Event 3: [OTHER] 帮助;Help | Agents: 牛郎, 老牛 | Targets: 房子
+Event 4: [LACK] 寂寞;get lonely | Agents: 牛郎
+Event 5: [GUIDANCE] 去河边, 去夺取织女的衣服 | Agents: 老牛 | Targets: 牛郎
+Event 6: [LIQUIDATION] 在非暴力强迫下, 女方同意嫁给男方 | Agents: 牛郎 | Targets: 织女
+Event 7: [LIQUIDATION] 夫妻生活美满, 养育子女 | Agents: 织女, 牛郎, 一儿一女 | Targets: 家
+Event 8: [VILLAINY] 妻子被迫和丈夫、子女分开 | Agents: 天帝 | Targets: 牛郎, 织女
+Event 9: [STRUGGLE] 徒劳地尝试;试图舀干天河水 | Agents: 牛郎, 一儿一女 | Targets: 天河 | Instrument: 粪瓢
+Event 9: [VILLAINY] 阻止相见;王母抬升银河阻止牛郎及儿女与织女相见 | Agents: 王母娘娘, 天神 | Targets: 牛郎
+Event 10: [RECEIPT_OF_AGENT] 受到帮助开始追击;在老牛死去后的牛皮帮助下飞上天开始追击 | Agents: 老牛 | Targets: 牛郎, 一儿一女 | Instrument: 牛皮;Skin of the cow
+Event 11: [VILLAINY] 阻止相见;王母将银河化为天河，阻止牛郎儿女继续追击 | Agents: 王母娘娘 | Targets: 牛郎, 一儿一女 | Instrument: 金簪
+Event 12: [VICTORY] 感动 | Agents: 牛郎, 织女 | Targets: 天帝, 王母娘娘
+Event 13: [SOLUTION] 隔河相望，传递相思; 牛郎织女隔着银行用梭和拐传递思念 | Agents: 牛郎 | Targets: 织女 | Instrument: 梭;拐子
+
+Each event represents a key plot point that must be included in your narrative. The event type (e.g., VILLAINY, DEPARTURE, VICTORY) indicates the narrative function, which should inform how you present and develop that moment in the story. You must generate exactly 14 paragraphs, each wrapped in {}, corresponding to these 14 events in order.
+
+**STORY GENERATION REQUIREMENTS:**
+
+1. **Narrative Flow**: The story must progress smoothly through all events in chronological order. Create natural transitions between events that feel organic and engaging.
+
+2. **Character Development**: Include all listed characters and develop their roles naturally. Characters should feel authentic to their archetypal roles while also having individual personalities.
+
+3. **Cultural Authenticity**: 
+   - Use appropriate cultural details, settings, and traditions for Chinese folktales
+   - Incorporate relevant cultural elements, motifs, and storytelling conventions
+   - Maintain the traditional narrative style typical of Chinese stories
+
+4. **Writing Style**:
+   - Use vivid, descriptive language that brings scenes to life
+   - Include sensory details (sights, sounds, emotions) where appropriate
+   - Balance dialogue and narration effectively
+   - Create tension and emotional resonance where the events suggest it
+
+5. **Completeness**: The story should be self-contained and readable as a standalone narrative. Do not include meta-commentary, explanations, or analysis—only the story itself.
+
+6. **Length**: Generate a substantial, well-developed story that fully explores each event. Aim for a length appropriate to the complexity of the narrative structure provided.
+
+**OUTPUT FORMAT - CRITICAL:**
+
+You must format the story as follows:
+- Each narrative event corresponds to ONE story paragraph
+- Each paragraph MUST be wrapped in curly braces {}
+- The paragraphs must appear in the exact order of the events (Event 1, Event 2, ..., Event 14)
+- Each paragraph should be a self-contained narrative segment that develops the corresponding event
+
+Format example:
+{First paragraph corresponding to Event 1}
+{Second paragraph corresponding to Event 2}
+{Third paragraph corresponding to Event 3}
+...
+
+Requirements:
+- Each {} block should contain the story text for ONE narrative event only
+- Do NOT include any text outside the curly braces
+- Do NOT include the event numbers or labels inside the braces
+- Do NOT include any introduction, explanation, meta-commentary, notes, or analysis
+- Do NOT include the title
+- The story should flow naturally from one {} block to the next
+
+**LANGUAGE REMINDER:**
+CRITICAL: You must write the entire story in 中文, not in English. The story must be completely in 中文 from the first word to the last word. Do not use English at all.
+
+**BEGIN THE STORY NOW (with proper formatting):**
+

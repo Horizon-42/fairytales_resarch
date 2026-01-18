@@ -1,0 +1,108 @@
+You are a master storyteller with deep expertise in Japanese folktales, myths, and traditional narratives. Your task is to create a complete, engaging story that faithfully follows the provided narrative structure while bringing it to life with rich detail and cultural authenticity.
+
+**CRITICAL LANGUAGE REQUIREMENT:**
+You MUST write the entire story in Japanese. This is not optional. Every word, sentence, and paragraph must be in Japanese, not English or any other language.
+
+**STORY INFORMATION:**
+- Title: 
+- Cultural Origin: Japanese
+- Required Language: Japanese
+
+**CHARACTERS:**
+- 一寸法師 (Hero)
+- おとうさん (Everyman) - also known as: 夫婦
+- おかあさん (Everyman) - also known as: 夫婦
+- 鬼 (Villain)
+- 宰相殿 (Ruler)
+- 姫 (Damsel) - also known as: お姫ひめさま
+- 天子 (Ruler)
+- 明神 (Mentor)
+
+Each character has an archetypal role. Develop them in a way that is consistent with their archetype while also giving them depth and personality. Use character names consistently throughout the story, including any aliases provided.
+
+**NARRATIVE STRUCTURE:**
+
+The story must follow these 15 events in the exact order specified. Each event must correspond to ONE paragraph in your output, wrapped in curly braces {}:
+
+Event 1: [Initial Situation] むかし、摂津国せっつのくにの難波なにわという所ところに、夫婦ふうふの者ものが住すんでおりました。 | Agents: おとうさん, おかあさん
+Event 2: [BEGINNING_COUNTERACTION] 住吉すみよしの明神みょうじんさまに、おまいりをしては、
+「どうぞ子供こどもを一人ひとりおさずけ下くださいまし。それは指ゆびほどの小ちいさな子でもよろしゅうございますから。」
+　と一生懸命いっしょうけん | Agents: おとうさん, おかあさん | Targets: 明神さま
+Event 3: [LIQUIDATION] すると間まもなく、お上かみさんは身持みもちになりました。 | Agents: 明神 | Targets: おかあさん
+Event 4: [OTHER] ところがそれがまた小ちいさいといって、ほんとうに指ゆびほどの大きさしかありませんでした。 | Agents: 一寸法師 | Targets: 一寸法師
+Event 5: [VILLAINY] 近所きんじょの子供こどもたちが集あつまってきて、
+「やあ、ちびが歩あるいている。」
+「ふみ殺ころされるなよ。」
+「つまんでかみつぶしてやろうか。」
+「ちびやい。ちびやい。」
+　と口々くちぐちにいって、 | Agents: 近所の子供たち | Targets: 一寸法師
+Event 6: [BEGINNING_COUNTERACTION] ある日一寸法師いっすんぼうしは、おとうさんとおかあさんの前まえへ出て、
+「どうかわたくしにお暇ひまを下ください。」
+　といいました | Agents: 一寸法師 | Targets: おとうさん, おかあさん
+Event 7: [DEPARTURE] 住吉すみよしの浜はまから舟出ふなでをしました。 | Agents: 一寸法師 | Targets: おとうさん, おかあさん
+Event 8: [FIRST_FUNCTION_DONOR] 「おもしろい小僧こぞうだ。よしよし使つかってやろう。」
+　とおっしゃって、そのままお屋敷やしきに置おいておやりになりました。 | Agents: 宰相殿 | Targets: 一寸法師
+Event 9: [VILLAINY] 二匹ひきの鬼おにがそこへひょっこり飛とび出だしてきました。そしていきなりお姫ひめさまにとびかかって、ただ一口ひとくちに食たべようとしました。 | Agents: 鬼 | Targets: 姫
+Event 10: [STRUGGLE] 一寸法師いっすんぼうしは、例れいのぬい針ばりの刀かたなをきらりと引ひき抜ぬいて、ぴょこんと鬼おにの前まえへ飛とんで出ました。そしてありったけの大きな声こえを振ふり立たてて、
+「これこれ、このお方かたを | Agents: 一寸法師 | Targets: 鬼
+Event 11: [VICTORY] 鬼おには目玉めだまが抜ぬけ出だしたかと思おもって、びっくりして、
+「大たいへん、大たいへん。」
+　と、後あとをも見みずに逃にげ出だしました。するともう一匹ぴきの鬼おにも、
+「こりやかなわん。逃にげろ、 | Agents: 鬼 | Targets: 一寸法師
+Event 12: [RECEIPT_OF_AGENT] 「これは鬼おにの忘わすれて行った打うち出での小槌こづちです。これを振ふれば、何なんでもほしいと思おもうものが出でてきます。 | Agents: 一寸法師 | Targets: 打ち出の小槌 | Instrument: 小槌
+Event 13: [TRANSFIGURATION] こういって、一寸法師いっすんぼうしは、打うち出での小槌こづちを振ふり上あげて、
+「一寸法師いっすんぼうしよ、大きくなれ。あたり前まえの背せいになれ。」
+　といいながら、一度ど振ふりますと背せいが一尺し | Agents: 一寸法師 | Targets: 一寸法師
+Event 14: [RECOGNITION] 天子てんしさまはさっそく、一寸法師いっすんぼうしに位くらいをおさずけになって、堀河ほりかわの少将しょうしょうとお呼よばせになりました。 | Agents: 天子 | Targets: 一寸法師
+Event 15: [WEDDING] 、お姫ひめさまをお嫁よめさんにもらいました。 | Agents: 一寸法師 | Targets: 姫
+
+Each event represents a key plot point that must be included in your narrative. The event type (e.g., VILLAINY, DEPARTURE, VICTORY) indicates the narrative function, which should inform how you present and develop that moment in the story. You must generate exactly 15 paragraphs, each wrapped in {}, corresponding to these 15 events in order.
+
+**STORY GENERATION REQUIREMENTS:**
+
+1. **Narrative Flow**: The story must progress smoothly through all events in chronological order. Create natural transitions between events that feel organic and engaging.
+
+2. **Character Development**: Include all listed characters and develop their roles naturally. Characters should feel authentic to their archetypal roles while also having individual personalities.
+
+3. **Cultural Authenticity**: 
+   - Use appropriate cultural details, settings, and traditions for Japanese folktales
+   - Incorporate relevant cultural elements, motifs, and storytelling conventions
+   - Maintain the traditional narrative style typical of Japanese stories
+
+4. **Writing Style**:
+   - Use vivid, descriptive language that brings scenes to life
+   - Include sensory details (sights, sounds, emotions) where appropriate
+   - Balance dialogue and narration effectively
+   - Create tension and emotional resonance where the events suggest it
+
+5. **Completeness**: The story should be self-contained and readable as a standalone narrative. Do not include meta-commentary, explanations, or analysis—only the story itself.
+
+6. **Length**: Generate a substantial, well-developed story that fully explores each event. Aim for a length appropriate to the complexity of the narrative structure provided.
+
+**OUTPUT FORMAT - CRITICAL:**
+
+You must format the story as follows:
+- Each narrative event corresponds to ONE story paragraph
+- Each paragraph MUST be wrapped in curly braces {}
+- The paragraphs must appear in the exact order of the events (Event 1, Event 2, ..., Event 15)
+- Each paragraph should be a self-contained narrative segment that develops the corresponding event
+
+Format example:
+{First paragraph corresponding to Event 1}
+{Second paragraph corresponding to Event 2}
+{Third paragraph corresponding to Event 3}
+...
+
+Requirements:
+- Each {} block should contain the story text for ONE narrative event only
+- Do NOT include any text outside the curly braces
+- Do NOT include the event numbers or labels inside the braces
+- Do NOT include any introduction, explanation, meta-commentary, notes, or analysis
+- Do NOT include the title
+- The story should flow naturally from one {} block to the next
+
+**LANGUAGE REMINDER:**
+CRITICAL: You must write the entire story in Japanese, not in English. The story must be completely in Japanese from the first word to the last word. Do not use English at all.
+
+**BEGIN THE STORY NOW (with proper formatting):**
+

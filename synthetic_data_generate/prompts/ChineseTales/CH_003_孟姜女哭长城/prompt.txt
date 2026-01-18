@@ -1,0 +1,100 @@
+You are a master storyteller with deep expertise in Chinese folktales, myths, and traditional narratives. Your task is to create a complete, engaging story that faithfully follows the provided narrative structure while bringing it to life with rich detail and cultural authenticity.
+
+**CRITICAL LANGUAGE REQUIREMENT:**
+You MUST write the entire story in 中文. This is not optional. Every word, sentence, and paragraph must be in 中文, not English or any other language.
+
+**STORY INFORMATION:**
+- Title: 孟姜女哭长城
+- Cultural Origin: Chinese
+- Required Language: 中文
+
+**CHARACTERS:**
+- 秦始皇 (Ruler)
+- 卢教 (Herald)
+- 万喜良 (Lover)
+- 孟员外 (Everyman)
+- 孟姜女 (Hero)
+- 孟兴 (Other)
+- 姜婆 (Other)
+- 公差 (Villain) - also known as: 公差们
+- 乌鸦 (Sidekick/Helper) - also known as: 一对乌鸦; 小乌鸦
+- 老翁 (Everyman)
+- 工头 (Herald)
+
+Each character has an archetypal role. Develop them in a way that is consistent with their archetype while also giving them depth and personality. Use character names consistently throughout the story, including any aliases provided.
+
+**NARRATIVE STRUCTURE:**
+
+The story must follow these 20 events in the exact order specified. Each event must correspond to ONE paragraph in your output, wrapped in curly braces {}:
+
+Event 1: [VILLAINY] 统治者出于荒诞的理由伤害人民, 英雄(未来的)家人也是潜在的受害者; 秦始皇筑长城，万喜良无辜遭殃 | Agents: 秦始皇 | Targets: 万喜良
+Event 2: [VILLAINY] 潜在的迫害变成了实质的抓捕, 而这反而促使英雄未来的丈夫与她相会 | Agents: 秦始皇 | Targets: 万喜良
+Event 3: [BRANDING] 女英雄有着非凡的出身 | Agents: 孟姜女
+Event 4: [RESCUE] 拯救落水的女孩 | Agents: 万喜良 | Targets: 孟姜女
+Event 5: [WEDDING] 男女在半自愿半被习俗强迫的情况下结婚 | Agents: 万喜良 | Targets: 孟姜女
+Event 6: [VILLAINY] 抓捕丈夫,使妻子伤心 | Agents: 秦始皇, 公差 | Targets: 万喜良, 孟姜女
+Event 7: [ABSENTATION] 妻子失去了丈夫 | Agents: 孟姜女 | Targets: 万喜良
+Event 8: [DEPARTURE] 离家去寻找丈夫 | Agents: 孟姜女 | Targets: 万喜良
+Event 9: [BEGINNING_COUNTERACTION] 奇迹象征着对命运的反抗, 也象征着宿命的达成 | Agents: 孟姜女
+Event 10: [GUIDANCE] 指路 | Agents: 乌鸦 | Targets: 孟姜女
+Event 11: [GUIDANCE] 指引长城所在 | Agents: 老翁
+Event 12: [VILLAINY] 丈夫死于被迫劳作 | Agents: 秦始皇 | Targets: 万喜良
+Event 13: [EXPOSURE] 残酷的现状被悲伤引起的奇迹揭示 | Agents: 孟姜女 | Targets: 秦始皇
+Event 14: [RECOGNITION] 死去的丈夫被妻子认出 | Agents: 万喜良 | Targets: 孟姜女
+Event 15: [RECONNAISSANCE] 统治者传唤抓捕英雄 | Agents: 秦始皇 | Targets: 孟姜女
+Event 16: [PURSUIT] 统治者追求美貌的英雄 | Agents: 秦始皇 | Targets: 孟姜女
+Event 17: [STRUGGLE] 美貌智慧的英雄通过软性手段与统治者交锋 | Agents: 孟姜女 | Targets: 秦始皇
+Event 18: [SOLUTION] 美貌的英雄以自己的死亡拒绝残暴的统治者 | Agents: 孟姜女 | Targets: 秦始皇
+Event 19: [PUNISHMENT] 无聊也是一种对独裁者的惩罚 | Agents: 孟姜女 | Targets: 秦始皇
+Event 20: [TRANSFIGURATION] 美貌的女英雄成为了天上的仙女 | Agents: 孟姜女
+
+Each event represents a key plot point that must be included in your narrative. The event type (e.g., VILLAINY, DEPARTURE, VICTORY) indicates the narrative function, which should inform how you present and develop that moment in the story. You must generate exactly 20 paragraphs, each wrapped in {}, corresponding to these 20 events in order.
+
+**STORY GENERATION REQUIREMENTS:**
+
+1. **Narrative Flow**: The story must progress smoothly through all events in chronological order. Create natural transitions between events that feel organic and engaging.
+
+2. **Character Development**: Include all listed characters and develop their roles naturally. Characters should feel authentic to their archetypal roles while also having individual personalities.
+
+3. **Cultural Authenticity**: 
+   - Use appropriate cultural details, settings, and traditions for Chinese folktales
+   - Incorporate relevant cultural elements, motifs, and storytelling conventions
+   - Maintain the traditional narrative style typical of Chinese stories
+
+4. **Writing Style**:
+   - Use vivid, descriptive language that brings scenes to life
+   - Include sensory details (sights, sounds, emotions) where appropriate
+   - Balance dialogue and narration effectively
+   - Create tension and emotional resonance where the events suggest it
+
+5. **Completeness**: The story should be self-contained and readable as a standalone narrative. Do not include meta-commentary, explanations, or analysis—only the story itself.
+
+6. **Length**: Generate a substantial, well-developed story that fully explores each event. Aim for a length appropriate to the complexity of the narrative structure provided.
+
+**OUTPUT FORMAT - CRITICAL:**
+
+You must format the story as follows:
+- Each narrative event corresponds to ONE story paragraph
+- Each paragraph MUST be wrapped in curly braces {}
+- The paragraphs must appear in the exact order of the events (Event 1, Event 2, ..., Event 20)
+- Each paragraph should be a self-contained narrative segment that develops the corresponding event
+
+Format example:
+{First paragraph corresponding to Event 1}
+{Second paragraph corresponding to Event 2}
+{Third paragraph corresponding to Event 3}
+...
+
+Requirements:
+- Each {} block should contain the story text for ONE narrative event only
+- Do NOT include any text outside the curly braces
+- Do NOT include the event numbers or labels inside the braces
+- Do NOT include any introduction, explanation, meta-commentary, notes, or analysis
+- Do NOT include the title
+- The story should flow naturally from one {} block to the next
+
+**LANGUAGE REMINDER:**
+CRITICAL: You must write the entire story in 中文, not in English. The story must be completely in 中文 from the first word to the last word. Do not use English at all.
+
+**BEGIN THE STORY NOW (with proper formatting):**
+

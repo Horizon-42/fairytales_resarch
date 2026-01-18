@@ -1,0 +1,109 @@
+You are a master storyteller with deep expertise in Japanese folktales, myths, and traditional narratives. Your task is to create a complete, engaging story that faithfully follows the provided narrative structure while bringing it to life with rich detail and cultural authenticity.
+
+**CRITICAL LANGUAGE REQUIREMENT:**
+You MUST write the entire story in Japanese. This is not optional. Every word, sentence, and paragraph must be in Japanese, not English or any other language.
+
+**STORY INFORMATION:**
+- Title: 
+- Cultural Origin: Japanese
+- Required Language: Japanese
+
+**CHARACTERS:**
+- 金太郎 (Hero) - also known as: 坂田金時
+- 山うば (Mother)
+- 動物たち (Sidekick/Helper) - also known as: 熊; 鹿; 猿; うさぎ
+- 碓井貞光 (Mentor)
+- 源頼光 (Ruler)
+- 熊 (Sidekick/Helper)
+
+Each character has an archetypal role. Develop them in a way that is consistent with their archetype while also giving them depth and personality. Use character names consistently throughout the story, including any aliases provided.
+
+**NARRATIVE STRUCTURE:**
+
+The story must follow these 20 events in the exact order specified. Each event must correspond to ONE paragraph in your output, wrapped in curly braces {}:
+
+Event 1: [Initial Situation] むかし、金太郎きんたろうという強つよい子供こどもがありました。相模国さがみのくに足柄山あしがらやまの山奥やまおくに生うまれて、おかあさんの山うばといっしょにくらしていました。 | Agents: 金太郎 | Targets: 山うば
+Event 2: [Initial Situation] 金太郎きんたろうは生うまれた時ときからそれはそれは力ちからが強つよくって、もう七つ八つのころには、石臼いしうすやもみぬかの俵たわらぐらい、へいきで持もち上あげました。大抵たいていの大人おとなを相手あい | Agents: 金太郎 | Targets: 石臼・俵
+Event 3: [VILLAINY] ある日森もりの奥おくのずっと奥おくに入はいって、いつものように大きな木を切きっていますと、のっそり大きな熊くまが出て来きました。熊くまは目を光ひからせながら、
+「だれだ、おれの森もりをあらすのは。」
+ | Agents: 熊 | Targets: 金太郎
+Event 4: [STRUGGLE] 金太郎きんたろうを知しらないか。」
+　と言いいながら、まさかりをほうり出だして、いきなり熊くまに組くみつきました。そして足あしがらをかけて、どしんと地じびたに投なげつけました。 | Agents: 金太郎 | Targets: 熊
+Event 5: [VICTORY] 熊くまはへいこうして、両手りょうてをついてあやまって、金太郎きんたろうの家来けらいになりました。 | Agents: 熊 | Targets: 金太郎
+Event 6: [UNFOUNDED_CLAIMS] そのあとからうさぎだの、猿さるだの、鹿しかだのがぞろぞろついて来きて、
+「金太郎きんたろうさん、どうぞわたくしも御家来ごけらいにして下ください。」
+　と言いいました。 | Agents: 動物 | Targets: 金太郎
+Event 7: [GUIDANCE] 金太郎きんたろうが口笛くちぶえを吹ふいて、
+「さあ、みんな来こい。みんな来こい。」
+　と呼よびますと、熊くまを頭かしらに、鹿しかや猿さるやうさぎがのそのそ出て来きました。 | Agents: 金太郎 | Targets: 動物
+Event 8: [FIRST_FUNCTION_DONOR] 「さあ、みんなすもうを取とれ。ごほうびにはこのおむすびをやるぞ。」 | Agents: 金太郎 | Targets: 動物
+Event 9: [VICTORY] そこでうさぎと、猿さると、鹿しかと、いちばんおしまいに熊くまがかかっていきましたが、片かたっぱしからころころ、ころがされてしまいました。 | Agents: 金太郎 | Targets: 動物
+Event 10: [LIQUIDATION] うさぎと猿さると鹿しかと熊くまをまわりにぐるりに並ならばせて、自分じぶんがまん中に座すわって、おむすびを分わけてみんなで食たべました。 | Agents: 金太郎 | Targets: 動物
+Event 11: [LACK] 帰かえって行いく道々みちみちも、森もりの中でかけっくらをしたり、岩いわの上で鬼おにごっこをしたりして遊あそび遊あそび行いくうちに、大きな谷川たにがわのふちへ出ました。水はごうごうと音おとを立たてて、え | Agents: 大きな谷川 | Targets: 金太郎, 動物
+Event 12: [SOLUTION] 金太郎きんたろうはまさかりをほうり出だして、いきなり杉すぎの木に両手りょうてをかけました。そして二、三度どぐんぐん押おしたと思おもうと、めりめりとひどい音おとがして、木は川かわの上にどっさりと倒たおれ | Agents: 金太郎 | Targets: 動物
+Event 13: [RECONNAISSANCE] その時とき向むこうの岩いわの上にきこりが一人ひとりかくれていて、この様子ようすを見みていました。 | Agents: 碓井貞光 | Targets: 金太郎
+Event 14: [FIRST_FUNCTION_DONOR] 「これこれ、坊ぼうや。こんどはおじさんとすもうを取とろう。」
+　と言いいながら、のこのこ入はいって行いきました。 | Agents: 碓井貞光 | Targets: 金太郎
+Event 15: [HERO_REACTION] そこで二人ふたりはしばらく真まっ赤かな顔かおをして押おし合あいました。そのうちきこりはふいと、
+「もう止よそう。勝負しょうぶがつかない。」
+　と言いって、手てを引ひっ込こめてしまいました | Agents: 碓井貞光 | Targets: 金太郎
+Event 16: [GUIDANCE] こう言いって、こんどは金太郎きんたろうに向むかって、
+「どうだね、坊ぼうやは都みやこへ出てお侍さむらいにならないかい。」
+　と言いいました。 | Agents: 碓井貞光 | Targets: 金太郎
+Event 17: [DEPARTURE] 金太郎きんたろうはおかあさんの前まえに手てをついて、
+「おかあさん、では行ってまいります。」
+　と言いいました。 | Agents: 金太郎 | Targets: 山うば
+Event 18: [TRANSFIGURATION] 「だが金太郎きんたろうという名なは侍さむらいにはおかしい。父親ちちおやが坂田さかたというのなら、今いまから坂田金時さかたのきんときと名乗なのるがいい。」 | Agents: 碓井貞光 | Targets: 金太郎
+Event 19: [WEDDING] で金太郎きんたろうは坂田金時さかたのきんときと名乗なのって、頼光らいこうの家来けらいになりました。 | Agents: 金太郎 | Targets: 碓井貞光
+Event 20: [RECOGNITION] 卜部季武うらべのすえたけ、碓井貞光うすいのさだみつといっしょに、頼光らいこうの四天王てんのうと呼よばれるようになりました。 | Agents: 世間 | Targets: 金太郎
+
+Each event represents a key plot point that must be included in your narrative. The event type (e.g., VILLAINY, DEPARTURE, VICTORY) indicates the narrative function, which should inform how you present and develop that moment in the story. You must generate exactly 20 paragraphs, each wrapped in {}, corresponding to these 20 events in order.
+
+**STORY GENERATION REQUIREMENTS:**
+
+1. **Narrative Flow**: The story must progress smoothly through all events in chronological order. Create natural transitions between events that feel organic and engaging.
+
+2. **Character Development**: Include all listed characters and develop their roles naturally. Characters should feel authentic to their archetypal roles while also having individual personalities.
+
+3. **Cultural Authenticity**: 
+   - Use appropriate cultural details, settings, and traditions for Japanese folktales
+   - Incorporate relevant cultural elements, motifs, and storytelling conventions
+   - Maintain the traditional narrative style typical of Japanese stories
+
+4. **Writing Style**:
+   - Use vivid, descriptive language that brings scenes to life
+   - Include sensory details (sights, sounds, emotions) where appropriate
+   - Balance dialogue and narration effectively
+   - Create tension and emotional resonance where the events suggest it
+
+5. **Completeness**: The story should be self-contained and readable as a standalone narrative. Do not include meta-commentary, explanations, or analysis—only the story itself.
+
+6. **Length**: Generate a substantial, well-developed story that fully explores each event. Aim for a length appropriate to the complexity of the narrative structure provided.
+
+**OUTPUT FORMAT - CRITICAL:**
+
+You must format the story as follows:
+- Each narrative event corresponds to ONE story paragraph
+- Each paragraph MUST be wrapped in curly braces {}
+- The paragraphs must appear in the exact order of the events (Event 1, Event 2, ..., Event 20)
+- Each paragraph should be a self-contained narrative segment that develops the corresponding event
+
+Format example:
+{First paragraph corresponding to Event 1}
+{Second paragraph corresponding to Event 2}
+{Third paragraph corresponding to Event 3}
+...
+
+Requirements:
+- Each {} block should contain the story text for ONE narrative event only
+- Do NOT include any text outside the curly braces
+- Do NOT include the event numbers or labels inside the braces
+- Do NOT include any introduction, explanation, meta-commentary, notes, or analysis
+- Do NOT include the title
+- The story should flow naturally from one {} block to the next
+
+**LANGUAGE REMINDER:**
+CRITICAL: You must write the entire story in Japanese, not in English. The story must be completely in Japanese from the first word to the last word. Do not use English at all.
+
+**BEGIN THE STORY NOW (with proper formatting):**
+

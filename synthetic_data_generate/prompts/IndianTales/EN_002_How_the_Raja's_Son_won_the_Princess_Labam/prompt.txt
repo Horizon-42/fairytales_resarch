@@ -1,0 +1,100 @@
+You are a master storyteller with deep expertise in Indian folktales, myths, and traditional narratives. Your task is to create a complete, engaging story that faithfully follows the provided narrative structure while bringing it to life with rich detail and cultural authenticity.
+
+**CRITICAL LANGUAGE REQUIREMENT:**
+You MUST write the entire story in English. This is not optional. Every word, sentence, and paragraph must be in English, not English or any other language.
+
+**STORY INFORMATION:**
+- Title: How_the_Raja's_Son_won_the_Princess_Labam
+- Cultural Origin: Indian
+- Required Language: English
+
+**CHARACTERS:**
+- Raja's Son (Hero) - also known as: The Young Prince
+- Princess Labam (Other) - also known as: Princess
+- Hiraman Parrot (Other) - also known as: The Raja of Parrots
+- Ant-Raja (Other)
+- Tiger (Other)
+- Old Woman (Other) - also known as: Aunty
+- The King (Villain) - also known as: Princess Labam's Father
+- Four Fakirs (Other)
+- Rani (Mother) - also known as: Mother
+- demons (Other)
+- Drum (Other) - also known as: kettle_drum
+
+Each character has an archetypal role. Develop them in a way that is consistent with their archetype while also giving them depth and personality. Use character names consistently throughout the story, including any aliases provided.
+
+**NARRATIVE STRUCTURE:**
+
+The story must follow these 20 events in the exact order specified. Each event must correspond to ONE paragraph in your output, wrapped in curly braces {}:
+
+Event 1: [INTERDICTION] The mother forbids the son from going to the fourth side to prevent him from learning about the princess. | Agents: Rani | Targets: Raja's Son
+Event 2: [VIOLATION] The prince disobeys the mother, hunts on the fourth side, and encounters the parrot king. | Agents: Raja's Son | Targets: Hiraman Parrot
+Event 3: [MEDIATION] The parrot mentions the Princess, sparking the Prince's curiosity and desire. | Agents: Hiraman Parrot | Targets: Raja's Son
+Event 4: [DEPARTURE] The Prince convinces his parents to let him leave and receives provisions for the journey. | Agents: Raja's Son
+Event 5: [FIRST_FUNCTION_DONOR] The Prince spares the ants' food; the Ant-Raja promises help in return. | Agents: Ant-Raja | Targets: Raja's Son
+Event 6: [FIRST_FUNCTION_DONOR] The Prince heals the Tiger; the Tiger promises help in return. | Agents: Tiger | Targets: Raja's Son
+Event 7: [RECEIPT_OF_AGENT] The Prince tricks the quarreling fakirs and steals their four magical objects (bed, bag, bowl, stick/rope). | Agents: Raja's Son | Targets: Four Fakirs
+Event 8: [UNRECOGNIZED_ARRIVAL] The Prince arrives and convinces an old woman to let him stay, posing as her nephew/relative. | Agents: Raja's Son | Targets: Old Woman
+Event 9: [RECONNAISSANCE] The Prince visits the sleeping Princess and leaves betel-leaf as a gift/sign. | Agents: Raja's Son | Targets: Princess Labam
+Event 10: [RECONNAISSANCE] The Prince visits again and leaves a shawl. | Agents: Raja's Son | Targets: Princess Labam
+Event 11: [WEDDING] The Prince reveals himself; the Princess accepts him and agrees to marry. | Agents: Raja's Son | Targets: Princess Labam
+Event 12: [DIFFICULT_TASK] The King assigns an impossible task to crush oil from mustard seeds in one day. | Agents: The King | Targets: Raja's Son
+Event 13: [SOLUTION] The Ant-Raja fulfills his promise and completes the task for the Prince. | Agents: Ant-Raja | Targets: Raja's Son
+Event 14: [DIFFICULT_TASK] The King assigns the task of killing two demons. | Agents: The King | Targets: Raja's Son
+Event 15: [SOLUTION] The Tiger fulfills his promise and kills the demons for the Prince. | Agents: Tiger | Targets: demons
+Event 16: [DIFFICULT_TASK] The King assigns the task of beating a drum in the sky. | Agents: The King | Targets: Raja's Son | Instrument: Drum
+Event 17: [SOLUTION] The Prince uses his magic bed to fly up and beat the drum. | Agents: Raja's Son | Targets: Drum
+Event 18: [DIFFICULT_TASK] The King assigns the final impossible task: cutting a tree with a wax hatchet. | Agents: The King | Targets: Raja's Son
+Event 19: [SOLUTION] The Princess gives the Prince a magic hair to cut the tree, solving the riddle. | Agents: Princess Labam | Targets: Raja's Son
+Event 20: [WEDDING] The hero marries the princess and returns home victorious. | Agents: Raja's Son | Targets: Princess Labam
+
+Each event represents a key plot point that must be included in your narrative. The event type (e.g., VILLAINY, DEPARTURE, VICTORY) indicates the narrative function, which should inform how you present and develop that moment in the story. You must generate exactly 20 paragraphs, each wrapped in {}, corresponding to these 20 events in order.
+
+**STORY GENERATION REQUIREMENTS:**
+
+1. **Narrative Flow**: The story must progress smoothly through all events in chronological order. Create natural transitions between events that feel organic and engaging.
+
+2. **Character Development**: Include all listed characters and develop their roles naturally. Characters should feel authentic to their archetypal roles while also having individual personalities.
+
+3. **Cultural Authenticity**: 
+   - Use appropriate cultural details, settings, and traditions for Indian folktales
+   - Incorporate relevant cultural elements, motifs, and storytelling conventions
+   - Maintain the traditional narrative style typical of Indian stories
+
+4. **Writing Style**:
+   - Use vivid, descriptive language that brings scenes to life
+   - Include sensory details (sights, sounds, emotions) where appropriate
+   - Balance dialogue and narration effectively
+   - Create tension and emotional resonance where the events suggest it
+
+5. **Completeness**: The story should be self-contained and readable as a standalone narrative. Do not include meta-commentary, explanations, or analysis—only the story itself.
+
+6. **Length**: Generate a substantial, well-developed story that fully explores each event. Aim for a length appropriate to the complexity of the narrative structure provided.
+
+**OUTPUT FORMAT - CRITICAL:**
+
+You must format the story as follows:
+- Each narrative event corresponds to ONE story paragraph
+- Each paragraph MUST be wrapped in curly braces {}
+- The paragraphs must appear in the exact order of the events (Event 1, Event 2, ..., Event 20)
+- Each paragraph should be a self-contained narrative segment that develops the corresponding event
+
+Format example:
+{First paragraph corresponding to Event 1}
+{Second paragraph corresponding to Event 2}
+{Third paragraph corresponding to Event 3}
+...
+
+Requirements:
+- Each {} block should contain the story text for ONE narrative event only
+- Do NOT include any text outside the curly braces
+- Do NOT include the event numbers or labels inside the braces
+- Do NOT include any introduction, explanation, meta-commentary, notes, or analysis
+- Do NOT include the title
+- The story should flow naturally from one {} block to the next
+
+**LANGUAGE REMINDER:**
+CRITICAL: You must write the entire story in English, not in English. The story must be completely in English from the first word to the last word. Do not use English at all.
+
+**BEGIN THE STORY NOW (with proper formatting):**
+

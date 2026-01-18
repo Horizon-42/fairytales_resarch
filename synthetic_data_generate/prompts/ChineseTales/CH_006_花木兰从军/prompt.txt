@@ -1,0 +1,100 @@
+You are a master storyteller with deep expertise in Chinese folktales, myths, and traditional narratives. Your task is to create a complete, engaging story that faithfully follows the provided narrative structure while bringing it to life with rich detail and cultural authenticity.
+
+**CRITICAL LANGUAGE REQUIREMENT:**
+You MUST write the entire story in 中文. This is not optional. Every word, sentence, and paragraph must be in 中文, not English or any other language.
+
+**STORY INFORMATION:**
+- Title: 花木兰从军
+- Cultural Origin: Chinese
+- Required Language: 中文
+
+**CHARACTERS:**
+- 花木兰 (Hero) - also known as: 妹妹
+- 花父 (Mentor) - also known as: 父亲
+- 花母 (Other) - also known as: 母亲
+- 姐姐 (Sidekick/Helper) - also known as: 木兰的姐姐
+- 官兵 (Other)
+- 姐姐 ()
+- 弟弟 ()
+
+Each character has an archetypal role. Develop them in a way that is consistent with their archetype while also giving them depth and personality. Use character names consistently throughout the story, including any aliases provided.
+
+**NARRATIVE STRUCTURE:**
+
+The story must follow these 18 events in the exact order specified. Each event must correspond to ONE paragraph in your output, wrapped in curly braces {}:
+
+Event 1: [Initial Situation] 父亲从女儿身上看到男儿的特质，而女儿觉得自己不输于男儿; 花父欣赏花木兰的“男子气概”,惋惜于她是女儿身，而花木兰不服气 | Agents: 花木兰 | Targets: 花父
+Event 2: [] 女英雄接到了征兵信;花木兰收到了征兵信 | Agents: 官兵 | Targets: 花木兰
+Event 3: [] 女英雄下定决心；木兰决心替父从军 | Agents: 花木兰 | Targets: 花父
+Event 4: [] 木兰的姐姐看见妹妹满脸愁容，连声叹气，知道一定出了什么事情。木兰就把征兵的事告诉了姐姐，姐妹俩商量了半天，也不知道怎么办才好。她们就把这件事情告诉了父母，花父觉得保家卫国，义不容辞，自己应当入伍抗敌。 | Agents: 花木兰, 姐姐, 花母 | Targets: 花父
+Event 5: [] 英雄试图承担责任，但被母亲（出于爱和偏见）拒绝; 花木兰提出替父从军，但被家人尤其母亲（出于对女人的偏见）拒绝 | Agents: 花木兰 | Targets: 花母
+Event 6: [] 木兰看劝说不了父母，就提出要和父亲比剑，谁赢了谁就出征。花父向来不服老，经女儿一说就答应了。
+于是，父女俩就一起来到院中比剑。花父剑法熟练，木兰身手矫健，几个回合下来分不出高低。但是到了后来，花父毕竟 | Agents: 花木兰 | Targets: 花父
+Event 7: [] 父亲喘着粗气看着木兰不知该说什么！尽管木兰赢了父亲，可是家人还是不同意她去从军。木兰毕竟是个女儿身，万一被别人发现了，那可怎么办啊？这时，木兰抿嘴一笑，说：“这个你们用不着担心，你们就在院子里等等我，
+Event 8: [] 木兰看见父母同意了，不由得上前感谢，这一感谢，就露出了破绽。原来在古代，女子和男子在行礼方面有很多不同。大家看见木兰穿着男装，却在行着女子礼，都大笑了起来。
+“你要学的东西很多呀，我的乖女儿。”花父一
+Event 9: [] 第二天，一家人把木兰送到了村口，木兰和姐姐以及弟弟抱成一团，想到此后木兰就要开始军旅生活，大家都忍不住痛哭流涕。
+花父和花母拉着女儿的手，嘱咐道：“你虽是女儿家，但你的武艺不比男孩差，你应该奋勇杀敌，
+Event 10: [] 木兰昼夜兼程，快马加鞭，奔赴前线。一路上，想到自己就要远离家乡，远离亲人，木兰心里不免有些伤感，但想到自己可以为国效力，心里又高兴起来。
+经过三天三夜的跋山涉水，木兰终于来到了边关。
+Event 11: [] 边关的镇守大将军让一起来的新兵比试武艺，结果木兰得了第一名。镇守大将军看到木兰英气逼人、气宇轩昂，便料定她不是一般人，就命令木兰为新兵的首领，让她带领新兵操练。
+Event 12: [] 木兰每天和新兵一起操练，她不但把自己的武艺毫不保留地教给他们，而且还经常对他们进行爱国教育。没过多久，木兰带领的新兵就成了战场上最勇敢的一支队伍，他们战无不胜、攻无不克。敌人只要看见花木兰的队伍，就不
+Event 13: [] 木兰时刻铭记父母临别时的嘱托，战场上她永远都冲在最前面。她武艺高超，足智多谋，很快就立下了赫赫战功。最英武的一次战斗是木兰竟然和敌人的头领大战五十回合，把敌人的头领从马上打了下来，并活捉了这位头领。
+Event 14: [] 从此以后，花木兰的事迹就传遍大江南北，老百姓都知道前方战场上有一位年轻有为的花将军，老百姓们沿街走巷，歌颂花木兰的事迹。皇上也知道了花木兰的事迹，常常奖励她。
+Event 15: [] 一晃十二年过去了，在这十二年里，木兰的官职步步高升，已经成为统领一方的大将军，但木兰还是和普通的士兵一起操练，一起吃饭。只有在夜幕降临的时候，木兰才会遥望故乡，想起年老的父母，姐姐和弟弟。每当这时，木
+Event 16: [] 这一天终于来到了，敌人宣布退兵，并声称永不来侵犯。战士们欢欣鼓舞，都等着皇上赏赐，只有木兰在收拾衣服，希望能尽早回到家乡。
+皇上派来的使者对木兰说：“花将军，皇上希望你回到朝廷，为你加官晋爵。”
+这令
+Event 17: [] 皇帝听了木兰的事情后，大呼惊奇，并为木兰的孝心所感动，就让她回到了家乡。
+Event 18: [] 从此，花木兰回到了阔别多年的家乡，她一心一意地侍奉父母。花木兰“替父从军”的英雄故事也为人敬仰，万世流芳。
+
+Each event represents a key plot point that must be included in your narrative. The event type (e.g., VILLAINY, DEPARTURE, VICTORY) indicates the narrative function, which should inform how you present and develop that moment in the story. You must generate exactly 18 paragraphs, each wrapped in {}, corresponding to these 18 events in order.
+
+**STORY GENERATION REQUIREMENTS:**
+
+1. **Narrative Flow**: The story must progress smoothly through all events in chronological order. Create natural transitions between events that feel organic and engaging.
+
+2. **Character Development**: Include all listed characters and develop their roles naturally. Characters should feel authentic to their archetypal roles while also having individual personalities.
+
+3. **Cultural Authenticity**: 
+   - Use appropriate cultural details, settings, and traditions for Chinese folktales
+   - Incorporate relevant cultural elements, motifs, and storytelling conventions
+   - Maintain the traditional narrative style typical of Chinese stories
+
+4. **Writing Style**:
+   - Use vivid, descriptive language that brings scenes to life
+   - Include sensory details (sights, sounds, emotions) where appropriate
+   - Balance dialogue and narration effectively
+   - Create tension and emotional resonance where the events suggest it
+
+5. **Completeness**: The story should be self-contained and readable as a standalone narrative. Do not include meta-commentary, explanations, or analysis—only the story itself.
+
+6. **Length**: Generate a substantial, well-developed story that fully explores each event. Aim for a length appropriate to the complexity of the narrative structure provided.
+
+**OUTPUT FORMAT - CRITICAL:**
+
+You must format the story as follows:
+- Each narrative event corresponds to ONE story paragraph
+- Each paragraph MUST be wrapped in curly braces {}
+- The paragraphs must appear in the exact order of the events (Event 1, Event 2, ..., Event 18)
+- Each paragraph should be a self-contained narrative segment that develops the corresponding event
+
+Format example:
+{First paragraph corresponding to Event 1}
+{Second paragraph corresponding to Event 2}
+{Third paragraph corresponding to Event 3}
+...
+
+Requirements:
+- Each {} block should contain the story text for ONE narrative event only
+- Do NOT include any text outside the curly braces
+- Do NOT include the event numbers or labels inside the braces
+- Do NOT include any introduction, explanation, meta-commentary, notes, or analysis
+- Do NOT include the title
+- The story should flow naturally from one {} block to the next
+
+**LANGUAGE REMINDER:**
+CRITICAL: You must write the entire story in 中文, not in English. The story must be completely in 中文 from the first word to the last word. Do not use English at all.
+
+**BEGIN THE STORY NOW (with proper formatting):**
+

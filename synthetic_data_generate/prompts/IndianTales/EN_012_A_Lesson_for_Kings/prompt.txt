@@ -1,0 +1,83 @@
+You are a master storyteller with deep expertise in Indian folktales, myths, and traditional narratives. Your task is to create a complete, engaging story that faithfully follows the provided narrative structure while bringing it to life with rich detail and cultural authenticity.
+
+**CRITICAL LANGUAGE REQUIREMENT:**
+You MUST write the entire story in English. This is not optional. Every word, sentence, and paragraph must be in English, not English or any other language.
+
+**STORY INFORMATION:**
+- Title: A_Lesson_for_Kings
+- Cultural Origin: Indian
+- Required Language: English
+
+**CHARACTERS:**
+- Future Buddha (Hero) - also known as: Prince Brahma-datta; King of Benares
+- Mallika (Rebel) - also known as: King of Kosala
+- Charioteer of Benares (Sidekick/Helper)
+- Charioteer of Kosala (Sidekick/Helper)
+- Kingdom (Other)
+- self (Hero) - also known as: Future Buddha
+
+Each character has an archetypal role. Develop them in a way that is consistent with their archetype while also giving them depth and personality. Use character names consistently throughout the story, including any aliases provided.
+
+**NARRATIVE STRUCTURE:**
+
+The story must follow these 8 events in the exact order specified. Each event must correspond to ONE paragraph in your output, wrapped in curly braces {}:
+
+Event 1: [Initial Situation] Brahma-datta rules so perfectly that litigation ceases, leaving the courts empty. | Agents: Future Buddha | Targets: Kingdom
+Event 2: [LACK] Fearing his virtue is merely flattery, the King actively seeks someone to criticize him. | Agents: Future Buddha | Targets: self
+Event 3: [DEPARTURE] The King travels to the countryside to find a fault-finder. | Agents: Future Buddha | Targets: self
+Event 4: [STRUGGLE] The two kings meet on a narrow road; neither chariot can pass. | Agents: Mallika | Targets: Future Buddha
+Event 5: [OTHER] The charioteers compare the kings' material stats to decide precedence but find them equal. | Agents: Charioteer of Benares | Targets: Charioteer of Benares
+Event 6: [OTHER] Kosala's charioteer defines his king's righteousness as "tit-for-tat" (retributive justice). | Agents: Charioteer of Kosala | Targets: Charioteer of Benares
+Event 7: [OTHER] Benares' charioteer defines his king's righteousness as "good overcoming evil" (restorative justice), exposing the other's "virtues" as faults. | Agents: Charioteer of Benares | Targets: Charioteer of Kosala
+Event 8: [VICTORY] Recognizing the superior virtue, King Mallika yields the road. | Agents: Mallika | Targets: Future Buddha
+
+Each event represents a key plot point that must be included in your narrative. The event type (e.g., VILLAINY, DEPARTURE, VICTORY) indicates the narrative function, which should inform how you present and develop that moment in the story. You must generate exactly 8 paragraphs, each wrapped in {}, corresponding to these 8 events in order.
+
+**STORY GENERATION REQUIREMENTS:**
+
+1. **Narrative Flow**: The story must progress smoothly through all events in chronological order. Create natural transitions between events that feel organic and engaging.
+
+2. **Character Development**: Include all listed characters and develop their roles naturally. Characters should feel authentic to their archetypal roles while also having individual personalities.
+
+3. **Cultural Authenticity**: 
+   - Use appropriate cultural details, settings, and traditions for Indian folktales
+   - Incorporate relevant cultural elements, motifs, and storytelling conventions
+   - Maintain the traditional narrative style typical of Indian stories
+
+4. **Writing Style**:
+   - Use vivid, descriptive language that brings scenes to life
+   - Include sensory details (sights, sounds, emotions) where appropriate
+   - Balance dialogue and narration effectively
+   - Create tension and emotional resonance where the events suggest it
+
+5. **Completeness**: The story should be self-contained and readable as a standalone narrative. Do not include meta-commentary, explanations, or analysis—only the story itself.
+
+6. **Length**: Generate a substantial, well-developed story that fully explores each event. Aim for a length appropriate to the complexity of the narrative structure provided.
+
+**OUTPUT FORMAT - CRITICAL:**
+
+You must format the story as follows:
+- Each narrative event corresponds to ONE story paragraph
+- Each paragraph MUST be wrapped in curly braces {}
+- The paragraphs must appear in the exact order of the events (Event 1, Event 2, ..., Event 8)
+- Each paragraph should be a self-contained narrative segment that develops the corresponding event
+
+Format example:
+{First paragraph corresponding to Event 1}
+{Second paragraph corresponding to Event 2}
+{Third paragraph corresponding to Event 3}
+...
+
+Requirements:
+- Each {} block should contain the story text for ONE narrative event only
+- Do NOT include any text outside the curly braces
+- Do NOT include the event numbers or labels inside the braces
+- Do NOT include any introduction, explanation, meta-commentary, notes, or analysis
+- Do NOT include the title
+- The story should flow naturally from one {} block to the next
+
+**LANGUAGE REMINDER:**
+CRITICAL: You must write the entire story in English, not in English. The story must be completely in English from the first word to the last word. Do not use English at all.
+
+**BEGIN THE STORY NOW (with proper formatting):**
+

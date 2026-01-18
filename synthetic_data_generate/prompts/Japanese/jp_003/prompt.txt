@@ -1,0 +1,86 @@
+You are a master storyteller with deep expertise in Japanese folktales, myths, and traditional narratives. Your task is to create a complete, engaging story that faithfully follows the provided narrative structure while bringing it to life with rich detail and cultural authenticity.
+
+**CRITICAL LANGUAGE REQUIREMENT:**
+You MUST write the entire story in Japanese. This is not optional. Every word, sentence, and paragraph must be in Japanese, not English or any other language.
+
+**STORY INFORMATION:**
+- Title: 
+- Cultural Origin: Japanese
+- Required Language: Japanese
+
+**CHARACTERS:**
+- 巳之吉 (Hero)
+- 茂作 (Other)
+- 雪女 (Shadow) - also known as: お雪; 彼女
+- 巳之吉の母 (Mother)
+- 子供たち (Other)
+
+Each character has an archetypal role. Develop them in a way that is consistent with their archetype while also giving them depth and personality. Use character names consistently throughout the story, including any aliases provided.
+
+**NARRATIVE STRUCTURE:**
+
+The story must follow these 12 events in the exact order specified. Each event must correspond to ONE paragraph in your output, wrapped in curly braces {}:
+
+Event 1: [Initial Situation] 武蔵の国のある村に茂作、巳之吉と云う二人の木こりがいた。この話のあった時分には、茂作は老人であった。そして、彼の年季奉公人であった巳之吉は、十八の少年であった。 | Agents: 巳之吉, 茂作
+Event 2: [OTHER] 茂作と巳之吉はある大層寒い晩、帰り途で大吹雪に遇った。渡し場に着いた、渡し守は船を河の向う側に残したままで、帰った事が分った。泳がれるような日ではなかった。それで木こりは渡し守の小屋に避難した | Agents: 巳之吉, 茂作
+Event 3: [RECONNAISSANCE] そして雪明かりで、部屋のうちに女、――全く白装束の女、――を見た。 | Agents: 巳之吉 | Targets: 雪女
+Event 4: [VILLAINY] 彼に彼女の息をふきかけていた、――そして彼女の息はあかるい白い煙のようであった。 | Agents: 雪女 | Targets: 茂作
+Event 5: [INTERDICTION] 巳之吉さん、もう私はあなたを害しはしません。しかし、もしあなたが今夜見た事を誰かに――あなたの母さんにでも――云ったら、私に分ります、そして私、あなたを殺します。……覚えていらっしゃい、私の云う事を』 | Agents: 雪女 | Targets: 巳之吉
+Event 6: [RECOGNITION] 彼は暗がりへ手をやって茂作の顔にさわってみた。そして、それが氷である事が分った。茂作は固くなって死んでいた。… | Agents: 巳之吉 | Targets: 茂作
+Event 7: [UNRECOGNIZED_ARRIVAL] 翌年の冬のある晩、家に帰る途中、偶然同じ途を旅している一人の若い女に追いついた。彼女は背の高い、ほっそりした少女で、大層綺麗であった。 | Agents: 巳之吉 | Targets: 雪女
+Event 8: [WEDDING] 彼女は「お嫁」としてその家にとどまった。 | Agents: 巳之吉 | Targets: 雪女
+Event 9: [OTHER] そしてお雪は巳之吉に男女十人の子供を生んだ、――皆綺麗な子供で色が非常に白かった。 | Agents: 雪女 | Targets: 巳之吉
+Event 10: [VIOLATION] そこで巳之吉は渡し守の小屋で過ごした恐ろしい夜の事を彼女に話した、――そして、にこにこしてささやきながら、自分の上に屈んだ白い女の事、――それから、茂作老人の物も云わずに死んだ事。そして彼は云った | Agents: 巳之吉 | Targets: 雪女
+Event 11: [EXPOSURE] 『それは私、私、私でした。……それは雪でした。 | Agents: 雪女 | Targets: 巳之吉
+Event 12: [OTHER] 彼女が叫んでいる最中、彼女の声は細くなって行った、風の叫びのように、――それから彼女は輝いた白い霞となって屋根の棟木の方へ上って、それから煙出しの穴を通ってふるえながら出て行った。 | Agents: 雪女 | Targets: 巳之吉
+
+Each event represents a key plot point that must be included in your narrative. The event type (e.g., VILLAINY, DEPARTURE, VICTORY) indicates the narrative function, which should inform how you present and develop that moment in the story. You must generate exactly 12 paragraphs, each wrapped in {}, corresponding to these 12 events in order.
+
+**STORY GENERATION REQUIREMENTS:**
+
+1. **Narrative Flow**: The story must progress smoothly through all events in chronological order. Create natural transitions between events that feel organic and engaging.
+
+2. **Character Development**: Include all listed characters and develop their roles naturally. Characters should feel authentic to their archetypal roles while also having individual personalities.
+
+3. **Cultural Authenticity**: 
+   - Use appropriate cultural details, settings, and traditions for Japanese folktales
+   - Incorporate relevant cultural elements, motifs, and storytelling conventions
+   - Maintain the traditional narrative style typical of Japanese stories
+
+4. **Writing Style**:
+   - Use vivid, descriptive language that brings scenes to life
+   - Include sensory details (sights, sounds, emotions) where appropriate
+   - Balance dialogue and narration effectively
+   - Create tension and emotional resonance where the events suggest it
+
+5. **Completeness**: The story should be self-contained and readable as a standalone narrative. Do not include meta-commentary, explanations, or analysis—only the story itself.
+
+6. **Length**: Generate a substantial, well-developed story that fully explores each event. Aim for a length appropriate to the complexity of the narrative structure provided.
+
+**OUTPUT FORMAT - CRITICAL:**
+
+You must format the story as follows:
+- Each narrative event corresponds to ONE story paragraph
+- Each paragraph MUST be wrapped in curly braces {}
+- The paragraphs must appear in the exact order of the events (Event 1, Event 2, ..., Event 12)
+- Each paragraph should be a self-contained narrative segment that develops the corresponding event
+
+Format example:
+{First paragraph corresponding to Event 1}
+{Second paragraph corresponding to Event 2}
+{Third paragraph corresponding to Event 3}
+...
+
+Requirements:
+- Each {} block should contain the story text for ONE narrative event only
+- Do NOT include any text outside the curly braces
+- Do NOT include the event numbers or labels inside the braces
+- Do NOT include any introduction, explanation, meta-commentary, notes, or analysis
+- Do NOT include the title
+- The story should flow naturally from one {} block to the next
+
+**LANGUAGE REMINDER:**
+CRITICAL: You must write the entire story in Japanese, not in English. The story must be completely in Japanese from the first word to the last word. Do not use English at all.
+
+**BEGIN THE STORY NOW (with proper formatting):**
+

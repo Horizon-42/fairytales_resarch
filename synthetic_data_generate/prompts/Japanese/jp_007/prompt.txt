@@ -1,0 +1,106 @@
+You are a master storyteller with deep expertise in Japanese folktales, myths, and traditional narratives. Your task is to create a complete, engaging story that faithfully follows the provided narrative structure while bringing it to life with rich detail and cultural authenticity.
+
+**CRITICAL LANGUAGE REQUIREMENT:**
+You MUST write the entire story in Japanese. This is not optional. Every word, sentence, and paragraph must be in Japanese, not English or any other language.
+
+**STORY INFORMATION:**
+- Title: 
+- Cultural Origin: Japanese
+- Required Language: Japanese
+
+**CHARACTERS:**
+- 正直おじいさん (Hero) - also known as: 正直（しょうじき）なおじいさん
+- 正直（しょうじき）なおばあさん (Sidekick/Helper) - also known as: おばあさん
+- 白 (Sidekick/Helper) - also known as: 飼犬
+- 欲（よく）ばりの おばあさん (Villain) - also known as: おばあさん
+- 欲（よく）ばりのおじいさん (Villain) - also known as: 欲ばりおじいさん; おじいさん
+- 殿さま (Ruler)
+
+Each character has an archetypal role. Develop them in a way that is consistent with their archetype while also giving them depth and personality. Use character names consistently throughout the story, including any aliases provided.
+
+**NARRATIVE STRUCTURE:**
+
+The story must follow these 14 events in the exact order specified. Each event must correspond to ONE paragraph in your output, wrapped in curly braces {}:
+
+Event 1: [FIRST_FUNCTION_DONOR] 　ある日、正直おじいさんが、いつものようにくわをかついで、畑をほりかえしていますと、白も一緒（いっしょ）についてきて、そこらをくんくんかぎまわっていましたが、ふと、おじいさんのすそをくわえて、畑のすみの、大きなえのきの木の下までつれて行って、前足で土をかき立てながら、
+　　　「ここほれ、ワン、ワン。
+　　　　ここほれ、ワン、ワン」
+となきました。 | Agents: 白 | Targets: 正直おじいさん
+Event 2: [RECEIPT_OF_AGENT] くわを入れてみますと、かちりと音がして、穴のそこできらきら光るものがありました。ずんずんほって行くと、小判（こばん）がたくさん、出てきました。 | Agents: 正直おじいさん | Targets: 正直おじいさん
+Event 3: [TRICKERY] すると、おとなりの欲（よく）ばりおじいさんが、それをきいてたいへんうらやましがって、さっそく白（しろ）をかりにきました。 | Agents: 欲（よく）ばりのおじいさん | Targets: 白
+Event 4: [VILLAINY] 腹立（はらだ）ちまぎれに、いきなりくわをふり上げて、白（しろ）のあたまから打ちおろしますと、かわいそうに、白はひと声（こえ）、「きゃん」とないたなり、死んでしまいました。 | Agents: 欲（よく）ばりのおじいさん | Targets: 白
+Event 5: [RECEIPT_OF_AGENT] いくらついてもついても、あとからあとから、お米がふえて、みるみるうすにあふれて、そとにこぼれ出して、やがて、台所（だいどころ）いっぱいお米になってしまいました。 | Agents: 白 | Targets: 正直おじいさん
+Event 6: [VIOLATION] 欲（よく）ばりおじいさんは、またかんしゃくをおこして、うすをたたきこわして、薪（まき）にしてもしてしまいました。 | Agents: 欲（よく）ばりのおじいさん | Targets: 臼
+Event 7: [RECEIPT_OF_AGENT] こういっておじいさんは、お庭のすみの白のお墓（はか）のところまで、灰をかかえて行ってまきますと、どこからか、すうすうあたたかい風が吹いてきて、ぱっと、灰をお庭いっぱいに吹きちらしました。するとどうでしょう、そこらに枯れ木のまま立っていたうめの木や、さくらの木が、灰をかぶると、みるみるそれが花になって、よそはまだ冬のさなかなのに、おじいさんのお庭ばかりは、すっかり春げしきになってしまいました。 | Agents: 正直おじいさん | Targets: 枯れ木
+Event 8: [DIFFICULT_TASK] 殿さまは、おじいさんをよんで、
+「ほう、めずらしいじじいだ。ではそこのさくらの枯れ木に、花を咲かせて見せよ」
+といいつけました。 | Agents: 殿さま | Targets: 正直おじいさん
+Event 9: [SOLUTION] おじいさんは、さっそくざるをかかえて、さくらの木に上がって、
+　　　「金のさくら、さらさら。
+　　　　銀のさくら、さらさら」
+といいながら、灰をつかんでふりまきますと、みるみる花が咲き出して、やがてい | Targets: さくらの木 | Instrument: 灰
+Event 10: [RECOGNITION] 殿さまはびっくりして、
+「これはみごとだ。これはふしぎだ」
+といって、おじいさんをほめて、たくさんにごほうびをくださいました。 | Agents: 殿さま | Targets: 正直おじいさん
+Event 11: [VILLAINY] するとまた、おとなりの欲（よく）ばりおじいさんが、それをきいて、うらやましがって、のこっている灰をかきあつめてざるに入れて、正直（しょうじき）おじいさんのまねをして、
+「花咲かじじい、花咲かじじい、日本一の花咲かじじい、枯れ木に花を咲かせましょう」
+と、往来（おうらい）をどなってあるきました。 | Agents: 欲（よく）ばりのおじいさん | Targets: 殿さま
+Event 12: [VIOLATION] 欲（よく）ばりおじいさんは、とくいらしい顔をしながら、灰を入れたざるをかかえて、さくらの木に上がって、おなじように、
+　　　「金のさくら、さらさら。
+　　　　銀のさくら、さらさら」
+ととなえながら、やたらに灰をふりまきました | Agents: 欲（よく）ばりのおじいさん | Targets: さくらの木 | Instrument: 灰は
+Event 13: [VILLAINY] するうち、どっとひどい風が吹いてきて、灰は遠慮（えんりょ）なしに四方八方（しほうはっぽう）へ、ばらばら、ばらばらちって、殿さまやご家来（けらい）の目や鼻（はな）のなかへはいりました。そこでもここでも、 | Agents: 欲（よく）ばりのおじいさん | Targets: 殿さま
+Event 14: [PUNISHMENT] 殿さまはたいそうお腹立（はらだ）ちになって、
+「にせものの花咲かじじいにちがいない。ふとどきなやつだ」
+といって、欲ばりおじいさんを、しばらせてしまいました。 | Agents: 殿さま | Targets: 欲（よく）ばりのおじいさん
+
+Each event represents a key plot point that must be included in your narrative. The event type (e.g., VILLAINY, DEPARTURE, VICTORY) indicates the narrative function, which should inform how you present and develop that moment in the story. You must generate exactly 14 paragraphs, each wrapped in {}, corresponding to these 14 events in order.
+
+**STORY GENERATION REQUIREMENTS:**
+
+1. **Narrative Flow**: The story must progress smoothly through all events in chronological order. Create natural transitions between events that feel organic and engaging.
+
+2. **Character Development**: Include all listed characters and develop their roles naturally. Characters should feel authentic to their archetypal roles while also having individual personalities.
+
+3. **Cultural Authenticity**: 
+   - Use appropriate cultural details, settings, and traditions for Japanese folktales
+   - Incorporate relevant cultural elements, motifs, and storytelling conventions
+   - Maintain the traditional narrative style typical of Japanese stories
+
+4. **Writing Style**:
+   - Use vivid, descriptive language that brings scenes to life
+   - Include sensory details (sights, sounds, emotions) where appropriate
+   - Balance dialogue and narration effectively
+   - Create tension and emotional resonance where the events suggest it
+
+5. **Completeness**: The story should be self-contained and readable as a standalone narrative. Do not include meta-commentary, explanations, or analysis—only the story itself.
+
+6. **Length**: Generate a substantial, well-developed story that fully explores each event. Aim for a length appropriate to the complexity of the narrative structure provided.
+
+**OUTPUT FORMAT - CRITICAL:**
+
+You must format the story as follows:
+- Each narrative event corresponds to ONE story paragraph
+- Each paragraph MUST be wrapped in curly braces {}
+- The paragraphs must appear in the exact order of the events (Event 1, Event 2, ..., Event 14)
+- Each paragraph should be a self-contained narrative segment that develops the corresponding event
+
+Format example:
+{First paragraph corresponding to Event 1}
+{Second paragraph corresponding to Event 2}
+{Third paragraph corresponding to Event 3}
+...
+
+Requirements:
+- Each {} block should contain the story text for ONE narrative event only
+- Do NOT include any text outside the curly braces
+- Do NOT include the event numbers or labels inside the braces
+- Do NOT include any introduction, explanation, meta-commentary, notes, or analysis
+- Do NOT include the title
+- The story should flow naturally from one {} block to the next
+
+**LANGUAGE REMINDER:**
+CRITICAL: You must write the entire story in Japanese, not in English. The story must be completely in Japanese from the first word to the last word. Do not use English at all.
+
+**BEGIN THE STORY NOW (with proper formatting):**
+

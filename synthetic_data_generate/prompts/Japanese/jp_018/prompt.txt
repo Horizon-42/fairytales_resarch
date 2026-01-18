@@ -1,0 +1,107 @@
+You are a master storyteller with deep expertise in Japanese folktales, myths, and traditional narratives. Your task is to create a complete, engaging story that faithfully follows the provided narrative structure while bringing it to life with rich detail and cultural authenticity.
+
+**CRITICAL LANGUAGE REQUIREMENT:**
+You MUST write the entire story in Japanese. This is not optional. Every word, sentence, and paragraph must be in Japanese, not English or any other language.
+
+**STORY INFORMATION:**
+- Title: 
+- Cultural Origin: Japanese
+- Required Language: Japanese
+
+**CHARACTERS:**
+- 小坊主 (Hero)
+- 和尚 (Mentor)
+- 鬼ババ (Villain)
+
+Each character has an archetypal role. Develop them in a way that is consistent with their archetype while also giving them depth and personality. Use character names consistently throughout the story, including any aliases provided.
+
+**NARRATIVE STRUCTURE:**
+
+The story must follow these 18 events in the exact order specified. Each event must correspond to ONE paragraph in your output, wrapped in curly braces {}:
+
+Event 1: [OTHER] 
+Event 1: [Initial Situation] むかしむかし、ある山寺の小坊主が、クリひろいに行きたくなりました。 | Agents: 小坊主
+Event 2: [INTERDICTION] 「クリひろいか。しかし、山には鬼ババが出るぞ」 | Agents: 和尚 | Targets: 小坊主
+Event 3: [RECEIPT_OF_AGENT] 和尚さんは三枚のお札を渡して、
+「困った事があったら、このお札に願いをかけなさい。きっと、お前を助けてくれるじゃろう」 | Agents: 和尚 | Targets: 小坊主
+Event 4: [VILLAINY] 小坊主が夢中でクリひろいをしていると、突然目の前に鬼ババが現れました。
+「うまそうな坊主じゃ。家に帰って食ってやろう」
+　小坊主は身がすくんでしまい、叫ぶ事も逃げ出す事も出来ません。 | Agents: 鬼ババ | Targets: 小坊主
+Event 5: [VILLAINY] そしてそのまま鬼ババの家へ、連れていかれました。 | Agents: 鬼ババ | Targets: 小坊主
+Event 6: [TRICKERY] (たっ、大変だ。食われてしまうぞ！)
+　小坊主はそう思うと、とっさに、
+「ウンチがしたい！」
+と、言いました。 | Agents: 小坊主 | Targets: 鬼ババ
+Event 7: [COMPLICITY] 鬼ババは小坊主の腰になわをつけて、便所に行かせてくれました。 | Agents: 小坊主 | Targets: 鬼ババ
+Event 8: [HERO_REACTION] お札をはりつけて、
+「お札さん。おれの代わりに、返事をしておくれ」
+と、言いつけると、窓から逃げ出しました。 | Agents: 小坊主 | Targets: お札
+Event 10: [VILLAINY] 鬼ババは叫びながら、夜道を走る小坊主を追いかけて行きました。 | Agents: 鬼ババ | Targets: 小坊主
+Event 11: [HERO_REACTION] それを知った小坊主は、二枚目の札を取り出すと、
+「川になれ！」
+と、言って、後ろに投げました。 | Agents: 小坊主 | Targets: お札
+Event 12: [BEGINNING_COUNTERACTION] すると後ろに川が現れて、鬼ババは流されそうになりました。 | Agents: 小坊主 | Targets: 鬼ババ
+Event 13: [BEGINNING_COUNTERACTION] 小坊主は、三枚目の札を出すと、
+「山火事になれ！」
+と、言って、後ろに投げました。
+　すると後ろで山火事がおきて鬼ババを通せんぼうしましたが、鬼ババはさっき飲んだ川の水を吐き出すと、またたく間に山火事 | Agents: 小坊主 | Targets: 鬼ババ
+Event 14: [RESCUE] 小坊主は命からがらお寺にたどりつくと、和尚さんに助けを求めました。
+「和尚さん！　助けてください！　鬼ババです！」 | Agents: 和尚 | Targets: 和尚
+Event 15: [TRICKERY] 「鬼ババよ。わしの頼みを一つきいてくれたら坊主をお前にやるが、どうだ？」
+と、持ちかけました。 | Agents: 和尚 | Targets: 鬼ババ
+Event 16: [COMPLICITY] 鬼ババは答えて体を小さくすると、豆粒のように小さくなりました。 | Agents: 鬼ババ | Targets: 和尚
+Event 17: [VICTORY] 和尚さんはその時、すかさず鬼ババをもちの中に丸め込むと一口で飲み込んでしまいました。 | Agents: 和尚 | Targets: 鬼ババ
+Event 18: [TRANSFIGURATION] 和尚さんが便所でウンチをすると、ウンチの中からたくさんのハエが飛び出してきました。
+
+　ハエは鬼ババが生まれ変わって、日本中にふえていったものだそうです | Agents: 和尚 | Targets: 鬼ババ
+
+Each event represents a key plot point that must be included in your narrative. The event type (e.g., VILLAINY, DEPARTURE, VICTORY) indicates the narrative function, which should inform how you present and develop that moment in the story. You must generate exactly 18 paragraphs, each wrapped in {}, corresponding to these 18 events in order.
+
+**STORY GENERATION REQUIREMENTS:**
+
+1. **Narrative Flow**: The story must progress smoothly through all events in chronological order. Create natural transitions between events that feel organic and engaging.
+
+2. **Character Development**: Include all listed characters and develop their roles naturally. Characters should feel authentic to their archetypal roles while also having individual personalities.
+
+3. **Cultural Authenticity**: 
+   - Use appropriate cultural details, settings, and traditions for Japanese folktales
+   - Incorporate relevant cultural elements, motifs, and storytelling conventions
+   - Maintain the traditional narrative style typical of Japanese stories
+
+4. **Writing Style**:
+   - Use vivid, descriptive language that brings scenes to life
+   - Include sensory details (sights, sounds, emotions) where appropriate
+   - Balance dialogue and narration effectively
+   - Create tension and emotional resonance where the events suggest it
+
+5. **Completeness**: The story should be self-contained and readable as a standalone narrative. Do not include meta-commentary, explanations, or analysis—only the story itself.
+
+6. **Length**: Generate a substantial, well-developed story that fully explores each event. Aim for a length appropriate to the complexity of the narrative structure provided.
+
+**OUTPUT FORMAT - CRITICAL:**
+
+You must format the story as follows:
+- Each narrative event corresponds to ONE story paragraph
+- Each paragraph MUST be wrapped in curly braces {}
+- The paragraphs must appear in the exact order of the events (Event 1, Event 2, ..., Event 18)
+- Each paragraph should be a self-contained narrative segment that develops the corresponding event
+
+Format example:
+{First paragraph corresponding to Event 1}
+{Second paragraph corresponding to Event 2}
+{Third paragraph corresponding to Event 3}
+...
+
+Requirements:
+- Each {} block should contain the story text for ONE narrative event only
+- Do NOT include any text outside the curly braces
+- Do NOT include the event numbers or labels inside the braces
+- Do NOT include any introduction, explanation, meta-commentary, notes, or analysis
+- Do NOT include the title
+- The story should flow naturally from one {} block to the next
+
+**LANGUAGE REMINDER:**
+CRITICAL: You must write the entire story in Japanese, not in English. The story must be completely in Japanese from the first word to the last word. Do not use English at all.
+
+**BEGIN THE STORY NOW (with proper formatting):**
+

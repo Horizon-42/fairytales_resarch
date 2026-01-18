@@ -1,0 +1,102 @@
+You are a master storyteller with deep expertise in Chinese folktales, myths, and traditional narratives. Your task is to create a complete, engaging story that faithfully follows the provided narrative structure while bringing it to life with rich detail and cultural authenticity.
+
+**CRITICAL LANGUAGE REQUIREMENT:**
+You MUST write the entire story in 中文. This is not optional. Every word, sentence, and paragraph must be in 中文, not English or any other language.
+
+**STORY INFORMATION:**
+- Title: 梁山伯与祝英台
+- Cultural Origin: Chinese
+- Required Language: 中文
+
+**CHARACTERS:**
+- 祝英台 (Hero) - also known as: 小姐;祝
+- 祝员外 (Other) - also known as: 父亲
+- 丫环银心 (Sidekick/Helper) - also known as: 银心
+- 算命先生 (Other)
+- 梁山伯 (Hero) - also known as: 梁; 山伯; 
+- 师娘 (Sidekick/Helper)
+- 马文才 ()
+- 四九 (Everyman)
+
+Each character has an archetypal role. Develop them in a way that is consistent with their archetype while also giving them depth and personality. Use character names consistently throughout the story, including any aliases provided.
+
+**NARRATIVE STRUCTURE:**
+
+The story must follow these 22 events in the exact order specified. Each event must correspond to ONE paragraph in your output, wrapped in curly braces {}:
+
+Event 1: [INTERDICTION] 父亲限制女儿自由 | Agents: 祝员外 | Targets: 祝英台
+Event 2: [BEGINNING_COUNTERACTION] 女儿和她的丫鬟助手用聪明才智获取了家长的肯定; 祝英台和丫鬟银心用智慧获取了祝员外的同意 | Agents: 祝英台, 丫环银心 | Targets: 祝员外
+Event 3: [UNRECOGNIZED_ARRIVAL] 女英雄和她的同伴隐姓埋名出发 | Agents: 祝英台, 丫环银心
+Event 4: [FIRST_FUNCTION_DONOR] 男女英雄相遇, 通过了各自的社交考验; 梁山伯与祝英台一见如故 | Agents: 梁山伯 | Targets: 祝英台
+Event 5: [RECEIPT_OF_AGENT] 男女主人公结为义兄弟; 梁山伯祝英台义结金兰 | Agents: 梁山伯 | Targets: 祝英台
+Event 6: [RECOGNITION] 女英雄迫于无奈, 坦白隐秘之爱; 祝英台必须归家, 不得已承认女儿身以及对梁山伯的爱意 | Agents: 祝英台 | Targets: 师娘
+Event 7: [] 师娘说：“原来如此，我怎样才能帮助你呢？”
+祝英台拿出一只玉蝴蝶扇坠交给师娘说：“我想请您帮我做媒，就用这只扇坠作为信物。”
+“好，好，好！”师娘微笑着答应了她。 | Agents: 祝英台 | Targets: 师娘
+Event 8: [] 伪装的女英雄暗示同伴真相及真爱; 祝英台试图暗示梁山伯自己的女儿身 | Agents: 祝英台 | Targets: 梁山伯
+Event 9: [] 女英雄在伪装的身份下向所爱之人求婚, 但是却没有受到响应; 男装的祝英台向梁山伯求婚, 但梁山伯无法理解 | Agents: 祝英台 | Targets: 梁山伯
+Event 10: [] 女英雄试图通过迂回策略达成愿望; 祝英台假借妹妹之名要求梁山伯求亲 | Agents: 祝英台 | Targets: 梁山伯
+Event 11: [TRANSFIGURATION] 男英雄意识到女英雄的真实身份以及她的爱意; 梁山伯得知祝英台是女儿身以及她的爱意 | Agents: 梁山伯 | Targets: 祝英台
+Event 12: [] 女英雄向家长坦白与男英雄的秘密关系; 祝英台向父亲坦白与梁山伯的关系 | Agents: 祝英台, 丫环银心 | Targets: 祝员外
+Event 13: [STRUGGLE] 女英雄不惜绝食向家人表达抗议; 祝员外想要祝英台嫁给马文才, 祝英台不惜绝食抗议 | Agents: 祝员外 | Targets: 祝英台
+Event 14: [] 男英雄试图获取女英雄家人的肯定, 却被无视; 梁山伯登门拜访试图求亲却被无视 | Agents: 梁山伯 | Targets: 祝员外
+Event 15: [] 女英雄试图说服家人, 不惜以生命为代价; 祝英台(在言语上)以死相逼, 试图反抗父亲的安排 | Agents: 祝英台 | Targets: 祝员外
+Event 16: [] 男主按约定向女主求婚, 女主却迫于家族家长的意志, 以及男主情敌强大的家室, 无法兑现当初的诺言; 梁山伯求婚, 祝英台却无法为自己的婚姻做主 | Agents: 梁山伯 | Targets: 祝英台 | Instrument: 扇坠
+Event 17: [LACK] 男主思念成疾而死, 殉情; 梁山伯听说祝英台结婚, 伤心而死 | Agents: 梁山伯 | Targets: 祝英台
+Event 18: [BEGINNING_COUNTERACTION] 女主以死相逼, 以换取祭奠男主的机会; 祝英台以死相逼, 换得祭奠梁山伯的机会 | Agents: 祝英台 | Targets: 祝员外
+Event 19: [BEGINNING_COUNTERACTION] 女主许诺与男主同死; 祝英台许诺殉情 | Agents: 祝英台 | Targets: 梁山伯
+Event 20: [STRUGGLE] 女主佯装嫁给男主的情敌; 祝英台在丧服上面穿上婚服, 佯装出嫁 | Agents: 祝英台 | Targets: 马文才
+Event 21: [RECEIPT_OF_AGENT] 在自然/命运的帮助下, 女主逃离控制, 到了男主坟墓之前;
+祝英台在风浪的帮助下, 上岸到了梁山伯墓前 | Agents: 祝英台 | Targets: 马文才
+Event 22: [WEDDING] 女主在男主墓前自杀;祝英台投入梁山伯墓中 | Agents: 祝英台 | Targets: 梁山伯
+
+Each event represents a key plot point that must be included in your narrative. The event type (e.g., VILLAINY, DEPARTURE, VICTORY) indicates the narrative function, which should inform how you present and develop that moment in the story. You must generate exactly 22 paragraphs, each wrapped in {}, corresponding to these 22 events in order.
+
+**STORY GENERATION REQUIREMENTS:**
+
+1. **Narrative Flow**: The story must progress smoothly through all events in chronological order. Create natural transitions between events that feel organic and engaging.
+
+2. **Character Development**: Include all listed characters and develop their roles naturally. Characters should feel authentic to their archetypal roles while also having individual personalities.
+
+3. **Cultural Authenticity**: 
+   - Use appropriate cultural details, settings, and traditions for Chinese folktales
+   - Incorporate relevant cultural elements, motifs, and storytelling conventions
+   - Maintain the traditional narrative style typical of Chinese stories
+
+4. **Writing Style**:
+   - Use vivid, descriptive language that brings scenes to life
+   - Include sensory details (sights, sounds, emotions) where appropriate
+   - Balance dialogue and narration effectively
+   - Create tension and emotional resonance where the events suggest it
+
+5. **Completeness**: The story should be self-contained and readable as a standalone narrative. Do not include meta-commentary, explanations, or analysis—only the story itself.
+
+6. **Length**: Generate a substantial, well-developed story that fully explores each event. Aim for a length appropriate to the complexity of the narrative structure provided.
+
+**OUTPUT FORMAT - CRITICAL:**
+
+You must format the story as follows:
+- Each narrative event corresponds to ONE story paragraph
+- Each paragraph MUST be wrapped in curly braces {}
+- The paragraphs must appear in the exact order of the events (Event 1, Event 2, ..., Event 22)
+- Each paragraph should be a self-contained narrative segment that develops the corresponding event
+
+Format example:
+{First paragraph corresponding to Event 1}
+{Second paragraph corresponding to Event 2}
+{Third paragraph corresponding to Event 3}
+...
+
+Requirements:
+- Each {} block should contain the story text for ONE narrative event only
+- Do NOT include any text outside the curly braces
+- Do NOT include the event numbers or labels inside the braces
+- Do NOT include any introduction, explanation, meta-commentary, notes, or analysis
+- Do NOT include the title
+- The story should flow naturally from one {} block to the next
+
+**LANGUAGE REMINDER:**
+CRITICAL: You must write the entire story in 中文, not in English. The story must be completely in 中文 from the first word to the last word. Do not use English at all.
+
+**BEGIN THE STORY NOW (with proper formatting):**
+

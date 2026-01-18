@@ -1,0 +1,107 @@
+You are a master storyteller with deep expertise in Japanese folktales, myths, and traditional narratives. Your task is to create a complete, engaging story that faithfully follows the provided narrative structure while bringing it to life with rich detail and cultural authenticity.
+
+**CRITICAL LANGUAGE REQUIREMENT:**
+You MUST write the entire story in Japanese. This is not optional. Every word, sentence, and paragraph must be in Japanese, not English or any other language.
+
+**STORY INFORMATION:**
+- Title: 
+- Cultural Origin: Japanese
+- Required Language: Japanese
+
+**CHARACTERS:**
+- おじいさん (Everyman)
+- おばあさん (Mother)
+- 桃太郎 (Hero) - also known as: 赤あかさん
+- 犬いぬ (Sidekick/Helper)
+- 猿さる (Sidekick/Helper)
+- きじ (Sidekick/Helper)
+- 鬼の大将 (Villain)
+- 鬼たち (Shadow)
+
+Each character has an archetypal role. Develop them in a way that is consistent with their archetype while also giving them depth and personality. Use character names consistently throughout the story, including any aliases provided.
+
+**NARRATIVE STRUCTURE:**
+
+The story must follow these 15 events in the exact order specified. Each event must correspond to ONE paragraph in your output, wrapped in curly braces {}:
+
+Event 1: [OTHER] 川上かわかみから、大きな桃ももが一つ、
+「ドンブラコッコ、スッコッコ。
+ドンブラコッコ、スッコッコ。」
+　と流ながれて来きました。 | Agents: 大きな桃 | Targets: おばあさん
+Event 2: [TRANSFIGURATION] 桃ももはぽんと中から二つに割われて、
+「おぎゃあ、おぎゃあ。」
+　と勇いさましいうぶ声こえを上あげながら、かわいらしい赤あかさんが元気げんきよくとび出だしました。 | Agents: 桃太郎
+Event 3: [BRANDING] 桃太郎ももたろうは十五になりました。
+　もうそのじぶんには、日本にほんの国中くにじゅうで、桃太郎ももたろうほど強つよいものはないようになりました。 | Agents: 桃太郎
+Event 4: [MEDIATION] ほうぼう外国がいこくの島々しまじまをめぐって帰かえって来きた人があって、いろいろめずらしい、ふしぎなお話はなしをした末すえに、
+「もう何年なんねんも何年なんねんも船ふねをこいで行くと、遠とおい遠とおい海うみのはてに、鬼おにが島しまという所ところがある。悪わるい鬼おにどもが、いかめしいくろがねのお城しろの中に住すんで、ほうぼうの国くにからかすめ取とった貴とうとい宝物たからものを守まもっている。」
+　と言いいました。
+　桃太郎ももたろうはこの話はなしをきく | Agents: 外国から帰ってきた人 | Targets: 桃太郎
+Event 5: [BEGINNING_COUNTERACTION] 「鬼おにが島しまへ鬼おにせいばつに行こうと思おもいます。」
+　と桃太郎ももたろうはこたえました。 | Agents: 桃太郎
+Event 6: [DEPARTURE] と桃太郎ももたろうは言いって、
+「では、ごきげんよう。」
+　と元気げんきな声こえをのこして、出でていきました。 | Agents: 桃太郎 | Targets: おじいさん, おばあさん
+Event 7: [FIRST_FUNCTION_DONOR] 犬いぬはきびだんごを一つもらって、桃太郎ももたろうのあとから、ついて行きました。 | Agents: 犬いぬ | Targets: 桃太郎
+Event 8: [FIRST_FUNCTION_DONOR] 猿さるもきびだんごを一つもらって、あとからついて行きました。 | Agents: 猿さる | Targets: 桃太郎
+Event 9: [FIRST_FUNCTION_DONOR] きじもきびだんごを一つもらって、桃太郎ももたろうのあとからついて行きました。 | Agents: きじ | Targets: 桃太郎
+Event 10: [OTHER] 雲くものように見みえていたものが、だんだんはっきりと島しまの形かたちになって、あらわれてきました。
+「ああ、見みえる、見みえる、鬼おにが島しまが見みえる。」 | Agents: 桃太郎, 犬いぬ, 猿さる, きじ
+Event 11: [STRUGGLE] 桃太郎ももたろうの主従しゅじゅうが、いさましくお城しろの中に攻せめ込こんでいきますと、鬼おにの大将たいしょうも大おおぜいの家来けらいを引ひき連つれて、一人一人ひとりひとり、太ふとい鉄てつの棒ぼうをふり | Agents: 桃太郎, 犬いぬ, 猿さる, きじ | Targets: 鬼の大将, 鬼たち
+Event 12: [VICTORY] 鬼おにの大将たいしょうは、桃太郎ももたろうの大力だいりきで首くびをしめられて、もう苦くるしくってたまりませんから、大おおつぶの涙なみだをぼろぼろこぼしながら、
+「降参こうさんします、降参こうさんします | Agents: 桃太郎 | Targets: 鬼の大将, 鬼たち
+Event 13: [LIQUIDATION] 鬼おにの大将たいしょうは約束やくそくのとおり、お城しろから、かくれみのに、かくれ笠がさ、うちでの小こづちに如意宝珠にょいほうじゅ、そのほかさんごだの、たいまいだの、るりだの、世界せかいでいちばん貴とうとい宝物たからものを山のように車くるまに積つんで出だしました。 | Agents: 鬼の大将 | Targets: 桃太郎
+Event 14: [RETURN] 桃太郎ももたろうが三にんのりっぱな家来けらいに、ぶんどりの宝物たからものを引ひかせて、さもとくいらしい様子ようすをして帰かえって来きましたので | Agents: 桃太郎, 犬いぬ, 猿さる, きじ | Targets: おじいさん, 桃太郎
+Event 15: [OTHER] 「えらいぞ、えらいぞ、それこそ日本一にっぽんいちだ。」
+　とおじいさんは言いいました。 | Agents: おじいさん | Targets: 桃太郎
+
+Each event represents a key plot point that must be included in your narrative. The event type (e.g., VILLAINY, DEPARTURE, VICTORY) indicates the narrative function, which should inform how you present and develop that moment in the story. You must generate exactly 15 paragraphs, each wrapped in {}, corresponding to these 15 events in order.
+
+**STORY GENERATION REQUIREMENTS:**
+
+1. **Narrative Flow**: The story must progress smoothly through all events in chronological order. Create natural transitions between events that feel organic and engaging.
+
+2. **Character Development**: Include all listed characters and develop their roles naturally. Characters should feel authentic to their archetypal roles while also having individual personalities.
+
+3. **Cultural Authenticity**: 
+   - Use appropriate cultural details, settings, and traditions for Japanese folktales
+   - Incorporate relevant cultural elements, motifs, and storytelling conventions
+   - Maintain the traditional narrative style typical of Japanese stories
+
+4. **Writing Style**:
+   - Use vivid, descriptive language that brings scenes to life
+   - Include sensory details (sights, sounds, emotions) where appropriate
+   - Balance dialogue and narration effectively
+   - Create tension and emotional resonance where the events suggest it
+
+5. **Completeness**: The story should be self-contained and readable as a standalone narrative. Do not include meta-commentary, explanations, or analysis—only the story itself.
+
+6. **Length**: Generate a substantial, well-developed story that fully explores each event. Aim for a length appropriate to the complexity of the narrative structure provided.
+
+**OUTPUT FORMAT - CRITICAL:**
+
+You must format the story as follows:
+- Each narrative event corresponds to ONE story paragraph
+- Each paragraph MUST be wrapped in curly braces {}
+- The paragraphs must appear in the exact order of the events (Event 1, Event 2, ..., Event 15)
+- Each paragraph should be a self-contained narrative segment that develops the corresponding event
+
+Format example:
+{First paragraph corresponding to Event 1}
+{Second paragraph corresponding to Event 2}
+{Third paragraph corresponding to Event 3}
+...
+
+Requirements:
+- Each {} block should contain the story text for ONE narrative event only
+- Do NOT include any text outside the curly braces
+- Do NOT include the event numbers or labels inside the braces
+- Do NOT include any introduction, explanation, meta-commentary, notes, or analysis
+- Do NOT include the title
+- The story should flow naturally from one {} block to the next
+
+**LANGUAGE REMINDER:**
+CRITICAL: You must write the entire story in Japanese, not in English. The story must be completely in Japanese from the first word to the last word. Do not use English at all.
+
+**BEGIN THE STORY NOW (with proper formatting):**
+

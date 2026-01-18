@@ -1,0 +1,86 @@
+You are a master storyteller with deep expertise in Indian folktales, myths, and traditional narratives. Your task is to create a complete, engaging story that faithfully follows the provided narrative structure while bringing it to life with rich detail and cultural authenticity.
+
+**CRITICAL LANGUAGE REQUIREMENT:**
+You MUST write the entire story in English. This is not optional. Every word, sentence, and paragraph must be in English, not English or any other language.
+
+**STORY INFORMATION:**
+- Title: The_Magic_Fiddle
+- Cultural Origin: Indian
+- Required Language: English
+
+**CHARACTERS:**
+- Bonga Girl (Hero) - also known as: sister
+- Seven Wives (Villain) - also known as: Sisters-in-law
+- The Jogi (Sidekick/Helper)
+- Chief's Son (Lover) - also known as: Young Chief
+- Seven Brothers (Other)
+- nature (Other)
+-  ()
+- Bamboo (Other)
+- Chief's Family (Sidekick/Helper)
+
+Each character has an archetypal role. Develop them in a way that is consistent with their archetype while also giving them depth and personality. Use character names consistently throughout the story, including any aliases provided.
+
+**NARRATIVE STRUCTURE:**
+
+The story must follow these 8 events in the exact order specified. Each event must correspond to ONE paragraph in your output, wrapped in curly braces {}:
+
+Event 1: [VILLAINY] The wives plot to remove the sister by offering her to a Bonga (spirit). | Agents: Seven Wives | Targets: Bonga Girl
+Event 2: [VILLAINY] The sister is drowned by the Bonga and abducted into the spirit world. | Agents: Seven Wives | Targets: Bonga Girl
+Event 3: [TRANSFIGURATION] The drowned girl reincarnates as a bamboo plant. | Agents: nature | Targets: Bonga Girl
+Event 4: [RECEIPT_OF_AGENT] A Jogi cuts the bamboo (ignoring its pleas) and crafts a musical instrument. | Agents: The Jogi | Targets: Bonga Girl
+Event 5: [OTHER] The Chief's family intoxicates the Jogi and steals the magical fiddle. | Agents: Chief's Family | Targets: The Jogi
+Event 6: [UNRECOGNIZED_ARRIVAL] The girl secretly performs domestic duties for the Chief's son. | Agents: Bonga Girl | Targets: Chief's Son
+Event 7: [WEDDING] The son catches the girl; she reveals her true nature, and they marry. | Agents: Chief's Son | Targets: Bonga Girl
+Event 8: [RECOGNITION] The brothers visit; the sister reveals herself and confronts them about their negligence. | Agents: Bonga Girl | Targets: Seven Brothers
+
+Each event represents a key plot point that must be included in your narrative. The event type (e.g., VILLAINY, DEPARTURE, VICTORY) indicates the narrative function, which should inform how you present and develop that moment in the story. You must generate exactly 8 paragraphs, each wrapped in {}, corresponding to these 8 events in order.
+
+**STORY GENERATION REQUIREMENTS:**
+
+1. **Narrative Flow**: The story must progress smoothly through all events in chronological order. Create natural transitions between events that feel organic and engaging.
+
+2. **Character Development**: Include all listed characters and develop their roles naturally. Characters should feel authentic to their archetypal roles while also having individual personalities.
+
+3. **Cultural Authenticity**: 
+   - Use appropriate cultural details, settings, and traditions for Indian folktales
+   - Incorporate relevant cultural elements, motifs, and storytelling conventions
+   - Maintain the traditional narrative style typical of Indian stories
+
+4. **Writing Style**:
+   - Use vivid, descriptive language that brings scenes to life
+   - Include sensory details (sights, sounds, emotions) where appropriate
+   - Balance dialogue and narration effectively
+   - Create tension and emotional resonance where the events suggest it
+
+5. **Completeness**: The story should be self-contained and readable as a standalone narrative. Do not include meta-commentary, explanations, or analysis—only the story itself.
+
+6. **Length**: Generate a substantial, well-developed story that fully explores each event. Aim for a length appropriate to the complexity of the narrative structure provided.
+
+**OUTPUT FORMAT - CRITICAL:**
+
+You must format the story as follows:
+- Each narrative event corresponds to ONE story paragraph
+- Each paragraph MUST be wrapped in curly braces {}
+- The paragraphs must appear in the exact order of the events (Event 1, Event 2, ..., Event 8)
+- Each paragraph should be a self-contained narrative segment that develops the corresponding event
+
+Format example:
+{First paragraph corresponding to Event 1}
+{Second paragraph corresponding to Event 2}
+{Third paragraph corresponding to Event 3}
+...
+
+Requirements:
+- Each {} block should contain the story text for ONE narrative event only
+- Do NOT include any text outside the curly braces
+- Do NOT include the event numbers or labels inside the braces
+- Do NOT include any introduction, explanation, meta-commentary, notes, or analysis
+- Do NOT include the title
+- The story should flow naturally from one {} block to the next
+
+**LANGUAGE REMINDER:**
+CRITICAL: You must write the entire story in English, not in English. The story must be completely in English from the first word to the last word. Do not use English at all.
+
+**BEGIN THE STORY NOW (with proper formatting):**
+

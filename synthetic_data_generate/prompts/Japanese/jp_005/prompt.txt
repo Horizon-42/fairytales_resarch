@@ -1,0 +1,96 @@
+You are a master storyteller with deep expertise in Japanese folktales, myths, and traditional narratives. Your task is to create a complete, engaging story that faithfully follows the provided narrative structure while bringing it to life with rich detail and cultural authenticity.
+
+**CRITICAL LANGUAGE REQUIREMENT:**
+You MUST write the entire story in Japanese. This is not optional. Every word, sentence, and paragraph must be in Japanese, not English or any other language.
+
+**STORY INFORMATION:**
+- Title: 
+- Cultural Origin: Japanese
+- Required Language: Japanese
+
+**CHARACTERS:**
+- 竹取の翁 (Hero) - also known as: 造麻呂
+- お婆ばあさん (Sidekick/Helper) - also known as: 妻
+- 迎むかへの者 (Guardian) - also known as: 天人
+- 赫映姫 (Other) - also known as: かぐや姫
+- 石造皇子 ()
+- 車持皇子 ()
+- 阿倍右大臣 ()
+- 大納言 ()
+- 中納言 ()
+- 帝 () - also known as: みかど
+
+Each character has an archetypal role. Develop them in a way that is consistent with their archetype while also giving them depth and personality. Use character names consistently throughout the story, including any aliases provided.
+
+**NARRATIVE STRUCTURE:**
+
+The story must follow these 14 events in the exact order specified. Each event must correspond to ONE paragraph in your output, wrapped in curly braces {}:
+
+Event 1: [OTHER] 
+Event 1: [LACK] 竹取たけとりの翁おきなといふ人ひとがありました。ほんとうの名なは讃岐さぬきの造麻呂みやつこまろといふのでしたが、毎日まいにちのように野山のやまの竹藪たけやぶにはひつて、竹たけを切きり取とつて、いろ／＼ | Agents: 竹取の翁 | Targets: 竹取の翁, お婆さん
+Event 2: [FIRST_FUNCTION_DONOR] 一本いつぽん妙みように光ひかる竹たけの幹みきがありました。不思議ふしぎに思おもつて近寄ちかよつて、そっと切きつて見みると、その切きつた筒つゝの中なかに高たかさ三寸さんずんばかりの美うつくしい女をんなの | Agents: 竹取の翁 | Targets: 赫映姫
+Event 3: [RECEIPT_OF_AGENT] 不思議ふしぎに思おもつて近寄ちかよつて、そっと切きつて見みると、その切きつた筒つゝの中なかに高たかさ三寸さんずんばかりの美うつくしい女をんなの子こがゐました。いつも見慣みなれてゐる藪やぶの竹たけの中な | Targets: 竹取の翁（家）
+Event 4: [GUIDANCE] 大事だいじの子こですから、家いへの奧おくにかこつて外そとへは少すこしも出ださずに、いよ／＼心こゝろを入いれて養やしなひました。 | Agents: 竹取の翁, お婆ばあさん | Targets: 赫映姫
+Event 5: [RECONNAISSANCE] 世間せけんの男をとこたちは妻つまに貰もらひたい、又また見みるだけでも見みておきたいと思おもつて、家いへの近ちかくに來きて、すき間まのようなところから覗のぞかうとしましたが、どうしても姿すがたを見みるこ | Targets: 赫映姫
+Event 6: [DIFFICULT_TASK] 五人ごにんの方々かた／″＼に私わたしの欲ほしいと思おもふ物ものを註文ちゆうもんして、それを間違まちがひなく持もつて來きて下くださる方かたにお仕つかへすることに致いたしませう」
+Event 7: [TRICKERY] 天竺てんじくへ行いつたように見みせかけて、三年さんねんばかりたつて、大和やまとの國くにのある山寺やまでらの賓頭廬樣びんずるさまの前まへに置おいてある石いしの鉢はちの眞黒まつくろに煤すゝけたのを、もった | Agents: 石造皇子 | Targets: 赫映姫
+Event 8: [EXPOSURE] 立派りつぱな光ひかりのあるはずの鉢はちに螢火ほたるびほどの光ひかりもないので、すぐに註文ちゆうもんちがひといつて跳はねつけられてしまひました。 | Agents: 赫映姫 | Targets: 石造皇子
+Event 9: [TRICKERY] ひそかに註文ちゆうもんに似にた玉たまの枝えだを作つくらせて、姫ひめのところに持もつて行ゆきました。翁おきなも姫ひめもその細工さいくの立派りつぱなのに驚をどろいてゐますと、そこへ運うんわるく玉職人たまし | Agents: 車持皇子 | Targets: 赫映姫
+Event 10: [PUNISHMENT] 綱つながぷっつりと切きれて、運うんわるくも下したにあつた鼎かなへの上うへに落おちて眼めを廻まはしました。水みづを飮のませられて漸やうやく正氣しようきになつた時とき、
+「腰こしは痛いたむが子安貝こやすが | Agents: 中納言 | Targets: 中納言
+Event 11: [STRUGGLE] 「逃にげても許ゆるさぬ。宮中きゆうちゆうに連つれ行ゆくぞ」
+　と仰おほせられました。
+「私わたしがこの國くにで生うまれたものでありますならば、お宮仕みやづかへも致いたしませうけれど、さうではございませ | Agents: 帝 | Targets: 赫映姫
+Event 12: [RETURN] その時とき、空そらから雲くもに乘のつた人々ひと／″＼が降おりて來きて、地面じめんから五尺ごしやくばかりの空中くうちゆうに、ずらりと立たち列ならびました。「それ來きたっ」と、武士ぶしたちが得物えものをと | Agents: 迎むかへの者 | Targets: 赫映姫
+Event 13: [PUNISHMENT] 不死ふしの藥くすりを焚たかしめられました。それからはこの山やまを不死ふしの山やまと呼よぶようになつて、その藥くすりの煙けむりは今いまでも雲くもの中なかへ立たち昇のぼるといふことであります。 | Agents: 帝 | Targets: 不死ふしの藥くすり
+
+Each event represents a key plot point that must be included in your narrative. The event type (e.g., VILLAINY, DEPARTURE, VICTORY) indicates the narrative function, which should inform how you present and develop that moment in the story. You must generate exactly 14 paragraphs, each wrapped in {}, corresponding to these 14 events in order.
+
+**STORY GENERATION REQUIREMENTS:**
+
+1. **Narrative Flow**: The story must progress smoothly through all events in chronological order. Create natural transitions between events that feel organic and engaging.
+
+2. **Character Development**: Include all listed characters and develop their roles naturally. Characters should feel authentic to their archetypal roles while also having individual personalities.
+
+3. **Cultural Authenticity**: 
+   - Use appropriate cultural details, settings, and traditions for Japanese folktales
+   - Incorporate relevant cultural elements, motifs, and storytelling conventions
+   - Maintain the traditional narrative style typical of Japanese stories
+
+4. **Writing Style**:
+   - Use vivid, descriptive language that brings scenes to life
+   - Include sensory details (sights, sounds, emotions) where appropriate
+   - Balance dialogue and narration effectively
+   - Create tension and emotional resonance where the events suggest it
+
+5. **Completeness**: The story should be self-contained and readable as a standalone narrative. Do not include meta-commentary, explanations, or analysis—only the story itself.
+
+6. **Length**: Generate a substantial, well-developed story that fully explores each event. Aim for a length appropriate to the complexity of the narrative structure provided.
+
+**OUTPUT FORMAT - CRITICAL:**
+
+You must format the story as follows:
+- Each narrative event corresponds to ONE story paragraph
+- Each paragraph MUST be wrapped in curly braces {}
+- The paragraphs must appear in the exact order of the events (Event 1, Event 2, ..., Event 14)
+- Each paragraph should be a self-contained narrative segment that develops the corresponding event
+
+Format example:
+{First paragraph corresponding to Event 1}
+{Second paragraph corresponding to Event 2}
+{Third paragraph corresponding to Event 3}
+...
+
+Requirements:
+- Each {} block should contain the story text for ONE narrative event only
+- Do NOT include any text outside the curly braces
+- Do NOT include the event numbers or labels inside the braces
+- Do NOT include any introduction, explanation, meta-commentary, notes, or analysis
+- Do NOT include the title
+- The story should flow naturally from one {} block to the next
+
+**LANGUAGE REMINDER:**
+CRITICAL: You must write the entire story in Japanese, not in English. The story must be completely in Japanese from the first word to the last word. Do not use English at all.
+
+**BEGIN THE STORY NOW (with proper formatting):**
+

@@ -1,0 +1,85 @@
+You are a master storyteller with deep expertise in Chinese folktales, myths, and traditional narratives. Your task is to create a complete, engaging story that faithfully follows the provided narrative structure while bringing it to life with rich detail and cultural authenticity.
+
+**CRITICAL LANGUAGE REQUIREMENT:**
+You MUST write the entire story in 中文. This is not optional. Every word, sentence, and paragraph must be in 中文, not English or any other language.
+
+**STORY INFORMATION:**
+- Title: 白蛇传
+- Cultural Origin: Chinese
+- Required Language: 中文
+
+**CHARACTERS:**
+- 白素贞 (Hero) - also known as: 小白蛇
+- 捕蛇人 (Villain) - also known as: 捕蛇者
+- 牧童 (Hero)
+- 观世音菩萨 (Mentor)
+- 小青 (Sidekick/Helper) - also known as: 青蛇; 小青蛇
+
+Each character has an archetypal role. Develop them in a way that is consistent with their archetype while also giving them depth and personality. Use character names consistently throughout the story, including any aliases provided.
+
+**NARRATIVE STRUCTURE:**
+
+The story must follow these 9 events in the exact order specified. Each event must correspond to ONE paragraph in your output, wrapped in curly braces {}:
+
+Event 1: [Initial Situation] 女主出场; 白素贞出场 | Agents: 白素贞
+Event 2: [VILLAINY] 动物形态的女主被猎人抓住, 危在旦夕; 小白蛇落入捕蛇人手中,命悬一线 | Agents: 捕蛇人 | Targets: 白素贞
+Event 3: [STRUGGLE] 正在这个时候，一阵笛声传来，有个骑着牛的牧童向捕蛇者而来。他看到捕蛇者手中的小白蛇，有些不忍心，便央求道：“叔叔，我看这蛇也怪可怜的，您行行好，放了它吧。”
+捕蛇人自然不肯答应。牧童想了想，心中有了主 | Agents: 牧童 | Targets: 捕蛇人
+Event 4: [RESCUE] 在男主(前世)的帮助下, (动物形态的)女主从猎人手里逃出生天; 白素贞乘捕蛇人不备逃出生天 | Agents: 白素贞 | Targets: 捕蛇人
+Event 5: [UNRECOGNIZED_ARRIVAL] 女主由动物形态化身为人; 白素贞修炼成人, 踏入凡尘(红尘俗世); | Agents: 白素贞
+Event 6: [HERO_REACTION] 女主打败了潜在的对手, 但没有下死手; 白素贞遇到青蛇, 出于维护秩序的意愿, 打败了青蛇, 但没有痛下杀手 | Agents: 白素贞 | Targets: 小青
+Event 7: [RECEIPT_OF_AGENT] 魔法对手在被女主击败后臣服于她; 小青臣服于白素贞 | Agents: 小青 | Targets: 白素贞
+Event 8: [] 水光潋滟晴方好，山色空濛雨亦奇。欲把西湖比西子，淡妆浓抹总相宜。西湖的美景总让人百看不厌，白素贞与小青姐妹俩每日便在这杭州西湖畔一边游山玩水，一边找寻白素贞的转世恩人。
+三月初三，清明节这天，姐妹两人
+Event 10: [OTHER] 
+
+Each event represents a key plot point that must be included in your narrative. The event type (e.g., VILLAINY, DEPARTURE, VICTORY) indicates the narrative function, which should inform how you present and develop that moment in the story. You must generate exactly 9 paragraphs, each wrapped in {}, corresponding to these 9 events in order.
+
+**STORY GENERATION REQUIREMENTS:**
+
+1. **Narrative Flow**: The story must progress smoothly through all events in chronological order. Create natural transitions between events that feel organic and engaging.
+
+2. **Character Development**: Include all listed characters and develop their roles naturally. Characters should feel authentic to their archetypal roles while also having individual personalities.
+
+3. **Cultural Authenticity**: 
+   - Use appropriate cultural details, settings, and traditions for Chinese folktales
+   - Incorporate relevant cultural elements, motifs, and storytelling conventions
+   - Maintain the traditional narrative style typical of Chinese stories
+
+4. **Writing Style**:
+   - Use vivid, descriptive language that brings scenes to life
+   - Include sensory details (sights, sounds, emotions) where appropriate
+   - Balance dialogue and narration effectively
+   - Create tension and emotional resonance where the events suggest it
+
+5. **Completeness**: The story should be self-contained and readable as a standalone narrative. Do not include meta-commentary, explanations, or analysis—only the story itself.
+
+6. **Length**: Generate a substantial, well-developed story that fully explores each event. Aim for a length appropriate to the complexity of the narrative structure provided.
+
+**OUTPUT FORMAT - CRITICAL:**
+
+You must format the story as follows:
+- Each narrative event corresponds to ONE story paragraph
+- Each paragraph MUST be wrapped in curly braces {}
+- The paragraphs must appear in the exact order of the events (Event 1, Event 2, ..., Event 9)
+- Each paragraph should be a self-contained narrative segment that develops the corresponding event
+
+Format example:
+{First paragraph corresponding to Event 1}
+{Second paragraph corresponding to Event 2}
+{Third paragraph corresponding to Event 3}
+...
+
+Requirements:
+- Each {} block should contain the story text for ONE narrative event only
+- Do NOT include any text outside the curly braces
+- Do NOT include the event numbers or labels inside the braces
+- Do NOT include any introduction, explanation, meta-commentary, notes, or analysis
+- Do NOT include the title
+- The story should flow naturally from one {} block to the next
+
+**LANGUAGE REMINDER:**
+CRITICAL: You must write the entire story in 中文, not in English. The story must be completely in 中文 from the first word to the last word. Do not use English at all.
+
+**BEGIN THE STORY NOW (with proper formatting):**
+
