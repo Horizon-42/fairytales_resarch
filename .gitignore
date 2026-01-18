@@ -22,3 +22,7 @@ tmp/
 mock_test_results/
 
 unsloth_compiled_cache
+
+exports/
+
+models/
