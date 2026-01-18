@@ -34,12 +34,12 @@ class FineTuneConfig:
     # - unsloth/Qwen3-8B (full precision, requires more GPU RAM)
     # - unsloth/Qwen2.5-7B-Instruct (previous generation)
     model_name: str = "unsloth/Qwen3-4B-unsloth-bnb-4bit"
-    max_seq_length: int = 2048
+    max_seq_length: int = 1024  # Reduced from 2048 to avoid OOM on 8GB GPU
     
     # LoRA configuration
     lora_r: int = 16
     lora_alpha: int = 32
-    lora_dropout: float = 0.1
+    lora_dropout: float = 0  # Set to 0 to enable Unsloth fast patching and avoid Triton compilation issues
     target_modules: Optional[List[str]] = None
     
     # Training configuration
@@ -86,8 +86,9 @@ class FineTuneConfig:
             "bf16": self.bf16,
             "logging_steps": 10,
             "output_dir": output_dir,
-            "save_strategy": "epoch",
-            "evaluation_strategy": "no",  # Can be overridden
-            "save_total_limit": 3,
+            "save_strategy": "steps",  # Changed from "epoch" to save more frequently
+            "save_steps": 50,  # Save checkpoint every 50 steps
+            "eval_strategy": "no",  # Disabled to save memory on 8GB GPU
+            "save_total_limit": 2,  # Keep only 2 checkpoints to save disk space
             "load_best_model_at_end": False,
         }
