@@ -41,6 +41,8 @@ from llm_model.huggingface_client import HuggingFaceConfig
 from llm_model.llm_router import LLMConfig
 from llm_model.ollama_client import OllamaConfig
 
+import time
+
 
 def extract_text_spans_from_ground_truth(gt_data: Dict[str, Any]) -> List[Dict[str, Any]]:
     """Extract text spans from ground truth json_v3 file.
@@ -130,7 +132,9 @@ def run_pipeline_and_evaluate(
     print("Running full detection pipeline...")
     print("=" * 60)
     
-    # Run pipeline
+    # Run pipeline with timing
+    pipeline_start = time.time()
+    
     result = process_story(
         story_text=story_text,
         text_spans=text_spans,
@@ -139,7 +143,20 @@ def run_pipeline_and_evaluate(
         include_instrument=include_instrument,
     )
     
-    print(f"Pipeline completed. Generated {len(result['narrative_events'])} events")
+    pipeline_elapsed = time.time() - pipeline_start
+    print(f"\n{'='*60}")
+    print(f"Pipeline completed in {pipeline_elapsed:.1f}s ({pipeline_elapsed/60:.1f} minutes)")
+    print(f"Generated {len(result['narrative_events'])} events")
+    
+    # Show timing summary
+    if result.get("results"):
+        successful_results = [r for r in result["results"] if r.get("success")]
+        if successful_results:
+            times = [r.get("processing_time", 0) for r in successful_results]
+            avg_time = sum(times) / len(times) if times else 0
+            total_time = sum(times)
+            print(f"Average time per span: {avg_time:.1f}s")
+            print(f"Total processing time: {total_time:.1f}s")
     
     # Build prediction JSON in v3 format
     prediction = {
