@@ -39,7 +39,8 @@ const archetypeColors = {
   '': '#9ca3af',               // Empty archetype
 }
 
-// Color mapping for relationship types (from relationship.csv - Level 1)
+// Color mapping for relationship types (from relationship_en.csv - Level 1)
+// These keys must match exactly with relationship_level1 values from the data
 const relationshipColors = {
   'Family & Kinship': '#d4a373',   // Gold
   'Romance': '#e63946',            // Red
@@ -47,7 +48,9 @@ const relationshipColors = {
   'Social & Alliance': '#219ebc',  // Blue
   'Adversarial': '#370617',        // Dark crimson
   'Neutral': '#9ca3af',            // Gray
+  // Fallback for unknown/missing types
   'Unknown': '#6b7280',            // Fallback gray
+  '': '#6b7280',                   // Empty string fallback
 }
 
 // Color mapping for sentiments
@@ -140,31 +143,6 @@ function CharacterGraph({ story }) {
     
     svg.call(zoom)
 
-    // Add gradient definitions for edges
-    const defs = svg.append('defs')
-    
-    // Create arrow markers for each relationship type with matching colors
-    Object.entries(relationshipColors).forEach(([relType, color]) => {
-      const markerId = `arrowhead-${relType.replace(/[^a-zA-Z0-9]/g, '-')}`
-      defs.append('marker')
-        .attr('id', markerId)
-        .attr('viewBox', '0 -4 8 8')
-        .attr('refX', 8)
-        .attr('refY', 0)
-        .attr('markerWidth', 4)
-        .attr('markerHeight', 4)
-        .attr('orient', 'auto')
-        .attr('markerUnits', 'strokeWidth')
-        .append('path')
-        .attr('d', 'M0,-4L8,0L0,4Z')
-        .attr('fill', color)
-    })
-
-    // Helper function to get marker id for relationship type
-    const getMarkerId = (relType) => {
-      const id = `arrowhead-${(relType || 'Unknown').replace(/[^a-zA-Z0-9]/g, '-')}`
-      return `url(#${id})`
-    }
 
     // Create force simulation
     const simulation = d3.forceSimulation(nodes)
@@ -186,14 +164,18 @@ function CharacterGraph({ story }) {
       .join('g')
       .attr('class', 'edge-group')
 
-    // Draw edges
+    // Draw edges (no arrows for bidirectional relationships)
     const links = edges_g.append('path')
       .attr('class', 'edge')
-      .attr('stroke', d => relationshipColors[d.relationship_type] || relationshipColors['Unknown'])
+      .attr('stroke', d => {
+        // Use relationship_type field (from relationship_level1 in backend)
+        // Normalize the value: trim whitespace and handle empty strings
+        const relType = (d.relationship_type || '').trim()
+        return relationshipColors[relType] || relationshipColors['Unknown']
+      })
       .attr('stroke-width', d => Math.max(2, Math.min(d.weight * 1.5 + 1, 6)))
       .attr('stroke-opacity', 0.6)
       .attr('fill', 'none')
-      .attr('marker-end', d => getMarkerId(d.relationship_type))
 
     // Edge labels
     const edgeLabels = edges_g.append('text')
@@ -202,7 +184,11 @@ function CharacterGraph({ story }) {
       .attr('dy', -5)
       .attr('font-size', '10px')
       .attr('fill', '#666')
-      .text(d => d.relationship_type)
+      .text(d => {
+        // Use relationship_type field (from relationship_level1 in backend)
+        const relType = (d.relationship_type || '').trim()
+        return relType || 'Unknown'
+      })
       .attr('opacity', 0)
 
     // Create node groups
@@ -333,7 +319,6 @@ function CharacterGraph({ story }) {
 
     // Simulation tick
     const nodeRadius = 22
-    const arrowOffset = 8 // Additional offset for arrow head
     
     simulation.on('tick', () => {
       links.attr('d', d => {
@@ -350,14 +335,11 @@ function CharacterGraph({ story }) {
         // Offset start and end points by node radius
         const startX = d.source.x + ux * nodeRadius
         const startY = d.source.y + uy * nodeRadius
-        const endX = d.target.x - ux * (nodeRadius + arrowOffset)
-        const endY = d.target.y - uy * (nodeRadius + arrowOffset)
+        const endX = d.target.x - ux * nodeRadius
+        const endY = d.target.y - uy * nodeRadius
         
-        // Calculate arc radius based on distance
-        const arcDist = Math.sqrt((endX - startX) ** 2 + (endY - startY) ** 2)
-        const dr = Math.max(arcDist * 0.8, 50) // Curve the arc
-        
-        return `M${startX},${startY}A${dr},${dr} 0 0,1 ${endX},${endY}`
+        // Use straight line instead of arc
+        return `M${startX},${startY}L${endX},${endY}`
       })
 
       edgeLabels
@@ -438,15 +420,14 @@ function CharacterGraph({ story }) {
           <div className="legend-section">
             <h4>Relationship Types</h4>
             <div className="legend-items">
-              {[
-                'Family & Kinship', 'Romance', 'Hierarchy',
-                'Social & Alliance', 'Adversarial', 'Neutral',
-              ].map((type) => (
-                <div key={type} className="legend-item">
-                  <span className="legend-line" style={{ background: relationshipColors[type] }}></span>
-                  <span className="legend-label">{type}</span>
-                </div>
-              ))}
+              {Object.keys(relationshipColors)
+                .filter(key => key !== 'Unknown' && key !== '') // Exclude fallback keys
+                .map((type) => (
+                  <div key={type} className="legend-item">
+                    <span className="legend-line" style={{ background: relationshipColors[type] }}></span>
+                    <span className="legend-label">{type}</span>
+                  </div>
+                ))}
             </div>
           </div>
         </div>
