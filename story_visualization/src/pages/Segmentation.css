@@ -272,13 +272,55 @@
   border-radius: 4px;
 }
 
-/* Predicted Boundary Underline */
-.text-with-boundary-underline {
-  border-bottom: 2px dashed #ef4444;
-  padding-bottom: 2px;
-  cursor: help;
+/* Predicted Text Segment - 使用背景色（和GT相同的渲染方式） */
+.predicted-text-segment-bg {
   display: inline;
   position: relative;
+  cursor: help;
+  background-color: #fee2e2 !important;
+  padding: 2px 4px;
+  border-radius: 3px;
+  transition: opacity 0.2s, box-shadow 0.2s;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.predicted-text-segment-bg:hover {
+  opacity: 0.85;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.15);
+  z-index: 1;
+  position: relative;
+}
+
+/* Ensure visible in text-with-highlights container */
+.text-with-highlights .predicted-text-segment-bg {
+  background-color: #fee2e2 !important;
+  display: inline !important;
+  line-height: 1.8;
+  vertical-align: baseline;
+  padding: 2px 4px !important;
+  color: inherit !important;
+}
+
+/* Comparison View - Split into upper and lower halves */
+.comparison-text-container {
+  position: relative;
+  width: 100%;
+}
+
+.comparison-text-upper {
+  position: relative;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  pointer-events: none;
+}
+
+.comparison-text-lower {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  pointer-events: none;
 }
 
 /* Legacy segments container (kept for backward compatibility if needed) */
@@ -455,6 +497,48 @@
   font-size: 1.2rem !important;
   font-weight: 600;
   color: #27ae60 !important;
+}
+
+/* Display Mode Toggle */
+.display-mode-toggle {
+  display: flex !important;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mode-button {
+  padding: 0.5rem 1rem !important;
+  border: 2px solid #cbd5e1 !important;
+  border-radius: 6px !important;
+  background: white !important;
+  color: #475569 !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: all 0.2s !important;
+  margin: 0 !important;
+  min-width: 100px;
+  text-align: center;
+}
+
+.mode-button:hover:not(:disabled) {
+  border-color: #3498db !important;
+  background: #f0f9ff !important;
+  color: #2980b9 !important;
+}
+
+.mode-button.active {
+  border-color: #3498db !important;
+  background: #3498db !important;
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+.mode-button:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  background: #f1f5f9 !important;
 }
 
 /* Loading State */

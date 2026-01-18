@@ -30,6 +30,19 @@ export default function Segmentation({ story }) {
   
   // Ground truth segments from annotation
   const [gtSegments, setGtSegments] = useState([])
+  
+  // Display mode: 'gt', 'predicted', or 'both'
+  const [displayMode, setDisplayMode] = useState('predicted')
+  
+  // Update display mode when result or gtSegments change
+  useEffect(() => {
+    if (result && result.segments && result.segments.length > 0) {
+      // If user switched to 'gt' or 'both' but no GT segments, switch to 'predicted'
+      if (gtSegments.length === 0 && (displayMode === 'both' || displayMode === 'gt')) {
+        setDisplayMode('predicted')
+      }
+    }
+  }, [result, gtSegments.length, displayMode])
 
   // Extract ground truth from annotation when text and sentences are ready
   useEffect(() => {
@@ -235,99 +248,269 @@ export default function Segmentation({ story }) {
     })
   }
 
-  // Render text with predicted boundaries as dashed underlines
-  const renderTextWithPredictedBoundaries = () => {
-    if (!text || !result || !result.boundaries || result.boundaries.length === 0 || !sentences || sentences.length === 0) {
-      return <div className="text-with-highlights">{text}</div>
+  // Build predicted segments from result
+  const buildPredictedSegments = () => {
+    if (!result || !result.segments || result.segments.length === 0) {
+      return []
     }
 
-    // Calculate character positions for each sentence end
-    // Use the sentences array to find positions in text
-    const sentenceEndPositions = []
-    let searchStart = 0
+    // Split text into sentences to find character positions
+    const sentenceMatches = []
+    let lastIndex = 0
+    const sentenceRegex = /[^。！？.!\?]+[。！？.!\?]+/g
+    let match
     
-    for (let i = 0; i < sentences.length; i++) {
-      const sentenceText = sentences[i].trim()
-      if (!sentenceText) continue
-      
-      // Find the sentence in the original text
-      const sentenceStart = text.indexOf(sentenceText, searchStart)
-      if (sentenceStart === -1) {
-        // Fallback: estimate position
-        const estimatedEnd = searchStart + sentenceText.length
-        sentenceEndPositions.push(Math.min(estimatedEnd, text.length))
-        searchStart = estimatedEnd + 1
-        continue
-      }
-      
-      // Find the end of this sentence (including delimiter)
-      let sentenceEnd = sentenceStart + sentenceText.length
-      // Look for delimiter after the sentence
-      while (sentenceEnd < text.length && !/[。！？.!\?]/.test(text[sentenceEnd])) {
-        sentenceEnd++
-      }
-      // Include delimiter(s)
-      while (sentenceEnd < text.length && /[。！？.!\?\s]/.test(text[sentenceEnd])) {
-        sentenceEnd++
-      }
-      
-      sentenceEndPositions.push(Math.min(sentenceEnd, text.length))
-      searchStart = sentenceEnd
+    while ((match = sentenceRegex.exec(text)) !== null) {
+      sentenceMatches.push({
+        start: match.index,
+        end: match.index + match[0].length
+      })
+      lastIndex = match.index + match[0].length
     }
-
-    if (sentenceEndPositions.length === 0) {
-      return <div className="text-with-highlights">{text}</div>
-    }
-
-    // Map boundary indices (sentence indices) to character positions
-    // A boundary at index i means there's a break after sentence i (before sentence i+1)
-    const boundaryCharPositions = result.boundaries
-      .filter(boundary => boundary >= 0 && boundary < sentenceEndPositions.length)
-      .map(boundary => sentenceEndPositions[boundary])
-      .filter(pos => pos > 0 && pos < text.length) // Valid positions only
-      .sort((a, b) => a - b) // Sort ascending
-      .filter((pos, idx, arr) => idx === 0 || pos !== arr[idx - 1]) // Remove duplicates
-
-    if (boundaryCharPositions.length === 0) {
-      return <div className="text-with-highlights">{text}</div>
-    }
-
-    // Build rendering parts with boundary underlines
-    const parts = []
-    let lastPos = 0
-
-    boundaryCharPositions.forEach((boundaryPos) => {
-      // Text before boundary - with underline
-      if (boundaryPos > lastPos) {
-        parts.push({
-          text: text.substring(lastPos, boundaryPos),
-          type: 'with-boundary',
-          hasBoundary: true
-        })
-      }
-      lastPos = boundaryPos
-    })
-
-    // Remaining text after last boundary
-    if (lastPos < text.length) {
-      parts.push({
-        text: text.substring(lastPos),
-        type: 'normal',
-        hasBoundary: false
+    
+    if (lastIndex < text.length) {
+      sentenceMatches.push({
+        start: lastIndex,
+        end: text.length
       })
     }
 
+    // Build predicted segments
+    const predictedSegments = []
+    result.segments.forEach((segment, idx) => {
+      const startSentenceIdx = segment.start_sentence_idx
+      const endSentenceIdx = segment.end_sentence_idx
+      
+      // Try to find text positions using segment.text if available
+      if (segment.text && segment.text.trim()) {
+        const segmentText = segment.text.trim()
+        const charIndex = text.indexOf(segmentText)
+        
+        if (charIndex !== -1) {
+          predictedSegments.push({
+            segmentId: segment.segment_id,
+            startChar: charIndex,
+            endChar: charIndex + segmentText.length
+          })
+          return
+        }
+      }
+      
+      // Fallback: use sentence indices
+      if (startSentenceIdx >= 0 && startSentenceIdx < sentenceMatches.length &&
+          endSentenceIdx >= 0 && endSentenceIdx < sentenceMatches.length) {
+        const startChar = sentenceMatches[startSentenceIdx].start
+        const endChar = sentenceMatches[endSentenceIdx].end
+        
+        predictedSegments.push({
+          segmentId: segment.segment_id,
+          startChar: startChar,
+          endChar: endChar
+        })
+      }
+    })
+
+    return predictedSegments
+  }
+
+  // Render text with both ground truth and predicted segments for comparison (split view)
+  const renderTextWithComparison = () => {
+    if (!text) {
+      return <div className="text-with-highlights">{text}</div>
+    }
+
+    const predictedSegments = buildPredictedSegments()
+    
+    if (predictedSegments.length === 0 && gtSegments.length === 0) {
+      return <div className="text-with-highlights">{text}</div>
+    }
+
+    // Render predicted segments (upper half)
+    const predictedParts = []
+    let predCurrentPos = 0
+    
+    predictedSegments.forEach((segment) => {
+      if (segment.startChar > predCurrentPos) {
+        predictedParts.push({
+          text: text.substring(predCurrentPos, segment.startChar),
+          type: 'normal'
+        })
+      }
+      predictedParts.push({
+        text: text.substring(segment.startChar, segment.endChar),
+        type: 'predicted',
+        segmentId: segment.segmentId
+      })
+      predCurrentPos = segment.endChar
+    })
+    
+    if (predCurrentPos < text.length) {
+      predictedParts.push({
+        text: text.substring(predCurrentPos),
+        type: 'normal'
+      })
+    }
+
+    // Render ground truth segments (lower half)
+    const gtParts = []
+    let gtCurrentPos = 0
+    const sortedGtSegments = [...gtSegments].sort((a, b) => a.startChar - b.startChar)
+    
+    sortedGtSegments.forEach((segment) => {
+      if (segment.startChar > gtCurrentPos) {
+        gtParts.push({
+          text: text.substring(gtCurrentPos, segment.startChar),
+          type: 'normal'
+        })
+      }
+      gtParts.push({
+        text: text.substring(segment.startChar, segment.endChar),
+        type: 'ground-truth',
+        segmentId: segment.segmentId
+      })
+      gtCurrentPos = segment.endChar
+    })
+    
+    if (gtCurrentPos < text.length) {
+      gtParts.push({
+        text: text.substring(gtCurrentPos),
+        type: 'normal'
+      })
+    }
+
+    // Render both layers: predicted on top (upper half), GT on bottom (lower half)
+    return (
+      <div className="comparison-text-container">
+        {/* Upper half: Predicted segments */}
+        <div className="comparison-text-upper">
+          {predictedParts.map((part, idx) => {
+            if (part.type === 'predicted') {
+              return (
+                <span
+                  key={idx}
+                  className="predicted-text-segment-bg"
+                  style={{ backgroundColor: '#fee2e2' }}
+                  title={`Predicted Segment ${part.segmentId}`}
+                >
+                  {part.text}
+                </span>
+              )
+            }
+            return <span key={idx}>{part.text}</span>
+          })}
+        </div>
+        {/* Lower half: Ground truth segments */}
+        <div className="comparison-text-lower">
+          {gtParts.map((part, idx) => {
+            if (part.type === 'ground-truth') {
+              const bgColor = getSegmentColor(part.segmentId - 1)
+              return (
+                <span
+                  key={idx}
+                  className="gt-text-segment"
+                  style={{ backgroundColor: bgColor }}
+                  title={`Ground Truth Segment ${part.segmentId}`}
+                >
+                  {part.text}
+                </span>
+              )
+            }
+            return <span key={idx}>{part.text}</span>
+          })}
+        </div>
+      </div>
+    )
+  }
+
+  // Render text with predicted segments only (background color approach)
+  const renderTextWithPredictedBoundaries = () => {
+    if (!text || !result || !result.segments || result.segments.length === 0) {
+      return <div className="text-with-highlights">{text}</div>
+    }
+
+    // Split text into sentences to find character positions
+    const sentenceMatches = []
+    let lastIndex = 0
+    const sentenceRegex = /[^。！？.!\?]+[。！？.!\?]+/g
+    let match
+    
+    while ((match = sentenceRegex.exec(text)) !== null) {
+      sentenceMatches.push({
+        start: match.index,
+        end: match.index + match[0].length
+      })
+      lastIndex = match.index + match[0].length
+    }
+    
+    if (lastIndex < text.length) {
+      sentenceMatches.push({
+        start: lastIndex,
+        end: text.length
+      })
+    }
+
+    if (sentenceMatches.length === 0) {
+      return <div className="text-with-highlights">{text}</div>
+    }
+
+    const predictedSegments = buildPredictedSegments()
+
+    if (predictedSegments.length === 0) {
+      return <div className="text-with-highlights">{text}</div>
+    }
+
+    // Sort by position
+    predictedSegments.sort((a, b) => a.startChar - b.startChar)
+
+    // Build rendering parts
+    const parts = []
+    let currentPos = 0
+    
+    predictedSegments.forEach((segment) => {
+      // Text before this segment
+      if (segment.startChar > currentPos) {
+        parts.push({
+          text: text.substring(currentPos, segment.startChar),
+          type: 'normal'
+        })
+      }
+      
+      // This segment
+      parts.push({
+        text: text.substring(segment.startChar, segment.endChar),
+        type: 'predicted',
+        segmentId: segment.segmentId
+      })
+      
+      currentPos = segment.endChar
+    })
+    
+    // Remaining text
+    if (currentPos < text.length) {
+      parts.push({
+        text: text.substring(currentPos),
+        type: 'normal'
+      })
+    }
+
+
     return (
       <>
-        {parts.map((part, idx) => (
-          <span 
-            key={idx}
-            className={part.hasBoundary ? 'text-with-boundary-underline' : ''}
-            title={part.hasBoundary ? 'Predicted Boundary' : ''}
-          >
-            {part.text}
-          </span>
-        ))}
+        {parts.map((part, idx) => {
+          if (part.type === 'predicted') {
+            return (
+              <span
+                key={idx}
+                className="predicted-text-segment-bg"
+                style={{ backgroundColor: '#fee2e2' }}
+                title={`Predicted Segment ${part.segmentId}`}
+              >
+                {part.text}
+              </span>
+            )
+          }
+          return <span key={idx}>{part.text}</span>
+        })}
       </>
     )
   }
@@ -381,44 +564,155 @@ export default function Segmentation({ story }) {
           <div className="input-section">
             <div className="input-group">
               <label htmlFor="text-input">Story Text:</label>
-              {gtSegments.length > 0 ? (
+              {(gtSegments.length > 0 && !result) || (result && result.segments && result.segments.length > 0) ? (
                 <div className="text-display-with-segments">
                   <div className="gt-segments-legend">
-                    <strong>Ground Truth Segments (from annotation):</strong>
-                    {gtSegments.map((seg) => (
-                      <span 
-                        key={seg.segmentId} 
-                        className="legend-item"
-                        style={{ backgroundColor: getSegmentColor(seg.segmentId - 1) }}
-                      >
-                        Seg {seg.segmentId} (Sentences {seg.startSentenceIdx}-{seg.endSentenceIdx})
-                      </span>
-                    ))}
+                    {/* Display Mode Toggle - show when there's a result or both GT and result */}
+                    {result && result.segments && result.segments.length > 0 && (
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '0.5rem' }}>
+                        <strong>Display Mode:</strong>
+                        <div className="display-mode-toggle">
+                          <button
+                            className={`mode-button ${displayMode === 'gt' ? 'active' : ''}`}
+                            onClick={() => setDisplayMode('gt')}
+                            disabled={gtSegments.length === 0}
+                            title="Show Ground Truth only"
+                          >
+                            Ground Truth
+                          </button>
+                          <button
+                            className={`mode-button ${displayMode === 'predicted' ? 'active' : ''}`}
+                            onClick={() => setDisplayMode('predicted')}
+                            title="Show Predicted only"
+                          >
+                            Predicted
+                          </button>
+                          <button
+                            className={`mode-button ${displayMode === 'both' ? 'active' : ''}`}
+                            onClick={() => setDisplayMode('both')}
+                            disabled={gtSegments.length === 0}
+                            title="Show both Ground Truth and Predicted"
+                          >
+                            Both
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                    
+                    {/* Show GT legend when displaying GT or both */}
+                    {(displayMode === 'gt' || displayMode === 'both' || !result) && gtSegments.length > 0 && (
+                      <>
+                        <strong>Ground Truth Segments (from annotation):</strong>
+                        {gtSegments.map((seg) => (
+                          <span 
+                            key={seg.segmentId} 
+                            className="legend-item"
+                            style={{ backgroundColor: getSegmentColor(seg.segmentId - 1) }}
+                          >
+                            Seg {seg.segmentId} (Sentences {seg.startSentenceIdx}-{seg.endSentenceIdx})
+                          </span>
+                        ))}
+                      </>
+                    )}
+                    
+                    {/* Show Predicted legend when displaying predicted or both */}
+                    {result && result.segments && result.segments.length > 0 && (displayMode === 'predicted' || displayMode === 'both') && (
+                      <>
+                        <strong style={{ marginTop: '0.5rem', display: 'block' }}>Predicted Segmentation:</strong>
+                        {result.boundaries && result.boundaries.length > 0 && (
+                          <span className="legend-item" style={{ backgroundColor: '#fee2e2', border: '1px dashed #ef4444' }}>
+                            Boundaries: {result.boundaries.join(', ')}
+                          </span>
+                        )}
+                        <span className="legend-item" style={{ backgroundColor: '#fee2e2', border: '1px dashed #ef4444' }}>
+                          {result.segments.length} predicted segments
+                        </span>
+                      </>
+                    )}
                   </div>
                   <div className="text-with-highlights" id="story-text-display">
-                    {renderTextWithSegments()}
+                    {result && result.segments && result.segments.length > 0
+                      ? (displayMode === 'gt' ? renderTextWithSegments() : 
+                         displayMode === 'both' ? renderTextWithComparison() : 
+                         renderTextWithPredictedBoundaries())
+                      : renderTextWithSegments()}
                   </div>
                   <div className="text-info">
-                    {sentences.length} sentences detected • {gtSegments.length} ground truth segments loaded from annotation
+                    {sentences.length} sentences detected
+                    {result && result.segments && result.segments.length > 0 && (displayMode === 'predicted' || displayMode === 'both') ? ` • ${result.segments.length} predicted segments` : ''}
+                    {(displayMode === 'gt' || displayMode === 'both' || !result) && gtSegments.length > 0 ? ` • ${gtSegments.length} ground truth segments` : ''}
                   </div>
                 </div>
               ) : (
                 <>
-                  {result && result.boundaries && result.boundaries.length > 0 ? (
+                  {result && result.segments && result.segments.length > 0 ? (
                     <div className="text-display-with-segments">
-                      {result.boundaries.length > 0 && (
-                        <div className="gt-segments-legend">
-                          <strong>Predicted Segmentation:</strong>
-                          <span className="legend-item" style={{ backgroundColor: '#fee' }}>
-                            Boundaries at: {result.boundaries.join(', ')}
-                          </span>
+                      <div className="gt-segments-legend">
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+                          <strong>Display Mode:</strong>
+                          <div className="display-mode-toggle">
+                            <button
+                              className={`mode-button ${displayMode === 'gt' ? 'active' : ''}`}
+                              onClick={() => setDisplayMode('gt')}
+                              disabled={gtSegments.length === 0}
+                              title="Show Ground Truth only"
+                            >
+                              Ground Truth
+                            </button>
+                            <button
+                              className={`mode-button ${displayMode === 'predicted' ? 'active' : ''}`}
+                              onClick={() => setDisplayMode('predicted')}
+                              title="Show Predicted only"
+                            >
+                              Predicted
+                            </button>
+                            <button
+                              className={`mode-button ${displayMode === 'both' ? 'active' : ''}`}
+                              onClick={() => setDisplayMode('both')}
+                              disabled={gtSegments.length === 0}
+                              title="Show both Ground Truth and Predicted"
+                            >
+                              Both
+                            </button>
+                          </div>
                         </div>
-                      )}
+                        {displayMode === 'gt' || displayMode === 'both' ? (
+                          <>
+                            <strong style={{ marginTop: '0.5rem', display: 'block' }}>Ground Truth:</strong>
+                            {gtSegments.map((seg) => (
+                              <span 
+                                key={seg.segmentId} 
+                                className="legend-item"
+                                style={{ backgroundColor: getSegmentColor(seg.segmentId - 1) }}
+                              >
+                                Seg {seg.segmentId}
+                              </span>
+                            ))}
+                          </>
+                        ) : null}
+                        {displayMode === 'predicted' || displayMode === 'both' ? (
+                          <>
+                            <strong style={{ marginTop: '0.5rem', display: 'block' }}>Predicted:</strong>
+                            {result.boundaries && result.boundaries.length > 0 && (
+                              <span className="legend-item" style={{ backgroundColor: '#fee2e2', border: '1px dashed #ef4444' }}>
+                                Boundaries: {result.boundaries.join(', ')}
+                              </span>
+                            )}
+                            <span className="legend-item" style={{ backgroundColor: '#fee2e2', border: '1px dashed #ef4444' }}>
+                              {result.segments.length} segments
+                            </span>
+                          </>
+                        ) : null}
+                      </div>
                       <div className="text-with-highlights" id="story-text-display">
-                        {renderTextWithPredictedBoundaries()}
+                        {displayMode === 'gt' ? renderTextWithSegments() : 
+                         displayMode === 'both' ? renderTextWithComparison() : 
+                         renderTextWithPredictedBoundaries()}
                       </div>
                       <div className="text-info">
-                        {sentences.length} sentences detected • {result.segments.length} predicted segments
+                        {sentences.length} sentences detected
+                        {displayMode === 'predicted' || displayMode === 'both' ? ` • ${result.segments.length} predicted segments` : ''}
+                        {displayMode === 'gt' || displayMode === 'both' ? ` • ${gtSegments.length} ground truth segments` : ''}
                       </div>
                     </div>
                   ) : (
