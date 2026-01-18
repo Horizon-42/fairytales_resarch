@@ -190,3 +190,83 @@ export function buildCharToSentenceMapping(text, sentences) {
   
   return mapping
 }
+
+/**
+ * Build segments from boundaries (similar to groundtruth structure).
+ * Boundaries are indices between sentences (boundary i means between sentence i and i+1).
+ * @param {Array<number>} boundaries - Array of boundary indices
+ * @param {string} text - Full text
+ * @param {Array<string>} sentences - Array of sentences
+ * @returns {Array<Object>} - Array of segments with {segmentId, startChar, endChar, startSentenceIdx, endSentenceIdx, text}
+ */
+export function buildSegmentsFromBoundaries(boundaries, text, sentences) {
+  if (!boundaries || boundaries.length === 0) {
+    // If no boundaries, treat entire text as one segment
+    return [{
+      segmentId: 1,
+      startChar: 0,
+      endChar: text.length,
+      startSentenceIdx: 0,
+      endSentenceIdx: Math.max(0, sentences.length - 1),
+      text: text
+    }]
+  }
+
+  // Build sentence-to-character mapping
+  const sentenceMapping = buildCharToSentenceMapping(text, sentences)
+  
+  // Sort boundaries
+  const sortedBoundaries = [...boundaries].sort((a, b) => a - b).filter(b => b >= 0 && b < sentences.length)
+  
+  const segments = []
+  let startSentIdx = 0
+  
+  for (let i = 0; i <= sortedBoundaries.length; i++) {
+    // Boundary i means between sentence i and i+1, so segment ends at sentence i
+    // Last segment goes from last boundary+1 to end of sentences
+    const endSentIdx = i < sortedBoundaries.length ? sortedBoundaries[i] : sentences.length - 1
+    
+    if (endSentIdx < startSentIdx) continue
+    
+    // Find character positions for this segment
+    const startMapping = sentenceMapping.find(m => m.sentenceIdx === startSentIdx)
+    const endMapping = sentenceMapping.find(m => m.sentenceIdx === endSentIdx)
+    
+    let startChar = 0
+    let endChar = text.length
+    
+    if (startMapping) {
+      startChar = startMapping.start
+    }
+    
+    if (endMapping) {
+      // End char is after the end of the last sentence in the segment
+      endChar = endMapping.end
+      // For non-last segments, we might need to include delimiter after the sentence
+      // But for simplicity, use the mapping end which should include the sentence
+    } else if (endSentIdx === sentences.length - 1) {
+      // Last segment extends to end of text
+      endChar = text.length
+    }
+    
+    // Ensure we don't go beyond text length
+    endChar = Math.min(endChar, text.length)
+    
+    // Extract text for this segment
+    const segmentText = text.substring(startChar, endChar)
+    
+    segments.push({
+      segmentId: i + 1,
+      startChar: startChar,
+      endChar: endChar,
+      startSentenceIdx: startSentIdx,
+      endSentenceIdx: endSentIdx,
+      text: segmentText
+    })
+    
+    // Next segment starts after this boundary (at sentence endSentIdx + 1)
+    startSentIdx = endSentIdx + 1
+  }
+  
+  return segments
+}
