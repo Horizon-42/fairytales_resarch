@@ -2,12 +2,14 @@
 
 from __future__ import annotations
 
+import json
 from typing import Any, Dict, List, Optional
 
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.runnables import Runnable, RunnablePassthrough
+from langchain_core.exceptions import OutputParserException
 
-from ..json_utils import loads_strict_json
+from ..json_utils import loads_strict_json, JsonExtractionError
 from ..llm_router import LLMConfig, chat
 from .pipeline_state import PipelineState
 from .prompts import (
@@ -52,6 +54,9 @@ class LLMRouterRunnable(Runnable):
             
         Returns:
             Parsed JSON response
+            
+        Raises:
+            ValueError: If JSON parsing fails after all recovery attempts
         """
         user_prompt = input.get("prompt", "")
         if not user_prompt:
@@ -62,19 +67,118 @@ class LLMRouterRunnable(Runnable):
             {"role": "user", "content": user_prompt},
         ]
         
-        raw = chat(config=self.llm_config, messages=messages, response_format_json=True)
+        try:
+            raw = chat(config=self.llm_config, messages=messages, response_format_json=True)
+        except Exception as chat_error:
+            print(f"\n{'='*60}", flush=True)
+            print(f"ERROR: LLM chat call failed", flush=True)
+            print(f"{'='*60}", flush=True)
+            print(f"Error type: {type(chat_error).__name__}", flush=True)
+            print(f"Error message: {chat_error}", flush=True)
+            print(f"{'='*60}\n", flush=True)
+            return {}  # Return empty dict if chat fails
         
-        # Parse JSON
+        # Check if response is empty or None
+        if not raw:
+            print(f"\n{'='*60}", flush=True)
+            print(f"WARNING: Empty or None LLM response", flush=True)
+            print(f"{'='*60}", flush=True)
+            print(f"Response type: {type(raw)}", flush=True)
+            print(f"Response value: {repr(raw)}", flush=True)
+            print(f"Response is None: {raw is None}", flush=True)
+            print(f"Response is empty string: {raw == ''}", flush=True)
+            print(f"{'='*60}\n", flush=True)
+            return {}  # Return empty dict if response is empty
+        
+        # Check if response is a string but empty or whitespace only
+        if isinstance(raw, str) and not raw.strip():
+            print(f"\n{'='*60}", flush=True)
+            print(f"WARNING: Empty or whitespace-only LLM response", flush=True)
+            print(f"{'='*60}", flush=True)
+            print(f"Response type: {type(raw)}", flush=True)
+            print(f"Response repr: {repr(raw)}", flush=True)
+            print(f"Response length: {len(raw)}", flush=True)
+            print(f"{'='*60}\n", flush=True)
+            return {}  # Return empty dict if response is whitespace only
+        
+        # Parse JSON with multiple fallback strategies
+        data = None
+        last_error = None
+        
+        # Strategy 1: Try loads_strict_json (handles code fences, extracts JSON from text)
         try:
             data = loads_strict_json(raw)
-        except Exception as e:
-            # Fallback to JsonOutputParser
+            if isinstance(data, dict):
+                return data
+        except (JsonExtractionError, json.JSONDecodeError) as e1:
+            last_error = e1
+        except Exception as e1:
+            last_error = e1
+        
+        # Strategy 2: Try to extract JSON from text more aggressively using regex
+        try:
+            import re
+            # Try to find the largest JSON object in the response
+            json_match = re.search(r'\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}', raw, re.DOTALL)
+            if json_match:
+                json_str = json_match.group(0)
+                try:
+                    data = json.loads(json_str)
+                    if isinstance(data, dict):
+                        return data
+                except json.JSONDecodeError:
+                    # Try the strict loader which might handle it better
+                    data = loads_strict_json(json_str)
+                    if isinstance(data, dict):
+                        return data
+        except Exception as e2:
+            last_error = e2
+        
+        # Strategy 3: Clean and try basic json.loads
+        try:
+            cleaned = raw.strip()
+            # Remove markdown code fences
+            if cleaned.startswith("```"):
+                lines = cleaned.splitlines()
+                if len(lines) >= 2:
+                    lines = lines[1:-1] if lines[-1].strip().startswith("```") else lines[1:]
+                cleaned = "\n".join(lines).strip()
+            
+            # Try direct JSON parse
+            data = json.loads(cleaned)
+            if isinstance(data, dict):
+                return data
+        except Exception as e3:
+            last_error = e3
+        
+        # Strategy 4: Try LangChain's JsonOutputParser as last resort (it's more strict)
+        try:
             data = self.parser.parse(raw)
+            if isinstance(data, dict):
+                return data
+        except (OutputParserException, Exception) as e4:
+            last_error = e4
         
-        if not isinstance(data, dict):
-            raise ValueError(f"Expected dict output, got {type(data)}")
+        # If all strategies fail, provide helpful error message and return empty dict
+        # This prevents the pipeline from crashing, though the output will be incomplete
+        print(f"\n{'='*60}", flush=True)
+        print(f"JSON Parsing Failed", flush=True)
+        print(f"{'='*60}", flush=True)
+        print(f"Last error: {type(last_error).__name__}: {last_error}", flush=True)
         
-        return data
+        # Check if response might be truncated
+        if len(raw) > 0 and (not raw.strip().endswith('}') or raw.count('{') != raw.count('}')):
+            print(f"\n⚠️  Response may be truncated (unbalanced braces or incomplete JSON)", flush=True)
+            print(f"   This often happens when --num-predict is too low.", flush=True)
+            print(f"   Try increasing --num-predict to 512 or higher, or remove it.", flush=True)
+        
+        print(f"\nRaw LLM response (full):", flush=True)
+        print(f"{raw}", flush=True)
+        print(f"Response length: {len(raw)} characters", flush=True)
+        print(f"\n{'='*60}\n", flush=True)
+        
+        # Return empty dict to allow pipeline to continue
+        return {}
 
 
 # Step 1: Summary Chain
@@ -134,12 +238,16 @@ def create_character_recognition_chain(llm_config: LLMConfig) -> Runnable:
         )
         
         llm_runnable = LLMRouterRunnable(SYSTEM_PROMPT_CHARACTER_RECOGNITION, llm_config)
-        result = llm_runnable.invoke({"prompt": prompt})
+        try:
+            result = llm_runnable.invoke({"prompt": prompt})
+        except Exception as e:
+            print(f"Warning: Character recognition failed: {e}", flush=True)
+            result = {}  # Use empty dict as fallback
         
-        # Extract doers and receivers
-        doers = result.get("doers", [])
-        receivers = result.get("receivers", [])
-        new_characters = result.get("new_characters", [])
+        # Extract doers and receivers (handle empty result gracefully)
+        doers = result.get("doers", []) if isinstance(result, dict) else []
+        receivers = result.get("receivers", []) if isinstance(result, dict) else []
+        new_characters = result.get("new_characters", []) if isinstance(result, dict) else []
         
         # Resolve aliases and update character list
         resolved_doers, updated_chars = resolve_character_aliases(doers, s.characters or [])
@@ -191,11 +299,15 @@ def create_instrument_chain(llm_config: LLMConfig) -> Runnable:
         )
         
         llm_runnable = LLMRouterRunnable(SYSTEM_PROMPT_INSTRUMENT, llm_config)
-        result = llm_runnable.invoke({"prompt": prompt})
+        try:
+            result = llm_runnable.invoke({"prompt": prompt})
+        except Exception as e:
+            print(f"Warning: Instrument recognition LLM call failed: {e}", flush=True)
+            result = {}
         
-        instrument = result.get("instrument", "")
+        instrument = result.get("instrument", "") if isinstance(result, dict) else ""
         if not isinstance(instrument, str):
-            instrument = str(instrument).strip()
+            instrument = str(instrument).strip() if instrument else ""
         
         # Return updated state dict
         state_dict = s.to_dict() if isinstance(state, PipelineState) else state.copy()
@@ -232,9 +344,13 @@ def create_relationship_chain(llm_config: LLMConfig) -> Runnable:
         )
         
         llm_runnable = LLMRouterRunnable(SYSTEM_PROMPT_RELATIONSHIP, llm_config)
-        result = llm_runnable.invoke({"prompt": prompt})
+        try:
+            result = llm_runnable.invoke({"prompt": prompt})
+        except Exception as e:
+            print(f"Warning: Relationship deduction LLM call failed: {e}", flush=True)
+            result = {}
         
-        relationships = result.get("relationships", [])
+        relationships = result.get("relationships", []) if isinstance(result, dict) else []
         if not isinstance(relationships, list):
             relationships = []
         
@@ -267,14 +383,18 @@ def create_action_category_chain(llm_config: LLMConfig) -> Runnable:
         )
         
         llm_runnable = LLMRouterRunnable(SYSTEM_PROMPT_ACTION, llm_config)
-        result = llm_runnable.invoke({"prompt": prompt})
+        try:
+            result = llm_runnable.invoke({"prompt": prompt})
+        except Exception as e:
+            print(f"Warning: Action category LLM call failed: {e}", flush=True)
+            result = {}
         
         action_layer = {
-            "category": result.get("category", ""),
-            "type": result.get("type", ""),
-            "context": result.get("context", ""),
-            "status": result.get("status", ""),
-            "function": result.get("function", ""),
+            "category": result.get("category", "") if isinstance(result, dict) else "",
+            "type": result.get("type", "") if isinstance(result, dict) else "",
+            "context": result.get("context", "") if isinstance(result, dict) else "",
+            "status": result.get("status", "") if isinstance(result, dict) else "",
+            "function": result.get("function", "") if isinstance(result, dict) else "",
         }
         
         # Return updated state dict
@@ -308,13 +428,17 @@ def create_stac_chain(llm_config: LLMConfig) -> Runnable:
         )
         
         llm_runnable = LLMRouterRunnable(SYSTEM_PROMPT_STAC, llm_config)
-        result = llm_runnable.invoke({"prompt": prompt})
+        try:
+            result = llm_runnable.invoke({"prompt": prompt})
+        except Exception as e:
+            print(f"Warning: STAC analysis LLM call failed: {e}", flush=True)
+            result = {}
         
         stac = {
-            "situation": result.get("situation", ""),
-            "task": result.get("task", ""),
-            "action": result.get("action", ""),
-            "consequence": result.get("consequence", ""),
+            "situation": result.get("situation", "") if isinstance(result, dict) else "",
+            "task": result.get("task", "") if isinstance(result, dict) else "",
+            "action": result.get("action", "") if isinstance(result, dict) else "",
+            "consequence": result.get("consequence", "") if isinstance(result, dict) else "",
         }
         
         # Return updated state dict
@@ -344,11 +468,15 @@ def create_event_type_chain(llm_config: LLMConfig) -> Runnable:
         )
         
         llm_runnable = LLMRouterRunnable(SYSTEM_PROMPT_EVENT_TYPE, llm_config)
-        result = llm_runnable.invoke({"prompt": prompt})
+        try:
+            result = llm_runnable.invoke({"prompt": prompt})
+        except Exception as e:
+            print(f"Warning: Event type classification LLM call failed: {e}", flush=True)
+            result = {}
         
-        event_type = result.get("event_type", "OTHER")
-        desc_general = result.get("description_general", "")
-        desc_specific = result.get("description_specific", "")
+        event_type = result.get("event_type", "OTHER") if isinstance(result, dict) else "OTHER"
+        desc_general = result.get("description_general", "") if isinstance(result, dict) else ""
+        desc_specific = result.get("description_specific", "") if isinstance(result, dict) else ""
         
         # Combine descriptions with semicolon
         if desc_general and desc_specific:

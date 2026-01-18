@@ -251,7 +251,12 @@ def chat(
         raise OllamaError(f"Unexpected Ollama response shape: {data}")
 
     content = message.get("content")
+    if content is None:
+        raise OllamaError(f"Ollama response has None content. Full response: {data}")
+    
     if not isinstance(content, str):
-        raise OllamaError(f"Unexpected message content type: {type(content)}")
+        raise OllamaError(f"Unexpected message content type: {type(content)}, value: {repr(content)}")
 
+    # Content can be empty string in some cases (model refused to answer, etc.)
+    # Return as-is - caller should handle empty responses
     return content

@@ -8,7 +8,7 @@ This module provides functionality to process an entire story by:
 from __future__ import annotations
 
 import time
-from typing import Any, Dict, List, Optional
+from typing import Any, Callable, Dict, List, Optional
 
 from ..llm_router import LLMConfig, LLMRouterError, chat
 from ..json_utils import loads_strict_json
@@ -102,6 +102,7 @@ def process_story(
     include_instrument: bool = False,
     generate_summary: bool = True,
     summary: Optional[str] = None,
+    on_span_complete: Optional[Callable[[int, Dict[str, Any], float], None]] = None,
 ) -> Dict[str, Any]:
     """Process an entire story through the narrative detection pipeline.
     
@@ -117,6 +118,9 @@ def process_story(
         include_instrument: Whether to include instrument recognition
         generate_summary: Whether to generate summary (if summary not provided)
         summary: Pre-generated summary (if provided, skips summary generation)
+        on_span_complete: Optional callback function called after each span completes.
+                        Called with (span_idx, result_dict, elapsed_time).
+                        Result dict contains 'narrative_event' and 'updated_characters'.
         
     Returns:
         Dictionary with:
@@ -208,6 +212,20 @@ def process_story(
                 "narrative_event": result["narrative_event"],
                 "processing_time": elapsed,
             })
+            
+            # Call callback if provided
+            if on_span_complete:
+                try:
+                    on_span_complete(
+                        span_idx=idx,
+                        result={
+                            "narrative_event": result["narrative_event"],
+                            "updated_characters": current_characters,
+                        },
+                        elapsed_time=elapsed,
+                    )
+                except Exception as callback_error:
+                    print(f"  ⚠ Callback error for span {idx}: {callback_error}", flush=True)
             
         except Exception as e:
             # Log error but continue with next span

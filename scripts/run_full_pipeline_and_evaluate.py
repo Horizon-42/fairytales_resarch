@@ -136,6 +136,42 @@ def run_pipeline_and_evaluate(
     # Get initial characters from ground truth
     initial_characters = gt_data.get("characters", [])
     
+    # Track intermediate results for incremental saving
+    intermediate_narrative_events = []
+    intermediate_characters = initial_characters.copy() if initial_characters else []
+    
+    # Callback to output results after each span completes
+    def on_span_complete(span_idx: int, result: Dict[str, Any], elapsed_time: float):
+        """Output intermediate results after each span completes."""
+        nonlocal intermediate_narrative_events, intermediate_characters
+        
+        # Update intermediate results
+        intermediate_narrative_events.append(result["narrative_event"])
+        intermediate_characters = result["updated_characters"]
+        
+        # Print intermediate result summary
+        event = result["narrative_event"]
+        print(f"\n  📝 Span {span_idx} Result:", flush=True)
+        print(f"     Event ID: {event.get('event_id', 'N/A')}", flush=True)
+        print(f"     Doers: {', '.join(event.get('doers', [])) if event.get('doers') else 'N/A'}", flush=True)
+        
+        # Optionally save intermediate prediction file
+        if save_prediction and output_dir:
+            output_dir.mkdir(parents=True, exist_ok=True)
+            intermediate_prediction = {
+                "version": "3.0",
+                "metadata": gt_data.get("metadata", {}).copy(),
+                "source_info": gt_data.get("source_info", {}).copy(),
+                "characters": intermediate_characters,
+                "narrative_events": intermediate_narrative_events,
+            }
+            
+            # Save with incremental suffix
+            intermediate_file = output_dir / f"{ground_truth_file.stem}_prediction_partial_{span_idx}.json"
+            with open(intermediate_file, "w", encoding="utf-8") as f:
+                json.dump(intermediate_prediction, f, ensure_ascii=False, indent=2)
+            print(f"     💾 Saved intermediate result to: {intermediate_file.name}", flush=True)
+    
     print("\n" + "=" * 60)
     print("Running full detection pipeline...")
     print("=" * 60)
@@ -149,6 +185,7 @@ def run_pipeline_and_evaluate(
         characters=initial_characters.copy() if initial_characters else [],
         llm_config=llm_config or LLMConfig(),
         include_instrument=include_instrument,
+        on_span_complete=on_span_complete,
     )
     
     pipeline_elapsed = time.time() - pipeline_start
@@ -276,7 +313,9 @@ def main() -> int:
         "--num-predict",
         type=int,
         default=None,
-        help="Max tokens to generate (None = default 128). Lower = faster (default: None)",
+        help="Max tokens to generate (None = default 128, -1 = unlimited). "
+             "Warning: Too low (<256) may truncate JSON responses causing parsing errors. "
+             "Recommended: 512+ for complex JSON (default: None)",
     )
     parser.add_argument(
         "--num-thread",
@@ -331,6 +370,12 @@ def main() -> int:
     
     # Setup LLM config
     import os
+    
+    # Warn if num_predict is too low for JSON responses
+    if args.num_predict is not None and args.num_predict > 0 and args.num_predict < 256:
+        print(f"Warning: --num-predict={args.num_predict} may be too low for JSON responses.", flush=True)
+        print(f"  JSON parsing errors may occur if responses are truncated. Recommended: 512+", flush=True)
+    
     llm_config = LLMConfig(
         provider=args.provider,
         ollama=OllamaConfig(
