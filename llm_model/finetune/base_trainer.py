@@ -382,9 +382,21 @@ class BaseTrainer:
         output_dir = str(Path(self.config.output_dir) / self.step_name)
         training_args_dict = self.config.get_training_args(output_dir=output_dir)
         
-        if eval_dataset:
-            training_args_dict["evaluation_strategy"] = "epoch"
-            training_args_dict["load_best_model_at_end"] = True
+        # Disable evaluation to save memory on 8GB GPU
+        # Evaluation requires significantly more memory than training
+        # Comment this block out if you have >16GB VRAM and want evaluation
+        # if eval_dataset:
+        #     # Keep the eval_strategy from config instead of overriding
+        #     # If save_strategy is "steps", eval_strategy should also be "steps"
+        #     if training_args_dict.get("save_strategy") == "steps":
+        #         training_args_dict["eval_strategy"] = "steps"
+        #         # Set eval_steps to match save_steps if not already set
+        #         if "eval_steps" not in training_args_dict:
+        #             training_args_dict["eval_steps"] = training_args_dict.get("save_steps", 50)
+        #     else:
+        #         training_args_dict["eval_strategy"] = "epoch"
+        #     training_args_dict["load_best_model_at_end"] = True
+        eval_dataset = None  # Disable eval to avoid OOM
         
         # Add logging directory for loss tracking
         training_args_dict["logging_dir"] = str(Path(output_dir) / "logs")
@@ -414,14 +426,36 @@ class BaseTrainer:
                         self.history_list.append(log_entry)
         
         loss_callback = LossCallback(loss_history)
-        
+
+        # Formatting function for Unsloth (required in newer versions)
+        def formatting_func(examples):
+            """Format examples for training."""
+            texts = []
+            for instruction, input_text, output in zip(
+                examples.get("instruction", examples.get("formatted_text", [])),
+                examples.get("input", [""] * len(examples.get("instruction", examples.get("formatted_text", [])))),
+                examples.get("output", examples.get("formatted_text", []))
+            ):
+                # Handle both old format (formatted_text) and new format (instruction/input/output)
+                if isinstance(instruction, str) and "instruction" in examples:
+                    # New format with instruction/input/output
+                    if input_text:
+                        text = f"{instruction}\n\nInput:\n{input_text}\n\nOutput:\n{output}"
+                    else:
+                        text = f"{instruction}\n\nOutput:\n{output}"
+                else:
+                    # Old format with formatted_text
+                    text = instruction  # formatted_text is already formatted
+                texts.append(text)
+            return texts
+
         # Create trainer
         trainer = SFTTrainer(
             model=self.model,
             tokenizer=self.tokenizer,
             train_dataset=train_dataset,
             eval_dataset=eval_dataset,
-            dataset_text_field="formatted_text",
+            formatting_func=formatting_func,  # Use formatting_func instead of dataset_text_field
             max_seq_length=self.config.max_seq_length,
             packing=False,
             args=training_args,

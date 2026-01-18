@@ -27,4 +27,10 @@ exports/
 
 models/
 
-llama.cpp/
+llama.cpp
+
+test_train_output.txt
+
+training_success_test*.txt
+
+test_models
