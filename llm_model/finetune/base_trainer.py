@@ -10,7 +10,9 @@ except ImportError:
     pass  # Will raise error later if actually needed
 
 # Now import other modules
+import csv
 import json
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -505,9 +507,17 @@ class BaseTrainer:
             print(f"Starting training for {self.step_name}...")
         trainer.train(resume_from_checkpoint=resume_from_checkpoint)
         
-        # Save loss history as CSV
-        loss_file = Path(output_dir) / "loss_history.csv"
-        import csv
+        # Save loss history as CSV with timestamp in external folder
+        # Create loss_history folder in parent directory to avoid overwriting
+        output_path = Path(output_dir)
+        loss_history_dir = output_path.parent / "loss_history"
+        loss_history_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Generate filename with timestamp: loss_history_<step_name>_<timestamp>.csv
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        loss_filename = f"loss_history_{self.step_name}_{timestamp}.csv"
+        loss_file = loss_history_dir / loss_filename
+        
         with open(loss_file, "w", encoding="utf-8", newline="") as f:
             if loss_history:
                 fieldnames = ["step", "epoch", "train_loss", "eval_loss", "learning_rate"]
@@ -515,7 +525,7 @@ class BaseTrainer:
                 writer.writeheader()
                 for entry in loss_history:
                     writer.writerow(entry)
-        print(f"Loss history saved to {loss_file}")
+        print(f"Loss history saved to {loss_file} ({len(loss_history)} entries)")
         
         # Save model
         self.save_model(output_dir)
