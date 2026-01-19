@@ -685,7 +685,9 @@ class BaseTrainer:
                 # For other models, use more conservative settings
                 is_qwen3 = "qwen3" in self.model_name.lower()
                 
-                with self.model.inference_mode():
+                # Use torch.inference_mode() instead of model.inference_mode()
+                import torch
+                with torch.inference_mode():
                     if is_qwen3:
                         # Qwen3 non-thinking mode parameters
                         outputs = self.model.generate(
