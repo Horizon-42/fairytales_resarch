@@ -4,8 +4,29 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
+from datetime import datetime
 from pathlib import Path
 from typing import List, Optional
+
+# Force unbuffered output for immediate visibility
+sys.stdout = sys.__stdout__
+sys.stderr = sys.__stderr__
+
+
+class TeeOutput:
+    """Class to write output to both console and file."""
+    def __init__(self, *files):
+        self.files = files
+    
+    def write(self, obj):
+        for f in self.files:
+            f.write(obj)
+            f.flush()  # Ensure immediate write
+    
+    def flush(self):
+        for f in self.files:
+            f.flush()
 
 from ..config import FineTuneConfig
 from ..data_preparation import (
@@ -231,6 +252,11 @@ def train_step(
 
 def main():
     """Main entry point."""
+    # Print immediate output to confirm script is running
+    print("=" * 60, flush=True)
+    print("Initializing training script...", flush=True)
+    print("=" * 60, flush=True)
+    
     parser = argparse.ArgumentParser(
         description="Train pipeline step(s)",
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -345,132 +371,189 @@ Notes:
         action="store_true",
         help="Disable automatic checkpoint resuming (start fresh even if checkpoints exist)"
     )
+    parser.add_argument(
+        "--log-file",
+        type=str,
+        default=None,
+        help="Path to log file to save all output. If not specified, logs will be saved to output_dir/logs/train_<timestamp>.log"
+    )
 
     args = parser.parse_args()
     
-    # Determine which steps to train
-    all_steps = ["character", "instrument", "relationship", "action", "stac", "event_type"]
-    
-    if "all" in args.step:
-        steps_to_train = all_steps
+    # Setup log file - redirect stdout and stderr to both console and file
+    log_file_path = args.log_file
+    if log_file_path is None:
+        # Auto-generate log file path in output_dir/logs/
+        log_dir = Path(args.output_dir) / "logs"
+        log_dir.mkdir(parents=True, exist_ok=True)
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        log_file_path = log_dir / f"train_{timestamp}.log"
     else:
-        steps_to_train = args.step
+        log_file_path = Path(log_file_path)
+        log_file_path.parent.mkdir(parents=True, exist_ok=True)
     
-    # Remove duplicates while preserving order
-    seen = set()
-    steps_to_train = [s for s in steps_to_train if s not in seen and not seen.add(s)]
+    # Open log file and set up tee output
+    log_file = open(log_file_path, "w", encoding="utf-8")
+    tee_stdout = TeeOutput(sys.stdout, log_file)
+    tee_stderr = TeeOutput(sys.stderr, log_file)
     
-    print(f"Training {len(steps_to_train)} step(s): {', '.join(steps_to_train)}\n")
+    # Save original stdout/stderr
+    original_stdout = sys.stdout
+    original_stderr = sys.stderr
     
-    # Create config
-    config = FineTuneConfig(
-        model_name=args.model_name,
-        output_dir=args.output_dir,
-        num_epochs=args.num_epochs,
-        batch_size=args.batch_size,
-        learning_rate=args.learning_rate,
-        enable_cpu_offload=args.enable_cpu_offload,
-    )
+    # Redirect to tee
+    sys.stdout = tee_stdout
+    sys.stderr = tee_stderr
+    
+    try:
+        # Print initial message to confirm script is running
+        print("=" * 60, flush=True)
+        print("Train Step Script Started", flush=True)
+        print(f"Log file: {log_file_path}", flush=True)
+        print("=" * 60, flush=True)
+        
+        # Determine which steps to train
+        all_steps = ["character", "instrument", "relationship", "action", "stac", "event_type"]
+        
+        if "all" in args.step:
+            steps_to_train = all_steps
+        else:
+            steps_to_train = args.step
+        
+        # Remove duplicates while preserving order
+        seen = set()
+        steps_to_train = [s for s in steps_to_train if s not in seen and not seen.add(s)]
+        
+        print(f"Training {len(steps_to_train)} step(s): {', '.join(steps_to_train)}\n")
+        
+        # Create config
+        config = FineTuneConfig(
+            model_name=args.model_name,
+            output_dir=args.output_dir,
+            num_epochs=args.num_epochs,
+            batch_size=args.batch_size,
+            learning_rate=args.learning_rate,
+            enable_cpu_offload=args.enable_cpu_offload,
+        )
 
-    # Train each step
-    failed_steps = []
-    current_model_name = args.model_name  # Track the model to use for each step
+        # Train each step
+        failed_steps = []
+        current_model_name = args.model_name  # Track the model to use for each step
 
-    for idx, step in enumerate(steps_to_train):
-        print(f"\n{'='*60}")
-        print(f"Training step {idx+1}/{len(steps_to_train)}: {step}")
-        if idx > 0:
-            print(f"Using model from previous step: {current_model_name}")
-        print(f"{'='*60}\n")
+        for idx, step in enumerate(steps_to_train):
+            print(f"\n{'='*60}")
+            print(f"Training step {idx+1}/{len(steps_to_train)}: {step}")
+            if idx > 0:
+                print(f"Using model from previous step: {current_model_name}")
+            print(f"{'='*60}\n")
 
-        # Auto-detect checkpoint for this step if resume_from_checkpoint not explicitly provided
-        checkpoint_to_use = args.resume_from_checkpoint
-        if checkpoint_to_use is None and not args.no_auto_resume:
-            # Look for latest checkpoint in the step's output directory
-            step_output_dir = Path(args.output_dir) / step
-            if step_output_dir.exists():
-                # Find all checkpoint directories
-                checkpoints = list(step_output_dir.glob("checkpoint-*"))
-                if checkpoints:
-                    # Sort by checkpoint number and get the latest
-                    # Use regex to safely extract checkpoint number
-                    import re
-                    def get_checkpoint_number(checkpoint_path):
-                        """Extract checkpoint number from path name (e.g., 'checkpoint-100' -> 100)."""
-                        match = re.search(r'checkpoint-(\d+)', checkpoint_path.name)
-                        if match:
-                            return int(match.group(1))
-                        return -1  # Invalid checkpoint, sort to the end
-                    
-                    checkpoints.sort(key=get_checkpoint_number)
-                    valid_checkpoints = [cp for cp in checkpoints if get_checkpoint_number(cp) >= 0]
-                    
-                    if valid_checkpoints:
-                        # Verify checkpoint directory contains necessary files
-                        latest_checkpoint = valid_checkpoints[-1]
-                        # Check if checkpoint has at least one of the expected files
-                        required_files = [
-                            "pytorch_model.bin",
-                            "adapter_model.bin",
-                            "adapter_model.safetensors",
-                            "pytorch_model.safetensors",
-                        ]
-                        has_model_file = any((latest_checkpoint / fname).exists() for fname in required_files)
+            # Auto-detect checkpoint for this step if resume_from_checkpoint not explicitly provided
+            checkpoint_to_use = args.resume_from_checkpoint
+            if checkpoint_to_use is None and not args.no_auto_resume:
+                # Look for latest checkpoint in the step's output directory
+                step_output_dir = Path(args.output_dir) / step
+                if step_output_dir.exists():
+                    # Find all checkpoint directories
+                    checkpoints = list(step_output_dir.glob("checkpoint-*"))
+                    if checkpoints:
+                        # Sort by checkpoint number and get the latest
+                        # Use regex to safely extract checkpoint number
+                        import re
+                        def get_checkpoint_number(checkpoint_path):
+                            """Extract checkpoint number from path name (e.g., 'checkpoint-100' -> 100)."""
+                            match = re.search(r'checkpoint-(\d+)', checkpoint_path.name)
+                            if match:
+                                return int(match.group(1))
+                            return -1  # Invalid checkpoint, sort to the end
                         
-                        if has_model_file:
-                            checkpoint_to_use = str(latest_checkpoint)
-                            print(f"🔄 Found existing checkpoint, will resume from: {checkpoint_to_use}")
-                        else:
-                            print(f"⚠️  Found checkpoint directory but it appears incomplete: {latest_checkpoint}")
-                            print(f"   Expected files (at least one): {', '.join(required_files)}")
-        elif args.no_auto_resume and checkpoint_to_use is None:
-            print(f"⚠️  Auto-resume disabled, starting training from scratch")
+                        checkpoints.sort(key=get_checkpoint_number)
+                        valid_checkpoints = [cp for cp in checkpoints if get_checkpoint_number(cp) >= 0]
+                        
+                        if valid_checkpoints:
+                            # Verify checkpoint directory contains necessary files
+                            latest_checkpoint = valid_checkpoints[-1]
+                            # Check if checkpoint has at least one of the expected files
+                            required_files = [
+                                "pytorch_model.bin",
+                                "adapter_model.bin",
+                                "adapter_model.safetensors",
+                                "pytorch_model.safetensors",
+                            ]
+                            has_model_file = any((latest_checkpoint / fname).exists() for fname in required_files)
+                            
+                            if has_model_file:
+                                checkpoint_to_use = str(latest_checkpoint)
+                                print(f"🔄 Found existing checkpoint, will resume from: {checkpoint_to_use}")
+                            else:
+                                print(f"⚠️  Found checkpoint directory but it appears incomplete: {latest_checkpoint}")
+                                print(f"   Expected files (at least one): {', '.join(required_files)}")
+            elif args.no_auto_resume and checkpoint_to_use is None:
+                print(f"⚠️  Auto-resume disabled, starting training from scratch")
 
-        try:
-            train_step(
-                step=step,
-                data_dir=args.data_dir,
-                model_name=current_model_name,  # Use the current model (base or from previous step)
-                output_dir=args.output_dir,
-                config=config,
-                train_split=args.train_split,
-                evaluate_after_training=not args.no_evaluate,
-                use_jsonl=args.use_jsonl,
-                enable_cpu_offload=args.enable_cpu_offload,
-                resume_from_checkpoint=checkpoint_to_use,
-            )
-            print(f"\n✓ Successfully completed training for {step}\n")
+            try:
+                train_step(
+                    step=step,
+                    data_dir=args.data_dir,
+                    model_name=current_model_name,  # Use the current model (base or from previous step)
+                    output_dir=args.output_dir,
+                    config=config,
+                    train_split=args.train_split,
+                    evaluate_after_training=not args.no_evaluate,
+                    use_jsonl=args.use_jsonl,
+                    enable_cpu_offload=args.enable_cpu_offload,
+                    resume_from_checkpoint=checkpoint_to_use,
+                )
+                print(f"\n✓ Successfully completed training for {step}\n")
 
-            # Update current_model_name to use the fine-tuned model for the next step
-            current_model_name = str(Path(args.output_dir) / step)
-            print(f"📦 Next step will use fine-tuned model: {current_model_name}\n")
-        except Exception as e:
-            print(f"\n✗ Error training step {step}: {e}")
-            failed_steps.append(step)
-            import traceback
-            traceback.print_exc()
+                # Update current_model_name to use the fine-tuned model for the next step
+                current_model_name = str(Path(args.output_dir) / step)
+                print(f"📦 Next step will use fine-tuned model: {current_model_name}\n")
+            except Exception as e:
+                print(f"\n✗ Error training step {step}: {e}")
+                failed_steps.append(step)
+                import traceback
+                traceback.print_exc()
 
-            # Stop training if a step fails (don't continue to next steps)
-            print(f"\n⚠️  Stopping training pipeline due to failure in step: {step}")
-            print(f"⚠️  Remaining steps will not be trained: {', '.join(steps_to_train[idx+1:])}")
-            break  # Stop the loop instead of continue
+                # Stop training if a step fails (don't continue to next steps)
+                print(f"\n⚠️  Stopping training pipeline due to failure in step: {step}")
+                print(f"⚠️  Remaining steps will not be trained: {', '.join(steps_to_train[idx+1:])}")
+                break  # Stop the loop instead of continue
+        
+        # Print summary
+        print(f"\n{'='*60}")
+        print("Training Summary:")
+        print(f"{'='*60}")
+        successful_steps = [s for s in steps_to_train if s not in failed_steps]
+        
+        if successful_steps:
+            print(f"✓ Successfully trained: {', '.join(successful_steps)}")
+        
+        if failed_steps:
+            print(f"✗ Failed: {', '.join(failed_steps)}")
+            result = 1
+        else:
+            print(f"\n✓ All {len(steps_to_train)} step(s) trained successfully!")
+            result = 0
     
-    # Print summary
-    print(f"\n{'='*60}")
-    print("Training Summary:")
-    print(f"{'='*60}")
-    successful_steps = [s for s in steps_to_train if s not in failed_steps]
+    except Exception as e:
+        print(f"\n❌ Fatal error in main(): {e}", flush=True)
+        import traceback
+        traceback.print_exc()
+        result = 1
+    finally:
+        # Restore original stdout/stderr and close log file
+        sys.stdout = original_stdout
+        sys.stderr = original_stderr
+        if log_file and not log_file.closed:
+            log_file.close()
+        print(f"\n✓ All output saved to log file: {log_file_path}", file=original_stdout)
     
-    if successful_steps:
-        print(f"✓ Successfully trained: {', '.join(successful_steps)}")
-    
-    if failed_steps:
-        print(f"✗ Failed: {', '.join(failed_steps)}")
-        return 1
-    
-    print(f"\n✓ All {len(steps_to_train)} step(s) trained successfully!")
-    return 0
+    return result
 
 
 if __name__ == "__main__":
+    # Print immediate output to confirm script execution started
+    import sys
+    print("Train step script execution started", file=sys.stderr, flush=True)
+    print("=" * 60, flush=True)
     main()
