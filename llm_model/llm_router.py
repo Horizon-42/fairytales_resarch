@@ -17,9 +17,10 @@ from typing import Dict, List, Literal
 from .gemini_client import GeminiConfig, GeminiError
 from .huggingface_client import HuggingFaceConfig, HuggingFaceError
 from .ollama_client import OllamaConfig, OllamaError
+from .unsloth_client import UnslothConfig, UnslothError
 
 
-LLMProvider = Literal["ollama", "gemini", "huggingface"]
+LLMProvider = Literal["ollama", "gemini", "huggingface", "unsloth"]
 
 
 class LLMRouterError(RuntimeError):
@@ -35,8 +36,10 @@ def _normalize_provider(provider: str) -> LLMProvider:
         return "gemini"
     if p in ("huggingface", "hf", "transformers", "colab"):
         return "huggingface"
+    if p in ("unsloth", "finetuned", "ft"):
+        return "unsloth"
     raise LLMRouterError(
-        f"Unknown provider: {provider!r} (use 'ollama', 'gemini', or 'huggingface')"
+        f"Unknown provider: {provider!r} (use 'ollama', 'gemini', 'huggingface', or 'unsloth')"
     )
 
 
@@ -48,6 +51,7 @@ class LLMConfig:
     ollama: OllamaConfig = OllamaConfig()
     gemini: GeminiConfig = GeminiConfig()
     huggingface: HuggingFaceConfig = HuggingFaceConfig()
+    unsloth: UnslothConfig = UnslothConfig()
 
 
 def chat(
@@ -88,15 +92,28 @@ def chat(
         except GeminiError as exc:
             raise LLMRouterError(str(exc)) from exc
 
-    # provider == "huggingface"
-    from .huggingface_client import chat as huggingface_chat
+    if provider == "huggingface":
+        from .huggingface_client import chat as huggingface_chat
+
+        try:
+            return huggingface_chat(
+                config=config.huggingface,
+                messages=messages,
+                response_format_json=response_format_json,
+                timeout_s=timeout_s,
+            )
+        except HuggingFaceError as exc:
+            raise LLMRouterError(str(exc)) from exc
+
+    # provider == "unsloth"
+    from .unsloth_client import chat as unsloth_chat
 
     try:
-        return huggingface_chat(
-            config=config.huggingface,
+        return unsloth_chat(
+            config=config.unsloth,
             messages=messages,
             response_format_json=response_format_json,
             timeout_s=timeout_s,
         )
-    except HuggingFaceError as exc:
+    except UnslothError as exc:
         raise LLMRouterError(str(exc)) from exc

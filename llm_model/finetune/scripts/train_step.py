@@ -75,9 +75,10 @@ def train_step(
     evaluate_after_training: bool = True,
     use_jsonl: bool = True,
     enable_cpu_offload: bool = False,
+    resume_from_checkpoint: Optional[str] = None,
 ):
     """Train a single pipeline step.
-    
+
     Args:
         step: Step name ("character", "instrument", "relationship", "action", "stac", "event_type")
         data_dir: Directory containing training data (JSONL files if use_jsonl=True, or JSON annotation files)
@@ -87,6 +88,7 @@ def train_step(
         train_split: Train/test split ratio
         evaluate_after_training: Whether to evaluate on test set after training
         use_jsonl: If True, load from JSONL training files; if False, extract from JSON stories
+        resume_from_checkpoint: Path to checkpoint to resume from (default: None for fresh training)
     """
     if config is None:
         config = FineTuneConfig(model_name=model_name, output_dir=output_dir, enable_cpu_offload=enable_cpu_offload)
@@ -172,10 +174,10 @@ def train_step(
     trainer.load_model()
     
     # Train
-    trainer.train(train_examples, eval_examples)
-    
+    trainer.train(train_examples, eval_examples, resume_from_checkpoint=resume_from_checkpoint)
+
     print(f"Training completed for {step}")
-    
+
     # Evaluate on test set if requested
     if evaluate_after_training and eval_examples:
         print(f"\nEvaluating {step} model on test set...")
@@ -189,6 +191,16 @@ def train_step(
             print(f"Warning: Evaluation failed: {e}")
             import traceback
             traceback.print_exc()
+
+    # Free GPU memory after training this step
+    # This is crucial for sequential training to avoid OOM
+    import torch
+    import gc
+    del trainer
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+    gc.collect()
+    print(f"✓ GPU memory freed after {step} training")
 
 
 def main():
@@ -204,9 +216,9 @@ Examples:
       --data-dir training_data \\
       --output-dir ./models
 
-  # Train multiple steps
+  # Train multiple steps sequentially (each step uses previous step's model)
   python -m llm_model.finetune.scripts.train_step \\
-      --step character action relationship \\
+      --step character relationship action \\
       --data-dir training_data \\
       --output-dir ./models
 
@@ -215,6 +227,18 @@ Examples:
       --step all \\
       --data-dir training_data \\
       --output-dir ./models
+
+  # Start fresh training (disable auto-resume)
+  python -m llm_model.finetune.scripts.train_step \\
+      --step character \\
+      --data-dir training_data \\
+      --output-dir ./models \\
+      --no-auto-resume
+
+Notes:
+  - By default, training will automatically resume from the latest checkpoint if available
+  - When training multiple steps, if one step fails, the pipeline stops (no subsequent steps)
+  - Sequential training: step 2 uses step 1's model, step 3 uses step 2's model, etc.
         """
     )
     parser.add_argument(
@@ -246,13 +270,13 @@ Examples:
     parser.add_argument(
         "--num-epochs",
         type=int,
-        default=3,
+        default=1,
         help="Number of training epochs (default: 3)"
     )
     parser.add_argument(
         "--batch-size",
         type=int,
-        default=4,
+        default=1,
         help="Training batch size (default: 4)"
     )
     parser.add_argument(
@@ -284,7 +308,18 @@ Examples:
         action="store_true",
         help="Enable CPU offload for low GPU memory scenarios (slower but uses less GPU RAM)"
     )
-    
+    parser.add_argument(
+        "--resume-from-checkpoint",
+        type=str,
+        default=None,
+        help="Path to checkpoint directory to resume training from (e.g., ./models/character/checkpoint-100). By default, automatically resumes from latest checkpoint if available."
+    )
+    parser.add_argument(
+        "--no-auto-resume",
+        action="store_true",
+        help="Disable automatic checkpoint resuming (start fresh even if checkpoints exist)"
+    )
+
     args = parser.parse_args()
     
     # Determine which steps to train
@@ -310,34 +345,62 @@ Examples:
         learning_rate=args.learning_rate,
         enable_cpu_offload=args.enable_cpu_offload,
     )
-    
+
     # Train each step
     failed_steps = []
-    
-    for step in steps_to_train:
+    current_model_name = args.model_name  # Track the model to use for each step
+
+    for idx, step in enumerate(steps_to_train):
         print(f"\n{'='*60}")
-        print(f"Training step: {step}")
+        print(f"Training step {idx+1}/{len(steps_to_train)}: {step}")
+        if idx > 0:
+            print(f"Using model from previous step: {current_model_name}")
         print(f"{'='*60}\n")
-        
+
+        # Auto-detect checkpoint for this step if resume_from_checkpoint not explicitly provided
+        checkpoint_to_use = args.resume_from_checkpoint
+        if checkpoint_to_use is None and not args.no_auto_resume:
+            # Look for latest checkpoint in the step's output directory
+            step_output_dir = Path(args.output_dir) / step
+            if step_output_dir.exists():
+                # Find all checkpoint directories
+                checkpoints = list(step_output_dir.glob("checkpoint-*"))
+                if checkpoints:
+                    # Sort by checkpoint number and get the latest
+                    checkpoints.sort(key=lambda x: int(x.name.split("-")[1]))
+                    checkpoint_to_use = str(checkpoints[-1])
+                    print(f"🔄 Found existing checkpoint, will resume from: {checkpoint_to_use}")
+        elif args.no_auto_resume and checkpoint_to_use is None:
+            print(f"⚠️  Auto-resume disabled, starting training from scratch")
+
         try:
             train_step(
                 step=step,
                 data_dir=args.data_dir,
-                model_name=args.model_name,
+                model_name=current_model_name,  # Use the current model (base or from previous step)
                 output_dir=args.output_dir,
                 config=config,
                 train_split=args.train_split,
                 evaluate_after_training=not args.no_evaluate,
                 use_jsonl=args.use_jsonl,
                 enable_cpu_offload=args.enable_cpu_offload,
+                resume_from_checkpoint=checkpoint_to_use,
             )
             print(f"\n✓ Successfully completed training for {step}\n")
+
+            # Update current_model_name to use the fine-tuned model for the next step
+            current_model_name = str(Path(args.output_dir) / step)
+            print(f"📦 Next step will use fine-tuned model: {current_model_name}\n")
         except Exception as e:
             print(f"\n✗ Error training step {step}: {e}")
             failed_steps.append(step)
             import traceback
             traceback.print_exc()
-            continue
+
+            # Stop training if a step fails (don't continue to next steps)
+            print(f"\n⚠️  Stopping training pipeline due to failure in step: {step}")
+            print(f"⚠️  Remaining steps will not be trained: {', '.join(steps_to_train[idx+1:])}")
+            break  # Stop the loop instead of continue
     
     # Print summary
     print(f"\n{'='*60}")

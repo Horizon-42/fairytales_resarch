@@ -36,18 +36,22 @@ class FineTuneConfig:
     model_name: str = "unsloth/Qwen3-4B-unsloth-bnb-4bit"
     max_seq_length: int = 1024  # Reduced from 2048 to avoid OOM on 8GB GPU
     
-    # LoRA configuration
-    lora_r: int = 16
-    lora_alpha: int = 32
-    lora_dropout: float = 0  # Set to 0 to enable Unsloth fast patching and avoid Triton compilation issues
+    # LoRA configuration (reduced for 8GB GPU memory efficiency)
+    lora_r: int = 8  # Reduced from 16 to save memory
+    lora_alpha: int = 16  # Reduced proportionally
+    lora_dropout: float = 0.1  # Increased from 0 to 0.1 to reduce overfitting
     target_modules: Optional[List[str]] = None
-    
-    # Training configuration
-    batch_size: int = 4
-    gradient_accumulation_steps: int = 4
-    num_epochs: int = 3
+
+    # Training configuration (optimized for 8GB GPU and reduced overfitting)
+    batch_size: int = 1  # Reduced from 4 to avoid OOM on 8GB GPU
+    gradient_accumulation_steps: int = 8  # Increased to maintain effective batch size of 8
+    num_epochs: int = 2  # Reduced from 3 to 2 to prevent overfitting on limited data
     learning_rate: float = 2e-4
     warmup_steps: int = 50
+
+    # Early stopping configuration
+    early_stopping_patience: int = 3  # Stop if no improvement for 3 evaluation steps
+    early_stopping_threshold: float = 0.001  # Minimum improvement threshold
     
     # Data type
     bf16: bool = True  # Use bfloat16
@@ -71,12 +75,17 @@ class FineTuneConfig:
                 # Generic default
                 self.target_modules = ["q_proj", "k_proj", "v_proj", "o_proj"]
     
-    def get_training_args(self, output_dir: Optional[str] = None) -> dict:
-        """Get training arguments dictionary for transformers."""
+    def get_training_args(self, output_dir: Optional[str] = None, enable_eval: bool = True) -> dict:
+        """Get training arguments dictionary for transformers.
+
+        Args:
+            output_dir: Output directory for checkpoints
+            enable_eval: Whether to enable evaluation (requires eval dataset)
+        """
         if output_dir is None:
             output_dir = self.output_dir
-        
-        return {
+
+        args = {
             "per_device_train_batch_size": self.batch_size,
             "gradient_accumulation_steps": self.gradient_accumulation_steps,
             "warmup_steps": self.warmup_steps,
@@ -86,9 +95,27 @@ class FineTuneConfig:
             "bf16": self.bf16,
             "logging_steps": 10,
             "output_dir": output_dir,
-            "save_strategy": "steps",  # Changed from "epoch" to save more frequently
-            "save_steps": 50,  # Save checkpoint every 50 steps
-            "eval_strategy": "no",  # Disabled to save memory on 8GB GPU
-            "save_total_limit": 2,  # Keep only 2 checkpoints to save disk space
-            "load_best_model_at_end": False,
+            "save_strategy": "steps",
+            "save_steps": 50,
+            "save_total_limit": 2,
+            "gradient_checkpointing": True,
+            "optim": "adamw_8bit",
         }
+
+        # Add evaluation and early stopping if enabled
+        if enable_eval:
+            args.update({
+                "eval_strategy": "steps",
+                "eval_steps": 50,  # Evaluate every 50 steps
+                "metric_for_best_model": "eval_loss",
+                "greater_is_better": False,
+                "load_best_model_at_end": True,
+                # Early stopping via callback (not built-in parameter)
+            })
+        else:
+            args.update({
+                "eval_strategy": "no",
+                "load_best_model_at_end": False,
+            })
+
+        return args

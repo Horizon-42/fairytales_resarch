@@ -1,0 +1,32 @@
+{
+  "overall_metrics": {
+    "character_precision": 0.625,
+    "character_recall": 0.45454545454545453,
+    "character_f1": 0.5263157894736842,
+    "event_count_accuracy": 1.0
+  },
+  "per_story_results": [
+    {
+      "story_id": "CH_003_孟姜女哭长城",
+      "character_metrics": {
+        "precision": 0.625,
+        "recall": 0.45454545454545453,
+        "f1": 0.5263157894736842,
+        "correct": 5,
+        "predicted": 8,
+        "ground_truth": 11
+      },
+      "event_metrics": {
+        "accuracy": 1.0,
+        "predicted": 20,
+        "ground_truth": 20
+      }
+    }
+  ],
+  "config": {
+    "provider": "unsloth",
+    "num_stories": 1,
+    "model_path": "models/character",
+    "base_model": "unsloth/Qwen3-4B-unsloth-bnb-4bit"
+  }
+}

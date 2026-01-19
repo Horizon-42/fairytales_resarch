@@ -33,16 +33,18 @@ from .utils import classify_target_type, resolve_character_aliases
 
 class LLMRouterRunnable(Runnable):
     """LangChain Runnable wrapper around the existing LLM router."""
-    
-    def __init__(self, system_prompt: str, llm_config: LLMConfig):
+
+    def __init__(self, system_prompt: str, llm_config: LLMConfig, response_format_json: bool = True):
         """Initialize the LLM router runnable.
-        
+
         Args:
             system_prompt: System prompt for the LLM
             llm_config: LLM configuration
+            response_format_json: Whether to expect JSON format output (default: True)
         """
         self.system_prompt = system_prompt
         self.llm_config = llm_config
+        self.response_format_json = response_format_json
         self.parser = JsonOutputParser()
     
     def invoke(self, input: Dict[str, Any], config: Optional[Dict] = None) -> Dict[str, Any]:
@@ -68,7 +70,7 @@ class LLMRouterRunnable(Runnable):
         ]
         
         try:
-            raw = chat(config=self.llm_config, messages=messages, response_format_json=True)
+            raw = chat(config=self.llm_config, messages=messages, response_format_json=self.response_format_json)
         except Exception as chat_error:
             print(f"\n{'='*60}", flush=True)
             print(f"ERROR: LLM chat call failed", flush=True)
@@ -99,8 +101,12 @@ class LLMRouterRunnable(Runnable):
             print(f"Response repr: {repr(raw)}", flush=True)
             print(f"Response length: {len(raw)}", flush=True)
             print(f"{'='*60}\n", flush=True)
-            return {}  # Return empty dict if response is whitespace only
-        
+            return {} if self.response_format_json else ""
+
+        # If plain text mode, return string directly
+        if not self.response_format_json:
+            return raw.strip() if isinstance(raw, str) else str(raw).strip()
+
         # Parse JSON with multiple fallback strategies
         data = None
         last_error = None
@@ -197,17 +203,17 @@ def create_summary_chain(llm_config: LLMConfig) -> Runnable:
             text_span=s.text_span.get("text", ""),
             story_context=None  # Always None to save memory (summary generation doesn't need full context)
         )
-        
-        llm_runnable = LLMRouterRunnable(SYSTEM_PROMPT_SUMMARY, llm_config)
+
+        llm_runnable = LLMRouterRunnable(SYSTEM_PROMPT_SUMMARY, llm_config, response_format_json=False)
         result = llm_runnable.invoke({"prompt": prompt})
-        
-        # Handle both dict and string outputs
-        if isinstance(result, dict) and "summary" in result:
+
+        # Summary returns plain text (not JSON)
+        if isinstance(result, str):
+            summary = result.strip()
+        elif isinstance(result, dict) and "summary" in result:
             summary = result["summary"]
-        elif isinstance(result, str):
-            summary = result
         else:
-            # Try to extract from any field
+            # Fallback: convert to string
             summary = str(result).strip()
         
         # Return updated state dict

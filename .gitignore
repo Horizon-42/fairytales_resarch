@@ -34,3 +34,6 @@ test_train_output.txt
 training_success_test*.txt
 
 test_models
+
+result.json
+result_baseline.json

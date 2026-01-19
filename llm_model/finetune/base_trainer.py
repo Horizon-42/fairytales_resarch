@@ -351,13 +351,15 @@ class BaseTrainer:
     def train(
         self,
         train_examples: List[Dict[str, Any]],
-        eval_examples: Optional[List[Dict[str, Any]]] = None
+        eval_examples: Optional[List[Dict[str, Any]]] = None,
+        resume_from_checkpoint: Optional[str] = None
     ):
         """Train the model.
-        
+
         Args:
             train_examples: List of training examples
             eval_examples: Optional list of evaluation examples
+            resume_from_checkpoint: Path to checkpoint to resume from (default: None)
         """
         if self.model is None or self.tokenizer is None:
             raise ValueError("Model not loaded. Call load_model() first.")
@@ -380,23 +382,10 @@ class BaseTrainer:
         
         # Get training arguments
         output_dir = str(Path(self.config.output_dir) / self.step_name)
-        training_args_dict = self.config.get_training_args(output_dir=output_dir)
-        
-        # Disable evaluation to save memory on 8GB GPU
-        # Evaluation requires significantly more memory than training
-        # Comment this block out if you have >16GB VRAM and want evaluation
-        # if eval_dataset:
-        #     # Keep the eval_strategy from config instead of overriding
-        #     # If save_strategy is "steps", eval_strategy should also be "steps"
-        #     if training_args_dict.get("save_strategy") == "steps":
-        #         training_args_dict["eval_strategy"] = "steps"
-        #         # Set eval_steps to match save_steps if not already set
-        #         if "eval_steps" not in training_args_dict:
-        #             training_args_dict["eval_steps"] = training_args_dict.get("save_steps", 50)
-        #     else:
-        #         training_args_dict["eval_strategy"] = "epoch"
-        #     training_args_dict["load_best_model_at_end"] = True
-        eval_dataset = None  # Disable eval to avoid OOM
+
+        # Enable evaluation if we have eval_examples (for early stopping)
+        enable_eval = eval_dataset is not None
+        training_args_dict = self.config.get_training_args(output_dir=output_dir, enable_eval=enable_eval)
         
         # Add logging directory for loss tracking
         training_args_dict["logging_dir"] = str(Path(output_dir) / "logs")
@@ -405,11 +394,11 @@ class BaseTrainer:
         
         # Loss tracking callback
         loss_history = []
-        
+
         class LossCallback(TrainerCallback):
             def __init__(self, history_list):
                 self.history_list = history_list
-            
+
             def on_log(self, args, state, control, logs=None, **kwargs):
                 if logs is not None:
                     log_entry = {
@@ -424,8 +413,55 @@ class BaseTrainer:
                         log_entry["learning_rate"] = logs["learning_rate"]
                     if log_entry.get("train_loss") is not None or log_entry.get("eval_loss") is not None:
                         self.history_list.append(log_entry)
-        
+
+        # Early stopping callback
+        class EarlyStoppingCallback(TrainerCallback):
+            def __init__(self, patience: int = 3, threshold: float = 0.001):
+                self.patience = patience
+                self.threshold = threshold
+                self.best_metric = None
+                self.patience_counter = 0
+
+            def on_evaluate(self, args, state, control, metrics=None, **kwargs):
+                if metrics is None:
+                    return
+
+                current_metric = metrics.get("eval_loss")
+                if current_metric is None:
+                    return
+
+                # Check if this is the best metric so far
+                if self.best_metric is None:
+                    self.best_metric = current_metric
+                    print(f"\n📊 Early stopping: Initial eval_loss = {current_metric:.4f}")
+                elif current_metric < self.best_metric - self.threshold:
+                    # Improved
+                    improvement = self.best_metric - current_metric
+                    print(f"\n✓ Early stopping: eval_loss improved by {improvement:.4f} ({self.best_metric:.4f} → {current_metric:.4f})")
+                    self.best_metric = current_metric
+                    self.patience_counter = 0
+                else:
+                    # No improvement
+                    self.patience_counter += 1
+                    print(f"\n⚠️  Early stopping: No improvement for {self.patience_counter}/{self.patience} evaluations (current: {current_metric:.4f}, best: {self.best_metric:.4f})")
+
+                    if self.patience_counter >= self.patience:
+                        print(f"\n🛑 Early stopping triggered! Stopping training.")
+                        control.should_training_stop = True
+
         loss_callback = LossCallback(loss_history)
+
+        # Create callbacks list
+        callbacks = [loss_callback]
+
+        # Add early stopping if evaluation is enabled
+        if enable_eval and hasattr(self.config, 'early_stopping_patience'):
+            early_stopping = EarlyStoppingCallback(
+                patience=self.config.early_stopping_patience,
+                threshold=self.config.early_stopping_threshold
+            )
+            callbacks.append(early_stopping)
+            print(f"✓ Early stopping enabled (patience={self.config.early_stopping_patience}, threshold={self.config.early_stopping_threshold})")
 
         # Formatting function for Unsloth (required in newer versions)
         def formatting_func(examples):
@@ -459,12 +495,15 @@ class BaseTrainer:
             max_seq_length=self.config.max_seq_length,
             packing=False,
             args=training_args,
-            callbacks=[loss_callback],
+            callbacks=callbacks,  # Use the callbacks list (includes loss tracking and early stopping)
         )
         
         # Train
-        print(f"Starting training for {self.step_name}...")
-        trainer.train()
+        if resume_from_checkpoint:
+            print(f"Resuming training for {self.step_name} from checkpoint: {resume_from_checkpoint}")
+        else:
+            print(f"Starting training for {self.step_name}...")
+        trainer.train(resume_from_checkpoint=resume_from_checkpoint)
         
         # Save loss history as CSV
         loss_file = Path(output_dir) / "loss_history.csv"
@@ -652,8 +691,8 @@ class BaseTrainer:
                     # Try to extract JSON from generated text
                     # Import from parent module (llm_model.json_utils)
                     import sys
-                    from pathlib import Path
-                    parent_path = Path(__file__).parent.parent.parent
+                    import pathlib
+                    parent_path = pathlib.Path(__file__).parent.parent.parent
                     if str(parent_path) not in sys.path:
                         sys.path.insert(0, str(parent_path))
                     from llm_model.json_utils import loads_strict_json
