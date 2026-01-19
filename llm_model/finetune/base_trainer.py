@@ -518,14 +518,21 @@ class BaseTrainer:
         loss_filename = f"loss_history_{self.step_name}_{timestamp}.csv"
         loss_file = loss_history_dir / loss_filename
         
+        # Always write header, even if loss_history is empty
+        fieldnames = ["step", "epoch", "train_loss", "eval_loss", "learning_rate"]
         with open(loss_file, "w", encoding="utf-8", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
+            writer.writeheader()
             if loss_history:
-                fieldnames = ["step", "epoch", "train_loss", "eval_loss", "learning_rate"]
-                writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
-                writer.writeheader()
                 for entry in loss_history:
                     writer.writerow(entry)
-        print(f"Loss history saved to {loss_file} ({len(loss_history)} entries)")
+        
+        if loss_history:
+            print(f"Loss history saved to {loss_file} ({len(loss_history)} entries)")
+        else:
+            print(f"⚠️  Warning: Loss history is empty (no entries recorded during training)")
+            print(f"   File created at {loss_file} but contains only header")
+            print(f"   This may indicate that on_log callback was not triggered or logs had no loss/eval_loss fields")
         
         # Save model
         self.save_model(output_dir)

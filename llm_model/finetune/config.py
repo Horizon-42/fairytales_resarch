@@ -93,7 +93,7 @@ class FineTuneConfig:
             "learning_rate": self.learning_rate,
             "fp16": not self.bf16,
             "bf16": self.bf16,
-            "logging_steps": 10,
+            "logging_steps": 1,  # Log every step to ensure loss_history is collected
             "output_dir": output_dir,
             "save_strategy": "steps",
             "save_steps": 50,
