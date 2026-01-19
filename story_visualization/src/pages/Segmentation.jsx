@@ -707,6 +707,7 @@ export default function Segmentation({ story }) {
                     <SimilarityMatrixHeatmap
                       similarityMatrix={result.visualization.similarity_matrix}
                       groundTruthBoundaries={referenceBoundaries}
+                      contextWindow={contextWindow}
                       title="Cosine Similarity Matrix"
                     />
                   </div>

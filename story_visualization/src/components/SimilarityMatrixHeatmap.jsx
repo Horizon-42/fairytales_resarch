@@ -5,6 +5,7 @@ import './Visualization.css'
 export default function SimilarityMatrixHeatmap({ 
   similarityMatrix, 
   groundTruthBoundaries = [],
+  contextWindow = null,
   title = "Cosine Similarity Matrix"
 }) {
   const svgRef = useRef(null)
@@ -48,6 +49,18 @@ export default function SimilarityMatrixHeatmap({
       .attr("height", cellSize)
       .attr("fill", d => colorScale(d.value))
       .attr("stroke", "none")
+      .attr("opacity", d => {
+        // If contextWindow is set, reduce opacity for cells outside the context window
+        if (contextWindow !== null && contextWindow !== undefined) {
+          const distance = Math.abs(d.i - d.j)
+          if (distance > contextWindow) {
+            // Reduce opacity for cells outside context window (fade to 30% opacity)
+            return 0.3
+          }
+        }
+        // Full opacity for cells within context window or if contextWindow is not set
+        return 1.0
+      })
 
     // Draw ground truth boundaries
     groundTruthBoundaries.forEach((boundary, idx) => {
@@ -162,7 +175,7 @@ export default function SimilarityMatrixHeatmap({
       .attr("fill", "#666")
       .text("Sentence Index")
 
-  }, [similarityMatrix, groundTruthBoundaries, title])
+  }, [similarityMatrix, groundTruthBoundaries, contextWindow, title])
 
   if (!similarityMatrix || !similarityMatrix.length) {
     return (
