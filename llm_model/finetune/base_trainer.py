@@ -507,6 +507,23 @@ class BaseTrainer:
             print(f"Starting training for {self.step_name}...")
         trainer.train(resume_from_checkpoint=resume_from_checkpoint)
         
+        # Extract loss history from trainer.state.log_history (more reliable than callback)
+        # This is the standard way to get training logs from HuggingFace Trainer
+        if hasattr(trainer.state, 'log_history') and trainer.state.log_history:
+            # Convert trainer.state.log_history to our format
+            for log_entry in trainer.state.log_history:
+                if "loss" in log_entry or "eval_loss" in log_entry:
+                    formatted_entry = {
+                        "step": log_entry.get("step"),
+                        "epoch": log_entry.get("epoch"),
+                        "train_loss": log_entry.get("loss"),
+                        "eval_loss": log_entry.get("eval_loss"),
+                        "learning_rate": log_entry.get("learning_rate"),
+                    }
+                    # Only add if not already in loss_history (avoid duplicates)
+                    if formatted_entry not in loss_history:
+                        loss_history.append(formatted_entry)
+        
         # Save loss history as CSV with timestamp in external folder
         # Create loss_history folder in parent directory to avoid overwriting
         output_path = Path(output_dir)
@@ -518,14 +535,24 @@ class BaseTrainer:
         loss_filename = f"loss_history_{self.step_name}_{timestamp}.csv"
         loss_file = loss_history_dir / loss_filename
         
-        with open(loss_file, "w", encoding="utf-8", newline="") as f:
-            if loss_history:
-                fieldnames = ["step", "epoch", "train_loss", "eval_loss", "learning_rate"]
+        # Always write header, even if loss_history is empty
+        fieldnames = ["step", "epoch", "train_loss", "eval_loss", "learning_rate"]
+        try:
+            with open(loss_file, "w", encoding="utf-8", newline="") as f:
                 writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
                 writer.writeheader()
-                for entry in loss_history:
-                    writer.writerow(entry)
-        print(f"Loss history saved to {loss_file} ({len(loss_history)} entries)")
+                if loss_history:
+                    for entry in loss_history:
+                        writer.writerow(entry)
+            print(f"✅ Loss history saved to {loss_file} ({len(loss_history)} entries)", flush=True)
+        except Exception as e:
+            print(f"❌ Error saving loss history to {loss_file}: {e}", flush=True)
+            import traceback
+            traceback.print_exc()
+        
+        if not loss_history:
+            print(f"⚠️  Warning: Loss history is empty (no entries recorded during training)", flush=True)
+            print(f"   Trainer state log_history length: {len(trainer.state.log_history) if hasattr(trainer.state, 'log_history') else 'N/A'}", flush=True)
         
         # Save model
         self.save_model(output_dir)
@@ -658,7 +685,9 @@ class BaseTrainer:
                 # For other models, use more conservative settings
                 is_qwen3 = "qwen3" in self.model_name.lower()
                 
-                with self.model.inference_mode():
+                # Use torch.inference_mode() instead of model.inference_mode()
+                import torch
+                with torch.inference_mode():
                     if is_qwen3:
                         # Qwen3 non-thinking mode parameters
                         outputs = self.model.generate(
