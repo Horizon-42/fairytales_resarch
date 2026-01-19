@@ -224,12 +224,14 @@ def main():
             print(f"  Running full_detection on {len(text_spans)} text spans...")
 
             # Run pipeline
+            # Only run character, action, relationship steps
             result = run_pipeline_batch(
                 story_text=story_text,
                 text_spans=text_spans,
                 characters=[],
                 llm_config=llm_config,
-                include_instrument=False
+                include_instrument=False,
+                steps_only=['character', 'action', 'relationship']  # Only run these three steps
             )
 
             # Build prediction

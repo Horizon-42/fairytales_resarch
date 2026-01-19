@@ -275,22 +275,29 @@ def run_pipeline_batch(
     if summary is None and steps_only is not None:
         from .story_processor import generate_story_summary
         try:
-            print("Generating story-level summary (once for entire story)...", flush=True)
+            print(f"\n[INFO] Generating story-level summary (once for entire story, {len(text_spans)} spans)...", flush=True)
             summary = generate_story_summary(
                 story_text=story_text,
                 text_span=None,  # Summarize entire story
                 llm_config=llm_config,
             )
-            print("Story summary generated successfully.", flush=True)
+            print(f"[INFO] Story summary generated successfully (length: {len(summary)} chars).", flush=True)
         except Exception as e:
-            print(f"Warning: Failed to generate story summary: {e}. Continuing without summary.", flush=True)
+            print(f"[WARNING] Failed to generate story summary: {e}. Continuing without summary.", flush=True)
+            import traceback
+            traceback.print_exc()
             summary = ""  # Use empty string to indicate no summary
+    elif steps_only is not None:
+        print(f"[INFO] Using provided summary (length: {len(summary) if summary else 0} chars).", flush=True)
     
     current_characters = characters.copy() if characters else []
     narrative_events = []
     results = []
     
+    print(f"[INFO] Processing {len(text_spans)} text span(s)...", flush=True)
+    
     for idx, text_span in enumerate(text_spans, start=1):
+        print(f"[INFO] Processing span {idx}/{len(text_spans)}...", flush=True)
         try:
             result = run_pipeline(
                 story_text=story_text,

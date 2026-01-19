@@ -166,6 +166,32 @@ def train_step(
     if eval_examples:
         print(f"Eval examples: {len(eval_examples)}")
     
+    # Validate checkpoint path if provided
+    if resume_from_checkpoint:
+        checkpoint_path = Path(resume_from_checkpoint)
+        if not checkpoint_path.exists():
+            raise FileNotFoundError(
+                f"Checkpoint path does not exist: {resume_from_checkpoint}\n"
+                f"Please provide a valid checkpoint directory path."
+            )
+        if not checkpoint_path.is_dir():
+            raise ValueError(
+                f"Checkpoint path is not a directory: {resume_from_checkpoint}\n"
+                f"Please provide a valid checkpoint directory path."
+            )
+        # Check if checkpoint contains necessary files
+        required_files = [
+            "pytorch_model.bin",
+            "adapter_model.bin",
+            "adapter_model.safetensors",
+            "pytorch_model.safetensors",
+        ]
+        has_model_file = any((checkpoint_path / fname).exists() for fname in required_files)
+        if not has_model_file:
+            print(f"⚠️  Warning: Checkpoint directory may be incomplete: {resume_from_checkpoint}")
+            print(f"   Expected files (at least one): {', '.join(required_files)}")
+            print(f"   Training will proceed, but may fail if checkpoint is invalid.")
+    
     # Create trainer
     trainer = trainer_class(model_name=model_name, step_name=step, config=config)
     
@@ -367,9 +393,36 @@ Notes:
                 checkpoints = list(step_output_dir.glob("checkpoint-*"))
                 if checkpoints:
                     # Sort by checkpoint number and get the latest
-                    checkpoints.sort(key=lambda x: int(x.name.split("-")[1]))
-                    checkpoint_to_use = str(checkpoints[-1])
-                    print(f"🔄 Found existing checkpoint, will resume from: {checkpoint_to_use}")
+                    # Use regex to safely extract checkpoint number
+                    import re
+                    def get_checkpoint_number(checkpoint_path):
+                        """Extract checkpoint number from path name (e.g., 'checkpoint-100' -> 100)."""
+                        match = re.search(r'checkpoint-(\d+)', checkpoint_path.name)
+                        if match:
+                            return int(match.group(1))
+                        return -1  # Invalid checkpoint, sort to the end
+                    
+                    checkpoints.sort(key=get_checkpoint_number)
+                    valid_checkpoints = [cp for cp in checkpoints if get_checkpoint_number(cp) >= 0]
+                    
+                    if valid_checkpoints:
+                        # Verify checkpoint directory contains necessary files
+                        latest_checkpoint = valid_checkpoints[-1]
+                        # Check if checkpoint has at least one of the expected files
+                        required_files = [
+                            "pytorch_model.bin",
+                            "adapter_model.bin",
+                            "adapter_model.safetensors",
+                            "pytorch_model.safetensors",
+                        ]
+                        has_model_file = any((latest_checkpoint / fname).exists() for fname in required_files)
+                        
+                        if has_model_file:
+                            checkpoint_to_use = str(latest_checkpoint)
+                            print(f"🔄 Found existing checkpoint, will resume from: {checkpoint_to_use}")
+                        else:
+                            print(f"⚠️  Found checkpoint directory but it appears incomplete: {latest_checkpoint}")
+                            print(f"   Expected files (at least one): {', '.join(required_files)}")
         elif args.no_auto_resume and checkpoint_to_use is None:
             print(f"⚠️  Auto-resume disabled, starting training from scratch")
 
