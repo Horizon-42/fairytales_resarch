@@ -28,6 +28,7 @@ def build_pipeline(
     llm_config: LLMConfig,
     include_instrument: bool = False,
     summary: Optional[str] = None,
+    steps_only: Optional[List[str]] = None,
 ) -> Any:
     """Build the full detection pipeline.
     
@@ -35,6 +36,9 @@ def build_pipeline(
         llm_config: LLM configuration for all chains
         include_instrument: Whether to include instrument recognition (Step 2.5)
         summary: Optional pre-generated summary. If provided, skips summary generation step.
+        steps_only: Optional list of steps to run. If provided, only these steps will be executed.
+                    Valid steps: 'character', 'relationship', 'action', 'instrument', 'stac', 'event_type'.
+                    Example: ['character', 'action', 'relationship'] to run only these three steps.
         
     Returns:
         Composed LangChain pipeline
@@ -50,6 +54,56 @@ def build_pipeline(
     event_type_chain = create_event_type_chain(llm_config)
     finalize_chain = create_finalize_chain()
     
+    # If steps_only is specified, only run those steps
+    if steps_only is not None:
+        # Convert to set for easier checking
+        steps_set = set(steps_only)
+        
+        # Start with summary injection
+        # In steps_only mode, summary should be provided by the caller (e.g., run_pipeline_batch)
+        # If not provided, use empty string (summary should be generated at batch level)
+        def inject_summary(state: Dict[str, Any]) -> Dict[str, Any]:
+            """Inject summary into state."""
+            if isinstance(state, PipelineState):
+                state_dict = state.to_dict()
+            else:
+                state_dict = state.copy()
+            # Use provided summary or empty string (should be set at batch level)
+            state_dict["summary"] = summary if summary is not None else ""
+            return state_dict
+        
+        pipeline = RunnableLambda(inject_summary)
+        
+        # Add character recognition if requested
+        if 'character' in steps_set:
+            pipeline = pipeline | char_chain
+        
+        # Add relationship deduction if requested (depends on character)
+        if 'relationship' in steps_set:
+            pipeline = pipeline | relationship_chain
+        
+        # Add action category if requested (depends on character)
+        if 'action' in steps_set:
+            pipeline = pipeline | action_chain
+        
+        # Add instrument if requested (depends on character)
+        if 'instrument' in steps_set and instrument_chain:
+            pipeline = pipeline | instrument_chain
+        
+        # Add STAC analysis if requested
+        if 'stac' in steps_set:
+            pipeline = pipeline | stac_chain
+        
+        # Add event type if requested
+        if 'event_type' in steps_set:
+            pipeline = pipeline | event_type_chain
+        
+        # Always finalize to produce narrative_event structure
+        pipeline = pipeline | finalize_chain
+        
+        return pipeline
+    
+    # Original full pipeline logic
     # Compose pipeline
     # If summary is provided, inject it directly; otherwise generate it
     if summary is not None:
@@ -101,6 +155,7 @@ def run_pipeline(
     llm_config: Optional[LLMConfig] = None,
     include_instrument: bool = False,
     summary: Optional[str] = None,
+    steps_only: Optional[List[str]] = None,
 ) -> Dict[str, Any]:
     """Run the full detection pipeline.
     
@@ -113,6 +168,9 @@ def run_pipeline(
         llm_config: LLM configuration (uses default if not provided)
         include_instrument: Whether to include instrument recognition
         summary: Optional pre-generated summary. If provided, skips summary generation.
+        steps_only: Optional list of steps to run. If provided, only these steps will be executed.
+                    Valid steps: 'character', 'relationship', 'action', 'instrument', 'stac', 'event_type'.
+                    Example: ['character', 'action', 'relationship'] to run only these three steps.
         
     Returns:
         Dictionary with 'narrative_event' key containing the final structured event,
@@ -153,7 +211,7 @@ def run_pipeline(
     
     # Build and run pipeline
     try:
-        pipeline = build_pipeline(llm_config, include_instrument=include_instrument, summary=summary)
+        pipeline = build_pipeline(llm_config, include_instrument=include_instrument, summary=summary, steps_only=steps_only)
         
         # Convert state to dict for pipeline
         state_dict = initial_state.to_dict()
@@ -185,6 +243,7 @@ def run_pipeline_batch(
     llm_config: Optional[LLMConfig] = None,
     include_instrument: bool = False,
     summary: Optional[str] = None,
+    steps_only: Optional[List[str]] = None,
 ) -> Dict[str, Any]:
     """Run pipeline for multiple text spans sequentially.
     
@@ -196,7 +255,11 @@ def run_pipeline_batch(
         characters: Initial global character list (may be empty)
         llm_config: LLM configuration (uses default if not provided)
         include_instrument: Whether to include instrument recognition
-        summary: Optional pre-generated summary shared across all spans
+        summary: Optional pre-generated summary shared across all spans.
+                 If None and steps_only is specified, a story-level summary will be generated once.
+        steps_only: Optional list of steps to run. If provided, only these steps will be executed.
+                    Valid steps: 'character', 'relationship', 'action', 'instrument', 'stac', 'event_type'.
+                    Example: ['character', 'action', 'relationship'] to run only these three steps.
         
     Returns:
         Dictionary with:
@@ -206,6 +269,22 @@ def run_pipeline_batch(
     """
     if llm_config is None:
         llm_config = LLMConfig()
+    
+    # Generate story-level summary once if needed
+    # If summary is None and we're using steps_only mode, generate it once for the entire story
+    if summary is None and steps_only is not None:
+        from .story_processor import generate_story_summary
+        try:
+            print("Generating story-level summary (once for entire story)...", flush=True)
+            summary = generate_story_summary(
+                story_text=story_text,
+                text_span=None,  # Summarize entire story
+                llm_config=llm_config,
+            )
+            print("Story summary generated successfully.", flush=True)
+        except Exception as e:
+            print(f"Warning: Failed to generate story summary: {e}. Continuing without summary.", flush=True)
+            summary = ""  # Use empty string to indicate no summary
     
     current_characters = characters.copy() if characters else []
     narrative_events = []
@@ -221,6 +300,7 @@ def run_pipeline_batch(
                 llm_config=llm_config,
                 include_instrument=include_instrument,
                 summary=summary,  # Pass shared summary
+                steps_only=steps_only,  # Pass steps_only parameter
             )
             
             # Update character list for next iteration
